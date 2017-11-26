@@ -90,6 +90,10 @@ $(document).ready(function() {
 
 
   function newBanner() {
+    $('#rate-input-focus').val(bannerData.rateRarityFocus);
+    $('#rate-input-5').val(bannerData.rateRarity5);
+    $('#rate-input-4').val(bannerData.rateRarity4);
+    $('#rate-input-3').val(bannerData.rateRarity3);
     setSummonableHeroesList();
     resetData();
   }
@@ -103,10 +107,10 @@ $(document).ready(function() {
     let rateIncreaseRarityFocus = Math.floor(pityPulls / 5) * bannerData.pityRateRarityFocus;
     let rateIncreaseRarity5 = Math.floor(pityPulls / 5) * bannerData.pityRateRarity5;
     let rateDecrease = (rateIncreaseRarityFocus + rateIncreaseRarity5) / 2;
-    $('#rate-input-focus').val(rateIncreaseRarityFocus + bannerData.rateRarityFocus);
-    $('#rate-input-5').val(rateIncreaseRarity5 + bannerData.rateRarity5);
-    $('#rate-input-4').val(bannerData.rateRarity4 - rateDecrease);
-    $('#rate-input-3').val(bannerData.rateRarity3 - rateDecrease);
+    $('#rate-input-focus').val(parseFloat($('#rate-input-focus').val()) + rateIncreaseRarityFocus);
+    $('#rate-input-5').val(parseFloat($('#rate-input-5').val()) + rateIncreaseRarity5);
+    $('#rate-input-4').val(parseFloat($('#rate-input-4').val()) - rateDecrease);
+    $('#rate-input-3').val(parseFloat($('#rate-input-3').val()) - rateDecrease);
 
     $newSessionBtn.attr('disabled', 'disabled');
     updateOrbs(getSessionOrbs());
@@ -200,8 +204,8 @@ $(document).ready(function() {
   function getSessionOrbs() {
     let orbs = [];
     let rateRarityFocus = parseFloat($('#rate-input-focus').val()) / 100;
-    let rateRarity5 = parseFloat($('#rate-input-5').val()) / 100;
-    let rateRarity4 = parseFloat($('#rate-input-4').val()) / 100;
+    let rateRarity5 = parseFloat($('#rate-input-5').val()) / 100 + rateRarityFocus;
+    let rateRarity4 = parseFloat($('#rate-input-4').val()) / 100 + rateRarity5;
 
     for (var i = 0; i < 5; i++) {
       let rate = Math.random();

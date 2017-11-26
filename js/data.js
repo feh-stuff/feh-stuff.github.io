@@ -1502,7 +1502,7 @@ var heroesData = {
     {
       "name": "Legendary Heroes",
       "latestHeroesDate": "",
-      "startDate": "20 Nov, 2017",
+      "startDate": "27 Nov, 2017",
       "focusHeroes": [
         "Celica",
         "Ike",
@@ -1525,6 +1525,80 @@ var heroesData = {
       "rateRarityFocus": 8,
       "pityRateRarity5": 0,
       "pityRateRarityFocus": 0.5
+    },
+    {
+      "name": "Skills That Boost Special Damage",
+      "latestHeroesDate": "",
+      "startDate": "23 Nov, 2017",
+      "focusHeroes": [
+        "Karel",
+        "Sonya",
+        "Nephenee"
+      ],
+      "excludeFromRarity4": [],
+      "excludeFromRarity5": [],
+      "rateRarity3": 36,
+      "rateRarity4": 58,
+      "rateRarity5": 3,
+      "rateRarityFocus": 3,
+      "pityRateRarity5": 0.25,
+      "pityRateRarityFocus": 0.25
+    },
+    {
+      "name": "Less Than Heroic Tempest Trials",
+      "latestHeroesDate": "",
+      "startDate": "18 Nov, 2017",
+      "focusHeroes": [
+        "Ike (Brave Heroes)",
+        "Lyn (Brave Heroes)",
+        "Roy (Brave Heroes)",
+        "Lucina (Brave Heroes)"
+      ],
+      "excludeFromRarity4": [],
+      "excludeFromRarity5": [],
+      "rateRarity3": 36,
+      "rateRarity4": 58,
+      "rateRarity5": 3,
+      "rateRarityFocus": 3,
+      "pityRateRarity5": 0.25,
+      "pityRateRarityFocus": 0.25
+    },
+    {
+      "name": "Farfetched Heroes",
+      "latestHeroesDate": "",
+      "startDate": "15 Nov, 2017",
+      "focusHeroes": [
+        "Dorcas",
+        "Lute",
+        "Mia"
+      ],
+      "excludeFromRarity4": [],
+      "excludeFromRarity5": [],
+      "rateRarity3": 36,
+      "rateRarity4": 58,
+      "rateRarity5": 3,
+      "rateRarityFocus": 3,
+      "pityRateRarity5": 0.25,
+      "pityRateRarityFocus": 0.25
+    },
+    {
+      "name": "Trick or Defeat!",
+      "latestHeroesDate": "",
+      "startDate": "18 Nov, 2017",
+      "focusHeroes": [
+        "Sakura (Trick or Defeat!)",
+        "Jakob (Trick or Defeat!)",
+        "Henry (Trick or Defeat!)",
+        "Nowi (Trick or Defeat!)"
+      ],
+      "excludeFromRarity4": [],
+      "excludeFromRarity5": [],
+      "rateRarity3": 36,
+      "rateRarity4": 58,
+      "rateRarity5": 3,
+      "rateRarityFocus": 3,
+      "pityRateRarity5": 0.25,
+      "pityRateRarityFocus": 0.25
     },
     {
       "name": "Our Lord and Savior",
