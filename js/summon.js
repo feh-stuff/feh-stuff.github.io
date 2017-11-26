@@ -226,12 +226,14 @@ $(document).ready(function() {
   }
 
   function updateStatsView() {
+    let percentAmount = stats.totalPulls === 0 ? '-' : (100 * stats.totalRarity5 / stats.totalPulls).toFixed(1) + '%';
     let totalMoneySpent = (stats.orbsUsed * MONEY_PER_ORB).toFixed(2);
     let orbsPerHero = stats.totalRarity5 === 0 ? '-' : (stats.orbsUsed / stats.totalRarity5).toFixed(1);
     let moneyPerHero = stats.totalRarity5 === 0 ? '-' : '$' + (totalMoneySpent / stats.totalRarity5).toFixed(2);
     $('#total-summon-amt').text(stats.totalPulls);
     $('#rarity5-summon-amt').text(stats.totalRarity5);
     $('#focus-summon-amt').text(stats.totalFocus);
+    $('#percent-summon-amt').text(percentAmount);
     $('#total-orbs-amt').text(stats.orbsUsed);
     $('#total-money-amt').text('$' + totalMoneySpent);
     $('#avg-orbs-amt').text(orbsPerHero);
