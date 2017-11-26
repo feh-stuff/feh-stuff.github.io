@@ -68,6 +68,7 @@ $(document).ready(function() {
     $('#summon-all').on('click', onClickSummonAll);
     $('.summon-option').on('click', '.summon-orb', onClickOrb);
     $('#reset').on('click', resetData);
+    $('#snipe-btn').on('click', snipe);
   }
 
   function onChangeNewBanner(event) {
@@ -92,6 +93,7 @@ $(document).ready(function() {
   function newBanner() {
     setSummonableHeroesList();
     resetData();
+    setSnipeOptions();
   }
 
   function newSession() {
@@ -162,6 +164,34 @@ $(document).ready(function() {
     });
   }
 
+  function setSnipeOptions() {
+    $('#snipe-select').empty();
+    heroListRarityFocus.forEach(hero => {
+      $(`<option>${hero.name}</option>`)
+          .data('hero', hero)
+          .appendTo('#snipe-select');
+    });
+  }
+
+  function snipe() {
+    let hit = false;
+    let hero = $('#snipe-select > option:selected').data('hero');
+    let targetColor = getOrbColorFromWeaponType(hero.weaponType);
+    let orbs;
+    while (!hit) {
+      orbs = $(`.summon-orb[data-color="${targetColor}"]`);
+      if (orbs.length) {
+        if (revealOrb($(orbs[0])).hero.name === hero.name) {
+          hit = true;
+        }
+      } else if (sessionPulls > 0) {
+        newSession();
+      } else {
+        revealOrb($(getRandomFromArray($('.summon-orb'))));
+      }
+    }
+  }
+
   function revealOrb($orb) {
     let orbData = $orb.data('hero');
     $orb.replaceWith(`<div class="summon-hero">
@@ -191,6 +221,8 @@ $(document).ready(function() {
 
     $newSessionBtn.removeAttr('disabled');
     updateStatsView();
+
+    return orbData;
   }
 
   function updateStatsView() {
@@ -245,7 +277,7 @@ $(document).ready(function() {
 
   function updateOrbs(orbs) {
     orbs.forEach((orbData, i) => {
-      let $orb = $(`<img class="summon-orb" src="${ORB_IMG_URL[orbData.color]}">`)
+      let $orb = $(`<img class="summon-orb" src="${ORB_IMG_URL[orbData.color]}" data-color="${orbData.color}">`)
           .data('hero', orbData);
       $(summonOptions[i]).empty().append($orb);
     });
