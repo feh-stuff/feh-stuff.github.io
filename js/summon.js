@@ -90,10 +90,6 @@ $(document).ready(function() {
 
 
   function newBanner() {
-    $('#rate-input-focus').val(bannerData.rateRarityFocus);
-    $('#rate-input-5').val(bannerData.rateRarity5);
-    $('#rate-input-4').val(bannerData.rateRarity4);
-    $('#rate-input-3').val(bannerData.rateRarity3);
     setSummonableHeroesList();
     resetData();
   }
@@ -103,17 +99,26 @@ $(document).ready(function() {
     if (resetPityRate) {
       pityPulls = 0;
       resetPityRate = false;
+      resetRates();
+    } else if (pityPulls >= 5) {
+      pityPulls -= 5;
+      let rateDecrease = (bannerData.pityRateRarityFocus + bannerData.pityRateRarity5) / 2;
+      $('#rate-input-focus').val(parseFloat($('#rate-input-focus').val()) + bannerData.pityRateRarityFocus);
+      $('#rate-input-5').val(parseFloat($('#rate-input-5').val()) + bannerData.pityRateRarity5);
+      $('#rate-input-4').val(parseFloat($('#rate-input-4').val()) - rateDecrease);
+      $('#rate-input-3').val(parseFloat($('#rate-input-3').val()) - rateDecrease);
     }
-    let rateIncreaseRarityFocus = Math.floor(pityPulls / 5) * bannerData.pityRateRarityFocus;
-    let rateIncreaseRarity5 = Math.floor(pityPulls / 5) * bannerData.pityRateRarity5;
-    let rateDecrease = (rateIncreaseRarityFocus + rateIncreaseRarity5) / 2;
-    $('#rate-input-focus').val(parseFloat($('#rate-input-focus').val()) + rateIncreaseRarityFocus);
-    $('#rate-input-5').val(parseFloat($('#rate-input-5').val()) + rateIncreaseRarity5);
-    $('#rate-input-4').val(parseFloat($('#rate-input-4').val()) - rateDecrease);
-    $('#rate-input-3').val(parseFloat($('#rate-input-3').val()) - rateDecrease);
+
 
     $newSessionBtn.attr('disabled', 'disabled');
     updateOrbs(getSessionOrbs());
+  }
+
+  function resetRates() {
+    $('#rate-input-focus').val(bannerData.rateRarityFocus);
+    $('#rate-input-5').val(bannerData.rateRarity5);
+    $('#rate-input-4').val(bannerData.rateRarity4);
+    $('#rate-input-3').val(bannerData.rateRarity3);
   }
 
   function resetData() {
@@ -121,7 +126,7 @@ $(document).ready(function() {
       stats[stat] = 0;
     }
     pityPulls = 0;
-    resetPityRate = false;
+    resetPityRate = true;
     $summonList.clear().draw();
     updateStatsView();
     newSession();
