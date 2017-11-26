@@ -1537,7 +1537,7 @@ var heroesData = {
         "Nephenee"
       ],
       "excludeFromRarity4": [],
-      "excludeFromRarity5": [],
+      "excludeFromRarity5": [ "Dorcas", "Lute", "Mia" ],
       "rateRarity3": 36,
       "rateRarity4": 58,
       "rateRarity5": 3,
@@ -1556,7 +1556,7 @@ var heroesData = {
         "Lucina (Brave Heroes)"
       ],
       "excludeFromRarity4": [],
-      "excludeFromRarity5": [],
+      "excludeFromRarity5": [ "Dorcas", "Lute", "Mia" ],
       "rateRarity3": 36,
       "rateRarity4": 58,
       "rateRarity5": 3,
@@ -1568,11 +1568,7 @@ var heroesData = {
       "name": "Farfetched Heroes",
       "latestHeroesDate": "",
       "startDate": "15 Nov, 2017",
-      "focusHeroes": [
-        "Dorcas",
-        "Lute",
-        "Mia"
-      ],
+      "focusHeroes": [ "Dorcas", "Lute", "Mia" ],
       "excludeFromRarity4": [],
       "excludeFromRarity5": [],
       "rateRarity3": 36,
@@ -1585,7 +1581,7 @@ var heroesData = {
     {
       "name": "Trick or Defeat!",
       "latestHeroesDate": "",
-      "startDate": "18 Nov, 2017",
+      "startDate": "30 Oct, 2017",
       "focusHeroes": [
         "Sakura (Trick or Defeat!)",
         "Jakob (Trick or Defeat!)",
