@@ -383,7 +383,8 @@ var heroesData = {
       "releaseDate": "Jul 28, 2017",
       "assets": "img/heroes/75px-Icon_Portrait_Elise (Nohrian Summer).png",
       "shortName": "Elise (N)",
-      "rarity5": true
+      "rarity5": true,
+      "limited": true
     },
     {
       "name": "Eliwood",
