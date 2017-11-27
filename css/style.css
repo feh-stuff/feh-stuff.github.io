@@ -166,8 +166,12 @@ body {
   justify-content: space-between;
   padding: 4px 8px;
 }
+
 .summon-stats:hover {
   background-color: rgba(0,0,0,.075);
+}
+.snipe-option {
+  cursor: pointer;
 }
 
 #snipe-select {

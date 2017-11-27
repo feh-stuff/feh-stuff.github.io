@@ -453,7 +453,8 @@ var heroesData = {
       "moveType": "Infantry",
       "releaseDate": "Nov 27, 2017",
       "assets": "img/heroes/75px-Icon_Portrait_Fjorm.png",
-      "rarity5": true
+      "rarity5": true,
+      "limited": true
     },
     {
       "name": "Florina",

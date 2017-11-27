@@ -79,7 +79,7 @@ $(document).ready(function() {
 
   function onClickSummonAll(event) {
     let orbs = $('.summon-orb');
-    for (var i = 0; i < orbs.length; i++) {
+    for (let i = 0; i < orbs.length; i++) {
       revealOrb($(orbs[i]));
     }
   }
@@ -165,24 +165,31 @@ $(document).ready(function() {
   }
 
   function setSnipeOptions() {
-    $('#snipe-select').empty();
+    $('#snipe-list').empty();
     heroListRarityFocus.forEach(hero => {
-      $(`<option>${hero.name}</option>`)
-          .data('hero', hero)
-          .appendTo('#snipe-select');
+      let $checkbox = $(`<input type="checkbox" class="custom-control-input snipe-target">`)
+          .data('hero', hero);
+      $('<label class="custom-control custom-checkbox snipe-option"></label>')
+          .append($checkbox)
+          .append(`<span class="custom-control-indicator"></span>
+              <span class="custom-control-description">${hero.name}</span>`)
+          .appendTo('#snipe-list');
     });
   }
 
   function snipe() {
-    let hit = false;
-    let hero = $('#snipe-select > option:selected').data('hero');
-    let targetColor = getOrbColorFromWeaponType(hero.weaponType);
+    let targetCheckbox = $('.snipe-target:checked');
+    let targets = [];
     let orbs;
-    while (!hit) {
-      orbs = $(`.summon-orb[data-color="${targetColor}"]`);
+
+    for (let i = 0; i < targetCheckbox.length; i++) {
+      targets.push($(targetCheckbox[i]).data('hero'));
+    }
+    while (targets.length) {
+      let orbs = getTargetSnipeOrbs(targets);
       if (orbs.length) {
-        if (revealOrb($(orbs[0])).hero.name === hero.name) {
-          hit = true;
+        if (snipeHit(revealOrb($(orbs[0])).hero, targets)) {
+          $('#summon-list tbody tr:last-child').addClass('table-success');
         }
       } else if (sessionPulls > 0) {
         newSession();
@@ -190,6 +197,27 @@ $(document).ready(function() {
         revealOrb($(getRandomFromArray($('.summon-orb'))));
       }
     }
+  }
+
+  function snipeHit(hero, targetHeroes) {
+    for (let i = 0; i < targetHeroes.length; i++) {
+      if (targetHeroes[i].name === hero.name) {
+        targetHeroes.splice(i, 1);
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function getTargetSnipeOrbs(targetHeroes) {
+    let colors = new Set();
+    targetHeroes.forEach(hero => colors.add(getOrbColorFromWeaponType(hero.weaponType)));
+
+    let selector = [...colors]
+        .map(color => `.summon-orb[data-color="${color}"]`)
+        .join(',');
+
+    return $(selector);
   }
 
   function revealOrb($orb) {
@@ -246,7 +274,7 @@ $(document).ready(function() {
     let rateRarity5 = parseFloat($('#rate-input-5').val()) / 100 + rateRarityFocus;
     let rateRarity4 = parseFloat($('#rate-input-4').val()) / 100 + rateRarity5;
 
-    for (var i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
       let rate = Math.random();
       let orbData;
       if (rate <= rateRarityFocus) {
