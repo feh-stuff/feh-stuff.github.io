@@ -186,7 +186,7 @@ $(document).ready(function() {
       targets.push($(targetCheckbox[i]).data('hero'));
     }
     while (targets.length) {
-      let orbs = getTargetSnipeOrbs(targets);
+      orbs = getTargetSnipeOrbs(targets);
       if (orbs.length) {
         if (snipeHit(revealOrb($(orbs[0])).hero, targets)) {
           $('#summon-list tbody tr:last-child').addClass('table-success');

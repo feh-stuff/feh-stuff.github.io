@@ -1156,6 +1156,14 @@ var heroesData = {
       "rarity5": true
     },
     {
+      "name": "Rhajat",
+      "weaponType": "Green Tome",
+      "moveType": "Infantry",
+      "releaseDate": "Dec 04, 2017",
+      "assets": "img/heroes/75px-Icon_Portrait_Rhajat.png",
+      "rarity5": true
+    },
+    {
       "name": "Robin (F) (Ylissean Summer)",
       "weaponType": "Blue Lance",
       "moveType": "Infantry",
@@ -1328,11 +1336,35 @@ var heroesData = {
       "limited": true
     },
     {
+      "name": "Shiro",
+      "weaponType": "Blue Lance",
+      "moveType": "Infantry",
+      "releaseDate": "Dec 04, 2017",
+      "assets": "img/heroes/75px-Icon_Portrait_Shiro.png",
+      "rarity5": true
+    },
+    {
+      "name": "Siegbert",
+      "weaponType": "Red Sword",
+      "moveType": "Cavalry",
+      "releaseDate": "Dec 04, 2017",
+      "assets": "img/heroes/75px-Icon_Portrait_Siegbert.png",
+      "rarity5": true
+    },
+    {
       "name": "Sigurd",
       "weaponType": "Red Sword",
       "moveType": "Cavalry",
       "releaseDate": "Oct 16, 2017",
       "assets": "img/heroes/75px-Icon_Portrait_Sigurd.png",
+      "rarity5": true
+    },
+    {
+      "name": "Soleil",
+      "weaponType": "Red Sword",
+      "moveType": "Infantry",
+      "releaseDate": "Dec 04, 2017",
+      "assets": "img/heroes/75px-Icon_Portrait_Soleil.png",
       "rarity5": true
     },
     {
@@ -1502,9 +1534,23 @@ var heroesData = {
 
   "banners": [
     {
+      "name": "Children of Fate",
+      "latestHeroesDate": "",
+      "startDate": "Dec 04, 2017",
+      "focusHeroes": [ "Rhajat", "Soleil", "Siegbert", "Shiro" ],
+      "excludeFromRarity4": [],
+      "excludeFromRarity5": [],
+      "rateRarity3": 36,
+      "rateRarity4": 58,
+      "rateRarity5": 3,
+      "rateRarityFocus": 3,
+      "pityRateRarity5": 0.25,
+      "pityRateRarityFocus": 0.25
+    },
+    {
       "name": "Legendary Heroes",
       "latestHeroesDate": "",
-      "startDate": "27 Nov, 2017",
+      "startDate": "Nov 27, 2017",
       "focusHeroes": [
         "Celica",
         "Ike",
@@ -1531,7 +1577,7 @@ var heroesData = {
     {
       "name": "Skills That Boost Special Damage",
       "latestHeroesDate": "",
-      "startDate": "23 Nov, 2017",
+      "startDate": "Nov 23, 2017",
       "focusHeroes": [
         "Karel",
         "Sonya",
@@ -1549,7 +1595,7 @@ var heroesData = {
     {
       "name": "Less Than Heroic Tempest Trials",
       "latestHeroesDate": "",
-      "startDate": "18 Nov, 2017",
+      "startDate": "Nov 18, 2017",
       "focusHeroes": [
         "Ike (Brave Heroes)",
         "Lyn (Brave Heroes)",
@@ -1568,7 +1614,7 @@ var heroesData = {
     {
       "name": "Farfetched Heroes",
       "latestHeroesDate": "",
-      "startDate": "15 Nov, 2017",
+      "startDate": "Nov 15, 2017",
       "focusHeroes": [ "Dorcas", "Lute", "Mia" ],
       "excludeFromRarity4": [],
       "excludeFromRarity5": [],
@@ -1582,7 +1628,7 @@ var heroesData = {
     {
       "name": "Trick or Defeat!",
       "latestHeroesDate": "",
-      "startDate": "30 Oct, 2017",
+      "startDate": "Oct 30, 2017",
       "focusHeroes": [
         "Sakura (Trick or Defeat!)",
         "Jakob (Trick or Defeat!)",
@@ -1601,7 +1647,7 @@ var heroesData = {
     {
       "name": "Our Lord and Savior",
       "latestHeroesDate": "",
-      "startDate": "1 Feb, 2017",
+      "startDate": "Feb 01, 2017",
       "focusHeroes": [
         "Wrys"
       ],
