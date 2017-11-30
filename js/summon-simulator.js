@@ -1,16 +1,32 @@
-$(document).ready(function() {
-  const ORB_IMG_URL = {
+$(document).ready(() => {
+  const ELEMENTS = {
+    BANNER_SELECT: '#select-banner',
+    SESSION_BUTTON: '#new-session',
+    SUMMON_OPTION: '.summon-option',
+    SUMMON_ORB: '.summon-orb',
+    SUMMON_LIST: '#summon-list',
+    SUMMON_ALL: '#summon-all',
+    RESET_BUTTON: '#reset',
+    SNIPE_BUTTON: '#snipe-btn',
+    SNIPE_LIST: '#snipe-list',
+    RATE_INPUT_FOCUS: '#rate-input-focus',
+    RATE_INPUT_5: '#rate-input-5',
+    RATE_INPUT_4: '#rate-input-4',
+    RATE_INPUT_3: '#rate-input-3',
+    FOCUS_LIST: '#focus-list'
+  };
+  const IMAGES = {
     blue: 'img/assets/orbs-blue.png',
     red: 'img/assets/orbs-red.png',
     green: 'img/assets/orbs-green.png',
-    gray: 'img/assets/orbs-gray.png'
-  }
+    neutral: 'img/assets/orbs-gray.png'
+  };
   const IV = [
     {boon: 'hp', bane: 'atk'},{boon: 'hp', bane: 'spd'},{boon: 'hp', bane: 'def'},{boon: 'hp', bane: 'res'},
     {boon: 'atk', bane: 'hp'},{boon: 'atk', bane: 'spd'},{boon: 'atk', bane: 'def'},{boon: 'atk', bane: 'res'},
     {boon: 'spd', bane: 'hp'},{boon: 'spd', bane: 'atk'},{boon: 'spd', bane: 'def'},{boon: 'spd', bane: 'res'},
     {boon: 'def', bane: 'hp'},{boon: 'def', bane: 'atk'},{boon: 'def', bane: 'spd'},{boon: 'def', bane: 'res'},
-    {boon: 'res', bane: 'atk'},{boon: 'res', bane: 'spd'},{boon: 'res', bane: 'def'},{boon: 'res', bane: 'hp'},
+    {boon: 'res', bane: 'hp'},{boon: 'res', bane: 'atk'},{boon: 'res', bane: 'spd'},{boon: 'res', bane: 'def'},
     {boon: '-', bane: '-'}
   ];
   const ORB_COST = [5, 4, 4, 4, 3];
@@ -24,51 +40,43 @@ $(document).ready(function() {
   let stats = {
     totalPulls: 0,
     orbsUsed: 0,
-    amountSpend: 0,
+    amountSpent: 0,
     totalRarity5: 0,
     totalFocus: 0
   };
-  let pityPulls = 0;                    // number of pulls without 5* heroes
-  let sessionPulls = 0;                 // number of pulls in current summoning session
-  let resetPityRate = false;            // whether to reset pity rate for new session
+  let pityPulls = 0;          // number of pulls without 5* heroes
+  let sessionPulls = 0;       // number of pulls in current summoning session
+  let resetPityRate = false;  // whether to reset pity rate for new session
 
-  let $selectBanner = $('#select-banner');
-  let $newSessionBtn = $('#new-session');
-  let summonOptions = $('.summon-option');
-  let $summonList = $('#summon-list').DataTable({
-    "paging": false,
-    "searching": false,
-    "info": false,
-    "columnDefs": [
-      { "width": "70px", "targets": 0 },
-      { "width": "50px", "targets": [2,3,4] }
-    ],
-    "language": {
-      "emptyTable": "No heroes summoned yet"
-    }
+  let $summonList = $(ELEMENTS.SUMMON_LIST).DataTable({
+    paging: false,
+    searching: false,
+    info: false,
+    columnDefs: [ { width: "70px", targets: 0 }, { width: "50px", targets: [2,3,4] } ],
+    language: { emptyTable: "No heroes summoned yet" }
   });
 
   init();
 
   function init() {
-    heroesData.banners.forEach(banner => {
+    BANNERS.forEach(banner => {
       $(`<option>${banner.name}</option>`)
           .data('banner', banner)
-          .appendTo($selectBanner);
+          .appendTo(ELEMENTS.BANNER_SELECT);
     });
-    bannerData = heroesData.banners[0];
+    bannerData = BANNERS[0];
     bannerData.startDate = new Date(bannerData.startDate);
     newBanner();
     bindEvents();
   }
 
   function bindEvents() {
-    $selectBanner.on('change', onChangeNewBanner);
-    $newSessionBtn.on('click', newSession);
-    $('#summon-all').on('click', onClickSummonAll);
-    $('.summon-option').on('click', '.summon-orb', onClickOrb);
-    $('#reset').on('click', resetData);
-    $('#snipe-btn').on('click', snipe);
+    $(ELEMENTS.BANNER_SELECT).on('change', onChangeNewBanner);
+    $(ELEMENTS.SESSION_BUTTON).on('click', newSession);
+    $(ELEMENTS.SUMMON_ALL).on('click', onClickSummonAll);
+    $(ELEMENTS.SUMMON_OPTION).on('click', ELEMENTS.SUMMON_ORB, onClickOrb);
+    $(ELEMENTS.RESET_BUTTON).on('click', resetData);
+    $(ELEMENTS.SNIPE_BUTTON).on('click', snipe);
   }
 
   function onChangeNewBanner(event) {
@@ -78,15 +86,14 @@ $(document).ready(function() {
   }
 
   function onClickSummonAll(event) {
-    let orbs = $('.summon-orb');
+    let orbs = $(ELEMENTS.SUMMON_ORB);
     for (let i = 0; i < orbs.length; i++) {
       revealOrb($(orbs[i]));
     }
   }
 
   function onClickOrb(event) {
-    let $orb = $(event.currentTarget);
-    revealOrb($orb);
+    revealOrb($(event.currentTarget));
   }
 
 
@@ -105,22 +112,21 @@ $(document).ready(function() {
     } else if (pityPulls >= 5) {
       pityPulls -= 5;
       let rateDecrease = (bannerData.pityRateRarityFocus + bannerData.pityRateRarity5) / 2;
-      $('#rate-input-focus').val(parseFloat($('#rate-input-focus').val()) + bannerData.pityRateRarityFocus);
-      $('#rate-input-5').val(parseFloat($('#rate-input-5').val()) + bannerData.pityRateRarity5);
-      $('#rate-input-4').val(parseFloat($('#rate-input-4').val()) - rateDecrease);
-      $('#rate-input-3').val(parseFloat($('#rate-input-3').val()) - rateDecrease);
+      $(ELEMENTS.RATE_INPUT_FOCUS).val(parseFloat($(ELEMENTS.RATE_INPUT_FOCUS).val()) + bannerData.pityRateRarityFocus);
+      $(ELEMENTS.RATE_INPUT_5).val(parseFloat($(ELEMENTS.RATE_INPUT_5).val()) + bannerData.pityRateRarity5);
+      $(ELEMENTS.RATE_INPUT_4).val(parseFloat($(ELEMENTS.RATE_INPUT_4).val()) - rateDecrease);
+      $(ELEMENTS.RATE_INPUT_3).val(parseFloat($(ELEMENTS.RATE_INPUT_3).val()) - rateDecrease);
     }
 
-
-    $newSessionBtn.attr('disabled', 'disabled');
+    $(ELEMENTS.SESSION_BUTTON).attr('disabled', 'disabled');
     updateOrbs(getSessionOrbs());
   }
 
   function resetRates() {
-    $('#rate-input-focus').val(bannerData.rateRarityFocus);
-    $('#rate-input-5').val(bannerData.rateRarity5);
-    $('#rate-input-4').val(bannerData.rateRarity4);
-    $('#rate-input-3').val(bannerData.rateRarity3);
+    $(ELEMENTS.RATE_INPUT_FOCUS).val(bannerData.rateRarityFocus);
+    $(ELEMENTS.RATE_INPUT_5).val(bannerData.rateRarity5);
+    $(ELEMENTS.RATE_INPUT_4).val(bannerData.rateRarity4);
+    $(ELEMENTS.RATE_INPUT_3).val(bannerData.rateRarity3);
   }
 
   function resetData() {
@@ -135,21 +141,21 @@ $(document).ready(function() {
   }
 
   function setSummonableHeroesList() {
-    let $focusList = $('#focus-list').empty();
+    let $focusList = $(ELEMENTS.FOCUS_LIST).empty();
     heroListRarity3 = [];
     heroListRarity4 = [];
     heroListRarity5 = [];
     heroListRarityFocus = [];
-    heroesData.heroes.forEach(hero => {
+    HEROES.forEach(hero => {
       if (bannerData.focusHeroes.includes(hero.name)) {
         heroListRarityFocus.push(hero);
         $focusList.append(`<div class="focus-list-hero">
         <img class="summon-hero-frame" src="img/assets/frame-rarity-focus.png">
-        <img class="summon-hero-portrait" src="${hero.assets}">
+        <img class="summon-hero-portrait" src="${hero.assets.portrait}">
         <img class="summon-hero-background" src="img/assets/background-rarity-focus.png">
         </div>`);
       }
-      if (new Date(hero.releaseDate) > bannerData.startDate) {
+      if (new Date(hero.releaseDate) > bannerData.startDate || hero.ghb) {
         return;
       }
       if (hero.rarity3) {
@@ -165,7 +171,7 @@ $(document).ready(function() {
   }
 
   function setSnipeOptions() {
-    $('#snipe-list').empty();
+    $(ELEMENTS.SNIPE_LIST).empty();
     heroListRarityFocus.forEach(hero => {
       let $checkbox = $(`<input type="checkbox" class="custom-control-input snipe-target">`)
           .data('hero', hero);
@@ -173,7 +179,7 @@ $(document).ready(function() {
           .append($checkbox)
           .append(`<span class="custom-control-indicator"></span>
               <span class="custom-control-description">${hero.name}</span>`)
-          .appendTo('#snipe-list');
+          .appendTo(ELEMENTS.SNIPE_LIST);
     });
   }
 
@@ -189,32 +195,32 @@ $(document).ready(function() {
       orbs = getTargetSnipeOrbs(targets);
       if (orbs.length) {
         if (snipeHit(revealOrb($(orbs[0])).hero, targets)) {
-          $('#summon-list tbody tr:last-child').addClass('table-success');
+          $(ELEMENTS.SUMMON_LIST + ' tbody tr:last-child').addClass('table-success');
         }
       } else if (sessionPulls > 0) {
         newSession();
       } else {
-        revealOrb($(getRandomFromArray($('.summon-orb'))));
+        revealOrb($(getRandomFromArray($(ELEMENTS.SUMMON_ORB))));
       }
     }
   }
 
   function snipeHit(hero, targetHeroes) {
-    for (let i = 0; i < targetHeroes.length; i++) {
-      if (targetHeroes[i].name === hero.name) {
-        targetHeroes.splice(i, 1);
-        return true;
+      for (let i = 0; i < targetHeroes.length; i++) {
+        if (targetHeroes[i].name === hero.name) {
+          targetHeroes.splice(i, 1);
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
 
   function getTargetSnipeOrbs(targetHeroes) {
     let colors = new Set();
-    targetHeroes.forEach(hero => colors.add(getOrbColorFromWeaponType(hero.weaponType)));
+    targetHeroes.forEach(hero => colors.add(hero.colorType.toLowerCase()));
 
     let selector = [...colors]
-        .map(color => `.summon-orb[data-color="${color}"]`)
+        .map(color => `${ELEMENTS.SUMMON_ORB}[data-color="${color}"]`)
         .join(',');
 
     return $(selector);
@@ -224,7 +230,7 @@ $(document).ready(function() {
     let orbData = $orb.data('hero');
     $orb.replaceWith(`<div class="summon-hero">
       <img class="summon-hero-frame" src="img/assets/frame-rarity-${orbData.rarity}.png">
-      <img class="summon-hero-portrait" src="${orbData.hero.assets}">
+      <img class="summon-hero-portrait" src="${orbData.hero.assets.portrait}">
       <img class="summon-hero-background" src="img/assets/background-rarity-${orbData.rarity}.png">
       <img class="summon-hero-rarity" src="img/assets/star-rarity-${orbData.rarity}.png">
     </div>`);
@@ -247,7 +253,7 @@ $(document).ready(function() {
           .draw();
     }
 
-    $newSessionBtn.removeAttr('disabled');
+    $(ELEMENTS.SESSION_BUTTON).removeAttr('disabled');
     updateStatsView();
 
     return orbData;
@@ -270,9 +276,9 @@ $(document).ready(function() {
 
   function getSessionOrbs() {
     let orbs = [];
-    let rateRarityFocus = parseFloat($('#rate-input-focus').val()) / 100;
-    let rateRarity5 = parseFloat($('#rate-input-5').val()) / 100 + rateRarityFocus;
-    let rateRarity4 = parseFloat($('#rate-input-4').val()) / 100 + rateRarity5;
+    let rateRarityFocus = parseFloat($(ELEMENTS.RATE_INPUT_FOCUS).val()) / 100;
+    let rateRarity5 = parseFloat($(ELEMENTS.RATE_INPUT_5).val()) / 100 + rateRarityFocus;
+    let rateRarity4 = parseFloat($(ELEMENTS.RATE_INPUT_4).val()) / 100 + rateRarity5;
 
     for (let i = 0; i < 5; i++) {
       let rate = Math.random();
@@ -299,7 +305,7 @@ $(document).ready(function() {
         };
       }
       orbData.iv = getRandomFromArray(IV);
-      orbData.color = getOrbColorFromWeaponType(orbData.hero.weaponType);
+      orbData.color = orbData.hero.colorType.toLowerCase();
       orbs.push(orbData);
     }
     return orbs;
@@ -307,33 +313,14 @@ $(document).ready(function() {
 
   function updateOrbs(orbs) {
     orbs.forEach((orbData, i) => {
-      let $orb = $(`<img class="summon-orb" src="${ORB_IMG_URL[orbData.color]}" data-color="${orbData.color}">`)
+      let $orb = $(`<img class="summon-orb" src="${IMAGES[orbData.color]}" data-color="${orbData.color}">`)
           .data('hero', orbData);
-      $(summonOptions[i]).empty().append($orb);
+      $($(ELEMENTS.SUMMON_OPTION)[i]).empty().append($orb);
     });
   }
 
   function getRandomFromArray(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
-  }
-
-  function getOrbColorFromWeaponType(weaponType) {
-    if (weaponType.startsWith('Red ')) {
-      return 'red';
-    } else if (weaponType.startsWith('Blue ')) {
-      return 'blue';
-    } else if (weaponType.startsWith('Green ')) {
-      return 'green';
-    } else {
-      return 'gray';
-    }
-  }
-
-  function getIvText(iv) {
-    if (iv.boon === '-') {
-      return 'neutral';
-    }
-    return `+${iv.boon} -${iv.bane}`;
   }
 
 });
