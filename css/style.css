@@ -17,13 +17,8 @@ body {
   box-shadow: none !important;
 }
 
-.header {
-  text-align: center;
-  margin: 16px;
-}
-.header img {
-  max-height: 75px;
-  max-width: 100%;
+.header-img {
+  height: 35px;
 }
 .bg-img {
   background-image: url('../img/assets/background.jpg');
@@ -176,4 +171,25 @@ body {
 
 #snipe-select {
   flex-grow: 1;
+}
+#select-banner {
+  position: relative;
+}
+
+.selectable .dropdown-toggle {
+  position: relative;
+  background-color: #ffffff;
+  color: #000000;
+}
+.selectable .dropdown-toggle:focus {
+  color: #ffffff;
+}
+.selectable .dropdown-toggle::after {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+}
+.selectable .dropdown-menu {
+  width: 100%;
+  position: absolute;
 }

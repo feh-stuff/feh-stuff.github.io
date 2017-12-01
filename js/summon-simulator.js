@@ -1,6 +1,7 @@
 $(document).ready(() => {
   const ELEMENTS = {
     BANNER_SELECT: '#select-banner',
+    BANNER_OPTION: '.dropdown-item',
     SESSION_BUTTON: '#new-session',
     SUMMON_OPTION: '.summon-option',
     SUMMON_ORB: '.summon-orb',
@@ -48,6 +49,7 @@ $(document).ready(() => {
   let sessionPulls = 0;       // number of pulls in current summoning session
   let resetPityRate = false;  // whether to reset pity rate for new session
 
+  let $bannerSelect = $(ELEMENTS.BANNER_SELECT);
   let $summonList = $(ELEMENTS.SUMMON_LIST).DataTable({
     paging: false,
     searching: false,
@@ -59,12 +61,16 @@ $(document).ready(() => {
   init();
 
   function init() {
-    BANNERS.forEach(banner => {
-      $(`<option>${banner.name}</option>`)
-          .data('banner', banner)
-          .appendTo(ELEMENTS.BANNER_SELECT);
-    });
-    bannerData = BANNERS[0];
+    $bannerSelect
+        .selectable({
+          selectOptions: BANNERS,
+          optionGenerator: bannerOptionsGenerator,
+          defaultText: BANNERS[0].banners[0].name,
+          defaultValue: BANNERS[0].banners[0]
+        })
+        .on('test', onChangeNewBanner);
+
+    bannerData = BANNERS[0].banners[0];
     bannerData.startDate = new Date(bannerData.startDate);
     newBanner();
     bindEvents();
@@ -80,7 +86,7 @@ $(document).ready(() => {
   }
 
   function onChangeNewBanner(event) {
-    bannerData = $(event.currentTarget).find('option:selected').data('banner');
+    bannerData = $(event.currentTarget).data('val');
     bannerData.startDate = new Date(bannerData.startDate);
     newBanner();
   }
@@ -95,7 +101,6 @@ $(document).ready(() => {
   function onClickOrb(event) {
     revealOrb($(event.currentTarget));
   }
-
 
   function newBanner() {
     setSummonableHeroesList();
@@ -319,8 +324,24 @@ $(document).ready(() => {
     });
   }
 
+  function bannerOptionsGenerator(item, $parent) {
+    $parent.append(`<div class="dropdown-header">${item.date}</div>`);
+    for (let i = 0; i < item.banners.length; i++) {
+      $(`<div class="dropdown-item">${item.banners[i].name}</div>`)
+          .data('val', item.banners[i])
+          .appendTo($parent);
+    }
+  }
+
   function getRandomFromArray(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  function getDateString(date) {
+    let months = [ 'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'];
+
+    return `${months[date.getMonth()]} ${date.getFullYear()}`;
   }
 
 });
