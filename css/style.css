@@ -172,7 +172,8 @@ body {
 #snipe-select {
   flex-grow: 1;
 }
-#select-banner {
+#select-banner,
+#hero-select {
   position: relative;
 }
 
@@ -188,6 +189,9 @@ body {
   position: absolute;
   right: 10px;
   top: 16px;
+}
+.selectable .btn-outline-secondary {
+  border: 1px solid #ced4da;
 }
 .selectable .dropdown-menu {
   width: 100%;

@@ -34,8 +34,15 @@ $.widget('custom.selectable', {
   },
 
   _makeOptions: function() {
+    this.$menu.empty();
     for (let i = 0; i < this.options.selectOptions.length; i++) {
       this.options.optionGenerator(this.options.selectOptions[i], this.$menu);
     }
+  },
+
+  selectOptions: function(opts) {
+    this.options.selectOptions = opts;
+    this._makeOptions();
+    this.$button.text(this.options.defaultText);
   }
 });

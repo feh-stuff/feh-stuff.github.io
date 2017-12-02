@@ -183,7 +183,8 @@ const HEROES = [
     },
     "rarity4": true,
     "rarity5": true,
-    "colorType": "Red"
+    "colorType": "Red",
+    "ttReward": true
   },
   {
     "name": "Arthur",
@@ -399,7 +400,7 @@ const HEROES = [
       "level1": { "hp": 16, "atk": 6, "spd": 8, "def": 3, "res": 6 },
       "level40": { "hp": [ 32, 35, 39 ], "atk": [ 29, 32, 35 ], "spd": [ 31, 34, 37 ], "def": [ 17, 20, 23 ], "res": [ 24, 28, 31 ] }
     },
-    "shortName": "Azura (P)",
+    "shortName": "Azura",
     "rarity5": true,
     "colorType": "Green",
     "limited": true
@@ -558,7 +559,8 @@ const HEROES = [
     },
     "rarity4": true,
     "rarity5": true,
-    "colorType": "Red"
+    "colorType": "Red",
+    "ttReward": true
   },
   {
     "name": "Boey",
@@ -651,7 +653,7 @@ const HEROES = [
       "level1": { "hp": 16, "atk": 7, "spd": 9, "def": 4, "res": 8 },
       "level40": { "hp": [ 30, 33, 36 ], "atk": [ 25, 29, 32 ], "spd": [ 34, 37, 40 ], "def": [ 16, 19, 22 ], "res": [ 26, 30, 33 ] }
     },
-    "shortName": "Caeda (B)",
+    "shortName": "Caeda",
     "rarity5": true,
     "colorType": "Blue",
     "limited": true
@@ -745,7 +747,7 @@ const HEROES = [
       "level1": { "hp": 17, "atk": 9, "spd": 6, "def": 8, "res": 4 },
       "level40": { "hp": [ 35, 39, 42 ], "atk": [ 32, 35, 38 ], "spd": [ 22, 25, 29 ], "def": [ 26, 30, 33 ], "res": [ 16, 19, 22 ] }
     },
-    "shortName": "Camilla (S)",
+    "shortName": "Camilla",
     "rarity5": true,
     "colorType": "Green",
     "limited": true
@@ -903,7 +905,7 @@ const HEROES = [
       "level1": { "hp": 20, "atk": 10, "spd": 8, "def": 5, "res": 4 },
       "level40": { "hp": [ 43, 46, 49 ], "atk": [ 33, 36, 39 ], "spd": [ 29, 32, 35 ], "def": [ 21, 24, 28 ], "res": [ 16, 19, 22 ] }
     },
-    "shortName": "Charlotte (B)",
+    "shortName": "Charlotte",
     "rarity5": true,
     "colorType": "Blue",
     "limited": true
@@ -999,7 +1001,7 @@ const HEROES = [
       "level1": { "hp": 19, "atk": 9, "spd": 8, "def": 6, "res": 5 },
       "level40": { "hp": [ 40, 43, 46 ], "atk": [ 32, 35, 38 ], "spd": [ 29, 32, 35 ], "def": [ 24, 28, 31 ], "res": [ 17, 20, 23 ] }
     },
-    "shortName": "Chrom (S)",
+    "shortName": "Chrom",
     "rarity5": true,
     "colorType": "Green",
     "limited": true
@@ -1125,7 +1127,8 @@ const HEROES = [
     },
     "rarity4": true,
     "rarity5": true,
-    "colorType": "Blue"
+    "colorType": "Blue",
+    "ttReward": true
   },
   {
     "name": "Cordelia",
@@ -1188,7 +1191,7 @@ const HEROES = [
       "level1": { "hp": 17, "atk": 9, "spd": 9, "def": 4, "res": 5 },
       "level40": { "hp": [ 33, 36, 40 ], "atk": [ 32, 35, 38 ], "spd": [ 32, 35, 38 ], "def": [ 16, 19, 22 ], "res": [ 19, 22, 25 ] }
     },
-    "shortName": "Cordelia (B)",
+    "shortName": "Cordelia",
     "rarity5": true,
     "colorType": "Neutral",
     "limited": true
@@ -1221,7 +1224,7 @@ const HEROES = [
       "level1": { "hp": 19, "atk": 8, "spd": 6, "def": 8, "res": 6 },
       "level40": { "hp": [ 37, 41, 44 ], "atk": [ 24, 27, 31 ], "spd": [ 31, 34, 37 ], "def": [ 31, 34, 37 ], "res": [ 18, 21, 24 ] }
     },
-    "shortName": "Corrin (F)",
+    "shortName": "Corrin",
     "rarity3": true,
     "rarity4": true,
     "colorType": "Blue"
@@ -1254,7 +1257,7 @@ const HEROES = [
       "level1": { "hp": 17, "atk": 7, "spd": 8, "def": 5, "res": 7 },
       "level40": { "hp": [ 31, 34, 37 ], "atk": [ 28, 31, 34 ], "spd": [ 31, 34, 37 ], "def": [ 19, 22, 25 ], "res": [ 23, 26, 30 ] }
     },
-    "shortName": "Corrin (F)",
+    "shortName": "Corrin",
     "rarity5": true,
     "colorType": "Blue",
     "limited": true
@@ -1287,7 +1290,7 @@ const HEROES = [
       "level1": { "hp": 20, "atk": 8, "spd": 8, "def": 6, "res": 5 },
       "level40": { "hp": [ 38, 42, 45 ], "atk": [ 29, 32, 35 ], "spd": [ 29, 32, 35 ], "def": [ 24, 28, 31 ], "res": [ 21, 24, 28 ] }
     },
-    "shortName": "Corrin (M)",
+    "shortName": "Corrin",
     "rarity4": true,
     "rarity5": true,
     "colorType": "Red"
@@ -1622,7 +1625,7 @@ const HEROES = [
       "level1": { "hp": 17, "atk": 10, "spd": 8, "def": 3, "res": 6 },
       "level40": { "hp": [ 31, 34, 37 ], "atk": [ 33, 36, 39 ], "spd": [ 31, 34, 37 ], "def": [ 15, 18, 21 ], "res": [ 22, 25, 29 ] }
     },
-    "shortName": "Elise (N)",
+    "shortName": "Elise",
     "rarity5": true,
     "colorType": "Green",
     "limited": true
@@ -1972,7 +1975,7 @@ const HEROES = [
       "level1": { "hp": 18, "atk": 8, "spd": 7, "def": 6, "res": 5 },
       "level40": { "hp": [ 36, 40, 43 ], "atk": [ 29, 32, 35 ], "spd": [ 28, 31, 34 ], "def": [ 24, 28, 31 ], "res": [ 14, 18, 21 ] }
     },
-    "shortName": "Frederick (Y)",
+    "shortName": "Frederick",
     "rarity5": true,
     "colorType": "Neutral",
     "limited": true
@@ -2036,7 +2039,7 @@ const HEROES = [
       "level1": { "hp": 17, "atk": 8, "spd": 9, "def": 4, "res": 6 },
       "level40": { "hp": [ 31, 34, 37 ], "atk": [ 26, 30, 33 ], "spd": [ 34, 37, 40 ], "def": [ 16, 19, 22 ], "res": [ 24, 28, 31 ] }
     },
-    "shortName": "Gaius (Y)",
+    "shortName": "Gaius",
     "rarity5": true,
     "colorType": "Neutral",
     "limited": true
@@ -2343,7 +2346,7 @@ const HEROES = [
       "level1": { "hp": 17, "atk": 9, "spd": 10, "def": 4, "res": 12 },
       "level40": { "hp": [ 33, 36, 40 ], "atk": [ 30, 33, 36 ], "spd": [ 31, 34, 37 ], "def": [ 22, 26, 29 ], "res": [ 33, 36, 39 ] }
     },
-    "shortName": "Henry (T)",
+    "shortName": "Henry",
     "rarity5": true,
     "colorType": "Green",
     "limited": true
@@ -2473,7 +2476,7 @@ const HEROES = [
       "level1": { "hp": 17, "atk": 10, "spd": 6, "def": 9, "res": 5 },
       "level40": { "hp": [ 40, 43, 46 ], "atk": [ 33, 36, 39 ], "spd": [ 24, 28, 31 ], "def": [ 32, 35, 38 ], "res": [ 17, 20, 23 ] }
     },
-    "shortName": "Ike (B)",
+    "shortName": "Ike",
     "rarity5": true,
     "colorType": "Green"
   },
@@ -2504,7 +2507,7 @@ const HEROES = [
       "level1": { "hp": 15, "atk": 6, "spd": 7, "def": 5, "res": 3 },
       "level40": { "hp": [ 33, 37, 40 ], "atk": [ 24, 28, 31 ], "spd": [ 30, 33, 36 ], "def": [ 19, 22, 25 ], "res": [ 17, 20, 23 ] }
     },
-    "shortName": "Inigo (P)",
+    "shortName": "Inigo",
     "rarity5": true,
     "colorType": "Green",
     "limited": true
@@ -2662,7 +2665,7 @@ const HEROES = [
       "level1": { "hp": 20, "atk": 9, "spd": 6, "def": 9, "res": 8 },
       "level40": { "hp": [ 38, 42, 45 ], "atk": [ 32, 35, 38 ], "spd": [ 20, 23, 26 ], "def": [ 30, 33, 36 ], "res": [ 29, 32, 35 ] }
     },
-    "shortName": "Jakob (T)",
+    "shortName": "Jakob",
     "rarity5": true,
     "colorType": "Neutral",
     "limited": true
@@ -2729,7 +2732,8 @@ const HEROES = [
     },
     "rarity4": true,
     "rarity5": true,
-    "colorType": "Red"
+    "colorType": "Red",
+    "ttReward": true
   },
   {
     "name": "Julia",
@@ -3043,7 +3047,7 @@ const HEROES = [
       "level1": { "hp": 18, "atk": 8, "spd": 5, "def": 6, "res": 7 },
       "level40": { "hp": [ 34, 37, 41 ], "atk": [ 29, 32, 35 ], "spd": [ 23, 27, 30 ], "def": [ 13, 16, 20 ], "res": [ 32, 35, 38 ] }
     },
-    "shortName": "Leo (N)",
+    "shortName": "Leo",
     "rarity5": true,
     "colorType": "Red",
     "limited": true
@@ -3299,7 +3303,7 @@ const HEROES = [
       "level1": { "hp": 17, "atk": 8, "spd": 10, "def": 8, "res": 4 },
       "level40": { "hp": [ 38, 41, 44 ], "atk": [ 31, 34, 37 ], "spd": [ 33, 36, 39 ], "def": [ 24, 27, 31 ], "res": [ 16, 19, 22 ] }
     },
-    "shortName": "Lucina (B)",
+    "shortName": "Lucina",
     "rarity5": true,
     "colorType": "Blue"
   },
@@ -3330,7 +3334,7 @@ const HEROES = [
       "level1": { "hp": 16, "atk": 7, "spd": 10, "def": 5, "res": 6 },
       "level40": { "hp": [ 32, 35, 39 ], "atk": [ 25, 29, 32 ], "spd": [ 33, 36, 39 ], "def": [ 19, 22, 25 ], "res": [ 22, 25, 29 ] }
     },
-    "shortName": "Lucina (S)",
+    "shortName": "Lucina",
     "rarity5": true,
     "colorType": "Blue",
     "limited": true
@@ -3521,7 +3525,7 @@ const HEROES = [
       "level1": { "hp": 16, "atk": 7, "spd": 9, "def": 5, "res": 6 },
       "level40": { "hp": [ 32, 35, 39 ], "atk": [ 30, 33, 36 ], "spd": [ 32, 35, 38 ], "def": [ 14, 18, 21 ], "res": [ 24, 28, 31 ] }
     },
-    "shortName": "Lyn (B)",
+    "shortName": "Lyn",
     "rarity5": true,
     "colorType": "Neutral"
   },
@@ -3552,7 +3556,7 @@ const HEROES = [
       "level1": { "hp": 17, "atk": 6, "spd": 10, "def": 6, "res": 5 },
       "level40": { "hp": [ 35, 39, 42 ], "atk": [ 24, 28, 31 ], "spd": [ 31, 34, 37 ], "def": [ 20, 23, 26 ], "res": [ 21, 24, 28 ] }
     },
-    "shortName": "Lyn (B)",
+    "shortName": "Lyn",
     "rarity5": true,
     "colorType": "Neutral",
     "limited": true
@@ -3670,10 +3674,11 @@ const HEROES = [
       "level1": { "hp": 19, "atk": 8, "spd": 10, "def": 6, "res": 4 },
       "level40": { "hp": [ 40, 43, 46 ], "atk": [ 31, 34, 37 ], "spd": [ 33, 36, 39 ], "def": [ 22, 25, 29 ], "res": [ 16, 19, 22 ] }
     },
-    "shortName": "Marth (M)",
+    "shortName": "Marth",
     "rarity4": true,
     "rarity5": true,
-    "colorType": "Red"
+    "colorType": "Red",
+    "ttReward": true
   },
   {
     "name": "Mathilda",
@@ -4141,7 +4146,7 @@ const HEROES = [
       "level1": { "hp": 17, "atk": 8, "spd": 6, "def": 5, "res": 8 },
       "level40": { "hp": [ 31, 34, 37 ], "atk": [ 31, 34, 37 ], "spd": [ 29, 32, 35 ], "def": [ 17, 20, 23 ], "res": [ 24, 27, 31 ] }
     },
-    "shortName": "Nowi (T)",
+    "shortName": "Nowi",
     "rarity5": true,
     "colorType": "Red",
     "limited": true
@@ -4297,7 +4302,7 @@ const HEROES = [
       "level1": { "hp": 15, "atk": 6, "spd": 8, "def": 3, "res": 4 },
       "level40": { "hp": [ 31, 34, 38 ], "atk": [ 24, 28, 31 ], "spd": [ 31, 34, 37 ], "def": [ 12, 16, 19 ], "res": [ 25, 28, 31 ] }
     },
-    "shortName": "Olivia (P)",
+    "shortName": "Olivia",
     "rarity5": true,
     "colorType": "Neutral",
     "limited": true
@@ -4644,7 +4649,7 @@ const HEROES = [
       "level1": { "hp": 18, "atk": 7, "spd": 7, "def": 7, "res": 5 },
       "level40": { "hp": [ 36, 40, 43 ], "atk": [ 25, 29, 32 ], "spd": [ 25, 29, 32 ], "def": [ 25, 29, 32 ], "res": [ 19, 22, 25 ] }
     },
-    "shortName": "Robin (F)",
+    "shortName": "Robin",
     "rarity3": true,
     "rarity4": true,
     "colorType": "Green",
@@ -4677,7 +4682,7 @@ const HEROES = [
       "level1": { "hp": 18, "atk": 8, "spd": 8, "def": 6, "res": 7 },
       "level40": { "hp": [ 32, 35, 38 ], "atk": [ 29, 32, 35 ], "spd": [ 31, 34, 37 ], "def": [ 24, 28, 31 ], "res": [ 25, 29, 32 ] }
     },
-    "shortName": "Robin (F)",
+    "shortName": "Robin",
     "rarity5": true,
     "colorType": "Blue",
     "limited": true
@@ -4710,7 +4715,7 @@ const HEROES = [
       "level1": { "hp": 18, "atk": 7, "spd": 7, "def": 7, "res": 5 },
       "level40": { "hp": [ 36, 40, 43 ], "atk": [ 25, 29, 32 ], "spd": [ 25, 29, 32 ], "def": [ 25, 29, 32 ], "res": [ 19, 22, 25 ] }
     },
-    "shortName": "Robin (M)",
+    "shortName": "Robin",
     "rarity3": true,
     "rarity4": true,
     "colorType": "Blue"
@@ -4805,7 +4810,7 @@ const HEROES = [
       "level1": { "hp": 16, "atk": 8, "spd": 8, "def": 7, "res": 7 },
       "level40": { "hp": [ 34, 38, 41 ], "atk": [ 29, 32, 35 ], "spd": [ 31, 34, 37 ], "def": [ 23, 26, 30 ], "res": [ 21, 24, 27 ] }
     },
-    "shortName": "Roy (B)",
+    "shortName": "Roy",
     "rarity5": true,
     "colorType": "Red"
   },
@@ -4964,7 +4969,7 @@ const HEROES = [
       "level1": { "hp": 16, "atk": 8, "spd": 8, "def": 4, "res": 8 },
       "level40": { "hp": [ 30, 33, 36 ], "atk": [ 29, 32, 35 ], "spd": [ 31, 34, 37 ], "def": [ 11, 14, 18 ], "res": [ 31, 34, 37 ] }
     },
-    "shortName": "Sakura (T)",
+    "shortName": "Sakura",
     "rarity5": true,
     "colorType": "Neutral",
     "limited": true
@@ -5273,7 +5278,7 @@ const HEROES = [
       "level1": { "hp": 15, "atk": 7, "spd": 5, "def": 4, "res": 5 },
       "level40": { "hp": [ 31, 34, 38 ], "atk": [ 28, 31, 34 ], "spd": [ 26, 29, 32 ], "def": [ 18, 21, 24 ], "res": [ 21, 24, 28 ] }
     },
-    "shortName": "Shigure (P)",
+    "shortName": "Shigure",
     "rarity5": true,
     "colorType": "Blue",
     "limited": true
@@ -5741,7 +5746,7 @@ const HEROES = [
       "level1": { "hp": 18, "atk": 7, "spd": 6, "def": 9, "res": 7 },
       "level40": { "hp": [ 36, 40, 43 ], "atk": [ 32, 35, 38 ], "spd": [ 20, 23, 26 ], "def": [ 32, 35, 38 ], "res": [ 21, 24, 27 ] }
     },
-    "shortName": "Tiki (A)",
+    "shortName": "Tiki",
     "rarity3": true,
     "rarity4": true,
     "colorType": "Red"
@@ -5774,7 +5779,7 @@ const HEROES = [
       "level1": { "hp": 18, "atk": 8, "spd": 6, "def": 8, "res": 7 },
       "level40": { "hp": [ 32, 35, 38 ], "atk": [ 33, 36, 39 ], "spd": [ 27, 30, 33 ], "def": [ 29, 32, 35 ], "res": [ 21, 24, 27 ] }
     },
-    "shortName": "Tiki (A)",
+    "shortName": "Tiki",
     "rarity5": true,
     "colorType": "Green",
     "limited": true
@@ -5807,7 +5812,7 @@ const HEROES = [
       "level1": { "hp": 15, "atk": 5, "spd": 4, "def": 8, "res": 7 },
       "level40": { "hp": [ 38, 41, 44 ], "atk": [ 28, 31, 34 ], "spd": [ 27, 30, 33 ], "def": [ 29, 32, 35 ], "res": [ 25, 29, 32 ] }
     },
-    "shortName": "Tiki (Y)",
+    "shortName": "Tiki",
     "rarity5": true,
     "colorType": "Red"
   },
@@ -5871,7 +5876,8 @@ const HEROES = [
     },
     "rarity4": true,
     "rarity5": true,
-    "colorType": "Red"
+    "colorType": "Red",
+    "ttReward": true
   },
   {
     "name": "Ursula",
@@ -6063,7 +6069,7 @@ const HEROES = [
       "level1": { "hp": 19, "atk": 8, "spd": 6, "def": 8, "res": 6 },
       "level40": { "hp": [ 40, 43, 46 ], "atk": [ 29, 32, 35 ], "spd": [ 27, 30, 33 ], "def": [ 33, 36, 39 ], "res": [ 13, 16, 20 ] }
     },
-    "shortName": "Xander (N)",
+    "shortName": "Xander",
     "rarity5": true,
     "colorType": "Green",
     "limited": true
@@ -6093,7 +6099,7 @@ const HEROES = [
       "level1": { "hp": 18, "atk": 6, "spd": 6, "def": 9, "res": 7 },
       "level40": { "hp": [ 36, 40, 43 ], "atk": [ 22, 25, 29 ], "spd": [ 24, 28, 31 ], "def": [ 32, 35, 38 ], "res": [ 23, 26, 30 ] }
     },
-    "shortName": "Xander (S)",
+    "shortName": "Xander",
     "rarity5": true,
     "colorType": "Blue",
     "limited": true

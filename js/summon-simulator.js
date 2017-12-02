@@ -160,7 +160,7 @@ $(document).ready(() => {
         <img class="summon-hero-background" src="img/assets/background-rarity-focus.png">
         </div>`);
       }
-      if (new Date(hero.releaseDate) > bannerData.startDate || hero.ghb) {
+      if (new Date(hero.releaseDate) > bannerData.startDate || hero.ghb || hero.ttReward) {
         return;
       }
       if (hero.rarity3) {
