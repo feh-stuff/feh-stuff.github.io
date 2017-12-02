@@ -4595,7 +4595,7 @@ const HEROES = [
     "title": "Black Magician",
     "weaponType": "Tome",
     "moveType": "Infantry",
-    "releaseDate": "Dec 04, 2017",
+    "releaseDate": "Dec 02, 2017",
     "assets": {
       "portrait": "img/heroes-portrait/75px-Icon_Portrait_Rhajat.png",
       "main": "img/heroes-main/Rhajat.png"

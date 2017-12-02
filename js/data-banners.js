@@ -15,6 +15,34 @@ const BANNERS = [
         "rateRarityFocus": 3,
         "pityRateRarity5": 0.25,
         "pityRateRarityFocus": 0.25
+      },
+      {
+        "name": "Enduring Love, Block B",
+        "latestHeroesDate": "",
+        "startDate": "Dec 02, 2017",
+        "focusHeroes": [ "Rhajat", "Priscilla", "Tharja", "Faye" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [ "Rhajat" ],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
+      {
+        "name": "Enduring Love, Block A",
+        "latestHeroesDate": "",
+        "startDate": "Dec 02, 2017",
+        "focusHeroes": [ "Dorcas", "Catria", "Sigurd", "Katarina" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [ "Rhajat" ],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
       }
     ]
   },
