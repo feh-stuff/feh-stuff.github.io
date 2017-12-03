@@ -48,15 +48,15 @@ let SKILL_ASSIST = [
       "exclude": [{ "weaponType": "Staff" }]
     },
     {
-      "name": "Rally Attack Defense", "range": 1, "spCost": 300, "effect": "Grants Atk/Def+3 to an adjacent ally until the end of the turn.",
+      "name": "Rally Atk/Def", "range": 1, "spCost": 300, "effect": "Grants Atk/Def+3 to an adjacent ally until the end of the turn.",
       "exclude": [{ "weaponType": "Staff" }]
     },
     {
-      "name": "Rally Attack Resistance", "range": 1, "spCost": 300, "effect": "Grants Atk/Res+3 to an adjacent ally until the end of the turn.",
+      "name": "Rally Atk/Res", "range": 1, "spCost": 300, "effect": "Grants Atk/Res+3 to an adjacent ally until the end of the turn.",
       "exclude": [{ "weaponType": "Staff" }]
     },
     {
-      "name": "Rally Attack Speed", "range": 1, "spCost": 300, "effect": "Grants Atk/Spd+3 to an adjacent ally until the end of the turn.",
+      "name": "Rally Atk/Spd", "range": 1, "spCost": 300, "effect": "Grants Atk/Spd+3 to an adjacent ally until the end of the turn.",
       "exclude": [{ "weaponType": "Staff" }]
     },
     {
@@ -64,7 +64,7 @@ let SKILL_ASSIST = [
       "exclude": [{ "weaponType": "Staff" }]
     },
     {
-      "name": "Rally Defense Resistance", "range": 1, "spCost": 300, "effect": "Grants Def/Res+3 to an adjacent ally until the end of the turn.",
+      "name": "Rally Def/Res", "range": 1, "spCost": 300, "effect": "Grants Def/Res+3 to an adjacent ally until the end of the turn.",
       "exclude": [{ "weaponType": "Staff" }]
     },
     {
@@ -76,11 +76,11 @@ let SKILL_ASSIST = [
       "include": [{ "weaponType": "Staff" }]
     },
     {
-      "name": "Rally Speed Defense", "range": 1, "spCost": 300, "effect": "Grants Spd/Def+3 to an adjacent ally until the end of the turn.",
+      "name": "Rally Spd/Def", "range": 1, "spCost": 300, "effect": "Grants Spd/Def+3 to an adjacent ally until the end of the turn.",
       "exclude": [{ "weaponType": "Staff" }]
     },
     {
-      "name": "Rally Speed Resistance", "range": 1, "spCost": 300, "effect": "Grants Spd/Res+3 to an adjacent ally until the end of the turn.",
+      "name": "Rally Spd/Res", "range": 1, "spCost": 300, "effect": "Grants Spd/Res+3 to an adjacent ally until the end of the turn.",
       "exclude": [{ "weaponType": "Staff" }]
     },
     {
