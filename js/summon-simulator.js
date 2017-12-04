@@ -191,16 +191,18 @@ $(document).ready(() => {
   function snipe() {
     let targetCheckbox = $('.snipe-target:checked');
     let targets = [];
+    let snipeCount = 0;
     let orbs;
 
     for (let i = 0; i < targetCheckbox.length; i++) {
       targets.push($(targetCheckbox[i]).data('hero'));
     }
-    while (targets.length) {
+    while (isContinueSnipe(targets, snipeCount)) {
       orbs = getTargetSnipeOrbs(targets);
       if (orbs.length) {
         if (snipeHit(revealOrb($(orbs[0])).hero, targets)) {
           $(ELEMENTS.SUMMON_LIST + ' tbody tr:last-child').addClass('table-success');
+          snipeCount++;
         }
       } else if (sessionPulls > 0) {
         newSession();
@@ -219,6 +221,15 @@ $(document).ready(() => {
       }
       return false;
     }
+
+  function isContinueSnipe(targets, snipeCount) {
+    let snipeAll = $('#snipe-all').is(':checked');
+    if (snipeAll) {
+      return targets.length > 0;
+    } else {
+      return snipeCount === 0;
+    }
+  }
 
   function getTargetSnipeOrbs(targetHeroes) {
     let colors = new Set();
