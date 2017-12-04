@@ -811,7 +811,6 @@ const HEROES = [
       "level1": { "hp": 17, "atk": 7, "spd": 10, "def": 7, "res": 6 },
       "level40": { "hp": [ 35, 39, 42 ], "atk": [ 28, 31, 34 ], "spd": [ 31, 34, 37 ], "def": [ 25, 29, 32 ], "res": [ 22, 25, 29 ] }
     },
-    "rarity3": true,
     "rarity4": true,
     "rarity5": true,
     "colorType": "Blue"
