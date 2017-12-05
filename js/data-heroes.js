@@ -1882,7 +1882,8 @@ const HEROES = [
       "level40": { "hp": [ 35, 39, 42 ], "atk": [ 26, 30, 33 ], "spd": [ 28, 31, 34 ], "def": [ 26, 30, 33 ], "res": [ 31, 34, 37 ] }
     },
     "rarity5": true,
-    "colorType": "Blue"
+    "colorType": "Blue",
+    "limited": true
   },
   {
     "name": "Florina",
