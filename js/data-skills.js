@@ -807,7 +807,7 @@ let SKILL_SEAL = [
   { "name": "Quickened Pulse", "effect": "Special cooldown count -1 at start of Turn 1.", "icon": "18-4" },
   { "name": "Resistance +1", "effect": "Grants Res+1.", "stats": {"res": 1}, "icon": "1-3" },
   { "name": "Resistance +2", "effect": "Grants Res+2.", "stats": {"res": 2}, "icon": "1-4" },
-  { "name": "Resistance +3", "effect": "Grants Res+3.", "stats": {"res": 1}, "icon": "1-5" },
+  { "name": "Resistance +3", "effect": "Grants Res+3.", "stats": {"res": 3}, "icon": "1-5" },
   { "name": "Savage Blow 1", "effect": "If unit initiates attack, foes within 2 spaces of target take 3 damage after combat.", "icon": "10-5" },
   { "name": "Savage Blow 2", "effect": "If unit initiates attack, foes within 2 spaces of target take 5 damage after combat.", "icon": "10-6" },
   { "name": "Savage Blow 3", "effect": "If unit initiates attack, foes within 2 spaces of target take 7 damage after combat.", "icon": "10-7" },
