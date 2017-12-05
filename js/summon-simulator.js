@@ -227,7 +227,7 @@ $(document).ready(() => {
     if (snipeAll) {
       return targets.length > 0;
     } else {
-      return snipeCount === 0;
+      return targets.length > 0 && snipeCount === 0;
     }
   }
 
