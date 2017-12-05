@@ -1,558 +1,845 @@
+let SKILL_WEAPON = [
+  { "name": "Absorb", "spCost": 150, "damage": 4, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "Recovers HP=50% of damage dealt." },
+  { "name": "Absorb+", "spCost": 300, "damage": 7, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "Recovers HP = 50% of damage dealt. After combat, restores 7 HP to allies within 2 spaces of unit." },
+  { "name": "Alondite", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Black Knight"], "weaponType": "Sword", "colorType": "Red", "effect": "Enables counterattack regardless of distance if this unit is attacked." },
+  { "name": "Amiti", "spCost": 400, "damage": 11, "range": 1, "exclusive": ["Elincia"], "weaponType": "Sword", "colorType": "Red", "stats": { "spd": -2 }, "effect": "Spd-2. Attack twice when initiating combat." },
+  { "name": "Armads", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Hector"], "weaponType": "Axe", "colorType": "Green", "effect": "Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%." },
+  { "name": "Armorslayer", "spCost": 200, "damage": 8, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Effective against armored units." },
+  { "name": "Armorslayer+", "spCost": 300, "damage": 12, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Effective against armored units." },
+  { "name": "Armorsmasher", "spCost": 200, "damage": 0, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Effective against armored units." },
+  { "name": "Armorsmasher+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Effective against armored foes." },
+  { "name": "Assassin's Bow", "spCost": 200, "damage": 7, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units.  If target has a dagger, it can't make a follow-up attack and this unit will." },
+  { "name": "Assassin's Bow+", "spCost": 300, "damage": 11, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units.  If target has a dagger, it can't make a follow-up attack and this unit will." },
+  { "name": "Assault", "spCost": 50, "damage": 10, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "-" },
+  { "name": "Audhulma", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Joshua"], "weaponType": "Sword", "colorType": "Red", "stats": { "res": 5 }, "effect": "Accelerates Special trigger (cooldown count-1). Grants Res+5." },
+  { "name": "Aura", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Linde"], "weaponType": "Tome", "colorType": "Blue", "effect": "Restores 5 HP to adjacent allies after any combat this unit initiates." },
+  { "name": "Ayra's Blade", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Ayra"], "weaponType": "Sword", "colorType": "Red", "stats": { "spd": 3 }, "effect": "Grants Spd+3. If unit's Spd - foe's Spd ≥ 1, gain Special cooldown charge +1 per attack. (If similar skill also used, only highest value applied.)" },
+  { "name": "Berkut's Lance", "spCost": 200, "damage": 10, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Grants Res+4 when the unit is under attack." },
+  { "name": "Berkut's Lance+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Grants Res+4 when the unit is under attack." },
+  { "name": "Binding Blade", "spCost": 400, "damage": 16, "range": 1, "effect": "Grants Def/Res+2 when this unit is attacked.", "exclusive": ["Roy"], "weaponType": "Sword", "colorType": "Red" },
+  { "name": "Blarblade", "spCost": 200, "damage": 9, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt." },
+  { "name": "Blarblade+", "spCost": 300, "damage": 13, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt." },
+  { "name": "Blarowl", "spCost": 200, "damage": 6, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2." },
+  { "name": "Blarowl+", "spCost": 300, "damage": 10, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2." },
+  { "name": "Blarraven", "spCost": 200, "damage": 7, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "Grants weapon advantage vs. colorless foes." },
+  { "name": "Blarraven+", "spCost": 300, "damage": 11, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "Grants weapon advantage vs. colorless foes." },
+  { "name": "Blarwolf", "spCost": 200, "damage": 6, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "Effective against cavalry units." },
+  { "name": "Blarwolf+", "spCost": 300, "damage": 10, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "Effective against cavalry units." },
+  { "name": "Blazing Durandal", "spCost": 400, "damage": 16, "range": 1, "effect": "Grants Atk+3. If unit's Atk > foe's, unit gains Special cooldown charge +1. (If using other similar skill, only highest value applied.)", "exclusive": ["Roy","Eliwood"], "weaponType": "Sword", "colorType": "Red", "stats": { "atk": 3 } },
+  { "name": "Blessed Bouquet", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates." },
+  { "name": "Blessed Bouquet+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates." },
+  { "name": "Blue Egg", "spCost": 200, "damage": 7, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "If unit initiates attack, unit recovers 4 HP after the battle." },
+  { "name": "Blue Egg+", "spCost": 300, "damage": 11, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "If unit initiates attack, unit recovers 4 HP after the battle." },
+  { "name": "Bolganone", "spCost": 200, "damage": 9, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "-" },
+  { "name": "Bolganone+", "spCost": 300, "damage": 13, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "-" },
+  { "name": "Brave Axe", "spCost": 200, "damage": 5, "range": 1, "weaponType": "Axe", "colorType": "Green", "stats": { "spd": -5 }, "effect": "Spd-5. Attack twice when initiating combat." },
+  { "name": "Brave Axe+", "spCost": 300, "damage": 8, "range": 1, "weaponType": "Axe", "colorType": "Green", "stats": { "spd": -5 }, "effect": "Spd-5. Attack twice when initiating combat." },
+  { "name": "Brave Bow", "spCost": 200, "damage": 4, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "stats": { "spd": -5 }, "effect": "Spd-5. Effective against flying units.  Attacks twice if unit initiates combat." },
+  { "name": "Brave Bow+", "spCost": 300, "damage": 7, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "stats": { "spd": -5 }, "effect": "Spd-5. Effective against flying units.  Attacks twice if unit initiates combat." },
+  { "name": "Brave Lance", "spCost": 200, "damage": 5, "range": 1, "weaponType": "Lance", "colorType": "Blue", "stats": { "spd": -5 }, "effect": "Spd-5. Attack twice when initiating combat." },
+  { "name": "Brave Lance+", "spCost": 300, "damage": 8, "range": 1, "weaponType": "Lance", "colorType": "Blue", "stats": { "spd": -5 }, "effect": "Spd-5. Attack twice when initiating combat." },
+  { "name": "Brave Sword", "spCost": 200, "damage": 5, "range": 1, "weaponType": "Sword", "colorType": "Red", "stats": { "spd": -5 }, "effect": "Spd-5. Attack twice when initiating combat." },
+  { "name": "Brave Sword+", "spCost": 300, "damage": 8, "range": 1, "weaponType": "Sword", "colorType": "Red", "stats": { "spd": -5 }, "effect": "Spd-5. Attack twice when initiating combat." },
+  { "name": "Bright Naginata", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Shiro"], "weaponType": "Lance", "colorType": "Blue", "effect": "Grants Atk/Def+4 during combat if unit initiates combat.", },
+  { "name": "Brynhildr", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Leo"], "weaponType": "Tome", "colorType": "Red", "effect": "If unit initiates attack, restricts foe's next-turn movement to 1 space or less.", },
+  { "name": "Candlelight", "spCost": 150, "damage": 7, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "After combat, foe inflicted with status preventing them from counterattacking." },
+  { "name": "Candlelight+", "spCost": 300, "damage": 11, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "After combat, foe and foes within 2 spaces of target inflicted with status preventing counterattack through their next actions." },
+  { "name": "Carrot Axe", "spCost": 200, "damage": 9, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "If unit initiates attack, unit recovers 4 HP after the battle." },
+  { "name": "Carrot Axe+", "spCost": 300, "damage": 13, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "If unit initiates attack, unit recovers 4 HP after the battle." },
+  { "name": "Carrot Lance", "spCost": 200, "damage": 9, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "If unit initiates attack, unit recovers 4 HP after the battle." },
+  { "name": "Carrot Lance+", "spCost": 300, "damage": 13, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "If unit initiates attack, unit recovers 4 HP after the battle." },
+  { "name": "Clarisse's Bow", "spCost": 200, "damage": 7, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units." },
+  { "name": "Clarisse's Bow+", "spCost": 300, "damage": 11, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units." },
+  { "name": "Cupid Arrow", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates. Effective against fliers." },
+  { "name": "Cupid Arrow+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates. Effective against fliers." },
+  { "name": "Cursed Lance", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Valter"], "weaponType": "Lance", "colorType": "Blue", "stats": { "atk": 2, "spd": 2 }, "effect": "Grants Atk/Spd+2 and accelerates Special trigger (cooldown count-1). Unit takes 4 damage after combat." },
+  { "name": "Cymbeline", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Sanaki"], "weaponType": "Tome", "colorType": "Red", "effect": "Grants adjacent allies Atk+4 through their next actions after any combat this unit initiates.", },
+  { "name": "Dancer's Fan", "spCost": 200, "damage": 7, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat. Also, enemy suffers Def/Res-5 after combat until the end of foe's next action." },
+  { "name": "Dancer's Fan+", "spCost": 300, "damage": 10, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat. Also, enemy suffers Def/Res-7 after combat until the end of foe's next action." },
+  { "name": "Dancer's Ring", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat." },
+  { "name": "Dancer's Ring+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat." },
+  { "name": "Dancer's Score", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat." },
+  { "name": "Dancer's Score+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat." },
+  { "name": "Dark Aura", "spCost": 400, "damage": 14, "range": 2, "effect": "Grants adjacent allies who use swords, axes, lances, or dragonstones Atk+6 through their next actions at the start of each turn.", "exclusive": ["Delthea", "Linde"], "weaponType": "Tome", "colorType": "Blue" },
+  { "name": "Dark Breath", "spCost": 200, "damage": 9, "range": 1, "weaponType": "Breath", "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions." },
+  { "name": "Dark Breath+", "spCost": 300, "damage": 13, "range": 1, "weaponType": "Breath", "effect": "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions." },
+  { "name": "Dark Excalibur", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Merric", "Sonya"], "weaponType": "Tome", "colorType": "Green", "effect": "Grants +10 to damage when Special triggers.", },
+  { "name": "Dark Greatsword", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Siegbert"], "weaponType": "Sword", "colorType": "Red", "effect": "Grants Atk/Spd+4 during combat if unit initiates combat.", },
+  { "name": "Deathly Dagger", "spCost": 400, "damage": 11, "range": 2, "exclusive": ["Jaffar"], "weaponType": "Dagger", "colorType": "Neutral", "effect": "After combat, inflicts Def/Res-7 on foe through its next action. If unit initiated combat, 7 damage to foe after battle.", },
+  { "name": "Deft Harpoon", "spCost": 200, "damage": 10, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat." },
+  { "name": "Deft Harpoon+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat." },
+  { "name": "Dire Thunder", "spCost": 400, "damage": 9, "range": 2, "exclusive": ["Reinhardt","Olwen"], "weaponType": "Tome", "colorType": "Blue", "stats": { "spd": -5 }, "effect": "Spd-5. Attack twice when initiating combat.", },
+  { "name": "Divine Naga", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Julia", "Deirdre"], "weaponType": "Tome", "colorType": "Green", "effect": "Effective against dragons.  Foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat.", },
+  { "name": "Divine Tyrfing", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Sigurd","Seliph"], "weaponType": "Sword", "colorType": "Red", "stats": { "res": 3 }, "effect": "Grants Res+3. If in combat against foe using magic, unit receives 50% less damage from the first attack.", },
+  { "name": "Durandal", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Eliwood"], "weaponType": "Sword", "colorType": "Red", "effect": "Grants Atk+4 during combat if unit initiates attack.", },
+  { "name": "Eckesachs", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Zephiel"], "weaponType": "Sword", "colorType": "Red", "effect": "Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn.", },
+  { "name": "Elfire", "spCost": 100, "damage": 6, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "-" },
+  { "name": "Élivagar", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Veronica"], "weaponType": "Tome", "colorType": "Green", "effect": "If unit initiates attack, bonuses on foes within 2 spaces of the target become penalties through their next actions.", },
+  { "name": "Elthunder", "spCost": 100, "damage": 6, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "-" },
+  { "name": "Elwind", "spCost": 100, "damage": 6, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "-" },
+  { "name": "Emerald Axe", "spCost": 200, "damage": 8, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage." },
+  { "name": "Emerald Axe+", "spCost": 300, "damage": 12, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage." },
+  { "name": "Excalibur", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Merric"], "weaponType": "Tome", "colorType": "Green", "effect": "Effective against flying units.", },
+  { "name": "Falchion", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Marth", "Marth (Masked)", "Chrom", "Alm", "Lucina"], "weaponType": "Sword", "colorType": "Red", "effect": "Effective against dragons.  At the start of every third turn, unit recovers 10 HP.", },
+  { "name": "Fear", "spCost": 150, "damage": 5, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "After combat, inflicts Atk-6 on targeted foe through its next action." },
+  { "name": "Fear+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "After combat, inflicts Atk-7 on target and foes within 2 spaces through their next actions." },
+  { "name": "Fenrir", "spCost": 200, "damage": 9, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "-" },
+  { "name": "Fenrir+", "spCost": 300, "damage": 13, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "-" },
+  { "name": "Fensalir", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Sharena"], "weaponType": "Lance", "colorType": "Blue", "effect": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.", },
+  { "name": "Fire", "spCost": 50, "damage": 4, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "-" },
+  { "name": "Fire Breath", "spCost": 50, "damage": 6, "range": 1, "weaponType": "Breath", "effect": "-" },
+  { "name": "Fire Breath+", "spCost": 100, "damage": 8, "range": 1, "weaponType": "Breath", "effect": "-" },
+  { "name": "Firesweep Bow", "spCost": 200, "damage": 7, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against fliers.  Unit and enemies cannot use counterattacks." },
+  { "name": "Firesweep Bow+", "spCost": 300, "damage": 11, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against fliers.  Unit and enemies cannot use counterattacks." },
+  { "name": "Firesweep Lance", "spCost": 200, "damage": 11, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Unit and enemies cannot use counterattacks." },
+  { "name": "Firesweep Lance+", "spCost": 300, "damage": 15, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Unit and enemies cannot use counterattacks." },
+  { "name": "Firesweep Sword", "spCost": 200, "damage": 11, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Unit and foes cannot counterattack." },
+  { "name": "Firesweep Sword+", "spCost": 300, "damage": 15, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Unit and foes cannot counterattack." },
+  { "name": "First Bite", "spCost": 200, "damage": 10, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates." },
+  { "name": "First Bite+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates." },
+  { "name": "Flametongue", "spCost": 200, "damage": 11, "range": 1, "weaponType": "Breath", "effect": "-" },
+  { "name": "Flametongue+", "spCost": 300, "damage": 15, "range": 1, "weaponType": "Breath", "effect": "-" },
+  { "name": "Flux", "spCost": 50, "damage": 4, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "-" },
+  { "name": "Folkvangr", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Alfonse"], "weaponType": "Sword", "colorType": "Red", "effect": "Grants Atk+5 at start of turn if unit's HP ≤ 50%.", },
+  { "name": "Fujin Yumi", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Takumi"], "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units.  Unit can pass though foes if own HP ≥ 50%.", },
+  { "name": "Geirskogul", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Lucina (Brave Heroes)"], "weaponType": "Lance", "colorType": "Blue", "stats": { "def": 3 }, "effect": "Grants Def+3. Grants allies with sword, lance, axe, bow, or dagger within 2 spaces Atk/Spd+3 during combat.", },
+  { "name": "Gradivus", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Camus"], "weaponType": "Lance", "colorType": "Blue", "effect": "Enables counterattack regardless of distance if this unit is attacked.", },
+  { "name": "Gravity", "spCost": 150, "damage": 6, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "After any combat, prevents foe from moving more than 1 space through its next action." },
+  { "name": "Gravity+", "spCost": 300, "damage": 10, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "After combat, prevents target and foes within 1 space of target from moving more than 1 space through their next actions." },
+  { "name": "Green Egg", "spCost": 200, "damage": 7, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "If unit initiates attack, unit recovers 4 HP after the battle." },
+  { "name": "Green Egg+", "spCost": 300, "damage": 11, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "If unit initiates attack, unit recovers 4 HP after the battle." },
+  { "name": "Grimoire", "spCost": 400, "damage": 14, "range": 2, "effect": "If unit has ≥ 50% HP, unit can move to a space adjacent to an ally within 2 spaces.", "exclusive": ["Nowi (Trick or Defeat!)"], "weaponType": "Tome", "colorType": "Red" },
+  { "name": "Gronnblade", "spCost": 200, "damage": 9, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt." },
+  { "name": "Gronnblade+", "spCost": 300, "damage": 13, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt." },
+  { "name": "Gronnowl", "spCost": 200, "damage": 6, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2." },
+  { "name": "Gronnowl+", "spCost": 300, "damage": 10, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2." },
+  { "name": "Gronnraven", "spCost": 200, "damage": 7, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "Grants weapon advantage vs. colorless foes." },
+  { "name": "Gronnraven+", "spCost": 300, "damage": 11, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "Grants weapon advantage vs. colorless foes." },
+  { "name": "Gronnwolf", "spCost": 200, "damage": 6, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "Effective against cavalry units." },
+  { "name": "Gronnwolf+", "spCost": 300, "damage": 10, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "Effective against cavalry units." },
+  { "name": "Guard Bow", "spCost": 200, "damage": 0, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units." },
+  { "name": "Guard Bow+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying foes.  Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff." },
+  { "name": "Hammer", "spCost": 200, "damage": 8, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "Effective against armored units." },
+  { "name": "Hammer+", "spCost": 300, "damage": 12, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "Effective against armored units." },
+  { "name": "Hauteclere", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Michalis", "Minerva"], "weaponType": "Axe", "colorType": "Green", "effect": "Accelerates Special trigger (cooldown count-1).", },
+  { "name": "Heavy Spear", "spCost": 200, "damage": 8, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Effective against armored units." },
+  { "name": "Heavy Spear+", "spCost": 300, "damage": 12, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Effective against armored units." },
+  { "name": "Hibiscus Tome", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat." },
+  { "name": "Hibiscus Tome+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat." },
+  { "name": "Iron Axe", "spCost": 50, "damage": 6, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "-" },
+  { "name": "Iron Bow", "spCost": 50, "damage": 4, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units." },
+  { "name": "Iron Dagger", "spCost": 50, "damage": 3, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "After combat, inflicts Def/Res-3 on foe through its next action." },
+  { "name": "Iron Lance", "spCost": 50, "damage": 6, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "-" },
+  { "name": "Iron Sword", "spCost": 50, "damage": 6, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "-" },
+  { "name": "Keen Blarwolf", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "Effective against cavalry foes." },
+  { "name": "Keen Blarwolf+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "Effective against cavalry foes." },
+  { "name": "Keen Gronnwolf", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "Effective against cavalry foes." },
+  { "name": "Keen Gronnwolf+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "Effective against cavalry foes." },
+  { "name": "Keen Raudrwolf", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "Effective against cavalry foes." },
+  { "name": "Keen Raudrwolf+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "Effective against cavalry foes." },
+  { "name": "Killer Axe", "spCost": 200, "damage": 7, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Killer Axe+", "spCost": 300, "damage": 11, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Killer Bow", "spCost": 200, "damage": 5, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units.  Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Killer Bow+", "spCost": 300, "damage": 9, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units.  Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Killer Lance", "spCost": 200, "damage": 7, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Killer Lance+", "spCost": 300, "damage": 11, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Killing Edge", "spCost": 200, "damage": 7, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Killing Edge+", "spCost": 300, "damage": 11, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Kitty Paddle", "spCost": 200, "damage": 5, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "Effective against foe using magic.  After combat, if foe uses magic, foe suffers Def/Res-5 through foe's next action." },
+  { "name": "Kitty Paddle+", "spCost": 300, "damage": 8, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "Effective against foe using magic.  After combat, if foe uses magic, foe suffers Def/Res-7 through foe's next action." },
+  { "name": "Laevatein", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Laevatein"], "weaponType": "Sword", "colorType": "Red", "stats": { "atk": 3 }, "effect": "Grants Atk+3. Adds total bonuses on unit to damage dealt.", },
+  { "name": "Legion's Axe", "spCost": 200, "damage": 10, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "After combat, bonuses on targeted foe become penalties through its next action." },
+  { "name": "Legion's Axe+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "After combat, bonuses on targeted foe become penalties through its next action." },
+  { "name": "Leiptr", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Fjorm"], "weaponType": "Lance", "colorType": "Blue", "effect": "Unit can counterattack regardless of foe's range.", },
+  { "name": "Light Breath", "spCost": 200, "damage": 9, "range": 1, "weaponType": "Breath", "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates." },
+  { "name": "Light Breath+", "spCost": 300, "damage": 13, "range": 1, "weaponType": "Breath", "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates." },
+  { "name": "Lightning Breath", "spCost": 200, "damage": 7, "range": 1, "weaponType": "Breath", "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1)." },
+  { "name": "Lightning Breath+", "spCost": 300, "damage": 11, "range": 1, "weaponType": "Breath", "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1)." },
+  { "name": "Lilith Floatie", "spCost": 200, "damage": 10, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat." },
+  { "name": "Lilith Floatie+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat." },
+  { "name": "Melon Crusher", "spCost": 200, "damage": 10, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat." },
+  { "name": "Melon Crusher+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat." },
+  { "name": "Monstrous Bow", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying foes.  After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions." },
+  { "name": "Monstrous Bow+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying foes.  After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions." },
+  { "name": "Mulagir", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Lyn (Brave Heroes)"], "weaponType": "Bow", "colorType": "Neutral", "stats": { "spd": 3 }, "effect": "Effective against flying units.  Grants Spd+3. If foe is magic user, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat.", },
+  { "name": "Mystletainn", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Eldigan"], "weaponType": "Sword", "colorType": "Red", "effect": "Accelerates Special trigger (cooldown count-1).", },
+  { "name": "Naga", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Julia"], "weaponType": "Tome", "colorType": "Green", "effect": "Effective against dragons.  Grants Def/Res+2 when this unit is attacked.", },
+  { "name": "Nidhogg", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Innes"], "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units.  During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", },
+  { "name": "Noatun", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Anna"], "weaponType": "Axe", "colorType": "Green", "effect": "Unit may move adjacent to any ally when HP ≤ 40%.", },
+  { "name": "Pain", "spCost": 150, "damage": 3, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "Inflicts 10 damage on targeted foe after combat." },
+  { "name": "Pain+", "spCost": 300, "damage": 10, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "Deals 10 damage to target and foes within 2 spaces of target after combat." },
+  { "name": "Panic", "spCost": 150, "damage": 7, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "After combat, bonuses on targeted foe become penalties through its next action." },
+  { "name": "Panic+", "spCost": 300, "damage": 11, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "After combat, bonuses on target and foes within 2 spaces of target become penalties through their next actions." },
+  { "name": "Parthia", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Jeorge"], "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units.  Grants Res+4 during combat if initiating attack.", },
+  { "name": "Poison Dagger", "spCost": 200, "damage": 2, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "Effective against infantry units.  Infantry foes suffer Def/Res-4 after combat through their next actions." },
+  { "name": "Poison Dagger+", "spCost": 300, "damage": 5, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "Effective against infantry units.  Infantry foes suffer Def/Res-6 after combat through their next actions." },
+  { "name": "Ragnarok", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Celica"], "weaponType": "Tome", "colorType": "Red", "effect": "If unit has 100% HP at the start of combat, unit receives Atk/Spd +5. If attacking, unit will receive 5 damage after combat.", },
+  { "name": "Ragnell", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Ike"], "weaponType": "Sword", "colorType": "Red", "effect": "Enables counterattack regardless of distance if this unit is attacked.", },
+  { "name": "Raijinto", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Ryoma"], "weaponType": "Sword", "colorType": "Red", "effect": "Enables counterattack regardless of distance if this unit is attacked.", },
+  { "name": "Raudrblade", "spCost": 200, "damage": 9, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt." },
+  { "name": "Raudrblade+", "spCost": 300, "damage": 13, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt." },
+  { "name": "Raudrowl", "spCost": 200, "damage": 6, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2." },
+  { "name": "Raudrowl+", "spCost": 300, "damage": 10, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2." },
+  { "name": "Raudrraven", "spCost": 200, "damage": 7, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "Grants weapon advantage vs. colorless foes." },
+  { "name": "Raudrraven+", "spCost": 300, "damage": 11, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "Grants weapon advantage vs. colorless foes." },
+  { "name": "Raudrwolf", "spCost": 200, "damage": 6, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "Effective against cavalry units." },
+  { "name": "Raudrwolf+", "spCost": 300, "damage": 10, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "Effective against cavalry units." },
+  { "name": "Refreshing Bolt", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers." },
+  { "name": "Refreshing Bolt+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers." },
+  { "name": "Regal Blade", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Lloyd"], "weaponType": "Sword", "colorType": "Red", "effect": "If foe's HP is 100% when combat starts, unit receives Atk/Spd+2 during combat.", },
+  { "name": "Resolute Blade", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Mia"], "weaponType": "Sword", "colorType": "Red", "stats": { "atk": 3 }, "effect": "Grants Atk+3. Grants +10 to damage when Special triggers.", },
+  { "name": "Rexcalibur", "spCost": 200, "damage": 9, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "-" },
+  { "name": "Rexcalibur+", "spCost": 300, "damage": 13, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "-" },
+  { "name": "Ridersbane", "spCost": 200, "damage": 10, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Effective against cavalry units." },
+  { "name": "Ridersbane+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Effective against cavalry units." },
+  { "name": "Rogue Dagger", "spCost": 200, "damage": 4, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "After combat, inflicts Def/Res-3 on foe through its next action. Grants unit Def/Res+3 for 1 turn." },
+  { "name": "Rogue Dagger+", "spCost": 300, "damage": 7, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "After combat, inflicts Def/Res-5 on foe through its next action. Grants unit Def/Res+5 for 1 turn." },
+  { "name": "Ruby Sword", "spCost": 200, "damage": 8, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage." },
+  { "name": "Ruby Sword+", "spCost": 300, "damage": 12, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage." },
+  { "name": "Ruin", "spCost": 100, "damage": 6, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "-" },
+  { "name": "Sapphire Lance", "spCost": 200, "damage": 8, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage." },
+  { "name": "Sapphire Lance+", "spCost": 300, "damage": 12, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage." },
+  { "name": "Sealife Tome", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat." },
+  { "name": "Sealife Tome+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat." },
+  { "name": "Seashell", "spCost": 200, "damage": 7, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "Foe takes Def/Res-5 until end of foe's next action. If unit has 100% HP at start of combat, Atk/Spd/Def/Res+2. If attacking, unit gets 2 damage after." },
+  { "name": "Seashell+", "spCost": 300, "damage": 10, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "Foe takes Def/Res-7 until end of foe's next action. If unit has 100% HP at start of combat, Atk/Spd/Def/Res+2. If attacking, unit gets 2 damage after." },
+  { "name": "Siegfried", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Xander"], "weaponType": "Sword", "colorType": "Red", "effect": "Enables counterattack regardless of distance if this unit is attacked.", },
+  { "name": "Sieglinde", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Eirika"], "weaponType": "Sword", "colorType": "Red", "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.", },
+  { "name": "Siegmund", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Ephraim"], "weaponType": "Lance", "colorType": "Blue", "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.", },
+  { "name": "Silver Axe", "spCost": 200, "damage": 11, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "-" },
+  { "name": "Silver Axe+", "spCost": 300, "damage": 15, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "-" },
+  { "name": "Silver Bow", "spCost": 200, "damage": 9, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units." },
+  { "name": "Silver Bow+", "spCost": 300, "damage": 13, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units." },
+  { "name": "Silver Dagger", "spCost": 200, "damage": 7, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "After combat, inflicts Def/Res-5 on foe through its next action." },
+  { "name": "Silver Dagger+", "spCost": 300, "damage": 10, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "After combat, inflicts Def/Res-7 on foe through its next action." },
+  { "name": "Silver Lance", "spCost": 200, "damage": 11, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "-" },
+  { "name": "Silver Lance+", "spCost": 300, "damage": 15, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "-" },
+  { "name": "Silver Sword", "spCost": 200, "damage": 11, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "-" },
+  { "name": "Silver Sword+", "spCost": 300, "damage": 15, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "-" },
+  { "name": "Sinmara", "spCost": 400, "damage": 16, "range": 1, "effect": "Grants Def+3. Deals 20 damage to foes within 2 spaces at the start of each turn.", "exclusive": ["Surtr"], "weaponType": "Axe", "colorType": "Green", "stats": { "def": 3 } },
+  { "name": "Slaying Axe", "spCost": 200, "damage": 10, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Slaying Axe+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Slaying Bow", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units.  Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Slaying Bow+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units.  Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Slaying Edge", "spCost": 200, "damage": 10, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Slaying Edge+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Slaying Hammer", "spCost": 200, "damage": 0, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "Effective against armored units." },
+  { "name": "Slaying Hammer+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "Effective against armored foes." },
+  { "name": "Slaying Lance", "spCost": 200, "damage": 10, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Slaying Lance+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Accelerates Special trigger (cooldown count-1)." },
+  { "name": "Slaying Spear", "spCost": 200, "damage": 0, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Effective against armored units." },
+  { "name": "Slaying Spear+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Effective against armored foes." },
+  { "name": "Slow", "spCost": 150, "damage": 5, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "After any combat, inflicts Spd-6 on foe through its next action." },
+  { "name": "Slow+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "After combat, inflicts Spd-7 on target and foes within 2 spaces of target through their next actions." },
+  { "name": "Smoke Dagger", "spCost": 200, "damage": 6, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "After combat, inflicts Def/Res-4 on foes within 2 spaces of target through their next actions." },
+  { "name": "Smoke Dagger+", "spCost": 300, "damage": 9, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "After combat, inflicts Def/Res-6 on foes within 2 spaces of target through their next actions." },
+  { "name": "Sol Katti", "spCost": 400, "damage": 16, "range": 1, "effect": "If wielder initiates attack at HP ≤ 50%, any follow-up occurs immediately.", "exclusive": ["Lyn"], "weaponType": "Sword", "colorType": "Red" },
+  { "name": "Spectral Tome", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions." },
+  { "name": "Spectral Tome+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions." },
+  { "name": "Steel Axe", "spCost": 100, "damage": 8, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "-" },
+  { "name": "Steel Bow", "spCost": 100, "damage": 6, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units." },
+  { "name": "Steel Dagger", "spCost": 100, "damage": 5, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "After combat, inflicts Def/Res-3 on foe through its next action." },
+  { "name": "Steel Lance", "spCost": 100, "damage": 8, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "-" },
+  { "name": "Steel Sword", "spCost": 100, "damage": 8, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "-" },
+  { "name": "Stout Tomahawk", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Dorcas"], "weaponType": "Axe", "colorType": "Green", "effect": "Enables counterattack regardless of distance if this unit is attacked.", },
+  { "name": "Thokk", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Loki"], "weaponType": "Staff", "colorType": "Neutral", "effect": "Damage from staff calculated like other weapons. At start of turn, foes with bow, daggers, magic, or staff in cardinal directions with HP 3 or more lower than unit's can move only 1 space through their next actions.", },
+  { "name": "Thoron", "spCost": 200, "damage": 9, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "-" },
+  { "name": "Thoron+", "spCost": 300, "damage": 13, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "-" },
+  { "name": "Thunder", "spCost": 50, "damage": 4, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "-" },
+  { "name": "Tomato Tome", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat." },
+  { "name": "Tomato Tome+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat." },
+  { "name": "Tyrfing", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Seliph"], "weaponType": "Sword", "colorType": "Red", "effect": "Grants Def+4 in battle if unit's HP ≤ 50%.", },
+  { "name": "Urdr", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Azura (Performing Arts)"], "weaponType": "Axe", "colorType": "Green", "effect": "If Sing or Dance is used, target also granted Atk/Spd/Def/Res+3.", },
+  { "name": "Urvan", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Ike (Brave Heroes)"], "weaponType": "Axe", "colorType": "Green", "effect": "Accelerates Special trigger (cooldown count-1). If unit receives consecutive attacks, damage from second attack onward reduced by 80%.", },
+  { "name": "Valaskjalf", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Bruno"], "weaponType": "Tome", "colorType": "Blue", "effect": "Enables unit at ≤ 50% HP to strike first, even when attacked.", },
+  { "name": "Valflame", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Arvis"], "weaponType": "Tome", "colorType": "Red", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk/Res-4 until the end of foe's next action.", },
+  { "name": "Vidofnir", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Tana"], "weaponType": "Lance", "colorType": "Blue", "effect": "If unit is attacked by foe using sword, axe or lance, unit receives Def+7 during combat.", },
+  { "name": "Weirding Tome", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Lute"], "weaponType": "Tome", "colorType": "Blue", "stats": { "spd": 3 }, "effect": "Grants Spd+3. At start of turn, all foes in cardinal directions, and with Res 1 or more lower than unit, suffer Spd-5 until the end of foes' next actions.", },
+  { "name": "Wind", "spCost": 50, "damage": 4, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "-" },
+  { "name": "Wo Dao", "spCost": 200, "damage": 9, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Grants +10 to damage when Special triggers." },
+  { "name": "Wo Dao+", "spCost": 300, "damage": 13, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Grants +10 to damage when Special triggers." },
+  { "name": "Yato", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Corrin (M)"], "weaponType": "Sword", "colorType": "Red", "effect": "Grants Spd+4 during combat if unit initiates attack.", },
+  { "name": "Zanbato", "spCost": 200, "damage": 10, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Effective against cavalry units." },
+  { "name": "Zanbato+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Effective against cavalry units." }
+];
+
+let SKILL_ASSIST = [
+  { "name": "Ardent Sacrifice", "range": 1, "spCost": 150, "effect": "Heals adjacent ally 10 HP. Unit loses 10 HP (but cannot reach 0 this way).", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Dance", "range": 1, "spCost": 150, "effect": "Enables target to take another action. Cannot be used on units with Sing or Dance.", "include": [{ "name": "Olivia" },{ "name": "Ninian" },{ "name": "Olivia (Performing Arts)" },{ "name": "Inigo (Performing Arts)" } ] },
+  { "name": "Draw Back", "range": 1, "spCost": 150, "effect": "Unit moves 1 space away from target ally, who moves to unit's former position.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Harsh Command", "range": 1, "spCost": 150, "effect": "Converts penalties on target into bonuses.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Heal", "range": 1, "spCost": 0, "effect": "Restores 5 HP.", "include": [{ "weaponType": "Staff" }] },
+  { "name": "Martyr", "range": 1, "spCost": 200, "effect": "Restores HP=7+ this unit's suffered damage. Unit heals HP=half suffered damage. Slows Special trigger (cooldown count+1).", "include": [{ "weaponType": "Staff" }] },
+  { "name": "Martyr+", "range": 1, "spCost": 300, "effect": "Restores HP = this unit's suffered damage +50% of Atk. (Minimum of 7 HP.) Also restores HP to unit = half suffered damage.", "include": [{ "weaponType": "Staff" }] },
+  { "name": "Mend", "range": 1, "spCost": 100, "effect": "Restores 10 HP.", "include": [{ "weaponType": "Staff" }] },
+  { "name": "Physic", "range": 2, "spCost": 200, "effect": "Restores 8 HP. Rng: 2.", "include": [{ "weaponType": "Staff" }] },
+  { "name": "Physic+", "range": 2, "spCost": 300, "effect": "Restores HP = 50% of Atk. (Minimum of 8 HP.) Rng: 2.", "include": [{ "weaponType": "Staff" }] },
+  { "name": "Pivot", "range": 1, "spCost": 150, "effect": "Unit moves to opposite side of adjacent ally.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Rally Attack", "range": 1, "spCost": 150, "effect": "Grants Atk+4 to an adjacent ally until the end of the turn.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Rally Atk/Def", "range": 1, "spCost": 300, "effect": "Grants Atk/Def+3 to an adjacent ally until the end of the turn.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Rally Atk/Res", "range": 1, "spCost": 300, "effect": "Grants Atk/Res+3 to an adjacent ally until the end of the turn.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Rally Atk/Spd", "range": 1, "spCost": 300, "effect": "Grants Atk/Spd+3 to an adjacent ally until the end of the turn.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Rally Defense", "range": 1, "spCost": 150, "effect": "Grants Def+4 to an adjacent ally until the  of the turn.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Rally Def/Res", "range": 1, "spCost": 300, "effect": "Grants Def/Res+3 to an adjacent ally until the end of the turn.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Rally Resistance", "range": 1, "spCost": 150, "effect": "Grants Res+4 to an adjacent ally until the end of the turn.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Rally Speed", "range": 1, "spCost": 150, "effect": "Grants Spd+4 to an adjacent ally until the end of the turn.", "include": [{ "weaponType": "Staff" }] },
+  { "name": "Rally Spd/Def", "range": 1, "spCost": 300, "effect": "Grants Spd/Def+3 to an adjacent ally until the end of the turn.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Rally Spd/Res", "range": 1, "spCost": 300, "effect": "Grants Spd/Res+3 to an adjacent ally until the end of the turn.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Reciprocal Aid", "range": 1, "spCost": 150, "effect": "Swap HP with adjacent ally (neither unit can go above their max HP).", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Reconcile", "range": 1, "spCost": 100, "effect": "Restores 7 HP each to target and this unit.", "include": [{ "weaponType": "Staff" }] },
+  { "name": "Recover", "range": 1, "spCost": 200, "effect": "Restores 15 HP. Slows Special trigger (cooldown count+1).", "include": [{ "weaponType": "Staff" }] },
+  { "name": "Recover+", "range": 1, "spCost": 300, "effect": "Restores HP = 50% of Atk +10. (Minimum of 15 HP.)", "include": [{ "weaponType": "Staff" }] },
+  { "name": "Rehabilitate", "range": 1, "spCost": 200, "effect": "Restores 7 HP or more the further below 50% the target's HP is. Slows special trigger (cooldown count+1).", "include": [{ "weaponType": "Staff" }] },
+  { "name": "Rehabilitate+", "range": 1, "spCost": 300, "effect": "Restores HP = 50% of Atk -10. (Minimum of 7 HP.) If target's HP is ≤ 50%, the lower the target's HP, the more HP is restored.", "include": [{ "weaponType": "Staff" }] },
+  { "name": "Reposition", "range": 1, "spCost": 150, "effect": "Moves adjacent ally to opposite side of unit.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Shove", "range": 1, "spCost": 150, "effect": "Push adjacent ally 1 space farther away.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Sing", "range": 1, "spCost": 150, "effect": "Enables target to take another action. Cannot be used on units with Sing or Dance.", "include": [{ "name": "Azura" },{ "name": "Azura (Performing Arts)" },{ "name": "Shigure (Performing Arts)" } ] },
+  { "name": "Smite", "range": 1, "spCost": 150, "effect": "Push adjacent ally 2 spaces farther away.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Swap", "range": 1, "spCost": 150, "effect": "Swap places with an adjacent ally.", "exclude": [{ "weaponType": "Staff" }] }
+];
+
+let SKILL_SPECIAL = [
+  { "name": "Aegis", "cooldown": 3, "spCost": 200, "exclude": [{"weaponType": "Bow"}, {"weaponType": "Dagger"}, {"weaponType": "Staff"}, {"weaponType": "Tome"}], "effect": "Reduces damage inflicted by attacks from foes 2 spaces away by 50%." },
+  { "name": "Aether", "cooldown": 5, "spCost": 500, "exclude": [{ "weaponType": "Staff" }], "effect": "Resolve combat as if foe suffered Def/Res-50%. Unit recovers HP=half damage dealt." },
+  { "name": "Astra", "cooldown": 4, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Grants +150% to damage dealt." },
+  { "name": "Black Luna", "cooldown": 3, "spCost": 500, "include": [{ "name": "Black Knight" }], "effect": "Resolve combat as if foe suffered Def/Res-80%. (Skill cannot be inherited.)" },
+  { "name": "Blazing Flame", "cooldown": 4, "spCost": 300, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's Atk minus foe's Def or Res)." },
+  { "name": "Blazing Light", "cooldown": 4, "spCost": 300, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's Atk minus foe's Def or Res)." },
+  { "name": "Blazing Thunder", "cooldown": 4, "spCost": 300, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's Atk minus foe's Def or Res)." },
+  { "name": "Blazing Wind", "cooldown": 4, "spCost": 300, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's Atk minus foe's Def or Res)." },
+  { "name": "Bonfire", "cooldown": 3, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Boosts damage dealt by 50% of unit's Def." },
+  { "name": "Buckler", "cooldown": 3, "spCost": 100, "exclude": [{"weaponType": "Bow"}, {"weaponType": "Dagger"}, {"weaponType": "Staff"}, {"weaponType": "Tome"}], "effect": "Reduces damage inflicted by attacks from adjacent foes by 30%." },
+  { "name": "Chilling Wind", "cooldown": 4, "spCost": 100, "exclude": [{ "weaponType": "Staff" }], "effect": "Boosts damage dealt by 50% of unit's Res." },
+  { "name": "Daylight", "cooldown": 3, "spCost": 100, "exclude": [{ "weaponType": "Staff" }], "effect": "Heal 30% of damage dealt." },
+  { "name": "Draconic Aura", "cooldown": 3, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Grants +30% to Atk." },
+  { "name": "Dragon Fang", "cooldown": 4, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Grants +50% to Atk." },
+  { "name": "Dragon Gaze", "cooldown": 4, "spCost": 100, "exclude": [{ "weaponType": "Staff" }], "effect": "Grants +30% to Atk." },
+  { "name": "Escutcheon", "cooldown": 2, "spCost": 200, "exclude": [{"weaponType": "Bow"}, {"weaponType": "Dagger"}, {"weaponType": "Staff"}, {"weaponType": "Tome"}], "effect": "Reduces damage inflicted by attacks from adjacent foes by 30%." },
+  { "name": "Galeforce", "cooldown": 5, "spCost": 500, "exclude": [{"weaponType": "Sword"}, {"weaponType": "Lance"}, {"weaponType": "Axe"} ], "effect": "If this unit initiates an attack, it can take another action after combat. (Once per turn only.)" },
+  { "name": "Glacies", "cooldown": 4, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Boosts damage dealt by 80% of unit's Res." },
+  { "name": "Glimmer", "cooldown": 2, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Grants +50% to damage dealt." },
+  { "name": "Glowing Ember", "cooldown": 4, "spCost": 100, "exclude": [{ "weaponType": "Staff" }], "effect": "Boosts damage dealt by 50% of unit's Def." },
+  { "name": "Growing Flame", "cooldown": 4, "spCost": 300, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in a wide area around target take damage equal to (unit's Atk minus foe's Def or Res)." },
+  { "name": "Growing Light", "cooldown": 4, "spCost": 300, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in a wide area near target take damage equal to (unit's Atk minus foe's Def or Res)." },
+  { "name": "Growing Thunder", "cooldown": 4, "spCost": 300, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in a wide area around target take damage equal to (unit's Atk minus foe's Def or Res)." },
+  { "name": "Growing Wind", "cooldown": 4, "spCost": 300, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in a wide area near target take damage equal to (unit's Atk minus foe's Def or Res)." },
+  { "name": "Heavenly Light", "cooldown": 2, "spCost": 150, "include": [{ "weaponType": "Staff" }], "effect": "When healing an ally with a staff, all other allies recover 10 HP." },
+  { "name": "Holy Vestments", "cooldown": 3, "spCost": 100, "exclude": [{"weaponType": "Bow"}, {"weaponType": "Dagger"}, {"weaponType": "Staff"}, {"weaponType": "Tome"}], "effect": "Reduces damage inflicted by attacks from foes 2 spaces away by 30%." },
+  { "name": "Ice Mirror", "cooldown": 2, "spCost": 500, "include": [{ "name": "Fjorm" }], "effect": "Reduces damage unit takes from foes 2 spaces away by 30%. If Special triggers, boosts unit's next attack by total damage was reduced (by any source, including other skills). Resets at end of combat. (Skill cannot be inherited.)" },
+  { "name": "Iceberg", "cooldown": 3, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Boosts damage dealt by 50% of unit's Res." },
+  { "name": "Ignis", "cooldown": 4, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Boosts damage dealt by 80% of unit's Def." },
+  { "name": "Imbue", "cooldown": 1, "spCost": 50, "include": [{ "weaponType": "Staff" }], "effect": "When healing an ally with a staff, increases recovered HP by 10." },
+  { "name": "Kindled-Fire Balm", "cooldown": 1, "spCost": 150, "include": [{ "weaponType": "Staff" }], "effect": "When healing an ally with a staff, grants all allies Atk+4 for 1 turn." },
+  { "name": "Luna", "cooldown": 3, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Resolve combat as if foe suffered Def/Res-50%." },
+  { "name": "Miracle", "cooldown": 5, "spCost": 200, "effect": "If HP > 1, survive a lethal attack with 1 HP remaining." },
+  { "name": "Moonbow", "cooldown": 2, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Resolve combat as if foe suffered Def/Res-30%." },
+  { "name": "New Moon", "cooldown": 3, "spCost": 100, "exclude": [{ "weaponType": "Staff" }], "effect": "Resolve combat as if foe suffered Def/Res-30%." },
+  { "name": "Night Sky", "cooldown": 3, "spCost": 100, "exclude": [{ "weaponType": "Staff" }], "effect": "Grants +50% to damage dealt." },
+  { "name": "Noontime", "cooldown": 2, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Heal 30% of damage dealt." },
+  { "name": "Pavise", "cooldown": 3, "spCost": 200, "exclude": [{"weaponType": "Bow"}, {"weaponType": "Dagger"}, {"weaponType": "Staff"}, {"weaponType": "Tome"}], "effect": "Reduces damage inflicted by attacks from adjacent foes by 50%." },
+  { "name": "Regnal Astra", "cooldown": 2, "spCost": 500, "include": [{ "name": "Ayra" }], "effect": "Boosts damage dealt by 40% of unit's Spd. (Skill cannot be inherited.)" },
+  { "name": "Reprisal", "cooldown": 2, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Grants bonus to damage dealt equal to 30% of damage suffered." },
+  { "name": "Retribution", "cooldown": 3, "spCost": 100, "exclude": [{ "weaponType": "Staff" }], "effect": "Grants bonus to damage dealt equal to 30% of damage suffered." },
+  { "name": "Rising Flame", "cooldown": 4, "spCost": 150, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in an area near target take damage equal to (unit's Atk minus foe's Def or Res)." },
+  { "name": "Rising Light", "cooldown": 4, "spCost": 150, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in an area near target take damage equal to (unit's Atk minus foe's Def or Res)." },
+  { "name": "Rising Thunder", "cooldown": 4, "spCost": 150, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in an area near target take damage equal to (unit's Atk minus foe's Def or Res)." },
+  { "name": "Rising Wind", "cooldown": 4, "spCost": 150, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in an area near target take damage equal to (unit's Atk minus foe's Def or Res)." },
+  { "name": "Sacred Cowl", "cooldown": 2, "spCost": 200, "exclude": [{"weaponType": "Bow"}, {"weaponType": "Dagger"}, {"weaponType": "Staff"}, {"weaponType": "Tome"}], "effect": "Reduces damage inflicted by attacks from foes 2 spaces away by 30%." },
+  { "name": "Sol", "cooldown": 3, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Heal 50% of damage dealt." },
+  { "name": "Solid-Earth Balm", "cooldown": 1, "spCost": 150, "include": [{ "weaponType": "Staff" }], "effect": "When healing an ally with a staff, grants all allies Def+4 for 1 turn." },
+  { "name": "Still-Water Balm", "cooldown": 1, "spCost": 150, "include": [{ "weaponType": "Staff" }], "effect": "When healing an ally with a staff, grants all allies Res+4 for 1 turn." },
+  { "name": "Swift-Winds Balm", "cooldown": 1, "spCost": 150, "include": [{ "weaponType": "Staff" }], "effect": "When healing an ally with a staff, grants all allies Spd+4 for 1 turn." },
+  { "name": "Vengeance", "cooldown": 3, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Grants bonus to damage dealt equal to 50% of damage suffered." }
+];
+
 let SKILL_A = [
-  {
-    "name": "Armored Blow 1", "spCost": 50, "icon": "2-5",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Def+2 during combat if unit initiates the attack."
-  },
-  {
-    "name": "Armored Blow 2", "spCost": 100, "icon": "2-6",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Def+4 during combat if unit initiates the attack."
-  },
-  {
-    "name": "Armored Blow 3", "spCost": 200, "icon": "2-7",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Def+6 during combat if unit initiates the attack."
-  },
-  {
-    "name": "Atk/Def Bond 1", "spCost": 60, "icon": "32-10",
-    "effect": "Grants Atk/Def+3 to this unit during combat if unit is adjacent to an ally."
-  },
-  {
-    "name": "Atk/Def Bond 2", "spCost": 120, "icon": "32-11",
-    "effect": "Grants Atk/Def+4 to this unit during combat if unit is adjacent to an ally."
-  },
-  {
-    "name": "Atk/Def Bond 3", "spCost": 240, "icon": "32-12",
-    "effect": "Grants Atk/Def+5 to this unit during combat if unit is adjacent to an ally."
-  },
-  {
-    "name": "Atk/Res Bond 1", "spCost": 60, "icon": "30-8",
-    "effect": "Grants Atk/Res+3 to this unit during combat if unit is adjacent to an ally."
-  },
-  {
-    "name": "Atk/Res Bond 2", "spCost": 120, "icon": "30-9",
-    "effect": "Grants Atk/Res+4 to this unit during combat if unit is adjacent to an ally."
-  },
-  {
-    "name": "Atk/Res Bond 3", "spCost": 240, "icon": "30-10",
-    "effect": "Grants Atk/Res+5 to this unit during combat if unit is adjacent to an ally."
-  },
-  {
-    "name": "Atk/Spd 1", "spCost": 80, "icon": "26-11", "stats": {"atk": 1, "spd": 1},
-    "effect": "Grants Atk/Spd+1."
-  },
-  {
-    "name": "Atk/Spd 2", "spCost": 160, "icon": "26-12", "stats": {"atk": 2, "spd": 2},
-    "effect": "Grants Atk/Spd+2."
-  },
-  {
-    "name": "Attack +1", "spCost": 30, "icon": "0-7", "stats": {"atk": 1},
-    "effect": "Grants Atk+1."
-  },
-  {
-    "name": "Attack +2", "spCost": 60, "icon": "0-8", "stats": {"atk": 2},
-    "effect": "Grants Atk+2."
-  },
-  {
-    "name": "Attack +3", "spCost": 120, "icon": "0-9", "stats": {"atk": 3},
-    "effect": "Grants Atk+3."
-  },
-  {
-    "name": "Atk/Def +1", "spCost": 80, "icon": "14-5", "stats": {"atk": 1, "def": 1},
-    "effect": "Grants Atk/Def+1."
-  },
-  {
-    "name": "Atk/Def +2", "spCost": 160, "icon": "14-6", "stats": {"atk": 2, "def": 2},
-    "effect": "Grants Atk/Def+2."
-  },
-  {
-    "name": "Atk/Res 1", "spCost": 80, "icon": "17-9", "stats": {"atk": 1, "res": 1},
-    "effect": "Grants Atk/Res+1."
-  },
-  {
-    "name": "Atk/Res 2", "spCost": 160, "icon": "17-10", "stats": {"atk": 1, "res": 1},
-    "effect": "Grants Atk/Res+2."
-  },
-  {
-    "name": "Bracing Blow 1", "spCost": 120, "icon": "30-3",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Def/Res+2 during combat if unit initiates combat."
-  },
-  {
-    "name": "Bracing Blow 2", "spCost": 240, "icon": "30-4",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Def/Res+4 during combat if unit initiates combat."
-  },
-  {
-    "name": "Close Counter", "spCost": 300, "icon": "4-0",
-    "include": [{"weaponType":"Staff"},{"weaponType":"Bow"},{"weaponType": "Dagger"}, {"weaponType": "Tome"}],
-    "effect": "Enables unit to counterattack regardless of distance to attacker."
-  },
-  {
-    "name": "Close Def 1", "spCost": 60, "icon": "19-10",
-    "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+2 during combat."
-  },
-  {
-    "name": "Close Def 2", "spCost": 120, "icon": "19-11",
-    "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+4 during combat."
-  },
-  {
-    "name": "Close Def 3", "spCost": 240, "icon": "19-12",
-    "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+6 during combat."
-  },
-  {
-    "name": "Darting Blow 1", "spCost": 50, "icon": "2-2",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Spd+2 during combat if unit initiates the attack."
-  },
-  {
-    "name": "Darting Blow 2", "spCost": 100, "icon": "2-3",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Spd+4 during combat if unit initiates the attack."
-  },
-  {
-    "name": "Darting Blow 3", "spCost": 200, "icon": "2-4",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Spd+6 during combat if unit initiates the attack."
-  },
-  {
-    "name": "Death Blow 1", "spCost": 50, "icon": "1-12",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk+2 during combat if unit initiates the attack."
-  },
-  {
-    "name": "Death Blow 2", "spCost": 100, "icon": "2-0",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk+4 during combat if unit initiates the attack."
-  },
-  {
-    "name": "Death Blow 3", "spCost": 200, "icon": "2-1",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk+6 during combat if unit initiates the attack."
-  },
-  {
-    "name": "Defense +1", "spCost": 30, "icon": "1-0", "stats": {"def": 1},
-    "effect": "Grants Def+1."
-  },
-  {
-    "name": "Defense +2", "spCost": 60, "icon": "1-1", "stats": {"def": 2},
-    "effect": "Grants Def+2."
-  },
-  {
-    "name": "Defense +3", "spCost": 120, "icon": "1-2", "stats": {"def": 3},
-    "effect": "Grants Def+3."
-  },
-  {
-    "name": "Defiant Atk 1", "spCost": 40, "icon": "2-11",
-    "effect": "Grants Atk+3 at start of turn if unit's HP ≤ 50%."
-  },
-  {
-    "name": "Defiant Atk 2", "spCost": 80, "icon": "2-12",
-    "effect": "Grants Atk+5 at start of turn if unit's HP ≤ 50%."
-  },
-  {
-    "name": "Defiant Atk 3", "spCost": 160, "icon": "3-0",
-    "effect": "Grants Atk+7 at start of turn if unit's HP ≤ 50%."
-  },
-  {
-    "name": "Defiant Def 1", "spCost": 40, "icon": "3-4",
-    "effect": "Grants Def+3 at start of turn if unit's HP ≤ 50%."
-  },
-  {
-    "name": "Defiant Def 2", "spCost": 80, "icon": "3-5",
-    "effect": "Grants Def+5 at start of turn if unit's HP ≤ 50%."
-  },
-  {
-    "name": "Defiant Def 3", "spCost": 160, "icon": "3-6",
-    "effect": "Grants Def+7 at start of turn if unit's HP ≤ 50%."
-  },
-  {
-    "name": "Defiant Res 1", "spCost": 40, "icon": "3-7",
-    "effect": "Grants Res+3 at start of turn if unit's HP ≤ 50%."
-  },
-  {
-    "name": "Defiant Res 2", "spCost": 80, "icon": "3-8",
-    "effect": "Grants Res+5 at start of turn if unit's HP ≤ 50%."
-  },
-  {
-    "name": "Defiant Res 3", "spCost": 160, "icon": "3-9",
-    "effect": "Grants Res+7 at start of turn if unit's HP ≤ 50%."
-  },
-  {
-    "name": "Defiant Spd 1", "spCost": 40, "icon": "3-1",
-    "effect": "Grants Spd+3 at start of turn if unit's HP ≤ 50%."
-  },
-  {
-    "name": "Defiant Spd 2", "spCost": 80, "icon": "3-2",
-    "effect": "Grants Spd+5 at start of turn if unit's HP ≤ 50%."
-  },
-  {
-    "name": "Defiant Spd 3", "spCost": 160, "icon": "3-3",
-    "effect": "Grants Spd+7 at start of turn if unit's HP ≤ 50%."
-  },
-  {
-    "name": "Distant Counter", "spCost": 300, "icon": "4-1",
-    "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}],
-    "effect": "Enables unit to counterattack regardless of distance to attacker."
-  },
-  {
-    "name": "Distant Def 1", "spCost": 60, "icon": "16-10",
-    "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+2 during combat."
-  },
-  {
-    "name": "Distant Def 2", "spCost": 120, "icon": "16-11",
-    "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+4 during combat."
-  },
-  {
-    "name": "Distant Def 3", "spCost": 240, "icon": "16-12",
-    "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat."
-  },
-  {
-    "name": "Earth Boost 1", "spCost": 50, "icon": "17-0",
-    "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Def+2 during combat."
-  },
-  {
-    "name": "Earth Boost 2", "spCost": 100, "icon": "17-1",
-    "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Def+4 during combat."
-  },
-  {
-    "name": "Earth Boost 3", "spCost": 200, "icon": "17-2",
-    "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Def+6 during combat."
-  },
-  {
-    "name": "Fierce Stance 1", "spCost": 50, "icon": "31-3",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk+2 during combat when this unit is attacked."
-  },
-  {
-    "name": "Fierce Stance 2", "spCost": 100, "icon": "31-4",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk+4 during combat when this unit is attacked."
-  },
-  {
-    "name": "Fierce Stance 3", "spCost": 200, "icon": "31-5",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk+6 during combat when this unit is attacked."
-  },
-  {
-    "name": "Fire Boost 1", "spCost": 50, "icon": "18-7",
-    "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Atk+2 during combat."
-  },
-  {
-    "name": "Fire Boost 2", "spCost": 100, "icon": "18-8",
-    "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Atk+4 during combat."
-  },
-  {
-    "name": "Fire Boost 3", "spCost": 200, "icon": "18-9",
-    "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Atk+6 during combat."
-  },
-  {
-    "name": "Flashing Blade 1", "spCost": 60, "icon": "31-6",
-    "include": [{"moveType":"Infantry"}, {"moveType":"Armored"}], "exclude": [{"weaponType":"Staff"}],
-    "effect": "If unit's Spd - foe's Spd ≥ 5, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)"
-  },
-  {
-    "name": "Flashing Blade 2", "spCost": 120, "icon": "31-7",
-    "include": [{"moveType":"Infantry"}, {"moveType":"Armored"}], "exclude": [{"weaponType":"Staff"}],
-    "effect": "If unit's Spd - foe's Spd ≥ 3, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)"
-  },
-  {
-    "name": "Flashing Blade 3", "spCost": 240, "icon": "31-8",
-    "include": [{"moveType":"Infantry"}, {"moveType":"Armored"}], "exclude": [{"weaponType":"Staff"}],
-    "effect": "If unit's Spd - foe's Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)"
-  },
-  {
-    "name": "Fortress Def 1", "spCost": 40, "icon": "15-1", "stats": {"atk": -3, "def": 3},
-    "effect": "Grants Def+3. Inflicts Atk-3."
-  },
-  {
-    "name": "Fortress Def 2", "spCost": 80, "icon": "15-2", "stats": {"atk": -3, "def": 4},
-    "effect": "Grants Def+4. Inflicts Atk-3."
-  },
-  {
-    "name": "Fortress Def 3", "spCost": 160, "icon": "15-3", "stats": {"atk": -3, "def": 5},
-    "effect": "Grants Def+5. Inflicts Atk-3."
-  },
-  {
-    "name": "Fortress Res 1", "spCost": 40, "icon": "25-0", "stats": {"atk": -3, "res": 3},
-    "effect": "Grants Res+3. Inflicts Atk-3."
-  },
-  {
-    "name": "Fortress Res 2", "spCost": 80, "icon": "25-1", "stats": {"atk": -3, "res": 4},
-    "effect": "Grants Res+4. Inflicts Atk-3."
-  },
-  {
-    "name": "Fortress Res 3", "spCost": 160, "icon": "25-2", "stats": {"atk": -3, "res": 5},
-    "effect": "Grants Res+5. Inflicts Atk-3."
-  },
-  {
-    "name": "Fury 1", "spCost": 50, "icon": "1-6", "stats": {"atk": 1, "spd": 1, "def": 1, "res": 1},
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk/Spd/Def/Res+1. Unit takes 2 damage after combat."
-  },
-  {
-    "name": "Fury 2", "spCost": 100, "icon": "1-7", "stats": {"atk": 2, "spd": 2, "def": 2, "res": 2},
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk/Spd/Def/Res+2. Unit takes 4 damage after combat."
-  },
-  {
-    "name": "Fury 3", "spCost": 200, "icon": "1-8", "stats": {"atk": 3, "spd": 3, "def": 3, "res": 3},
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat."
-  },
-  {
-    "name": "Grani's Shield", "spCost": 200, "icon": "4-2",
-    "include": [{"moveType":"Cavalry"}],
-    "effect": "Neutralizes \"effective against\" bonuses."
-  },
-  {
-    "name": "HP +3", "spCost": 40, "icon": "0-4", "stats": {"hp": 3},
-    "effect": "Grants +3 to max HP."
-  },
-  {
-    "name": "HP +4", "spCost": 80, "icon": "0-5", "stats": {"hp": 4},
-    "effect": "Grants +4 to max HP."
-  },
-  {
-    "name": "HP +5", "spCost": 160, "icon": "0-6", "stats": {"hp": 5},
-    "effect": "Grants +5 to max HP."
-  },
-  {
-    "name": "HP/Def 1", "spCost": 100, "icon": "19-8", "stats": {"hp": 3, "def": 1},
-    "effect": "Grants HP+3, Def+1."
-  },
-  {
-    "name": "HP/Def 2", "spCost": 200, "icon": "19-9", "stats": {"hp": 4, "def": 2},
-    "effect": "Grants HP+4, Def+2."
-  },
-  {
-    "name": "HP/Res 1", "spCost": 100, "icon": "31-1", "stats": {"hp": 3, "res": 1},
-    "effect": "Grants HP+3, Res+1."
-  },
-  {
-    "name": "HP/Res 2", "spCost": 200, "icon": "31-2", "stats": {"hp": 4, "res": 2},
-    "effect": "Grants HP+4, Res+2."
-  },
-  {
-    "name": "HP/Spd 1", "spCost": 100, "icon": "22-11", "stats": {"hp": 3, "spd": 1},
-    "effect": "Grants HP+3, Spd+1."
-  },
-  {
-    "name": "HP/Spd 2", "spCost": 200, "icon": "22-12", "stats": {"hp": 4, "spd": 2},
-    "effect": "Grants HP+4, Spd+2."
-  },
-  {
-    "name": "Heavy Blade 1", "spCost": 60, "icon": "15-11",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "If unit's Atk - foe's Atk ≥ 5, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)"
-  },
-  {
-    "name": "Heavy Blade 2", "spCost": 120, "icon": "15-12",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "If unit's Atk - foe's Atk ≥ 3, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)"
-  },
-  {
-    "name": "Heavy Blade 3", "spCost": 240, "icon": "16-0",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "If unit's Atk - foe's Atk ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)"
-  },
-  {
-    "name": "Iote's Shield", "spCost": 200, "icon": "4-4",
-    "include": [{"moveType":"Flying"}],
-    "effect": "Neutralizes \"effective against\" bonuses.",
-  },
-  {
-    "name": "Life and Death 1", "spCost": 50, "icon": "1-9", "stats": {"atk": 3, "spd": 3, "def": -3, "res": -3},
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk/Spd+3. Inflicts Def/Res-3."
-  },
-  {
-    "name": "Life and Death 2", "spCost": 100, "icon": "1-10", "stats": {"atk": 4, "spd": 4, "def": -4, "res": -4},
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk/Spd+4. Inflicts Def/Res-4."
-  },
-  {
-    "name": "Life and Death 3", "spCost": 200, "icon": "1-11", "stats": {"atk": 5, "spd": 5, "def": -5, "res": -5},
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk/Spd+5. Inflicts Def/Res-5."
-  },
-  {
-    "name": "Mirror Strike 1", "spCost": 120, "icon": "23-0",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk/Res+2 during combat if unit initiates combat."
-  },
-  {
-    "name": "Mirror Strike 2", "spCost": 240, "icon": "23-1",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk/Res+4 during combat if unit initiates combat."
-  },
-  {
-    "name": "Resistance +1", "spCost": 30, "icon": "1-3", "stats": {"res": 1},
-    "effect": "Grants Res+1."
-  },
-  {
-    "name": "Resistance +2", "spCost": 60, "icon": "1-4", "stats": {"res": 2},
-    "effect": "Grants Res+2."
-  },
-  {
-    "name": "Resistance +3", "spCost": 120, "icon": "1-5", "stats": {"res": 3},
-    "effect": "Grants Res+3."
-  },
-  {
-    "name": "Spd/Def 1", "spCost": 80, "icon": "24-11", "stats": {"spd": 1, "def": 1},
-    "effect": "Grants Spd/Def+1."
-  },
-  {
-    "name": "Spd/Def 2", "spCost": 160, "icon": "24-12", "stats": {"spd": 2, "def": 2},
-    "effect": "Grants Spd/Def+2."
-  },
-  {
-    "name": "Spd/Res 1", "spCost": 80, "icon": "23-11", "stats": {"spd": 1, "res": 1},
-    "effect": "Grants Spd/Res+1."
-  },
-  {
-    "name": "Spd/Res 2", "spCost": 160, "icon": "23-12", "stats": {"spd": 2, "res": 2},
-    "effect": "Grants Spd/Res+2."
-  },
-  {
-    "name": "Speed +1", "spCost": 30, "icon": "0-10", "stats": {"spd": 1},
-    "effect": "Grants Spd+1."
-  },
-  {
-    "name": "Speed +2", "spCost": 60, "icon": "0-11", "stats": {"spd": 2},
-    "effect": "Grants Spd+2."
-  },
-  {
-    "name": "Speed +3", "spCost": 120, "icon": "0-12", "stats": {"spd": 3},
-    "effect": "Grants Spd+3."
-  },
-  {
-    "name": "Steady Blow 1", "spCost": 120, "icon": "26-2",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "If unit initiates combat, unit granted Spd/Def+2 during battle."
-  },
-  {
-    "name": "Steady Blow 2", "spCost": 240, "icon": "26-3",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "If unit initiates combat, unit granted Spd/Def+4 during battle."
-  },
-  {
-    "name": "Steady Breath", "spCost": 240, "icon": "26-1",
-    "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "exclude": [{"moveType":"Flying", "moveType":"Cavalry"}],
-    "effect": "If attacked, unit granted Def+4 during combat; also gains Special cooldown charge +1. (If using other similar skill, only highest value applied.)"
-  },
-  {
-    "name": "Steady Stance 1", "spCost": 50, "icon": "25-11",
-    "effect": "Grants Def+2 during combat when this unit is attacked."
-  },
-  {
-    "name": "Steady Stance 2", "spCost": 100, "icon": "25-12",
-    "effect": "Grants Def+4 during combat when this unit is attacked."
-  },
-  {
-    "name": "Steady Stance 3", "spCost": 200, "icon": "26-0",
-    "effect": "Grants Def+6 during combat when this unit is attacked."
-  },
-  {
-    "name": "Sturdy Blow 1", "spCost": 120, "icon": "18-5",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk/Def+2 during combat if unit initiates combat."
-  },
-  {
-    "name": "Sturdy Blow 2", "spCost": 240, "icon": "18-6",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Atk/Def+4 during combat if unit initiates combat."
-  },
-  {
-    "name": "Svalinn Shield", "spCost": 200, "icon": "4-3",
-    "include": [{"moveType":"Armored"}],
-    "effect": "Neutralizes \"effective against\" bonuses."
-  },
-  {
-    "name": "Swift Sparrow 1", "spCost": 120, "icon": "14-7",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "If unit initiates combat, unit granted Atk/Spd+2 during battle."
-  },
-  {
-    "name": "Swift Sparrow 2", "spCost": 240, "icon": "14-8",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "If unit initiates combat, unit granted Atk/Spd+4 during battle."
-  },
-  {
-    "name": "Swift Strike 1", "spCost": 120, "icon": "24-0",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "If unit initiates combat, unit granted Spd/Res+2 during battle."
-  },
-  {
-    "name": "Swift Strike 2", "spCost": 240, "icon": "24-1",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "If unit initiates combat, unit granted Spd/Res+4 during battle."
-  },
-  {
-    "name": "Triangle Adept 1", "spCost": 50, "icon": "3-10",
-    "exclude": [{"colorType":"Neutral"}],
-    "effect": "Gives Atk+10% if weapon-triangle advantage, Atk-10% if disadvantage."
-  },
-  {
-    "name": "Triangle Adept 2", "spCost": 100, "icon": "3-11",
-    "exclude": [{"colorType":"Neutral"}],
-    "effect": "Gives Atk+15% if weapon-triangle advantage, Atk-15% if disadvantage."
-  },
-  {
-    "name": "Triangle Adept 3", "spCost": 200, "icon": "3-12",
-    "exclude": [{"colorType":"Neutral"}],
-    "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
-  },
-  {
-    "name": "Warding Blow 1", "spCost": 50, "icon": "2-8",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Res+2 during combat if unit initiates attack."
-  },
-  {
-    "name": "Warding Blow 2", "spCost": 100, "icon": "2-9",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Res+4 during combat if unit initiates attack."
-  },
-  {
-    "name": "Warding Blow 3", "spCost": 200, "icon": "2-10",
-    "exclude": [{"weaponType":"Staff"}],
-    "effect": "Grants Res+6 during combat if unit initiates attack."
-  },
-  {
-    "name": "Warding Stance 1", "spCost": 50, "icon": "30-5",
-    "effect": "Grants Res+2 during combat when this unit is attacked."
-  },
-  {
-    "name": "Warding Stance 2", "spCost": 100, "icon": "30-6",
-    "effect": "Grants Res+4 during combat when this unit is attacked."
-  },
-  {
-    "name": "Warding Stance 3", "spCost": 200, "icon": "30-7",
-    "effect": "Grants Res+6 during combat when this unit is attacked."
-  },
-  {
-    "name": "Water Boost 1", "spCost": 50, "icon": "23-2",
-    "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+2 during combat."
-  },
-  {
-    "name": "Water Boost 2", "spCost": 100, "icon": "23-3",
-    "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+4 during combat."
-  },
-  {
-    "name": "Water Boost 3", "spCost": 200, "icon": "23-4",
-    "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+6 during combat."
-  },
-  {
-    "name": "Wind Boost 1", "spCost": 50, "icon": "17-11",
-    "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+2 during combat."
-  },
-  {
-    "name": "Wind Boost 2", "spCost": 100, "icon": "17-12",
-    "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+4 during combat."
-  },
-  {
-    "name": "Wind Boost 3", "spCost": 200, "icon": "18-0",
-    "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+6 during combat."
-  }
-]
+  { "name": "Armored Blow 1", "spCost": 50, "icon": "2-5", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Def+2 during combat if unit initiates the attack." },
+  { "name": "Armored Blow 2", "spCost": 100, "icon": "2-6", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Def+4 during combat if unit initiates the attack." },
+  { "name": "Armored Blow 3", "spCost": 200, "icon": "2-7", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Def+6 during combat if unit initiates the attack." },
+  { "name": "Atk/Def Bond 1", "spCost": 60, "icon": "32-10", "effect": "Grants Atk/Def+3 to this unit during combat if unit is adjacent to an ally." },
+  { "name": "Atk/Def Bond 2", "spCost": 120, "icon": "32-11", "effect": "Grants Atk/Def+4 to this unit during combat if unit is adjacent to an ally." },
+  { "name": "Atk/Def Bond 3", "spCost": 240, "icon": "32-12", "effect": "Grants Atk/Def+5 to this unit during combat if unit is adjacent to an ally." },
+  { "name": "Atk/Res Bond 1", "spCost": 60, "icon": "30-8", "effect": "Grants Atk/Res+3 to this unit during combat if unit is adjacent to an ally." },
+  { "name": "Atk/Res Bond 2", "spCost": 120, "icon": "30-9", "effect": "Grants Atk/Res+4 to this unit during combat if unit is adjacent to an ally." },
+  { "name": "Atk/Res Bond 3", "spCost": 240, "icon": "30-10", "effect": "Grants Atk/Res+5 to this unit during combat if unit is adjacent to an ally." },
+  { "name": "Atk/Spd 1", "spCost": 80, "icon": "26-11", "stats": {"atk": 1, "spd": 1}, "effect": "Grants Atk/Spd+1." },
+  { "name": "Atk/Spd 2", "spCost": 160, "icon": "26-12", "stats": {"atk": 2, "spd": 2}, "effect": "Grants Atk/Spd+2." },
+  { "name": "Attack +1", "spCost": 30, "icon": "0-7", "stats": {"atk": 1}, "effect": "Grants Atk+1." },
+  { "name": "Attack +2", "spCost": 60, "icon": "0-8", "stats": {"atk": 2}, "effect": "Grants Atk+2." },
+  { "name": "Attack +3", "spCost": 120, "icon": "0-9", "stats": {"atk": 3}, "effect": "Grants Atk+3." },
+  { "name": "Atk/Def +1", "spCost": 80, "icon": "14-5", "stats": {"atk": 1, "def": 1}, "effect": "Grants Atk/Def+1." },
+  { "name": "Atk/Def +2", "spCost": 160, "icon": "14-6", "stats": {"atk": 2, "def": 2}, "effect": "Grants Atk/Def+2." },
+  { "name": "Atk/Res 1", "spCost": 80, "icon": "17-9", "stats": {"atk": 1, "res": 1}, "effect": "Grants Atk/Res+1." },
+  { "name": "Atk/Res 2", "spCost": 160, "icon": "17-10", "stats": {"atk": 1, "res": 1}, "effect": "Grants Atk/Res+2." },
+  { "name": "Bracing Blow 1", "spCost": 120, "icon": "30-3", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Def/Res+2 during combat if unit initiates combat." },
+  { "name": "Bracing Blow 2", "spCost": 240, "icon": "30-4", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Def/Res+4 during combat if unit initiates combat." },
+  { "name": "Close Counter", "spCost": 300, "icon": "4-0", "include": [{"weaponType":"Staff"},{"weaponType":"Bow"},{"weaponType": "Dagger"}, {"weaponType": "Tome"}], "effect": "Enables unit to counterattack regardless of distance to attacker." },
+  { "name": "Close Def 1", "spCost": 60, "icon": "19-10", "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+2 during combat." },
+  { "name": "Close Def 2", "spCost": 120, "icon": "19-11", "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+4 during combat." },
+  { "name": "Close Def 3", "spCost": 240, "icon": "19-12", "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+6 during combat." },
+  { "name": "Darting Blow 1", "spCost": 50, "icon": "2-2", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Spd+2 during combat if unit initiates the attack." },
+  { "name": "Darting Blow 2", "spCost": 100, "icon": "2-3", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Spd+4 during combat if unit initiates the attack." },
+  { "name": "Darting Blow 3", "spCost": 200, "icon": "2-4", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Spd+6 during combat if unit initiates the attack." },
+  { "name": "Death Blow 1", "spCost": 50, "icon": "1-12", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk+2 during combat if unit initiates the attack." },
+  { "name": "Death Blow 2", "spCost": 100, "icon": "2-0", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk+4 during combat if unit initiates the attack." },
+  { "name": "Death Blow 3", "spCost": 200, "icon": "2-1", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk+6 during combat if unit initiates the attack." },
+  { "name": "Defense +1", "spCost": 30, "icon": "1-0", "stats": {"def": 1}, "effect": "Grants Def+1." },
+  { "name": "Defense +2", "spCost": 60, "icon": "1-1", "stats": {"def": 2}, "effect": "Grants Def+2." },
+  { "name": "Defense +3", "spCost": 120, "icon": "1-2", "stats": {"def": 3}, "effect": "Grants Def+3." },
+  { "name": "Defiant Atk 1", "spCost": 40, "icon": "2-11", "effect": "Grants Atk+3 at start of turn if unit's HP ≤ 50%." },
+  { "name": "Defiant Atk 2", "spCost": 80, "icon": "2-12", "effect": "Grants Atk+5 at start of turn if unit's HP ≤ 50%." },
+  { "name": "Defiant Atk 3", "spCost": 160, "icon": "3-0", "effect": "Grants Atk+7 at start of turn if unit's HP ≤ 50%." },
+  { "name": "Defiant Def 1", "spCost": 40, "icon": "3-4", "effect": "Grants Def+3 at start of turn if unit's HP ≤ 50%." },
+  { "name": "Defiant Def 2", "spCost": 80, "icon": "3-5", "effect": "Grants Def+5 at start of turn if unit's HP ≤ 50%." },
+  { "name": "Defiant Def 3", "spCost": 160, "icon": "3-6", "effect": "Grants Def+7 at start of turn if unit's HP ≤ 50%." },
+  { "name": "Defiant Res 1", "spCost": 40, "icon": "3-7", "effect": "Grants Res+3 at start of turn if unit's HP ≤ 50%." },
+  { "name": "Defiant Res 2", "spCost": 80, "icon": "3-8", "effect": "Grants Res+5 at start of turn if unit's HP ≤ 50%." },
+  { "name": "Defiant Res 3", "spCost": 160, "icon": "3-9", "effect": "Grants Res+7 at start of turn if unit's HP ≤ 50%." },
+  { "name": "Defiant Spd 1", "spCost": 40, "icon": "3-1", "effect": "Grants Spd+3 at start of turn if unit's HP ≤ 50%." },
+  { "name": "Defiant Spd 2", "spCost": 80, "icon": "3-2", "effect": "Grants Spd+5 at start of turn if unit's HP ≤ 50%." },
+  { "name": "Defiant Spd 3", "spCost": 160, "icon": "3-3", "effect": "Grants Spd+7 at start of turn if unit's HP ≤ 50%." },
+  { "name": "Distant Counter", "spCost": 300, "icon": "4-1", "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "effect": "Enables unit to counterattack regardless of distance to attacker." },
+  { "name": "Distant Def 1", "spCost": 60, "icon": "16-10", "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+2 during combat." },
+  { "name": "Distant Def 2", "spCost": 120, "icon": "16-11", "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+4 during combat." },
+  { "name": "Distant Def 3", "spCost": 240, "icon": "16-12", "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat." },
+  { "name": "Earth Boost 1", "spCost": 50, "icon": "17-0", "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Def+2 during combat." },
+  { "name": "Earth Boost 2", "spCost": 100, "icon": "17-1", "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Def+4 during combat." },
+  { "name": "Earth Boost 3", "spCost": 200, "icon": "17-2", "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Def+6 during combat." },
+  { "name": "Fierce Stance 1", "spCost": 50, "icon": "31-3", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk+2 during combat when this unit is attacked." },
+  { "name": "Fierce Stance 2", "spCost": 100, "icon": "31-4", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk+4 during combat when this unit is attacked." },
+  { "name": "Fierce Stance 3", "spCost": 200, "icon": "31-5", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk+6 during combat when this unit is attacked." },
+  { "name": "Fire Boost 1", "spCost": 50, "icon": "18-7", "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Atk+2 during combat." },
+  { "name": "Fire Boost 2", "spCost": 100, "icon": "18-8", "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Atk+4 during combat." },
+  { "name": "Fire Boost 3", "spCost": 200, "icon": "18-9", "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Atk+6 during combat." },
+  { "name": "Flashing Blade 1", "spCost": 60, "icon": "31-6", "include": [{"moveType":"Infantry"}, {"moveType":"Armored"}], "exclude": [{"weaponType":"Staff"}], "effect": "If unit's Spd - foe's Spd ≥ 5, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)" },
+  { "name": "Flashing Blade 2", "spCost": 120, "icon": "31-7", "include": [{"moveType":"Infantry"}, {"moveType":"Armored"}], "exclude": [{"weaponType":"Staff"}], "effect": "If unit's Spd - foe's Spd ≥ 3, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)" },
+  { "name": "Flashing Blade 3", "spCost": 240, "icon": "31-8", "include": [{"moveType":"Infantry"}, {"moveType":"Armored"}], "exclude": [{"weaponType":"Staff"}], "effect": "If unit's Spd - foe's Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)" },
+  { "name": "Fortress Def 1", "spCost": 40, "icon": "15-1", "stats": {"atk": -3, "def": 3}, "effect": "Grants Def+3. Inflicts Atk-3." },
+  { "name": "Fortress Def 2", "spCost": 80, "icon": "15-2", "stats": {"atk": -3, "def": 4}, "effect": "Grants Def+4. Inflicts Atk-3." },
+  { "name": "Fortress Def 3", "spCost": 160, "icon": "15-3", "stats": {"atk": -3, "def": 5}, "effect": "Grants Def+5. Inflicts Atk-3." },
+  { "name": "Fortress Res 1", "spCost": 40, "icon": "25-0", "stats": {"atk": -3, "res": 3}, "effect": "Grants Res+3. Inflicts Atk-3." },
+  { "name": "Fortress Res 2", "spCost": 80, "icon": "25-1", "stats": {"atk": -3, "res": 4}, "effect": "Grants Res+4. Inflicts Atk-3." },
+  { "name": "Fortress Res 3", "spCost": 160, "icon": "25-2", "stats": {"atk": -3, "res": 5}, "effect": "Grants Res+5. Inflicts Atk-3." },
+  { "name": "Fury 1", "spCost": 50, "icon": "1-6", "stats": {"atk": 1, "spd": 1, "def": 1, "res": 1}, "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk/Spd/Def/Res+1. Unit takes 2 damage after combat." },
+  { "name": "Fury 2", "spCost": 100, "icon": "1-7", "stats": {"atk": 2, "spd": 2, "def": 2, "res": 2}, "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk/Spd/Def/Res+2. Unit takes 4 damage after combat." },
+  { "name": "Fury 3", "spCost": 200, "icon": "1-8", "stats": {"atk": 3, "spd": 3, "def": 3, "res": 3}, "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat." },
+  { "name": "Grani's Shield", "spCost": 200, "icon": "4-2", "include": [{"moveType":"Cavalry"}], "effect": "Neutralizes \"effective against\" bonuses." },
+  { "name": "HP +3", "spCost": 40, "icon": "0-4", "stats": {"hp": 3}, "effect": "Grants +3 to max HP." },
+  { "name": "HP +4", "spCost": 80, "icon": "0-5", "stats": {"hp": 4}, "effect": "Grants +4 to max HP." },
+  { "name": "HP +5", "spCost": 160, "icon": "0-6", "stats": {"hp": 5}, "effect": "Grants +5 to max HP." },
+  { "name": "HP/Def 1", "spCost": 100, "icon": "19-8", "stats": {"hp": 3, "def": 1}, "effect": "Grants HP+3, Def+1." },
+  { "name": "HP/Def 2", "spCost": 200, "icon": "19-9", "stats": {"hp": 4, "def": 2}, "effect": "Grants HP+4, Def+2." },
+  { "name": "HP/Res 1", "spCost": 100, "icon": "31-1", "stats": {"hp": 3, "res": 1}, "effect": "Grants HP+3, Res+1." },
+  { "name": "HP/Res 2", "spCost": 200, "icon": "31-2", "stats": {"hp": 4, "res": 2}, "effect": "Grants HP+4, Res+2." },
+  { "name": "HP/Spd 1", "spCost": 100, "icon": "22-11", "stats": {"hp": 3, "spd": 1}, "effect": "Grants HP+3, Spd+1." },
+  { "name": "HP/Spd 2", "spCost": 200, "icon": "22-12", "stats": {"hp": 4, "spd": 2}, "effect": "Grants HP+4, Spd+2." },
+  { "name": "Heavy Blade 1", "spCost": 60, "icon": "15-11", "exclude": [{"weaponType":"Staff"}], "effect": "If unit's Atk - foe's Atk ≥ 5, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)" },
+  { "name": "Heavy Blade 2", "spCost": 120, "icon": "15-12", "exclude": [{"weaponType":"Staff"}], "effect": "If unit's Atk - foe's Atk ≥ 3, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)" },
+  { "name": "Heavy Blade 3", "spCost": 240, "icon": "16-0", "exclude": [{"weaponType":"Staff"}], "effect": "If unit's Atk - foe's Atk ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)" },
+  { "name": "Iote's Shield", "spCost": 200, "icon": "4-4", "include": [{"moveType":"Flying"}], "effect": "Neutralizes \"effective against\" bonuses.", },
+  { "name": "Life and Death 1", "spCost": 50, "icon": "1-9", "stats": {"atk": 3, "spd": 3, "def": -3, "res": -3}, "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk/Spd+3. Inflicts Def/Res-3." },
+  { "name": "Life and Death 2", "spCost": 100, "icon": "1-10", "stats": {"atk": 4, "spd": 4, "def": -4, "res": -4}, "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk/Spd+4. Inflicts Def/Res-4." },
+  { "name": "Life and Death 3", "spCost": 200, "icon": "1-11", "stats": {"atk": 5, "spd": 5, "def": -5, "res": -5}, "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk/Spd+5. Inflicts Def/Res-5." },
+  { "name": "Mirror Strike 1", "spCost": 120, "icon": "23-0", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk/Res+2 during combat if unit initiates combat." },
+  { "name": "Mirror Strike 2", "spCost": 240, "icon": "23-1", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk/Res+4 during combat if unit initiates combat." },
+  { "name": "Resistance +1", "spCost": 30, "icon": "1-3", "stats": {"res": 1}, "effect": "Grants Res+1." },
+  { "name": "Resistance +2", "spCost": 60, "icon": "1-4", "stats": {"res": 2}, "effect": "Grants Res+2." },
+  { "name": "Resistance +3", "spCost": 120, "icon": "1-5", "stats": {"res": 3}, "effect": "Grants Res+3." },
+  { "name": "Spd/Def 1", "spCost": 80, "icon": "24-11", "stats": {"spd": 1, "def": 1}, "effect": "Grants Spd/Def+1." },
+  { "name": "Spd/Def 2", "spCost": 160, "icon": "24-12", "stats": {"spd": 2, "def": 2}, "effect": "Grants Spd/Def+2." },
+  { "name": "Spd/Res 1", "spCost": 80, "icon": "23-11", "stats": {"spd": 1, "res": 1}, "effect": "Grants Spd/Res+1." },
+  { "name": "Spd/Res 2", "spCost": 160, "icon": "23-12", "stats": {"spd": 2, "res": 2}, "effect": "Grants Spd/Res+2." },
+  { "name": "Speed +1", "spCost": 30, "icon": "0-10", "stats": {"spd": 1}, "effect": "Grants Spd+1." },
+  { "name": "Speed +2", "spCost": 60, "icon": "0-11", "stats": {"spd": 2}, "effect": "Grants Spd+2." },
+  { "name": "Speed +3", "spCost": 120, "icon": "0-12", "stats": {"spd": 3}, "effect": "Grants Spd+3." },
+  { "name": "Steady Blow 1", "spCost": 120, "icon": "26-2", "exclude": [{"weaponType":"Staff"}], "effect": "If unit initiates combat, unit granted Spd/Def+2 during battle." },
+  { "name": "Steady Blow 2", "spCost": 240, "icon": "26-3", "exclude": [{"weaponType":"Staff"}], "effect": "If unit initiates combat, unit granted Spd/Def+4 during battle." },
+  { "name": "Steady Breath", "spCost": 240, "icon": "26-1", "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "exclude": [{"moveType":"Flying", "moveType":"Cavalry"}], "effect": "If attacked, unit granted Def+4 during combat; also gains Special cooldown charge +1. (If using other similar skill, only highest value applied.)" },
+  { "name": "Steady Stance 1", "spCost": 50, "icon": "25-11", "effect": "Grants Def+2 during combat when this unit is attacked." },
+  { "name": "Steady Stance 2", "spCost": 100, "icon": "25-12", "effect": "Grants Def+4 during combat when this unit is attacked." },
+  { "name": "Steady Stance 3", "spCost": 200, "icon": "26-0", "effect": "Grants Def+6 during combat when this unit is attacked." },
+  { "name": "Sturdy Blow 1", "spCost": 120, "icon": "18-5", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk/Def+2 during combat if unit initiates combat." },
+  { "name": "Sturdy Blow 2", "spCost": 240, "icon": "18-6", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Atk/Def+4 during combat if unit initiates combat." },
+  { "name": "Svalinn Shield", "spCost": 200, "icon": "4-3", "include": [{"moveType":"Armored"}], "effect": "Neutralizes \"effective against\" bonuses." },
+  { "name": "Swift Sparrow 1", "spCost": 120, "icon": "14-7", "exclude": [{"weaponType":"Staff"}], "effect": "If unit initiates combat, unit granted Atk/Spd+2 during battle." },
+  { "name": "Swift Sparrow 2", "spCost": 240, "icon": "14-8", "exclude": [{"weaponType":"Staff"}], "effect": "If unit initiates combat, unit granted Atk/Spd+4 during battle." },
+  { "name": "Swift Strike 1", "spCost": 120, "icon": "24-0", "exclude": [{"weaponType":"Staff"}], "effect": "If unit initiates combat, unit granted Spd/Res+2 during battle." },
+  { "name": "Swift Strike 2", "spCost": 240, "icon": "24-1", "exclude": [{"weaponType":"Staff"}], "effect": "If unit initiates combat, unit granted Spd/Res+4 during battle." },
+  { "name": "Triangle Adept 1", "spCost": 50, "icon": "3-10", "exclude": [{"colorType":"Neutral"}], "effect": "Gives Atk+10% if weapon-triangle advantage, Atk-10% if disadvantage." },
+  { "name": "Triangle Adept 2", "spCost": 100, "icon": "3-11", "exclude": [{"colorType":"Neutral"}], "effect": "Gives Atk+15% if weapon-triangle advantage, Atk-15% if disadvantage." },
+  { "name": "Triangle Adept 3", "spCost": 200, "icon": "3-12", "exclude": [{"colorType":"Neutral"}], "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage." },
+  { "name": "Warding Blow 1", "spCost": 50, "icon": "2-8", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Res+2 during combat if unit initiates attack." },
+  { "name": "Warding Blow 2", "spCost": 100, "icon": "2-9", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Res+4 during combat if unit initiates attack." },
+  { "name": "Warding Blow 3", "spCost": 200, "icon": "2-10", "exclude": [{"weaponType":"Staff"}], "effect": "Grants Res+6 during combat if unit initiates attack." },
+  { "name": "Warding Stance 1", "spCost": 50, "icon": "30-5", "effect": "Grants Res+2 during combat when this unit is attacked." },
+  { "name": "Warding Stance 2", "spCost": 100, "icon": "30-6", "effect": "Grants Res+4 during combat when this unit is attacked." },
+  { "name": "Warding Stance 3", "spCost": 200, "icon": "30-7", "effect": "Grants Res+6 during combat when this unit is attacked." },
+  { "name": "Water Boost 1", "spCost": 50, "icon": "23-2", "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+2 during combat." },
+  { "name": "Water Boost 2", "spCost": 100, "icon": "23-3", "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+4 during combat." },
+  { "name": "Water Boost 3", "spCost": 200, "icon": "23-4", "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+6 during combat." },
+  { "name": "Wind Boost 1", "spCost": 50, "icon": "17-11", "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+2 during combat." },
+  { "name": "Wind Boost 2", "spCost": 100, "icon": "17-12", "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+4 during combat." },
+  { "name": "Wind Boost 3", "spCost": 200, "icon": "18-0", "effect": "If unit has at least 3 more HP than enemy at the start of combat, unit receives Spd+6 during combat." }
+];
+
+let SKILL_B = [
+  { "name": "Axebreaker 1", "spCost": 50, "icon": "8-10", "exclude": [{"colorType": "Blue"}], "effect": "If unit's HP ≥ 90% in combat against an axe user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Axebreaker 2", "spCost": 100, "icon": "8-11", "exclude": [{"colorType": "Blue"}], "effect": "If unit's HP ≥ 70% in combat against an axe user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Axebreaker 3", "spCost": 200, "icon": "8-12", "exclude": [{"colorType": "Blue"}], "effect": "If unit's HP ≥ 50% in combat against an axe user, unit makes a follow-up attack and foe cannot." },
+  { "name": "B Tomebreaker 1", "spCost": 50, "icon": "9-9", "exclude": [{"colorType": "Red"}], "effect": "If unit's HP ≥ 90% in combat against a blue tome user, unit makes a follow-up attack and foe cannot." },
+  { "name": "B Tomebreaker 2", "spCost": 100, "icon": "9-10", "exclude": [{"colorType": "Red"}], "effect": "If unit's HP ≥ 70% in combat against a blue tome user, unit makes a follow-up attack and foe cannot." },
+  { "name": "B Tomebreaker 3", "spCost": 200, "icon": "9-11", "exclude": [{"colorType": "Red"}], "effect": "If unit's HP ≥ 50% in combat against a blue tome user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Beorc's Blessing", "spCost": 300, "include": [{"name": "Ike (Brave Heroes)"}], "effect": "If foe is cavalry or flier type, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat. (Skill cannot be inherited.)" },
+  { "name": "Blaze Dance 1", "spCost": 50, "icon": "27-8", "exclude": [{"weaponType": "Staff"}], "effect": "If Sing or Dance is used, target also granted Atk+2." },
+  { "name": "Blaze Dance 2", "spCost": 100, "icon": "27-9", "exclude": [{"weaponType": "Staff"}], "effect": "If Sing or Dance is used, target also granted Atk+3." },
+  { "name": "Blaze Dance 3", "spCost": 200, "icon": "27-10", "exclude": [{"weaponType": "Staff"}], "effect": "If Sing or Dance is used, target also granted Atk+4." },
+  { "name": "Bowbreaker 1", "spCost": 50, "icon":"9-0", "exclude": [{"moveType":"Flying"}], "effect": "If unit's HP ≥ 90% in combat against a bow user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Bowbreaker 2", "spCost": 100, "icon":"9-1", "exclude": [{"moveType":"Flying"}], "effect": "If unit's HP ≥ 70% in combat against a bow user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Bowbreaker 3", "spCost": 200, "icon":"9-2", "exclude": [{"moveType":"Flying"}], "effect": "If unit's HP ≥ 50% in combat against a bow user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Brash Assault 1", "spCost": 50, "icon": "6-0", "effect": "Unit automatically makes a follow-up when at HP ≤ 30% and attacking a foe that can counter." },
+  { "name": "Brash Assault 2", "spCost": 100, "icon": "6-1", "effect": "Unit automatically makes a follow-up when at HP ≤ 40% and attacking a foe that can counter." },
+  { "name": "Brash Assault 3", "spCost": 200, "icon": "6-2", "effect": "Unit automatically makes a follow-up when at HP ≤ 50% and attacking a foe that can counter." },
+  { "name": "Cancel Affinity 1", "spCost": 50, "icon": "22-3", "exclude": [{"weaponType": "Tome"}, {"weaponType":"Staff"}], "effect": "Any weapon triangle affinity granted by unit's skills is negated. Also negates any weapon triangle affinity granted by foe's skills." },
+  { "name": "Cancel Affinity 2", "spCost": 100, "icon": "22-4", "exclude": [{"weaponType": "Tome"}, {"weaponType":"Staff"}], "effect": "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is negated." },
+  { "name": "Cancel Affinity 3", "spCost": 200, "icon": "22-5", "exclude": [{"weaponType": "Tome"}, {"weaponType":"Staff"}], "effect": "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is reversed." },
+  { "name": "Crusader's Ward", "spCost": 300, "icon": "29-7", "include": [{"name":"Sigurd"}], "effect": "If unit receives consecutive attack from a foe 2 spaces away, damage from second attack onward reduced by 80%. (Skill cannot be inherited.)" },
+  { "name": "Daggerbreaker 1", "spCost": 50, "icon": "9-3", "effect": "If unit's HP ≥ 90% in combat against a dagger user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Daggerbreaker 2", "spCost": 100, "icon": "9-4", "effect": "If unit's HP ≥ 70% in combat against a dagger user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Daggerbreaker 3", "spCost": 200, "icon": "9-5", "effect": "If unit's HP ≥ 50% in combat against a dagger user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Dazzling Staff 1", "spCost": 60, "icon": "18-1", "include": [{"weaponType": "Staff"}], "effect": "If unit has 100% HP at the start of combat, the enemy cannot counterattack." },
+  { "name": "Dazzling Staff 2", "spCost": 120, "icon": "18-2", "include": [{"weaponType": "Staff"}], "effect": "If unit has ≥ 50% HP at the start of combat, the enemy cannot counterattack." },
+  { "name": "Dazzling Staff 3", "spCost": 240, "icon": "18-3", "include": [{"weaponType": "Staff"}], "effect": "The enemy cannot counterattack." },
+  { "name": "Desperation 1", "spCost": 50, "icon": "5-10", "effect": "If unit initiates combat with HP ≤ 25%, follow-up attacks occur immediately after unit's attack." },
+  { "name": "Desperation 2", "spCost": 100, "icon": "5-11", "effect": "If unit initiates combat with HP ≤ 50%, follow-up attacks occur immediately after unit's attack." },
+  { "name": "Desperation 3", "spCost": 200, "icon": "5-12", "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack." },
+  { "name": "Drag Back", "spCost": 150, "icon": "4-7", "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "effect": "If unit initiates attack, the unit moves 1 space away after combat. Foe moves into unit's previous space." },
+  { "name": "Escape Route 1", "spCost": 60, "icon": "5-4", "effect": "Enables unit whose own HP is ≤ 30% to warp adjacent to any ally." },
+  { "name": "Escape Route 2", "spCost": 120, "icon": "5-5", "effect": "Enables unit whose own HP is ≤ 40% to warp adjacent to any ally." },
+  { "name": "Escape Route 3", "spCost": 240, "icon": "5-6", "effect": "Enables unit whose own HP is ≤ 50% to warp adjacent to any ally." },
+  { "name": "Flier Formation 1", "spCost": 60, "icon": "27-0", "include": [{"moveType": "Flying"}], "effect": "If unit has 100% HP, unit can move to a space adjacent to a flier ally within 2 spaces." },
+  { "name": "Flier Formation 2", "spCost": 120, "icon": "27-1", "include": [{"moveType": "Flying"}], "effect": "If unit has ≥ 50% HP, unit can move to a space adjacent to a flier ally within 2 spaces." },
+  { "name": "Flier Formation 3", "spCost": 240, "icon": "27-2", "include": [{"moveType": "Flying"}], "effect": "Unit can move to a space adjacent to a flier ally within 2 spaces." },
+  { "name": "Follow-Up Ring", "spCost": 200, "icon": "29-8", "include": [{"name":"Arden"}], "effect": "Unit makes a guaranteed follow-up attack when unit's HP ≥ 50% at start of combat. (Skill cannot be inherited.)" },
+  { "name": "G Tomebreaker 1", "spCost": 50, "icon": "9-12", "exclude": [{"colorType": "Blue"}], "effect": "If unit's HP ≥ 90% in combat against a green tome user, unit makes a follow-up attack and foe cannot." },
+  { "name": "G Tomebreaker 2", "spCost": 100, "icon": "10-0", "exclude": [{"colorType": "Blue"}], "effect": "If unit's HP ≥ 70% in combat against a green tome user, unit makes a follow-up attack and foe cannot." },
+  { "name": "G Tomebreaker 3", "spCost": 200, "icon": "10-1", "exclude": [{"colorType": "Blue"}], "effect": "If unit's HP ≥ 50% in combat against a green tome user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Gale Dance 1", "spCost": 50, "icon": "27-11", "exclude": [{"weaponType": "Staff"}], "effect": "If Sing or Dance is used, target also granted Spd+2." },
+  { "name": "Gale Dance 2", "spCost": 100, "icon": "27-12", "exclude": [{"weaponType": "Staff"}], "effect": "If Sing or Dance is used, target also granted Spd+3." },
+  { "name": "Gale Dance 3", "spCost": 200, "icon": "28-0", "exclude": [{"weaponType": "Staff"}], "effect": "If Sing or Dance is used, target also granted Spd+4." },
+  { "name": "Geyser Dance 1", "spCost": 120, "icon": "28-4", "exclude": [{"weaponType": "Staff"}], "effect": "If Sing or Dance is used, target also granted Def/Res+3." },
+  { "name": "Geyser Dance 2", "spCost": 240, "icon": "28-5", "exclude": [{"weaponType": "Staff"}], "effect": "If Sing or Dance is used, target also granted Def/Res+4." },
+  { "name": "Guard 1", "spCost": 50, "icon": "16-4", "effect": "If unit's HP is 100% at start of combat, enemy is inflicted with Special cooldown charge-1. (If using similar skill, only highest value applied.)" },
+  { "name": "Guard 2", "spCost": 100, "icon": "16-5", "effect": "If unit's HP is ≥ 90% at start of combat, enemy is inflicted with Special cooldown charge-1. (If using similar skill, only highest value applied.)" },
+  { "name": "Guard 3", "spCost": 200, "icon": "16-6", "effect": "If unit's HP is ≥ 80% at start of combat, enemy is inflicted with Special cooldown charge-1. (If using similar skill, only highest value applied.)" },
+  { "name": "Hit and Run", "spCost": 150, "icon": "15-4", "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "effect": "If unit initiates attack, unit retreats 1 space after battle." },
+  { "name": "Knock Back", "spCost": 150, "icon": "4-5", "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "effect": "If unit initiates attack, foe is moved 1 space away after combat." },
+  { "name": "Lancebreaker 1", "spCost": 50, "icon": "8-7", "exclude": [{"colorType": "Red"}], "effect": "If unit's HP ≥ 90% in combat against a lance user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Lancebreaker 2", "spCost": 100, "icon": "8-8", "exclude": [{"colorType": "Red"}], "effect": "If unit's HP ≥ 70% in combat against a lance user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Lancebreaker 3", "spCost": 200, "icon": "8-9", "exclude": [{"colorType": "Red"}], "effect": "If unit's HP ≥ 50% in combat against a lance user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Live for Bounty", "spCost": 100, "icon": "14-10", "effect": "If unit survives, get 1.5x shards/crystals from a Training Tower map. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Live for Honor", "spCost": 100, "icon": "14-9", "effect": "If unit survives, get 1.5x normal badges from a Training Tower map. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Live to Serve 1", "spCost": 40, "icon": "7-2", "include": [{"weaponType": "Staff"}], "effect": "When healing allies with a staff, unit also recovers 50% of the HP restored." },
+  { "name": "Live to Serve 2", "spCost": 80, "icon": "7-3", "include": [{"weaponType": "Staff"}], "effect": "When healing allies with a staff, unit also recovers 75% of the HP restored." },
+  { "name": "Live to Serve 3", "spCost": 160, "icon": "7-4", "include": [{"weaponType": "Staff"}], "effect": "When healing allies with a staff, unit also recovers the same amount." },
+  { "name": "Lunge", "spCost": 150, "icon": "4-6", "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "effect": "If unit initiates attack, after combat, unit and targeted foe swap places." },
+  { "name": "Obstruct 1", "spCost": 50, "icon": "4-11", "effect": "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 90%. (No effect on foes with a Pass skill.)" },
+  { "name": "Obstruct 2", "spCost": 100, "icon": "4-12", "effect": "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 70%. (No effect on foes with a Pass skill.)" },
+  { "name": "Obstruct 3", "spCost": 200, "icon": "5-0", "effect": "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 50%. (No effect on foes with a Pass skill.)" },
+  { "name": "Pass 1", "spCost": 50, "icon": "4-8", "effect": "Units can pass through foes if its own HP ≥ 75%." },
+  { "name": "Pass 2", "spCost": 100, "icon": "4-9", "effect": "Units can pass through foes if its own HP ≥ 50%." },
+  { "name": "Pass 3", "spCost": 200, "icon": "4-10", "effect": "Units can pass through foes if its own HP ≥ 25%." },
+  { "name": "Poison Strike 1", "spCost": 60, "icon": "6-9", "exclude": [{"weaponType": "Staff"}], "effect": "Inflicts 4 damage to foe after any combat this unit initiates." },
+  { "name": "Poison Strike 2", "spCost": 120, "icon": "6-10", "exclude": [{"weaponType": "Staff"}], "effect": "Inflicts 7 damage to foe after any combat this unit initiates." },
+  { "name": "Poison Strike 3", "spCost": 240, "icon": "6-11", "exclude": [{"weaponType": "Staff"}], "effect": "Inflicts 10 damage to foe after any combat this unit initiates." },
+  { "name": "Quick Riposte 1", "spCost": 60, "icon": "6-3", "effect": "Unit automatically makes a follow-up attack if attacked at HP ≥ 90%." },
+  { "name": "Quick Riposte 2", "spCost": 120, "icon": "6-4", "effect": "Unit automatically makes a follow-up attack if attacked at HP ≥ 80%." },
+  { "name": "Quick Riposte 3", "spCost": 240, "icon": "6-5", "effect": "Unit automatically makes a follow-up attack if attacked at HP ≥ 70%." },
+  { "name": "R Tomebreaker 1", "spCost": 50, "icon": "9-6", "exclude": [{"colorType": "Green"}], "effect": "If unit's HP ≥ 90% in combat against a red tome user, unit makes a follow-up attack and foe cannot." },
+  { "name": "R Tomebreaker 2", "spCost": 100, "icon": "9-7", "exclude": [{"colorType": "Green"}], "effect": "If unit's HP ≥ 70% in combat against a red tome user, unit makes a follow-up attack and foe cannot." },
+  { "name": "R Tomebreaker 3", "spCost": 200, "icon": "9-8", "exclude": [{"colorType": "Green"}], "effect": "If unit's HP ≥ 50% in combat against a red tome user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Recover Ring", "spCost": 200, "icon": "29-9", "include": [{"name": "Arvis"}], "effect": "Restores 10 HP at the start of each turn. (Skill cannot be inherited.)" },
+  { "name": "Renewal 1", "spCost": 60, "icon": "6-12", "effect": "At the start of every fourth turn, restores 10 HP." },
+  { "name": "Renewal 2", "spCost": 120, "icon": "7-0", "effect": "At the start of every third turn, restores 10 HP." },
+  { "name": "Renewal 3", "spCost": 240, "icon": "7-1", "effect": "At the start of every second turn, restores 10 HP." },
+  { "name": "Sacae's Blessing", "spCost": 300, "icon": "26-5", "include": [{"name":"Lyn (Brave Heroes)"}], "effect": "If foe has sword, lance, or axe, foe cannot counterattack. (Skill cannot be inherited.)" },
+  { "name": "Seal Atk 1", "spCost": 40, "icon": "7-5", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, foe suffers Atk-3 through its next action." },
+  { "name": "Seal Atk 2", "spCost": 80, "icon": "7-6", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, foe suffers Atk-5 through its next action." },
+  { "name": "Seal Atk 3", "spCost": 160, "icon": "7-7", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, foe suffers Atk-7 through its next action." },
+  { "name": "Seal Atk Def 1", "spCost": 100, "icon": "25-3", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, inflicts Atk/Def-3 on foe through its next action." },
+  { "name": "Seal Atk Def 2", "spCost": 200, "icon": "25-4", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, inflicts Atk/Def-5 on foe through its next action." },
+  { "name": "Seal Atk Spd 1", "spCost": 100, "icon": "20-0", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, inflicts Atk/Spd-3 on foe through its next action." },
+  { "name": "Seal Atk Spd 2", "spCost": 200, "icon": "20-1", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, inflicts Atk/Spd-5 on foe through its next action." },
+  { "name": "Seal Def 1", "spCost": 40, "icon": "7-11", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, foe suffers Def-3 through its next action." },
+  { "name": "Seal Def 2", "spCost": 80, "icon": "7-12", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, foe suffers Def-5 through its next action." },
+  { "name": "Seal Def 3", "spCost": 160, "icon": "8-0", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, foe suffers Def-7 through its next action." },
+  { "name": "Seal Res 1", "spCost": 40, "icon": "8-1", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, foe suffers Res-3 through its next action." },
+  { "name": "Seal Res 2", "spCost": 80, "icon": "8-2", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, foe suffers Res-5 through its next action." },
+  { "name": "Seal Res 3", "spCost": 160, "icon": "8-3", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, foe suffers Res-7 through its next action." },
+  { "name": "Seal Spd 1", "spCost": 40, "icon": "7-8", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, foe suffers Spd-3 through its next action." },
+  { "name": "Seal Spd 2", "spCost": 80, "icon": "7-9", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, foe suffers Spd-5 through its next action." },
+  { "name": "Seal Spd 3", "spCost": 160, "icon": "7-10", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, foe suffers Spd-7 through its next action." },
+  { "name": "Shield Pulse 1", "spCost": 60, "icon": "23-5", "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "exclude": [{"moveType":"Flying", "moveType":"Cavalry"}], "effect": "If unit's Special triggers based on a foe's attack, Special cooldown count-1 at start of turn 1." },
+  { "name": "Shield Pulse 2", "spCost": 120, "icon": "23-6", "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "exclude": [{"moveType":"Flying", "moveType":"Cavalry"}], "effect": "If unit's Special triggers based on a foe's attack, Special cooldown count-1 at start of turn 1. Unit takes 5 less damage when Special triggers." },
+  { "name": "Shield Pulse 3", "spCost": 240, "icon": "23-7", "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "exclude": [{"moveType":"Flying", "moveType":"Cavalry"}], "effect": "If unit's Special triggers based on a foe's attack, Special cooldown count-2 at start of turn 1. Unit takes 5 less damage when Special triggers." },
+  { "name": "Swordbreaker 1", "spCost": 50, "icon": "8-4", "exclude": [{"colorType": "Green"}], "effect": "If unit's HP ≥ 90% in combat against a sword user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Swordbreaker 2", "spCost": 100, "icon": "8-5", "exclude": [{"colorType": "Green"}], "effect": "If unit's HP ≥ 70% in combat against a sword user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Swordbreaker 3", "spCost": 200, "icon": "8-6", "exclude": [{"colorType": "Green"}], "effect": "If unit's HP ≥ 50% in combat against a sword user, unit makes a follow-up attack and foe cannot." },
+  { "name": "Torrent Dance 1", "spCost": 50, "icon": "28-1", "exclude": [{"weaponType": "Staff"}], "effect": "If Sing or Dance is used, target also granted Res+3." },
+  { "name": "Vantage 1", "spCost": 50, "icon": "5-7", "effect": "Unit counterattacks first when attacked at HP ≤ 25%." },
+  { "name": "Vantage 2", "spCost": 100, "icon": "5-8", "effect": "Unit counterattacks first when attacked at HP ≤ 50%." },
+  { "name": "Vantage 3", "spCost": 200, "icon": "5-9", "effect": "Unit counterattacks first when attacked at HP ≤ 75%." },
+  { "name": "Wary Fighter 1", "spCost": 60, "icon": "6-6", "include": [{"moveType": "Armored"}], "effect": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 90%." },
+  { "name": "Wary Fighter 2", "spCost": 120, "icon": "6-7", "include": [{"moveType": "Armored"}], "effect": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 70%." },
+  { "name": "Wary Fighter 3", "spCost": 240, "icon": "6-8", "include": [{"moveType": "Armored"}], "effect": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 50%." },
+  { "name": "Watersweep 1", "spCost": 60, "icon": "16-1", "exclude": [{"weaponType": "Staff"}], "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack." },
+  { "name": "Watersweep 2", "spCost": 120, "icon": "16-2", "exclude": [{"weaponType": "Staff"}], "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack." },
+  { "name": "Watersweep 3", "spCost": 240, "icon": "16-3", "exclude": [{"weaponType": "Staff"}], "effect": "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack." },
+  { "name": "Windsweep 1", "spCost": 60, "icon": "15-5", "exclude": [{"weaponType": "Staff"}], "effect": "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack." },
+  { "name": "Windsweep 2", "spCost": 120, "icon": "15-6", "exclude": [{"weaponType": "Staff"}], "effect": "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack." },
+  { "name": "Windsweep 3", "spCost": 240, "icon": "15-7", "exclude": [{"weaponType": "Staff"}], "effect": "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack." },
+  { "name": "Wings of Mercy 1", "spCost": 60, "icon": "5-1", "effect": "Enables unit to warp adjacent to any ally with HP ≤ 30%." },
+  { "name": "Wings of Mercy 2", "spCost": 120, "icon": "5-2", "effect": "Enables unit to warp adjacent to any ally with HP ≤ 40%." },
+  { "name": "Wings of Mercy 3", "spCost": 240, "icon": "5-3", "effect": "Enables unit to warp adjacent to any ally with HP ≤ 50%." },
+  { "name": "Wrath 1", "spCost": 60, "icon": "27-3", "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "exclude": [{"moveType":"Flying", "moveType":"Cavalry"}], "effect": "If unit's HP ≤ 25%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special." },
+  { "name": "Wrath 2", "spCost": 120, "icon": "27-4", "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "exclude": [{"moveType":"Flying", "moveType":"Cavalry"}], "effect": "If unit's HP ≤ 50%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special." },
+  { "name": "Wrath 3", "spCost": 240, "icon": "27-5", "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "exclude": [{"moveType":"Flying", "moveType":"Cavalry"}], "effect": "If unit's HP ≤ 75%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special." },
+  { "name": "Wrathful Staff 1", "spCost": 60, "icon": "17-3", "include": [{"weaponType": "Staff"}], "effect": "If unit has 100% HP at the start of combat, damage from their staff will be calculated the same as other weapons." },
+  { "name": "Wrathful Staff 2", "spCost": 120, "icon": "17-4", "include": [{"weaponType": "Staff"}], "effect": "If unit has ≥ 50% HP at the start of combat, damage from their staff will be calculated the same as other weapons." },
+  { "name": "Wrathful Staff 3", "spCost": 240, "icon": "17-5", "include": [{"weaponType": "Staff"}], "effect": "Damage from unit's staff will be calculated the same as other weapons." }
+];
+
+let SKILL_C = [
+  { "name": "Armor March 1", "spCost": 60, "icon": "25-5", "include": [{"moveType": "Armored"}], "effect": "If unit has 100% HP and an adjacent armored ally at start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)" },
+  { "name": "Armor March 2", "spCost": 120, "icon": "25-6", "include": [{"moveType": "Armored"}], "effect": "If unit has ≥ 50% HP and an adjacent armored ally at start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)" },
+  { "name": "Armor March 3", "spCost": 240, "icon": "25-7", "include": [{"moveType": "Armored"}], "effect": "If unit has an adjacent armored ally at the start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)" },
+  { "name": "Atk Ploy 1", "spCost": 60, "icon": "18-12", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-3 until the end of foe's next action." },
+  { "name": "Atk Ploy 2", "spCost": 120, "icon": "19-0", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-4 until the end of foe's next action." },
+  { "name": "Atk Ploy 3", "spCost": 240, "icon": "19-1", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-5 until the end of foe's next action." },
+  { "name": "Atk Smoke 1", "spCost": 60, "icon": "26-8", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, inflicts Atk-3 on foes within 2 spaces of target through their next actions." },
+  { "name": "Atk Smoke 2", "spCost": 120, "icon": "26-9", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, inflicts Atk-5 on foes within 2 spaces of target through their next actions." },
+  { "name": "Atk Smoke 3", "spCost": 240, "icon": "26-10", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, inflicts Atk-7 on foes within 2 spaces of target through their next actions." },
+  { "name": "Atk Tactic 1", "spCost": 60, "icon": "33-0", "effect": "At start of turn, grants Atk+2 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2." },
+  { "name": "Atk Tactic 2", "spCost": 120, "icon": "33-1", "effect": "At start of turn, grants Atk+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2." },
+  { "name": "Atk Tactic 3", "spCost": 240, "icon": "33-2", "effect": "At start of turn, grants Atk+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2." },
+  { "name": "Axe Experience 1", "spCost": 30, "icon": "14-11","include": [{"weaponType": "Axe"}], "effect": "If unit survives, unit gets 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Axe Experience 2", "spCost": 60, "icon": "14-12","include": [{"weaponType": "Axe"}], "effect": "If unit survives, all axe users on team get 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Axe Experience 3", "spCost": 120, "icon": "15-0","include": [{"weaponType": "Axe"}], "effect": "If unit survives, all axe users on team get 2x EXP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Axe Valor 1", "spCost": 30, "icon": "20-8", "include": [{"weaponType": "Axe"}], "effect": "If unit survives and uses an axe, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Axe Valor 2", "spCost": 60, "icon": "20-9", "include": [{"weaponType": "Axe"}], "effect": "If unit survives, all axe users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Axe Valor 3", "spCost": 120, "icon": "20-10", "include": [{"weaponType": "Axe"}], "effect": "If unit survives, all axe users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "B Tome Exp. 1", "spCost": 30, "icon": "17-6", "include": [{"weaponType": "Tome", "colorType": "Blue"}], "effect": "If using blue magic and unit survives combat, unit gets 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "B Tome Exp. 2", "spCost": 60, "icon": "17-7", "include": [{"weaponType": "Tome", "colorType": "Blue"}], "effect": "If unit survives combat, all blue magic users on team get 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "B Tome Exp. 3", "spCost": 120, "icon": "17-8", "include": [{"weaponType": "Tome", "colorType": "Blue"}], "effect": "If unit survives combat, all blue magic users on team get 2x EXP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "B Tome Valor 1", "spCost": 30, "icon": "28-8", "include": [{"weaponType": "Tome", "colorType": "Blue"}], "effect": "If unit survives and uses a blue tome, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "B Tome Valor 2", "spCost": 60, "icon": "28-9", "include": [{"weaponType": "Tome", "colorType": "Blue"}], "effect": "If unit survives, all blue tome users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "B Tome Valor 3", "spCost": 120, "icon": "28-10", "include": [{"weaponType": "Tome", "colorType": "Blue"}], "effect": "If unit survives, all blue tome users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Bow Exp. 1", "spCost": 30, "icon": "15-8", "include": [{"weaponType":"Bow"}], "effect": "If unit survives and uses a bow, unit gets 1.5x EXP. (If similar skill effects also used, only highest multiplier applies.)" },
+  { "name": "Bow Exp. 2", "spCost": 60, "icon": "15-9", "include": [{"weaponType":"Bow"}], "effect": "If unit survives, all bow users on team get 1.5x EXP. (If similar skill effects also used, only highest multiplier applies.)" },
+  { "name": "Bow Exp. 3", "spCost": 120, "icon": " 15-10", "include": [{"weaponType":"Bow"}], "effect": "If unit survives, all bow users on team get 2x EXP. (If similar skill effects also used, only highest multiplier applies.)" },
+  { "name": "Breath of Life 1", "spCost": 50, "icon": "10-2", "effect": "If unit initiates attack, adjacent allies recover 3 HP after combat." },
+  { "name": "Breath of Life 2", "spCost": 100, "icon": "10-3", "effect": "If unit initiates attack, adjacent allies recover 5 HP after combat." },
+  { "name": "Breath of Life 3", "spCost": 200,"icon": "10-4", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat." },
+  { "name": "Dagger Valor 1", "spCost": 30, "icon": "30-11", "include": [{"weaponType":"Dagger"}], "effect": "If unit survives and uses a dagger, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Dagger Valor 2", "spCost": 60, "icon": "30-12", "include": [{"weaponType":"Dagger"}], "effect": "If unit survives, all dagger users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Dagger Valor 3", "spCost": 120, "icon": "31-0", "include": [{"weaponType":"Dagger"}], "effect": "If unit survives, all dagger users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Def Ploy 1", "spCost": 60, "icon" : "20-2", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-3 until the end of foe's next action." },
+  { "name": "Def Ploy 2", "spCost": 120, "icon" : "20-3", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-4 until the end of foe's next action." },
+  { "name": "Def Ploy 3", "spCost": 240, "icon" : "20-4", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-5 until the end of foe's next action." },
+  { "name": "Def Tactic 1", "spCost": 60, "icon": "33-3", "effect": "At start of turn, grants Def+2 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2." },
+  { "name": "Def Tactic 2", "spCost": 120, "icon": "33-4", "effect": "At start of turn, grants Def+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2." },
+  { "name": "Def Tactic 3", "spCost": 240, "icon": "33-5", "effect": "At start of turn, grants Def+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2." },
+  { "name": "Drive Atk 1", "spCost": 120, "icon": "22-6", "effect": "Grants allies within 2 spaces Atk+2 during combat." },
+  { "name": "Drive Atk 2", "spCost": 240, "icon": "22-7", "effect": "Grants allies within 2 spaces Atk+3 during combat." },
+  { "name": "Drive Def 1", "spCost": 120, "icon": "18-10", "effect": "Grants allies within 2 spaces Def+2 during combat." },
+  { "name": "Drive Def 2", "spCost": 240, "icon": "18-11", "effect": "Grants allies within 2 spaces Def+3 during combat." },
+  { "name": "Drive Res 1", "spCost": 120, "icon": "28-6", "effect": "Grants allies within 2 spaces Res+2 during combat." },
+  { "name": "Drive Res 2", "spCost": 240, "icon": "28-7", "effect": "Grants allies within 2 spaces Res+3 during combat." },
+  { "name": "Drive Spd 1", "spCost": 120, "icon": "26-6", "effect": "Grants allies within 2 spaces Spd+2 during combat." },
+  { "name": "Drive Spd 2", "spCost": 240, "icon": "26-7", "effect": "Grants allies within 2 spaces Spd+3 during combat." },
+  { "name": "Fortify Armor", "spCost": 200, "icon": "13-0", "include": [{"moveType": "Armored"}], "effect": "Grants adjacent armor allies Def/Res+6 through their next actions at the start of each turn." },
+  { "name": "Fortify Cavalry", "spCost": 200, "icon": "13-2", "include": [{"moveType": "Cavalry"}],  "effect": "Grants adjacent cavalry allies Def/Res+6 through their next actions at the start of each turn." },
+  { "name": "Fortify Def 1", "spCost": 50, "icon": "12-6", "effect": "Grants adjacent allies Def+2 through their next actions at the start of each turn." },
+  { "name": "Fortify Def 2", "spCost": 100, "icon": "12-7", "effect": "Grants adjacent allies Def+3 through their next actions at the start of each turn." },
+  { "name": "Fortify Def 3", "spCost": 200, "icon": "12-8", "effect": "Grants adjacent allies Def+4 through their next actions at the start of each turn." },
+  { "name": "Fortify Dragons", "spCost": 200, "icon": "14-4", "include": [{"weaponType": "Breath"}], "effect": "Grants adjacent Dragon allies Def/Res+6 through their next actions at the start of each turn." },
+  { "name": "Fortify Fliers", "spCost": 200, "icon": "13-4", "include": [{"moveType": "Flying"}], "effect": "Grants adjacent flying allies Def/Res+6 through their next actions at the start of each turn." },
+  { "name": "Fortify Res 1", "spCost": 50, "icon": "12-9", "effect": "Grants adjacent allies Res+2 through their next actions at the start of each turn." },
+  { "name": "Fortify Res 2", "spCost": 100, "icon": "12-10", "effect": "Grants adjacent allies Res+3 through their next actions at the start of each turn." },
+  { "name": "Fortify Res 3", "spCost": 200, "icon": "12-11", "effect": "Grants adjacent allies Res+4 through their next actions at the start of each turn." },
+  { "name": "G Tome Valor 1", "spCost": 30, "icon": "24-2", "include": [{"weaponType": "Tome", "colorType": "Green"}], "effect": "If unit survives and uses a green tome, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "G Tome Valor 2", "spCost": 60, "icon": "24-3", "include": [{"weaponType": "Tome", "colorType": "Green"}], "effect": "If unit survives, all green tome users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "G Tome Valor 3", "spCost": 120, "icon": "24-4", "include": [{"weaponType": "Tome", "colorType": "Green"}], "effect": "If unit survives, all green tome users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Goad Armor", "spCost": 200, "icon": "11-7", "include": [{"moveType": "Armored"}], "effect": "Grants armored allies within 2 spaces Spd/Atk+4 during combat." },
+  { "name": "Goad Cavalry", "spCost": 200, "icon": "11-9", "include": [{"moveType": "Cavalry"}], "effect": "Grants cavalry allies within 2 spaces Spd/Atk+4 during combat." },
+  { "name": "Goad Fliers", "spCost": 200, "icon": "11-11", "include": [{"moveType": "Flying"}], "effect": "Grants flying allies within 2 spaces Spd/Atk+4 during combat." },
+  { "name": "Guidance 1", "spCost": 60, "icon": "25-8", "include": [{"moveType": "Flying"}], "effect": "If unit has 100% HP, infantry and armored allies within 2 spaces can move to a space adjacent to unit." },
+  { "name": "Guidance 2", "spCost": 120, "icon": "25-9", "include": [{"moveType": "Flying"}], "effect": "If unit has ≥ 50% HP, infantry and armored allies within 2 spaces can move to a space adjacent to unit." },
+  { "name": "Guidance 3", "spCost": 240, "icon": "25-10", "include": [{"moveType": "Flying"}], "effect": "Infantry and armored allies within 2 spaces can move to a space adjacent to unit." },
+  { "name": "Hone Armor", "spCost": 200, "icon": "12-12", "include": [{"moveType": "Armored"}], "effect": "Grants adjacent armored allies Atk/Spd+6 through their next actions at the start of each turn." },
+  { "name": "Hone Atk 1", "spCost": 50, "icon": "12-0", "effect": "Grants adjacent allies Atk+2 through their next actions at the start of each turn." },
+  { "name": "Hone Atk 2", "spCost": 100, "icon": "12-1", "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn." },
+  { "name": "Hone Atk 3", "spCost": 200, "icon": "12-2", "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn." },
+  { "name": "Hone Cavalry", "spCost": 200, "icon": "13-1", "include": [{"moveType": "Cavalry"}], "effect": "Grants adjacent cavalry allies Atk/Spd+6 through their next actions at the start of each turn." },
+  { "name": "Hone Fliers", "spCost": 200, "icon": "13-3", "include": [{"moveType": "Flying"}], "effect": "Grants adjacent flying allies Atk/Spd+6 through their next actions at the start of each turn." },
+  { "name": "Hone Spd 1", "spCost": 50, "icon": "12-3", "effect": "Grants adjacent allies Spd+2 through their next actions at the start of each turn." },
+  { "name": "Hone Spd 2", "spCost": 100, "icon": "12-4", "effect": "Grants adjacent allies Spd+3 through their next actions at the start of each turn." },
+  { "name": "Hone Spd 3", "spCost": 200, "icon": "12-5", "effect": "Grants adjacent allies Spd+4 through their next actions at the start of each turn." },
+  { "name": "Infantry Pulse 1", "spCost": 60, "icon": "24-5", "include": [{"moveType": "Infantry"}], "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 5 fewer HP than unit. (Effects will stack with similar skills.)" },
+  { "name": "Infantry Pulse 2", "spCost": 120, "icon": "24-6", "include": [{"moveType": "Infantry"}], "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 3 fewer HP than unit. (Effects will stack with similar skills.)" },
+  { "name": "Infantry Pulse 3", "spCost": 240, "icon": "24-7", "include": [{"moveType": "Infantry"}], "effect": "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 1 fewer HP than unit. (Effects will stack with similar skills.)" },
+  { "name": "Lance Valor 1", "spCost": 30, "icon": "20-5", "include": [{"weaponType": "Lance"}], "effect": "If unit survives and uses a lance, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Lance Valor 2", "spCost": 60, "icon": "20-6", "include": [{"weaponType": "Lance"}], "effect": "If unit survives, all lance users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Lance Valor 3", "spCost": 120, "icon": "20-7", "include": [{"weaponType": "Lance"}], "effect": "If unit survives, all lance users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Panic Ploy 1", "spCost": 60, "icon": "19-2", "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 5 or more lower than unit through foe's next action." },
+  { "name": "Panic Ploy 2", "spCost": 120, "icon": "19-3", "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 3 or more lower than unit through foe's next action." },
+  { "name": "Panic Ploy 3", "spCost": 240, "icon": "19-4", "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 1 or more lower than unit through foe's next action." },
+  { "name": "Res Ploy 1", "spCost": 60, "icon": "23-8", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-3 until the end of foe's next action." },
+  { "name": "Res Ploy 2", "spCost": 120, "icon": "23-9", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-4 until the end of foe's next action." },
+  { "name": "Res Ploy 3", "spCost": 240, "icon": "23-10", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-5 until the end of foe's next action." },
+  { "name": "Savage Blow 1", "spCost": 50, "icon": "10-5", "effect": "If unit initiates attack, foes within 2 spaces of target take 3 damage after combat." },
+  { "name": "Savage Blow 2", "spCost": 100, "icon": "10-6", "effect": "If unit initiates attack, foes within 2 spaces of target take 5 damage after combat." },
+  { "name": "Savage Blow 3", "spCost": 200, "icon": "10-7", "effect": "If unit initiates attack, foes within 2 spaces of target take 7 damage after combat." },
+  { "name": "Spd Ploy 1", "spCost": 60, "icon": "30-0", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Spd-3 until the end of foe's next action." },
+  { "name": "Spd Ploy 2", "spCost": 120, "icon": "30-1", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Spd-4 until the end of foe's next action." },
+  { "name": "Spd Ploy 3", "spCost": 240, "icon": "30-2", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Spd-5 until the end of foe's next action." },
+  { "name": "Spd Smoke 1", "spCost": 60, "icon": "29-10", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, inflicts Spd-3 on foes within 2 spaces of target through their next actions." },
+  { "name": "Spd Smoke 2", "spCost": 120, "icon": "29-11", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, inflicts Spd-5 on foes within 2 spaces of target through their next actions." },
+  { "name": "Spd Smoke 3", "spCost": 240, "icon": "29-12", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, inflicts Spd-7 on foes within 2 spaces of target through their next actions." },
+  { "name": "Spur Atk 1", "spCost": 50, "icon": "10-8", "effect": "Grants adjacent allies Atk+2 during combat." },
+  { "name": "Spur Atk 2", "spCost": 100, "icon": "10-9", "effect": "Grants adjacent allies Atk+3 during combat." },
+  { "name": "Spur Atk 3", "spCost": 200, "icon": "10-19", "effect": "Grants adjacent allies Atk+4 during combat." },
+  { "name": "Spur Def 1", "spCost": 50, "icon": "11-1", "effect": "Grants adjacent allies Def+2 during combat." },
+  { "name": "Spur Def 2", "spCost": 100, "icon": "11-2", "effect": "Grants adjacent allies Def+3 during combat." },
+  { "name": "Spur Def 3", "spCost": 200, "icon": "11-3", "effect": "Grants adjacent allies Def+4 during combat." },
+  { "name": "Spur Def/Res 1", "spCost": 120, "icon": "16-7", "effect": "Grants adjacent allies Def/Res +2 during combat" },
+  { "name": "Spur Def/Res 2", "spCost": 240, "icon": "16-8", "effect": "Grants adjacent allies Def/Res +3 during combat." },
+  { "name": "Spur Res 1", "spCost": 50, "icon": "11-4", "effect": "Grants adjacent allies Res+2 during combat." },
+  { "name": "Spur Res 2", "spCost": 100, "icon": "11-5", "effect": "Grants adjacent allies Res+3 during combat." },
+  { "name": "Spur Res 3", "spCost": 200, "icon": "11-6", "effect": "Grants adjacent allies Res+4 during combat." },
+  { "name": "Spur Spd 1", "spCost": 50, "icon": "10-11", "effect": "Grants adjacent allies Spd+2 during combat." },
+  { "name": "Spur Spd 2", "spCost": 100, "icon": "10-12", "effect": "Grants adjacent allies Spd+3 during combat." },
+  { "name": "Spur Spd 3", "spCost": 200, "icon": "11-0", "effect": "Grants adjacent allies Spd+4 during combat." },
+  { "name": "Spur Spd/Def 1", "spCost": 120, "icon": "27-6", "effect": "Grants adjacent allies Spd/Def +2 during combat" },
+  { "name": "Spur Spd/Def 2", "spCost": 240, "icon": "27-7", "effect": "Grants adjacent allies Spd/Def +3 during combat." },
+  { "name": "Sword Exp. 1", "spCost": 30, "icon": "19-5", "include": [{"weaponType": "Sword"}], "effect": "If unit survives, unit gets 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Sword Exp. 2", "spCost": 60, "icon": "19-6", "include": [{"weaponType": "Sword"}], "effect": "If unit survives, all sword users on team get 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Sword Exp. 3", "spCost": 120, "icon": "19-7", "include": [{"weaponType": "Sword"}], "effect": "If unit survives, all sword users on team get 2x EXP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Sword Valor 1", "spCost": 30, "icon": "22-8", "include": [{"weaponType": "Sword"}], "effect": "If unit survives and uses a sword, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Sword Valor 2", "spCost": 60, "icon": "22-9", "include": [{"weaponType": "Sword"}], "effect": "If unit survives, all sword users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Sword Valor 3", "spCost": 120, "icon": "22-10", "include": [{"weaponType": "Sword"}], "effect": "If unit survives, all sword users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)" },
+  { "name": "Threaten Atk 1", "spCost": 50, "icon": "13-5", "effect": "Inflicts Atk-3 on foes within 2 spaces through their next actions at the start of each turn." },
+  { "name": "Threaten Atk 2", "spCost": 100, "icon": "13-6", "effect": "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn." },
+  { "name": "Threaten Atk 3", "spCost": 200, "icon": "13-7", "effect": "Inflicts Atk-5 on foes within 2 spaces through their next actions at the start of each turn." },
+  { "name": "Threaten Def 1", "spCost": 50, "icon": "13-11", "effect": "Inflicts Def-3 on foes within 2 spaces through their next actions at the start of each turn." },
+  { "name": "Threaten Def 2", "spCost": 100, "icon": "13-12", "effect": "Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn." },
+  { "name": "Threaten Def 3", "spCost": 200, "icon": "14-0", "effect": "Inflicts Def-5 on foes within 2 spaces through their next actions at the start of each turn." },
+  { "name": "Threaten Res 1", "spCost": 50, "icon": "14-1", "effect": "Inflicts Res-3 on foes within 2 spaces through their next actions at the start of each turn." },
+  { "name": "Threaten Res 2", "spCost": 100, "icon": "14-2", "effect": "Inflicts Res-4 on foes within 2 spaces through their next actions at the start of each turn." },
+  { "name": "Threaten Res 3", "spCost": 200, "icon": "14-3", "effect": "Inflicts Res-5 on foes within 2 spaces through their next actions at the start of each turn." },
+  { "name": "Threaten Spd 1", "spCost": 50, "icon": "13-8", "effect": "Inflicts Spd-3 on foes within 2 spaces through their next actions at the start of each turn." },
+  { "name": "Threaten Spd 2", "spCost": 100, "icon": "13-9", "effect": "Inflicts Spd-4 on foes within 2 spaces through their next actions at the start of each turn." },
+  { "name": "Threaten Spd 3", "spCost": 200, "icon": "13-10", "effect": "Inflicts Spd-5 on foes within 2 spaces through their next actions at the start of each turn." },
+  { "name": "Ward Armor", "spCost": 200, "icon": "11-8", "include": [{"moveType": "Armored"}], "effect": "Grants armored allies within 2 spaces Def/Res+4 during combat." },
+  { "name": "Ward Cavalry", "spCost": 200, "icon": "11-10", "include": [{"moveType": "Cavalry"}], "effect": "Grants cavalry allies within 2 spaces Def/Res+4 during combat." },
+  { "name": "Ward Fliers", "spCost": 200, "icon": "11-12", "include": [{"moveType": "Flying"}], "effect": "Grants flying allies within 2 spaces Def/Res+4 during combat." }
+];
+
+let SKILL_SEAL = [
+  { "name": "Atk Ploy 1", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-3 until the end of foe's next action.", "icon": "18-12" },
+  { "name": "Atk Ploy 2", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-4 until the end of foe's next action.", "icon": "19-0" },
+  { "name": "Atk Ploy 3", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-5 until the end of foe's next action.", "icon": "19-1" },
+  { "name": "Attack +1", "effect": "Grants Atk+1.", "stats": {"atk": 1}, "icon": "0-7" },
+  { "name": "Attack +2", "effect": "Grants Atk+2.", "stats": {"atk": 2}, "icon": "0-8" },
+  { "name": "Attack +3", "effect": "Grants Atk+3.", "stats": {"atk": 3}, "icon": "0-9" },
+  { "name": "Atk Smoke 1", "effect": "After combat, inflicts Atk-3 on foes within 2 spaces of target through their next actions.", "icon": "26-8" },
+  { "name": "Atk Smoke 2", "effect": "After combat, inflicts Atk-5 on foes within 2 spaces of target through their next actions.", "icon": "26-9" },
+  { "name": "Atk Smoke 3", "effect": "After combat, inflicts Atk-7 on foes within 2 spaces of target through their next actions.", "icon": "26-10" },
+  { "name": "Brash Assault 1", "effect": "Unit automatically makes a follow-up when at HP ≤ 30% and attacking a foe that can counter.", "icon": "6-0"},
+  { "name": "Brash Assault 2", "effect": "Unit automatically makes a follow-up when at HP ≤ 40% and attacking a foe that can counter.", "icon": "6-1"},
+  { "name": "Brash Assault 3", "effect": "Unit automatically makes a follow-up when at HP ≤ 50% and attacking a foe that can counter.", "icon": "6-2"},
+  { "name": "Breath of Life 1", "effect": "If unit initiates attack, adjacent allies recover 3 HP after combat.", "icon": "10-2"},
+  { "name": "Breath of Life 2", "effect": "If unit initiates attack, adjacent allies recover 5 HP after combat.", "icon": "10-3"},
+  { "name": "Breath of Life 3", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.", "icon": "10-4"},
+  { "name": "Close Def 1", "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+2 during combat.", "icon": "19-10" },
+  { "name": "Close Def 2", "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+4 during combat.", "icon": "19-11" },
+  { "name": "Close Def 3", "effect": "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+6 during combat.", "icon": "19-12" },
+  { "name": "Defense +1", "effect": "Grants Def+1.", "stats": {"def": 1}, "icon": "1-0" },
+  { "name": "Defense +2", "effect": "Grants Def+2.", "stats": {"def": 2}, "icon": "1-1" },
+  { "name": "Defense +3", "effect": "Grants Def+3.", "stats": {"def": 1}, "icon": "1-2" },
+  { "name": "Deflect Magic 1", "effect": "If unit receives consecutive attacks from a foe using magic, damage from second attack onward reduced by 30%.", "icon": "29-5" },
+  { "name": "Deflect Magic 2", "effect": "If unit receives consecutive attacks from a foe using magic, damage from second attack onward reduced by 50%.", "icon": "29-6" },
+  { "name": "Deflect Magic 3", "effect": "If unit receives consecutive attacks from a foe using magic, damage from second attack onward reduced by 80%.", "icon": "29-7" },
+  { "name": "Deflect Melee 1", "effect": "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 30%.", "icon": "28-11" },
+  { "name": "Deflect Melee 2", "effect": "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 50%.", "icon": "28-12" },
+  { "name": "Deflect Melee 3", "effect": "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 80%.", "icon": "29-1" },
+  { "name": "Deflect Missile 1", "effect": "If unit receives consecutive attacks from a foe using a bow or dagger, damage from second attack onward reduced by 30%.", "icon": "29-2" },
+  { "name": "Deflect Missile 2", "effect": "If unit receives consecutive attacks from a foe using a bow or dagger, damage from second attack onward reduced by 50%.", "icon": "29-3" },
+  { "name": "Deflect Missile 3", "effect": "If unit receives consecutive attacks from a foe using a bow or dagger, damage from second attack onward reduced by 80%.", "icon": "29-4" },
+  { "name": "Distant Def 1", "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+2 during combat.", "icon": "16-10" },
+  { "name": "Distant Def 2", "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+4 during combat.", "icon": "16-11" },
+  { "name": "Distant Def 3", "effect": "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat.", "icon": "16-12" },
+  { "name": "Embla's Ward", "effect": "Unit receives 0 damage.", "include": [ {"name": "Veronica"} ], "icon": "16-9" },
+  { "name": "Fortify Def 1", "effect": "Grants adjacent allies Def+2 through their next actions at the start of each turn.", "icon": "12-6" },
+  { "name": "Fortify Def 2", "effect": "Grants adjacent allies Def+3 through their next actions at the start of each turn.", "icon": "12-7" },
+  { "name": "Fortify Def 3", "effect": "Grants adjacent allies Def+4 through their next actions at the start of each turn.", "icon": "12-8" },
+  { "name": "Fortify Res 1", "effect": "Grants adjacent allies Res+2 through their next actions at the start of each turn.", "icon": "12-9" },
+  { "name": "Fortify Res 2", "effect": "Grants adjacent allies Res+3 through their next actions at the start of each turn.", "icon": "12-10" },
+  { "name": "Fortify Res 3", "effect": "Grants adjacent allies Res+4 through their next actions at the start of each turn.", "icon": "12-11" },
+  { "name": "Guidance 1", "effect": "If unit has 100% HP, infantry and armored allies within 2 spaces can move to a space adjacent to unit.", "include": [{"moveType": "Flying"}], "icon": "25-8" },
+  { "name": "Guidance 2", "effect": "If unit has ≥ 50% HP, infantry and armored allies within 2 spaces can move to a space adjacent to unit.", "include": [{"moveType": "Flying"}], "icon": "25-9" },
+  { "name": "Guidance 3", "effect": "Infantry and armored allies within 2 spaces can move to a space adjacent to unit.", "include": [{"moveType": "Flying"}], "icon": "25-10" },
+  { "name": "HP +3", "effect": "Grants +3 to max HP.", "stats": {"hp": 3}, "icon": "0-4" },
+  { "name": "HP +4", "effect": "Grants +4 to max HP.", "stats": {"hp": 4}, "icon": "0-5" },
+  { "name": "HP +5", "effect": "Grants +5 to max HP.", "stats": {"hp": 5}, "icon": "0-6" },
+  { "name": "Hardy Bearing 1", "effect": "Disables skills that change unit's attack priority. If unit has 100% HP at start of battle, enemy skills that change attack priority are also disabled.", "icon": "24-8" },
+  { "name": "Hardy Bearing 2", "effect": "Disables skills that change unit's attack priority. If unit has ≥ 50% HP at start of battle, enemy skills that change attack priority are also disabled.", "icon": "24-9" },
+  { "name": "Hardy Bearing 3", "effect": "Disables skills that change unit's attack priority. Enemy skills that change attack priority are also disabled.", "icon": "24-10" },
+  { "name": "Hone Spd 1", "effect": "Grants adjacent allies Spd+2 through their next actions at the start of each turn.", "icon": "12-3"},
+  { "name": "Hone Spd 2", "effect": "Grants adjacent allies Spd+3 through their next actions at the start of each turn.", "icon": "12-4"},
+  { "name": "Hone Spd 3", "effect": "Grants adjacent allies Spd+4 through their next actions at the start of each turn.", "icon": "12-5"},
+  { "name": "Múspellflame", "effect": "Unit receives 0 damage.", "include": [{"name": "Surtr"}], "icon": "33-6"},
+  { "name": "Panic Ploy 1", "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 5 or more lower than unit through foe's next action.", "icon": "19-2"},
+  { "name": "Panic Ploy 2", "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 3 or more lower than unit through foe's next action.", "icon": "19-3"},
+  { "name": "Panic Ploy 3", "effect": "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 1 or more lower than unit through foe's next action.", "icon": "19-4"},
+  { "name": "Phantom Spd 1", "effect": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +5 over actual value.", "icon": "20-11" },
+  { "name": "Phantom Spd 2", "effect": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +8 over actual value.", "icon": "20-12" },
+  { "name": "Phantom Spd 3", "effect": "When any skill compares this unit's Spd stat to another unit's, this unit's Spd stat is counted as +10 over actual value.", "icon": "21-0" },
+  { "name": "Quickened Pulse", "effect": "Special cooldown count -1 at start of Turn 1.", "icon": "18-4" },
+  { "name": "Resistance +1", "effect": "Grants Res+1.", "stats": {"res": 1}, "icon": "1-3" },
+  { "name": "Resistance +2", "effect": "Grants Res+2.", "stats": {"res": 2}, "icon": "1-4" },
+  { "name": "Resistance +3", "effect": "Grants Res+3.", "stats": {"res": 1}, "icon": "1-5" },
+  { "name": "Savage Blow 1", "effect": "If unit initiates attack, foes within 2 spaces of target take 3 damage after combat.", "icon": "10-5" },
+  { "name": "Savage Blow 2", "effect": "If unit initiates attack, foes within 2 spaces of target take 5 damage after combat.", "icon": "10-6" },
+  { "name": "Savage Blow 3", "effect": "If unit initiates attack, foes within 2 spaces of target take 7 damage after combat.", "icon": "10-7" },
+  { "name": "Speed +1", "effect": "Grants Spd+1.", "stats": {"spd": 1}, "icon": "0-10"},
+  { "name": "Speed +2", "effect": "Grants Spd+2.", "stats": {"spd": 2}, "icon": "0-11"},
+  { "name": "Speed +3", "effect": "Grants Spd+3.", "stats": {"spd": 3}, "icon": "0-12"},
+  { "name": "Spur Atk 1", "effect": "Grants adjacent allies Atk+2 during combat.", "icon": "10-8" },
+  { "name": "Spur Atk 2", "effect": "Grants adjacent allies Atk+3 during combat.", "icon": "10-9" },
+  { "name": "Spur Atk 3", "effect": "Grants adjacent allies Atk+4 during combat.", "icon": "10-10" },
+  { "name": "Spur Def 1", "effect": "Grants adjacent allies Def+2 during combat.", "icon": "11-1" },
+  { "name": "Spur Def 2", "effect": "Grants adjacent allies Def+3 during combat.", "icon": "11-2" },
+  { "name": "Spur Def 3", "effect": "Grants adjacent allies Def+4 during combat.", "icon": "11-3" },
+  { "name": "Spur Res 1", "effect": "Grants adjacent allies Res+2 during combat.", "icon": "11-4" },
+  { "name": "Spur Res 2", "effect": "Grants adjacent allies Res+3 during combat.", "icon": "11-5" },
+  { "name": "Spur Res 3", "effect": "Grants adjacent allies Res+4 during combat.", "icon": "11-6" },
+  { "name": "Spur Spd 1", "effect": "Grants adjacent allies Spd+2 during combat.", "icon": "10-11" },
+  { "name": "Spur Spd 2", "effect": "Grants adjacent allies Spd+3 during combat.", "icon": "10-12" },
+  { "name": "Spur Spd 3", "effect": "Grants adjacent allies Spd+4 during combat.", "icon": "11-1" },
+  { "name": "Squad Ace A 1", "effect": "Grants HP+3.", "stats": {"hp": 3}, "icon": "21-1" },
+  { "name": "Squad Ace A 2", "effect": "Grants HP+4.", "stats": {"hp": 4}, "icon": "21-2" },
+  { "name": "Squad Ace A 3", "effect": "Grants HP+5.", "stats": {"hp": 5}, "icon": "21-3" },
+  { "name": "Squad Ace B 1", "effect": "Grants Def+1.", "stats": {"def": 1}, "icon": "21-4" },
+  { "name": "Squad Ace B 2", "effect": "Grants Def+2.", "stats": {"def": 2}, "icon": "21-5" },
+  { "name": "Squad Ace B 3", "effect": "Grants Def+3.", "stats": {"def": 3}, "icon": "21-6" },
+  { "name": "Squad Ace C 1", "effect": "Grants Res+1.", "stats": {"res": 1}, "icon": "21-7" },
+  { "name": "Squad Ace C 2", "effect": "Grants Res+2.", "stats": {"res": 2}, "icon": "21-8" },
+  { "name": "Squad Ace C 3", "effect": "Grants Res+3.", "stats": {"res": 3}, "icon": "21-9" },
+  { "name": "Squad Ace D 1", "effect": "Grants Spd+1.", "stats": {"spd": 1}, "icon": "21-10" },
+  { "name": "Squad Ace D 2", "effect": "Grants Spd+2.", "stats": {"spd": 2}, "icon": "21-11" },
+  { "name": "Squad Ace D 3", "effect": "Grants Spd+3.", "stats": {"spd": 3}, "icon": "21-12"},
+  { "name": "Squad Ace E 1", "effect": "Grants Atk+1.", "stats": {"atk": 1}, "icon": "22-0" },
+  { "name": "Squad Ace E 2", "effect": "Grants Atk+2.", "stats": {"atk": 2}, "icon": "22-1" },
+  { "name": "Squad Ace E 3", "effect": "Grants Atk+3.", "stats": {"atk": 3}, "icon": "22-2" }
+];
+

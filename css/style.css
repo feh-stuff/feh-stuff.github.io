@@ -197,3 +197,25 @@ body {
   width: 100%;
   position: absolute;
 }
+.selectable .dropdown-toggle {
+  height: 38px;
+}
+.selectable .dropdown-toggle[disabled] {
+  background-color: #eee;
+}
+.opt-half {
+  width: 50%;
+  display: inline-block;
+}
+
+#download-img {
+  position: absolute;
+  right: 0;
+  margin-top: 6px;
+  margin-right: 6px;
+  width: 50px;
+  height: 38px;
+}
+#download-img img {
+  width: 26px;
+}
