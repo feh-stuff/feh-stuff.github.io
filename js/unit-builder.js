@@ -119,7 +119,7 @@ $(document).ready(() => {
 
   function onDownload(event) {
     $(this).attr('href', canvas.toDataURL());
-    $(this).attr('download', 'FEH Unit Builder' + selectedHero.data.name + '.png');
+    $(this).attr('download', 'FEH Unit Builder - ' + selectedHero.data.name + '.png');
   }
 
   function onHeroChange(event) {
