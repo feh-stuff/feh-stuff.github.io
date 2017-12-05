@@ -282,7 +282,7 @@ let SKILL_ASSIST = [
   { "name": "Rally Defense", "range": 1, "spCost": 150, "effect": "Grants Def+4 to an adjacent ally until the  of the turn.", "exclude": [{ "weaponType": "Staff" }] },
   { "name": "Rally Def/Res", "range": 1, "spCost": 300, "effect": "Grants Def/Res+3 to an adjacent ally until the end of the turn.", "exclude": [{ "weaponType": "Staff" }] },
   { "name": "Rally Resistance", "range": 1, "spCost": 150, "effect": "Grants Res+4 to an adjacent ally until the end of the turn.", "exclude": [{ "weaponType": "Staff" }] },
-  { "name": "Rally Speed", "range": 1, "spCost": 150, "effect": "Grants Spd+4 to an adjacent ally until the end of the turn.", "include": [{ "weaponType": "Staff" }] },
+  { "name": "Rally Speed", "range": 1, "spCost": 150, "effect": "Grants Spd+4 to an adjacent ally until the end of the turn.", "exclude": [{ "weaponType": "Staff" }] },
   { "name": "Rally Spd/Def", "range": 1, "spCost": 300, "effect": "Grants Spd/Def+3 to an adjacent ally until the end of the turn.", "exclude": [{ "weaponType": "Staff" }] },
   { "name": "Rally Spd/Res", "range": 1, "spCost": 300, "effect": "Grants Spd/Res+3 to an adjacent ally until the end of the turn.", "exclude": [{ "weaponType": "Staff" }] },
   { "name": "Reciprocal Aid", "range": 1, "spCost": 150, "effect": "Swap HP with adjacent ally (neither unit can go above their max HP).", "exclude": [{ "weaponType": "Staff" }] },
@@ -315,7 +315,7 @@ let SKILL_SPECIAL = [
   { "name": "Dragon Fang", "cooldown": 4, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Grants +50% to Atk." },
   { "name": "Dragon Gaze", "cooldown": 4, "spCost": 100, "exclude": [{ "weaponType": "Staff" }], "effect": "Grants +30% to Atk." },
   { "name": "Escutcheon", "cooldown": 2, "spCost": 200, "exclude": [{"weaponType": "Bow"}, {"weaponType": "Dagger"}, {"weaponType": "Staff"}, {"weaponType": "Tome"}], "effect": "Reduces damage inflicted by attacks from adjacent foes by 30%." },
-  { "name": "Galeforce", "cooldown": 5, "spCost": 500, "exclude": [{"weaponType": "Sword"}, {"weaponType": "Lance"}, {"weaponType": "Axe"} ], "effect": "If this unit initiates an attack, it can take another action after combat. (Once per turn only.)" },
+  { "name": "Galeforce", "cooldown": 5, "spCost": 500, "include": [{"weaponType": "Sword"}, {"weaponType": "Lance"}, {"weaponType": "Axe"} ], "effect": "If this unit initiates an attack, it can take another action after combat. (Once per turn only.)" },
   { "name": "Glacies", "cooldown": 4, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Boosts damage dealt by 80% of unit's Res." },
   { "name": "Glimmer", "cooldown": 2, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Grants +50% to damage dealt." },
   { "name": "Glowing Ember", "cooldown": 4, "spCost": 100, "exclude": [{ "weaponType": "Staff" }], "effect": "Boosts damage dealt by 50% of unit's Def." },
@@ -745,15 +745,15 @@ let SKILL_C = [
 ];
 
 let SKILL_SEAL = [
-  { "name": "Atk Ploy 1", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-3 until the end of foe's next action.", "icon": "18-12" },
-  { "name": "Atk Ploy 2", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-4 until the end of foe's next action.", "icon": "19-0" },
-  { "name": "Atk Ploy 3", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-5 until the end of foe's next action.", "icon": "19-1" },
+  { "name": "Atk Ploy 1", "exclude": [{"weaponType": "Staff"}], "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-3 until the end of foe's next action.", "icon": "18-12" },
+  { "name": "Atk Ploy 2", "exclude": [{"weaponType": "Staff"}], "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-4 until the end of foe's next action.", "icon": "19-0" },
+  { "name": "Atk Ploy 3", "exclude": [{"weaponType": "Staff"}], "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-5 until the end of foe's next action.", "icon": "19-1" },
   { "name": "Attack +1", "effect": "Grants Atk+1.", "stats": {"atk": 1}, "icon": "0-7" },
   { "name": "Attack +2", "effect": "Grants Atk+2.", "stats": {"atk": 2}, "icon": "0-8" },
   { "name": "Attack +3", "effect": "Grants Atk+3.", "stats": {"atk": 3}, "icon": "0-9" },
-  { "name": "Atk Smoke 1", "effect": "After combat, inflicts Atk-3 on foes within 2 spaces of target through their next actions.", "icon": "26-8" },
-  { "name": "Atk Smoke 2", "effect": "After combat, inflicts Atk-5 on foes within 2 spaces of target through their next actions.", "icon": "26-9" },
-  { "name": "Atk Smoke 3", "effect": "After combat, inflicts Atk-7 on foes within 2 spaces of target through their next actions.", "icon": "26-10" },
+  { "name": "Atk Smoke 1", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, inflicts Atk-3 on foes within 2 spaces of target through their next actions.", "icon": "26-8" },
+  { "name": "Atk Smoke 2", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, inflicts Atk-5 on foes within 2 spaces of target through their next actions.", "icon": "26-9" },
+  { "name": "Atk Smoke 3", "exclude": [{"weaponType": "Staff"}], "effect": "After combat, inflicts Atk-7 on foes within 2 spaces of target through their next actions.", "icon": "26-10" },
   { "name": "Brash Assault 1", "effect": "Unit automatically makes a follow-up when at HP ≤ 30% and attacking a foe that can counter.", "icon": "6-0"},
   { "name": "Brash Assault 2", "effect": "Unit automatically makes a follow-up when at HP ≤ 40% and attacking a foe that can counter.", "icon": "6-1"},
   { "name": "Brash Assault 3", "effect": "Unit automatically makes a follow-up when at HP ≤ 50% and attacking a foe that can counter.", "icon": "6-2"},
@@ -842,4 +842,3 @@ let SKILL_SEAL = [
   { "name": "Squad Ace E 2", "effect": "Grants Atk+2.", "stats": {"atk": 2}, "icon": "22-1" },
   { "name": "Squad Ace E 3", "effect": "Grants Atk+3.", "stats": {"atk": 3}, "icon": "22-2" }
 ];
-
