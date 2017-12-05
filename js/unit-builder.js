@@ -13,7 +13,8 @@ $(document).ready(() => {
     SEAL_SELECT: '#seal-select',
     SUPPORT_CHECKS: '[name="support"]',
     SUPPORT_ON: '#support-yes',
-    IV_SELECT: '#iv-select'
+    IV_SELECT: '#iv-select',
+    DOWNLOAD: '#download-img'
   };
   const IMAGES = {
     FRONT: 'img/assets/unit-edit-front.png',
@@ -38,8 +39,8 @@ $(document).ready(() => {
     {boon: 'res', bane: 'hp'},{boon: 'res', bane: 'atk'},{boon: 'res', bane: 'spd'},{boon: 'res', bane: 'def'},
   ];
 
-  let canvas = $(ELEMENTS.CANVAS);
-  let ctx = canvas[0].getContext('2d');
+  let canvas = $(ELEMENTS.CANVAS)[0];
+  let ctx = canvas.getContext('2d');
   ctx.miterLimit = 1;
   ctx.lineJoin = 'round';
 
@@ -87,6 +88,7 @@ $(document).ready(() => {
         selectOptions: HEROES,
         defaultText: 'Select a Hero'
       });
+      $(ELEMENTS.DOWNLOAD).removeClass('d-none');
       $(ELEMENTS.WEAPON_SELECT).selectable({disabled: true});
       $(ELEMENTS.ASSIST_SELECT).selectable({disabled: true});
       $(ELEMENTS.SPECIAL_SELECT).selectable({disabled: true});
@@ -112,6 +114,12 @@ $(document).ready(() => {
     $(ELEMENTS.SKILL_SELECT).on('change', onSkillsChange);
     $(ELEMENTS.SUPPORT_CHECKS).on('change', onSupportChange);
     $(ELEMENTS.IV_SELECT).on('change', onIvChange);
+    $(ELEMENTS.DOWNLOAD).on('click', onDownload);
+  }
+
+  function onDownload(event) {
+    $(this).attr('href', canvas.toDataURL());
+    $(this).attr('download', 'testname.png');
   }
 
   function onHeroChange(event) {
