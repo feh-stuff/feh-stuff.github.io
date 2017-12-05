@@ -253,6 +253,14 @@ $(document).ready(() => {
         stats40[stat] += hero.skills[skill].stats[stat];
       }
     }
+
+    if (hero.support) {
+      stats40.hp += 5;
+      stats40.atk += 2;
+      stats40.spd += 2;
+      stats40.def += 2;
+      stats40.res += 2;
+    }
     hero.stats = stats40;
   }
 
