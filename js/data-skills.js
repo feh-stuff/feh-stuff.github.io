@@ -842,3 +842,416 @@ let SKILL_SEAL = [
   { "name": "Squad Ace E 2", "effect": "Grants Atk+2.", "stats": {"atk": 2}, "icon": "22-1" },
   { "name": "Squad Ace E 3", "effect": "Grants Atk+3.", "stats": {"atk": 3}, "icon": "22-2" }
 ];
+
+let SKILL_REFINED_WEAPONS = {
+  "Silver Sword+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "-", "stats": {"hp": 5, "atk": 3}},
+    {"name": "+Spd", "icon": "31-10", "effect": "-", "stats": {"hp": 5, "atk": 1, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "-", "stats": {"hp": 5, "atk": 1, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "-", "stats": {"hp": 5, "atk": 1, "res": 4}}
+  ],
+  "Silver Lance+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "-", "stats": {"hp": 5, "atk": 3}},
+    {"name": "+Spd", "icon": "31-10", "effect": "-", "stats": {"hp": 5, "atk": 1, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "-", "stats": {"hp": 5, "atk": 1, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "-", "stats": {"hp": 5, "atk": 1, "res": 4}}
+  ],
+  "Silver Axe+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "-", "stats": {"hp": 5, "atk": 3}},
+    {"name": "+Spd", "icon": "31-10", "effect": "-", "stats": {"hp": 5, "atk": 1, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "-", "stats": {"hp": 5, "atk": 1, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "-", "stats": {"hp": 5, "atk": 1, "res": 4}}
+  ],
+  "Silver Bow+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against flying units.", "stats": {"hp": 2, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against flying units.", "stats": {"hp": 2, "atk": 1, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against flying units.", "stats": {"hp": 2, "atk": 1, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against flying units.", "stats": {"hp": 2, "atk": 1, "res": 3}}
+  ],
+  "Silver Dagger+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "atk": 5}},
+    {"name": "+Spd", "icon": "31-10", "effect": "After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "atk": 4, "spd": 4}},
+    {"name": "+Def", "icon": "31-11", "effect": "After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "atk": 4, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "atk": 4, "res": 4}}
+  ],
+  "Bolganone+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "-", "stats": {"hp": 2, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "-", "stats": {"hp": 2, "atk": 1, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "-", "stats": {"hp": 2, "atk": 1, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "-", "stats": {"hp": 2, "atk": 1, "res": 3}}
+  ],
+  "Fenrir+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "-", "stats": {"hp": 2, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "-", "stats": {"hp": 2, "atk": 1, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "-", "stats": {"hp": 2, "atk": 1, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "-", "stats": {"hp": 2, "atk": 1, "res": 3}}
+  ],
+  "Thoron+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "-", "stats": {"hp": 2, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "-", "stats": {"hp": 2, "atk": 1, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "-", "stats": {"hp": 2, "atk": 1, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "-", "stats": {"hp": 2, "atk": 1, "res": 3}}
+  ],
+  "Rexcalibur+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "-", "stats": {"hp": 2, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "-", "stats": {"hp": 2, "atk": 1, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "-", "stats": {"hp": 2, "atk": 1, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "-", "stats": {"hp": 2, "atk": 1, "res": 3}}
+  ],
+  "Flametongue+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 3}},
+    {"name": "+Spd", "icon": "31-10", "effect": "If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 1, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 1, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 1, "res": 4}}
+  ],
+  "Slaying Edge+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Slaying Lance+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Slaying Axe+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Slaying Bow+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against flying units. Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against flying units. Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against flying units. Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against flying units. Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 2, "res": 4}}
+  ],
+  "Armorsmasher+": [
+    {"name": "Nullify Armored", "icon": "32-8", "effect": "Effective against armored foes. If in combat against an armored foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat.", "stats": {"hp": 3}},
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against armored foes.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against armored foes.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against armored foes.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against armored foes.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Slaying Spear+": [
+    {"name": "Nullify Armored", "icon": "32-8", "effect": "Effective against armored foes. If in combat against an armored foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat.", "stats": {"hp": 3}},
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against armored foes.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against armored foes.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against armored foes.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against armored foes.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Slaying Hammer+": [
+    {"name": "Nullify Armored", "icon": "32-8", "effect": "Effective against armored foes. If in combat against an armored foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat.", "stats": {"hp": 3}},
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against armored foes.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against armored foes.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against armored foes.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against armored foes.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Zanbato+": [
+    {"name": "Nullify Cavalry", "icon": "32-9", "effect": "Effective against cavalry foes. If in combat against an cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat.", "stats": {"hp": 3}},
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against cavalry foes.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against cavalry foes.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against cavalry foes.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against cavalry foes.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Ridersbane+": [
+    {"name": "Nullify Cavalry", "icon": "32-9", "effect": "Effective against cavalry foes. If in combat against an cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat.", "stats": {"hp": 3}},
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against cavalry foes.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against cavalry foes.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against cavalry foes.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against cavalry foes.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Keen Raudrwolf+": [
+    {"name": "Nullify Cavalry", "icon": "32-9", "effect": "Effective against cavalry foes. If in combat against an cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."},
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against cavalry foes.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against cavalry foes.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against cavalry foes.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against cavalry foes.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Keen Blarwolf+": [
+    {"name": "Nullify Cavalry", "icon": "32-9", "effect": "Effective against cavalry foes. If in combat against an cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."},
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against cavalry foes.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against cavalry foes.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against cavalry foes.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against cavalry foes.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Keen Gronnwolf+": [
+    {"name": "Nullify Cavalry", "icon": "32-9", "effect": "Effective against cavalry foes. If in combat against an cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."},
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against cavalry foes.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against cavalry foes.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against cavalry foes.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against cavalry foes.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Absorb+": [
+    {"name": "Wrathful Staff", "icon": "32-1", "effect": "Recovers HP = 50% of damage dealt. After combat, restores 7 HP to allies within 2 spaces of unit. Damage from unit's staff will be calculated the same as other weapons."},
+    {"name": "Dazzling Staff", "icon": "32-2", "effect": "Recovers HP = 50% of damage dealt. After combat, restores 7 HP to allies within 2 spaces of unit. The enemy cannot counterattack."}
+  ],
+  "Fear+": [
+    {"name": "Wrathful Staff", "icon": "32-1", "effect": "After combat, inflicts Atk-7 on target and foes within 2 spaces through their next actions. Damage from unit's staff will be calculated the same as other weapons."},
+    {"name": "Dazzling Staff", "icon": "32-2", "effect": "After combat, inflicts Atk-7 on target and foes within 2 spaces through their next actions. The enemy cannot counterattack."}
+  ],
+  "Slow+": [
+    {"name": "Wrathful Staff", "icon": "32-1", "effect": "After combat, inflicts Spd-7 on target and foes within 2 spaces through their next actions. Damage from unit's staff will be calculated the same as other weapons."},
+    {"name": "Dazzling Staff", "icon": "32-2", "effect": "After combat, inflicts Spd-7 on target and foes within 2 spaces through their next actions. The enemy cannot counterattack."}
+  ],
+  "Gravity+": [
+    {"name": "Wrathful Staff", "icon": "32-1", "effect": "After combat, prevents target and foes within 1 space of target from moving more than 1 space through their next actions. Damage from unit's staff will be calculated the same as other weapons."},
+    {"name": "Dazzling Staff", "icon": "32-2", "effect": "After combat, prevents target and foes within 1 space of target from moving more than 1 space through their next actions. The enemy cannot counterattack."}
+  ],
+  "Pain+": [
+    {"name": "Wrathful Staff", "icon": "32-1", "effect": "Deals 10 damage to target and foes within 2 spaces of target after combat. Damage from unit's staff will be calculated the same as other weapons."},
+    {"name": "Dazzling Staff", "icon": "32-2", "effect": "Deals 10 damage to target and foes within 2 spaces of target after combat. The enemy cannot counterattack."}
+  ],
+  "Panic+": [
+    {"name": "Wrathful Staff", "icon": "32-1", "effect": "After combat, bonuses on target and foes within 2 spaces of target become penalties through their next actions. Damage from unit's staff will be calculated the same as other weapons."},
+    {"name": "Dazzling Staff", "icon": "32-2", "effect": "After combat, bonuses on target and foes within 2 spaces of target become penalties through their next actions. The enemy cannot counterattack."}
+  ],
+  "Candlelight+": [
+    {"name": "Wrathful Staff", "icon": "32-1", "effect": "After combat, foe and foes within 2 spaces of target inflicted with status preventing counterattack through their next actions. Damage from unit's staff will be calculated the same as other weapons."},
+    {"name": "Dazzling Staff", "icon": "32-2", "effect": "After combat, foe and foes within 2 spaces of target inflicted with status preventing counterattack through their next actions. The enemy cannot counterattack."}
+  ],
+  "Carrot Lance+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Restores 4 HP after combat.", "stats": {"hp": 5, "atk": 3}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Restores 4 HP after combat.", "stats": {"hp": 5, "atk": 1, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Restores 4 HP after combat.", "stats": {"hp": 5, "atk": 1, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Restores 4 HP after combat.", "stats": {"hp": 5, "atk": 1, "res": 4}}
+  ],
+  "Carrot Axe+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Restores 4 HP after combat.", "stats": {"hp": 5, "atk": 3}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Restores 4 HP after combat.", "stats": {"hp": 5, "atk": 1, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Restores 4 HP after combat.", "stats": {"hp": 5, "atk": 1, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Restores 4 HP after combat.", "stats": {"hp": 5, "atk": 1, "res": 4}}
+  ],
+  "Blue Egg+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Restores 4 HP after combat.", "stats": {"hp": 2, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Restores 4 HP after combat.", "stats": {"hp": 2, "atk": 1, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Restores 4 HP after combat.", "stats": {"hp": 2, "atk": 1, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Restores 4 HP after combat.", "stats": {"hp": 2, "atk": 1, "res": 3}}
+  ],
+  "Green Egg+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Restores 4 HP after combat.", "stats": {"hp": 2, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Restores 4 HP after combat.", "stats": {"hp": 2, "atk": 1, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Restores 4 HP after combat.", "stats": {"hp": 2, "atk": 1, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Restores 4 HP after combat.", "stats": {"hp": 2, "atk": 1, "res": 3}}
+  ],
+  "First Bite+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "After combat, grants Def/Res+5 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "After combat, grants Def/Res+5 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "After combat, grants Def/Res+5 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "After combat, grants Def/Res+5 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Cupid Arrow+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against flying foes.  After combat, grants Def/Res+5 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against flying foes.  After combat, grants Def/Res+5 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against flying foes.  After combat, grants Def/Res+5 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against flying foes.  After combat, grants Def/Res+5 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Blessed Bouquet+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "After combat, grants Def/Res+5 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "After combat, grants Def/Res+5 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "After combat, grants Def/Res+5 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "After combat, grants Def/Res+5 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Deft Harpoon+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Melon Crusher+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Refreshing Bolt+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Seashell+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. If unit's HP = 100% at start of combat, grants Atk/Spd/Def/Res+2. If attacking, unit takes 2 damage after combat.", "stats": {"hp": 2, "atk": 3}},
+    {"name": "+Spd", "icon": "31-10", "effect": "After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. If unit's HP = 100% at start of combat, grants Atk/Spd/Def/Res+2. If attacking, unit takes 2 damage after combat.", "stats": {"hp": 2, "atk": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. If unit's HP = 100% at start of combat, grants Atk/Spd/Def/Res+2. If attacking, unit takes 2 damage after combat.", "stats": {"hp": 2, "atk": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. If unit's HP = 100% at start of combat, grants Atk/Spd/Def/Res+2. If attacking, unit takes 2 damage after combat.", "stats": {"hp": 2, "atk": 2, "res": 3}}
+  ],
+  "Lilith Floatie+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Tomato Tome+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Sealife Tome+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Hibiscus Tome+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Dancer's Fan+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "If unit initiates combat, restores 7 HP to adjacent allies after combat. After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "atk": 3}},
+    {"name": "+Spd", "icon": "31-10", "effect": "If unit initiates combat, restores 7 HP to adjacent allies after combat. After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "atk": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "If unit initiates combat, restores 7 HP to adjacent allies after combat. After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "atk": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "If unit initiates combat, restores 7 HP to adjacent allies after combat. After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "atk": 2, "res": 3}}
+  ],
+  "Dancer's Score+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Dancer's Ring+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "If unit initiates attack, adjacent allies recover 7 HP after combat.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Monstrous Bow+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against flying foes. After combat, bonuses on target and all foes within 2 spaces of target become penalties through their next actions.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against flying foes. After combat, bonuses on target and all foes within 2 spaces of target become penalties through their next actions.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against flying foes. After combat, bonuses on target and all foes within 2 spaces of target become penalties through their next actions.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against flying foes. After combat, bonuses on target and all foes within 2 spaces of target become penalties through their next actions.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Spectral Tome+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "After combat, bonuses on target and foes within 2 spaces of target become penalties through their next actions.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "After combat, bonuses on target and foes within 2 spaces of target become penalties through their next actions.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "After combat, bonuses on target and foes within 2 spaces of target become penalties through their next actions.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "After combat, bonuses on target and foes within 2 spaces of target become penalties through their next actions.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Wo Dao+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Grants +10 to damage when Special triggers.", "stats": {"hp": 5, "atk": 3}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Grants +10 to damage when Special triggers.", "stats": {"hp": 5, "atk": 1, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Grants +10 to damage when Special triggers.", "stats": {"hp": 5, "atk": 1, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Grants +10 to damage when Special triggers.", "stats": {"hp": 5, "atk": 1, "res": 4}}
+  ],
+  "Rauðrowl+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", "stats": {"hp": 2, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", "stats": {"hp": 2, "atk": 1, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", "stats": {"hp": 2, "atk": 1, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", "stats": {"hp": 2, "atk": 1, "res": 3}}
+  ],
+  "Blárowl+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", "stats": {"hp": 2, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", "stats": {"hp": 2, "atk": 1, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", "stats": {"hp": 2, "atk": 1, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", "stats": {"hp": 2, "atk": 1, "res": 3}}
+  ],
+  "Gronnowl+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", "stats": {"hp": 2, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", "stats": {"hp": 2, "atk": 1, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", "stats": {"hp": 2, "atk": 1, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", "stats": {"hp": 2, "atk": 1, "res": 3}}
+  ],
+  "Guard Bow+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against flying foes. Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against flying foes. Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against flying foes. Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against flying foes. Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Smoke Dagger+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "After combat, inflicts Atk/Spd/Def/Res-6 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "atk": 4}},
+    {"name": "+Spd", "icon": "31-10", "effect": "After combat, inflicts Atk/Spd/Def/Res-6 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "atk": 3, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "After combat, inflicts Atk/Spd/Def/Res-6 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "atk": 3, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "After combat, inflicts Atk/Spd/Def/Res-6 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "atk": 3, "res": 3}}
+  ],
+  "Rogue Dagger+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "After combat, inflicts Def/Res-6 on target and foes within 2 spaces of target through their next actions. Also grants Def/Res+6 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 2, "atk": 6}},
+    {"name": "+Spd", "icon": "31-10", "effect": "After combat, inflicts Def/Res-6 on target and foes within 2 spaces of target through their next actions. Also grants Def/Res+6 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 2, "atk": 5, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "After combat, inflicts Def/Res-6 on target and foes within 2 spaces of target through their next actions. Also grants Def/Res+6 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 2, "atk": 5, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "After combat, inflicts Def/Res-6 on target and foes within 2 spaces of target through their next actions. Also grants Def/Res+6 to unit and allies within 2 spaces for 1 turn.", "stats": {"hp": 2, "atk": 5, "res": 3}}
+  ],
+  "Lightning Breath+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Slows Special trigger (cooldown count+1). If attacked, unit can counterattack regardless of foe's range. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 3}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Slows Special trigger (cooldown count+1). If attacked, unit can counterattack regardless of foe's range. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 1, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Slows Special trigger (cooldown count+1). If attacked, unit can counterattack regardless of foe's range. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 1, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Slows Special trigger (cooldown count+1). If attacked, unit can counterattack regardless of foe's range. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 1, "res": 4}}
+  ],
+  "Light Breath+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "After combat, grants Atk/Spd/Def/Res+5 to unit and allies within 2 spaces for 1 turn. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 3}},
+    {"name": "+Spd", "icon": "31-10", "effect": "After combat, grants Atk/Spd/Def/Res+5 to unit and allies within 2 spaces for 1 turn. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 1, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "After combat, grants Atk/Spd/Def/Res+5 to unit and allies within 2 spaces for 1 turn. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 1, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "After combat, grants Atk/Spd/Def/Res+5 to unit and allies within 2 spaces for 1 turn. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 1, "res": 4}}
+  ],
+  "Dark Breath+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "After combat, inflicts Atk/Spd-7 to target and foes within 2 spaces of target through their next actions. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 3}},
+    {"name": "+Spd", "icon": "31-10", "effect": "After combat, inflicts Atk/Spd-7 to target and foes within 2 spaces of target through their next actions. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 1, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "After combat, inflicts Atk/Spd-7 to target and foes within 2 spaces of target through their next actions. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 1, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "After combat, inflicts Atk/Spd-7 to target and foes within 2 spaces of target through their next actions. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.", "stats": {"hp": 5, "atk": 1, "res": 4}}
+  ],
+  "Legion's Axe+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "After combat, bonuses on target and foes within 2 spaces of target become penalties through their next actions.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "After combat, bonuses on target and foes within 2 spaces of target become penalties through their next actions.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "After combat, bonuses on target and foes within 2 spaces of target become penalties through their next actions.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "After combat, bonuses on target and foes within 2 spaces of target become penalties through their next actions.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Clarisse's Bow+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against flying foes. After unit attacks, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against flying foes. After unit attacks, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against flying foes. After unit attacks, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against flying foes. After unit attacks, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next actions.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Berkut's Lance+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Grants Res+7 when unit is attacked.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Grants Res+7 when unit is attacked.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Grants Res+7 when unit is attacked.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Grants Res+7 when unit is attacked.", "stats": {"hp": 5, "res": 4}}
+    ],
+
+  // prf weapons
+  "Sol Katti": [
+    {"name": "Brash Assault", "icon": "32-3", "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack. If unit initiates combat against a foe that can counter and unit's HP ≤ 75%, unit makes a guaranteed follow-up attac", "stats": {"hp": 3}},
+    {"name": "+Atk", "icon": "31-9", "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Mystletainn": [
+    {"name": "Fury", "icon": "32-0", "effect": "Accelerates Special trigger (cooldown count-1). Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat.", "stats": {"hp": 3}},
+    {"name": "+Atk", "icon": "31-9", "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Siegmund": [
+    {"name": "Follow-up Attack", "icon": "32-4", "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn. If unit initiates combat and unit's HP ≥ 90%, unit makes a guaranteed follow-up attack.", "stats": {"hp": 3}},
+    {"name": "+Atk", "icon": "31-9", "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Hauteclere": [
+    {"name": "+Special Damage", "icon": "32-6", "effect": "Accelerates Special trigger (cooldown count-1). Deals +10 damage when Special triggers.", "stats": {"hp": 3}},
+    {"name": "+Atk", "icon": "31-9", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Fujin Yumi": [
+    {"name": "Formation", "icon": "32-5", "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain). If unit's HP ≥ 50%, unit can move adjacent to any ally within 2 spaces.", "stats": {"hp": 0}},
+    {"name": "+Atk", "icon": "31-9", "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain.)", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain.)", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain.)", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain.)", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Deathly Dagger": [
+    {"name": "Dazzle Magic", "icon": "32-7", "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions. Foes using magic cannot counterattack.", "stats": {"atk": 3}},
+    {"name": "+Atk", "icon": "31-9", "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 4}},
+    {"name": "+Spd", "icon": "31-10", "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 3, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 3, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 3, "res": 3}}
+  ]
+};

@@ -33,65 +33,83 @@
         </a>
       </div>
       <div class="card hero-list mt-3">
-        <div class="card-body">
-          <h5 class="card-title">Hero</h5>
-          <div class="form-group row pr-2">
-            <label class="col-md-2 col-form-label">Hero</label>
-            <div class="col-md-10 col-lg-5 p-0 selectable" id="hero-select"></div>
-          </div>
-          <div class="form-group row pr-2">
-            <label class="col-md-2 col-form-label">IV</label>
-            <div class="col-md-10 col-lg-5 p-0 selectable" id="iv-select"></div>
-          </div>
-          <div class="form-group row">
-            <label class="col-md-2 col-form-label">Merges</label>
-            <input class="col-md-3 form-control" type="number" min="0" max="10" value="0" id="hero-merges">
-          </div>
-          <div class="form-group row form-check">
-            <label class="col-md-2 col-form-legend">S. Support</label>
-            <label class="custom-control custom-radio">
-              <input id="support-yes" name="support" type="radio" class="custom-control-input">
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Yes</span>
-            </label>
-            <label class="custom-control custom-radio">
-              <input id="support-no" name="support" type="radio" class="custom-control-input" checked>
-              <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">No</span>
-            </label>
-          </div>
-          <hr>
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#feh-unit" role="tab">FEH Units</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#custom-unit" role="tab">Custom Units</a>
+          </li>
+        </ul>
+        <div class="card-body tab-content">
+          <!-- <input type='file' id="upload-hero-img"/> -->
+          <div class="tab-pane active" id="feh-unit">
+            <h5 class="card-title">Hero</h5>
+            <div class="form-group row pr-2">
+              <label class="col-md-2 col-form-label">Hero</label>
+              <div class="col-md-10 col-lg-6 p-0 selectable" id="hero-select"></div>
+            </div>
+            <div class="form-group row pr-2">
+              <label class="col-md-2 col-form-label">IV</label>
+              <div class="col-md-10 col-lg-6 p-0 selectable" id="iv-select"></div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-2 col-form-label">Merges</label>
+              <input class="col-md-3 form-control" type="number" min="0" max="10" value="0" id="hero-merges">
+            </div>
+            <div class="form-group row form-check">
+              <label class="col-md-2 col-form-legend">S. Support</label>
+              <label class="custom-control custom-radio">
+                <input id="support-yes" name="support" type="radio" class="custom-control-input">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Yes</span>
+              </label>
+              <label class="custom-control custom-radio">
+                <input id="support-no" name="support" type="radio" class="custom-control-input" checked>
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">No</span>
+              </label>
+            </div>
+            <hr>
 
-          <h5 class="card-title">Skills</h5>
-          <div class="form-group row pr-2">
-            <label class="col-md-2 col-form-label">Weapon</label>
-            <div class="col-md-10 col-lg-5 p-0 selectable skill-select" data-skill="weapon" id="weapon-select"></div>
-          </div>
-          <div class="form-group row pr-2">
-            <label class="col-md-2 col-form-label">Assist</label>
-            <div class="col-md-10 col-lg-5 p-0 selectable skill-select" data-skill="assist" id="assist-select"></div>
-          </div>
-          <div class="form-group row pr-2">
-            <label class="col-md-2 col-form-label">Special</label>
-            <div class="col-md-10 col-lg-5 p-0 selectable skill-select" data-skill="special" id="special-select"></div>
-          </div>
-          <div class="form-group row pr-2">
-            <label class="col-md-2 col-form-label">Skill A</label>
-            <div class="col-md-10 col-lg-5 p-0 selectable skill-select" data-skill="skillA" id="skillA-select"></div>
-          </div>
-          <div class="form-group row pr-2">
-            <label class="col-md-2 col-form-label">Skill B</label>
-            <div class="col-md-10 col-lg-5 p-0 selectable skill-select" data-skill="skillB" id="skillB-select"></div>
-          </div>
-          <div class="form-group row pr-2">
-            <label class="col-md-2 col-form-label">Skill C</label>
-            <div class="col-md-10 col-lg-5 p-0 selectable skill-select" data-skill="skillC" id="skillC-select"></div>
-          </div>
-          <div class="form-group row pr-2">
+            <h5 class="card-title">Skills</h5>
+            <div class="form-group row pr-2">
+              <label class="col-md-2 col-form-label">Weapon</label>
+              <div class="col-md-10 col-lg-6 p-0 selectable skill-select" data-skill="weapon" id="weapon-select"></div>
+            </div>
+            <div class="form-group row pr-2">
+              <label class="offset-md-2 col-md-2 col-form-label">Refine</label>
+              <div class="col-md-8 col-lg-4 p-0 selectable skill-select" data-skill="refine" id="refine-select"></div>
+            </div>
+            <div class="form-group row pr-2">
+              <label class="col-md-2 col-form-label">Assist</label>
+              <div class="col-md-10 col-lg-6 p-0 selectable skill-select" data-skill="assist" id="assist-select"></div>
+            </div>
+            <div class="form-group row pr-2">
+              <label class="col-md-2 col-form-label">Special</label>
+              <div class="col-md-10 col-lg-6 p-0 selectable skill-select" data-skill="special" id="special-select"></div>
+            </div>
+            <div class="form-group row pr-2">
+              <label class="col-md-2 col-form-label">Skill A</label>
+              <div class="col-md-10 col-lg-6 p-0 selectable skill-select" data-skill="skillA" id="skillA-select"></div>
+            </div>
+            <div class="form-group row pr-2">
+              <label class="col-md-2 col-form-label">Skill B</label>
+              <div class="col-md-10 col-lg-6 p-0 selectable skill-select" data-skill="skillB" id="skillB-select"></div>
+            </div>
+            <div class="form-group row pr-2">
+              <label class="col-md-2 col-form-label">Skill C</label>
+              <div class="col-md-10 col-lg-6 p-0 selectable skill-select" data-skill="skillC" id="skillC-select"></div>
+            </div>
+            <div class="form-group row pr-2">
             <label class="col-md-2 col-form-label">Seal</label>
-            <div class="col-md-10 col-lg-5 p-0 selectable skill-select" data-skill="seal" id="seal-select"></div>
+            <div class="col-md-10 col-lg-6 p-0 selectable skill-select" data-skill="seal" id="seal-select"></div>
           </div>
+          </div>
+
+          <div class="tab-pane" id="custom-unit">Test</div>
         </div>
+
       </div>
     </div>
   </div>

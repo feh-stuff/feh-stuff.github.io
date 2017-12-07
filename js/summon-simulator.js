@@ -77,7 +77,7 @@ $(document).ready(() => {
   }
 
   function bindEvents() {
-    $(ELEMENTS.BANNER_SELECT).on('change', onChangeNewBanner);
+    $(ELEMENTS.BANNER_SELECT).on('select', onChangeNewBanner);
     $(ELEMENTS.SESSION_BUTTON).on('click', newSession);
     $(ELEMENTS.SUMMON_ALL).on('click', onClickSummonAll);
     $(ELEMENTS.SUMMON_OPTION).on('click', ELEMENTS.SUMMON_ORB, onClickOrb);

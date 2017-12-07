@@ -23,12 +23,15 @@ $.widget('custom.selectable', {
     this.$menu = $(`<div class="dropdown-menu"></div>`);
     this.$searchContainer = $(`<div class="dropdown-search pl-2 pr-2 mb-2"><input class="form-control search"></div>`);
     this.$menuItems = $(`<div style="max-height:${this.options.maxHeight}px;overflow-y:scroll;"></div>`);
+
     if (this.options.searchable) {
       this.$menu.append(this.$searchContainer);
     }
+
     if (this.options.header.length) {
       this.$menu.append(this.options.header);
     }
+
     this.$menu.append(this.$menuItems);
     this._makeOptions();
 
@@ -39,7 +42,7 @@ $.widget('custom.selectable', {
     this.$menuItems.on('click', '.dropdown-item', function(event) {
       let $opt = $(event.currentTarget);
       this.options.onSelect($opt, $(this.element));
-      $(this.element).trigger('change');
+      $(this.element).trigger('select');
     }.bind(this));
 
     this.$searchContainer.on('keyup', '.search', this._search.bind(this));
@@ -53,13 +56,6 @@ $.widget('custom.selectable', {
     for (let i = 0; i < this.options.selectOptions.length; i++) {
       this.options.optionGenerator(this.options.selectOptions[i], this.$menuItems);
     }
-  },
-
-  selectOptions: function(opts) {
-    this.options.selectOptions = opts;
-    this._makeOptions();
-    this.$button.text(this.options.defaultText);
-    this.$button.removeAttr('disabled');
   },
 
   _search: function(event) {
@@ -76,7 +72,24 @@ $.widget('custom.selectable', {
     });
   },
 
+  selectOptions: function(opts) {
+    this.clear();
+    this.enable();
+    this.options.selectOptions = opts;
+    this._makeOptions();
+    return this;
+  },
   enable: function() {
     this.$button.removeAttr('disabled');
+    return this;
+  },
+  disable: function() {
+    this.$button.attr('disabled', 'disabled');
+    return this;
+  },
+  clear: function() {
+    this.options.selectOptions = [];
+    this.$button.text(this.options.defaultText);
+    return this;
   }
 });

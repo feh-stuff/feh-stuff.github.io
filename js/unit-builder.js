@@ -1,9 +1,11 @@
+//TODO Color boon bane
 $(document).ready(() => {
   const ELEMENTS = {
     CANVAS: '#hero-canvas',
     HERO_SELECT: '#hero-select',
     HERO_MERGES: '#hero-merges',
     WEAPON_SELECT: '#weapon-select',
+    REFINE_SELECT: '#refine-select',
     ASSIST_SELECT: '#assist-select',
     SPECIAL_SELECT: '#special-select',
     SKILL_SELECT: '.skill-select',
@@ -14,7 +16,8 @@ $(document).ready(() => {
     SUPPORT_CHECKS: '[name="support"]',
     SUPPORT_ON: '#support-yes',
     IV_SELECT: '#iv-select',
-    DOWNLOAD: '#download-img'
+    DOWNLOAD: '#download-img',
+    UPLOAD_HERO: '#upload-hero-img'
   };
   const IMAGES = {
     FRONT: 'img/assets/unit-edit-front.png',
@@ -65,6 +68,7 @@ $(document).ready(() => {
     },
     skills: {
       weapon: EMPTY_SKILL,
+      refine: EMPTY_SKILL,
       assist: EMPTY_SKILL,
       special: EMPTY_SKILL,
       skillA: EMPTY_SKILL,
@@ -90,6 +94,7 @@ $(document).ready(() => {
       });
       $(ELEMENTS.DOWNLOAD).removeClass('d-none');
       $(ELEMENTS.WEAPON_SELECT).selectable({disabled: true});
+      $(ELEMENTS.REFINE_SELECT).selectable({disabled: true, searchable: false});
       $(ELEMENTS.ASSIST_SELECT).selectable({disabled: true});
       $(ELEMENTS.SPECIAL_SELECT).selectable({disabled: true});
       $(ELEMENTS.SKILL_A_SELECT).selectable({disabled: true});
@@ -109,11 +114,12 @@ $(document).ready(() => {
   }
 
   function bindEvents() {
-    $(ELEMENTS.HERO_SELECT).on('change', onHeroChange);
+    $(ELEMENTS.HERO_SELECT).on('select', onHeroChange);
+    $(ELEMENTS.SKILL_SELECT).on('select', onSkillsChange);
+    $(ELEMENTS.SUPPORT_CHECKS).on('select', onSupportChange);
+    $(ELEMENTS.IV_SELECT).on('select', onIvChange);
+    $(ELEMENTS.UPLOAD_HERO).on('select', onUploadHeroImg);
     $(ELEMENTS.HERO_MERGES).on('change', onMergesChange);
-    $(ELEMENTS.SKILL_SELECT).on('change', onSkillsChange);
-    $(ELEMENTS.SUPPORT_CHECKS).on('change', onSupportChange);
-    $(ELEMENTS.IV_SELECT).on('change', onIvChange);
     $(ELEMENTS.DOWNLOAD).on('click', onDownload);
   }
 
@@ -128,14 +134,16 @@ $(document).ready(() => {
     for (let skill in selectedHero.skills) {
       selectedHero.skills[skill] = EMPTY_SKILL;
     }
+
     drawHero(selectedHero);
-    $(ELEMENTS.WEAPON_SELECT).selectable('selectOptions', getWeapons(hero));
-    $(ELEMENTS.ASSIST_SELECT).selectable('selectOptions', getSkills(hero, SKILL_ASSIST));
-    $(ELEMENTS.SEAL_SELECT).selectable('selectOptions', getSkills(hero, SKILL_SEAL));
-    $(ELEMENTS.SKILL_A_SELECT).selectable('selectOptions', getSkills(hero, SKILL_A));
-    $(ELEMENTS.SKILL_B_SELECT).selectable('selectOptions', getSkills(hero, SKILL_B));
-    $(ELEMENTS.SKILL_C_SELECT).selectable('selectOptions', getSkills(hero, SKILL_C));
-    $(ELEMENTS.SPECIAL_SELECT).selectable('selectOptions', getSkills(hero, SKILL_SPECIAL));
+    $(ELEMENTS.WEAPON_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getWeapons(hero)));
+    $(ELEMENTS.ASSIST_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_ASSIST)));
+    $(ELEMENTS.SEAL_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_SEAL)));
+    $(ELEMENTS.SKILL_A_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_A)));
+    $(ELEMENTS.SKILL_B_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_B)));
+    $(ELEMENTS.SKILL_C_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_C)));
+    $(ELEMENTS.SPECIAL_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_SPECIAL)));
+    $(ELEMENTS.REFINE_SELECT).selectable('clear').selectable('disable');
     $(ELEMENTS.IV_SELECT).selectable('enable');
   }
 
@@ -145,8 +153,14 @@ $(document).ready(() => {
   }
 
   function onSkillsChange(event) {
-    let skill = $(this).data('skill');
-    selectedHero.skills[skill] = $(this).data('val');
+    let skillType = $(this).data('skill');
+    let skill = $(this).data('val');
+    if (skillType === 'weapon' && SKILL_REFINED_WEAPONS[skill.name]) {
+      $(ELEMENTS.REFINE_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(SKILL_REFINED_WEAPONS[skill.name]));
+    } else if (skillType !== 'refine') {
+      $(ELEMENTS.REFINE_SELECT).selectable('clear').selectable('disable');
+    }
+    selectedHero.skills[skillType] = skill;
     drawHero(selectedHero);
   }
 
@@ -162,6 +176,20 @@ $(document).ready(() => {
     }
     selectedHero.merges = merges;
     drawHero(selectedHero);
+  }
+
+  function onUploadHeroImg(event) {
+    if ($(this)[0].files && $(this)[0].files[0]) {
+      var FR = new FileReader();
+      FR.onload = function(e) {
+         var img = new Image();
+         img.onload = function() {
+           ctx.drawImage(img, 0, 0, img.width, img.height, 30, 40, img.width * 2, img.height * 2);
+         };
+         img.src = e.target.result;
+      };
+      FR.readAsDataURL($(this)[0].files[0]);
+    }
   }
 
   function getWeapons(hero) {
@@ -351,11 +379,16 @@ $(document).ready(() => {
   }
 
   function drawSkill(hero) {
-    ctx.drawImage(imgSkills, 65, 0, 65, 67, 275, 596, 34, 34);
     ctx.drawImage(imgSkills, 130, 0, 65, 67, 275, 633, 34, 34);
     ctx.drawImage(imgSkills, 195, 0, 65, 67, 275, 669, 34, 34);
 
     let iconXY;
+    if (hero.skills.refine.icon) {
+      iconXY = hero.skills.refine.icon.split('-');
+      ctx.drawImage(imgSkills, iconXY[1] * 65, iconXY[0] * 67, 65, 67, 275, 596, 34, 34);
+    } else {
+      ctx.drawImage(imgSkills, 65, 0, 65, 67, 275, 596, 34, 34);
+    }
     if (hero.skills.skillA.icon) {
       iconXY = hero.skills.skillA.icon.split('-');
       ctx.drawImage(imgSkills, iconXY[1] * 65, iconXY[0] * 67, 65, 67, 275, 707, 34, 34);
@@ -390,6 +423,9 @@ $(document).ready(() => {
     ctx.font = "17px FehFont";
     ctx.fillStyle = '#ffffff';
     ctx.lineWidth = 4;
+
+
+
     ctx.strokeText(hero.skills.weapon.name, 318, 619);
     ctx.strokeText(hero.skills.assist.name, 318, 656);
     ctx.strokeText(hero.skills.special.name, 318, 694);
@@ -397,14 +433,18 @@ $(document).ready(() => {
     ctx.strokeText(hero.skills.skillB.name, 318, 768);
     ctx.strokeText(hero.skills.skillC.name, 318, 804);
     ctx.strokeText(hero.skills.seal.name, 318, 841);
-    ctx.lineWidth = 3;
-    ctx.fillText(hero.skills.weapon.name, 318, 619);
+
     ctx.fillText(hero.skills.assist.name, 318, 656);
     ctx.fillText(hero.skills.special.name, 318, 694);
     ctx.fillText(hero.skills.skillA.name, 318, 731);
     ctx.fillText(hero.skills.skillB.name, 318, 768);
     ctx.fillText(hero.skills.skillC.name, 318, 804);
     ctx.fillText(hero.skills.seal.name, 318, 841);
+
+    if (hero.skills.refine.name !== '-') {
+      ctx.fillStyle = '#92ff4f';
+    }
+    ctx.fillText(hero.skills.weapon.name, 318, 619);
   }
 
   function loadFiles(urls, loadFont) {
