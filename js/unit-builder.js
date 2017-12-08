@@ -155,11 +155,15 @@ $(document).ready(() => {
   function onSkillsChange(event) {
     let skillType = $(this).data('skill');
     let skill = $(this).data('val');
-    if (skillType === 'weapon' && SKILL_REFINED_WEAPONS[skill.name]) {
-      $(ELEMENTS.REFINE_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(SKILL_REFINED_WEAPONS[skill.name]));
-    } else if (skillType !== 'refine') {
-      $(ELEMENTS.REFINE_SELECT).selectable('clear').selectable('disable');
+
+    if (skillType === 'weapon') {
+      if (SKILL_REFINED_WEAPONS[skill.name]) {
+        $(ELEMENTS.REFINE_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(SKILL_REFINED_WEAPONS[skill.name]));
+      } else {
+        $(ELEMENTS.REFINE_SELECT).selectable('clear').selectable('disable');
+      }
     }
+
     selectedHero.skills[skillType] = skill;
     drawHero(selectedHero);
   }
