@@ -17,7 +17,8 @@ $(document).ready(() => {
     SUPPORT_ON: '#support-yes',
     IV_SELECT: '#iv-select',
     DOWNLOAD: '#download-img',
-    UPLOAD_HERO: '#upload-hero-img'
+    UPLOAD_HERO: '#custom-hero-upload',
+    CUSTOM_HERO_CONTROL: '.custom-hero-control'
   };
   const IMAGES = {
     FRONT: 'img/assets/unit-edit-front.png',
@@ -25,21 +26,48 @@ $(document).ready(() => {
     SKILLS: 'img/assets/skills.png',
     FEH: 'img/heroes-main/Feh.png',
     ICONS: {
-      "Infantry": [845,424], "Armored": [897,424], "Cavalry": [949,424], "Flying": [1001,424],
-      "Red Sword": [845,268], "Blue Lance": [897,268], "Green Axe": [949,268],
-      "Red Tome": [845,320], "Blue Tome": [897,320], "Green Tome": [949,320],
-      "Red Breath": [845,372], "Blue Breath": [897,372], "Green Breath": [949,372],
-      "Neutral Bow": [1001,268], "Neutral Dagger": [1001,320], "Neutral Staff": [1001,372]
+      "Infantry": [845,424],
+      "Armored": [897,424],
+      "Cavalry": [949,424],
+      "Flying": [1001,424],
+      "Red Sword": [845,268],
+      "Blue Lance": [897,268],
+      "Green Axe": [949,268],
+      "Red Tome": [845,320],
+      "Blue Tome": [897,320],
+      "Green Tome": [949,320],
+      "Red Breath": [845,372],
+      "Blue Breath": [897,372],
+      "Green Breath": [949,372],
+      "Neutral Bow": [1001,268],
+      "Neutral Dagger": [1001,320],
+      "Neutral Staff": [1001,372]
     }
   };
   const FEH_FONT = new FontFace('FehFont', 'url(font/feh-font.ttf)');
   const EMPTY_SKILL = { name: '-' };
   const IV = [
-    {boon: '-', bane: '-'}, {boon: 'hp', bane: 'atk'},{boon: 'hp', bane: 'spd'},{boon: 'hp', bane: 'def'},{boon: 'hp', bane: 'res'},
-    {boon: 'atk', bane: 'hp'},{boon: 'atk', bane: 'spd'},{boon: 'atk', bane: 'def'},{boon: 'atk', bane: 'res'},
-    {boon: 'spd', bane: 'hp'},{boon: 'spd', bane: 'atk'},{boon: 'spd', bane: 'def'},{boon: 'spd', bane: 'res'},
-    {boon: 'def', bane: 'hp'},{boon: 'def', bane: 'atk'},{boon: 'def', bane: 'spd'},{boon: 'def', bane: 'res'},
-    {boon: 'res', bane: 'hp'},{boon: 'res', bane: 'atk'},{boon: 'res', bane: 'spd'},{boon: 'res', bane: 'def'},
+    {boon: '-', bane: '-'},
+    {boon: 'hp', bane: 'atk'},
+    {boon: 'hp', bane: 'spd'},
+    {boon: 'hp', bane: 'def'},
+    {boon: 'hp', bane: 'res'},
+    {boon: 'atk', bane: 'hp'},
+    {boon: 'atk', bane: 'spd'},
+    {boon: 'atk', bane: 'def'},
+    {boon: 'atk', bane: 'res'},
+    {boon: 'spd', bane: 'hp'},
+    {boon: 'spd', bane: 'atk'},
+    {boon: 'spd', bane: 'def'},
+    {boon: 'spd', bane: 'res'},
+    {boon: 'def', bane: 'hp'},
+    {boon: 'def', bane: 'atk'},
+    {boon: 'def', bane: 'spd'},
+    {boon: 'def', bane: 'res'},
+    {boon: 'res', bane: 'hp'},
+    {boon: 'res', bane: 'atk'},
+    {boon: 'res', bane: 'spd'},
+    {boon: 'res', bane: 'def'},
   ];
 
   let canvas = $(ELEMENTS.CANVAS)[0];
@@ -54,7 +82,13 @@ $(document).ready(() => {
       title: "Sleepy Owl",
       stats: {
         level1: { hp: 8, atk: 8, spd: 8, def: 8, res: 8 },
-        level40: { hp: [147,150,153], atk: [0,3,6], spd: [0,3,6], def: [0,3,6], res: [0,3,6] }
+        level40: {
+          hp: [147,150,153],
+          atk: [0,3,6],
+          spd: [0,3,6],
+          def: [0,3,6],
+          res: [0,3,6]
+        }
       },
       moveType: "Flying",
       colorType: "Neutral",
@@ -76,6 +110,24 @@ $(document).ready(() => {
       skillC: EMPTY_SKILL,
       seal: EMPTY_SKILL
     }
+  };
+  let customHero = {
+    image: null,
+    name: "",
+    title: "",
+    stats: {
+      hp: 0,
+      atk: 0,
+      spd: 0,
+      def: 0,
+      res: 0
+    },
+    moveType: "",
+    colorType: "",
+    weaponType: "",
+    imageSize: 1,
+    imagePosX: 0,
+    imagePosY: 0
   };
   let imgSkills;
   let imgFront;
@@ -116,11 +168,13 @@ $(document).ready(() => {
   function bindEvents() {
     $(ELEMENTS.HERO_SELECT).on('select', onHeroChange);
     $(ELEMENTS.SKILL_SELECT).on('select', onSkillsChange);
-    $(ELEMENTS.SUPPORT_CHECKS).on('select', onSupportChange);
     $(ELEMENTS.IV_SELECT).on('select', onIvChange);
-    $(ELEMENTS.UPLOAD_HERO).on('select', onUploadHeroImg);
     $(ELEMENTS.HERO_MERGES).on('change', onMergesChange);
+    $(ELEMENTS.SUPPORT_CHECKS).on('change', onSupportChange);
     $(ELEMENTS.DOWNLOAD).on('click', onDownload);
+
+    $(ELEMENTS.UPLOAD_HERO).on('change', onUploadHeroImg);
+    $(ELEMENTS.CUSTOM_HERO_CONTROL).on('change', onImageControlChange);
   }
 
   function onDownload(event) {
@@ -180,20 +234,6 @@ $(document).ready(() => {
     }
     selectedHero.merges = merges;
     drawHero(selectedHero);
-  }
-
-  function onUploadHeroImg(event) {
-    if ($(this)[0].files && $(this)[0].files[0]) {
-      var FR = new FileReader();
-      FR.onload = function(e) {
-         var img = new Image();
-         img.onload = function() {
-           ctx.drawImage(img, 0, 0, img.width, img.height, 30, 40, img.width * 2, img.height * 2);
-         };
-         img.src = e.target.result;
-      };
-      FR.readAsDataURL($(this)[0].files[0]);
-    }
   }
 
   function getWeapons(hero) {
@@ -309,47 +349,50 @@ $(document).ready(() => {
   	return statIncrease;
   }
 
-
   function drawHero(hero) {
     processHero(hero);
-    loadFiles([hero.data.assets.main])
-        .then(imgs => {
-          if (hero.support) {
-            ctx.drawImage(imgBack, 540, 0, 540, 960, 0, 0, 540, 960);
-          } else {
-            ctx.drawImage(imgBack, 0, 0);
-          }
-          ctx.drawImage(imgs[0], 0, 0);
-          ctx.drawImage(imgFront, 0, 0);
-          if (hero.support) {
-            ctx.drawImage(imgSkills, 845, 0, 210, 223, 420, 430, 108, 115);
-          }
-          drawStats(hero);
-          drawName(hero);
-          drawSkill(hero);
-        });
+    loadFiles([hero.data.assets.main]).then(imgs => {
+      if (hero.support) {
+        ctx.drawImage(imgBack, 540, 0, 540, 960, 0, 0, 540, 960);
+      } else {
+        ctx.drawImage(imgBack, 0, 0);
+      }
+      ctx.drawImage(imgs[0], 0, 0);
+      ctx.drawImage(imgFront, 0, 0);
+      console.log(hero.support);
+      if (hero.support) {
+        ctx.drawImage(imgSkills, 845, 0, 210, 223, 420, 430, 108, 115);
+      }
+
+      drawNameTitle(hero.data.shortName || hero.data.name, hero.data.title);
+      drawWeaponMoveTypeIcons(hero.data.colorType, hero.data.weaponType, hero.data.moveType);
+      drawMergesStats(hero.merges, hero.stats);
+      drawSkills(hero.skills);
+    });
   }
 
-  function drawName(hero) {
+  function drawNameTitle(name, title) {
     ctx.strokeStyle = '#220d00';
     ctx.fillStyle = '#ffffff';
     ctx.textAlign = 'center';
     ctx.lineWidth = 4;
     ctx.font = "26px FehFont";
-    ctx.strokeText(hero.data.shortName || hero.data.name, 168, 506);
-    ctx.fillText(hero.data.shortName || hero.data.name, 168, 506);
+    ctx.strokeText(name, 168, 506);
+    ctx.fillText(name, 168, 506);
     ctx.lineWidth = 4;
     ctx.font = "24px FehFont";
-    ctx.strokeText(hero.data.title, 142, 445);
-    ctx.fillText(hero.data.title, 142, 445);
+    ctx.strokeText(title, 142, 445);
+    ctx.fillText(title, 142, 445);
   }
 
-  function drawStats(hero) {
-    let weaponType = IMAGES.ICONS[hero.data.colorType + ' ' + hero.data.weaponType];
-    let moveType = IMAGES.ICONS[hero.data.moveType];
-    ctx.drawImage(imgSkills, weaponType[0], weaponType[1], 52, 52, 48, 553, 28, 28);
-    ctx.drawImage(imgSkills, moveType[0], moveType[1], 52, 52, 204, 554, 26, 26);
+  function drawWeaponMoveTypeIcons(colorType, weaponType, moveType) {
+    let weaponTypeIcon = IMAGES.ICONS[colorType + ' ' + weaponType];
+    let moveTypeIcon = IMAGES.ICONS[moveType];
+    ctx.drawImage(imgSkills, weaponTypeIcon[0], weaponTypeIcon[1], 52, 52, 48, 553, 28, 28);
+    ctx.drawImage(imgSkills, moveTypeIcon[0], moveTypeIcon[1], 52, 52, 204, 554, 26, 26);
+  }
 
+  function drawMergesStats(merges, stats) {
     ctx.font = '18px FehFont';
     ctx.strokeStyle = '#000000';
     ctx.fillStyle = '#ffffff';
@@ -358,61 +401,62 @@ $(document).ready(() => {
 
     ctx.strokeText('40', 135, 574);
     ctx.fillText('40', 135, 574);
-    if (hero.merges > 0) {
-      if (hero.merges === 10) {
+
+    if (merges > 0) {
+      if (merges === 10) {
         ctx.fillStyle = '#92ff4f';
       }
       ctx.strokeText('+', 161, 572);
-      ctx.strokeText(hero.merges, 174, 574);
+      ctx.strokeText(merges, 174, 574);
       ctx.fillText('+', 161, 572);
-      ctx.fillText(hero.merges, 174, 574);
+      ctx.fillText(merges, 174, 574);
     }
 
     ctx.textAlign='end';
     ctx.fillStyle = '#fdf98e';
-    ctx.strokeText(hero.stats.hp, 200, 620);
-    ctx.strokeText(hero.stats.atk, 200, 656);
-    ctx.strokeText(hero.stats.spd, 200, 694);
-    ctx.strokeText(hero.stats.def, 200, 731);
-    ctx.strokeText(hero.stats.res, 200, 768);
-    ctx.fillText(hero.stats.hp, 200, 620);
-    ctx.fillText(hero.stats.atk, 200, 656);
-    ctx.fillText(hero.stats.spd, 200, 694);
-    ctx.fillText(hero.stats.def, 200, 731);
-    ctx.fillText(hero.stats.res, 200, 768);
+    ctx.strokeText(stats.hp, 200, 620);
+    ctx.strokeText(stats.atk, 200, 656);
+    ctx.strokeText(stats.spd, 200, 694);
+    ctx.strokeText(stats.def, 200, 731);
+    ctx.strokeText(stats.res, 200, 768);
+    ctx.fillText(stats.hp, 200, 620);
+    ctx.fillText(stats.atk, 200, 656);
+    ctx.fillText(stats.spd, 200, 694);
+    ctx.fillText(stats.def, 200, 731);
+    ctx.fillText(stats.res, 200, 768);
   }
 
-  function drawSkill(hero) {
+  function drawSkills(skills) {
     ctx.drawImage(imgSkills, 130, 0, 65, 67, 275, 633, 34, 34);
     ctx.drawImage(imgSkills, 195, 0, 65, 67, 275, 669, 34, 34);
 
     let iconXY;
-    if (hero.skills.refine.icon) {
-      iconXY = hero.skills.refine.icon.split('-');
+    if (skills.refine.icon) {
+      iconXY = skills.refine.icon.split('-');
       ctx.drawImage(imgSkills, iconXY[1] * 65, iconXY[0] * 67, 65, 67, 275, 596, 34, 34);
     } else {
       ctx.drawImage(imgSkills, 65, 0, 65, 67, 275, 596, 34, 34);
     }
-    if (hero.skills.skillA.icon) {
-      iconXY = hero.skills.skillA.icon.split('-');
+    if (skills.skillA.icon) {
+      iconXY = skills.skillA.icon.split('-');
       ctx.drawImage(imgSkills, iconXY[1] * 65, iconXY[0] * 67, 65, 67, 275, 707, 34, 34);
     } else {
       ctx.drawImage(imgSkills, 0, 0, 65, 67, 275, 707, 36, 36);
     }
-    if (hero.skills.skillB.icon) {
-      iconXY = hero.skills.skillB.icon.split('-');
+    if (skills.skillB.icon) {
+      iconXY = skills.skillB.icon.split('-');
       ctx.drawImage(imgSkills, iconXY[1] * 65, iconXY[0] * 67, 65, 67, 275, 743, 34, 34);
     } else {
       ctx.drawImage(imgSkills, 0, 0, 65, 67, 275, 743, 36, 36);
     }
-    if (hero.skills.skillC.icon) {
-      iconXY = hero.skills.skillC.icon.split('-');
+    if (skills.skillC.icon) {
+      iconXY = skills.skillC.icon.split('-');
       ctx.drawImage(imgSkills, iconXY[1] * 65, iconXY[0] * 67, 65, 67, 275, 780, 34, 34);
     } else {
       ctx.drawImage(imgSkills, 0, 0, 65, 67, 275, 780, 36, 36);
     }
-    if (hero.skills.seal.icon) {
-      iconXY = hero.skills.seal.icon.split('-');
+    if (skills.seal.icon) {
+      iconXY = skills.seal.icon.split('-');
       ctx.drawImage(imgSkills, iconXY[1] * 65, iconXY[0] * 67, 65, 67, 275, 818, 34, 34);
     } else {
       ctx.drawImage(imgSkills, 0, 0, 65, 67, 275, 818, 34, 34);
@@ -428,27 +472,25 @@ $(document).ready(() => {
     ctx.fillStyle = '#ffffff';
     ctx.lineWidth = 4;
 
+    ctx.strokeText(skills.weapon.name, 318, 619);
+    ctx.strokeText(skills.assist.name, 318, 656);
+    ctx.strokeText(skills.special.name, 318, 694);
+    ctx.strokeText(skills.skillA.name, 318, 731);
+    ctx.strokeText(skills.skillB.name, 318, 768);
+    ctx.strokeText(skills.skillC.name, 318, 804);
+    ctx.strokeText(skills.seal.name, 318, 841);
 
+    ctx.fillText(skills.assist.name, 318, 656);
+    ctx.fillText(skills.special.name, 318, 694);
+    ctx.fillText(skills.skillA.name, 318, 731);
+    ctx.fillText(skills.skillB.name, 318, 768);
+    ctx.fillText(skills.skillC.name, 318, 804);
+    ctx.fillText(skills.seal.name, 318, 841);
 
-    ctx.strokeText(hero.skills.weapon.name, 318, 619);
-    ctx.strokeText(hero.skills.assist.name, 318, 656);
-    ctx.strokeText(hero.skills.special.name, 318, 694);
-    ctx.strokeText(hero.skills.skillA.name, 318, 731);
-    ctx.strokeText(hero.skills.skillB.name, 318, 768);
-    ctx.strokeText(hero.skills.skillC.name, 318, 804);
-    ctx.strokeText(hero.skills.seal.name, 318, 841);
-
-    ctx.fillText(hero.skills.assist.name, 318, 656);
-    ctx.fillText(hero.skills.special.name, 318, 694);
-    ctx.fillText(hero.skills.skillA.name, 318, 731);
-    ctx.fillText(hero.skills.skillB.name, 318, 768);
-    ctx.fillText(hero.skills.skillC.name, 318, 804);
-    ctx.fillText(hero.skills.seal.name, 318, 841);
-
-    if (hero.skills.refine.name !== '-') {
+    if (skills.refine.name !== '-') {
       ctx.fillStyle = '#92ff4f';
     }
-    ctx.fillText(hero.skills.weapon.name, 318, 619);
+    ctx.fillText(skills.weapon.name, 318, 619);
   }
 
   function loadFiles(urls, loadFont) {
@@ -484,5 +526,45 @@ $(document).ready(() => {
     let bane = data.bane === '-' ? data.bane : '-' + data.bane;
     $this.find('.btn').html(`<span class="opt-half">${boon}</span><span class="opt-half">${bane}</span>`);
     $this.data('val', $opt.data('val'));
+  }
+
+  // Custom Hero
+  function onUploadHeroImg(event) {
+    if ($(this)[0].files && $(this)[0].files[0]) {
+      var fileReader = new FileReader();
+      fileReader.onload = function(e) {
+         customHero.image = new Image();
+         customHero.image.src = e.target.result;
+         customHero.image.onload = () => drawCustomHero();
+      };
+      fileReader.readAsDataURL($(this)[0].files[0]);
+    }
+  }
+
+  function onImageControlChange(event) {
+    customHero[$(this).data('control')] = $(this).val();
+    drawCustomHero();
+  }
+
+  function drawCustomHero() {
+    if (customHero.support) {
+      ctx.drawImage(imgBack, 540, 0, 540, 960, 0, 0, 540, 960);
+    } else {
+      ctx.drawImage(imgBack, 0, 0);
+    }
+
+    if (customHero.image) {
+      ctx.drawImage(customHero.image, 0, 0, customHero.image.width, customHero.image.height,
+        customHero.imagePosX, -customHero.imagePosY,
+        customHero.image.width * customHero.imageSize,
+        customHero.image.height * customHero.imageSize);
+    }
+
+    ctx.drawImage(imgFront, 0, 0);
+    // if (hero.support) {
+    //   ctx.drawImage(imgSkills, 845, 0, 210, 223, 420, 430, 108, 115);
+    // }
+
+    drawNameTitle(customHero.name, customHero.title);
   }
 });
