@@ -33,86 +33,156 @@
         </a>
       </div>
       <div class="card hero-list mt-3">
- <!--        <ul class="nav nav-tabs" role="tablist">
+        <!-- <ul class="nav nav-tabs" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#feh-unit" role="tab">FEH Units</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#custom-unit" role="tab">Custom Units</a>
+            <a class="nav-link" data-toggle="tab" href="#custom-unit" role="tab">Custom Unit</a>
           </li>
         </ul> -->
         <div class="card-body tab-content">
-          <!-- <input type='file' id="upload-hero-img"/> -->
           <div class="tab-pane active" id="feh-unit">
             <h5 class="card-title">Hero</h5>
-            <div class="form-group row pr-2">
-              <label class="col-md-2 col-form-label">Hero</label>
-              <div class="col-md-10 col-lg-6 p-0 selectable" id="hero-select"></div>
+            <div class="row">
+              <div class="col-md-7">
+                <div class="form-group row pr-2">
+                  <label class="col-md-4 col-form-label">Hero</label>
+                  <div class="col-md-8 p-0 selectable" id="hero-select"></div>
+                </div>
+                <div class="form-group row pr-2">
+                  <label class="col-md-4 col-form-label">IV</label>
+                  <div class="col-md-8 p-0 selectable" id="iv-select"></div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-4 col-form-label">Merges</label>
+                  <input class="col-md-3 form-control" type="number" min="0" max="10" value="0" id="hero-merges">
+                </div>
+                <div class="form-group row form-check">
+                  <label class="col-md-4 col-form-legend">S. Support</label>
+                  <label class="custom-control custom-radio">
+                    <input id="support-yes" name="support" type="radio" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Yes</span>
+                  </label>
+                  <label class="custom-control custom-radio">
+                    <input id="support-no" name="support" type="radio" class="custom-control-input" checked>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">No</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-5"></div>
             </div>
-            <div class="form-group row pr-2">
-              <label class="col-md-2 col-form-label">IV</label>
-              <div class="col-md-10 col-lg-6 p-0 selectable" id="iv-select"></div>
-            </div>
-            <div class="form-group row">
-              <label class="col-md-2 col-form-label">Merges</label>
-              <input class="col-md-3 form-control" type="number" min="0" max="10" value="0" id="hero-merges">
-            </div>
-            <div class="form-group row form-check">
-              <label class="col-md-2 col-form-legend">S. Support</label>
-              <label class="custom-control custom-radio">
-                <input id="support-yes" name="support" type="radio" class="custom-control-input">
-                <span class="custom-control-indicator"></span>
-                <span class="custom-control-description">Yes</span>
-              </label>
-              <label class="custom-control custom-radio">
-                <input id="support-no" name="support" type="radio" class="custom-control-input" checked>
-                <span class="custom-control-indicator"></span>
-                <span class="custom-control-description">No</span>
-              </label>
-            </div>
+
             <hr>
 
             <h5 class="card-title">Skills</h5>
-            <div class="form-group row pr-2">
-              <label class="col-md-2 col-form-label">Weapon</label>
-              <div class="col-md-10 col-lg-6 p-0 selectable skill-select" data-skill="weapon" id="weapon-select"></div>
+            <div class="row">
+              <div class="col-md-7">
+                <div class="form-group row pr-2">
+                  <label class="col-md-4 col-form-label">Weapon</label>
+                  <div class="col-md-8 p-0 selectable skill-select" data-skill="weapon" id="weapon-select"></div>
+                </div>
+                <div class="form-group row pr-2">
+                  <label class="offset-md-4 col-md-3 col-form-label">Refine</label>
+                  <div class="col-md-9 col-lg-5 p-0 selectable skill-select" data-skill="refine" id="refine-select"></div>
+                </div>
+                <div class="form-group row pr-2">
+                  <label class="col-md-4 col-form-label">Assist</label>
+                  <div class="col-md-8 p-0 selectable skill-select" data-skill="assist" id="assist-select"></div>
+                </div>
+                <div class="form-group row pr-2">
+                  <label class="col-md-4 col-form-label">Special</label>
+                  <div class="col-md-8 p-0 selectable skill-select" data-skill="special" id="special-select"></div>
+                </div>
+                <div class="form-group row pr-2">
+                  <label class="col-md-4 col-form-label">Skill A</label>
+                  <div class="col-md-8 p-0 selectable skill-select" data-skill="skillA" id="skillA-select"></div>
+                </div>
+                <div class="form-group row pr-2">
+                  <label class="col-md-4 col-form-label">Skill B</label>
+                  <div class="col-md-8 p-0 selectable skill-select" data-skill="skillB" id="skillB-select"></div>
+                </div>
+                <div class="form-group row pr-2">
+                  <label class="col-md-4 col-form-label">Skill C</label>
+                  <div class="col-md-8 p-0 selectable skill-select" data-skill="skillC" id="skillC-select"></div>
+                </div>
+                <div class="form-group row pr-2">
+                  <label class="col-md-4 col-form-label">Seal</label>
+                  <div class="col-md-8 p-0 selectable skill-select" data-skill="seal" id="seal-select"></div>
+                </div>
+              </div>
             </div>
-            <div class="form-group row pr-2">
-              <label class="offset-md-2 col-md-2 col-form-label">Refine</label>
-              <div class="col-md-8 col-lg-4 p-0 selectable skill-select" data-skill="refine" id="refine-select"></div>
-            </div>
-            <div class="form-group row pr-2">
-              <label class="col-md-2 col-form-label">Assist</label>
-              <div class="col-md-10 col-lg-6 p-0 selectable skill-select" data-skill="assist" id="assist-select"></div>
-            </div>
-            <div class="form-group row pr-2">
-              <label class="col-md-2 col-form-label">Special</label>
-              <div class="col-md-10 col-lg-6 p-0 selectable skill-select" data-skill="special" id="special-select"></div>
-            </div>
-            <div class="form-group row pr-2">
-              <label class="col-md-2 col-form-label">Skill A</label>
-              <div class="col-md-10 col-lg-6 p-0 selectable skill-select" data-skill="skillA" id="skillA-select"></div>
-            </div>
-            <div class="form-group row pr-2">
-              <label class="col-md-2 col-form-label">Skill B</label>
-              <div class="col-md-10 col-lg-6 p-0 selectable skill-select" data-skill="skillB" id="skillB-select"></div>
-            </div>
-            <div class="form-group row pr-2">
-              <label class="col-md-2 col-form-label">Skill C</label>
-              <div class="col-md-10 col-lg-6 p-0 selectable skill-select" data-skill="skillC" id="skillC-select"></div>
-            </div>
-            <div class="form-group row pr-2">
-            <label class="col-md-2 col-form-label">Seal</label>
-            <div class="col-md-10 col-lg-6 p-0 selectable skill-select" data-skill="seal" id="seal-select"></div>
-          </div>
           </div>
 
-          <div class="tab-pane" id="custom-unit">Test</div>
+          <div class="tab-pane" id="custom-unit">
+            <div class="form-group row pr-2">
+              <label class="col-md-2 col-form-label">Image</label>
+              <input type="file" class="form-control-file" id="custom-hero-upload">
+            </div>
+            <div class="form-group row pr-2">
+              <label class="col-md-2 col-form-label">Image Size</label>
+              <input type="range" class="form-control col-md-9 custom-hero-control" data-control="imageSize" min="0.5" max="2" step="any" value="1">
+            </div>
+            <div class="form-group row pr-2">
+              <label class="col-md-2 col-form-label">Position X</label>
+              <input type="range" class="form-control col-md-9 custom-hero-control" data-control="imagePosX" min="-1000" max="1000" step="any" value="0">
+            </div>
+            <div class="form-group row pr-2">
+              <label class="col-md-2 col-form-label">Position Y</label>
+              <input type="range" class="form-control col-md-9 custom-hero-control" data-control="imagePosY" min="-1000" max="1000" step="any" value="0">
+            </div>
+            <hr>
+
+            <div class="row">
+              <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                <label class="col-md-4 col-form-label text-right">Name</label>
+                <input type="text" class="form-control custom-hero-control col-md-8" data-control="name">
+              </div>
+              <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                <label class="col-md-4 col-form-label text-right">Title</label>
+                <input type="text" class="form-control custom-hero-control col-md-8" data-control="title">
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                <label class="col-md-4 col-form-label text-right">M. Type</label>
+                <input type="text" class="form-control custom-hero-control col-md-8" data-control="moveType">
+              </div>
+              <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                <label class="col-md-4 col-form-label text-right">W. Type</label>
+                <input type="text" class="form-control custom-hero-control col-md-8" data-control="title">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row pr-2">
+                  <label class="col-md-4 col-form-label">Merges</label>
+                  <input type="number" min="0" max="10" value="0" class="form-control custom-hero-control col-md-3" data-control="merges">
+                </div>
+                <div class="form-group row form-check">
+                  <label class="col-md-4 col-form-legend">S. Support</label>
+                  <label class="custom-control custom-radio">
+                    <input id="support-custom-yes" name="support-custom" type="radio" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Yes</span>
+                  </label>
+                  <label class="custom-control custom-radio">
+                    <input id="support-custom-no" name="support-custom" type="radio" class="custom-control-input" checked>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">No</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <hr>
+          </div>
         </div>
-
       </div>
     </div>
   </div>
+  <img crossorigin="anonymous" id="test-img">
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>

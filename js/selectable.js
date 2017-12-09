@@ -22,7 +22,7 @@ $.widget('custom.selectable', {
     this.$button = $(`<button class="btn ${this.options.class} dropdown-toggle" type="button" data-toggle="dropdown" ${this.options.disabled ? "disabled": ""}>${this.options.defaultText}</button>`);
     this.$menu = $(`<div class="dropdown-menu"></div>`);
     this.$searchContainer = $(`<div class="dropdown-search pl-2 pr-2 mb-2"><input class="form-control search"></div>`);
-    this.$menuItems = $(`<div style="max-height:${this.options.maxHeight}px;overflow-y:scroll;"></div>`);
+    this.$menuItems = $(`<div style="max-height:${this.options.maxHeight}px;overflow-y:auto;"></div>`);
 
     if (this.options.searchable) {
       this.$menu.append(this.$searchContainer);

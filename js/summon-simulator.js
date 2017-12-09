@@ -213,6 +213,7 @@ $(document).ready(() => {
   }
 
   function snipeHit(hero, targetHeroes) {
+      // TODO: Snipe rarity check
       for (let i = 0; i < targetHeroes.length; i++) {
         if (targetHeroes[i].name === hero.name) {
           targetHeroes.splice(i, 1);

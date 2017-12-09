@@ -18,7 +18,9 @@ $(document).ready(() => {
     IV_SELECT: '#iv-select',
     DOWNLOAD: '#download-img',
     UPLOAD_HERO: '#custom-hero-upload',
-    CUSTOM_HERO_CONTROL: '.custom-hero-control'
+    CUSTOM_HERO_CONTROL: '.custom-hero-control',
+    CUSTOM_SUPPORT_CHECKS: '[name="support-custom"]',
+    CUSTOM_SUPPORT_ON: '#support-custom-yes'
   };
   const IMAGES = {
     FRONT: 'img/assets/unit-edit-front.png',
@@ -112,7 +114,7 @@ $(document).ready(() => {
     }
   };
   let customHero = {
-    image: null,
+    image: new Image(),
     name: "",
     title: "",
     stats: {
@@ -135,6 +137,7 @@ $(document).ready(() => {
   init();
 
   function init() {
+    customHero.image.crossOrigin = 'anonymous';
     loadFiles([IMAGES.SKILLS, IMAGES.FRONT, IMAGES.BACK], true).then(files => {
       document.fonts.add(FEH_FONT);
       imgSkills = files[0];
@@ -175,6 +178,7 @@ $(document).ready(() => {
 
     $(ELEMENTS.UPLOAD_HERO).on('change', onUploadHeroImg);
     $(ELEMENTS.CUSTOM_HERO_CONTROL).on('change', onImageControlChange);
+    $(ELEMENTS.CUSTOM_SUPPORT_CHECKS).on('change', onCustomSupportChange);
   }
 
   function onDownload(event) {
@@ -359,7 +363,6 @@ $(document).ready(() => {
       }
       ctx.drawImage(imgs[0], 0, 0);
       ctx.drawImage(imgFront, 0, 0);
-      console.log(hero.support);
       if (hero.support) {
         ctx.drawImage(imgSkills, 845, 0, 210, 223, 420, 430, 108, 115);
       }
@@ -533,7 +536,6 @@ $(document).ready(() => {
     if ($(this)[0].files && $(this)[0].files[0]) {
       var fileReader = new FileReader();
       fileReader.onload = function(e) {
-         customHero.image = new Image();
          customHero.image.src = e.target.result;
          customHero.image.onload = () => drawCustomHero();
       };
@@ -543,6 +545,11 @@ $(document).ready(() => {
 
   function onImageControlChange(event) {
     customHero[$(this).data('control')] = $(this).val();
+    drawCustomHero();
+  }
+
+  function onCustomSupportChange(event) {
+    customHero.support = $(ELEMENTS.CUSTOM_SUPPORT_ON).is(':checked');
     drawCustomHero();
   }
 
@@ -561,10 +568,11 @@ $(document).ready(() => {
     }
 
     ctx.drawImage(imgFront, 0, 0);
-    // if (hero.support) {
-    //   ctx.drawImage(imgSkills, 845, 0, 210, 223, 420, 430, 108, 115);
-    // }
+    if (customHero.support) {
+      ctx.drawImage(imgSkills, 845, 0, 210, 223, 420, 430, 108, 115);
+    }
 
     drawNameTitle(customHero.name, customHero.title);
+    drawMergesStats(customHero.merges, customHero.stats);
   }
 });
