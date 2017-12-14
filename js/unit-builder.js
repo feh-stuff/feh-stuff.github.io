@@ -257,19 +257,34 @@ $(document).ready(() => {
 
   function onHeroChange(event) {
     let hero = $(this).data('val');
+    let highlightList = hero.skills.map(skill => skill.name);
     selectedHero.data = hero;
     for (let skill in selectedHero.skills) {
       selectedHero.skills[skill] = EMPTY_SKILL;
     }
 
+
     drawHero(selectedHero);
-    $(ELEMENTS.WEAPON_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getWeapons(hero)));
-    $(ELEMENTS.ASSIST_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_ASSIST)));
-    $(ELEMENTS.SEAL_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_SEAL)));
-    $(ELEMENTS.SKILL_A_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_A)));
-    $(ELEMENTS.SKILL_B_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_B)));
-    $(ELEMENTS.SKILL_C_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_C)));
-    $(ELEMENTS.SPECIAL_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_SPECIAL)));
+    $(ELEMENTS.WEAPON_SELECT)
+        .selectable('highlightList', highlightList)
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getWeapons(hero)));
+    $(ELEMENTS.ASSIST_SELECT)
+        .selectable('highlightList', highlightList)
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_ASSIST)));
+    $(ELEMENTS.SEAL_SELECT)
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_SEAL)));
+    $(ELEMENTS.SKILL_A_SELECT)
+        .selectable('highlightList', highlightList)
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_A)));
+    $(ELEMENTS.SKILL_B_SELECT)
+        .selectable('highlightList', highlightList)
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_B)));
+    $(ELEMENTS.SKILL_C_SELECT)
+        .selectable('highlightList', highlightList)
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_C)));
+    $(ELEMENTS.SPECIAL_SELECT)
+        .selectable('highlightList', highlightList)
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_SPECIAL)));
     $(ELEMENTS.REFINE_SELECT).selectable('clear').selectable('disable');
     $(ELEMENTS.IV_SELECT).selectable('enable');
     $('.skill-info').html('');

@@ -199,6 +199,12 @@ body {
   position: relative;
 }
 
+.selectable .opt-highlight {
+  background-color: #dcedc8;
+}
+.selectable .opt-highlight:hover {
+  background-color: #aed581;
+}
 .selectable .dropdown-toggle {
   position: relative;
   background-color: #ffffff;

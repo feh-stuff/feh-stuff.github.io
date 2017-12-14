@@ -5,8 +5,9 @@ $.widget('custom.selectable', {
     maxHeight: 300,
     selectOptions: [],
     searchable: true,
-    optionGenerator: function(item, $parent) {
-      $(`<div class="dropdown-item">${item.name}</div>`)
+    highlightList: [],
+    optionGenerator: function(item, $parent, highlight) {
+      $(`<div class="dropdown-item ${highlight.includes(item.name) ? 'opt-highlight' : ''}">${item.name}</div>`)
           .data('val', item)
           .appendTo($parent);
     },
@@ -54,7 +55,7 @@ $.widget('custom.selectable', {
   _makeOptions: function() {
     this.$menuItems.empty();
     for (let i = 0; i < this.options.selectOptions.length; i++) {
-      this.options.optionGenerator(this.options.selectOptions[i], this.$menuItems);
+      this.options.optionGenerator(this.options.selectOptions[i], this.$menuItems, this.options.highlightList);
     }
   },
 
@@ -77,6 +78,10 @@ $.widget('custom.selectable', {
     this.enable();
     this.options.selectOptions = opts;
     this._makeOptions();
+    return this;
+  },
+  highlightList: function(list) {
+    this.options.highlightList = list;
     return this;
   },
   enable: function() {
