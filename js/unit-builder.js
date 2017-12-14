@@ -1,4 +1,3 @@
-//TODO Color boon bane
 $(document).ready(() => {
   const ELEMENTS = {
     CANVAS: '#hero-canvas',
@@ -18,9 +17,15 @@ $(document).ready(() => {
     IV_SELECT: '#iv-select',
     DOWNLOAD: '#download-img',
     UPLOAD_HERO: '#custom-hero-upload',
+    TAB_SELECT: '.build-type',
     CUSTOM_HERO_CONTROL: '.custom-hero-control',
     CUSTOM_SUPPORT_CHECKS: '[name="support-custom"]',
-    CUSTOM_SUPPORT_ON: '#support-custom-yes'
+    CUSTOM_SUPPORT_ON: '#support-custom-yes',
+    CUSTOM_MOVE_TYPE_SELECT: '#custom-move-type-select',
+    CUSTOM_WEAPON_TYPE_SELECT: '#custom-weapon-type-select',
+    CUSTOM_STAT_CONTROL: '.custom-stat-control',
+    CUSTOM_STAT_TOTAL: '#custom-stat-total',
+    CUSTOM_WEAPON_SELECT: '#custom-weapon-select'
   };
   const IMAGES = {
     FRONT: 'img/assets/unit-edit-front.png',
@@ -44,10 +49,17 @@ $(document).ready(() => {
       "Neutral Bow": [1001,268],
       "Neutral Dagger": [1001,320],
       "Neutral Staff": [1001,372]
+    },
+    FONT: {
+      yellow: [845, 514],
+      white: [877, 514],
+      green: [909, 514],
+      blue: [941, 514],
+      red: [973, 514]
     }
   };
   const FEH_FONT = new FontFace('FehFont', 'url(font/feh-font.ttf)');
-  const EMPTY_SKILL = { name: '-' };
+  const EMPTY_SKILL = { name: '-', effect: '' };
   const IV = [
     {boon: '-', bane: '-'},
     {boon: 'hp', bane: 'atk'},
@@ -70,6 +82,26 @@ $(document).ready(() => {
     {boon: 'res', bane: 'atk'},
     {boon: 'res', bane: 'spd'},
     {boon: 'res', bane: 'def'},
+  ];
+  let MOVE_TYPES = [
+    {name: 'Infantry'},
+    {name: 'Armored'},
+    {name: 'Cavalry'},
+    {name: 'Flying'}
+  ];
+  let WEAPON_TYPES = [
+    {name: 'Sword', weaponType: 'Sword', colorType: 'Red'},
+    {name: 'Axe', weaponType: 'Axe', colorType: 'Green'},
+    {name: 'Lance', weaponType: 'Lance', colorType: 'Blue'},
+    {name: 'Breath (Red)', weaponType: 'Breath', colorType: 'Red'},
+    {name: 'Breath (Green)', weaponType: 'Breath', colorType: 'Green'},
+    {name: 'Breath (Blue)', weaponType: 'Breath', colorType: 'Blue'},
+    {name: 'Tome (Red)', weaponType: 'Tome', colorType: 'Red'},
+    {name: 'Tome (Green)', weaponType: 'Tome', colorType: 'Green'},
+    {name: 'Tome (Blue)', weaponType: 'Tome', colorType: 'Blue'},
+    {name: 'Bow', weaponType: 'Bow', colorType: 'Neutral'},
+    {name: 'Dagger', weaponType: 'Dagger', colorType: 'Neutral'},
+    {name: 'Staff', weaponType: 'Staff', colorType: 'Neutral'}
   ];
 
   let canvas = $(ELEMENTS.CANVAS)[0];
@@ -129,7 +161,17 @@ $(document).ready(() => {
     weaponType: "",
     imageSize: 1,
     imagePosX: 0,
-    imagePosY: 0
+    imagePosY: 0,
+    skills: {
+      weapon: EMPTY_SKILL,
+      refine: EMPTY_SKILL,
+      assist: EMPTY_SKILL,
+      special: EMPTY_SKILL,
+      skillA: EMPTY_SKILL,
+      skillB: EMPTY_SKILL,
+      skillC: EMPTY_SKILL,
+      seal: EMPTY_SKILL
+    }
   };
   let imgSkills;
   let imgFront;
@@ -138,31 +180,43 @@ $(document).ready(() => {
 
   function init() {
     customHero.image.crossOrigin = 'anonymous';
+    $(ELEMENTS.HERO_SELECT).selectable({
+      selectOptions: HEROES,
+      defaultText: 'Select a Hero'
+    });
+    $(ELEMENTS.DOWNLOAD).removeClass('d-none');
+    $(ELEMENTS.WEAPON_SELECT).selectable({disabled: true});
+    $(ELEMENTS.REFINE_SELECT).selectable({disabled: true, searchable: false});
+    $(ELEMENTS.ASSIST_SELECT).selectable({disabled: true});
+    $(ELEMENTS.SPECIAL_SELECT).selectable({disabled: true});
+    $(ELEMENTS.SKILL_A_SELECT).selectable({disabled: true});
+    $(ELEMENTS.SKILL_B_SELECT).selectable({disabled: true});
+    $(ELEMENTS.SKILL_C_SELECT).selectable({disabled: true});
+    $(ELEMENTS.SEAL_SELECT).selectable({disabled: true});
+    $(ELEMENTS.IV_SELECT).selectable({
+      selectOptions: IV,
+      optionGenerator: ivOptionsGenerator,
+      searchable: false,
+      onSelect: ivSelectableDisplay,
+      header: '<div class="dropdown-header"><span class="opt-half">Boon</span><span class="opt-half">Bane</span></div>'
+    });
+
+    $(ELEMENTS.CUSTOM_MOVE_TYPE_SELECT).selectable({
+      selectOptions: MOVE_TYPES,
+      searchable: false
+    });
+    $(ELEMENTS.CUSTOM_WEAPON_TYPE_SELECT).selectable({
+      selectOptions: WEAPON_TYPES,
+      searchable: false
+    });
+    $(ELEMENTS.CUSTOM_WEAPON_SELECT).selectable({disabled: true});
+
+
     loadFiles([IMAGES.SKILLS, IMAGES.FRONT, IMAGES.BACK], true).then(files => {
       document.fonts.add(FEH_FONT);
       imgSkills = files[0];
       imgFront = files[1];
       imgBack = files[2];
-      $(ELEMENTS.HERO_SELECT).selectable({
-        selectOptions: HEROES,
-        defaultText: 'Select a Hero'
-      });
-      $(ELEMENTS.DOWNLOAD).removeClass('d-none');
-      $(ELEMENTS.WEAPON_SELECT).selectable({disabled: true});
-      $(ELEMENTS.REFINE_SELECT).selectable({disabled: true, searchable: false});
-      $(ELEMENTS.ASSIST_SELECT).selectable({disabled: true});
-      $(ELEMENTS.SPECIAL_SELECT).selectable({disabled: true});
-      $(ELEMENTS.SKILL_A_SELECT).selectable({disabled: true});
-      $(ELEMENTS.SKILL_B_SELECT).selectable({disabled: true});
-      $(ELEMENTS.SKILL_C_SELECT).selectable({disabled: true});
-      $(ELEMENTS.SEAL_SELECT).selectable({disabled: true});
-      $(ELEMENTS.IV_SELECT).selectable({
-        selectOptions: IV,
-        optionGenerator: ivOptionsGenerator,
-        searchable: false,
-        onSelect: ivSelectableDisplay,
-        header: '<div class="dropdown-header"><span class="opt-half">Boon</span><span class="opt-half">Bane</span></div>'
-      });
       drawHero(selectedHero);
     });
     bindEvents();
@@ -176,15 +230,30 @@ $(document).ready(() => {
     $(ELEMENTS.SUPPORT_CHECKS).on('change', onSupportChange);
     $(ELEMENTS.DOWNLOAD).on('click', onDownload);
 
+    $(ELEMENTS.TAB_SELECT).on('click', onTabChange);
+
     $(ELEMENTS.UPLOAD_HERO).on('change', onUploadHeroImg);
     $(ELEMENTS.CUSTOM_HERO_CONTROL).on('change', onImageControlChange);
     $(ELEMENTS.CUSTOM_SUPPORT_CHECKS).on('change', onCustomSupportChange);
+    $(ELEMENTS.CUSTOM_WEAPON_TYPE_SELECT).on('select', onCustomWeaponTypeSelect);
+    $(ELEMENTS.CUSTOM_MOVE_TYPE_SELECT).on('select', onCustomMoveTypeSelect);
+    $(ELEMENTS.CUSTOM_STAT_CONTROL).on('change', onCustomStatChange);
+  }
+
+  function onTabChange(event) {
+    if ($(this).data('val') === 'custom-unit') {
+      drawCustomHero();
+    } else {
+      drawHero(selectedHero);
+    }
   }
 
   function onDownload(event) {
     $(this).attr('href', canvas.toDataURL());
     $(this).attr('download', 'FEH Unit Builder - ' + selectedHero.data.name + '.png');
   }
+
+  // FEH Heroes
 
   function onHeroChange(event) {
     let hero = $(this).data('val');
@@ -203,6 +272,8 @@ $(document).ready(() => {
     $(ELEMENTS.SPECIAL_SELECT).selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_SPECIAL)));
     $(ELEMENTS.REFINE_SELECT).selectable('clear').selectable('disable');
     $(ELEMENTS.IV_SELECT).selectable('enable');
+    $('.skill-info').html('');
+    //TODO
   }
 
   function onSupportChange(event) {
@@ -220,11 +291,17 @@ $(document).ready(() => {
       } else {
         $(ELEMENTS.REFINE_SELECT).selectable('clear').selectable('disable');
       }
+      selectedHero.skills.refine = EMPTY_SKILL;
+      $('.skill-info[data-skill="weapon"]').html(getSkillInfoHtml(skillType, skill));
+    } else if (skillType === 'refine') {
+      $('.skill-info[data-skill="weapon"]').html(getSkillInfoHtml(skillType, skill));
+    } else {
+      $(`.skill-info[data-skill="${skillType}"]`).html(getSkillInfoHtml(skillType, skill));
     }
-
     selectedHero.skills[skillType] = skill;
     drawHero(selectedHero);
   }
+
 
   function onIvChange(event) {
     selectedHero.iv = $(this).data('val');
@@ -240,10 +317,10 @@ $(document).ready(() => {
     drawHero(selectedHero);
   }
 
-  function getWeapons(hero) {
+  function getWeapons(hero, filterExclusives = true) {
     let weapons = [];
     for (let i = 0; i < SKILL_WEAPON.length; i++) {
-      if (SKILL_WEAPON[i].exclusive && !SKILL_WEAPON[i].exclusive.includes(hero.name)) {
+      if (filterExclusives && SKILL_WEAPON[i].exclusive && !SKILL_WEAPON[i].exclusive.includes(hero.name)) {
         continue;
       }
       if (hero.weaponType === SKILL_WEAPON[i].weaponType) {
@@ -295,6 +372,38 @@ $(document).ready(() => {
       }
     }
     return true;
+  }
+
+  function getSkillInfoHtml(skillType, skill) {
+    let html = '';
+
+    if (skill.name === '-') {
+      return '';
+    }
+
+    if (skillType === 'refine') {
+      if (skill.name === '-') {
+        html += `<span>SP Cost: ${selectedHero.skills.weapon.spCost}</span>`;
+      } else {
+        let cost = REFINE_SP_COST[skill.cost || 0];
+        html += `<span>SP Cost: ${selectedHero.skills.weapon.spCost + cost.spCost}</span>`;
+        if (cost.arenaMedals) {
+          html += `<span>Arena Medals: ${cost.arenaMedals}</span>`;
+        }
+        if (cost.refiningStones) {
+          html += `<span>Refining Stones: ${cost.refiningStones}</span>`;
+        }
+        if (cost.divineDew) {
+          html += `<span>Divine Dew: ${cost.divineDew}</span>`;
+        }
+      }
+    } else if (skillType === 'special') {
+      html += `<span>SP Cost: ${skill.spCost}</span><span>Cooldown: ${skill.cooldown}</span>`;
+    } else if (skillType !== 'seal') {
+      html += `<span>SP Cost: ${skill.spCost}</span>`;
+    }
+
+    return (html ? `<p class="skill-cost">${html}</p>` : '') + `<p>Effect: ${skill.effect}</p>`;
   }
 
   function processHero(hero) {
@@ -391,42 +500,57 @@ $(document).ready(() => {
   function drawWeaponMoveTypeIcons(colorType, weaponType, moveType) {
     let weaponTypeIcon = IMAGES.ICONS[colorType + ' ' + weaponType];
     let moveTypeIcon = IMAGES.ICONS[moveType];
-    ctx.drawImage(imgSkills, weaponTypeIcon[0], weaponTypeIcon[1], 52, 52, 48, 553, 28, 28);
-    ctx.drawImage(imgSkills, moveTypeIcon[0], moveTypeIcon[1], 52, 52, 204, 554, 26, 26);
+    if (weaponTypeIcon) {
+      ctx.drawImage(imgSkills, weaponTypeIcon[0], weaponTypeIcon[1], 52, 52, 48, 553, 28, 28);
+    }
+    if (moveTypeIcon) {
+      ctx.drawImage(imgSkills, moveTypeIcon[0], moveTypeIcon[1], 52, 52, 204, 554, 26, 26);
+    }
   }
 
   function drawMergesStats(merges, stats) {
-    ctx.font = '18px FehFont';
-    ctx.strokeStyle = '#000000';
-    ctx.fillStyle = '#ffffff';
-    ctx.textAlign='start';
-    ctx.lineWidth = 4;
-
-    ctx.strokeText('40', 135, 574);
-    ctx.fillText('40', 135, 574);
-
-    if (merges > 0) {
-      if (merges === 10) {
-        ctx.fillStyle = '#92ff4f';
-      }
-      ctx.strokeText('+', 161, 572);
-      ctx.strokeText(merges, 174, 574);
-      ctx.fillText('+', 161, 572);
-      ctx.fillText(merges, 174, 574);
+    if (merges > 0 && merges < 10) {
+      ctx.drawImage(imgSkills, IMAGES.FONT.white[0],
+        IMAGES.FONT.white[1] + 400, 32, 40, 158, 558, 15, 19);
+      ctx.drawImage(imgSkills, IMAGES.FONT.white[0],
+        IMAGES.FONT.white[1] + merges * 40, 32, 40, 172, 558, 15, 19);
+    } else if (merges === 10) {
+      ctx.drawImage(imgSkills, IMAGES.FONT.green[0],
+        IMAGES.FONT.green[1] + 400, 32, 40, 158, 558, 15, 19);
+      ctx.drawImage(imgSkills, IMAGES.FONT.green[0],
+        IMAGES.FONT.green[1] + 40, 32, 40, 172, 558, 15, 19);
+      ctx.drawImage(imgSkills, IMAGES.FONT.green[0],
+        IMAGES.FONT.green[1], 32, 40, 186, 558, 15, 19);
     }
 
-    ctx.textAlign='end';
-    ctx.fillStyle = '#fdf98e';
-    ctx.strokeText(stats.hp, 200, 620);
-    ctx.strokeText(stats.atk, 200, 656);
-    ctx.strokeText(stats.spd, 200, 694);
-    ctx.strokeText(stats.def, 200, 731);
-    ctx.strokeText(stats.res, 200, 768);
-    ctx.fillText(stats.hp, 200, 620);
-    ctx.fillText(stats.atk, 200, 656);
-    ctx.fillText(stats.spd, 200, 694);
-    ctx.fillText(stats.def, 200, 731);
-    ctx.fillText(stats.res, 200, 768);
+    drawStats(stats.hp, 147, 604);
+    drawStats(stats.atk, 147, 640);
+    drawStats(stats.spd, 147, 678);
+    drawStats(stats.def, 147, 715);
+    drawStats(stats.res, 147, 752);
+  }
+
+  function drawStats(value, x, y) {
+    let digit;
+    if (value >= 1000) {
+      digit = Math.floor((value / 1000) % 10);
+      ctx.drawImage(imgSkills, IMAGES.FONT.yellow[0],
+        IMAGES.FONT.yellow[1] + digit * 40, 32, 40, x, y, 15, 19);
+    }
+    if (value >= 100) {
+      digit = Math.floor((value / 100) % 10);
+      ctx.drawImage(imgSkills, IMAGES.FONT.yellow[0],
+        IMAGES.FONT.yellow[1] + digit * 40, 32, 40, x + 14, y, 15, 19);
+    }
+    if (value > 10) {
+      digit = Math.floor((value / 10) % 10);
+      ctx.drawImage(imgSkills, IMAGES.FONT.yellow[0],
+        IMAGES.FONT.yellow[1] + digit * 40, 32, 40, x + 28, y, 15, 19);
+    }
+
+    digit = value % 10;
+    ctx.drawImage(imgSkills, IMAGES.FONT.yellow[0],
+      IMAGES.FONT.yellow[1] + digit * 40, 32, 40, x + 42, y, 15, 19);
   }
 
   function drawSkills(skills) {
@@ -531,7 +655,9 @@ $(document).ready(() => {
     $this.data('val', $opt.data('val'));
   }
 
+
   // Custom Hero
+
   function onUploadHeroImg(event) {
     if ($(this)[0].files && $(this)[0].files[0]) {
       var fileReader = new FileReader();
@@ -551,6 +677,34 @@ $(document).ready(() => {
   function onCustomSupportChange(event) {
     customHero.support = $(ELEMENTS.CUSTOM_SUPPORT_ON).is(':checked');
     drawCustomHero();
+  }
+
+  function onCustomMoveTypeSelect(event) {
+    customHero.moveType = $(this).data('val').name;
+    drawCustomHero();
+  }
+
+  function onCustomWeaponTypeSelect(event) {
+    let weaponColorTypes = $(this).data('val');
+    customHero.weaponType = weaponColorTypes.weaponType;
+    customHero.colorType = weaponColorTypes.colorType;
+    $(ELEMENTS.CUSTOM_WEAPON_SELECT).selectable('selectOptions', getWeapons(customHero, false));
+    drawCustomHero();
+  }
+
+  function onCustomStatChange(event) {
+    customHero.stats[$(this).data('control')] = parseInt($(this).val());
+    drawCustomHero();
+
+    let total = 0;
+    for (stat in customHero.stats) {
+      total += customHero.stats[stat];
+    }
+    $(ELEMENTS.CUSTOM_STAT_TOTAL).val(total);
+  }
+
+  function onCustomSkillChange(event) {
+
   }
 
   function drawCustomHero() {
@@ -574,5 +728,7 @@ $(document).ready(() => {
 
     drawNameTitle(customHero.name, customHero.title);
     drawMergesStats(customHero.merges, customHero.stats);
+    drawWeaponMoveTypeIcons(customHero.colorType, customHero.weaponType, customHero.moveType);
+    drawSkills(customHero.skills);
   }
 });

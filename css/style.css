@@ -5,9 +5,26 @@ body {
 .container {
   padding-bottom: 32px;
 }
-@media (min-width: 1600px) {
+@media (min-width: 992px) {
+  .hero-unit-data {
+    width: 400px;
+  }
+  .hero-customize-container {
+    height: 960px;
+    overflow-y: auto;
+  }
+}
+@media (min-width: 1300px) {
   .container {
     max-width: 1300px;
+  }
+}
+@media (min-width: 1600px) {
+  .container.container-s {
+    max-width: 1300px;
+  }
+  .container {
+    max-width: 1500px;
   }
 }
 .btn:not([disabled]) {
@@ -150,6 +167,11 @@ body {
 }
 .hero-list {
   flex-grow: 1;
+  max-width: 830px;
+}
+.hero-unit-data {
+  flex-grow: 1;
+  max-width: 920px;
 }
 
 #summon-list_wrapper {
@@ -218,4 +240,23 @@ body {
 }
 #download-img img {
   width: 26px;
+}
+
+.stat-input-groups .input-group-addon {
+  min-width: 60px;
+}
+
+.hero-canvas-container {
+  height: 960px;
+}
+
+.skill-info {
+  color: #777777;
+}
+.skill-info > p {
+  margin-bottom: 0.5rem;
+}
+.skill-cost > span {
+  display: inline-block;
+  margin-right: 50px;
 }

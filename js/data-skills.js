@@ -1213,45 +1213,50 @@ let SKILL_REFINED_WEAPONS = {
 
   // prf weapons
   "Sol Katti": [
-    {"name": "Brash Assault", "icon": "32-3", "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack. If unit initiates combat against a foe that can counter and unit's HP ≤ 75%, unit makes a guaranteed follow-up attac", "stats": {"hp": 3}},
-    {"name": "+Atk", "icon": "31-9", "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.", "stats": {"hp": 5, "atk": 2}},
-    {"name": "+Spd", "icon": "31-10", "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.", "stats": {"hp": 5, "spd": 3}},
-    {"name": "+Def", "icon": "31-11", "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.", "stats": {"hp": 5, "def": 4}},
-    {"name": "+Res", "icon": "31-12", "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.", "stats": {"hp": 5, "res": 4}}
+    {"name": "Brash Assault", "icon": "32-3", "cost": 1, "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack. If unit initiates combat against a foe that can counter and unit's HP ≤ 75%, unit makes a guaranteed follow-up attac", "stats": {"hp": 3}},
+    {"name": "+Atk", "icon": "31-9", "cost": 1, "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "cost": 1, "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "cost": 1, "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "cost": 1, "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.", "stats": {"hp": 5, "res": 4}}
   ],
   "Mystletainn": [
-    {"name": "Fury", "icon": "32-0", "effect": "Accelerates Special trigger (cooldown count-1). Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat.", "stats": {"hp": 3}},
-    {"name": "+Atk", "icon": "31-9", "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "atk": 2}},
-    {"name": "+Spd", "icon": "31-10", "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "spd": 3}},
-    {"name": "+Def", "icon": "31-11", "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "def": 4}},
-    {"name": "+Res", "icon": "31-12", "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "res": 4}}
+    {"name": "Fury", "icon": "32-0", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1). Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat.", "stats": {"hp": 3}},
+    {"name": "+Atk", "icon": "31-9", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "res": 4}}
   ],
   "Siegmund": [
-    {"name": "Follow-up Attack", "icon": "32-4", "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn. If unit initiates combat and unit's HP ≥ 90%, unit makes a guaranteed follow-up attack.", "stats": {"hp": 3}},
-    {"name": "+Atk", "icon": "31-9", "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.", "stats": {"hp": 5, "atk": 2}},
-    {"name": "+Spd", "icon": "31-10", "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.", "stats": {"hp": 5, "spd": 3}},
-    {"name": "+Def", "icon": "31-11", "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.", "stats": {"hp": 5, "def": 4}},
-    {"name": "+Res", "icon": "31-12", "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.", "stats": {"hp": 5, "res": 4}}
+    {"name": "Follow-up Attack", "icon": "32-4", "cost": 1, "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn. If unit initiates combat and unit's HP ≥ 90%, unit makes a guaranteed follow-up attack.", "stats": {"hp": 3}},
+    {"name": "+Atk", "icon": "31-9", "cost": 1, "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "cost": 1, "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "cost": 1, "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "cost": 1, "effect": "Grants adjacent allies Atk+4 through their next actions at the start of each turn.", "stats": {"hp": 5, "res": 4}}
   ],
   "Hauteclere": [
-    {"name": "+Special Damage", "icon": "32-6", "effect": "Accelerates Special trigger (cooldown count-1). Deals +10 damage when Special triggers.", "stats": {"hp": 3}},
-    {"name": "+Atk", "icon": "31-9", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "atk": 2}},
-    {"name": "+Spd", "icon": "31-10", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "spd": 3}},
-    {"name": "+Def", "icon": "31-11", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "def": 4}},
-    {"name": "+Res", "icon": "31-12", "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "res": 4}}
+    {"name": "+Special Damage", "icon": "32-6", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1). Deals +10 damage when Special triggers.", "stats": {"hp": 3}},
+    {"name": "+Atk", "icon": "31-9", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1).", "stats": {"hp": 5, "res": 4}}
   ],
   "Fujin Yumi": [
-    {"name": "Formation", "icon": "32-5", "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain). If unit's HP ≥ 50%, unit can move adjacent to any ally within 2 spaces.", "stats": {"hp": 0}},
-    {"name": "+Atk", "icon": "31-9", "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain.)", "stats": {"hp": 2, "atk": 1}},
-    {"name": "+Spd", "icon": "31-10", "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain.)", "stats": {"hp": 2, "spd": 2}},
-    {"name": "+Def", "icon": "31-11", "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain.)", "stats": {"hp": 2, "def": 3}},
-    {"name": "+Res", "icon": "31-12", "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain.)", "stats": {"hp": 2, "res": 3}}
+    {"name": "Formation", "icon": "32-5", "cost": 1, "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain). If unit's HP ≥ 50%, unit can move adjacent to any ally within 2 spaces.", "stats": {"hp": 0}},
+    {"name": "+Atk", "icon": "31-9", "cost": 1, "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain.)", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "cost": 1, "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain.)", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "cost": 1, "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain.)", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "cost": 1, "effect": "Effective against flying foes. If unit's HP ≥ 50%, unit is not slowed by terrain. (Does not apply to impassable terrain.)", "stats": {"hp": 2, "res": 3}}
   ],
   "Deathly Dagger": [
-    {"name": "Dazzle Magic", "icon": "32-7", "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions. Foes using magic cannot counterattack.", "stats": {"atk": 3}},
-    {"name": "+Atk", "icon": "31-9", "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 4}},
-    {"name": "+Spd", "icon": "31-10", "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 3, "spd": 2}},
-    {"name": "+Def", "icon": "31-11", "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 3, "def": 3}},
-    {"name": "+Res", "icon": "31-12", "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 3, "res": 3}}
+    {"name": "Dazzle Magic", "icon": "32-7", "cost": 1, "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions. Foes using magic cannot counterattack.", "stats": {"atk": 3}},
+    {"name": "+Atk", "icon": "31-9", "cost": 1, "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 4}},
+    {"name": "+Spd", "icon": "31-10", "cost": 1, "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 3, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "cost": 1, "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 3, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "cost": 1, "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 3, "res": 3}}
   ]
 };
+
+let REFINE_SP_COST = [
+  { "spCost": 350, "arenaMedals": 500, "refiningStones": 50 },
+  { "spCost": 400, "arenaMedals": 500, "divineDew": 200 },
+]

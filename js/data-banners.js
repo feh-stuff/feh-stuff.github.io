@@ -3,6 +3,20 @@ const BANNERS = [
     "date": "December 2017",
     "banners": [
       {
+        "name": "Tana & Amelia's Battle",
+        "latestHeroesDate": "",
+        "startDate": "Dec 14, 2017",
+        "focusHeroes": [ "Tana", "Amelia", "Eirika" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [ "Soleil", "Siegbert", "Shiro" ],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
+      {
         "name": "Weapons to Refine",
         "latestHeroesDate": "",
         "startDate": "Dec 07, 2017",
