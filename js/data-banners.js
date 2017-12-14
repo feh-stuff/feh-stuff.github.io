@@ -3,7 +3,7 @@ const BANNERS = [
     "date": "December 2017",
     "banners": [
       {
-        "name": "Tana & Amelia's Battle",
+        "name": "Tana and Amelia's Battle",
         "latestHeroesDate": "",
         "startDate": "Dec 14, 2017",
         "focusHeroes": [ "Tana", "Amelia", "Eirika" ],
