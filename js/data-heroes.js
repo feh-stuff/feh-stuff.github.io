@@ -1006,6 +1006,26 @@ const HEROES = [
     "limited": true
   },
   {
+    "name": "Chrom (Winter's Envoy)",
+    "title": "Gifted Leader",
+    "weaponType": "Axe",
+    "moveType": "Armored",
+    "releaseDate": "Dec 18, 2017",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Chrom (Winter's Envoy).png",
+      "main": "img/heroes-main/Chrom.png"
+    },
+    "skills": [],
+    "stats": {
+      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
+      "level40": { "hp": [ 0, 0, 0 ], "atk": [ 0, 0, 0 ], "spd": [ 0, 0, 0 ], "def": [ 0, 0, 0 ], "res": [ 0, 0, 0 ] }
+    },
+    "shortName": "Chrom",
+    "rarity5": true,
+    "colorType": "Green",
+    "limited": true
+  },
+  {
     "name": "Clair",
     "title": "Highborn Flier",
     "weaponType": "Lance",
@@ -3178,6 +3198,26 @@ const HEROES = [
     "colorType": "Neutral"
   },
   {
+    "name": "Lissa (Winter's Envoy)",
+    "title": "Pure Joy",
+    "weaponType": "Axe",
+    "moveType": "Armored",
+    "releaseDate": "Dec 18, 2017",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Lissa (Winter's Envoy).png",
+      "main": "img/heroes-main/Lissa.png"
+    },
+    "skills": [],
+    "stats": {
+      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
+      "level40": { "hp": [ 0, 0, 0 ], "atk": [ 0, 0, 0 ], "spd": [ 0, 0, 0 ], "def": [ 0, 0, 0 ], "res": [ 0, 0, 0 ] }
+    },
+    "shortName": "Lissa",
+    "rarity5": true,
+    "colorType": "Green",
+    "limited": true
+  },
+  {
     "name": "Lloyd",
     "title": "White Wolf",
     "weaponType": "Sword",
@@ -4721,6 +4761,26 @@ const HEROES = [
     "colorType": "Blue"
   },
   {
+    "name": "Robin (M) (Winter's Envoy)",
+    "title": "Festive Tactician",
+    "weaponType": "Spear",
+    "moveType": "Armored",
+    "releaseDate": "Dec 18, 2017",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Robin (Winter's Envoy).png",
+      "main": "img/heroes-main/Robin (M).png"
+    },
+    "skills": [],
+    "stats": {
+      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
+      "level40": { "hp": [ 0, 0, 0 ], "atk": [ 0, 0, 0 ], "spd": [ 0, 0, 0 ], "def": [ 0, 0, 0 ], "res": [ 0, 0, 0 ] }
+    },
+    "shortName": "Robin",
+    "rarity5": true,
+    "colorType": "Blue",
+    "limited": true
+  },
+  {
     "name": "Roderick",
     "title": "Steady Squire",
     "weaponType": "Lance",
@@ -5717,6 +5777,26 @@ const HEROES = [
     "rarity4": true,
     "rarity5": true,
     "colorType": "Red"
+  },
+  {
+    "name": "Tharja (Winter's Envoy)",
+    "title": "Normal Girl",
+    "weaponType": "Tome",
+    "moveType": "Armored",
+    "releaseDate": "Dec 18, 2017",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Tharja (Winter's Envoy).png",
+      "main": "img/heroes-main/Tharja.png"
+    },
+    "skills": [],
+    "stats": {
+      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
+      "level40": { "hp": [ 0, 0, 0 ], "atk": [ 0, 0, 0 ], "spd": [ 0, 0, 0 ], "def": [ 0, 0, 0 ], "res": [ 0, 0, 0 ] }
+    },
+    "shortName": "Tharja",
+    "rarity5": true,
+    "colorType": "Red",
+    "limited": true
   },
   {
     "name": "Tiki (Adult)",

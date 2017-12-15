@@ -12,6 +12,7 @@ $(document).ready(() => {
     SKILL_B_SELECT: '#skillB-select',
     SKILL_C_SELECT: '#skillC-select',
     SEAL_SELECT: '#seal-select',
+    SKILL_INFO: '.skill-info',
     SUPPORT_CHECKS: '[name="support"]',
     SUPPORT_ON: '#support-yes',
     IV_SELECT: '#iv-select',
@@ -25,7 +26,11 @@ $(document).ready(() => {
     CUSTOM_WEAPON_TYPE_SELECT: '#custom-weapon-type-select',
     CUSTOM_STAT_CONTROL: '.custom-stat-control',
     CUSTOM_STAT_TOTAL: '#custom-stat-total',
-    CUSTOM_WEAPON_SELECT: '#custom-weapon-select'
+    CUSTOM_SKILL_SELECT: '.custom-skill-select',
+    CUSTOM_WEAPON_SELECT: '#custom-weapon-select',
+    // CUSTOM_REFINE_SELECT: '#custom-weapon-select',
+    // CUSTOM__SELECT: '#custom-weapon-select'
+
   };
   const IMAGES = {
     FRONT: 'img/assets/unit-edit-front.png',
@@ -209,7 +214,8 @@ $(document).ready(() => {
       selectOptions: WEAPON_TYPES,
       searchable: false
     });
-    $(ELEMENTS.CUSTOM_WEAPON_SELECT).selectable({disabled: true});
+
+    $(ELEMENTS.CUSTOM_SKILL_SELECT).selectable({disabled: true});
 
 
     loadFiles([IMAGES.SKILLS, IMAGES.FRONT, IMAGES.BACK], true).then(files => {
@@ -237,6 +243,7 @@ $(document).ready(() => {
     $(ELEMENTS.CUSTOM_SUPPORT_CHECKS).on('change', onCustomSupportChange);
     $(ELEMENTS.CUSTOM_WEAPON_TYPE_SELECT).on('select', onCustomWeaponTypeSelect);
     $(ELEMENTS.CUSTOM_MOVE_TYPE_SELECT).on('select', onCustomMoveTypeSelect);
+    $(ELEMENTS.CUSTOM_SKILL_SELECT).on('select', onCustomSkillChange);
     $(ELEMENTS.CUSTOM_STAT_CONTROL).on('change', onCustomStatChange);
   }
 
@@ -263,7 +270,6 @@ $(document).ready(() => {
       selectedHero.skills[skill] = EMPTY_SKILL;
     }
 
-
     drawHero(selectedHero);
     $(ELEMENTS.WEAPON_SELECT)
         .selectable('highlightList', highlightList)
@@ -287,8 +293,7 @@ $(document).ready(() => {
         .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(hero, SKILL_SPECIAL)));
     $(ELEMENTS.REFINE_SELECT).selectable('clear').selectable('disable');
     $(ELEMENTS.IV_SELECT).selectable('enable');
-    $('.skill-info').html('');
-    //TODO
+    $(ELEMENTS.SKILL_INFO).empty();
   }
 
   function onSupportChange(event) {
@@ -347,10 +352,14 @@ $(document).ready(() => {
     return weapons;
   }
 
-  function getSkills(hero, skills) {
+  function getSkills(hero, skills, filterExclusives = true) {
     let res = [];
     for (let i = 0; i < skills.length; i++) {
-      if (includeSkill(hero, skills[i])) {
+      if (filterExclusives) {
+        if (includeSkill(hero, skills[i])) {
+          res.push(skills[i]);
+        }
+      } else {
         res.push(skills[i]);
       }
     }
@@ -529,7 +538,7 @@ $(document).ready(() => {
         IMAGES.FONT.white[1] + 400, 32, 40, 158, 558, 15, 19);
       ctx.drawImage(imgSkills, IMAGES.FONT.white[0],
         IMAGES.FONT.white[1] + merges * 40, 32, 40, 172, 558, 15, 19);
-    } else if (merges === 10) {
+    } else if (merges == 10) {
       ctx.drawImage(imgSkills, IMAGES.FONT.green[0],
         IMAGES.FONT.green[1] + 400, 32, 40, 158, 558, 15, 19);
       ctx.drawImage(imgSkills, IMAGES.FONT.green[0],
@@ -557,7 +566,7 @@ $(document).ready(() => {
       ctx.drawImage(imgSkills, IMAGES.FONT.yellow[0],
         IMAGES.FONT.yellow[1] + digit * 40, 32, 40, x + 14, y, 15, 19);
     }
-    if (value > 10) {
+    if (value >= 10) {
       digit = Math.floor((value / 10) % 10);
       ctx.drawImage(imgSkills, IMAGES.FONT.yellow[0],
         IMAGES.FONT.yellow[1] + digit * 40, 32, 40, x + 28, y, 15, 19);
@@ -696,6 +705,7 @@ $(document).ready(() => {
 
   function onCustomMoveTypeSelect(event) {
     customHero.moveType = $(this).data('val').name;
+    setupCustomSkillOptions();
     drawCustomHero();
   }
 
@@ -703,7 +713,8 @@ $(document).ready(() => {
     let weaponColorTypes = $(this).data('val');
     customHero.weaponType = weaponColorTypes.weaponType;
     customHero.colorType = weaponColorTypes.colorType;
-    $(ELEMENTS.CUSTOM_WEAPON_SELECT).selectable('selectOptions', getWeapons(customHero, false));
+    $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="weapon"]').selectable('selectOptions', getWeapons(customHero, false));
+    setupCustomSkillOptions();
     drawCustomHero();
   }
 
@@ -719,7 +730,44 @@ $(document).ready(() => {
   }
 
   function onCustomSkillChange(event) {
+    let skillType = $(this).data('skill');
+    let skill = $(this).data('val');
 
+    if (skillType === 'weapon') {
+      if (SKILL_REFINED_WEAPONS[skill.name]) {
+        $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="refine"]')
+            .selectable('selectOptions', [EMPTY_SKILL].concat(SKILL_REFINED_WEAPONS[skill.name]));
+      } else {
+        $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="refine"]')
+            .selectable('clear')
+            .selectable('disable');
+      }
+      customHero.skills.refine = EMPTY_SKILL;
+    }
+    customHero.skills[skillType] = skill;
+    drawCustomHero();
+  }
+
+  function setupCustomSkillOptions() {
+    if ($(ELEMENTS.CUSTOM_MOVE_TYPE_SELECT).find('.btn').is(':disabled') ||
+        $(ELEMENTS.CUSTOM_WEAPON_TYPE_SELECT).find('.btn').is(':disabled')) {
+
+      return;
+    }
+    $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="assist"]')
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(null, SKILL_ASSIST, false)));
+    $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="seal"]')
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(null, SKILL_SEAL, false)));
+    $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="skillA"]')
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(null, SKILL_A, false)));
+    $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="skillB"]')
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(null, SKILL_B, false)));
+    $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="skillC"]')
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(null, SKILL_C, false)));
+    $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="special"]')
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(null, SKILL_SPECIAL, false)));
+    $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="refine"]')
+        .selectable('clear').selectable('disable');
   }
 
   function drawCustomHero() {

@@ -33,14 +33,14 @@
         </a>
       </div>
       <div class="card hero-unit-data mt-3">
-        <!-- <ul class="nav nav-tabs" role="tablist">
+        <ul class="nav nav-tabs" role="tablist">
           <li class="nav-item">
             <a class="nav-link build-type active" data-toggle="tab" href="#feh-unit" role="tab" data-val="feh-unit">FEH Units</a>
           </li>
           <li class="nav-item">
             <a class="nav-link build-type" data-toggle="tab" href="#custom-unit" role="tab" data-val="custom-unit">Custom Unit</a>
           </li>
-        </ul> -->
+        </ul>
         <div class="card-body tab-content hero-customize-container">
           <div class="tab-pane fade show active" id="feh-unit">
             <div class="row">
@@ -236,139 +236,162 @@
             </div>
             <hr>
 
-            <ul class="nav nav-pills mb-3" role="tablist">
+            <!-- <ul class="nav nav-pills mb-3" role="tablist">
               <li class="nav-item">
                 <a class="nav-link active" data-toggle="pill" href="#old-weapon" role="tab">Existing Weapon</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" data-toggle="pill" href="#custom-weapon" role="tab">Custom Weapon</a>
               </li>
-            </ul>
+            </ul> -->
             <div class="tab-content">
               <div class="tab-pane fade show active" id="old-weapon" role="tabpanel">
-                <div class="form-group d-flex pl-0 pr-2 col-md-6">
-                  <label class="col-md-4 col-form-label text-right">Weapon</label>
-                  <div class="col-md-8 p-0 selectable" id="custom-weapon-select"></div>
+                <div class="row">
+                  <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
+                    <label class="col-4 col-form-label text-md-right">Weapon</label>
+                    <div class="col-8 p-0 selectable custom-skill-select" data-skill="w" id="custom-weapon-select"></div>
+                  </div>
+                  <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
+                    <label class="col-4 col-form-label text-md-right">Refine</label>
+                    <div class="col-8 p-0 selectable custom-skill-select" data-skill="w" id="custom-refine-select"></div>
+                  </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="custom-weapon" role="tabpanel">B</div>
+              <div class="tab-pane fade" id="custom-weapon" role="tabpanel">
+
+              </div>
             </div>
             <hr>
 
-            <ul class="nav nav-pills mb-3" role="tablist">
+            <!-- <ul class="nav nav-pills mb-3" role="tablist">
               <li class="nav-item">
                 <a class="nav-link active" data-toggle="pill" href="#old-assist" role="tab">Existing Assist</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" data-toggle="pill" href="#custom-assist" role="tab">Custom Assist</a>
               </li>
-            </ul>
+            </ul> -->
             <div class="tab-content">
               <div class="tab-pane fade show active" id="old-assist" role="tabpanel">
-                <div class="form-group d-flex pl-0 pr-2 col-md-6">
-                  <label class="col-md-4 col-form-label text-right">Assist</label>
-                  <div class="col-md-8 p-0 selectable" id="custom-assist-select"></div>
+                <div class="row">
+                  <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
+                    <label class="col-4 col-form-label text-md-right">Assist</label>
+                    <div class="col-8 p-0 selectable custom-skill-select" data-skill="assist" id="custom-assist-select"></div>
+                  </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="custom-assist" role="tabpanel">B</div>
+              <div class="tab-pane fade" id="custom-assist" role="tabpanel">
+
+              </div>
             </div>
             <hr>
 
-            <ul class="nav nav-pills mb-3" role="tablist">
+            <!-- <ul class="nav nav-pills mb-3" role="tablist">
               <li class="nav-item">
                 <a class="nav-link active" data-toggle="pill" href="#old-special" role="tab">Existing Special</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" data-toggle="pill" href="#custom-special" role="tab">Custom Special</a>
               </li>
-            </ul>
+            </ul> -->
             <div class="tab-content">
               <div class="tab-pane fade show active" id="old-special" role="tabpanel">
-                <div class="form-group d-flex pl-0 pr-2 col-md-6">
-                  <label class="col-md-4 col-form-label text-right">Special</label>
-                  <div class="col-md-8 p-0 selectable" id="custom-special-select"></div>
+                <div class="row">
+                  <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
+                    <label class="col-4 col-form-label text-md-right">Special</label>
+                    <div class="col-8 p-0 selectable custom-skill-select" data-skill="special" id="special-select"></div>
+                  </div>
                 </div>
               </div>
               <div class="tab-pane fade" id="custom-special" role="tabpanel">B</div>
             </div>
             <hr>
 
-            <ul class="nav nav-pills mb-3" role="tablist">
+            <!-- <ul class="nav nav-pills mb-3" role="tablist">
               <li class="nav-item">
                 <a class="nav-link active" data-toggle="pill" href="#old-skillA" role="tab">Existing Skill A</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" data-toggle="pill" href="#custom-skillA" role="tab">Custom Skill A</a>
               </li>
-            </ul>
+            </ul> -->
             <div class="tab-content">
               <div class="tab-pane fade show active" id="old-skillA" role="tabpanel">
-                <div class="form-group d-flex pl-0 pr-2 col-md-6">
-                  <label class="col-md-4 col-form-label text-right">Skill A</label>
-                  <div class="col-md-8 p-0 selectable" id="custom-weapon-select"></div>
+                <div class="row">
+                  <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
+                    <label class="col-4 col-form-label text-md-right">Skill A</label>
+                    <div class="col-8 p-0 selectable custom-skill-select" data-skill="skillA" id="custom-skillA-select"></div>
+                  </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="custom-skillA" role="tabpanel">B</div>
+              <div class="tab-pane fade" id="custom-skillA" role="tabpanel">
+
+              </div>
             </div>
             <hr>
 
-            <ul class="nav nav-pills mb-3" role="tablist">
+            <!-- <ul class="nav nav-pills mb-3" role="tablist">
               <li class="nav-item">
                 <a class="nav-link active" data-toggle="pill" href="#old-skillB" role="tab">Existing Skill B</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" data-toggle="pill" href="#custom-skillB" role="tab">Custom Skill B</a>
               </li>
-            </ul>
+            </ul> -->
             <div class="tab-content">
               <div class="tab-pane fade show active" id="old-skillB" role="tabpanel">
-                <div class="form-group d-flex pl-0 pr-2 col-md-6">
-                  <label class="col-md-4 col-form-label text-right">Skill B</label>
-                  <div class="col-md-8 p-0 selectable" id="custom-weapon-select"></div>
+                <div class="row">
+                  <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
+                    <label class="col-4 col-form-label text-md-right">Skill B</label>
+                    <div class="col-8 p-0 selectable custom-skill-select" data-skill="skillB" id="custom-skillB-select"></div>
+                  </div>
                 </div>
               </div>
               <div class="tab-pane fade" id="custom-skillB" role="tabpanel">B</div>
             </div>
             <hr>
 
-            <ul class="nav nav-pills mb-3" role="tablist">
+            <!-- <ul class="nav nav-pills mb-3" role="tablist">
               <li class="nav-item">
                 <a class="nav-link active" data-toggle="pill" href="#old-skillC" role="tab">Existing Skill C</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" data-toggle="pill" href="#custom-skillC" role="tab">Custom Skill C</a>
               </li>
-            </ul>
+            </ul> -->
             <div class="tab-content">
               <div class="tab-pane fade show active" id="old-skillC" role="tabpanel">
-                <div class="form-group d-flex pl-0 pr-2 col-md-6">
-                  <label class="col-md-4 col-form-label text-right">Skill C</label>
-                  <div class="col-md-8 p-0 selectable" id="custom-weapon-select"></div>
+                <div class="row">
+                  <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
+                    <label class="col-4 col-form-label text-md-right">Skill C</label>
+                    <div class="col-8 p-0 selectable custom-skill-select" data-skill="skillC" id="custom-skillC-select"></div>
+                  </div>
                 </div>
               </div>
               <div class="tab-pane fade" id="custom-skillC" role="tabpanel">B</div>
             </div>
             <hr>
 
-            <ul class="nav nav-pills mb-3" role="tablist">
+            <!-- <ul class="nav nav-pills mb-3" role="tablist">
               <li class="nav-item">
                 <a class="nav-link active" data-toggle="pill" href="#old-seal" role="tab">Existing Seal</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" data-toggle="pill" href="#custom-seal" role="tab">Custom Seal</a>
               </li>
-            </ul>
+            </ul> -->
             <div class="tab-content">
               <div class="tab-pane fade show active" id="old-seal" role="tabpanel">
-                <div class="form-group d-flex pl-0 pr-2 col-md-6">
-                  <label class="col-md-4 col-form-label text-right">Seal</label>
-                  <div class="col-md-8 p-0 selectable" id="custom-weapon-select"></div>
+                <div class="row">
+                  <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
+                    <label class="col-4 col-form-label text-md-right">Seal</label>
+                    <div class="col-8 p-0 selectable custom-skill-select" data-skill="seal" id="custom-seal-select"></div>
+                  </div>
                 </div>
               </div>
               <div class="tab-pane fade" id="custom-seal" role="tabpanel">B</div>
             </div>
-            <hr>
-
+            
           </div>
         </div>
       </div>

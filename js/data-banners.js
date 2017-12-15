@@ -3,6 +3,20 @@ const BANNERS = [
     "date": "December 2017",
     "banners": [
       {
+        "name": "Winter's Envoy",
+        "latestHeroesDate": "",
+        "startDate": "Dec 18, 2017",
+        "focusHeroes": [ "Lissa (Winter's Envoy)", "Chrom (Winter's Envoy)", "Robin (M) (Winter's Envoy)", "Tharja (Winter's Envoy)" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
+      {
         "name": "Tana and Amelia's Battle",
         "latestHeroesDate": "",
         "startDate": "Dec 14, 2017",
