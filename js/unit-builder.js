@@ -351,20 +351,16 @@ $(document).ready(() => {
     return weapons;
   }
 
-  function getSkills(hero, skills, filterExclusives = true) {
+  function getSkills(hero, skills, nameExclusive = true) {
     let res = [];
     for (let i = 0; i < skills.length; i++) {
-      if (filterExclusives) {
-        if (includeSkill(hero, skills[i])) {
-          res.push(skills[i]);
-        }
-      } else {
+      if (includeSkill(hero, skills[i], nameExclusive)) {
         res.push(skills[i]);
       }
     }
     return res;
   }
-  function includeSkill(hero, skill) {
+  function includeSkill(hero, skill, nameExclusive = true) {
     let hit;
     if (skill.exclude) {
       for (let i = 0; i < skill.exclude.length; i++) {
@@ -382,6 +378,9 @@ $(document).ready(() => {
       for (let i = 0; i < skill.include.length; i++) {
         hit = true;
         for (let cond in skill.include[i]) {
+          if (!nameExclusive && cond === 'name') {
+            continue;
+          }
           if (skill.include[i][cond] !== hero[cond]) {
             hit = false;
           }
@@ -753,17 +752,17 @@ $(document).ready(() => {
     }
 
     $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="assist"]')
-        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(null, SKILL_ASSIST, false)));
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(customHero, SKILL_ASSIST, false)));
     $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="seal"]')
-        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(null, SKILL_SEAL, false)));
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(customHero, SKILL_SEAL, false)));
     $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="skillA"]')
-        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(null, SKILL_A, false)));
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(customHero, SKILL_A, false)));
     $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="skillB"]')
-        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(null, SKILL_B, false)));
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(customHero, SKILL_B, false)));
     $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="skillC"]')
-        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(null, SKILL_C, false)));
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(customHero, SKILL_C, false)));
     $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="special"]')
-        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(null, SKILL_SPECIAL, false)));
+        .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(customHero, SKILL_SPECIAL, false)));
     $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="refine"]')
         .selectable('clear').selectable('disable');
   }
