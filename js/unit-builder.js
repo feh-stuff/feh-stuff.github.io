@@ -154,13 +154,8 @@ $(document).ready(() => {
     image: new Image(),
     name: "",
     title: "",
-    stats: {
-      hp: 0,
-      atk: 0,
-      spd: 0,
-      def: 0,
-      res: 0
-    },
+    stats: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+    processedStats: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
     moveType: "",
     colorType: "",
     weaponType: "",
@@ -774,6 +769,8 @@ $(document).ready(() => {
   }
 
   function drawCustomHero() {
+    processCustomHero();
+
     if (customHero.support) {
       ctx.drawImage(imgBack, 540, 0, 540, 960, 0, 0, 540, 960);
     } else {
@@ -793,8 +790,36 @@ $(document).ready(() => {
     }
 
     drawNameTitle(customHero.name, customHero.title);
-    drawMergesStats(customHero.merges, customHero.stats);
+    drawMergesStats(customHero.merges, customHero.processedStats);
     drawWeaponMoveTypeIcons(customHero.colorType, customHero.weaponType, customHero.moveType);
     drawSkills(customHero.skills);
   }
+
+  function processCustomHero() {
+    for (stat in customHero.stats) {
+      customHero.processedStats[stat] = customHero.stats[stat];
+    }
+
+    for (let skill in customHero.skills) {
+      if (customHero.skills[skill].damage) {
+        customHero.processedStats.atk += customHero.skills[skill].damage;
+      }
+      for (stat in customHero.skills[skill].stats) {
+        customHero.processedStats[stat] += customHero.skills[skill].stats[stat];
+      }
+    }
+
+    if (customHero.support) {
+      customHero.processedStats.hp += 5;
+      customHero.processedStats.atk += 2;
+      customHero.processedStats.spd += 2;
+      customHero.processedStats.def += 2;
+      customHero.processedStats.res += 2;
+    }
+
+    for (stat in customHero.stats) {
+      customHero.processedStats[stat] = Math.max(0, customHero.processedStats[stat]);
+    }
+  }
+
 });
