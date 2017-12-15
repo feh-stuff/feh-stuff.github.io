@@ -753,11 +753,10 @@ $(document).ready(() => {
   }
 
   function setupCustomSkillOptions() {
-    if ($(ELEMENTS.CUSTOM_MOVE_TYPE_SELECT).find('.btn').is(':disabled') ||
-        $(ELEMENTS.CUSTOM_WEAPON_TYPE_SELECT).find('.btn').is(':disabled')) {
-
+    if (customHero.moveType.length === 0 || customHero.weaponType.length === 0) {
       return;
     }
+
     $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="assist"]')
         .selectable('selectOptions', [EMPTY_SKILL].concat(getSkills(null, SKILL_ASSIST, false)));
     $(ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="seal"]')
