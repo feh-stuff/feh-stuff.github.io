@@ -181,6 +181,7 @@ $(document).ready(() => {
   let imgSkills;
   let imgFront;
   let imgBack;
+  let activeTab = 'main';
   init();
 
   function init() {
@@ -250,14 +251,17 @@ $(document).ready(() => {
   function onTabChange(event) {
     if ($(this).data('val') === 'custom-unit') {
       drawCustomHero();
+      activeTab = 'custom';
     } else {
       drawHero(selectedHero);
+      activeTab = 'main';
     }
   }
 
   function onDownload(event) {
+    let heroName = activeTab === 'main' ? selectedHero.data.name : customHero.name;
     $(this).attr('href', canvas.toDataURL());
-    $(this).attr('download', 'FEH Unit Builder - ' + selectedHero.data.name + '.png');
+    $(this).attr('download', 'FEH Unit Builder - ' + heroName + '.png');
   }
 
   // FEH Heroes
