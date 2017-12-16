@@ -209,6 +209,9 @@ body {
   position: relative;
   background-color: #ffffff;
   color: #000000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .selectable .dropdown-toggle:focus {
   color: #ffffff;
@@ -256,6 +259,24 @@ body {
   height: 960px;
 }
 
+.skill-info-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #b0bec5;
+  color: white;
+  margin-top: 8px;
+  line-height: 1.5;
+  border-radius: 50%;
+  margin-left: 4px;
+  font-size: small;
+  text-align: center;
+}
+.skill-info-icon::after {
+  content: "i";
+}
+.skill-info-icon:hover {
+  background-color: #607d8b;
+}
 .skill-info {
   color: #777777;
 }

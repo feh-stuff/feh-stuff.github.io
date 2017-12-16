@@ -13,6 +13,7 @@ $(document).ready(() => {
     SKILL_C_SELECT: '#skillC-select',
     SEAL_SELECT: '#seal-select',
     SKILL_INFO: '.skill-info',
+    SKILL_INFO_ICON: '.skill-info-icon',
     SUPPORT_CHECKS: '[name="support"]',
     SUPPORT_ON: '#support-yes',
     IV_SELECT: '#iv-select',
@@ -293,6 +294,7 @@ $(document).ready(() => {
     $(ELEMENTS.REFINE_SELECT).selectable('clear').selectable('disable');
     $(ELEMENTS.IV_SELECT).selectable('enable');
     $(ELEMENTS.SKILL_INFO).empty();
+    $(ELEMENTS.SKILL_INFO_ICON).addClass('d-none');
   }
 
   function onSupportChange(event) {
@@ -311,12 +313,18 @@ $(document).ready(() => {
         $(ELEMENTS.REFINE_SELECT).selectable('clear').selectable('disable');
       }
       selectedHero.skills.refine = EMPTY_SKILL;
-      $('.skill-info[data-skill="weapon"]').html(getSkillInfoHtml(skillType, skill));
-    } else if (skillType === 'refine') {
-      $('.skill-info[data-skill="weapon"]').html(getSkillInfoHtml(skillType, skill));
-    } else {
-      $(`.skill-info[data-skill="${skillType}"]`).html(getSkillInfoHtml(skillType, skill));
+      $('.skill-info-icon[data-skill="refine"]').addClass('d-none');
     }
+
+    $(`.skill-info-icon[data-skill="${skillType}"]`)
+      .toggleClass('d-none', skill.name === '-')
+      .popover('dispose')
+      .popover({
+        trigger: 'hover click',
+        title: skill.name,
+        html: true,
+        content: getSkillInfoHtml(skillType, skill)
+      });
     selectedHero.skills[skillType] = skill;
     drawHero(selectedHero);
   }
@@ -405,10 +413,10 @@ $(document).ready(() => {
 
     if (skillType === 'refine') {
       if (skill.name === '-') {
-        html += `<span>SP Cost: ${selectedHero.skills.weapon.spCost}</span>`;
+        html += `<span>SP Cost: 0</span>`;
       } else {
         let cost = REFINE_SP_COST[skill.cost || 0];
-        html += `<span>SP Cost: ${selectedHero.skills.weapon.spCost + cost.spCost}</span>`;
+        html += `<span>SP Cost: ${cost.spCost}</span>`;
         if (cost.arenaMedals) {
           html += `<span>Arena Medals: ${cost.arenaMedals}</span>`;
         }
@@ -425,7 +433,7 @@ $(document).ready(() => {
       html += `<span>SP Cost: ${skill.spCost}</span>`;
     }
 
-    return (html ? `<p class="skill-cost">${html}</p>` : '') + `<p>Effect: ${skill.effect}</p>`;
+    return (html ? `<p class="skill-cost">${html}</p>` : '') + `<p>${skill.effect}</p>`;
   }
 
   function processHero(hero) {

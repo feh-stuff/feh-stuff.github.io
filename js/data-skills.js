@@ -1220,7 +1220,7 @@ let SKILL_REFINED_WEAPONS = {
     {"name": "+Res", "icon": "31-12", "cost": 1, "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack.", "stats": {"hp": 5, "res": 4}}
   ],
   "Mystletainn": [
-    {"name": "Fury", "icon": "32-0", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1). Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat.", "stats": {"hp": 3}},
+    {"name": "Fury", "icon": "32-0", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1). Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat.", "stats": {"hp": 3, "atk": 3, "spd": 3, "def": 3, "res": 3}},
     {"name": "+Atk", "icon": "31-9", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "atk": 2}},
     {"name": "+Spd", "icon": "31-10", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "spd": 3}},
     {"name": "+Def", "icon": "31-11", "cost": 1, "effect": "Accelerates Special trigger (cooldown count-1).	", "stats": {"hp": 5, "def": 4}},
