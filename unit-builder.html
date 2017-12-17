@@ -51,11 +51,18 @@
             <div class="row">
               <label class="col-4 col-md-2 col-form-label text-md-right">IV</label>
               <div class="col-7 col-md-3 p-0 selectable" id="iv-select"></div>
-              <label class="col-4 col-md-2 mt-4 mt-md-0 offset-md-1 col-form-label text-md-right">Merges</label>
+              <label class="col-12 col-md-3 offset-4 offset-md-0 ml-md-3 custom-control custom-checkbox col-form-label">
+                <input type="checkbox" class="custom-control-input" id="iv-show">
+                <span class="custom-control-indicator mt-2"></span>
+                <span class="custom-control-description">Show IVs</span>
+              </label>
+            </div>
+            <br>
+            <div class="row">
+              <label class="col-4 col-md-2 mt-4 mt-md-0 col-form-label text-md-right">Merges</label>
               <input class="col-7 col-md-3 mt-4 mt-md-0 form-control" type="number" min="0" max="10" value="0" id="hero-merges">
             </div>
             <br>
-
             <div class="row form-check">
               <label class="col-4 col-md-2 col-form-legend text-md-right">S. Support</label>
               <label class="custom-control custom-radio">
@@ -69,6 +76,7 @@
                 <span class="custom-control-description">No</span>
               </label>
             </div>
+
             <hr>
 
             <div class="row">

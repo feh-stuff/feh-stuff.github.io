@@ -43,6 +43,7 @@ body {
 .summon-circle-container {
   width: 468px;
   border: none;
+  height: fit-content;
 }
 .summon-circle {
   background-image: url('../img/assets/summon-circle.jpg');

@@ -17,6 +17,7 @@ $(document).ready(() => {
     SUPPORT_CHECKS: '[name="support"]',
     SUPPORT_ON: '#support-yes',
     IV_SELECT: '#iv-select',
+    IV_SHOW: '#iv-show',
     DOWNLOAD: '#download-img',
     UPLOAD_HERO: '#custom-hero-upload',
     TAB_SELECT: '.build-type',
@@ -62,6 +63,13 @@ $(document).ready(() => {
       green: [909, 514],
       blue: [941, 514],
       red: [973, 514]
+    },
+    STATS: {
+      hp: 604,
+      atk: 640,
+      spd: 678,
+      def: 715,
+      res: 752
     }
   };
   const FEH_FONT = new FontFace('FehFont', 'url(font/feh-font.ttf)');
@@ -231,8 +239,9 @@ $(document).ready(() => {
     $(ELEMENTS.IV_SELECT).on('select', onIvChange);
     $(ELEMENTS.HERO_MERGES).on('change', onMergesChange);
     $(ELEMENTS.SUPPORT_CHECKS).on('change', onSupportChange);
-    $(ELEMENTS.DOWNLOAD).on('click', onDownload);
+    $(ELEMENTS.IV_SHOW).on('change', onShowIv);
 
+    $(ELEMENTS.DOWNLOAD).on('click', onDownload);
     $(ELEMENTS.TAB_SELECT).on('click', onTabChange);
 
     $(ELEMENTS.UPLOAD_HERO).on('change', onUploadHeroImg);
@@ -333,6 +342,9 @@ $(document).ready(() => {
   function onIvChange(event) {
     selectedHero.iv = $(this).data('val');
     drawHero(selectedHero);
+  }
+  function onShowIv(event) {
+    drawHero(selectedHero, false);
   }
 
   function onMergesChange(event) {
@@ -492,8 +504,10 @@ $(document).ready(() => {
   	return statIncrease;
   }
 
-  function drawHero(hero) {
-    processHero(hero);
+  function drawHero(hero, doProcess = true) {
+    if (doProcess) {
+      processHero(hero);
+    }
     loadFiles([hero.data.assets.main]).then(imgs => {
       if (hero.support) {
         ctx.drawImage(imgBack, 540, 0, 540, 960, 0, 0, 540, 960);
@@ -506,6 +520,9 @@ $(document).ready(() => {
         ctx.drawImage(imgSkills, 845, 0, 210, 223, 420, 430, 108, 115);
       }
 
+      if ($(ELEMENTS.IV_SHOW).is(':checked')) {
+        drawIv(hero.iv);
+      }
       drawNameTitle(hero.data.shortName || hero.data.name, hero.data.title);
       drawWeaponMoveTypeIcons(hero.data.colorType, hero.data.weaponType, hero.data.moveType);
       drawMergesStats(hero.merges, hero.stats);
@@ -553,11 +570,11 @@ $(document).ready(() => {
         IMAGES.FONT.green[1], 32, 40, 186, 558, 15, 19);
     }
 
-    drawStats(stats.hp, 147, 604);
-    drawStats(stats.atk, 147, 640);
-    drawStats(stats.spd, 147, 678);
-    drawStats(stats.def, 147, 715);
-    drawStats(stats.res, 147, 752);
+    drawStats(stats.hp, 147, IMAGES.STATS.hp);
+    drawStats(stats.atk, 147, IMAGES.STATS.atk);
+    drawStats(stats.spd, 147, IMAGES.STATS.spd);
+    drawStats(stats.def, 147, IMAGES.STATS.def);
+    drawStats(stats.res, 147, IMAGES.STATS.res);
   }
 
   function drawStats(value, x, y) {
@@ -648,6 +665,17 @@ $(document).ready(() => {
       ctx.fillStyle = '#92ff4f';
     }
     ctx.fillText(skills.weapon.name, 318, 619);
+  }
+
+  function drawIv(iv) {
+    if (iv.boon === '-') {
+      return;
+    }
+
+    ctx.drawImage(imgSkills, IMAGES.FONT.green[0],
+      IMAGES.FONT.green[1] + 400, 32, 40, 60, IMAGES.STATS[iv.boon], 15, 19);
+    ctx.drawImage(imgSkills, IMAGES.FONT.red[0],
+      IMAGES.FONT.red[1] + 440, 32, 40, 60, IMAGES.STATS[iv.bane], 15, 19);
   }
 
   function loadFiles(urls, loadFont) {
