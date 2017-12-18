@@ -5819,7 +5819,7 @@ const HEROES = [
   },
   {
     "name": "Tharja (Winter's Envoy)",
-    "title": "Normal Girl",
+    "title": "\"Normal Girl\"",
     "weaponType": "Tome",
     "moveType": "Armored",
     "releaseDate": "Dec 18, 2017",
