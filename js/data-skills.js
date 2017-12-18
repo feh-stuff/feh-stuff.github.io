@@ -503,7 +503,7 @@ let SKILL_B = [
   { "name": "B Tomebreaker 1", "spCost": 50, "icon": "9-9", "exclude": [{"colorType": "Red"}], "effect": "If unit's HP ≥ 90% in combat against a blue tome user, unit makes a follow-up attack and foe cannot." },
   { "name": "B Tomebreaker 2", "spCost": 100, "icon": "9-10", "exclude": [{"colorType": "Red"}], "effect": "If unit's HP ≥ 70% in combat against a blue tome user, unit makes a follow-up attack and foe cannot." },
   { "name": "B Tomebreaker 3", "spCost": 200, "icon": "9-11", "exclude": [{"colorType": "Red"}], "effect": "If unit's HP ≥ 50% in combat against a blue tome user, unit makes a follow-up attack and foe cannot." },
-  { "name": "Beorc's Blessing", "spCost": 300, "include": [{"name": "Ike (Brave Heroes)"}], "effect": "If foe is cavalry or flier type, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat. (Skill cannot be inherited.)" },
+  { "name": "Beorc's Blessing", "spCost": 300, "icon": "26-4", "include": [{"name": "Ike (Brave Heroes)"}], "effect": "If foe is cavalry or flier type, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat. (Skill cannot be inherited.)" },
   { "name": "Blaze Dance 1", "spCost": 50, "icon": "27-8", "exclude": [{"weaponType": "Staff"}], "effect": "If Sing or Dance is used, target also granted Atk+2." },
   { "name": "Blaze Dance 2", "spCost": 100, "icon": "27-9", "exclude": [{"weaponType": "Staff"}], "effect": "If Sing or Dance is used, target also granted Atk+3." },
   { "name": "Blaze Dance 3", "spCost": 200, "icon": "27-10", "exclude": [{"weaponType": "Staff"}], "effect": "If Sing or Dance is used, target also granted Atk+4." },
