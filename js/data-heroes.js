@@ -1013,12 +1013,24 @@ const HEROES = [
     "releaseDate": "Dec 18, 2017",
     "assets": {
       "portrait": "img/heroes-portrait/75px-Icon_Portrait_Chrom (Winter's Envoy).png",
-      "main": "img/heroes-main/Chrom.png"
+      "main": "img/heroes-main/Chrom (Winter's Envoy).png"
     },
-    "skills": [],
+    "skills": [
+      { "name": "Iron Axe", "rarity": 5 },
+      { "name": "Steel Axe", "rarity": 5 },
+      { "name": "Sack o' Gifts", "rarity": 5 },
+      { "name": "Sack o' Gifts+", "rarity": 5 },
+      { "name": "Pivot", "rarity": 5 },
+      { "name": "Brazen Atk/Def 1", "rarity": 5 },
+      { "name": "Brazen Atk/Def 2", "rarity": 5 },
+      { "name": "Brazen Atk/Def 3", "rarity": 5 },
+      { "name": "Wary Fighter 1", "rarity": 5 },
+      { "name": "Wary Fighter 2", "rarity": 5 },
+      { "name": "Wary Fighter 3", "rarity": 5 }
+    ],
     "stats": {
-      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
-      "level40": { "hp": [ 0, 0, 0 ], "atk": [ 0, 0, 0 ], "spd": [ 0, 0, 0 ], "def": [ 0, 0, 0 ], "res": [ 0, 0, 0 ] }
+      "level1": { "hp": 25, "atk": 12, "spd": 4, "def": 9, "res": 5 },
+      "level40": { "hp": [ 48, 51, 54 ],	"atk": [ 37, 40, 43 ], "spd":	[ 16, 19, 22 ], "def": [ 32, 35, 38 ], "res":	[ 26, 29, 32 ] }
     },
     "shortName": "Chrom",
     "rarity5": true,
@@ -3205,12 +3217,25 @@ const HEROES = [
     "releaseDate": "Dec 18, 2017",
     "assets": {
       "portrait": "img/heroes-portrait/75px-Icon_Portrait_Lissa (Winter's Envoy).png",
-      "main": "img/heroes-main/Lissa.png"
+      "main": "img/heroes-main/Lissa (Winter's Envoy).png"
     },
-    "skills": [],
+    "skills": [
+      { "name": "Iron Axe", "rarity": 5 },
+      { "name": "Steel Axe", "rarity": 5 },
+      { "name": "Handbell", "rarity": 5 },
+      { "name": "Handbell+", "rarity": 5 },
+      { "name": "Glowing Ember", "rarity": 5 },
+      { "name": "Bonfire", "rarity": 5 },
+      { "name": "Bold Fighter 1", "rarity": 5 },
+      { "name": "Bold Fighter 2", "rarity": 5 },
+      { "name": "Bold Fighter 3", "rarity": 5 },
+      { "name": "Fortify Def 1", "rarity": 5 },
+      { "name": "Fortify Def 2", "rarity": 5 },
+      { "name": "Fortify Armor", "rarity": 5 }
+    ],
     "stats": {
-      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
-      "level40": { "hp": [ 0, 0, 0 ], "atk": [ 0, 0, 0 ], "spd": [ 0, 0, 0 ], "def": [ 0, 0, 0 ], "res": [ 0, 0, 0 ] }
+      "level1": { "hp": 21, "atk": 9, "spd": 8, "def": 9, "res": 8 },
+      "level40": { "hp": [ 39, 43, 46 ], "atk": [ 30, 33, 36 ], "spd": [ 26, 30, 33 ], "def": [ 32, 35, 38 ], "res": [ 31, 34, 37 ] }
     },
     "shortName": "Lissa",
     "rarity5": true,
@@ -4768,12 +4793,25 @@ const HEROES = [
     "releaseDate": "Dec 18, 2017",
     "assets": {
       "portrait": "img/heroes-portrait/75px-Icon_Portrait_Robin (Winter's Envoy).png",
-      "main": "img/heroes-main/Robin (M).png"
+      "main": "img/heroes-main/Robin (M) (Winter's Envoy).png"
     },
-    "skills": [],
+    "skills": [
+      { "name": "Iron Lance", "rarity": 5 },
+      { "name": "Steel Lance", "rarity": 5 },
+      { "name": "Tannenboom!", "rarity": 5 },
+      { "name": "Tannenboom!+", "rarity": 5 },
+      { "name": "Reciprocal Aid", "rarity": 5 },
+      { "name": "Brazen Atk/Spd 1", "rarity": 5 },
+      { "name": "Brazen Atk/Spd 2", "rarity": 5 },
+      { "name": "Brazen Atk/Spd 3", "rarity": 5 },
+      { "name": "Armor March 1", "rarity": 5 },
+      { "name": "Armor March 2", "rarity": 5 },
+      { "name": "Armor March 3", "rarity": 5 }
+    ],
     "stats": {
-      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
-      "level40": { "hp": [ 0, 0, 0 ], "atk": [ 0, 0, 0 ], "spd": [ 0, 0, 0 ], "def": [ 0, 0, 0 ], "res": [ 0, 0, 0 ] }
+      "level1": { "hp": 23, "atk": 9, "spd": 8, "def": 9, "res": 6 },
+      "level40": { "hp": [ 41, 45, 48 ], "atk": [ 32, 35, 38 ], "spd": [ 31, 34, 37 ],
+      "def": [ 32, 35, 38 ], "res": [ 22, 25, 29 ] }
     },
     "shortName": "Robin",
     "rarity5": true,
@@ -5463,6 +5501,7 @@ const HEROES = [
       "level1": { "hp": 18, "atk": 10, "spd": 9, "def": 6, "res": 5 },
       "level40": { "hp": [ 34, 37, 41 ], "atk": [ 35, 38, 41 ], "spd": [ 32, 35, 38 ], "def": [ 24, 28, 31 ], "res": [ 21, 24, 28 ] }
     },
+    "rarity4": true,
     "rarity5": true,
     "colorType": "Red"
   },
@@ -5786,12 +5825,26 @@ const HEROES = [
     "releaseDate": "Dec 18, 2017",
     "assets": {
       "portrait": "img/heroes-portrait/75px-Icon_Portrait_Tharja (Winter's Envoy).png",
-      "main": "img/heroes-main/Tharja.png"
+      "main": "img/heroes-main/Tharja (Winter's Envoy).png"
     },
-    "skills": [],
+    "skills": [
+      { "name": "Flux", "rarity": 5 },
+      { "name": "Ruin", "rarity": 5 },
+      { "name": "Candelabra", "rarity": 5 },
+      { "name": "Candelabra+", "rarity": 5 },
+      { "name": "Chilling Wind", "rarity": 5 },
+      { "name": "Iceberg", "rarity": 5 },
+      { "name": "Close Counter", "rarity": 5 },
+      { "name": "Vengeful Fighter 1", "rarity": 5 },
+      { "name": "Vengeful Fighter 2", "rarity": 5 },
+      { "name": "Vengeful Fighter 3", "rarity": 5 },
+      { "name": "R Tome Valor 1", "rarity": 5 },
+      { "name": "R Tome Valor 2", "rarity": 5 },
+      { "name": "R Tome Valor 3", "rarity": 5 }
+    ],
     "stats": {
-      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
-      "level40": { "hp": [ 0, 0, 0 ], "atk": [ 0, 0, 0 ], "spd": [ 0, 0, 0 ], "def": [ 0, 0, 0 ], "res": [ 0, 0, 0 ] }
+      "level1": { "hp": 19, "atk": 10, "spd": 5, "def": 8, "res": 10 },
+      "level40": { "hp": [ 40, 43, 46 ], "atk": [ 31, 34, 37 ], "spd": [ 14, 18, 21 ], "def": [ 31, 34, 37], "res": [ 33, 36, 39 ] }
     },
     "shortName": "Tharja",
     "rarity5": true,

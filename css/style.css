@@ -288,3 +288,6 @@ body {
   display: inline-block;
   margin-right: 50px;
 }
+.skill-header {
+  width: 80px;
+}
