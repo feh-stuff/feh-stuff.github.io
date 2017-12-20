@@ -1232,7 +1232,31 @@ let SKILL_REFINED_WEAPONS = {
     {"name": "+Spd", "icon": "31-10", "effect": "Grants Res+7 when unit is attacked.", "stats": {"hp": 5, "spd": 3}},
     {"name": "+Def", "icon": "31-11", "effect": "Grants Res+7 when unit is attacked.", "stats": {"hp": 5, "def": 4}},
     {"name": "+Res", "icon": "31-12", "effect": "Grants Res+7 when unit is attacked.", "stats": {"hp": 5, "res": 4}}
-    ],
+  ],
+  "Handbell+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Sack o' Gifts+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Tannenboom!+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 5, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 5, "spd": 3}},
+    {"name": "+Def", "icon": "31-11", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 5, "def": 4}},
+    {"name": "+Res", "icon": "31-12", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 5, "res": 4}}
+  ],
+  "Candelabra+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 2, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 2, "atk": 1, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 2, "atk": 1, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat.", "stats": {"hp": 2, "atk": 1, "res": 3}}
+  ],
 
   // prf weapons
   "Sol Katti": [

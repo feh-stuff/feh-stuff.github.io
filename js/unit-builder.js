@@ -30,9 +30,8 @@ $(document).ready(() => {
     CUSTOM_STAT_TOTAL: '#custom-stat-total',
     CUSTOM_SKILL_SELECT: '.custom-skill-select',
     CUSTOM_WEAPON_SELECT: '#custom-weapon-select',
-    // CUSTOM_REFINE_SELECT: '#custom-weapon-select',
-    // CUSTOM__SELECT: '#custom-weapon-select'
-
+    CUSTOM_CUSTOM_SKILL_INPUT: '.custom-skill-input',
+    CUSTOM_SKILL_TOGGLE: '[data-toggle="pill"]'
   };
   const IMAGES = {
     FRONT: 'img/assets/unit-edit-front.png',
@@ -70,10 +69,28 @@ $(document).ready(() => {
       spd: 678,
       def: 715,
       res: 752
+    },
+    SKILLS_TEXT: {
+      weapon: 619,
+      assist: 656,
+      special: 694,
+      skillA: 731,
+      skillB: 768,
+      skillC: 804,
+      seal: 841
+    },
+    SKILLS_ICON: {
+      weapon: 596,
+      assist: 633,
+      special: 669,
+      skillA: 707,
+      skillB: 743,
+      skillC: 780,
+      seal: 818
     }
   };
   const FEH_FONT = new FontFace('FehFont', 'url(font/feh-font.ttf)');
-  const EMPTY_SKILL = { name: '-', effect: '' };
+  const EMPTY_SKILL = { name: '-', effect: '', icon: '' };
   const IV = [
     {boon: '-', bane: '-'},
     {boon: 'hp', bane: 'atk'},
@@ -180,6 +197,16 @@ $(document).ready(() => {
       skillB: EMPTY_SKILL,
       skillC: EMPTY_SKILL,
       seal: EMPTY_SKILL
+    },
+    customSkills: {
+      weapon: getEmptySkill(),
+      refine: getEmptySkill(),
+      assist: getEmptySkill(),
+      special: getEmptySkill(),
+      skillA: getEmptySkill(),
+      skillB: getEmptySkill(),
+      skillC: getEmptySkill(),
+      seal: getEmptySkill()
     }
   };
   let imgSkills;
@@ -251,6 +278,8 @@ $(document).ready(() => {
     $(ELEMENTS.CUSTOM_MOVE_TYPE_SELECT).on('select', onCustomMoveTypeSelect);
     $(ELEMENTS.CUSTOM_SKILL_SELECT).on('select', onCustomSkillChange);
     $(ELEMENTS.CUSTOM_STAT_CONTROL).on('change', onCustomStatChange);
+    $(ELEMENTS.CUSTOM_CUSTOM_SKILL_INPUT).on('change', onCustomCustomSkillChange);
+    $(ELEMENTS.CUSTOM_SKILL_TOGGLE).on('shown.bs.tab', onCustomSkillToggle);
   }
 
   function onTabChange(event) {
@@ -600,6 +629,7 @@ $(document).ready(() => {
       IMAGES.FONT.yellow[1] + digit * 40, 32, 40, x + 42, y, 15, 19);
   }
 
+  //TODO Remove drawSkills, change to drawSkills2
   function drawSkills(skills) {
     ctx.drawImage(imgSkills, 130, 0, 65, 67, 275, 633, 34, 34);
     ctx.drawImage(imgSkills, 195, 0, 65, 67, 275, 669, 34, 34);
@@ -611,24 +641,28 @@ $(document).ready(() => {
     } else {
       ctx.drawImage(imgSkills, 65, 0, 65, 67, 275, 596, 34, 34);
     }
+
     if (skills.skillA.icon) {
       iconXY = skills.skillA.icon.split('-');
       ctx.drawImage(imgSkills, iconXY[1] * 65, iconXY[0] * 67, 65, 67, 275, 707, 34, 34);
     } else {
       ctx.drawImage(imgSkills, 0, 0, 65, 67, 275, 707, 36, 36);
     }
+
     if (skills.skillB.icon) {
       iconXY = skills.skillB.icon.split('-');
       ctx.drawImage(imgSkills, iconXY[1] * 65, iconXY[0] * 67, 65, 67, 275, 743, 34, 34);
     } else {
       ctx.drawImage(imgSkills, 0, 0, 65, 67, 275, 743, 36, 36);
     }
+
     if (skills.skillC.icon) {
       iconXY = skills.skillC.icon.split('-');
       ctx.drawImage(imgSkills, iconXY[1] * 65, iconXY[0] * 67, 65, 67, 275, 780, 34, 34);
     } else {
       ctx.drawImage(imgSkills, 0, 0, 65, 67, 275, 780, 36, 36);
     }
+
     if (skills.seal.icon) {
       iconXY = skills.seal.icon.split('-');
       ctx.drawImage(imgSkills, iconXY[1] * 65, iconXY[0] * 67, 65, 67, 275, 818, 34, 34);
@@ -665,6 +699,69 @@ $(document).ready(() => {
       ctx.fillStyle = '#92ff4f';
     }
     ctx.fillText(skills.weapon.name, 318, 619);
+  }
+
+  function drawSkills2(skills) {
+    ctx.drawImage(imgSkills, 130, 0, 65, 67, 275, 633, 34, 34);
+    ctx.drawImage(imgSkills, 195, 0, 65, 67, 275, 669, 34, 34);
+
+    if (skills.refine.icon) {
+      drawIcon(skills.refine.icon, IMAGES.SKILLS_ICON.weapon);
+    } else if (skills.weapon.icon) {
+      drawIcon(skills.weapon.icon, IMAGES.SKILLS_ICON.weapon);
+    } else {
+      drawIcon('0-1', IMAGES.SKILLS_ICON.weapon);
+    }
+
+    for (let skill in skills) {
+      if (skill === 'refine' || skill === 'weapon' || skill === 'assist' || skill === 'special') {
+        continue;
+      }
+      if (skills[skill].icon) {
+        drawIcon(skills[skill].icon, IMAGES.SKILLS_ICON[skill]);
+      } else {
+        drawIcon('0-0', IMAGES.SKILLS_ICON[skill]);
+      }
+    }
+    //TODO
+
+    ctx.drawImage(imgSkills, 845, 476, 34, 38, 295, 723, 19, 21);
+    ctx.drawImage(imgSkills, 879, 476, 34, 38, 295, 759, 19, 21);
+    ctx.drawImage(imgSkills, 913, 476, 34, 38, 295, 795, 19, 21);
+    ctx.drawImage(imgSkills, 947, 476, 34, 38, 295, 832, 19, 21);
+
+    ctx.textAlign="start";
+    ctx.font = "17px FehFont";
+    ctx.fillStyle = '#ffffff';
+    ctx.lineWidth = 4;
+
+    ctx.strokeText(skills.weapon.name, 318, 619);
+    ctx.strokeText(skills.assist.name, 318, 656);
+    ctx.strokeText(skills.special.name, 318, 694);
+    ctx.strokeText(skills.skillA.name, 318, 731);
+    ctx.strokeText(skills.skillB.name, 318, 768);
+    ctx.strokeText(skills.skillC.name, 318, 804);
+    ctx.strokeText(skills.seal.name, 318, 841);
+
+    ctx.fillText(skills.assist.name, 318, 656);
+    ctx.fillText(skills.special.name, 318, 694);
+    ctx.fillText(skills.skillA.name, 318, 731);
+    ctx.fillText(skills.skillB.name, 318, 768);
+    ctx.fillText(skills.skillC.name, 318, 804);
+    ctx.fillText(skills.seal.name, 318, 841);
+
+    if (skills.refine.name !== '-' || skills.weapon.icon) {
+      ctx.fillStyle = '#92ff4f';
+    }
+    ctx.fillText(skills.weapon.name, 318, 619);
+  }
+  function drawIcon(icon, posY, posX = 275, sizeY = 34, sizeX = 34) {
+    if (typeof icon === 'string') {
+      let xy = icon.split('-');
+      ctx.drawImage(imgSkills, xy[1] * 65, xy[0] * 67, 65, 67, posX, posY, sizeX, sizeY);
+    } else {
+      ctx.drawImage(icon, 0, 0, icon.width, icon.height, posX, posY, sizeX, sizeY)
+    }
   }
 
   function drawIv(iv) {
@@ -713,6 +810,14 @@ $(document).ready(() => {
     $this.data('val', $opt.data('val'));
   }
 
+  function getEmptySkill() {
+    return {
+      name: '-',
+      effect: '',
+      stats: {},
+      icon: ''
+    };
+  }
 
   // Custom Hero
 
@@ -782,6 +887,37 @@ $(document).ready(() => {
     drawCustomHero();
   }
 
+  function onCustomCustomSkillChange(event) {
+    let skillType = $(this).closest('[data-skill-type]').data('skill-type');
+    let skillAttr = $(this).data('control');
+
+    if (skillAttr === 'stats') {
+      customHero.customSkills[skillType][skillAttr][$(this).data('stats')] = parseInt($(this).val());
+      drawCustomHero();
+    } else if (skillAttr === 'icon') {
+      if ($(this)[0].files && $(this)[0].files[0]) {
+        var fileReader = new FileReader();
+        fileReader.onload = function(e) {
+          customHero.customSkills[skillType].icon = new Image();
+          customHero.customSkills[skillType].crossOrigin = 'anonymous';
+          customHero.customSkills[skillType].icon.src = e.target.result;
+          customHero.customSkills[skillType].icon.onload = () => drawCustomHero();
+        };
+        fileReader.readAsDataURL($(this)[0].files[0]);
+      } else {
+        customHero.customSkills[skillType].icon = '';
+        drawCustomHero();
+      }
+    } else {
+      customHero.customSkills[skillType][skillAttr] = $(this).val();
+      drawCustomHero();
+    }
+  }
+
+  function onCustomSkillToggle(event) {
+    drawCustomHero();
+  }
+
   function setupCustomSkillOptions() {
     if (customHero.moveType.length === 0 || customHero.weaponType.length === 0) {
       return;
@@ -827,7 +963,23 @@ $(document).ready(() => {
     drawNameTitle(customHero.name, customHero.title);
     drawMergesStats(customHero.merges, customHero.processedStats);
     drawWeaponMoveTypeIcons(customHero.colorType, customHero.weaponType, customHero.moveType);
-    drawSkills(customHero.skills);
+    // drawSkills(customHero.skills);
+    drawCustomHeroSkills();
+  }
+
+  function drawCustomHeroSkills() {
+    let activeTab;
+    let selectedSkills = {};
+
+    for (skill in customHero.skills) {
+      activeTab =  $(`.tab-content[data-skill-type="${skill === 'refine' ? 'weapon' : skill}"] > .active`);
+      if (activeTab.data('tab-type') === 'default') {
+        selectedSkills[skill] = customHero.skills[skill];
+      } else {
+        selectedSkills[skill] = customHero.customSkills[skill];
+      }
+    }
+    drawSkills2(selectedSkills);
   }
 
   function processCustomHero() {
@@ -835,12 +987,22 @@ $(document).ready(() => {
       customHero.processedStats[stat] = customHero.stats[stat];
     }
 
+    let skills;
+    let activeTab;
     for (let skill in customHero.skills) {
-      if (customHero.skills[skill].damage) {
-        customHero.processedStats.atk += customHero.skills[skill].damage;
+      activeTab =  $(`.tab-content[data-skill-type="${skill}"] > .active`);
+
+      if (activeTab.data('tab-type') === 'default' || skill === 'refine') {
+        skills = customHero.skills;
+      } else {
+        skills = customHero.customSkills;
       }
-      for (stat in customHero.skills[skill].stats) {
-        customHero.processedStats[stat] += customHero.skills[skill].stats[stat];
+
+      if (skills[skill].damage) {
+        customHero.processedStats.atk += skills[skill].damage;
+      }
+      for (stat in skills[skill].stats) {
+        customHero.processedStats[stat] += skills[skill].stats[stat];
       }
     }
 

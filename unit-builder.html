@@ -76,7 +76,6 @@
                 <span class="custom-control-description">No</span>
               </label>
             </div>
-
             <hr>
 
             <div class="row">
@@ -192,8 +191,6 @@
                   </label>
                 </div>
               </div>
-            <hr>
-
             <div class="row d-flex">
               <label class="col-md-2 col-form-label text-right">Base Stats</label>
               <div class="col-md-10 row stat-input-groups">
@@ -225,16 +222,19 @@
             </div>
             <hr>
 
-            <!-- <ul class="nav nav-pills mb-3" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#old-weapon" role="tab">Existing Weapon</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#custom-weapon" role="tab">Custom Weapon</a>
-              </li>
-            </ul> -->
-            <div class="tab-content">
-              <div class="tab-pane fade show active" id="old-weapon" role="tabpanel">
+            <div class="d-flex">
+              <h5 class="skill-header">Weapon</h5>
+              <ul class="nav nav-pills p-1 ml-3" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link pt-0 pb-0 active" data-toggle="pill" href="#default-weapon" role="tab">Default</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pt-0 pb-0" data-toggle="pill" href="#custom-weapon" role="tab">Custom</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body tab-content pb-0" data-skill-type="weapon">
+              <div class="tab-pane fade show active row" id="default-weapon" role="tabpanel" data-tab-type="default">
                 <div class="row">
                   <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
                     <label class="col-4 col-form-label text-md-right">Weapon</label>
@@ -246,22 +246,59 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="custom-weapon" role="tabpanel">
-
+              <div class="tab-pane fade" id="custom-weapon" role="tabpanel" data-tab-type="custom">
+                <div class="row">
+                  <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                    <label class="col-md-4 col-form-label text-right">Name</label>
+                    <input type="text" class="form-control custom-skill-input col-md-8" data-control="name">
+                  </div>
+                  <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                    <label class="col-md-4 col-form-label text-right">Icon</label>
+                    <input type="file" class="custom-skill-input" data-control="icon">
+                  </div>
+                </div>
+                <div class="row d-flex">
+                  <label class="col-md-2 col-form-label text-right">Stats</label>
+                  <div class="col-md-10 row stat-input-groups">
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">HP</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="hp">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Atk</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="atk">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Spd</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="spd">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Def</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="def">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Res</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="res">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <hr>
 
-            <!-- <ul class="nav nav-pills mb-3" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#old-assist" role="tab">Existing Assist</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#custom-assist" role="tab">Custom Assist</a>
-              </li>
-            </ul> -->
-            <div class="tab-content">
-              <div class="tab-pane fade show active" id="old-assist" role="tabpanel">
+            <div class="d-flex">
+              <h5 class="skill-header">Assist</h5>
+              <ul class="nav nav-pills p-1 ml-3" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link pt-0 pb-0 active" data-toggle="pill" href="#default-assist" role="tab">Default</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pt-0 pb-0" data-toggle="pill" href="#custom-assist" role="tab">Custom</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body tab-content pb-0" data-skill-type="assist">
+              <div class="tab-pane fade show active" id="default-assist" role="tabpanel" data-tab-type="default">
                 <div class="row">
                   <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
                     <label class="col-4 col-form-label text-md-right">Assist</label>
@@ -269,22 +306,30 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="custom-assist" role="tabpanel">
-
+              <div class="tab-pane fade" id="custom-assist" role="tabpanel" data-tab-type="custom">
+                <div class="row">
+                  <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                    <label class="col-md-4 col-form-label text-right">Name</label>
+                    <input type="text" class="form-control col-md-8 custom-skill-input" data-control="name">
+                  </div>
+                </div>
               </div>
             </div>
             <hr>
 
-            <!-- <ul class="nav nav-pills mb-3" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#old-special" role="tab">Existing Special</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#custom-special" role="tab">Custom Special</a>
-              </li>
-            </ul> -->
-            <div class="tab-content">
-              <div class="tab-pane fade show active" id="old-special" role="tabpanel">
+            <div class="d-flex">
+              <h5 class="skill-header">Special</h5>
+              <ul class="nav nav-pills p-1 ml-3" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link pt-0 pb-0 active" data-toggle="pill" href="#default-special" role="tab">Default</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pt-0 pb-0" data-toggle="pill" href="#custom-special" role="tab">Custom</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body tab-content pb-0" data-skill-type="special">
+              <div class="tab-pane fade show active" id="default-special" role="tabpanel" data-tab-type="default">
                 <div class="row">
                   <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
                     <label class="col-4 col-form-label text-md-right">Special</label>
@@ -292,20 +337,30 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="custom-special" role="tabpanel">B</div>
+              <div class="tab-pane fade" id="custom-special" role="tabpanel" data-tab-type="custom">
+                <div class="row">
+                  <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                    <label class="col-md-4 col-form-label text-right">Name</label>
+                    <input type="text" class="form-control custom-skill-input col-md-8" data-control="name">
+                  </div>
+                </div>
+              </div>
             </div>
             <hr>
 
-            <!-- <ul class="nav nav-pills mb-3" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#old-skillA" role="tab">Existing Skill A</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#custom-skillA" role="tab">Custom Skill A</a>
-              </li>
-            </ul> -->
-            <div class="tab-content">
-              <div class="tab-pane fade show active" id="old-skillA" role="tabpanel">
+            <div class="d-flex">
+              <h5 class="skill-header">Skill A</h5>
+              <ul class="nav nav-pills p-1 ml-3" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link pt-0 pb-0 active" data-toggle="pill" href="#default-skillA" role="tab">Default</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pt-0 pb-0" data-toggle="pill" href="#custom-skillA" role="tab">Custom</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body tab-content pb-0" data-skill-type="skillA">
+              <div class="tab-pane fade show active" id="default-skillA" role="tabpanel" data-tab-type="default">
                 <div class="row">
                   <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
                     <label class="col-4 col-form-label text-md-right">Skill A</label>
@@ -313,22 +368,59 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="custom-skillA" role="tabpanel">
-
+              <div class="tab-pane fade" id="custom-skillA" role="tabpanel" data-tab-type="custom">
+                <div class="row">
+                  <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                    <label class="col-md-4 col-form-label text-right">Name</label>
+                    <input type="text" class="form-control custom-skill-input col-md-8" data-control="name">
+                  </div>
+                  <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                    <label class="col-md-4 col-form-label text-right">Icon</label>
+                    <input type="file" class="custom-skill-input" data-control="icon">
+                  </div>
+                </div>
+                <div class="row d-flex">
+                  <label class="col-md-2 col-form-label text-right">Stats</label>
+                  <div class="col-md-10 row stat-input-groups">
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">HP</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-stat-control" data-control="stats" data-stats="hp">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Atk</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-stat-control" data-control="stats" data-stats="atk">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Spd</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-stat-control" data-control="stats" data-stats="spd">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Def</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-stat-control" data-control="stats" data-stats="def">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Res</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-stat-control" data-control="stats" data-stats="res">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <hr>
 
-            <!-- <ul class="nav nav-pills mb-3" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#old-skillB" role="tab">Existing Skill B</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#custom-skillB" role="tab">Custom Skill B</a>
-              </li>
-            </ul> -->
-            <div class="tab-content">
-              <div class="tab-pane fade show active" id="old-skillB" role="tabpanel">
+            <div class="d-flex">
+              <h5 class="skill-header">Skill B</h5>
+              <ul class="nav nav-pills p-1 ml-3" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link pt-0 pb-0 active" data-toggle="pill" href="#default-skillB" role="tab">Default</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pt-0 pb-0" data-toggle="pill" href="#custom-skillB" role="tab">Custom</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body tab-content pb-0" data-skill-type="skillB">
+              <div class="tab-pane fade show active" id="default-skillB" role="tabpanel" data-tab-type="default">
                 <div class="row">
                   <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
                     <label class="col-4 col-form-label text-md-right">Skill B</label>
@@ -336,20 +428,34 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="custom-skillB" role="tabpanel">B</div>
+              <div class="tab-pane fade" id="custom-skillB" role="tabpanel" data-tab-type="custom">
+                <div class="row">
+                  <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                    <label class="col-md-4 col-form-label text-right">Name</label>
+                    <input type="text" class="form-control custom-skill-input col-md-8" data-control="name">
+                  </div>
+                  <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                    <label class="col-md-4 col-form-label text-right">Icon</label>
+                    <input type="file" class="custom-skill-input" data-control="icon">
+                  </div>
+                </div>
+              </div>
             </div>
             <hr>
 
-            <!-- <ul class="nav nav-pills mb-3" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#old-skillC" role="tab">Existing Skill C</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#custom-skillC" role="tab">Custom Skill C</a>
-              </li>
-            </ul> -->
-            <div class="tab-content">
-              <div class="tab-pane fade show active" id="old-skillC" role="tabpanel">
+            <div class="d-flex">
+              <h5 class="skill-header">Skill C</h5>
+              <ul class="nav nav-pills p-1 ml-3" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link pt-0 pb-0 active" data-toggle="pill" href="#default-skillC" role="tab">Default</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pt-0 pb-0" data-toggle="pill" href="#custom-skillC" role="tab">Custom</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body tab-content pb-0" data-skill-type="skillC">
+              <div class="tab-pane fade show active" id="default-skillC" role="tabpanel" data-tab-type="default">
                 <div class="row">
                   <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
                     <label class="col-4 col-form-label text-md-right">Skill C</label>
@@ -357,20 +463,34 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="custom-skillC" role="tabpanel">B</div>
+              <div class="tab-pane fade" id="custom-skillC" role="tabpanel" data-tab-type="custom">
+                <div class="row">
+                  <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                    <label class="col-md-4 col-form-label text-right">Name</label>
+                    <input type="text" class="form-control custom-skill-input col-md-8" data-control="name">
+                  </div>
+                  <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                    <label class="col-md-4 col-form-label text-right">Icon</label>
+                    <input type="file" class="custom-skill-input" data-control="icon">
+                  </div>
+                </div>
+              </div>
             </div>
             <hr>
 
-            <!-- <ul class="nav nav-pills mb-3" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="pill" href="#old-seal" role="tab">Existing Seal</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="pill" href="#custom-seal" role="tab">Custom Seal</a>
-              </li>
-            </ul> -->
-            <div class="tab-content">
-              <div class="tab-pane fade show active" id="old-seal" role="tabpanel">
+            <div class="d-flex">
+              <h5 class="skill-header">Seal</h5>
+              <ul class="nav nav-pills p-1 ml-3" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link pt-0 pb-0 active" data-toggle="pill" href="#default-seal" role="tab">Default</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pt-0 pb-0" data-toggle="pill" href="#custom-seal" role="tab">Custom</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body tab-content pb-0" data-skill-type="seal">
+              <div class="tab-pane fade show active" id="default-seal" role="tabpanel" data-tab-type="default">
                 <div class="row">
                   <div class="form-group row col-md-6 col-lg-12 col-xl-6 pr-2">
                     <label class="col-4 col-form-label text-md-right">Seal</label>
@@ -378,7 +498,43 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="custom-seal" role="tabpanel">B</div>
+              <div class="tab-pane fade" id="custom-seal" role="tabpanel" data-tab-type="custom">
+                <div class="row">
+                  <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                    <label class="col-md-4 col-form-label text-right">Name</label>
+                    <input type="text" class="form-control custom-skill-input col-md-8" data-control="name">
+                  </div>
+                  <div class="form-group d-flex pl-0 pr-2 col-md-6">
+                    <label class="col-md-4 col-form-label text-right">Icon</label>
+                    <input type="file" class="custom-skill-input" data-control="icon">
+                  </div>
+                </div>
+                <div class="row d-flex">
+                  <label class="col-md-2 col-form-label text-right">Stats</label>
+                  <div class="col-md-10 row stat-input-groups">
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">HP</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="hp">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Atk</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="atk">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Spd</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="spd">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Def</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="def">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Res</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="res">
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
