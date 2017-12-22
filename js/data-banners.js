@@ -3,6 +3,20 @@ const BANNERS = [
     "date": "December 2017",
     "banners": [
       {
+        "name": "Weapons to Refine, Part 2",
+        "latestHeroesDate": "",
+        "startDate": "Dec 21, 2017",
+        "focusHeroes": [ "Jaffar", "Minerva", "Eldigan" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
+      {
         "name": "Winter's Envoy",
         "latestHeroesDate": "",
         "startDate": "Dec 18, 2017",
