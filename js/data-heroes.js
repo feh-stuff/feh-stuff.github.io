@@ -4788,7 +4788,7 @@ const HEROES = [
   {
     "name": "Robin (M) (Winter's Envoy)",
     "title": "Festive Tactician",
-    "weaponType": "Spear",
+    "weaponType": "Lance",
     "moveType": "Armored",
     "releaseDate": "Dec 18, 2017",
     "assets": {
