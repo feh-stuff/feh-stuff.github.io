@@ -3,6 +3,20 @@ const BANNERS = [
     "date": "December 2017",
     "banners": [
       {
+        "name": "A Gift of Peace Tempest Trials",
+        "latestHeroesDate": "",
+        "startDate": "Dec 22, 2017",
+        "focusHeroes": [ "Nowi", "Frederick", "Lucina" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
+      {
         "name": "Weapons to Refine, Part 2",
         "latestHeroesDate": "",
         "startDate": "Dec 21, 2017",
