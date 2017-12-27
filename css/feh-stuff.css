@@ -3,6 +3,33 @@ body {
   background-image: url(../img/assets/background.jpg);
 }
 
+@media (max-width: 767px) {
+  .summon-circle-container {
+    width: 458px;
+  }
+  .summon-circle {
+    width: 458px;
+    height: 458px;
+  }
+}
+@media (min-width: 768px) {
+  .summon-circle-container {
+    width: 600px;
+  }
+  .summon-circle {
+    width: 600px;
+    height: 600px;
+  }
+}
+@media (min-width: 992px) {
+  .summon-circle-container {
+    width: 468px;
+  }
+  .summon-circle {
+    width: 468px;
+    height: 468px;
+  }
+}
 @media (min-width: 1300px) {
   .container {
     max-width: 1300px;
@@ -54,13 +81,10 @@ body {
 .summon-circle-container {
   border: none;
   height: fit-content;
-  width: 468px;
 }
 .summon-circle {
   background-image: url(../img/assets/summon-circle.jpg);
   background-size: cover;
-  width: 468px;
-  height: 468px;
   position: relative;
 }
 .summon-option {
