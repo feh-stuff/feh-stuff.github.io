@@ -181,7 +181,7 @@
       this.pityPulls = 0;
       this.resetPityRate = false;
       this.resetRates();
-    } else if (this.pityPulls) {
+    } else if (this.pityPulls >= 5) {
       this.pityPulls -= 5;
       let rateDecrease = (this.banner.pityRateRarityFocus + this.banner.pityRateRarity5) / 2;
       $(this.ELEMENTS.RATE_INPUT_FOCUS).val(parseFloat($(this.ELEMENTS.RATE_INPUT_FOCUS).val()) + this.banner.pityRateRarityFocus);
