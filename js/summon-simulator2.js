@@ -406,3 +406,5 @@
     }
   }
 })(jQuery);
+
+new SummonSimulator();
