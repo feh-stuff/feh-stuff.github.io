@@ -10,7 +10,7 @@ const BANNERS = [
             "Ryoma", "Sigurd", "Roy (Brave Heroes)", "Elise", "Innes", "Lyn (Bridal Blessings)"],
         "excludeFromRarity4": [],
         "excludeFromRarity5": [],
-        "rateRarity3": 36,
+        "rateRarity3": 34,
         "rateRarity4": 58,
         "rateRarity5": 0,
         "rateRarityFocus": 8,
