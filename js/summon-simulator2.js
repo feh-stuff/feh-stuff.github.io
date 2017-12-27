@@ -29,6 +29,11 @@
     RATE_INPUT_5: '#rate-input-5',
     RATE_INPUT_4: '#rate-input-4',
     RATE_INPUT_3: '#rate-input-3',
+    CUSTOM_INPUT_FOCUS: '#custom-input-focus',
+    CUSTOM_RATE_INPUT: '.custom-rate-input',
+    CUSTOM_INPUT_5: '#custom-input-5',
+    CUSTOM_INPUT_4: '#custom-input-4',
+    CUSTOM_INPUT_3: '#custom-input-3',
     RESET: '#reset',
     SNIPE: '#snipe-btn',
     SNIPE_LIST: '#snipe-list',
@@ -80,6 +85,18 @@
     if (customFocus.length) {
       this.banner = this.getCustomBannerData(customFocus.split(';'));
       $(this.ELEMENTS.SELECT_BANNER).selectable('text', this.banner.name);
+
+      let rates = this.getUrlParam('rates').split(';');
+      if (rates.length === 4) {
+        this.banner.rateRarityFocus = parseInt(rates[0]);
+        this.banner.rateRarity5 = parseInt(rates[1]);
+        this.banner.rateRarity4 = parseInt(rates[2]);
+        this.banner.rateRarity3 = parseInt(rates[3]);
+        if (this.banner.rateRarity5 === 0) {
+          this.banner.pityRateRarity5 = 0
+          this.banner.pityRateRarityFocus = 0.5;
+        }
+      }
     } else {
       this.banner = BANNERS[0].banners[0];
       this.banner.startDate = new Date(this.banner.startDate);
@@ -105,6 +122,7 @@
     $(this.ELEMENTS.CUSTOM_LIST).on('change', 'input', this.toggleCustomBannerHero.bind(this));
     $(this.ELEMENTS.CREATE_BANNER).on('click', this.createBanner.bind(this));
     $(this.ELEMENTS.CUSTOM_SEARCH).on('keyup', this.searchCustomFocus.bind(this));
+    $(this.ELEMENTS.CUSTOM_RATE_INPUT).on('change', this.customRateChange.bind(this));
   };
   SummonSimulator.prototype.onSelectBanner = function(event) {
     this.banner = $(event.currentTarget).data('val');
@@ -398,10 +416,28 @@
       $(heroList[i]).toggleClass('d-none', $(heroList[i]).text().toLowerCase().indexOf(searchKey) === -1);
     }
   };
+  SummonSimulator.prototype.customRateChange = function() {
+    this.customBanner.rateRarityFocus = parseInt($(this.ELEMENTS.CUSTOM_INPUT_FOCUS).val());
+    this.customBanner.rateRarity5 = parseInt($(this.ELEMENTS.CUSTOM_INPUT_5).val());
+    this.customBanner.rateRarity4 = parseInt($(this.ELEMENTS.CUSTOM_INPUT_4).val());
+    this.customBanner.rateRarity3 = parseInt($(this.ELEMENTS.CUSTOM_INPUT_3).val());
+    if (this.customBanner.rateRarity5 === 0) {
+      this.customBanner.pityRateRarity5 = 0
+      this.customBanner.pityRateRarityFocus = 0.5;
+    }
+  };
   SummonSimulator.prototype.createBanner = function(event) {
+    let rates = [$(this.ELEMENTS.CUSTOM_INPUT_FOCUS).val(),
+        $(this.ELEMENTS.CUSTOM_INPUT_5).val(),
+        $(this.ELEMENTS.CUSTOM_INPUT_4).val(),
+        $(this.ELEMENTS.CUSTOM_INPUT_3).val()];
+
     $(this.ELEMENTS.CUSTOM_MODAL).modal('hide');
-    window.history.pushState(null, null, '?focus=' + encodeURIComponent(this.customBanner.focusHeroes.join(';')));
+    window.history.pushState(null, null,
+        '?focus=' + encodeURIComponent(this.customBanner.focusHeroes.join(';')) +
+        '&rates=' + encodeURIComponent(rates.join(';')));
     this.banner = this.customBanner;
+
     this.initBanner();
 
     $(this.ELEMENTS.SELECT_BANNER).selectable('text', 'Custom Banner');

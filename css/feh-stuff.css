@@ -11,6 +11,12 @@ body {
     width: 458px;
     height: 458px;
   }
+  #custom-banner-select-list {
+    height: 30vh;
+  }
+  #custom-banner-heroes {
+    height: calc(30vh + 46px);
+  }
 }
 @media (min-width: 768px) {
   .summon-circle-container {
@@ -19,6 +25,12 @@ body {
   .summon-circle {
     width: 600px;
     height: 600px;
+  }
+  #custom-banner-select-list {
+    height: 40vh;
+  }
+  #custom-banner-heroes {
+    height: calc(40vh + 46px);
   }
 }
 @media (min-width: 992px) {
@@ -198,7 +210,6 @@ body {
   margin-top: 5vh;
 }
 #custom-banner-select-list {
-  height: 50vh;
   overflow-y: auto;
 }
 #custom-banner-select-list > label {
@@ -218,7 +229,6 @@ body {
   padding-bottom: 0.5rem;
 }
 #custom-banner-heroes {
-  height: calc(50vh + 46px);
   overflow-y: auto;
   align-content: flex-start;
   flex-direction: row;
