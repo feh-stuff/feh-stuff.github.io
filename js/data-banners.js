@@ -162,6 +162,20 @@ const BANNERS = [
         "pityRateRarityFocus": 0.25
       },
       {
+        "name": "Takumi and Hinoka's Battle",
+        "latestHeroesDate": "",
+        "startDate": "Nov 16, 2017",
+        "focusHeroes": [ "Takumi", "Hinoka", "Sakura" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [ "Dorcas", "Lute", "Mia" ],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
+      {
         "name": "Farfetched Heroes",
         "latestHeroesDate": "",
         "startDate": "Nov 15, 2017",
@@ -174,7 +188,49 @@ const BANNERS = [
         "rateRarityFocus": 3,
         "pityRateRarity5": 0.25,
         "pityRateRarityFocus": 0.25
-      }
+      },
+      {
+        "name": "Heroes with Death Blow",
+        "latestHeroesDate": "",
+        "startDate": "Nov 08, 2017",
+        "focusHeroes": [ "Delthea", "Elincia", "Klein" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
+      {
+        "name": "Long-Haired Gents",
+        "latestHeroesDate": "",
+        "startDate": "Nov 02, 2017",
+        "focusHeroes": [ "Takumi", "Karel", "Ryoma", "Soren" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
+      {
+        "name": "Short-Haired Ladies",
+        "latestHeroesDate": "",
+        "startDate": "Nov 02, 2017",
+        "focusHeroes": [ "Amelia", "Hinoka", "Shanna", "Katarina" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
     ]
   },
   {
