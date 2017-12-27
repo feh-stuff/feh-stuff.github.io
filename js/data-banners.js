@@ -3,6 +3,21 @@ const BANNERS = [
     "date": "December 2017",
     "banners": [
       {
+        "name": "Legendary Heroes: Gunnthrá, Voice of Dreams",
+        "latestHeroesDate": "",
+        "startDate": "Dec 22, 2017",
+        "focusHeroes": [ "Gunnthrá", "Amelia", "Chrom (Spring Festival)", "Fjorm", "Lucina (Spring Festival)", "Charlotte (Bridal Blessings)",
+            "Ryoma", "Sigurd", "Roy (Brave Heroes)", "Elise", "Innes", "Lyn (Bridal Blessings)"],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 0,
+        "rateRarityFocus": 8,
+        "pityRateRarity5": 0,
+        "pityRateRarityFocus": 0.5
+      },
+      {
         "name": "A Gift of Peace Tempest Trials",
         "latestHeroesDate": "",
         "startDate": "Dec 22, 2017",
@@ -120,7 +135,7 @@ const BANNERS = [
     "date": "November 2017",
     "banners": [
       {
-        "name": "Legendary Heroes",
+        "name": "Legendary Heroes: Fjorm, Princess of Ice",
         "latestHeroesDate": "",
         "startDate": "Nov 27, 2017",
         "focusHeroes": [ "Celica", "Ike", "Ayra", "Caeda (Bridal Blessings)", "Xander (Spring Festival)", "Fjorm", "Deirdre", "Hector", "Camilla (Spring Festival)", "Cordelia (Bridal Blessings)", "Lyn (Brave Heroes)", "Genny" ],

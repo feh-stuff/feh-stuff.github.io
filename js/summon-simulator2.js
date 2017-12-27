@@ -11,20 +11,7 @@
     this.pityPulls = 0;
     this.sessionPulls = 0;
     this.resetPityRate = false;
-
-    this.customBanner = {
-      "name": "Custom Banner",
-      "startDate": new Date(),
-      "focusHeroes": [],
-      "excludeFromRarity4": [],
-      "excludeFromRarity5": [],
-      "rateRarity3": 36,
-      "rateRarity4": 58,
-      "rateRarity5": 3,
-      "rateRarityFocus": 3,
-      "pityRateRarity5": 0.25,
-      "pityRateRarityFocus": 0.25
-    };
+    this.customBanner = this.getCustomBannerData();
 
     this.init();
   }
@@ -47,8 +34,9 @@
     SNIPE_LIST: '#snipe-list',
     CUSTOM_MODAL: '#custom-banner-modal',
     CUSTOM_LIST: '#custom-banner-select-list',
+    CUSTOM_LIST_DESC: '#custom-banner-select-list label',
     CUSTOM_FOCUS: '#custom-banner-heroes',
-    COPY_URL: '#copy-banner-url',
+    CUSTOM_SEARCH: '#custom-banner-search',
     CREATE_BANNER: '#create-banner'
   };
 
@@ -88,8 +76,15 @@
           value: BANNERS[0].banners[0]
         });
 
-    this.banner = BANNERS[0].banners[0];
-    this.banner.startDate = new Date(this.banner.startDate);
+    let customFocus = this.getUrlParam('focus');
+    if (customFocus.length) {
+      this.banner = this.getCustomBannerData(customFocus.split(';'));
+      $(this.ELEMENTS.SELECT_BANNER).selectable('text', this.banner.name);
+    } else {
+      this.banner = BANNERS[0].banners[0];
+      this.banner.startDate = new Date(this.banner.startDate);
+    }
+
 
     this.initBanner();
     this.initCustomBannerList();
@@ -109,6 +104,7 @@
 
     $(this.ELEMENTS.CUSTOM_LIST).on('change', 'input', this.toggleCustomBannerHero.bind(this));
     $(this.ELEMENTS.CREATE_BANNER).on('click', this.createBanner.bind(this));
+    $(this.ELEMENTS.CUSTOM_SEARCH).on('keyup', this.searchCustomFocus.bind(this));
   };
   SummonSimulator.prototype.onSelectBanner = function(event) {
     this.banner = $(event.currentTarget).data('val');
@@ -354,6 +350,21 @@
 
 
   // Custom Banners
+  SummonSimulator.prototype.getCustomBannerData = function(focusHeroes = []) {
+    return {
+      name: "Custom Banner",
+      startDate: new Date(),
+      focusHeroes: focusHeroes,
+      excludeFromRarity4: [],
+      excludeFromRarity5: [],
+      rateRarity3: 36,
+      rateRarity4: 58,
+      rateRarity5: 3,
+      rateRarityFocus: 3,
+      pityRateRarity5: 0.25,
+      pityRateRarityFocus: 0.25
+    };
+  };
   SummonSimulator.prototype.initCustomBannerList = function() {
     HEROES.forEach(hero => {
       $(`<label class="custom-control custom-checkbox">
@@ -380,10 +391,21 @@
       $(`.focus-list-hero[data-name="${hero.name}"]`).remove();
     }
   };
+  SummonSimulator.prototype.searchCustomFocus = function() {
+    let searchKey = $(this.ELEMENTS.CUSTOM_SEARCH).val().trim().toLowerCase();
+    let heroList = $(this.ELEMENTS.CUSTOM_LIST_DESC);
+    for (let i = 0; i < heroList.length; i++) {
+      $(heroList[i]).toggleClass('d-none', $(heroList[i]).text().toLowerCase().indexOf(searchKey) === -1);
+    }
+  };
   SummonSimulator.prototype.createBanner = function(event) {
     $(this.ELEMENTS.CUSTOM_MODAL).modal('hide');
-    window.history.replaceState(null, null,
-        window.location.href + encodeURIComponent(this.customBanner.focusHeroes.join(';')));
+    window.history.pushState(null, null, '?focus=' + encodeURIComponent(this.customBanner.focusHeroes.join(';')));
+    this.banner = this.customBanner;
+    this.initBanner();
+
+    $(this.ELEMENTS.SELECT_BANNER).selectable('text', 'Custom Banner');
+    //TODO Append banner to select dropdown;
   };
 
   // Helper Functions
@@ -396,6 +418,14 @@
 
     return `${months[date.getMonth()]} ${date.getFullYear()}`;
   }
+  SummonSimulator.prototype.getUrlParam = function(name) {
+    let results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    if (results == null){
+       return '';
+    } else {
+       return decodeURIComponent(results[1]) || 0;
+    }
+  }
 
   SummonSimulator.prototype.bannerOptionsGenerator = function(item, $parent) {
     $parent.append(`<div class="dropdown-header">${item.date}</div>`);
@@ -405,6 +435,7 @@
           .appendTo($parent);
     }
   }
+
 })(jQuery);
 
 new SummonSimulator();

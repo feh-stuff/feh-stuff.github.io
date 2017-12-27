@@ -52,6 +52,10 @@ $.widget('custom.selectable', {
     for (let i = 0; i < this.options.data.length; i++) {
       this.options.optionGenerator(this.options.data[i], this.$menuItems, this.options.highlightList);
     }
-  }
+  },
 
+  text: function(text) {
+    this.options.text = text;
+    this.$button.html(text);
+  }
 });

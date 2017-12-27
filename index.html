@@ -5,13 +5,13 @@
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" href="css/datatables.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/feh-stuff.css">
 </head>
-<body class="bg-img">
+<body>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="container container-s pb-0">
+    <div class="container container-s">
       <a class="navbar-brand" href="#">
-        <img src="img/assets/header.png" class="header-img">
+        <img src="img/assets/header.png" height="30">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
         <span class="navbar-toggler-icon"></span>
@@ -24,17 +24,20 @@
       </div>
     </div>
   </nav>
+
   <div class="container container-s">
-    <div class="form-group mt-3">
-      <div id="select-banner" class="selectable"></div>
-    </div>
-    <div class="card">
-      <div class="card-header">5★ Focus Heroes</div>
-      <div id="focus-list"></div>
+    <div class="row mt-2">
+      <div id="select-banner" class="selectable col p-0 mr-2"></div>
+      <div id="custom-banner" class="btn btn-primary" data-toggle="modal" data-target="#custom-banner-modal">Custom Banner</div>
     </div>
 
-    <div class="d-flex flex-wrap justify-content-center">
-      <div class="card summon-circle-container mt-3">
+    <div class="row mt-2 card">
+      <h6 class="card-header p-2">5★ Focus Heroes</h6>
+      <div id="focus-list" class="d-flex justify-content-center flex-wrap"></div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="card col-auto summon-circle-container p-0 mb-2">
         <div class="summon-circle">
           <div class="summon-option"></div>
           <div class="summon-option"></div>
@@ -42,7 +45,7 @@
           <div class="summon-option"></div>
           <div class="summon-option"></div>
         </div>
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#summon-manual" role="tab">Manual</a>
           </li>
@@ -74,9 +77,9 @@
                 <span class="input-group-addon">%</span>
               </div>
             </div>
-            <div class="mt-3 btn-group btn-group-block" role="group">
-              <button id="new-session" type="button" class="btn btn-outline-primary">New Session</button>
-              <button id="summon-all" type="button" class="btn btn-outline-primary">Summon All</button>
+            <div class="mt-3 btn-group d-flex" role="group">
+              <button id="new-session" type="button" class="btn btn-outline-primary w-100">New Session</button>
+              <button id="summon-all" type="button" class="btn btn-outline-primary w-100">Summon All</button>
             </div>
           </div>
           <div class="card-body tab-pane" id="summon-snipe" role="tabpanel">
@@ -104,17 +107,20 @@
         </div>
         <button id="reset" type="button" class="btn btn-danger">Reset</button>
       </div>
-      <div class="card hero-unit-data mt-3">
+
+      <div class="w-100 d-lg-none"></div>
+
+      <div class="card col mb-2 p-0">
         <div class="card-body">
           <h5 class="card-title">Statistics</h5>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 pl-0">
               <div class="summon-stats"><span>Total Heroes Summoned</span><span id="total-summon-amt">0</span></div>
               <div class="summon-stats"><span>5★ Heroes Summoned</span><span id="rarity5-summon-amt">0</span></div>
               <div class="summon-stats"><span>5★ Focus Heroes Summoned</span><span id="focus-summon-amt">0</span></div>
               <div class="summon-stats"><span>5★ Heroes Percentage</span><span id="percent-summon-amt">0</span></div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 p-0">
               <div class="summon-stats"><span>Orbs Used</span><span id="total-orbs-amt">0</span></div>
               <div class="summon-stats"><span>Money Spent</span><span id="total-money-amt">0</span></div>
               <div class="summon-stats"><span>Orbs per 5★ Hero</span><span id="avg-orbs-amt">0</span></div>
@@ -123,7 +129,7 @@
           </div>
           <hr>
           <h5 class="card-title">Summoned 5★ Heroes</h5>
-          <table id="summon-list" class="table table-hover table-sm" cellspacing="0" width="100%">
+          <table id="summon-table" class="table table-hover table-sm p-0" cellspacing="0" width="100%">
             <thead>
               <tr>
                 <th>Pull No.</th>
@@ -140,15 +146,40 @@
     </div>
   </div>
 
+  <div class="modal fade" id="custom-banner-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Create Custom Banner</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-lg-6">
+              <input id="custom-banner-search" type="text" class="form-control mb-2" placeholder="Search Hero">
+              <div id="custom-banner-select-list"></div>
+            </div>
+            <div id="custom-banner-heroes" class="col card d-flex flex-wrap p-2 mt-3 mt-lg-0"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" id="create-banner" class="btn btn-primary">Create Banner</button>
+        </div>
+      </div>
+    </div>
+</div>
+
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   <script src="js/datatables.min.js"></script>
-  <script src="js/selectable.js"></script>
+  <script src="js/selectable2.js"></script>
   <script src="js/data-heroes.js"></script>
   <script src="js/data-banners.js"></script>
-  <script src="js/summon-simulator.js"></script>
-  <script src="js/christmas.js"></script>
+  <script src="js/summon-simulator2.js"></script>
 </body>
 </html>

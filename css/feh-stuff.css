@@ -174,7 +174,7 @@ body {
   margin-top: 5vh;
 }
 #custom-banner-select-list {
-  max-height: 50vh;
+  height: 50vh;
   overflow-y: auto;
 }
 #custom-banner-select-list > label {
@@ -194,7 +194,7 @@ body {
   padding-bottom: 0.5rem;
 }
 #custom-banner-heroes {
-  max-height: calc(50vh + 46px);
+  height: calc(50vh + 46px);
   overflow-y: auto;
   align-content: flex-start;
   flex-direction: row;

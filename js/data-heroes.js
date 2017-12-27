@@ -2168,6 +2168,25 @@ const HEROES = [
     "colorType": "Red"
   },
   {
+    "name": "Gunnthrá",
+    "title": "Voice of Dreams",
+    "weaponType": "Tome",
+    "moveType": "Cavalry",
+    "releaseDate": "Dec 28, 2017",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Gunnthrá.png",
+      "main": "img/heroes-main/Feh.png"
+    },
+    "skills": [],
+    "stats": {
+      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
+      "level40": { "hp": [ 0, 0, 0 ], "atk": [ 0, 0, 0 ], "spd": [ 0, 0, 0 ], "def": [ 0, 0, 0 ], "res": [ 0, 0, 0 ] }
+    },
+    "rarity5": true,
+    "colorType": "Green",
+    "limited": true
+  },
+  {
     "name": "Gunter",
     "title": "Inveterate Soldier",
     "weaponType": "Axe",
