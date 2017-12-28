@@ -3,9 +3,23 @@ const BANNERS = [
     "date": "December 2017",
     "banners": [
       {
+        "name": "New Year's",
+        "latestHeroesDate": "",
+        "startDate": "Jan 01, 2018",
+        "focusHeroes": [ "Azura (New Year's)", "Camilla (New Year's)", "Corrin (M) (New Year's)", "Takumi (New Year's)" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
+      {
         "name": "Legendary Heroes: Gunnthrá, Voice of Dreams",
         "latestHeroesDate": "",
-        "startDate": "Dec 22, 2017",
+        "startDate": "Dec 28, 2017",
         "focusHeroes": [ "Gunnthrá", "Amelia", "Chrom (Spring Festival)", "Fjorm", "Lucina (Spring Festival)", "Charlotte (Bridal Blessings)",
             "Ryoma", "Sigurd", "Roy (Brave Heroes)", "Elise", "Innes", "Lyn (Bridal Blessings)"],
         "excludeFromRarity4": [],

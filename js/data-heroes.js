@@ -374,6 +374,38 @@ const HEROES = [
     "colorType": "Blue"
   },
   {
+    "name": "Azura (New Year's)",
+    "title": "Celebratory Spirit",
+    "weaponType": "Axe",
+    "moveType": "Flying",
+    "releaseDate": "Jan 01, 2018",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Azura (New Year's).png",
+      "main": "img/heroes-main/Azura (New Year's).png"
+    },
+    "skills": [
+      { "name": "Iron Axe", "rarity": 5 },
+      { "name": "Steel Axe", "rarity": 5 },
+      { "name": "Hagoita", "rarity": 5 },
+      { "name": "Hagoita+", "rarity": 5 },
+      { "name": "Sing", "rarity": 5 },
+      { "name": "Earth Dance 1", "rarity": 5 },
+      { "name": "Earth Dance 2", "rarity": 5 },
+      { "name": "Earth Dance 3", "rarity": 5 },
+      { "name": "Hone Spd 1", "rarity": 5 },
+      { "name": "Hone Spd 2", "rarity": 5 },
+      { "name": "Hone Fliers", "rarity": 5 }
+    ],
+    "stats": {
+      "level1": { "hp": 15, "atk": 6, "spd": 9, "def": 5, "res": 4 },
+      "level40": { "hp": [ 33, 37, 40 ], "atk": [ 27, 30, 33 ], "spd": [ 32, 35, 38 ], "def": [ 19, 22, 25 ], "res": [ 22, 26, 29 ] }
+    },
+    "shortName": "Azura",
+    "rarity5": true,
+    "colorType": "Green",
+    "limited": true
+  },
+  {
     "name": "Azura (Performing Arts)",
     "title": "Lady of Ballads",
     "weaponType": "Axe",
@@ -721,6 +753,39 @@ const HEROES = [
     "rarity4": true,
     "rarity5": true,
     "colorType": "Green"
+  },
+  {
+    "name": "Camilla (New Year's)",
+    "title": "Holiday Traveler",
+    "weaponType": "Sword",
+    "moveType": "Flying",
+    "releaseDate": "Jan 01, 2018",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Camilla (New Year's).png",
+      "main": "img/heroes-main/Camilla (New Year's).png"
+    },
+    "skills": [
+      { "name": "Iron Sword", "rarity": 5 },
+      { "name": "Steel Sword", "rarity": 5 },
+      { "name": "Kadomatsu", "rarity": 5 },
+      { "name": "Kadomatsu+", "rarity": 5 },
+      { "name": "Dragon Gaze", "rarity": 5 },
+      { "name": "Draconic Aura", "rarity": 5 },
+      { "name": "Spd/Def Bond 1", "rarity": 5 },
+      { "name": "Spd/Def Bond 2", "rarity": 5 },
+      { "name": "Spd/Def Bond 3", "rarity": 5 },
+      { "name": "Spur Def 1", "rarity": 5 },
+      { "name": "Spur Def 2", "rarity": 5 },
+      { "name": "Ward Fliers", "rarity": 5 }
+    ],
+    "stats": {
+      "level1": { "hp": 18, "atk": 9, "spd": 9, "def": 7, "res": 4 },
+      "level40": { "hp": [ 36, 40, 43 ], "atk": [ 30, 33, 36 ], "spd": [ 32, 35, 38 ], "def": [ 28, 31, 34 ], "res": [ 20, 23, 27 ] }
+    },
+    "shortName": "Camilla",
+    "rarity5": true,
+    "colorType": "Red",
+    "limited": true
   },
   {
     "name": "Camilla (Spring Festival)",
@@ -1325,6 +1390,39 @@ const HEROES = [
     "rarity4": true,
     "rarity5": true,
     "colorType": "Red"
+  },
+  {
+    "name": "Corrin (M) (New Year's)",
+    "title": "Enjoying Tradition",
+    "weaponType": "Bow",
+    "moveType": "Infantry",
+    "releaseDate": "Jan 01, 2018",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Corrin (M) (New Year's).png",
+      "main": "img/heroes-main/Corrin (M) (New Year's).png"
+    },
+    "skills": [
+      { "name": "Iron Bow", "rarity": 5 },
+      { "name": "Steel Bow", "rarity": 5 },
+      { "name": "Hama Ya", "rarity": 5 },
+      { "name": "Hama Ya+", "rarity": 5 },
+      { "name": "Rally Defense", "rarity": 5 },
+      { "name": "Rally Def/Res", "rarity": 5 },
+      { "name": "Defense +1", "rarity": 5 },
+      { "name": "Atk/Def +1", "rarity": 5 },
+      { "name": "Atk/Def +2", "rarity": 5 },
+      { "name": "Spur Def 1", "rarity": 5 },
+      { "name": "Spur Def/Res 1", "rarity": 5 },
+      { "name": "Spur Def/Res 2", "rarity": 5 }
+    ],
+    "stats": {
+      "level1": { "hp": 18, "atk": 8, "spd": 8, "def": 6, "res": 5 },
+      "level40": { "hp": [ 34, 37, 41 ], "atk": [ 29, 32, 35 ], "spd": [ 26, 30, 33 ], "def": [ 31, 34, 37 ], "res": [ 14, 18, 21 ] }
+    },
+    "shortName": "Corrin",
+    "rarity5": true,
+    "colorType": "Neutral",
+    "limited": true
   },
   {
     "name": "Deirdre",
@@ -2175,12 +2273,26 @@ const HEROES = [
     "releaseDate": "Dec 28, 2017",
     "assets": {
       "portrait": "img/heroes-portrait/75px-Icon_Portrait_Gunnthrá.png",
-      "main": "img/heroes-main/Feh.png"
+      "main": "img/heroes-main/Gunnthrá.png"
     },
-    "skills": [],
+   "skills": [
+      { "name": "Wind", "rarity": 5 },
+      { "name": "Elwind", "rarity": 5 },
+      { "name": "Rexcalibur", "rarity": 5 },
+      { "name": "Blizzard", "rarity": 5 },
+      { "name": "Chilling Wind", "rarity": 5 },
+      { "name": "Glacies", "rarity": 5 },
+      { "name": "Fortress Res 1", "rarity": 5 },
+      { "name": "Fortress Res 2", "rarity": 5 },
+      { "name": "Fortress Res 3", "rarity": 5 },
+      { "name": "Chilling Seal", "rarity": 5 },
+      { "name": "Res Ploy 1", "rarity": 5 },
+      { "name": "Res Ploy 2", "rarity": 5 },
+      { "name": "Res Ploy 3", "rarity": 5 }
+    ],
     "stats": {
-      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
-      "level40": { "hp": [ 0, 0, 0 ], "atk": [ 0, 0, 0 ], "spd": [ 0, 0, 0 ], "def": [ 0, 0, 0 ], "res": [ 0, 0, 0 ] }
+      "level1": { "hp": 15, "atk": 7, "spd": 9, "def": 6, "res": 6 },
+      "level40": { "hp": [ 33, 37, 40 ], "atk": [ 28, 31, 34 ], "spd": [ 30, 33, 36 ], "def": [ 15, 19, 22 ], "res": [ 22, 25, 29 ] }
     },
     "rarity5": true,
     "colorType": "Green",
@@ -5772,6 +5884,39 @@ const HEROES = [
     },
     "rarity5": true,
     "colorType": "Neutral"
+  },
+  {
+    "name": "Takumi (New Year's)",
+    "title": "Prince of Soup",
+    "weaponType": "Dagger",
+    "moveType": "Infantry",
+    "releaseDate": "Jan 01, 2018",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Takumi (New Year's).png",
+      "main": "img/heroes-main/Takumi (New Year's).png"
+    },
+    "skills": [
+      { "name": "Iron Dagger", "rarity": 5 },
+      { "name": "Steel Dagger", "rarity": 5 },
+      { "name": "Kagami Mochi", "rarity": 5 },
+      { "name": "Kagami Mochi+", "rarity": 5 },
+      { "name": "New Moon", "rarity": 5 },
+      { "name": "Moonbow", "rarity": 5 },
+      { "name": "Atk/Res Bond 1", "rarity": 5 },
+      { "name": "Atk/Res Bond 2", "rarity": 5 },
+      { "name": "Atk/Res Bond 3", "rarity": 5 },
+      { "name": "Bowbreaker 1", "rarity": 5 },
+      { "name": "Bowbreaker 2", "rarity": 5 },
+      { "name": "Bowbreaker 3", "rarity": 5 }
+    ],
+    "stats": {
+      "level1": { "hp": 18, "atk": 8, "spd": 10, "def": 4, "res": 5 },
+      "level40": { "hp": [ 36, 40, 43 ], "atk": [ 31, 34, 37 ], "spd": [ 31, 34, 37 ], "def": [ 13, 17, 20 ], "res": [ 23, 27, 30 ] }
+    },
+    "shortName": "Takumi",
+    "rarity5": true,
+    "colorType": "Neutral",
+    "limited": true
   },
   {
     "name": "Tana",
