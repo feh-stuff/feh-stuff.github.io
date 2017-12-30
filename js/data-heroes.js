@@ -374,14 +374,14 @@ const HEROES = [
     "colorType": "Blue"
   },
   {
-    "name": "Azura (New Year's)",
+    "name": "Azura (Happy New Year!)",
     "title": "Celebratory Spirit",
     "weaponType": "Axe",
     "moveType": "Flying",
     "releaseDate": "Jan 01, 2018",
     "assets": {
-      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Azura (New Year's).png",
-      "main": "img/heroes-main/Azura (New Year's).png"
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Azura (Happy New Year!).png",
+      "main": "img/heroes-main/Azura (Happy New Year!).png"
     },
     "skills": [
       { "name": "Iron Axe", "rarity": 5 },
@@ -755,14 +755,14 @@ const HEROES = [
     "colorType": "Green"
   },
   {
-    "name": "Camilla (New Year's)",
+    "name": "Camilla (Happy New Year!)",
     "title": "Holiday Traveler",
     "weaponType": "Sword",
     "moveType": "Flying",
     "releaseDate": "Jan 01, 2018",
     "assets": {
-      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Camilla (New Year's).png",
-      "main": "img/heroes-main/Camilla (New Year's).png"
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Camilla (Happy New Year!).png",
+      "main": "img/heroes-main/Camilla (Happy New Year!).png"
     },
     "skills": [
       { "name": "Iron Sword", "rarity": 5 },
@@ -1392,14 +1392,14 @@ const HEROES = [
     "colorType": "Red"
   },
   {
-    "name": "Corrin (M) (New Year's)",
+    "name": "Corrin (M) (Happy New Year!)",
     "title": "Enjoying Tradition",
     "weaponType": "Bow",
     "moveType": "Infantry",
     "releaseDate": "Jan 01, 2018",
     "assets": {
-      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Corrin (M) (New Year's).png",
-      "main": "img/heroes-main/Corrin (M) (New Year's).png"
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Corrin (M) (Happy New Year!).png",
+      "main": "img/heroes-main/Corrin (M) (Happy New Year!).png"
     },
     "skills": [
       { "name": "Iron Bow", "rarity": 5 },
@@ -5615,17 +5615,17 @@ const HEROES = [
       "main": "img/heroes-main/Soleil.png"
     },
     "skills": [
-      { "name": "Iron Sword", "rarity": 5 },
-      { "name": "Steel Sword", "rarity": 5 },
-      { "name": "Firesweep Sword", "rarity": 5 },
+      { "name": "Iron Sword", "rarity": 4 },
+      { "name": "Steel Sword", "rarity": 4 },
+      { "name": "Firesweep Sword", "rarity": 4 },
       { "name": "Firesweep Sword+", "rarity": 5 },
-      { "name": "Rising Wind", "rarity": 5 },
-      { "name": "Blazing Wind", "rarity": 5 },
-      { "name": "Darting Blow 1", "rarity": 5 },
+      { "name": "Rising Wind", "rarity": 4 },
+      { "name": "Blazing Wind", "rarity": 4 },
+      { "name": "Darting Blow 1", "rarity": 4 },
       { "name": "Darting Blow 2", "rarity": 4 },
       { "name": "Darting Blow 3", "rarity": 5 },
-      { "name": "Spur Res 1", "rarity": 5 },
-      { "name": "Drive Res 1", "rarity": 5 },
+      { "name": "Spur Res 1", "rarity": 4 },
+      { "name": "Drive Res 1", "rarity": 4 },
       { "name": "Drive Res 2", "rarity": 4 }
     ],
     "stats": {
@@ -5886,14 +5886,14 @@ const HEROES = [
     "colorType": "Neutral"
   },
   {
-    "name": "Takumi (New Year's)",
+    "name": "Takumi (Happy New Year!)",
     "title": "Prince of Soup",
     "weaponType": "Dagger",
     "moveType": "Infantry",
     "releaseDate": "Jan 01, 2018",
     "assets": {
-      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Takumi (New Year's).png",
-      "main": "img/heroes-main/Takumi (New Year's).png"
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Takumi (Happy New Year!).png",
+      "main": "img/heroes-main/Takumi (Happy New Year!).png"
     },
     "skills": [
       { "name": "Iron Dagger", "rarity": 5 },

@@ -3,10 +3,24 @@ const BANNERS = [
     "date": "December 2017",
     "banners": [
       {
-        "name": "New Year's",
+        "name": "Happy New Year!",
         "latestHeroesDate": "",
-        "startDate": "Jan 01, 2018",
-        "focusHeroes": [ "Azura (New Year's)", "Camilla (New Year's)", "Corrin (M) (New Year's)", "Takumi (New Year's)" ],
+        "startDate": "Dec 31, 2018",
+        "focusHeroes": [ "Azura (Happy New Year!)", "Camilla (Happy New Year!)", "Takumi (Happy New Year!)" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
+      {
+        "name": "Raven & Lucius's Battle",
+        "latestHeroesDate": "",
+        "startDate": "Dec 30, 2017",
+        "focusHeroes": [ "Raven", "Lucius", "Priscilla" ],
         "excludeFromRarity4": [],
         "excludeFromRarity5": [],
         "rateRarity3": 36,

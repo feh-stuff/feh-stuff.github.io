@@ -310,7 +310,7 @@ let SKILL_ASSIST = [
   { "name": "Rehabilitate+", "range": 1, "spCost": 300, "effect": "Restores HP = 50% of Atk -10. (Minimum of 7 HP.) If target's HP is ≤ 50%, the lower the target's HP, the more HP is restored.", "include": [{ "weaponType": "Staff" }] },
   { "name": "Reposition", "range": 1, "spCost": 150, "effect": "Moves adjacent ally to opposite side of unit.", "exclude": [{ "weaponType": "Staff" }] },
   { "name": "Shove", "range": 1, "spCost": 150, "effect": "Push adjacent ally 1 space farther away.", "exclude": [{ "weaponType": "Staff" }] },
-  { "name": "Sing", "range": 1, "spCost": 150, "effect": "Enables target to take another action. Cannot be used on units with Sing or Dance.", "include": [{ "name": "Azura" },{ "name": "Azura (Performing Arts)" },{ "name": "Shigure (Performing Arts)" }, { "name": "Azura (New Year's)" } ] },
+  { "name": "Sing", "range": 1, "spCost": 150, "effect": "Enables target to take another action. Cannot be used on units with Sing or Dance.", "include": [{ "name": "Azura" },{ "name": "Azura (Performing Arts)" },{ "name": "Shigure (Performing Arts)" }, { "name": "Azura (Happy New Year!)" } ] },
   { "name": "Smite", "range": 1, "spCost": 150, "effect": "Push adjacent ally 2 spaces farther away.", "exclude": [{ "weaponType": "Staff" }] },
   { "name": "Swap", "range": 1, "spCost": 150, "effect": "Swap places with an adjacent ally.", "exclude": [{ "weaponType": "Staff" }] }
 ];
@@ -480,7 +480,7 @@ let SKILL_A = [
   { "name": "Speed +3", "spCost": 120, "icon": "0-12", "stats": {"spd": 3}, "effect": "Grants Spd+3." },
   { "name": "Steady Blow 1", "spCost": 120, "icon": "26-2", "exclude": [{"weaponType":"Staff"}], "effect": "If unit initiates combat, unit granted Spd/Def+2 during battle." },
   { "name": "Steady Blow 2", "spCost": 240, "icon": "26-3", "exclude": [{"weaponType":"Staff"}], "effect": "If unit initiates combat, unit granted Spd/Def+4 during battle." },
-  { "name": "Steady Breath", "spCost": 240, "icon": "26-1", "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "exclude": [{"moveType":"Flying", "moveType":"Cavalry"}], "effect": "If attacked, unit granted Def+4 during combat; also gains Special cooldown charge +1. (If using other similar skill, only highest value applied.)" },
+  { "name": "Steady Breath", "spCost": 240, "icon": "26-1", "include": [{"weaponType":"Sword"}, {"weaponType":"Axe"}, {"weaponType":"Lance"}, {"weaponType":"Breath"}], "exclude": [{"moveType":"Flying"}, {"moveType":"Cavalry"}], "effect": "If attacked, unit granted Def+4 during combat; also gains Special cooldown charge +1. (If using other similar skill, only highest value applied.)" },
   { "name": "Steady Stance 1", "spCost": 50, "icon": "25-11", "effect": "Grants Def+2 during combat when this unit is attacked." },
   { "name": "Steady Stance 2", "spCost": 100, "icon": "25-12", "effect": "Grants Def+4 during combat when this unit is attacked." },
   { "name": "Steady Stance 3", "spCost": 200, "icon": "26-0", "effect": "Grants Def+6 during combat when this unit is attacked." },
