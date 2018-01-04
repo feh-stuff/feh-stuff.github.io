@@ -1302,7 +1302,6 @@ let SKILL_REFINED_WEAPONS = {
     {"name": "+Res", "icon": "31-12", "effect": "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces.", "stats": {"hp": 2, "res": 4}}
   ],
 
-
   // prf weapons
   "Sol Katti": [
     {"name": "Brash Assault", "icon": "32-3", "cost": 1, "effect": "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack. If unit initiates combat against a foe that can counter and unit's HP ≤ 75%, unit makes a guaranteed follow-up attac", "stats": {"hp": 3}},
