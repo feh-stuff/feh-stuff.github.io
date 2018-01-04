@@ -784,9 +784,9 @@ let SKILL_C = [
 ];
 
 let SKILL_SEAL = [
-  { "name": "Atk Ploy 1", "exclude": [{"weaponType": "Staff"}], "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-3 until the end of foe's next action.", "icon": "18-12" },
-  { "name": "Atk Ploy 2", "exclude": [{"weaponType": "Staff"}], "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-4 until the end of foe's next action.", "icon": "19-0" },
-  { "name": "Atk Ploy 3", "exclude": [{"weaponType": "Staff"}], "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-5 until the end of foe's next action.", "icon": "19-1" },
+  { "name": "Atk Ploy 1", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-3 until the end of foe's next action.", "icon": "18-12" },
+  { "name": "Atk Ploy 2", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-4 until the end of foe's next action.", "icon": "19-0" },
+  { "name": "Atk Ploy 3", "effect": "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-5 until the end of foe's next action.", "icon": "19-1" },
   { "name": "Attack +1", "effect": "Grants Atk+1.", "stats": {"atk": 1}, "icon": "0-7" },
   { "name": "Attack +2", "effect": "Grants Atk+2.", "stats": {"atk": 2}, "icon": "0-8" },
   { "name": "Attack +3", "effect": "Grants Atk+3.", "stats": {"atk": 3}, "icon": "0-9" },
