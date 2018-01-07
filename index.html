@@ -128,13 +128,50 @@
             </div>
           </div>
           <hr>
-          <h5 class="card-title">Summoned 5★ Heroes</h5>
-          <table id="summon-table" class="table table-hover table-sm p-0" cellspacing="0" width="100%">
+          <div class="d-flex justify-content-between">
+            <h5 class="card-title">Summoned 5★ Heroes</h5>
+            <div class="btn-group" id="table-filter">
+              <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                Rarity Filter
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <button class="dropdown-item pl-3 pr-2" type="button" data-val="focus">
+                  <label class="custom-control custom-checkbox col-form-label mr-0 w-100">
+                    <input type="checkbox" class="custom-control-input" checked>
+                    <span class="custom-control-indicator mt-2"></span>
+                    <span class="custom-control-description">5★ Focus</span>
+                  </label>
+                </button>
+                <button class="dropdown-item pl-3 pr-2" type="button" data-val="5">
+                  <label class="custom-control custom-checkbox col-form-label mr-0 w-100">
+                    <input type="checkbox" class="custom-control-input" checked>
+                    <span class="custom-control-indicator mt-2"></span>
+                    <span class="custom-control-description">5★</span>
+                  </label>
+                </button>
+                <button class="dropdown-item pl-3 pr-2" type="button" data-val="4">
+                  <label class="custom-control custom-checkbox col-form-label mr-0 w-100">
+                    <input type="checkbox" class="custom-control-input" >
+                    <span class="custom-control-indicator mt-2"></span>
+                    <span class="custom-control-description">4★</span>
+                  </label>
+                </button>
+                <button class="dropdown-item pl-3 pr-2" type="button" data-val="3">
+                  <label class="custom-control custom-checkbox col-form-label mr-0 w-100">
+                    <input type="checkbox" class="custom-control-input" >
+                    <span class="custom-control-indicator mt-2"></span>
+                    <span class="custom-control-description">3★</span>
+                  </label>
+                </button>
+              </div>
+            </div>
+          </div>
+          <table id="summon-table" class="table table-hover table-sm p-0 hide-4 hide-3" cellspacing="0" width="100%">
             <thead>
               <tr>
                 <th>Pull No.</th>
                 <th>Hero</th>
-                <th>Focus</th>
+                <th>Rarity</th>
                 <th>Boon</th>
                 <th>Bane</th>
               </tr>

@@ -205,6 +205,12 @@ body {
 #summon-table_wrapper > div > div {
   padding: 0;
 }
+.hide-3 .r-3,
+.hide-4 .r-4,
+.hide-5 .r-5,
+.hide-focus .r-focus {
+  display: none;
+}
 
 #custom-banner-modal {
   margin-top: 5vh;
@@ -253,3 +259,4 @@ body {
 .selectable .dropdown-item {
   cursor: pointer;
 }
+
