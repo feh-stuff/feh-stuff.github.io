@@ -42,7 +42,8 @@
     CUSTOM_LIST_DESC: '#custom-banner-select-list label',
     CUSTOM_FOCUS: '#custom-banner-heroes',
     CUSTOM_SEARCH: '#custom-banner-search',
-    CREATE_BANNER: '#create-banner'
+    CREATE_BANNER: '#create-banner',
+    TABLE_FILTER_ITEM: '#table-filter .dropdown-item'
   };
 
   SummonSimulator.prototype.CONST = {
@@ -73,13 +74,12 @@
       language: { emptyTable: "No heroes summoned yet" }
     });
 
-    $(this.ELEMENTS.SELECT_BANNER)
-        .selectable({
-          data: BANNERS,
-          optionGenerator: this.bannerOptionsGenerator,
-          text: BANNERS[0].banners[0].name,
-          value: BANNERS[0].banners[0]
-        });
+    $(this.ELEMENTS.SELECT_BANNER).selectable({
+      data: BANNERS,
+      optionGenerator: this.bannerOptionsGenerator,
+      text: BANNERS[0].banners[0].name,
+      value: BANNERS[0].banners[0]
+    });
 
     let customFocus = this.getUrlParam('focus');
     if (customFocus.length) {
@@ -102,6 +102,13 @@
       this.banner.startDate = new Date(this.banner.startDate);
     }
 
+    $(this.ELEMENTS.FILTER_TABLE).selectable({
+      data: ['focus', 5, 4, 3],
+      optionGenerator: this.filterOptionsGenerator,
+      text: 'Filter',
+      menuClass: 'dropdown-menu-right'
+    });
+
 
     this.initBanner();
     this.initCustomBannerList();
@@ -123,6 +130,8 @@
     $(this.ELEMENTS.CREATE_BANNER).on('click', this.createBanner.bind(this));
     $(this.ELEMENTS.CUSTOM_SEARCH).on('keyup', this.searchCustomFocus.bind(this));
     $(this.ELEMENTS.CUSTOM_RATE_INPUT).on('change', this.customRateChange.bind(this));
+
+    $(this.ELEMENTS.TABLE_FILTER_ITEM).on('click', this.onSelectFilter.bind(this));
   };
   SummonSimulator.prototype.onSelectBanner = function(event) {
     this.banner = $(event.currentTarget).data('val');
@@ -138,6 +147,15 @@
       this.revealOrb($(orbs[i]));
     }
   };
+  SummonSimulator.prototype.onSelectFilter = function(event) {
+      event.stopPropagation();
+      event.preventDefault();
+      let $checkbox = $(event.currentTarget).find('input[type="checkbox"]');
+      $checkbox.prop('checked', !$checkbox.is(':checked'));
+
+      let rarity = $(event.currentTarget).data('val');
+      $(this.ELEMENTS.SUMMON_TABLE).toggleClass('hide-' + rarity);
+  }
 
 
   // Initialization Functions
@@ -216,7 +234,7 @@
     $(this.ELEMENTS.RATE_INPUT_5).val(this.banner.rateRarity5);
     $(this.ELEMENTS.RATE_INPUT_4).val(this.banner.rateRarity4);
     $(this.ELEMENTS.RATE_INPUT_3).val(this.banner.rateRarity3);
-  }
+  };
 
 
   // Main Functions
@@ -268,16 +286,19 @@
       this.pullStats.r5++;
       this.pullStats.rf += orbData.rarity === 'focus' ? 1 : 0;
       this.resetPityRate = true;
-      this.$summonTable.row
-          .add([
-              this.pullStats.pulls,
-              orbData.hero.name,
-              orbData.rarity === 'focus' ? '◯' : '╳',
-              orbData.iv.boon,
-              orbData.iv.bane
-            ])
-          .draw();
     }
+
+    let tableRow = this.$summonTable.row
+        .add([
+            this.pullStats.pulls,
+            orbData.hero.name,
+            orbData.rarity === 'focus' ? 'Focus' : orbData.rarity,
+            orbData.iv.boon,
+            orbData.iv.bane
+          ])
+        .draw().node();
+    $(tableRow).addClass('r-' + orbData.rarity);
+
 
     $(this.ELEMENTS.NEW_SESSION).removeAttr('disabled');
     this.updateStatsView();
@@ -453,7 +474,7 @@
         'July', 'August', 'September', 'October', 'November', 'December'];
 
     return `${months[date.getMonth()]} ${date.getFullYear()}`;
-  }
+  };
   SummonSimulator.prototype.getUrlParam = function(name) {
     let results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
     if (results == null){
@@ -461,7 +482,7 @@
     } else {
        return decodeURIComponent(results[1]) || 0;
     }
-  }
+  };
 
   SummonSimulator.prototype.bannerOptionsGenerator = function(item, $parent) {
     $parent.append(`<div class="dropdown-header">${item.date}</div>`);
@@ -470,7 +491,7 @@
           .data('val', item.banners[i])
           .appendTo($parent);
     }
-  }
+  };
 
 })(jQuery);
 
