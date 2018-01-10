@@ -1,6 +1,6 @@
 $.widget('custom.selectable', {
   options: {
-    text: 'Text',
+    text: '',
     data: [],
     disabled: '',
     btnClass: '',
@@ -9,6 +9,7 @@ $.widget('custom.selectable', {
     header: '',
     search: true,
     value: null,
+    highlight: [],
     optionGenerator: function(item, $parent, highlight) {
       $(`<div class="dropdown-item ${highlight.includes(item.name) ? 'opt-highlight' : ''}">${item.name}</div>`)
           .data('val', item)
@@ -33,8 +34,8 @@ $.widget('custom.selectable', {
     this.$menu.append(this.options.header);
     this.$menu.append(this.$menuItems);
     this._makeOptions();
-    if (this.options.defaultValue) {
-      $(this.element).data('val', this.options.defaultValue);
+    if (this.options.value) {
+      $(this.element).data('val', this.options.value);
     }
 
     this.$menuItems.on('click', '.dropdown-item', function(event) {
@@ -51,12 +52,41 @@ $.widget('custom.selectable', {
   _makeOptions: function() {
     this.$menuItems.empty();
     for (let i = 0; i < this.options.data.length; i++) {
-      this.options.optionGenerator(this.options.data[i], this.$menuItems, this.options.highlightList);
+      this.options.optionGenerator(this.options.data[i], this.$menuItems, this.options.highlight);
     }
   },
 
   text: function(text) {
     this.options.text = text;
     this.$button.html(text);
+  },
+
+  data: function(opts) {
+    this.clear()
+        .enable()
+        .options.data = opts;
+    this._makeOptions();
+    return this;
+  },
+
+  enable: function() {
+    this.$button.removeAttr('disabled');
+    return this;
+  },
+
+  disable: function() {
+    this.$button.attr('disabled', 'disabled');
+    return this;
+  },
+
+  clear: function() {
+    this.options.data = [];
+    this.$button.text(this.options.text);
+    return this;
+  },
+
+  reset: function() {
+    this.$button.text(this.options.text);
+    $(this.element).data('val', this.options.value);
   }
 });

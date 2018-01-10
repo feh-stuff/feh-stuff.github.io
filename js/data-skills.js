@@ -178,7 +178,7 @@ let SKILL_WEAPON = [
   { "name": "Mystletainn", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Eldigan"], "weaponType": "Sword", "colorType": "Red", "effect": "Accelerates Special trigger (cooldown count-1).", },
   { "name": "Naga", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Julia"], "weaponType": "Tome", "colorType": "Green", "effect": "Effective against dragons.  Grants Def/Res+2 when this unit is attacked.", },
   { "name": "Nidhogg", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Innes"], "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units.  During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", },
-  { "name": "Noatun", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Anna"], "weaponType": "Axe", "colorType": "Green", "effect": "Unit may move adjacent to any ally when HP ≤ 40%.", },
+  { "name": "Nóatún", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Anna"], "weaponType": "Axe", "colorType": "Green", "effect": "Unit may move adjacent to any ally when HP ≤ 40%.", },
   { "name": "Pain", "spCost": 150, "damage": 3, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "Inflicts 10 damage on targeted foe after combat." },
   { "name": "Pain+", "spCost": 300, "damage": 10, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "Deals 10 damage to target and foes within 2 spaces of target after combat." },
   { "name": "Panic", "spCost": 150, "damage": 7, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "After combat, bonuses on targeted foe become penalties through its next action." },

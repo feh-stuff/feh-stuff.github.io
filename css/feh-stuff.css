@@ -32,6 +32,9 @@ body {
   #custom-banner-heroes {
     height: calc(40vh + 46px);
   }
+  .md-text-small {
+    font-size: 0.9rem;
+  }
 }
 @media (min-width: 992px) {
   .summon-circle-container {
@@ -63,7 +66,18 @@ body {
   margin-left: 0;
   margin-right: 0;
 }
-
+.custom-checkbox,
+.custom-radio {
+  cursor: pointer;
+}
+.col-form-label,
+.form-check > label {
+  white-space: nowrap;
+}
+.form-check {
+  height: 38px;
+  padding-top: 3px;
+}
 
 /***** Summon Simulator *****/
 .focus-list-hero {
@@ -240,17 +254,81 @@ body {
   flex-direction: row;
 }
 
+
+/***** Unit Builder *****/
+.hero-canvas-container {
+  width: 540px;
+}
+.hero-canvas-container > .spinner {
+  position: absolute;
+  margin-left: calc(50% - 50px);
+  margin-top: 300px;
+}
+#hero-canvas {
+  width: 540px;
+  height: 960px;
+}
+.col-form-label > img {
+  width: 24px;
+}
+
+.skill-info-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #b0bec5;
+  color: white;
+  margin-top: 8px;
+  line-height: 1.5;
+  border-radius: 50%;
+  margin-left: 4px;
+  font-size: small;
+  text-align: center;
+}
+.skill-info-icon::after {
+  content: "i";
+}
+.skill-info-icon:hover {
+  background-color: #607d8b;
+}
+.skill-info {
+  color: #777777;
+}
+.skill-info > p {
+  margin-bottom: 0.5rem;
+}
+.skill-cost > span {
+  display: inline-block;
+  margin-right: 50px;
+}
+.skill-header {
+  width: 80px;
+}
+
+.opt-half {
+  display: inline-block;
+  width: 50%;
+}
+
 /***** Selectable *****/
 .selectable > .dropdown-toggle {
   background-color: #ffffff;
+  height: 38px;
 }
 .selectable > .dropdown-toggle::after {
   position: absolute;
   right: 10px;
   top: 16px;
 }
+.selectable .dropdown-toggle[disabled] {
+  background-color: #eee;
+}
+.row > .selectable > .dropdown-toggle::after {
+  position: absolute;
+  right: 24px;
+  top: 16px;
+}
 .selectable .dropdown-menu {
-  width: 100%;
+  width: calc(100% - 30px);
 }
 .selectable .dropdown-header {
   /* color: #ffffff;
@@ -259,4 +337,45 @@ body {
 .selectable .dropdown-item {
   cursor: pointer;
 }
+.selectable .btn-outline-secondary {
+    border: 1px solid #ced4da;
+}
+/***** Misc *****/
+.spinner {
+  text-align: center;
+}
+.spinner > span {
+  font-size: 2rem;
+  display: block;
+}
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
 
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
