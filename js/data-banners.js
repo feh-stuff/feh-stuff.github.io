@@ -3,9 +3,9 @@ const BANNERS = [
     "date": "January 2018",
     "banners": [
       {
-        "name": "Radiant Dawn",
+        "name": "World of Dawn",
         "latestHeroesDate": "",
-        "startDate": "Jan 15, 2018",
+        "startDate": "Jan 12, 2018",
         "focusHeroes": [ "Micaiah", "Sothe", "Zelgius" ],
         "excludeFromRarity4": [],
         "excludeFromRarity5": [],

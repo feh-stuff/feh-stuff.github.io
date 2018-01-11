@@ -1,7 +1,7 @@
 let SKILL_WEAPON = [
   { "name": "Absorb", "spCost": 150, "damage": 4, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "Recovers HP=50% of damage dealt." },
   { "name": "Absorb+", "spCost": 300, "damage": 7, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "Recovers HP = 50% of damage dealt. After combat, restores 7 HP to allies within 2 spaces of unit." },
-  { "name": "Alondite", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Black Knight"], "weaponType": "Sword", "colorType": "Red", "effect": "Enables counterattack regardless of distance if this unit is attacked." },
+  { "name": "Alondite", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Black Knight", "Zelgius"], "weaponType": "Sword", "colorType": "Red", "effect": "Enables counterattack regardless of distance if this unit is attacked." },
   { "name": "Amiti", "spCost": 400, "damage": 11, "range": 1, "exclusive": ["Elincia"], "weaponType": "Sword", "colorType": "Red", "stats": { "spd": -2 }, "effect": "Spd-2. Attack twice when initiating combat." },
   { "name": "Armads", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Hector"], "weaponType": "Axe", "colorType": "Green", "effect": "Unit makes a guaranteed follow-up attack when attacked at HP ≥ 80%." },
   { "name": "Armorslayer", "spCost": 200, "damage": 8, "range": 1, "weaponType": "Sword", "colorType": "Red", "effect": "Effective against armored units." },
@@ -78,6 +78,7 @@ let SKILL_WEAPON = [
   { "name": "Eckesachs", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Zephiel"], "weaponType": "Sword", "colorType": "Red", "effect": "Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn.", },
   { "name": "Elfire", "spCost": 100, "damage": 6, "range": 2, "weaponType": "Tome", "colorType": "Red", "effect": "-" },
   { "name": "Élivágar", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Veronica"], "weaponType": "Tome", "colorType": "Green", "effect": "If unit initiates attack, bonuses on foes within 2 spaces of the target become penalties through their next actions.", },
+  { "name": "Ellight", "spCost": 100, "damage": 6, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "" },
   { "name": "Elthunder", "spCost": 100, "damage": 6, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "-" },
   { "name": "Elwind", "spCost": 100, "damage": 6, "range": 2, "weaponType": "Tome", "colorType": "Green", "effect": "-" },
   { "name": "Emerald Axe", "spCost": 200, "damage": 8, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage." },
@@ -164,6 +165,7 @@ let SKILL_WEAPON = [
   { "name": "Legion's Axe", "spCost": 200, "damage": 10, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "After combat, bonuses on targeted foe become penalties through its next action." },
   { "name": "Legion's Axe+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "After combat, bonuses on targeted foe become penalties through its next action." },
   { "name": "Leiptr", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Fjorm"], "weaponType": "Lance", "colorType": "Blue", "effect": "Unit can counterattack regardless of foe's range.", },
+  { "name": "Light", "spCost": 50, "damage": 4, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "" },
   { "name": "Light Breath", "spCost": 200, "damage": 9, "range": 1, "weaponType": "Breath", "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates." },
   { "name": "Light Breath+", "spCost": 300, "damage": 13, "range": 1, "weaponType": "Breath", "effect": "Grants adjacent allies Def/Res+4 through their next actions after any combat this unit initiates." },
   { "name": "Lightning Breath", "spCost": 200, "damage": 7, "range": 1, "weaponType": "Breath", "effect": "Enables counterattack regardless of attacker's range. Slows Special trigger (cooldown count+1)." },
@@ -174,7 +176,7 @@ let SKILL_WEAPON = [
   { "name": "Melon Crusher+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Axe", "colorType": "Green", "effect": "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat." },
   { "name": "Monstrous Bow", "spCost": 200, "damage": 8, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying foes.  After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions." },
   { "name": "Monstrous Bow+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying foes.  After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions." },
-  { "name": "Mulagir", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Lyn (Brave Heroes)"], "weaponType": "Bow", "colorType": "Neutral", "stats": { "spd": 3 }, "effect": "Effective against flying units.  Grants Spd+3. If foe is magic user, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat.", },
+  { "name": "Mulagir", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Lyn (Brave Heroes)"], "weaponType": "Bow", "colorType": "Neutral", "stats": { "spd": 3 }, "effect": "Effective against flying units.  Grants Spd+3. If foe is magic user, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat." },
   { "name": "Mystletainn", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Eldigan"], "weaponType": "Sword", "colorType": "Red", "effect": "Accelerates Special trigger (cooldown count-1).", },
   { "name": "Naga", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Julia"], "weaponType": "Tome", "colorType": "Green", "effect": "Effective against dragons.  Grants Def/Res+2 when this unit is attacked.", },
   { "name": "Nidhogg", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Innes"], "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units.  During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.", },
@@ -184,6 +186,7 @@ let SKILL_WEAPON = [
   { "name": "Panic", "spCost": 150, "damage": 7, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "After combat, bonuses on targeted foe become penalties through its next action." },
   { "name": "Panic+", "spCost": 300, "damage": 11, "range": 2, "weaponType": "Staff", "colorType": "Neutral", "effect": "After combat, bonuses on target and foes within 2 spaces of target become penalties through their next actions." },
   { "name": "Parthia", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Jeorge"], "weaponType": "Bow", "colorType": "Neutral", "effect": "Effective against flying units.  Grants Res+4 during combat if initiating attack.", },
+  { "name": "Peshkatz", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Sothe"], "weaponType": "Dagger", "colorType": "Neutral", "effect": "After combat, if unit attacked, inflicts Atk/Spd/Def/Res-4 on target and foes within 2 spaces of target through their next actions, and grants Atk/Spd/Def/Res+4 to unit and allies within 2 spaces for 1 turn." },
   { "name": "Poison Dagger", "spCost": 200, "damage": 2, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "Effective against infantry units.  Infantry foes suffer Def/Res-4 after combat through their next actions." },
   { "name": "Poison Dagger+", "spCost": 300, "damage": 5, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "Effective against infantry units.  Infantry foes suffer Def/Res-6 after combat through their next actions." },
   { "name": "Ragnarok", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Celica"], "weaponType": "Tome", "colorType": "Red", "effect": "If unit has 100% HP at the start of combat, unit receives Atk/Spd +5. If attacking, unit will receive 5 damage after combat.", },
@@ -218,6 +221,8 @@ let SKILL_WEAPON = [
   { "name": "Sealife Tome+", "spCost": 300, "damage": 12, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "Grants allies within 2 spaces Atk/Spd+1 during combat." },
   { "name": "Seashell", "spCost": 200, "damage": 7, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "Foe takes Def/Res-5 until end of foe's next action. If unit has 100% HP at start of combat, Atk/Spd/Def/Res+2. If attacking, unit gets 2 damage after." },
   { "name": "Seashell+", "spCost": 300, "damage": 10, "range": 2, "weaponType": "Dagger", "colorType": "Neutral", "effect": "Foe takes Def/Res-7 until end of foe's next action. If unit has 100% HP at start of combat, Atk/Spd/Def/Res+2. If attacking, unit gets 2 damage after." },
+  { "name": "Shine", "spCost": 200, "damage": 9, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "" },
+  { "name": "Shine+", "spCost": 300, "damage": 13, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "" },
   { "name": "Siegfried", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Xander"], "weaponType": "Sword", "colorType": "Red", "effect": "Enables counterattack regardless of distance if this unit is attacked.", },
   { "name": "Sieglinde", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Eirika"], "weaponType": "Sword", "colorType": "Red", "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.", },
   { "name": "Siegmund", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Ephraim"], "weaponType": "Lance", "colorType": "Blue", "effect": "Grants adjacent allies Atk+3 through their next actions at the start of each turn.", },
@@ -259,6 +264,7 @@ let SKILL_WEAPON = [
   { "name": "Stout Tomahawk", "spCost": 400, "damage": 16, "range": 1, "exclusive": ["Dorcas"], "weaponType": "Axe", "colorType": "Green", "effect": "Enables counterattack regardless of distance if this unit is attacked.", },
   { "name": "Tannenboom!", "spCost": 200, "damage": 10, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat." },
   { "name": "Tannenboom!+", "spCost": 300, "damage": 14, "range": 1, "weaponType": "Lance", "colorType": "Blue", "effect": "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat." },
+  { "name": "Thani", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Micaiah"], "weaponType": "Tome", "colorType": "Blue", "effect": "Grants Res+3. Effective against armored and cavalry foes. Against armored and cavalry foes using bow, dagger, magic, or staff, damage from first attack received by unit during combat reduced by 30%." },
   { "name": "Thökk", "spCost": 400, "damage": 14, "range": 2, "exclusive": ["Loki"], "weaponType": "Staff", "colorType": "Neutral", "effect": "Damage from staff calculated like other weapons. At start of turn, foes with bow, daggers, magic, or staff in cardinal directions with HP 3 or more lower than unit's can move only 1 space through their next actions.", },
   { "name": "Thoron", "spCost": 200, "damage": 9, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "-" },
   { "name": "Thoron+", "spCost": 300, "damage": 13, "range": 2, "weaponType": "Tome", "colorType": "Blue", "effect": "-" },
@@ -309,6 +315,7 @@ let SKILL_ASSIST = [
   { "name": "Rehabilitate", "range": 1, "spCost": 200, "effect": "Restores 7 HP or more the further below 50% the target's HP is. Slows special trigger (cooldown count+1).", "include": [{ "weaponType": "Staff" }] },
   { "name": "Rehabilitate+", "range": 1, "spCost": 300, "effect": "Restores HP = 50% of Atk -10. (Minimum of 7 HP.) If target's HP is ≤ 50%, the lower the target's HP, the more HP is restored.", "include": [{ "weaponType": "Staff" }] },
   { "name": "Reposition", "range": 1, "spCost": 150, "effect": "Moves adjacent ally to opposite side of unit.", "exclude": [{ "weaponType": "Staff" }] },
+  { "name": "Sacrifice", "range": 1, "spCost": 400, "include": [{"name": "Micaiah"}], "effect": "Converts penalties on target into bonuses. Restores target's HP = unit's current HP -1. Unit's HP reduced by amount restored." },
   { "name": "Shove", "range": 1, "spCost": 150, "effect": "Push adjacent ally 1 space farther away.", "exclude": [{ "weaponType": "Staff" }] },
   { "name": "Sing", "range": 1, "spCost": 150, "effect": "Enables target to take another action. Cannot be used on units with Sing or Dance.", "include": [{ "name": "Azura" },{ "name": "Azura (Performing Arts)" },{ "name": "Shigure (Performing Arts)" }, { "name": "Azura (Happy New Year!)" } ] },
   { "name": "Smite", "range": 1, "spCost": 150, "effect": "Push adjacent ally 2 spaces farther away.", "exclude": [{ "weaponType": "Staff" }] },
@@ -319,7 +326,7 @@ let SKILL_SPECIAL = [
   { "name": "Aegis", "cooldown": 3, "spCost": 200, "exclude": [{"weaponType": "Bow"}, {"weaponType": "Dagger"}, {"weaponType": "Staff"}, {"weaponType": "Tome"}], "effect": "Reduces damage inflicted by attacks from foes 2 spaces away by 50%." },
   { "name": "Aether", "cooldown": 5, "spCost": 500, "exclude": [{ "weaponType": "Staff" }], "effect": "Resolve combat as if foe suffered Def/Res-50%. Unit recovers HP=half damage dealt." },
   { "name": "Astra", "cooldown": 4, "spCost": 200, "exclude": [{ "weaponType": "Staff" }], "effect": "Grants +150% to damage dealt." },
-  { "name": "Black Luna", "cooldown": 3, "spCost": 500, "include": [{ "name": "Black Knight" }], "effect": "Resolve combat as if foe suffered Def/Res-80%. (Skill cannot be inherited.)" },
+  { "name": "Black Luna", "cooldown": 3, "spCost": 500, "include": [{ "name": "Black Knight" },{ "name": "Zelgius" }], "effect": "Resolve combat as if foe suffered Def/Res-80%. (Skill cannot be inherited.)" },
   { "name": "Blazing Flame", "cooldown": 4, "spCost": 300, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's Atk minus foe's Def or Res)." },
   { "name": "Blazing Light", "cooldown": 4, "spCost": 300, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's Atk minus foe's Def or Res)." },
   { "name": "Blazing Thunder", "cooldown": 4, "spCost": 300, "exclude": [{ "weaponType": "Staff" }], "effect": "Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's Atk minus foe's Def or Res)." },
@@ -624,6 +631,7 @@ let SKILL_B = [
   { "name": "Vengeful Fighter 1", "spCost": 60, "icon": "34-3", "include": [{"moveType": "Armored"}], "effect": "If unit's HP ≥ 90% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)" },
   { "name": "Vengeful Fighter 2", "spCost": 120, "icon": "34-4", "include": [{"moveType": "Armored"}], "effect": "If unit's HP ≥ 70% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)" },
   { "name": "Vengeful Fighter 3", "spCost": 240, "icon": "34-5", "include": [{"moveType": "Armored"}], "effect": "If unit's HP ≥ 50% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)" },
+  { "name": "Warp Powder", "spCost": 300, "icon": "35-5", "include": [{"name":"Zelgius"}], "effect": "If unit's HP ≥ 80%, unit can move adjacent to any ally within 2 spaces. (Skill cannot be inherited.)" },
   { "name": "Wary Fighter 1", "spCost": 60, "icon": "6-6", "include": [{"moveType": "Armored"}], "effect": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 90%." },
   { "name": "Wary Fighter 2", "spCost": 120, "icon": "6-7", "include": [{"moveType": "Armored"}], "effect": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 70%." },
   { "name": "Wary Fighter 3", "spCost": 240, "icon": "6-8", "include": [{"moveType": "Armored"}], "effect": "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 50%." },
@@ -747,6 +755,8 @@ let SKILL_C = [
   { "name": "Spur Atk 1", "spCost": 50, "icon": "10-8", "effect": "Grants adjacent allies Atk+2 during combat." },
   { "name": "Spur Atk 2", "spCost": 100, "icon": "10-9", "effect": "Grants adjacent allies Atk+3 during combat." },
   { "name": "Spur Atk 3", "spCost": 200, "icon": "10-19", "effect": "Grants adjacent allies Atk+4 during combat." },
+  { "name": "Spur Atk/Spd 2", "spCost": 120, "icon": "35-6", "effect": "Grants adjacent allies Atk/Spd +2 during combat." },
+  { "name": "Spur Atk/Spd 3", "spCost": 240, "icon": "35-7", "effect": "Grants adjacent allies Atk/Spd +3 during combat." },
   { "name": "Spur Def 1", "spCost": 50, "icon": "11-1", "effect": "Grants adjacent allies Def+2 during combat." },
   { "name": "Spur Def 2", "spCost": 100, "icon": "11-2", "effect": "Grants adjacent allies Def+3 during combat." },
   { "name": "Spur Def 3", "spCost": 200, "icon": "11-3", "effect": "Grants adjacent allies Def+4 during combat." },
@@ -930,6 +940,12 @@ let SKILL_REFINED_WEAPONS = {
     {"name": "+Res", "icon": "31-12", "effect": "-", "stats": {"hp": 2, "atk": 1, "res": 3}}
   ],
   "Thoron+": [
+    {"name": "+Atk", "icon": "31-9", "effect": "-", "stats": {"hp": 2, "atk": 2}},
+    {"name": "+Spd", "icon": "31-10", "effect": "-", "stats": {"hp": 2, "atk": 1, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "effect": "-", "stats": {"hp": 2, "atk": 1, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "effect": "-", "stats": {"hp": 2, "atk": 1, "res": 3}}
+  ],
+  "Shine+": [
     {"name": "+Atk", "icon": "31-9", "effect": "-", "stats": {"hp": 2, "atk": 2}},
     {"name": "+Spd", "icon": "31-10", "effect": "-", "stats": {"hp": 2, "atk": 1, "spd": 2}},
     {"name": "+Def", "icon": "31-11", "effect": "-", "stats": {"hp": 2, "atk": 1, "def": 3}},
@@ -1344,6 +1360,20 @@ let SKILL_REFINED_WEAPONS = {
     {"name": "+Spd", "icon": "31-10", "cost": 1, "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 3, "spd": 2}},
     {"name": "+Def", "icon": "31-11", "cost": 1, "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 3, "def": 3}},
     {"name": "+Res", "icon": "31-12", "cost": 1, "effect": "After combat, deals 10 damage to target and foes within 2 spaces of target. Also inflicts Def/Res-7 through their next actions.", "stats": {"hp": 2, "atk": 3, "res": 3}}
+  ],
+  "Parthia": [
+    {"name": "+Atk vs Ranged", "icon": "35-3", "cost": 1, "effect": "Effective against flying foes. If foe uses magic, damage from first attack received by unit during combat reduced by 30%. Grants Atk+6 during combat if foe uses bow, dagger, magic, or staff."},
+    {"name": "+Atk", "icon": "31-9", "cost": 1, "effect": "Effective against flying foes. If foe uses magic, damage from first attack received by unit during combat reduced by 30%.", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "cost": 1, "effect": "Effective against flying foes. If foe uses magic, damage from first attack received by unit during combat reduced by 30%.", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "cost": 1, "effect": "Effective against flying foes. If foe uses magic, damage from first attack received by unit during combat reduced by 30%.", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "cost": 1, "effect": "Effective against flying foes. If foe uses magic, damage from first attack received by unit during combat reduced by 30%.", "stats": {"hp": 2, "res": 3}}
+  ],
+  "Cymbeline": [
+    {"name": "Atk/Res Bond", "icon": "35-4", "cost": 1, "effect": "Grants allies within 2 spaces Atk+3 during combat. Grants Atk/Res+5 during combat if within 2 spaces of a flying ally."},
+    {"name": "+Atk", "icon": "31-9", "cost": 1, "effect": "", "stats": {"hp": 2, "atk": 1}},
+    {"name": "+Spd", "icon": "31-10", "cost": 1, "effect": "", "stats": {"hp": 2, "spd": 2}},
+    {"name": "+Def", "icon": "31-11", "cost": 1, "effect": "", "stats": {"hp": 2, "def": 3}},
+    {"name": "+Res", "icon": "31-12", "cost": 1, "effect": "", "stats": {"hp": 2, "res": 3}}
   ]
 };
 
