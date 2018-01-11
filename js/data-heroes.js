@@ -4151,6 +4151,24 @@ const HEROES = [
     "colorType": "Red"
   },
   {
+    "name": "Micaiah",
+    "title": "Priestess of Dawn",
+    "weaponType": "Tome",
+    "moveType": "Infantry",
+    "releaseDate": "Jan 15, 2018",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Micaiah.png",
+      "main": "img/heroes-main/Micaiah.png"
+    },
+    "skills": [],
+    "stats": {
+      "level1": { "hp": 16, "atk": 9, "spd": 6, "def": 5, "res": 9 },
+      "level40": { "hp": [ 32, 35, 38 ], "atk": [ 32, 35, 38 ], "spd": [ 25, 28, 31 ], "def": [ 15, 18, 21 ], "res": [ 32, 35, 38 ] },
+    },
+    "rarity5": true,
+    "colorType": "Blue",
+  },
+  {
     "name": "Michalis",
     "title": "Ambitious King",
     "weaponType": "Axe",
@@ -4608,6 +4626,26 @@ const HEROES = [
     "rarity4": true,
     "rarity5": true,
     "colorType": "Red"
+  },
+  {
+    "name": "Oliver",
+    "title": "Admirer of Beauty",
+    "weaponType": "Tome",
+    "moveType": "Infantry",
+    "releaseDate": "Jan 15, 2018",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Oliver.png",
+      "main": "img/heroes-main/Oliver.png"
+    },
+    "skills": [],
+    "stats": {
+      "level1": { "hp": 18, "atk": 8, "spd": 5, "def": 6, "res": 8 },
+      "level40": { "hp": [ 39, 42, 45 ], "atk": [ 29, 32, 35 ], "spd": [ 17, 20, 23 ], "def": [ 20, 23, 26 ], "res": [ 31, 34, 37 ] },
+    },
+    "rarity3": true,
+    "rarity4": true,
+    "colorType": "Blue",
+    "ghb": true
   },
   {
     "name": "Olivia",
@@ -5955,6 +5993,24 @@ const HEROES = [
     "colorType": "Green"
   },
   {
+    "name": "Sothe",
+    "title": "Zephyr",
+    "weaponType": "Dagger",
+    "moveType": "Infantry",
+    "releaseDate": "Jan 15, 2018",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Sothe.png",
+      "main": "img/heroes-main/Sothe.png"
+    },
+    "skills": [],
+    "stats": {
+      "level1": { "hp": 17, "atk": 10, "spd": 9, "def": 5, "res": 4 },
+      "level40": { "hp": [ 36, 39, 42 ], "atk": [ 33, 36, 39 ], "spd": [ 30, 33, 36 ], "def": [ 19, 22, 25 ], "res": [ 18, 21, 24 ] },
+    },
+    "rarity5": true,
+    "colorType": "Neutral",
+  },
+  {
     "name": "Stahl",
     "title": "Viridian Knight",
     "weaponType": "Sword",
@@ -6649,6 +6705,24 @@ const HEROES = [
     "rarity5": true,
     "colorType": "Blue",
     "limited": true
+  },
+  {
+    "name": "Zelgius",
+    "title": "Jet-Black General",
+    "weaponType": "Sword",
+    "moveType": "Armored",
+    "releaseDate": "Jan 15, 2018",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Zelgius.png",
+      "main": "img/heroes-main/Zelgius.png"
+    },
+    "skills": [],
+    "stats": {
+      "level1": { "hp": 22, "atk": 10, "spd": 7, "def": 10, "res": 6 },
+      "level40": { "hp": [ 43, 46, 49 ], "atk": [ 33, 36, 39 ], "spd": [ 30, 33, 36 ], "def": [ 35, 38, 41 ], "res": [ 18, 21, 24 ] },
+  },
+    "rarity5": true,
+    "colorType": "Red",
   },
   {
     "name": "Zephiel",

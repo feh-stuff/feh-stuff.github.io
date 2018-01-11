@@ -3,6 +3,20 @@ const BANNERS = [
     "date": "January 2018",
     "banners": [
       {
+        "name": "Radiant Dawn",
+        "latestHeroesDate": "",
+        "startDate": "Jan 15, 2018",
+        "focusHeroes": [ "Micaiah", "Sothe", "Zelgius" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
+      {
         "name": "Effective Againt Cavalry",
         "latestHeroesDate": "",
         "startDate": "Jan 04, 2018",
