@@ -78,7 +78,8 @@
       data: BANNERS,
       optionGenerator: this.bannerOptionsGenerator,
       text: BANNERS[0].banners[0].name,
-      value: BANNERS[0].banners[0]
+      value: BANNERS[0].banners[0],
+      searchPlaceholder: 'Search Banner Name or Hero'
     });
 
     let customFocus = this.getUrlParam('focus');
@@ -238,7 +239,6 @@
 
 
   // Main Functions
-  //TODO
   SummonSimulator.prototype.getSessionOrbs = function() {
     let orbs = [];
     let rateRF = parseFloat($(this.ELEMENTS.RATE_INPUT_FOCUS).val()) / 100;
@@ -462,7 +462,6 @@
     this.initBanner();
 
     $(this.ELEMENTS.SELECT_BANNER).selectable('text', 'Custom Banner');
-    //TODO Append banner to select dropdown;
   };
 
   // Helper Functions
@@ -489,6 +488,7 @@
     for (let i = 0; i < item.banners.length; i++) {
       $(`<div class="dropdown-item">${item.banners[i].name}</div>`)
           .data('val', item.banners[i])
+          .data('tokens', item.banners[i].focusHeroes.join(' ').toLowerCase())
           .appendTo($parent);
     }
   };

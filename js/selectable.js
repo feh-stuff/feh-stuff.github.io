@@ -62,10 +62,14 @@ $.widget('custom.selectable', {
   _search: function(event) {
     let searchVal = $(event.currentTarget).val().trim().toLowerCase();
     this.$menuItems.children().each(function() {
+      let tokens = $(this).data('tokens');
+
       if (searchVal.length === 0) {
         $(this).removeClass('d-none');
       } else if ($(this).hasClass('.dropdown-header')) {
         $(this).addClass('d-none');
+      } else if (tokens && tokens.length) {
+        
       } else {
         let val = $(this).text().toLowerCase();
         $(this).toggleClass('d-none', !$(this).text().toLowerCase().includes(searchVal));
