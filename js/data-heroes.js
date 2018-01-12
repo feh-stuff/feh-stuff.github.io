@@ -64,7 +64,6 @@ const HEROES = [
       "level40_4": { "hp": [ 37, 40, 43 ], "atk": [ 30, 33, 36 ], "spd": [ 20, 23, 26 ], "def": [ 27, 30, 33 ], "res": [ 17, 20, 23 ] }
     },
     "rarity2": true,
-    "rarity2": true,
     "rarity3": true,
     "rarity4": true,
     "limited": true,
@@ -5725,7 +5724,6 @@ const HEROES = [
       "level1_4": { "hp": 18, "atk": 8, "spd": 8, "def": 6, "res": 4 },
       "level40_4": { "hp": [ 37, 40, 43 ], "atk": [ 27, 30, 33 ], "spd": [ 27, 30, 33 ], "def": [ 23, 26, 29 ], "res": [ 17, 20, 23 ] }
     },
-    "rarity2": true,
     "rarity2": true,
     "rarity3": true,
     "rarity4": true,

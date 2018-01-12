@@ -189,10 +189,10 @@
       if (new Date(hero.releaseDate) > this.banner.startDate || hero.ghb || hero.ttReward) {
           return;
       }
-      if (hero.rarity3) {
+      if (hero.rarity3 && !hero.limited) {
         this.heroList.r3.push(hero);
       }
-      if (hero.rarity4 && !this.banner.excludeFromRarity4.includes(hero.name)) {
+      if (hero.rarity4 && !hero.limited && !this.banner.excludeFromRarity4.includes(hero.name)) {
         this.heroList.r4.push(hero);
       }
       if (hero.rarity5 && !hero.limited && !this.banner.excludeFromRarity5.includes(hero.name)) {
