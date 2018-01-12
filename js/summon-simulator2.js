@@ -107,7 +107,8 @@
       data: ['focus', 5, 4, 3],
       optionGenerator: this.filterOptionsGenerator,
       text: 'Filter',
-      menuClass: 'dropdown-menu-right'
+      menuClass: 'dropdown-menu-right',
+      search: false
     });
 
 
