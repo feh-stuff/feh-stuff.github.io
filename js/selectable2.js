@@ -83,6 +83,10 @@ $.widget('custom.selectable', {
           !((tokens && tokens.length && tokens.includes(searchVal)) ||
           $(this).text().toLowerCase().includes(searchVal)));
     });
+
+    if (this.$menu.attr('x-placement') === 'top-start') {
+      this.$menu.css('transform', `translate3d(15px, -${this.$menu.height() + 22}px, 0px)`);
+    }
   },
 
   text: function(text) {
