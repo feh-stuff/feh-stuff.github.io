@@ -552,6 +552,9 @@ $(document).ready(() => {
       if ($(ELEMENTS.IV_SHOW).is(':checked')) {
         drawIv(hero.iv);
       }
+
+      ctx.drawImage(imgSkills, 845, 994, 153, 40, 46, 380, 153, 40);
+
       drawNameTitle(hero.data.shortName || hero.data.name, hero.data.title);
       drawWeaponMoveTypeIcons(hero.data.colorType, hero.data.weaponType, hero.data.moveType);
       drawMergesStats(hero.merges, hero.stats);
