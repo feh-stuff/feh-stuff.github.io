@@ -3,6 +3,20 @@ const BANNERS = [
     "date": "January 2018",
     "banners": [
       {
+        "name": "Stepping into the New Year Tempest Trials",
+        "latestHeroesDate": "",
+        "startDate": "Jan 13, 2018",
+        "focusHeroes": [ "Ryoma", "Sakura", "Hinoka" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [],
+        "rateRarity3": 36,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
+      {
         "name": "World of Dawn",
         "latestHeroesDate": "",
         "startDate": "Jan 12, 2018",
