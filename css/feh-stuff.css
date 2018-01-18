@@ -74,6 +74,19 @@ body {
 .form-check > label {
   white-space: nowrap;
 }
+.col-form-label-2-line,
+.form-check > .col-form-label-2-line {
+  white-space: normal;
+  word-wrap: normal;
+  height: 38px;
+  text-align: right;
+  border-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-bottom: 0;
+  line-height: 17px;
+}
 .form-check {
   height: 38px;
   padding-top: 3px;
@@ -222,7 +235,8 @@ body {
 .hide-3 .r-3,
 .hide-4 .r-4,
 .hide-5 .r-5,
-.hide-focus .r-focus {
+.hide-focus .r-focus,
+.hide-focus-4 .r-focus-4 {
   display: none;
 }
 
@@ -307,6 +321,14 @@ body {
 .opt-half {
   display: inline-block;
   width: 50%;
+}
+
+.stat-input-groups .input-group-addon:not(.readonly) {
+  background-color: white;
+}
+.stat-input-groups > .input-group > input {
+  border-left: none;
+  text-align: right;
 }
 
 /***** Selectable *****/

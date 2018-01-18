@@ -3,12 +3,27 @@ const BANNERS = [
     "date": "January 2018",
     "banners": [
       {
+        "name": "4★ and 5★ Heroes",
+        "latestHeroesDate": "",
+        "startDate": "Jan 18, 2018",
+        "focusHeroes": [ "Hinata", "Laslow", "Roy", "Abel", "Oscar", "Mathilda", "Barst", "Frederick", "Fae", "Klein", "Setsuna", "Rebecca" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [ "Micaiah", "Sothe", "Zelgius" ],
+        "rateRarity3": 36,
+        "rateRarity4": 29,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "rateRarityFocus4": 29,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
+      {
         "name": "Stepping into the New Year Tempest Trials",
         "latestHeroesDate": "",
         "startDate": "Jan 13, 2018",
         "focusHeroes": [ "Ryoma", "Sakura", "Hinoka" ],
         "excludeFromRarity4": [],
-        "excludeFromRarity5": [],
+        "excludeFromRarity5": [ "Micaiah", "Sothe", "Zelgius" ],
         "rateRarity3": 36,
         "rateRarity4": 58,
         "rateRarity5": 3,

@@ -26,10 +26,12 @@
     NEW_SESSION: '#new-session',
     RATE_INPUT: '.rate-input > input',
     RATE_INPUT_FOCUS: '#rate-input-focus',
+    RATE_INPUT_FOCUS_4: '#rate-input-focus-4',
     RATE_INPUT_5: '#rate-input-5',
     RATE_INPUT_4: '#rate-input-4',
     RATE_INPUT_3: '#rate-input-3',
     CUSTOM_INPUT_FOCUS: '#custom-input-focus',
+    CUSTOM_INPUT_FOCUS_4: '#custom-input-focus-4',
     CUSTOM_RATE_INPUT: '.custom-rate-input',
     CUSTOM_INPUT_5: '#custom-input-5',
     CUSTOM_INPUT_4: '#custom-input-4',
@@ -91,8 +93,9 @@
       if (rates.length === 4) {
         this.banner.rateRarityFocus = parseInt(rates[0]);
         this.banner.rateRarity5 = parseInt(rates[1]);
-        this.banner.rateRarity4 = parseInt(rates[2]);
-        this.banner.rateRarity3 = parseInt(rates[3]);
+        this.banner.rateRarityFocus4 = parseInt(rates[2]);
+        this.banner.rateRarity4 = parseInt(rates[3]);
+        this.banner.rateRarity3 = parseInt(rates[4]);
         if (this.banner.rateRarity5 === 0) {
           this.banner.pityRateRarity5 = 0
           this.banner.pityRateRarityFocus = 0.5;
@@ -102,15 +105,6 @@
       this.banner = BANNERS[0].banners[0];
       this.banner.startDate = new Date(this.banner.startDate);
     }
-
-    $(this.ELEMENTS.FILTER_TABLE).selectable({
-      data: ['focus', 5, 4, 3],
-      optionGenerator: this.filterOptionsGenerator,
-      text: 'Filter',
-      menuClass: 'dropdown-menu-right',
-      search: false
-    });
-
 
     this.initBanner();
     this.initCustomBannerList();
@@ -224,7 +218,13 @@
       let rateDecrease = (this.banner.pityRateRarityFocus + this.banner.pityRateRarity5) / 2;
       $(this.ELEMENTS.RATE_INPUT_FOCUS).val(parseFloat($(this.ELEMENTS.RATE_INPUT_FOCUS).val()) + this.banner.pityRateRarityFocus);
       $(this.ELEMENTS.RATE_INPUT_5).val(parseFloat($(this.ELEMENTS.RATE_INPUT_5).val()) + this.banner.pityRateRarity5);
-      $(this.ELEMENTS.RATE_INPUT_4).val(parseFloat($(this.ELEMENTS.RATE_INPUT_4).val()) - rateDecrease);
+
+      if (this.banner.rateRarityFocus4) {
+        $(this.ELEMENTS.RATE_INPUT_FOCUS_4).val(parseFloat($(this.ELEMENTS.RATE_INPUT_4).val()) - rateDecrease/2);
+        $(this.ELEMENTS.RATE_INPUT_4).val(parseFloat($(this.ELEMENTS.RATE_INPUT_4).val()) - rateDecrease/2);
+      } else {
+        $(this.ELEMENTS.RATE_INPUT_4).val(parseFloat($(this.ELEMENTS.RATE_INPUT_4).val()) - rateDecrease);
+      }
       $(this.ELEMENTS.RATE_INPUT_3).val(parseFloat($(this.ELEMENTS.RATE_INPUT_3).val()) - rateDecrease);
     }
 
@@ -234,6 +234,7 @@
   SummonSimulator.prototype.resetRates = function() {
     $(this.ELEMENTS.RATE_INPUT_FOCUS).val(this.banner.rateRarityFocus);
     $(this.ELEMENTS.RATE_INPUT_5).val(this.banner.rateRarity5);
+    $(this.ELEMENTS.RATE_INPUT_FOCUS_4).val(this.banner.rateRarityFocus4 || 0);
     $(this.ELEMENTS.RATE_INPUT_4).val(this.banner.rateRarity4);
     $(this.ELEMENTS.RATE_INPUT_3).val(this.banner.rateRarity3);
   };
@@ -244,7 +245,16 @@
     let orbs = [];
     let rateRF = parseFloat($(this.ELEMENTS.RATE_INPUT_FOCUS).val()) / 100;
     let rateR5 = parseFloat($(this.ELEMENTS.RATE_INPUT_5).val()) / 100 + rateRF;
-    let rateR4 = parseFloat($(this.ELEMENTS.RATE_INPUT_4).val()) / 100 + rateR5;
+    let rateRF4;
+    let rateR4;
+
+    if (this.banner.rateRarityFocus4) {
+      rateRF4 = parseFloat($(this.ELEMENTS.RATE_INPUT_FOCUS_4).val()) / 100 + rateR5;
+      rateR4 = parseFloat($(this.ELEMENTS.RATE_INPUT_4).val()) / 100 + rateRF4;
+    } else {
+      rateRF4 = 0;
+      rateR4 = parseFloat($(this.ELEMENTS.RATE_INPUT_4).val()) / 100 + rateR5;
+    }
 
     for (let i = 0; i < 5; i++) {
       let rate = Math.random();
@@ -253,6 +263,8 @@
         orbData = { hero: this.getArrayRand(this.heroList.rf), rarity: 'focus' };
       } else if (rate <= rateR5) {
         orbData = { hero: this.getArrayRand(this.heroList.r5), rarity: 5 };
+      } else if (rate <= rateRF4) {
+        orbData = { hero: this.getArrayRand(this.heroList.rf), rarity: 'focus-4' };
       } else if (rate <= rateR4) {
         orbData = { hero: this.getArrayRand(this.heroList.r4), rarity: 4 };
       } else {
@@ -274,10 +286,10 @@
   SummonSimulator.prototype.revealOrb = function($orb) {
     let orbData = $orb.data('hero');
     $orb.replaceWith(`<div class="summon-hero">
-      <img class="summon-hero-frame" src="img/assets/frame-rarity-${orbData.rarity}.png">
+      <img class="summon-hero-frame" src="img/assets/frame-rarity-${orbData.rarity === 'focus-4' ? 4 : orbData.rarity}.png">
       <img class="summon-hero-portrait" src="${orbData.hero.assets.portrait}">
-      <img class="summon-hero-background" src="img/assets/background-rarity-${orbData.rarity}.png">
-      <img class="summon-hero-rarity" src="img/assets/star-rarity-${orbData.rarity}.png">
+      <img class="summon-hero-background" src="img/assets/background-rarity-${orbData.rarity === 'focus-4' ? 'focus' : orbData.rarity}.png">
+      <img class="summon-hero-rarity" src="img/assets/star-rarity-${orbData.rarity === 'focus-4' ? 4 : orbData.rarity}.png">
     </div>`);
 
     this.pullStats.pulls++;
@@ -293,7 +305,8 @@
         .add([
             this.pullStats.pulls,
             orbData.hero.name,
-            orbData.rarity === 'focus' ? 'Focus' : orbData.rarity,
+            orbData.rarity === 'focus' ? 'Focus' :
+                orbData.rarity === 'focus-4' ? 'Focus (4)' : orbData.rarity,
             orbData.iv.boon,
             orbData.iv.bane
           ])
@@ -401,6 +414,7 @@
       rateRarity4: 58,
       rateRarity5: 3,
       rateRarityFocus: 3,
+      rateRarityFocus4: 0,
       pityRateRarity5: 0.25,
       pityRateRarityFocus: 0.25
     };
@@ -441,6 +455,7 @@
   SummonSimulator.prototype.customRateChange = function() {
     this.customBanner.rateRarityFocus = parseInt($(this.ELEMENTS.CUSTOM_INPUT_FOCUS).val());
     this.customBanner.rateRarity5 = parseInt($(this.ELEMENTS.CUSTOM_INPUT_5).val());
+    this.customBanner.rateRarityFocus4 = parseInt($(this.ELEMENTS.CUSTOM_INPUT_FOCUS_4).val());
     this.customBanner.rateRarity4 = parseInt($(this.ELEMENTS.CUSTOM_INPUT_4).val());
     this.customBanner.rateRarity3 = parseInt($(this.ELEMENTS.CUSTOM_INPUT_3).val());
     if (this.customBanner.rateRarity5 === 0) {
@@ -451,6 +466,7 @@
   SummonSimulator.prototype.createBanner = function(event) {
     let rates = [$(this.ELEMENTS.CUSTOM_INPUT_FOCUS).val(),
         $(this.ELEMENTS.CUSTOM_INPUT_5).val(),
+        $(this.ELEMENTS.CUSTOM_INPUT_FOCUS_4).val(),
         $(this.ELEMENTS.CUSTOM_INPUT_4).val(),
         $(this.ELEMENTS.CUSTOM_INPUT_3).val()];
 

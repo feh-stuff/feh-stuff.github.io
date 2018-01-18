@@ -32,7 +32,7 @@
     </div>
 
     <div class="row mt-2 card">
-      <h6 class="card-header p-2">5★ Focus Heroes</h6>
+      <h6 class="card-header p-2">Focus Heroes</h6>
       <div id="focus-list" class="d-flex justify-content-center flex-wrap"></div>
     </div>
 
@@ -64,6 +64,11 @@
               <div class="input-group rate-input">
                 <span class="input-group-addon">5★</span>
                 <input id="rate-input-5" type="number" class="form-control" min="0" max="100">
+                <span class="input-group-addon">%</span>
+              </div>
+              <div class="input-group rate-input">
+                <span class="input-group-addon">4★ Focus</span>
+                <input id="rate-input-focus-4" type="number" class="form-control" min="0" max="100">
                 <span class="input-group-addon">%</span>
               </div>
               <div class="input-group rate-input">
@@ -149,6 +154,13 @@
                     <span class="custom-control-description">5★</span>
                   </label>
                 </button>
+                <button class="dropdown-item pl-3 pr-2" type="button" data-val="focus-4">
+                  <label class="custom-control custom-checkbox col-form-label mr-0 w-100">
+                    <input type="checkbox" class="custom-control-input">
+                    <span class="custom-control-indicator mt-2"></span>
+                    <span class="custom-control-description">4★ Focus</span>
+                  </label>
+                </button>
                 <button class="dropdown-item pl-3 pr-2" type="button" data-val="4">
                   <label class="custom-control custom-checkbox col-form-label mr-0 w-100">
                     <input type="checkbox" class="custom-control-input" >
@@ -166,7 +178,7 @@
               </div>
             </div>
           </div>
-          <table id="summon-table" class="table table-hover table-sm p-0 hide-4 hide-3" cellspacing="0" width="100%">
+          <table id="summon-table" class="table table-hover table-sm p-0 hide-focus-4 hide-4 hide-3" cellspacing="0" width="100%">
             <thead>
               <tr>
                 <th>Pull No.</th>
@@ -209,6 +221,11 @@
             <div class="input-group rate-input custom-rate-input">
               <span class="input-group-addon">5★</span>
               <input value="3" id="custom-input-5" type="number" class="form-control" min="0" max="100">
+              <span class="input-group-addon">%</span>
+            </div>
+            <div class="input-group rate-input custom-rate-input">
+              <span class="input-group-addon">4★ Focus</span>
+              <input value="0" id="custom-input-focus-4" type="number" class="form-control" min="0" max="100">
               <span class="input-group-addon">%</span>
             </div>
             <div class="input-group rate-input custom-rate-input">
