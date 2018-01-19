@@ -276,7 +276,7 @@ body {
 /***** Unit Builder *****/
 .hero-canvas-container {
   width: 540px;
-  background-color: transparent;
+  height: 960px;
 }
 .hero-canvas-container > .spinner {
   position: absolute;
@@ -350,6 +350,49 @@ body {
 
 .customize-header {
   width: 80px;
+}
+
+.bookmark-col {
+  height: 500px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
+.bookmark-img {
+  width: 100px;
+}
+.bookmark-hero {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  margin: 5px;
+  padding: 5px;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.bookmark-hero.focus {
+  background-color: aquamarine;
+}
+.bookmark-hero:hover {
+  background-color: #17a2b8;
+  color: white;
+  border-color: white;
+}
+.bookmark-hero-portrait {
+  width: 75px;
+  position: absolute;
+  z-index: 1;
+  top: 7px;
+  left: 8px;
+}
+.bookmark-new {
+  position: absolute;
+  padding-top: 15px;
+  text-align: center;
+  width: 80px;
+}
+#new-bookmark {
+  border: 1px dashed;
 }
 
 /***** Selectable *****/

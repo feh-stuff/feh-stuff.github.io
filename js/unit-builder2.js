@@ -951,6 +951,7 @@
       this.ctx.drawImage(this.IMAGES.UI, 0, 0, 210, 223, 420, 430, 108, 115);
     }
 
+    this.drawRarity(5);
     this.drawNameAndTitle(this.customUnit.name, this.customUnit.title);
     this.drawMergesAndStats(this.customUnit.merges, this.customUnit.processedStats);
     this.drawWeaponAndMoveType(this.customUnit.colorType, this.customUnit.weaponType, this.customUnit.moveType);

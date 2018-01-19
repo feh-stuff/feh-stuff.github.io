@@ -53,8 +53,11 @@
         <div class="card-body tab-content md-text-small" id="customize-hero-container">
           <div class="tab-pane fade show active" id="feh-unit">
             <section class="ml-2">
-              <div class="d-flex mb-3">
+              <div class="d-flex justify-content-between mb-3">
                 <h5>Unit</h5>
+                <!-- <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target="#bookmark-modal">
+                  Bookmarks
+                </button> -->
               </div>
               <div class="row mb-3">
                 <label class="col-2 col-xl-1 col-form-label text-md-right">Hero</label>
@@ -573,6 +576,35 @@
               </div>
             </section>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="bookmark-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Bookmark</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col p-3 bookmark-col">
+              <div class="bookmark-hero focus">
+                <img class="focus-list-hero-frame" src="img/assets/frame-rarity-focus.png">
+                <img class="bookmark-hero-portrait" src="img/heroes-portrait/75px-Icon_Portrait_Azura.png">
+                <img class="focus-list-hero-background" src="img/assets/background-rarity-focus.png">
+              </div>
+            </div>
+            <div class="col bookmark-col"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
