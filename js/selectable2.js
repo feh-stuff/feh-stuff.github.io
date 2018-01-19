@@ -14,6 +14,7 @@ $.widget('custom.selectable', {
     optionGenerator: function(item, $parent, highlight) {
       $(`<div class="dropdown-item ${highlight.includes(item.name) ? 'opt-highlight' : ''}">${item.name}</div>`)
           .data('val', item)
+          .prop('tabindex', '0')
           .appendTo($parent);
     },
     onSelect: function($opt, $this, event) {
@@ -42,6 +43,7 @@ $.widget('custom.selectable', {
     }
 
     this.$menuItems.on('click', '.dropdown-item', this._onClick.bind(this));
+    this.$menuItems.on('keydown', '.dropdown-item', this._onDropdownKeyDown.bind(this));
     this.$searchContainer.on('keyup', '.search', this._search.bind(this));
 
     this.element.append(this.$button).append(this.$menu);
@@ -64,6 +66,18 @@ $.widget('custom.selectable', {
     $(this.element).trigger('select');
   },
 
+  _onDropdownKeyDown: function(event) {
+    let $item = $(event.currentTarget);
+    if (event.keyCode === 13) {
+      $(this.element).trigger('click');
+      this._onClick(event);
+    } else if (event.keyCode === 40 && $item.next().length) {
+      $item.next().focus();
+    } else if (event.keyCode === 38 && $item.prev().length) {
+      $item.prev().focus();
+    }
+  },
+
   _search: function(event) {
     let searchVal = $(event.currentTarget).val().trim().toLowerCase();
     this.$menuItems.children().each(function() {
@@ -72,14 +86,14 @@ $.widget('custom.selectable', {
       if (searchVal.length === 0) {
         $(this).removeClass('d-none');
         return;
-      } 
+      }
 
       if ($(this).hasClass('dropdown-header')) {
         $(this).addClass('d-none');
         return;
-      } 
+      }
 
-      $(this).toggleClass('d-none', 
+      $(this).toggleClass('d-none',
           !((tokens && tokens.length && tokens.includes(searchVal)) ||
           $(this).text().toLowerCase().includes(searchVal)));
     });

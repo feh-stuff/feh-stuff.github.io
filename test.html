@@ -50,7 +50,7 @@
             <a class="nav-link build-type" data-toggle="tab" href="#custom-unit" role="tab" data-val="custom-unit">Custom Unit</a>
           </li>
         </ul>
-        <div class="card-body md-text-small">
+        <div class="card-body tab-content md-text-small" id="customize-hero-container">
           <div class="tab-pane fade show active" id="feh-unit">
             <section class="ml-2">
               <div class="d-flex mb-3">
@@ -131,7 +131,7 @@
                   <h5>Buffs / Debuffs</h5>
                 </div>
                 <div class="row mb-3 form-check">
-                  <label class="col-2 col-lg-3 mr-3 text-md-right" title="Summoner Support">S. Support</label>
+                  <label class="col-2 col-lg-3 mr-3 text-md-right" title="Summoner Support">Support</label>
                   <label class="custom-control custom-radio">
                     <input id="support-yes" name="support" type="radio" class="custom-control-input">
                     <span class="custom-control-indicator"></span>
@@ -176,8 +176,402 @@
             </section>
           </div>
 
-          <div  class="tab-pane fade" id="custom-unit">
-
+          <div class="tab-pane fade" id="custom-unit">
+            <section> <!-- Image -->
+              <div class="d-flex mb-3">
+                <h5>Image</h5>
+              </div>
+              <div class="row">
+                <label class="col-2 col-xl-1 col-form-label text-md-right">File</label>
+                <input type="file" class="form-control-file" id="custom-hero-upload">
+              </div>
+              <div class="row">
+                <label class="col-2 col-xl-1 col-form-label text-md-right">Size</label>
+                <input type="range" class="form-control col-md-10 custom-hero-control" data-control="imageSize" min="0.5" max="2" step="any" value="1">
+              </div>
+              <div class="row">
+                <label class="col-2 col-xl-1 col-form-label text-md-right">Pos. X</label>
+                <input type="range" class="form-control col-md-10 custom-hero-control" data-control="imagePosX" min="-1000" max="1000" step="any" value="0">
+              </div>
+              <div class="row">
+                <label class="col-2 col-xl-1 col-form-label text-md-right">Pos. Y</label>
+                <input type="range" class="form-control col-md-10 custom-hero-control" data-control="imagePosY" min="-1000" max="1000" step="any" value="0">
+              </div>
+            </section>
+            <hr>
+            <section> <!-- Unit -->
+              <div class="mb-3 mb-lg-0">
+                <div class="d-flex mb-3">
+                  <h5>Unit</h5>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-2 col-xl-1 col-form-label text-md-right">Name</label>
+                  <div class="form-control-container col col-xl-4">
+                    <input type="text" class="form-control custom-hero-control" data-control="name">
+                  </div>
+                  <div class="w-100 d-xl-none mb-3"></div>
+                  <label class="col-2 col-xl-1 offset-xl-1 col-form-label text-md-right">Title</label>
+                  <div class="form-control-container col col-xl-4">
+                    <input type="text" class="form-control custom-hero-control" data-control="title">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-2 col-xl-1 col-form-label-2-line text-md-right">Move Type</label>
+                  <div class="col col-xl-4 selectable" id="custom-move-type-select"></div>
+                  <div class="w-100 d-xl-none mb-3"></div>
+                  <label class="col-2 col-xl-1 offset-xl-1 col-form-label-2-line text-md-right">Weapon Type</label>
+                  <div class="col col-xl-4 selectable" id="custom-weapon-type-select"></div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-2 col-xl-1 col-form-label-2-line text-md-right">Merge</label>
+                  <div class="col col-xl-2 selectable" id="custom-merge-select"></div>
+                  <div class="w-100 d-xl-none mb-3"></div>
+                  <label class="col-2 col-xl-1 offset-xl-3 mr-3 col-form-label text-md-right" title="Summoner Support">Support</label>
+                  <label class="custom-control custom-radio">
+                    <input id="support-custom-yes" name="support-custom" type="radio" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Yes</span>
+                  </label>
+                  <label class="custom-control custom-radio">
+                    <input id="support-custom-no" name="support-custom" type="radio" class="custom-control-input" checked>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">No</span>
+                  </label>
+                </div>
+                <div class="row d-flex">
+                  <label class="col-2 col-xl-1 col-form-label text-right">Stats</label>
+                  <div class="col-10 row stat-input-groups">
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">HP</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-stat-control" data-control="hp">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Atk</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-stat-control" data-control="atk">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Spd</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-stat-control" data-control="spd">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Def</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-stat-control" data-control="def">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Res</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-stat-control" data-control="res">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon readonly">Total</span>
+                      <input type="number" value="0" readonly class="form-control custom-stat-control" id="custom-stat-total">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <hr>
+            <section> <!-- Weapon -->
+              <div class="d-flex mb-3 w-100">
+                <h5>Weapon</h5>
+                <ul class="nav nav-pills p-1 ml-3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link pt-0 pb-0 active" data-toggle="pill" href="#default-weapon" role="tab">Default</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pt-0 pb-0" data-toggle="pill" href="#custom-weapon" role="tab">Custom</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content p-0" data-skill-type="weapon">
+                <div class="tab-pane fade show active row" id="default-weapon" role="tabpanel" data-tab-type="default">
+                  <div class="row">
+                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="weapon" src="img/assets/icon/weapon.png"></label>
+                    <div class="col col-xl-4 selectable custom-skill-select" data-skill="weapon" id="custom-weapon-select"></div>
+                    <div class="w-100 d-xl-none mb-3"></div>
+                    <label class="col-2 col-xl-1 offset-xl-1 col-form-label text-md-right"><img title="refine" src="img/assets/icon/refine.png"></label>
+                    <div class="col col-xl-4 selectable custom-skill-select" data-skill="refine" id="custom-refine-select"></div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="custom-weapon" role="tabpanel" data-tab-type="custom">
+                  <div class="row mb-3">
+                    <label class="col-2 col-xl-1 col-form-label text-right">Name</label>
+                    <div class="form-control-container col col-xl-4">
+                      <input type="text" class="form-control custom-skill-input" data-control="name">
+                    </div>
+                    <div class="w-100 d-xl-none mb-3"></div>
+                    <label class="col-2 col-xl-1 offset-xl-1 mr-3 col-form-label text-right">Icon</label>
+                    <input type="file" class="custom-skill-input" data-control="icon">
+                  </div>
+                  <div class="row d-flex">
+                    <label class="col-2 col-xl-1 col-form-label text-right">Stats</label>
+                    <div class="col-10 row stat-input-groups">
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">HP</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="hp">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Atk</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="atk">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Spd</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="spd">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Def</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="def">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Res</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="res">
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <hr>
+            <section> <!-- Assist -->
+              <div class="d-flex mb-3 w-100">
+                <h5>Assist</h5>
+                <ul class="nav nav-pills p-1 ml-3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link pt-0 pb-0 active" data-toggle="pill" href="#default-assist" role="tab">Default</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pt-0 pb-0" data-toggle="pill" href="#custom-assist" role="tab">Custom</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content p-0" data-skill-type="assist">
+                <div class="tab-pane fade show active row" id="default-assist" role="tabpanel" data-tab-type="default">
+                  <div class="row">
+                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="assist" src="img/assets/icon/assist.png"></label>
+                    <div class="col col-xl-4 selectable custom-skill-select" data-skill="assist" id="custom-assist-select"></div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="custom-assist" role="tabpanel" data-tab-type="custom">
+                  <div class="row mb-3">
+                    <label class="col-2 col-xl-1 col-form-label text-right">Name</label>
+                    <div class="form-control-container col col-xl-4">
+                      <input type="text" class="form-control custom-skill-input" data-control="name">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <hr>
+            <section> <!-- Special -->
+              <div class="d-flex mb-3 w-100">
+                <h5>Special</h5>
+                <ul class="nav nav-pills p-1 ml-3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link pt-0 pb-0 active" data-toggle="pill" href="#default-special" role="tab">Default</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pt-0 pb-0" data-toggle="pill" href="#custom-special" role="tab">Custom</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content p-0" data-skill-type="special">
+                <div class="tab-pane fade show active row" id="default-special" role="tabpanel" data-tab-type="default">
+                  <div class="row">
+                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="special" src="img/assets/icon/special.png"></label>
+                    <div class="col col-xl-4 selectable custom-skill-select" data-skill="special" id="custom-special-select"></div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="custom-special" role="tabpanel" data-tab-type="custom">
+                  <div class="row mb-3">
+                    <label class="col-2 col-xl-1 col-form-label text-right">Name</label>
+                    <div class="form-control-container col col-xl-4">
+                      <input type="text" class="form-control custom-skill-input" data-control="name">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <hr>
+            <section> <!-- Skill A -->
+              <div class="d-flex mb-3 w-100">
+                <h5>Skill A</h5>
+                <ul class="nav nav-pills p-1 ml-3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link pt-0 pb-0 active" data-toggle="pill" href="#default-skillA" role="tab">Default</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pt-0 pb-0" data-toggle="pill" href="#custom-skillA" role="tab">Custom</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body tab-content p-0" data-skill-type="skillA">
+                <div class="tab-pane fade show active row" id="default-skillA" role="tabpanel" data-tab-type="default">
+                  <div class="row">
+                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="skill a" src="img/assets/icon/skill-a.png"></label>
+                    <div class="col col-xl-4 selectable custom-skill-select" data-skill="skillA" id="custom-skillA-select"></div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="custom-skillA" role="tabpanel" data-tab-type="custom">
+                  <div class="row mb-3">
+                    <label class="col-2 col-xl-1 col-form-label text-right">Name</label>
+                    <div class="form-control-container col col-xl-4">
+                      <input type="text" class="form-control custom-skill-input" data-control="name">
+                    </div>
+                    <div class="w-100 d-xl-none mb-3"></div>
+                    <label class="offset-xl-1 col-2 col-xl-1 mr-3 col-form-label text-right">Icon</label>
+                    <input type="file" class="custom-skill-input" data-control="icon">
+                  </div>
+                  <div class="row d-flex">
+                    <label class="col-2 col-xl-1 col-form-label text-right">Stats</label>
+                    <div class="col-10 row stat-input-groups">
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">HP</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="hp">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Atk</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="atk">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Spd</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="spd">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Def</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="def">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Res</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="res">
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <hr>
+            <section> <!-- Skill B -->
+              <div class="d-flex mb-3 w-100">
+                <h5>Skill B</h5>
+                <ul class="nav nav-pills p-1 ml-3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link pt-0 pb-0 active" data-toggle="pill" href="#default-skillB" role="tab">Default</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pt-0 pb-0" data-toggle="pill" href="#custom-skillB" role="tab">Custom</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content p-0" data-skill-type="skillB">
+                <div class="tab-pane fade show active row" id="default-skillB" role="tabpanel" data-tab-type="default">
+                  <div class="row">
+                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="skill b" src="img/assets/icon/skill-b.png"></label>
+                    <div class="col col-xl-4 selectable custom-skill-select" data-skill="skillB" id="custom-skillB-select"></div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="custom-skillB" role="tabpanel" data-tab-type="custom">
+                  <div class="row mb-3">
+                    <label class="col-2 col-xl-1 col-form-label text-right">Name</label>
+                    <div class="form-control-container col col-xl-4">
+                      <input type="text" class="form-control custom-skill-input" data-control="name">
+                    </div>
+                    <div class="w-100 d-xl-none mb-3"></div>
+                    <label class="offset-xl-1 col-2 col-xl-1 mr-3 col-form-label text-right">Icon</label>
+                    <input type="file" class="custom-skill-input" data-control="icon">
+                  </div>
+                </div>
+              </div>
+            </section>
+            <hr>
+            <section> <!-- Skill C -->
+              <div class="d-flex mb-3 w-100">
+                <h5>Skill C</h5>
+                <ul class="nav nav-pills p-1 ml-3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link pt-0 pb-0 active" data-toggle="pill" href="#default-skillC" role="tab">Default</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pt-0 pb-0" data-toggle="pill" href="#custom-skillC" role="tab">Custom</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content p-0" data-skill-type="skillC">
+                <div class="tab-pane fade show active row" id="default-skillC" role="tabpanel" data-tab-type="default">
+                  <div class="row">
+                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="skill c" src="img/assets/icon/skill-c.png"></label>
+                    <div class="col col-xl-4 selectable custom-skill-select" data-skill="skillC" id="custom-skillC-select"></div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="custom-skillC" role="tabpanel" data-tab-type="custom">
+                  <div class="row mb-3">
+                    <label class="col-2 col-xl-1 col-form-label text-right">Name</label>
+                    <div class="form-control-container col col-xl-4">
+                      <input type="text" class="form-control custom-skill-input" data-control="name">
+                    </div>
+                    <div class="w-100 d-xl-none mb-3"></div>
+                    <label class="offset-xl-1 col-2 col-xl-1 mr-3 col-form-label text-right">Icon</label>
+                    <input type="file" class="custom-skill-input" data-control="icon">
+                  </div>
+                </div>
+              </div>
+            </section>
+            <hr>
+            <section> <!-- Seal -->
+              <div class="d-flex mb-3 w-100">
+                <h5>Seal</h5>
+                <ul class="nav nav-pills p-1 ml-3" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link pt-0 pb-0 active" data-toggle="pill" href="#default-seal" role="tab">Default</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pt-0 pb-0" data-toggle="pill" href="#custom-seal" role="tab">Custom</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-body tab-content p-0" data-skill-type="seal">
+                <div class="tab-pane fade show active row" id="default-seal" role="tabpanel" data-tab-type="default">
+                  <div class="row">
+                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="seal" src="img/assets/icon/skill-s.png"></label>
+                    <div class="col col-xl-4 selectable custom-skill-select" data-skill="seal" id="custom-seal-select"></div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="custom-seal" role="tabpanel" data-tab-type="custom">
+                  <div class="row mb-3">
+                    <label class="col-2 col-xl-1 col-form-label text-right">Name</label>
+                    <div class="form-control-container col col-xl-4">
+                      <input type="text" class="form-control custom-skill-input" data-control="name">
+                    </div>
+                    <div class="w-100 d-xl-none mb-3"></div>
+                    <label class="offset-xl-1 col-2 col-xl-1 mr-3 col-form-label text-right">Icon</label>
+                    <input type="file" class="custom-skill-input" data-control="icon">
+                  </div>
+                  <div class="row d-flex">
+                    <label class="col-2 col-xl-1 col-form-label text-right">Stats</label>
+                    <div class="col-10 row stat-input-groups">
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">HP</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="hp">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Atk</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="atk">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Spd</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="spd">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Def</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="def">
+                    </div>
+                    <div class="input-group col-md-4 pl-0">
+                      <span class="input-group-addon">Res</span>
+                      <input type="number" value="0" min="0" max="99" class="form-control custom-skill-input" data-control="stats" data-stats="res">
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>

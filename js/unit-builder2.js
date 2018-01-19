@@ -1,6 +1,7 @@
 (function($) {
   UnitBuilder = function() {
     this.ctx = $(this.ELEMENTS.CANVAS)[0].getContext('2d');
+
     this.fehUnit = {
       data : {
         assets: { main: this.CONST.IMAGE_FEH },
@@ -29,6 +30,42 @@
       tempestBuff: false
     };
 
+    this.customUnit = {
+      image: new Image(),
+      name: "",
+      title: "",
+      stats: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      processedStats: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      moveType: "",
+      colorType: "",
+      weaponType: "",
+      imageSize: 1,
+      imagePosX: 0,
+      imagePosY: 0,
+      skills: {
+        weapon: this.CONST.EMPTY_SKILL,
+        refine: this.CONST.EMPTY_SKILL,
+        assist: this.CONST.EMPTY_SKILL,
+        special: this.CONST.EMPTY_SKILL,
+        skillA: this.CONST.EMPTY_SKILL,
+        skillB: this.CONST.EMPTY_SKILL,
+        skillC: this.CONST.EMPTY_SKILL,
+        seal: this.CONST.EMPTY_SKILL
+      },
+      customSkills: {
+        weapon: this.getEmptySkill(),
+        refine: this.getEmptySkill(),
+        assist: this.getEmptySkill(),
+        special: this.getEmptySkill(),
+        skillA: this.getEmptySkill(),
+        skillB: this.getEmptySkill(),
+        skillC: this.getEmptySkill(),
+        seal: this.getEmptySkill()
+      }
+    };
+
+    this.activeTab = 'main';
+
     this.init();
   };
 
@@ -56,12 +93,26 @@
     SELECT_SEAL: '#select-seal',
     SKILL_INFO: '.skill-info',
     SKILL_INFO_ICON: '.skill-info-icon',
+    SELECT_TAB: '.build-type',
+    UPLOAD_HERO: '#custom-hero-upload',
+    CUSTOM_IMAGE_CONTROL: '.custom-hero-control',
+    CUSTOM_MOVE_TYPE_SELECT: '#custom-move-type-select',
+    CUSTOM_WEAPON_TYPE_SELECT: '#custom-weapon-type-select',
+    CUSTOM_MERGE_SELECT: '#custom-merge-select',
+    CUSTOM_SUPPORT_CHECKS: '[name="support-custom"]',
+    CUSTOM_SUPPORT_ON: '#support-custom-yes',
+    CUSTOM_STAT_CONTROL: '.custom-stat-control',
+    CUSTOM_STAT_TOTAL: '#custom-stat-total',
+    CUSTOM_SKILL_SELECT: '.custom-skill-select',
+    CUSTOM_SKILL_TOGGLE: '[data-toggle="pill"]',
+    CUSTOM_NEW_SKILL_INPUT: '.custom-skill-input',
   };
 
   UnitBuilder.prototype.CONST = {
     IMAGE_FRONT: 'img/assets/unit-edit-front.png',
     IMAGE_BACK: 'img/assets/unit-edit-back.jpg',
     IMAGE_SKILLS: 'img/assets/skills.png',
+    IMAGE_UI: 'img/assets/unit-edit-ui.png',
     IMAGE_FEH: 'img/heroes-main/Feh.png',
     FONT: new FontFace('FehFont', 'url(font/feh-font.ttf)'),
     EMPTY_SKILL: { name: '-', effect: '', icon: '' },
@@ -77,50 +128,69 @@
     RARITIES: [{ name: "5★", value: 5 }, { name: "4★", value: 4 }],
     BUFFS: [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7],
     BUFFS_TT: { hp: 10, atk: 4, spd: 4, def: 4, res: 4},
+    MAX_HM: 4000,
+    MAX_SP: 9999,
+    MOVE_TYPES: [
+      {name: 'Infantry'},
+      {name: 'Armored'},
+      {name: 'Cavalry'},
+      {name: 'Flying'}
+    ],
+    WEAPON_TYPES: [
+      {name: 'Sword', weaponType: 'Sword', colorType: 'Red'},
+      {name: 'Axe', weaponType: 'Axe', colorType: 'Green'},
+      {name: 'Lance', weaponType: 'Lance', colorType: 'Blue'},
+      {name: 'Breath (Red)', weaponType: 'Breath', colorType: 'Red'},
+      {name: 'Breath (Green)', weaponType: 'Breath', colorType: 'Green'},
+      {name: 'Breath (Blue)', weaponType: 'Breath', colorType: 'Blue'},
+      {name: 'Tome (Red)', weaponType: 'Tome', colorType: 'Red'},
+      {name: 'Tome (Green)', weaponType: 'Tome', colorType: 'Green'},
+      {name: 'Tome (Blue)', weaponType: 'Tome', colorType: 'Blue'},
+      {name: 'Bow', weaponType: 'Bow', colorType: 'Neutral'},
+      {name: 'Dagger', weaponType: 'Dagger', colorType: 'Neutral'},
+      {name: 'Staff', weaponType: 'Staff', colorType: 'Neutral'}
+    ]
+  };
+
+  UnitBuilder.prototype.COORD = {
     ICONS: {
-      "Infantry": [845,424],
-      "Armored": [897,424],
-      "Cavalry": [949,424],
-      "Flying": [1001,424],
-      "Red Sword": [845,268],
-      "Blue Lance": [897,268],
-      "Green Axe": [949,268],
-      "Red Tome": [845,320],
-      "Blue Tome": [897,320],
-      "Green Tome": [949,320],
-      "Red Breath": [845,372],
-      "Blue Breath": [897,372],
-      "Green Breath": [949,372],
-      "Neutral Bow": [1001,268],
-      "Neutral Dagger": [1001,320],
-      "Neutral Staff": [1001,372]
+      "Infantry": [0,424],
+      "Armored": [52,424],
+      "Cavalry": [104,424],
+      "Flying": [156,424],
+      "Red Sword": [0,268],
+      "Blue Lance": [52,268],
+      "Green Axe": [104,268],
+      "Red Tome": [0,320],
+      "Blue Tome": [52,320],
+      "Green Tome": [104,320],
+      "Red Breath": [0,372],
+      "Blue Breath": [52,372],
+      "Green Breath": [104,372],
+      "Neutral Bow": [156,268],
+      "Neutral Dagger": [156,320],
+      "Neutral Staff": [156,372]
     },
     FONT_IMAGE: {
-      yellow: [845, 514],
-      white: [877, 514],
-      green: [909, 514],
-      blue: [941, 514],
-      red: [973, 514]
+      yellow: [0, 514],
+      white: [32, 514],
+      green: [64, 514],
+      blue: [96, 514],
+      red: [128, 514]
     },
     STATS: {
       hp: 604,
       atk: 640,
       spd: 678,
       def: 715,
-      res: 752
+      res: 752,
+      sp: 788,
+      hm: 825
     },
+
     RARITY: {
-      '5': [845, 994],
-      '4': [845, 1034]
-    },
-    SKILLS_TEXT: {
-      weapon: 619,
-      assist: 656,
-      special: 694,
-      skillA: 731,
-      skillB: 768,
-      skillC: 804,
-      seal: 841
+      '5': [0, 994],
+      '4': [0, 1034]
     },
     SKILLS_ICON: {
       weapon: 596,
@@ -130,17 +200,27 @@
       skillB: 743,
       skillC: 780,
       seal: 818
+    },
+    SKILLS_TEXT: {
+      weapon: 619,
+      assist: 656,
+      special: 694,
+      skillA: 731,
+      skillB: 768,
+      skillC: 804,
+      seal: 841
     }
   };
 
   UnitBuilder.prototype.IMAGES = {
     FRONT: null,
     BACK: null,
-    SKILLS: null
+    SKILLS: null,
+    UI: null
   };
 
   UnitBuilder.prototype.init = function() {
-    $(this.ELEMENTS.SELECT_HERO).selectable({data: HEROES, text: 'Select a Hero'});
+    $(this.ELEMENTS.SELECT_HERO).selectable({data: HEROES});
     $(this.ELEMENTS.SELECT_RARITY).selectable({
       optionGenerator: this.rarityOptGenerator,
       search: false,
@@ -176,12 +256,28 @@
     $(this.ELEMENTS.SELECT_SKILLC).selectable({disabled: 'disabled'});
     $(this.ELEMENTS.SELECT_SEAL).selectable({disabled: 'disabled'});
 
-    this.loadFiles([this.CONST.IMAGE_SKILLS, this.CONST.IMAGE_FRONT, this.CONST.IMAGE_BACK], true).then(files => {
+    $(this.ELEMENTS.CUSTOM_MOVE_TYPE_SELECT).selectable({
+      data: this.CONST.MOVE_TYPES,
+      search: false
+    });
+    $(this.ELEMENTS.CUSTOM_WEAPON_TYPE_SELECT).selectable({
+      data: this.CONST.WEAPON_TYPES,
+      search: false
+    });
+    $(this.ELEMENTS.CUSTOM_SKILL_SELECT).selectable({disabled: 'disabled'});
+    $(this.ELEMENTS.CUSTOM_MERGE_SELECT).selectable({
+      data: this.CONST.MERGES,
+      optionGenerator: this.arrOptGenerator,
+      search: false
+    });
+
+    this.loadFiles([this.CONST.IMAGE_SKILLS, this.CONST.IMAGE_FRONT, this.CONST.IMAGE_BACK, this.CONST.IMAGE_UI], true).then(files => {
       document.fonts.add(this.CONST.FONT);
       $(this.ELEMENTS.SPINNER).addClass('d-none');
       this.IMAGES.SKILLS = files[0];
       this.IMAGES.FRONT = files[1];
       this.IMAGES.BACK = files[2];
+      this.IMAGES.UI = files[3];
       this.drawHero(this.fehUnit);
     });
 
@@ -200,6 +296,19 @@
     $(this.ELEMENTS.SELECT_IV_SHOW).on('change', this.onShowIvChange.bind(this));
     $(this.ELEMENTS.SELECT_SUPPORT).on('change', this.onSupportChange.bind(this));
     $(this.ELEMENTS.SELECT_TT).on('change', this.onTempestBuffChange.bind(this));
+
+    $(this.ELEMENTS.SELECT_TAB).on('click', this.onTabChange.bind(this));
+    $(this.ELEMENTS.UPLOAD_HERO).on('change', this.onUploadHeroImg.bind(this));
+    $(this.ELEMENTS.CUSTOM_IMAGE_CONTROL).on('change', this.onImageControlChange.bind(this));
+    $(this.ELEMENTS.CUSTOM_WEAPON_TYPE_SELECT).on('select', this.onCustomWeaponTypeSelect.bind(this));
+    $(this.ELEMENTS.CUSTOM_MOVE_TYPE_SELECT).on('select', this.onCustomMoveTypeSelect.bind(this));
+    $(this.ELEMENTS.CUSTOM_SUPPORT_CHECKS).on('change', this.onCustomSupportChange.bind(this));
+
+    $(this.ELEMENTS.CUSTOM_MERGE_SELECT).on('select', this.onCustomMergeSelect.bind(this));
+    $(this.ELEMENTS.CUSTOM_SKILL_SELECT).on('select', this.onCustomSkillChange.bind(this));
+    $(this.ELEMENTS.CUSTOM_STAT_CONTROL).on('change', this.onCustomStatChange.bind(this));
+    $(this.ELEMENTS.CUSTOM_NEW_SKILL_INPUT).on('change', this.onCustomNewSkillChange.bind(this));
+    $(this.ELEMENTS.CUSTOM_SKILL_TOGGLE).on('shown.bs.tab', this.onCustomSkillToggle.bind(this));
   };
 
   UnitBuilder.prototype.onHeroSelect = function(event) {
@@ -278,7 +387,6 @@
     this.fehUnit.buffs[$select.data('stat')] = $select.data('val');
     this.drawHero(this.fehUnit);
   };
-
   UnitBuilder.prototype.onSupportChange = function(event) {
     this.fehUnit.support = $(this.ELEMENTS.SELECT_SUPPORT_ON).is(':checked');
     this.drawHero(this.fehUnit);
@@ -289,6 +397,117 @@
   UnitBuilder.prototype.onTempestBuffChange = function(event) {
     this.fehUnit.tempestBuff = $(this.ELEMENTS.SELECT_TT_ON).is(':checked');
     this.drawHero(this.fehUnit);
+  };
+
+  UnitBuilder.prototype.onTabChange = function(event) {
+    if ($(event.currentTarget).data('val') === 'custom-unit') {
+      this.drawCustomHero();
+      this.activeTab = 'custom';
+    } else {
+      this.drawHero(this.fehUnit);
+      this.activeTab = 'main';
+    }
+  }
+  UnitBuilder.prototype.onUploadHeroImg = function(event) {
+    let $upload = $(event.currentTarget);
+    let that = this;
+    if ($upload[0].files && $upload[0].files[0]) {
+      let fileReader = new FileReader();
+      fileReader.onload = function(e) {
+         that.customUnit.image.src = e.target.result;
+         that.customUnit.image.onload = () => that.drawCustomHero();
+      };
+      fileReader.readAsDataURL($upload[0].files[0]);
+    }
+  };
+  UnitBuilder.prototype.onImageControlChange = function(event) {
+    let $control = $(event.currentTarget);
+    this.customUnit[$control.data('control')] = $control.val();
+    this.drawCustomHero();
+  };
+  UnitBuilder.prototype.onCustomMoveTypeSelect = function(event) {
+    this.customUnit.moveType = $(event.currentTarget).data('val').name;
+    this.setupCustomSkillOptions();
+    this.drawCustomHero();
+  };
+  UnitBuilder.prototype.onCustomWeaponTypeSelect = function(event) {
+    let weaponColorTypes = $(event.currentTarget).data('val');
+    this.customUnit.weaponType = weaponColorTypes.weaponType;
+    this.customUnit.colorType = weaponColorTypes.colorType;
+    $(this.ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="weapon"]')
+        .selectable('data', this.getWeapons(this.customUnit, false));
+    this.setupCustomSkillOptions();
+    this.drawCustomHero();
+  };
+  UnitBuilder.prototype.onCustomSupportChange = function(event) {
+    this.customUnit.support = $(this.ELEMENTS.CUSTOM_SUPPORT_ON).is(':checked');
+    this.drawCustomHero();
+  };
+  UnitBuilder.prototype.onCustomMergeSelect = function(event) {
+    this.customUnit.merges = $(event.currentTarget).data('val');
+    this.drawCustomHero();
+  };
+  UnitBuilder.prototype.onCustomStatChange = function(event) {
+    let $stat = $(event.currentTarget);
+    this.customUnit.stats[$stat.data('control')] = parseInt($stat.val());
+    this.drawCustomHero();
+
+    let total = 0;
+    for (let stat in this.customUnit.stats) {
+      total += this.customUnit.stats[stat];
+    }
+    $(this.ELEMENTS.CUSTOM_STAT_TOTAL).val(total);
+  };
+  UnitBuilder.prototype.onCustomSkillChange = function(event) {
+    let $select = $(event.currentTarget);
+    let skillType = $select.data('skill');
+    let skill = $select.data('val');
+
+    if (skillType === 'weapon') {
+      if (SKILL_REFINED_WEAPONS[skill.name]) {
+        $(this.ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="refine"]')
+            .selectable('data',
+                [this.CONST.EMPTY_SKILL].concat(SKILL_REFINED_WEAPONS[skill.name]));
+      } else {
+        $(this.ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="refine"]')
+            .selectable('clear')
+            .selectable('disable');
+      }
+      this.customUnit.skills.refine = this.CONST.EMPTY_SKILL;
+    }
+    this.customUnit.skills[skillType] = skill;
+    this.drawCustomHero();
+  };
+  UnitBuilder.prototype.onCustomSkillToggle = function(event) {
+    this.drawCustomHero();
+  };
+  UnitBuilder.prototype.onCustomNewSkillChange = function(event) {
+    let $input = $(event.currentTarget);
+    let skillType = $input.closest('[data-skill-type]').data('skill-type');
+    let skillAttr = $input.data('control');
+
+    if (skillAttr === 'stats') {
+      this.customUnit.customSkills[skillType][skillAttr][$input.data('stats')] = parseInt($input.val());
+      this.drawCustomHero();
+    } else if (skillAttr === 'icon') {
+      if ($input[0].files && $input[0].files[0]) {
+        let fileReader = new FileReader();
+        let that = this;
+        fileReader.onload = function(e) {
+          that.customUnit.customSkills[skillType].icon = new Image();
+          that.customUnit.customSkills[skillType].crossOrigin = 'anonymous';
+          that.customUnit.customSkills[skillType].icon.src = e.target.result;
+          that.customUnit.customSkills[skillType].icon.onload = () => that.drawCustomHero();
+        };
+        fileReader.readAsDataURL($input[0].files[0]);
+      } else {
+        this.customUnit.customSkills[skillType].icon = '';
+        this.drawCustomHero();
+      }
+    } else {
+      this.customUnit.customSkills[skillType][skillAttr] = $input.val();
+      this.drawCustomHero();
+    }
   };
 
   // FEH Unit Functions
@@ -404,8 +623,62 @@
 
 
   // Custom Unit Functions
+  UnitBuilder.prototype.processCustomHeroStats = function() {
+    for (let stat in this.customUnit.stats) {
+      this.customUnit.processedStats[stat] = this.customUnit.stats[stat];
+    }
 
+    let skills;
+    let activeTab;
+    for (let skill in this.customUnit.skills) {
+      activeTab =  $(`.tab-content[data-skill-type="${skill}"] > .active`);
 
+      if (activeTab.data('tab-type') === 'default' || skill === 'refine') {
+        skills = this.customUnit.skills;
+      } else {
+        skills = this.customUnit.customSkills;
+      }
+
+      if (skills[skill].damage) {
+        this.customUnit.processedStats.atk += skills[skill].damage;
+      }
+      for (let stat in skills[skill].stats) {
+        this.customUnit.processedStats[stat] += skills[skill].stats[stat];
+      }
+    }
+
+    if (this.customUnit.support) {
+      this.customUnit.processedStats.hp += 5;
+      this.customUnit.processedStats.atk += 2;
+      this.customUnit.processedStats.spd += 2;
+      this.customUnit.processedStats.def += 2;
+      this.customUnit.processedStats.res += 2;
+    }
+
+    for (stat in this.customUnit.stats) {
+      this.customUnit.processedStats[stat] = Math.max(0, this.customUnit.processedStats[stat]);
+    }
+  };
+  UnitBuilder.prototype.setupCustomSkillOptions = function() {
+    if (this.customUnit.moveType.length === 0 || this.customUnit.weaponType.length === 0) {
+      return;
+    }
+
+    $(this.ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="assist"]')
+        .selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(this.customUnit, SKILL_ASSIST, false)));
+    $(this.ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="seal"]')
+        .selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(this.customUnit, SKILL_SEAL, false)));
+    $(this.ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="skillA"]')
+        .selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(this.customUnit, SKILL_A, false)));
+    $(this.ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="skillB"]')
+        .selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(this.customUnit, SKILL_B, false)));
+    $(this.ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="skillC"]')
+        .selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(this.customUnit, SKILL_C, false)));
+    $(this.ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="special"]')
+        .selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(this.customUnit, SKILL_SPECIAL, false)));
+    $(this.ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="refine"]')
+        .selectable('clear').selectable('disable');
+  };
 
   // Shared
   UnitBuilder.prototype.getWeapons = function(hero, filterExclusives = true) {
@@ -484,7 +757,7 @@
       this.ctx.drawImage(this.IMAGES.FRONT, 0, 0);
 
       if (hero.support) {
-        this.ctx.drawImage(this.IMAGES.SKILLS, 845, 0, 210, 223, 420, 430, 108, 115);
+        this.ctx.drawImage(this.IMAGES.UI, 0, 0, 210, 223, 420, 430, 108, 115);
       }
       if ($(this.ELEMENTS.SELECT_IV_SHOW).is(':checked')) {
         this.drawIv(hero.iv);
@@ -512,84 +785,88 @@
     this.ctx.fillText(title, 142, 445);
   };
   UnitBuilder.prototype.drawRarity = function(rarity) {
-    let coord = rarity === 5 ? this.CONST.RARITY["5"] : this.CONST.RARITY["4"];
-    this.ctx.drawImage(
-        this.IMAGES.SKILLS,
-        coord[0], coord[1],
-        153, 40, 46, 380, 153, 40);
+    let coord = rarity === 5 ? this.COORD.RARITY["5"] : this.COORD.RARITY["4"];
+    this.ctx.drawImage(this.IMAGES.UI, coord[0], coord[1], 153, 40, 46, 380, 153, 40);
   };
   UnitBuilder.prototype.drawWeaponAndMoveType = function(color, weaponType, moveType) {
-    let weaponTypeIcon = this.CONST.ICONS[color + ' ' + weaponType];
-    let moveTypeIcon = this.CONST.ICONS[moveType];
+    let weaponTypeIcon = this.COORD.ICONS[color + ' ' + weaponType];
+    let moveTypeIcon = this.COORD.ICONS[moveType];
     if (weaponTypeIcon) {
-      this.ctx.drawImage(this.IMAGES.SKILLS, weaponTypeIcon[0], weaponTypeIcon[1], 52, 52, 48, 553, 28, 28);
+      this.ctx.drawImage(this.IMAGES.UI, weaponTypeIcon[0], weaponTypeIcon[1], 52, 52, 48, 553, 28, 28);
     }
     if (moveTypeIcon) {
-      this.ctx.drawImage(this.IMAGES.SKILLS, moveTypeIcon[0], moveTypeIcon[1], 52, 52, 204, 554, 26, 26);
+      this.ctx.drawImage(this.IMAGES.UI, moveTypeIcon[0], moveTypeIcon[1], 52, 52, 204, 554, 26, 26);
     }
   };
   UnitBuilder.prototype.drawMergesAndStats = function(merges, stats) {
     if (merges > 0 && merges < 10) {
-      this.ctx.drawImage(this.IMAGES.SKILLS, this.CONST.FONT_IMAGE.white[0],
-        this.CONST.FONT_IMAGE.white[1] + 400, 32, 40, 158, 558, 15, 19);
-      this.ctx.drawImage(this.IMAGES.SKILLS, this.CONST.FONT_IMAGE.white[0],
-        this.CONST.FONT_IMAGE.white[1] + merges * 40, 32, 40, 172, 558, 15, 19);
+      this.ctx.drawImage(this.IMAGES.UI, this.COORD.FONT_IMAGE.white[0],
+          this.COORD.FONT_IMAGE.white[1] + 400, 32, 40, 158, 558, 15, 19);
+      this.ctx.drawImage(this.IMAGES.UI, this.COORD.FONT_IMAGE.white[0],
+          this.COORD.FONT_IMAGE.white[1] + merges * 40, 32, 40, 172, 558, 15, 19);
     } else if (merges == 10) {
-      this.ctx.drawImage(this.IMAGES.SKILLS, this.CONST.FONT_IMAGE.green[0],
-        this.CONST.FONT_IMAGE.green[1] + 400, 32, 40, 158, 558, 15, 19);
-      this.ctx.drawImage(this.IMAGES.SKILLS, this.CONST.FONT_IMAGE.green[0],
-        this.CONST.FONT_IMAGE.green[1] + 40, 32, 40, 172, 558, 15, 19);
-      this.ctx.drawImage(this.IMAGES.SKILLS, this.CONST.FONT_IMAGE.green[0],
-        this.CONST.FONT_IMAGE.green[1], 32, 40, 186, 558, 15, 19);
+      this.ctx.drawImage(this.IMAGES.UI, this.COORD.FONT_IMAGE.green[0],
+          this.COORD.FONT_IMAGE.green[1] + 400, 32, 40, 158, 558, 15, 19);
+      this.ctx.drawImage(this.IMAGES.UI, this.COORD.FONT_IMAGE.green[0],
+          this.COORD.FONT_IMAGE.green[1] + 40, 32, 40, 172, 558, 15, 19);
+      this.ctx.drawImage(this.IMAGES.UI, this.COORD.FONT_IMAGE.green[0],
+          this.COORD.FONT_IMAGE.green[1], 32, 40, 186, 558, 15, 19);
     }
 
-    this.drawStats(stats.hp, 147, this.CONST.STATS.hp);
-    this.drawStats(stats.atk, 147, this.CONST.STATS.atk, this.fehUnit.buffs.atk);
-    this.drawStats(stats.spd, 147, this.CONST.STATS.spd, this.fehUnit.buffs.spd);
-    this.drawStats(stats.def, 147, this.CONST.STATS.def, this.fehUnit.buffs.def);
-    this.drawStats(stats.res, 147, this.CONST.STATS.res, this.fehUnit.buffs.res);
+    this.drawStats(stats.hp, 147, this.COORD.STATS.hp);
+    this.drawStats(stats.atk, 147, this.COORD.STATS.atk, false, this.fehUnit.buffs.atk);
+    this.drawStats(stats.spd, 147, this.COORD.STATS.spd, false, this.fehUnit.buffs.spd);
+    this.drawStats(stats.def, 147, this.COORD.STATS.def, false, this.fehUnit.buffs.def);
+    this.drawStats(stats.res, 147, this.COORD.STATS.res, false, this.fehUnit.buffs.res);
+    this.drawStats(this.CONST.MAX_SP, 147, this.COORD.STATS.sp, this.COORD.FONT_IMAGE.green);
+    this.drawStats(this.CONST.MAX_HM, 147, this.COORD.STATS.hm, this.COORD.FONT_IMAGE.green);
   };
-  UnitBuilder.prototype.drawStats = function(value, x, y, buff = 0) {
-    let font = buff === 0 ? this.CONST.FONT_IMAGE.yellow :
-        buff > 0 ? this.CONST.FONT_IMAGE.blue : this.CONST.FONT_IMAGE.red;
+  UnitBuilder.prototype.drawStats = function(value, x, y, fixedFont, buff = 0) {
+    let font;
     let digit;
+    if (fixedFont) {
+      font = fixedFont;
+    } else {
+      font = buff === 0 ? this.COORD.FONT_IMAGE.yellow :
+        buff > 0 ? this.COORD.FONT_IMAGE.blue : this.COORD.FONT_IMAGE.red;
+    }
 
     if (value >= 1000) {
       digit = Math.floor((value / 1000) % 10);
-      this.ctx.drawImage(this.IMAGES.SKILLS, font[0],font[1] + digit * 40, 32, 40, x, y, 15, 19);
+      this.ctx.drawImage(this.IMAGES.UI, font[0],font[1] + digit * 40, 32, 40, x, y, 15, 19);
     }
     if (value >= 100) {
       digit = Math.floor((value / 100) % 10);
-      this.ctx.drawImage(this.IMAGES.SKILLS, font[0],font[1] + digit * 40, 32, 40, x + 14, y, 15, 19);
+      this.ctx.drawImage(this.IMAGES.UI, font[0],font[1] + digit * 40, 32, 40, x + 14, y, 15, 19);
     }
     if (value >= 10) {
       digit = Math.floor((value / 10) % 10);
-      this.ctx.drawImage(this.IMAGES.SKILLS, font[0], font[1] + digit * 40, 32, 40, x + 28, y, 15, 19);
+      this.ctx.drawImage(this.IMAGES.UI, font[0], font[1] + digit * 40, 32, 40, x + 28, y, 15, 19);
     }
 
     digit = value % 10;
-    this.ctx.drawImage(this.IMAGES.SKILLS, font[0], font[1] + digit * 40, 32, 40, x + 42, y, 15, 19);
+    this.ctx.drawImage(this.IMAGES.UI, font[0], font[1] + digit * 40, 32, 40, x + 42, y, 15, 19);
   };
   UnitBuilder.prototype.drawIv = function(iv) {
     if (iv.boon === '-') {
       return;
     }
 
-    this.ctx.drawImage(this.IMAGES.SKILLS, this.CONST.FONT_IMAGE.green[0],
-        this.CONST.FONT_IMAGE.green[1] + 400, 32, 40, 60, this.CONST.STATS[iv.boon], 15, 19);
-    this.ctx.drawImage(this.IMAGES.SKILLS, this.CONST.FONT_IMAGE.red[0],
-        this.CONST.FONT_IMAGE.red[1] + 440, 32, 40, 60, this.CONST.STATS[iv.bane], 15, 19);
+    this.ctx.drawImage(this.IMAGES.UI, this.COORD.FONT_IMAGE.green[0],
+        this.COORD.FONT_IMAGE.green[1] + 400, 32, 40, 60, this.COORD.STATS[iv.boon], 15, 19);
+    this.ctx.drawImage(this.IMAGES.UI, this.COORD.FONT_IMAGE.red[0],
+        this.COORD.FONT_IMAGE.red[1] + 440, 32, 40, 60, this.COORD.STATS[iv.bane], 15, 19);
   };
   UnitBuilder.prototype.drawSkills = function(skills) {
     this.ctx.drawImage(this.IMAGES.SKILLS, 130, 0, 65, 67, 275, 633, 34, 34);
     this.ctx.drawImage(this.IMAGES.SKILLS, 195, 0, 65, 67, 275, 669, 34, 34);
 
     if (skills.refine.icon) {
-      this.drawIcon(skills.refine.icon, this.CONST.SKILLS_ICON.weapon);
+      this.drawIcon(skills.refine.icon, this.COORD.SKILLS_ICON.weapon);
     } else if (skills.weapon.icon) {
-      this.drawIcon(skills.weapon.icon, this.CONST.SKILLS_ICON.weapon);
+      this.drawIcon(skills.weapon.icon, this.COORD.SKILLS_ICON.weapon);
     } else {
-      this.drawIcon('0-1', this.CONST.SKILLS_ICON.weapon);
+      this.drawIcon('0-1', this.COORD.SKILLS_ICON.weapon);
     }
 
     for (let skill in skills) {
@@ -597,16 +874,16 @@
         continue;
       }
       if (skills[skill].icon) {
-        this.drawIcon(skills[skill].icon, this.CONST.SKILLS_ICON[skill]);
+        this.drawIcon(skills[skill].icon, this.COORD.SKILLS_ICON[skill]);
       } else {
-        this.drawIcon('0-0', this.CONST.SKILLS_ICON[skill]);
+        this.drawIcon('0-0', this.COORD.SKILLS_ICON[skill]);
       }
     }
 
-    this.ctx.drawImage(this.IMAGES.SKILLS, 845, 476, 34, 38, 295, 723, 19, 21);
-    this.ctx.drawImage(this.IMAGES.SKILLS, 879, 476, 34, 38, 295, 759, 19, 21);
-    this.ctx.drawImage(this.IMAGES.SKILLS, 913, 476, 34, 38, 295, 795, 19, 21);
-    this.ctx.drawImage(this.IMAGES.SKILLS, 947, 476, 34, 38, 295, 832, 19, 21);
+    this.ctx.drawImage(this.IMAGES.UI, 0, 476, 34, 38, 295, 723, 19, 21);
+    this.ctx.drawImage(this.IMAGES.UI, 34, 476, 34, 38, 295, 759, 19, 21);
+    this.ctx.drawImage(this.IMAGES.UI, 68, 476, 34, 38, 295, 795, 19, 21);
+    this.ctx.drawImage(this.IMAGES.UI, 102, 476, 34, 38, 295, 832, 19, 21);
 
     this.ctx.textAlign="start";
     this.ctx.font = "17px FehFont";
@@ -642,7 +919,46 @@
     }
   }
 
+  UnitBuilder.prototype.drawCustomHero = function() {
+    this.processCustomHeroStats();
+    if (this.customUnit.support) {
+      this.ctx.drawImage(this.IMAGES.BACK, 540, 0, 540, 960, 0, 0, 540, 960);
+    } else {
+      this.ctx.drawImage(this.IMAGES.BACK, 0, 0);
+    }
 
+    if (this.customUnit.image) {
+      this.ctx.drawImage(this.customUnit.image, 0, 0,
+        this.customUnit.image.width, this.customUnit.image.height,
+        this.customUnit.imagePosX, -this.customUnit.imagePosY,
+        this.customUnit.image.width * this.customUnit.imageSize,
+        this.customUnit.image.height * this.customUnit.imageSize);
+    }
+
+    this.ctx.drawImage(this.IMAGES.FRONT, 0, 0);
+    if (this.customUnit.support) {
+      this.ctx.drawImage(this.IMAGES.UI, 0, 0, 210, 223, 420, 430, 108, 115);
+    }
+
+    this.drawNameAndTitle(this.customUnit.name, this.customUnit.title);
+    this.drawMergesAndStats(this.customUnit.merges, this.customUnit.processedStats);
+    this.drawWeaponAndMoveType(this.customUnit.colorType, this.customUnit.weaponType, this.customUnit.moveType);
+    this.drawCustomHeroSkills();
+  };
+  UnitBuilder.prototype.drawCustomHeroSkills = function() {
+    let activeTab;
+    let selectedSkills = {};
+
+    for (skill in this.customUnit.skills) {
+      activeTab =  $(`.tab-content[data-skill-type="${skill === 'refine' ? 'weapon' : skill}"] > .active`);
+      if (activeTab.data('tab-type') === 'default') {
+        selectedSkills[skill] = this.customUnit.skills[skill];
+      } else {
+        selectedSkills[skill] = this.customUnit.customSkills[skill];
+      }
+    }
+    this.drawSkills(selectedSkills);
+  }
 
   // Helper Functions
   UnitBuilder.prototype.loadFiles = function(urls, loadFont = false) {
@@ -686,6 +1002,14 @@
     $(`<div class="dropdown-item">${item}</div>`)
         .data('val', item)
         .appendTo($parent);
+  };
+  UnitBuilder.prototype.getEmptySkill = function() {
+    return {
+      name: '-',
+      effect: '',
+      stats: {},
+      icon: ''
+    };
   };
 })(jQuery);
 

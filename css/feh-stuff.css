@@ -44,6 +44,10 @@ body {
     width: 468px;
     height: 468px;
   }
+  #customize-hero-container {
+    height: 916px;
+    overflow-y: auto;
+  }
 }
 @media (min-width: 1300px) {
   .container {
@@ -272,6 +276,7 @@ body {
 /***** Unit Builder *****/
 .hero-canvas-container {
   width: 540px;
+  background-color: transparent;
 }
 .hero-canvas-container > .spinner {
   position: absolute;
@@ -284,6 +289,10 @@ body {
 }
 .col-form-label > img {
   width: 24px;
+}
+
+#customize-hero-container {
+
 }
 
 .skill-info-icon {
