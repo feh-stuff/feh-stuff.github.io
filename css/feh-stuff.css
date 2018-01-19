@@ -291,8 +291,16 @@ body {
   width: 24px;
 }
 
-#customize-hero-container {
-
+#download-img {
+  position: absolute;
+  right: 0;
+  margin-top: 6px;
+  margin-right: 6px;
+  width: 50px;
+  height: 38px;
+}
+#download-img img {
+  width: 26px;
 }
 
 .skill-info-icon {
@@ -338,6 +346,10 @@ body {
 .stat-input-groups > .input-group > input {
   border-left: none;
   text-align: right;
+}
+
+.customize-header {
+  width: 80px;
 }
 
 /***** Selectable *****/

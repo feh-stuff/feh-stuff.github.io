@@ -106,6 +106,7 @@
     CUSTOM_SKILL_SELECT: '.custom-skill-select',
     CUSTOM_SKILL_TOGGLE: '[data-toggle="pill"]',
     CUSTOM_NEW_SKILL_INPUT: '.custom-skill-input',
+    DOWNLOAD: '#download-img'
   };
 
   UnitBuilder.prototype.CONST = {
@@ -279,6 +280,7 @@
       this.IMAGES.BACK = files[2];
       this.IMAGES.UI = files[3];
       this.drawHero(this.fehUnit);
+      $(this.ELEMENTS.DOWNLOAD).removeClass('d-none');
     });
 
     this.bindEvents();
@@ -309,6 +311,8 @@
     $(this.ELEMENTS.CUSTOM_STAT_CONTROL).on('change', this.onCustomStatChange.bind(this));
     $(this.ELEMENTS.CUSTOM_NEW_SKILL_INPUT).on('change', this.onCustomNewSkillChange.bind(this));
     $(this.ELEMENTS.CUSTOM_SKILL_TOGGLE).on('shown.bs.tab', this.onCustomSkillToggle.bind(this));
+
+    $(this.ELEMENTS.DOWNLOAD).on('click', this.onDownload.bind(this));
   };
 
   UnitBuilder.prototype.onHeroSelect = function(event) {
@@ -509,6 +513,13 @@
       this.drawCustomHero();
     }
   };
+
+  UnitBuilder.prototype.onDownload = function(event) {
+    let heroName = this.activeTab === 'main' ? this.fehUnit.data.name : this.customUnit.name;
+    $(event.currentTarget)
+        .attr('href', $(this.ELEMENTS.CANVAS)[0].toDataURL())
+        .attr('download', 'FEH Unit Builder - ' + heroName + '.png');
+  }
 
   // FEH Unit Functions
   UnitBuilder.prototype.processHeroStats = function(hero) {
@@ -1011,6 +1022,7 @@
       icon: ''
     };
   };
+
 })(jQuery);
 
 new UnitBuilder();
