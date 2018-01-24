@@ -317,6 +317,8 @@
 
   UnitBuilder.prototype.onHeroSelect = function(event) {
     let hero = $(event.currentTarget).data('val');
+    let highlightList = hero.skills.map(skill => skill.name);
+
     this.fehUnit.data = hero;
     for (let skill in this.fehUnit.skills) {
       this.fehUnit.skills[skill] = this.CONST.EMPTY_SKILL;
@@ -324,13 +326,25 @@
     this.fehUnit.rarity = 5;
 
     this.drawHero(this.fehUnit);
-    //TODO: highlight list
-    $(this.ELEMENTS.SELECT_WEAPON).selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getWeapons(hero)));
-    $(this.ELEMENTS.SELECT_ASSIST).selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(hero, SKILL_ASSIST)));
-    $(this.ELEMENTS.SELECT_SPECIAL).selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(hero, SKILL_SPECIAL)));
-    $(this.ELEMENTS.SELECT_SKILLA).selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(hero, SKILL_A)));
-    $(this.ELEMENTS.SELECT_SKILLB).selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(hero, SKILL_B)));
-    $(this.ELEMENTS.SELECT_SKILLC).selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(hero, SKILL_C)));
+
+    $(this.ELEMENTS.SELECT_WEAPON)
+        .selectable('highlight', highlightList)
+        .selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getWeapons(hero)));
+    $(this.ELEMENTS.SELECT_ASSIST)
+        .selectable('highlight', highlightList)
+        .selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(hero, SKILL_ASSIST)));
+    $(this.ELEMENTS.SELECT_SPECIAL)
+        .selectable('highlight', highlightList)
+        .selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(hero, SKILL_SPECIAL)));
+    $(this.ELEMENTS.SELECT_SKILLA)
+        .selectable('highlight', highlightList)
+        .selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(hero, SKILL_A)));
+    $(this.ELEMENTS.SELECT_SKILLB)
+        .selectable('highlight', highlightList)
+        .selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(hero, SKILL_B)));
+    $(this.ELEMENTS.SELECT_SKILLC)
+        .selectable('highlight', highlightList)
+        .selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(hero, SKILL_C)));
     $(this.ELEMENTS.SELECT_SEAL).selectable('data', [this.CONST.EMPTY_SKILL].concat(this.getSkills(hero, SKILL_SEAL)));
 
     $(this.ELEMENTS.SELECT_REFINE).selectable('clear').selectable('disable');
@@ -362,15 +376,16 @@
       $('.skill-info-icon[data-skill="refine"]').addClass('d-none');
     }
 
-    $(`.skill-info-icon[data-skill="${skillType}"]`)
-        .toggleClass('d-none', skill.name === '-')
-        .popover('dispose')
-        .popover({
-          trigger: 'hover click',
-          title: skill.name,
-          html: true,
-          content: this.getSkillInfoHtml(skillType, skill)
-        });
+    // $(`.skill-info-icon[data-skill="${skillType}"]`)
+    //     .toggleClass('d-none', skill.name === '-')
+    //     .popover('dispose')
+    //     .popover({
+    //       trigger: 'hover click',
+    //       title: skill.name,
+    //       html: true,
+    //       content: this.getSkillInfoHtml(skillType, skill)
+    //     });
+    this.toggleSkillInfo(skillType, skill);
     this.fehUnit.skills[skillType] = skill;
     this.drawHero(this.fehUnit);
   };
@@ -601,9 +616,40 @@
     }
 
     return statIncrease;
-  }
-  UnitBuilder.prototype.getSkillInfoHtml = function(skillType, skill) {
+  };
+  UnitBuilder.prototype.toggleSkillInfo = function(skillType, skill) {
+    new Promise(() => {
+      let inheritance = [];
+      if (skillType !== 'refine' || skillType !== 'seal') {
+        for (let i = 0; i < HEROES.length; i++) {
+          for (let j = 0; j < HEROES[i].skills.length; j++) {
+            if (HEROES[i].skills[j].name === skill.name) {
+              inheritance.push({
+                name: HEROES[i].name,
+                rarity: HEROES[i].skills[j].rarity
+              });
+            }
+          }
+        }        
+      }
+      inheritance.sort((a, b) => a.rarity - b.rarity);
+      console.log(inheritance);
+
+      $(`.skill-info-icon[data-skill="${skillType}"]`)
+        .toggleClass('d-none', skill.name === '-')
+        .popover('dispose')
+        .popover({
+          trigger: 'hover click',
+          title: skill.name,
+          html: true,
+          content: this.getSkillInfoHtml(skillType, skill, inheritance)
+        });
+    });
+  };
+  UnitBuilder.prototype.getSkillInfoHtml = function(skillType, skill, inheritance) {
     let html = '';
+    let inheritHtml = '';
+
     if (skill.name === '-') {
       return '';
     }
@@ -629,7 +675,13 @@
     } else if (skillType !== 'seal') {
       html += `<span>SP Cost: ${skill.spCost}</span>`;
     }
-    return (html ? `<p class="skill-cost">${html}</p>` : '') + `<p>${skill.effect}</p>`;
+    if (inheritance.length) {
+      inheritHtml = '<h6>Inheritance</h6><div class="inherit-list"><ul class="list-group">' + 
+          inheritance.map(inherit => `<li class="list-group-item inherit-item">
+              <span>${inherit.name}</span><span>[${inherit.rarity}]</span></li>`)
+          .join('') + '</div><ul>';
+    }
+    return (html ? `<p class="skill-cost">${html}</p>` : '') + `<p>${skill.effect}</p>` + inheritHtml;
   };
 
 
@@ -690,6 +742,7 @@
     $(this.ELEMENTS.CUSTOM_SKILL_SELECT + '[data-skill="refine"]')
         .selectable('clear').selectable('disable');
   };
+
 
   // Shared
   UnitBuilder.prototype.getWeapons = function(hero, filterExclusives = true) {

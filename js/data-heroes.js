@@ -1335,7 +1335,7 @@ const HEROES = [
       { "name": "Cupid Arrow", "rarity": 5 },
       { "name": "Cupid Arrow+", "rarity": 5 },
       { "name": "Rally Attack", "rarity": 5 },
-      { "name": "Rally Attack Speed", "rarity": 5 },
+      { "name": "Rally Atk/Spd", "rarity": 5 },
       { "name": "Escape Route 1", "rarity": 5 },
       { "name": "Escape Route 2", "rarity": 5 },
       { "name": "Escape Route 3", "rarity": 5 },
@@ -1710,6 +1710,36 @@ const HEROES = [
     "colorType": "Red"
   },
   {
+    "name": "Eirika (Sacred Memories)",
+    "shortName": "Eirika",
+    "title": "Anamnesis Lady",
+    "weaponType": "Tome",
+    "colorType": "Red",
+    "moveType": "Cavalry",
+    "releaseDate": "January 25, 2018",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Eirika (Sacred Memories).png",
+      "main": "img/heroes-main/Feh.png"
+    },
+    "skills": [
+      { "name": "Gleipnir", "rarity": 5 },
+      { "name": "Rally Atk/Spd", "rarity": 5 },
+      { "name": "Swift Sparrow 1", "rarity": 5 },
+      { "name": "Swift Sparrow 2", "rarity": 5 },
+      { "name": "Desperation 1", "rarity": 5 },
+      { "name": "Desperation 2", "rarity": 5 },
+      { "name": "Desperation 3", "rarity": 5 },
+      { "name": "R Tome Exp. 1", "rarity": 5 },
+      { "name": "R Tome Exp. 2", "rarity": 5 },
+      { "name": "R Tome Exp. 3", "rarity": 5 }
+    ],
+    "stats": {
+      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
+      "level40": { "hp": [ 0, 0, 0], "atk": [ 0, 0, 0], "spd": [ 0, 0, 0], "def": [ 0, 0, 0], "res": [ 0, 0, 0] }
+    },
+    "rarity5": true
+  },
+  {
     "name": "Eldigan",
     "title": "Lionheart",
     "weaponType": "Sword",
@@ -1816,8 +1846,8 @@ const HEROES = [
       { "name": "Rally Attack", "rarity": 5 },
       { "name": "Rally Attack Resistance", "rarity": 5 },
       { "name": "Speed +1", "rarity": 5 },
-      { "name": "Spd Res 1", "rarity": 5 },
-      { "name": "Spd Res 2", "rarity": 5 },
+      { "name": "Spd/Res 1", "rarity": 5 },
+      { "name": "Spd/Res 2", "rarity": 5 },
       { "name": "G Tome Valor 1", "rarity": 5 },
       { "name": "G Tome Valor 2", "rarity": 5 },
       { "name": "G Tome Valor 3", "rarity": 5 }
@@ -2079,9 +2109,9 @@ const HEROES = [
       { "name": "Holy Vestments", "rarity": 5 },
       { "name": "Sacred Cowl", "rarity": 5 },
       { "name": "Ice Mirror", "rarity": 5 },
-      { "name": "Atk Def Bond 1", "rarity": 5 },
-      { "name": "Atk Def Bond 2", "rarity": 5 },
-      { "name": "Atk Def Bond 3", "rarity": 5 },
+      { "name": "Atk/Def Bond 1", "rarity": 5 },
+      { "name": "Atk/Def Bond 2", "rarity": 5 },
+      { "name": "Atk/Def Bond 3", "rarity": 5 },
       { "name": "Shield Pulse 1", "rarity": 5 },
       { "name": "Shield Pulse 2", "rarity": 5 },
       { "name": "Shield Pulse 3", "rarity": 5 },
@@ -2184,8 +2214,8 @@ const HEROES = [
       { "name": "Armored Blow 2", "rarity": 5 },
       { "name": "Armored Blow 3", "rarity": 5 },
       { "name": "Seal Spd 1", "rarity": 5 },
-      { "name": "Seal Atk Spd 1", "rarity": 5 },
-      { "name": "Seal Atk Spd 2", "rarity": 5 }
+      { "name": "Seal Atk/Spd 1", "rarity": 5 },
+      { "name": "Seal Atk/Spd 2", "rarity": 5 }
     ],
     "stats": {
       "level1": { "hp": 18, "atk": 8, "spd": 7, "def": 6, "res": 5 },
@@ -3168,6 +3198,40 @@ const HEROES = [
     "rarity4": true,
     "rarity5": true,
     "colorType": "Neutral"
+  },
+  {
+    "name": "L'Arachel",
+    "title": "Princess of Light",
+    "weaponType": "Tome",
+    "colorType": "Blue",
+    "moveType": "Cavalry",
+    "releaseDate": "January 25, 2018",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_L'Arachel.png",
+      "main": "img/heroes-main/Feh.png"
+    },
+    "skills": [
+      { "name": "Ivaldi", "rarity": 5 },
+      { "name": "Rising Light", "rarity": 5 },
+      { "name": "Growing Light", "rarity": 5 },
+      { "name": "Renewal 1", "rarity": 5 },
+      { "name": "Renewal 2", "rarity": 5 },
+      { "name": "Renewal 3", "rarity": 5 },
+      { "name": "Res Tactic 1", "rarity": 5 },
+      { "name": "Res Tactic 2", "rarity": 5 },
+      { "name": "Res Tactic 3", "rarity": 5 },
+    ],
+    "stats": {
+      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
+      "level40": {
+        "hp": [ 0, 0, 0 ],
+        "atk": [ 0, 0, 0 ],
+        "spd": [ 0, 0, 0 ],
+        "def": [ 0, 0, 0 ],
+        "res": [ 0, 0, 0 ]
+      }
+    },
+    "rarity5": true
   },
   {
     "name": "Lachesis",
@@ -4267,8 +4331,8 @@ const HEROES = [
       { "name": "Imbue", "rarity": 5 },
       { "name": "Miracle", "rarity": 5 },
       { "name": "Spur Res 1", "rarity": 5 },
-      { "name": "Spur Def Res 1", "rarity": 5 },
-      { "name": "Spur Def Res 2", "rarity": 5 }
+      { "name": "Spur Def/Res 1", "rarity": 5 },
+      { "name": "Spur Def/Res 2", "rarity": 5 }
     ],
     "stats": {
       "level1": { "hp": 17, "atk": 8, "spd": 6, "def": 5, "res": 8 },
@@ -4276,6 +4340,32 @@ const HEROES = [
     },
     "rarity5": true,
     "colorType": "Neutral"
+  },
+  {
+    "name": "Myrrh",
+    "title": "Great Dragon",
+    "weaponType": "Breath",
+    "colorType": "Green",
+    "moveType": "Flying",
+    "releaseDate": "January 25, 2018",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Myrrh.png",
+      "main": "img/heroes-main/Feh.png"
+    },
+    "skills": [
+      { "name": "Great Flame", "rarity": 5 },
+      { "name": "Glowing Ember", "rarity": 5 },
+      { "name": "Bonfire", "rarity": 5 },
+      { "name": "Fury 1", "rarity": 5 },
+      { "name": "Fury 2", "rarity": 5 },
+      { "name": "Fury 3", "rarity": 5 },
+      { "name": "Hone Dragons", "rarity": 5 }
+    ],
+    "stats": {
+      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
+      "level40": { "hp": [ 0, 0, 0], "atk": [ 0, 0, 0], "spd": [ 0, 0, 0], "def": [ 0, 0, 0], "res": [ 0, 0, 0] }
+    },
+    "rarity5": true
   },
   {
     "name": "Narcian",
@@ -4365,8 +4455,8 @@ const HEROES = [
       { "name": "New Moon", "rarity": 5 },
       { "name": "Moonbow", "rarity": 5 },
       { "name": "Speed +1", "rarity": 5 },
-      { "name": "Atk Spd 1", "rarity": 5 },
-      { "name": "Atk Spd 2", "rarity": 5 },
+      { "name": "Atk/Spd 1", "rarity": 5 },
+      { "name": "Atk/Spd 2", "rarity": 5 },
       { "name": "Wrath 1", "rarity": 5 },
       { "name": "Wrath 2", "rarity": 5 },
       { "name": "Wrath 3", "rarity": 5 }
@@ -4524,9 +4614,9 @@ const HEROES = [
       { "name": "Fenrir", "rarity": 5 },
       { "name": "Grimoire", "rarity": 5 },
       { "name": "Reposition", "rarity": 5 },
-      { "name": "Atk Res Bond 1", "rarity": 5 },
-      { "name": "Atk Res Bond 2", "rarity": 5 },
-      { "name": "Atk Res Bond 3", "rarity": 5 },
+      { "name": "Atk/Res Bond 1", "rarity": 5 },
+      { "name": "Atk/Res Bond 2", "rarity": 5 },
+      { "name": "Atk/Res Bond 3", "rarity": 5 },
       { "name": "Live for Bounty", "rarity": 5 },
       { "name": "Hone Atk 1", "rarity": 5 },
       { "name": "Hone Atk 2", "rarity": 5 },
@@ -4789,8 +4879,8 @@ const HEROES = [
       { "name": "Lancebreaker 2", "rarity": 4 },
       { "name": "Lancebreaker 3", "rarity": 4 },
       { "name": "Spur Def 1", "rarity": 4 },
-      { "name": "Spur Spd Def 1", "rarity": 4 },
-      { "name": "Spur Spd Def 2", "rarity": 5 }
+      { "name": "Spur Spd/Def 1", "rarity": 4 },
+      { "name": "Spur Spd/Def 2", "rarity": 5 }
     ],
     "stats": {
       "level1": { "hp": 18, "atk": 7, "spd": 8, "def": 7, "res": 6 },
@@ -5615,8 +5705,8 @@ const HEROES = [
       { "name": "Fortress Def 2", "rarity": 4 },
       { "name": "Fortress Def 3", "rarity": 4 },
       { "name": "Seal Atk 1", "rarity": 4 },
-      { "name": "Seal Atk Def 1", "rarity": 4 },
-      { "name": "Seal Atk Def 2", "rarity": 5 }
+      { "name": "Seal Atk/Def 1", "rarity": 4 },
+      { "name": "Seal Atk/Def 2", "rarity": 5 }
     ],
     "stats": {
       "level1": { "hp": 18, "atk": 8, "spd": 7, "def": 8, "res": 5 },
@@ -6263,8 +6353,8 @@ const HEROES = [
       { "name": "New Moon", "rarity": 5 },
       { "name": "Moonbow", "rarity": 5 },
       { "name": "Speed +1", "rarity": 5 },
-      { "name": "Spd Def 1", "rarity": 5 },
-      { "name": "Spd Def 2", "rarity": 5 },
+      { "name": "Spd/Def 1", "rarity": 5 },
+      { "name": "Spd/Def 2", "rarity": 5 },
       { "name": "Guidance 1", "rarity": 5 },
       { "name": "Guidance 2", "rarity": 5 },
       { "name": "Guidance 3", "rarity": 5 }

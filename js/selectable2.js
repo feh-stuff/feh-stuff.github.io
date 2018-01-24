@@ -135,5 +135,10 @@ $.widget('custom.selectable', {
   reset: function() {
     this.$button.text(this.options.text);
     $(this.element).data('val', this.options.value);
+  },
+
+  highlight: function(highlight) {
+    this.options.highlight = highlight;
+    return this;
   }
 });

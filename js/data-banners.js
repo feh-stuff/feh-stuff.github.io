@@ -3,7 +3,21 @@ const BANNERS = [
     "date": "January 2018",
     "banners": [
       {
-        "name": "4★ and 5★ Heroes",
+        "name": "Sacred Memories",
+        "latestHeroesDate": "",
+        "startDate": "Jan 25, 2018",
+        "focusHeroes": [ "Myrrh", "Eirika (Sacred Memories)", "L'Arachel" ],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [],
+        "rateRarity3": 36,
+        "rateRarity4": 48,
+        "rateRarity5": 3,
+        "rateRarityFocus": 3,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      },
+      {
+        "name": "4★ & 5★ Heroes",
         "latestHeroesDate": "",
         "startDate": "Jan 18, 2018",
         "focusHeroes": [ "Hinata", "Laslow", "Roy", "Abel", "Oscar", "Mathilda", "Barst", "Frederick", "Fae", "Klein", "Setsuna", "Rebecca" ],
