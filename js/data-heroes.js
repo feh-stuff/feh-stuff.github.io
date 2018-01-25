@@ -711,8 +711,8 @@ const HEROES = [
       { "name": "Chilling Wind", "rarity": 5 },
       { "name": "Iceberg", "rarity": 5 },
       { "name": "Resistance +1", "rarity": 5 },
-      { "name": "Attack Res 1", "rarity": 5 },
-      { "name": "Attack Res 2", "rarity": 5 },
+      { "name": "Atk/Res 1", "rarity": 5 },
+      { "name": "Atk/Res 2", "rarity": 5 },
       { "name": "Hone Spd 1", "rarity": 5 },
       { "name": "Hone Spd 2", "rarity": 5 },
       { "name": "Hone Spd 3", "rarity": 5 }
@@ -1105,8 +1105,8 @@ const HEROES = [
       { "name": "Carrot Axe+", "rarity": 5 },
       { "name": "Shove", "rarity": 5 },
       { "name": "Defense +1", "rarity": 5 },
-      { "name": "Attack Def +1", "rarity": 5 },
-      { "name": "Attack Def +2", "rarity": 5 },
+      { "name": "Atk/Def +1", "rarity": 5 },
+      { "name": "Atk/Def +2", "rarity": 5 },
       { "name": "Axe Experience 1", "rarity": 5 },
       { "name": "Axe Experience 2", "rarity": 5 },
       { "name": "Axe Experience 3", "rarity": 5 }
@@ -1719,10 +1719,14 @@ const HEROES = [
     "releaseDate": "January 25, 2018",
     "assets": {
       "portrait": "img/heroes-portrait/75px-Icon_Portrait_Eirika (Sacred Memories).png",
-      "main": "img/heroes-main/Feh.png"
+      "main": "img/heroes-main/Eirika (Sacred Memories).png"
     },
     "skills": [
+      { "name": "Flux", "rarity": 5 },
+      { "name": "Ruin", "rarity": 5 },
+      { "name": "Fenrir", "rarity": 5 },
       { "name": "Gleipnir", "rarity": 5 },
+      { "name": "Rally Attack", "rarity": 5 },
       { "name": "Rally Atk/Spd", "rarity": 5 },
       { "name": "Swift Sparrow 1", "rarity": 5 },
       { "name": "Swift Sparrow 2", "rarity": 5 },
@@ -1734,8 +1738,8 @@ const HEROES = [
       { "name": "R Tome Exp. 3", "rarity": 5 }
     ],
     "stats": {
-      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
-      "level40": { "hp": [ 0, 0, 0], "atk": [ 0, 0, 0], "spd": [ 0, 0, 0], "def": [ 0, 0, 0], "res": [ 0, 0, 0] }
+      "level1": { "hp": 17, "atk": 7, "spd": 9, "def": 5, "res": 5 },
+      "level40": { "hp": [33, 36, 40], "atk": [28, 31, 34], "spd": [32, 35, 38], "def": [17, 20, 23], "res": [19, 22, 25]}
     },
     "rarity5": true
   },
@@ -1844,7 +1848,7 @@ const HEROES = [
       { "name": "Hibiscus Tome", "rarity": 5 },
       { "name": "Hibiscus Tome+", "rarity": 5 },
       { "name": "Rally Attack", "rarity": 5 },
-      { "name": "Rally Attack Resistance", "rarity": 5 },
+      { "name": "Rally Atk/Res", "rarity": 5 },
       { "name": "Speed +1", "rarity": 5 },
       { "name": "Spd/Res 1", "rarity": 5 },
       { "name": "Spd/Res 2", "rarity": 5 },
@@ -3208,9 +3212,12 @@ const HEROES = [
     "releaseDate": "January 25, 2018",
     "assets": {
       "portrait": "img/heroes-portrait/75px-Icon_Portrait_L'Arachel.png",
-      "main": "img/heroes-main/Feh.png"
+      "main": "img/heroes-main/L'Arachel.png"
     },
     "skills": [
+      { "name": "Light", "rarity": 5 },
+      { "name": "Ellight", "rarity": 5 },
+      { "name": "Shine", "rarity": 5 },
       { "name": "Ivaldi", "rarity": 5 },
       { "name": "Rising Light", "rarity": 5 },
       { "name": "Growing Light", "rarity": 5 },
@@ -3222,14 +3229,8 @@ const HEROES = [
       { "name": "Res Tactic 3", "rarity": 5 },
     ],
     "stats": {
-      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
-      "level40": {
-        "hp": [ 0, 0, 0 ],
-        "atk": [ 0, 0, 0 ],
-        "spd": [ 0, 0, 0 ],
-        "def": [ 0, 0, 0 ],
-        "res": [ 0, 0, 0 ]
-      }
+      "level1": {"hp": 16,"atk": 9,"spd": 7,"def": 4,"res": 7},
+      "level40": { "hp": [30, 33, 36], "atk": [30, 33, 36], "spd": [28, 31, 34], "def": [13, 17, 20], "res": [28, 31, 34]}
     },
     "rarity5": true
   },
@@ -3843,10 +3844,10 @@ const HEROES = [
       { "name": "Thoron", "rarity": 5 },
       { "name": "Weirding Tome", "rarity": 5 },
       { "name": "Rally Attack", "rarity": 5 },
-      { "name": "Rally Attack Resistance", "rarity": 5 },
+      { "name": "Rally Atk/Res", "rarity": 5 },
       { "name": "Resistance +1", "rarity": 5 },
-      { "name": "HP Res 1", "rarity": 5 },
-      { "name": "HP Res 2", "rarity": 5 },
+      { "name": "Hp/Res 1", "rarity": 5 },
+      { "name": "Hp/Res 2", "rarity": 5 },
       { "name": "Res Ploy 1", "rarity": 5 },
       { "name": "Res Ploy 2", "rarity": 5 },
       { "name": "Res Ploy 3", "rarity": 5 }
@@ -3956,6 +3957,39 @@ const HEROES = [
     "limited": true
   },
   {
+    "name": "Lyon",
+    "title": "Shadow Prince",
+    "weaponType": "Tome",
+    "colorType": "Red",
+    "moveType": "Infantry",
+    "releaseDate": "January 26, 2018",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Lyon.png",
+      "main": "img/heroes-main/Lyon.png"
+    },
+    "skills": [
+      { "name": "Flux", "rarity": 3 },
+      { "name": "Ruin", "rarity": 3 },
+      { "name": "Fenrir", "rarity": 3 },
+      { "name": "Naglfar", "rarity": 5 },
+      { "name": "Retribution", "rarity": 3 },
+      { "name": "Vengeance", "rarity": 4 },
+      { "name": "Resistance +1", "rarity": 3 },
+      { "name": "Atk/Res 1", "rarity": 4 },
+      { "name": "Atk/Res 2", "rarity": 5 },
+      { "name": "Spur Res 1", "rarity": 3 },
+      { "name": "Drive Res 1", "rarity": 3 },
+      { "name": "Drive Res 2", "rarity": 4 }
+    ],
+    "stats": {
+      "level1_4": { "hp": 18, "atk": 10, "spd": 3, "def": 3, "res": 8 },
+      "level1": { "hp": 19, "atk": 10, "spd": 4, "def": 4, "res": 8 },
+      "level40_4": { "hp": [35, 38, 41], "atk": [29, 32, 35], "spd": [16, 19, 22], "def": [20, 23, 26], "res": [25, 28, 31]},
+      "level40": { "hp": [38, 41, 44], "atk": [31, 34, 37], "spd": [18, 21, 24], "def": [23, 26, 29], "res": [27, 30, 33]}
+    },
+    "ghb": true
+  },
+  {
     "name": "Mae",
     "title": "Bundle of Energy",
     "weaponType": "Tome",
@@ -4020,6 +4054,39 @@ const HEROES = [
     "rarity4": true,
     "rarity5": true,
     "colorType": "Neutral"
+  },
+  {
+    "name": "Marisa",
+    "title": "Crimson Flash",
+    "weaponType": "Sword",
+    "colorType": "Red",
+    "moveType": "Infantry",
+    "releaseDate": "January 31, 2018",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Marisa.png",
+      "main": "img/heroes-main/Marisa.png"
+    },
+    "skills": [
+      { "name": "Iron Sword", "rarity": 4 },
+      { "name": "Steel Sword", "rarity": 4 },
+      { "name": "Wo Dao", "rarity": 4 },
+      { "name": "Wo Dao+", "rarity": 5 },
+      { "name": "Night Sky", "rarity": 3 },
+      { "name": "Glimmer", "rarity": 4 },
+      { "name": "Hp +3", "rarity": 4 },
+      { "name": "Hp/Def 1", "rarity": 4 },
+      { "name": "Hp/Def 2", "rarity": 4 },
+      { "name": "Infantry Pulse 1", "rarity": 4 },
+      { "name": "Infantry Pulse 2", "rarity": 4 },
+      { "name": "Infantry Pulse 3", "rarity": 5 }
+    ],
+    "stats": {
+      "level1_4": { "hp": 17, "atk": 8, "spd": 10, "def": 05, "res": 5 },
+      "level1": { "hp": 18, "atk": 8, "spd": 10, "def": 6, "res": 6 },
+      "level40_4": { "hp": [40, 43, 46], "atk": [25, 28, 31], "spd": [31, 34, 37], "def": [24, 27, 30], "res": [16, 19, 22] },
+      "level40": { "hp": [43, 46, 49], "atk": [27, 30, 33], "spd": [33, 36, 39], "def": [27, 30, 33], "res": [18, 21, 24] }
+    },
+    "ttReward": true
   },
   {
     "name": "Marth",
@@ -4350,20 +4417,25 @@ const HEROES = [
     "releaseDate": "January 25, 2018",
     "assets": {
       "portrait": "img/heroes-portrait/75px-Icon_Portrait_Myrrh.png",
-      "main": "img/heroes-main/Feh.png"
+      "main": "img/heroes-main/Myrrh.png"
     },
     "skills": [
+      { "name": "Fire Breath", "rarity": 5 },
+      { "name": "Fire Breath+", "rarity": 5 },
+      { "name": "Flametongue", "rarity": 5 },
       { "name": "Great Flame", "rarity": 5 },
       { "name": "Glowing Ember", "rarity": 5 },
       { "name": "Bonfire", "rarity": 5 },
       { "name": "Fury 1", "rarity": 5 },
       { "name": "Fury 2", "rarity": 5 },
       { "name": "Fury 3", "rarity": 5 },
+      { "name": "Hone Atk 1", "rarity": 5 },
+      { "name": "Hone Atk 2", "rarity": 5 },
       { "name": "Hone Dragons", "rarity": 5 }
     ],
     "stats": {
-      "level1": { "hp": 0, "atk": 0, "spd": 0, "def": 0, "res": 0 },
-      "level40": { "hp": [ 0, 0, 0], "atk": [ 0, 0, 0], "spd": [ 0, 0, 0], "def": [ 0, 0, 0], "res": [ 0, 0, 0] }
+      "level1": { "hp": 16, "atk": 7, "spd": 6, "def": 3, "res": 7 },
+      "level40": { "hp": [39, 42, 45], "atk": [30, 33, 36], "spd": [22, 25, 29], "def": [32, 36, 39], "res": [28, 31, 34]}
     },
     "rarity5": true
   },
@@ -4874,7 +4946,7 @@ const HEROES = [
       { "name": "Sapphire Lance", "rarity": 4 },
       { "name": "Sapphire Lance+", "rarity": 5 },
       { "name": "Rally Speed", "rarity": 4 },
-      { "name": "Rally Speed Defense", "rarity": 4 },
+      { "name": "Rally Spd/Def", "rarity": 4 },
       { "name": "Lancebreaker 1", "rarity": 4 },
       { "name": "Lancebreaker 2", "rarity": 4 },
       { "name": "Lancebreaker 3", "rarity": 4 },
@@ -5143,7 +5215,7 @@ const HEROES = [
       { "name": "Keen Gronnwolf", "rarity": 5 },
       { "name": "Keen Gronnwolf+", "rarity": 5 },
       { "name": "Rally Defense", "rarity": 5 },
-      { "name": "Rally Attack Defense", "rarity": 5 },
+      { "name": "Rally Atk/Def", "rarity": 5 },
       { "name": "Distant Def 1", "rarity": 5 },
       { "name": "Distant Def 2", "rarity": 4 },
       { "name": "Distant Def 3", "rarity": 5 },
@@ -5211,8 +5283,8 @@ const HEROES = [
       { "name": "Deft Harpoon+", "rarity": 5 },
       { "name": "Reposition", "rarity": 5 },
       { "name": "Defense +1", "rarity": 5 },
-      { "name": "HP Def 1", "rarity": 5 },
-      { "name": "HP Def 2", "rarity": 5 },
+      { "name": "Hp/Def 1", "rarity": 5 },
+      { "name": "Hp/Def 2", "rarity": 5 },
       { "name": "Lance Valor 1", "rarity": 5 },
       { "name": "Lance Valor 2", "rarity": 5 },
       { "name": "Lance Valor 3", "rarity": 5 }
@@ -5441,8 +5513,8 @@ const HEROES = [
       { "name": "Holy Vestments", "rarity": 5 },
       { "name": "Aegis", "rarity": 5 },
       { "name": "HP +3", "rarity": 5 },
-      { "name": "HP Spd 1", "rarity": 5 },
-      { "name": "HP Spd 2", "rarity": 5 },
+      { "name": "Hp/Spd 1", "rarity": 5 },
+      { "name": "Hp/Spd 2", "rarity": 5 },
       { "name": "Shield Pulse 1", "rarity": 5 },
       { "name": "Shield Pulse 2", "rarity": 5 },
       { "name": "Shield Pulse 3", "rarity": 5 }
@@ -6137,6 +6209,7 @@ const HEROES = [
       "level1": { "hp": 17, "atk": 10, "spd": 9, "def": 5, "res": 4 },
       "level40": { "hp": [ 35, 39, 42 ], "atk": [ 33, 36, 39 ], "spd": [ 30, 33, 36 ], "def": [ 19, 22, 25 ], "res": [ 18, 21, 24 ] },
     },
+    "rarity4": true,
     "rarity5": true,
     "colorType": "Neutral",
   },
@@ -6255,10 +6328,10 @@ const HEROES = [
       { "name": "Blárblade", "rarity": 4 },
       { "name": "Blárblade+", "rarity": 5 },
       { "name": "Rally Resistance", "rarity": 4 },
-      { "name": "Rally Speed Resistance", "rarity": 4 },
+      { "name": "Rally Spd/Res", "rarity": 4 },
       { "name": "Attack +1", "rarity": 4 },
-      { "name": "Attack Res 1", "rarity": 4 },
-      { "name": "Attack Res 2", "rarity": 5 },
+      { "name": "Atk/Res 1", "rarity": 4 },
+      { "name": "Atk/Res 2", "rarity": 5 },
       { "name": "Spur Spd 1", "rarity": 4 },
       { "name": "Drive Spd 1", "rarity": 4 },
       { "name": "Drive Spd 2", "rarity": 4 }

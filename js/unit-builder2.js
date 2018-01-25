@@ -633,7 +633,6 @@
         }        
       }
       inheritance.sort((a, b) => a.rarity - b.rarity);
-      console.log(inheritance);
 
       $(`.skill-info-icon[data-skill="${skillType}"]`)
         .toggleClass('d-none', skill.name === '-')
