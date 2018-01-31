@@ -1,7 +1,41 @@
 const BANNERS = [
   {
+    "date": "February 2018",
+    "banners": [
+      {
+        "name": "Hero Fest 3",
+        "latestHeroesDate": "",
+        "startDate": "Feb 02, 2018",
+        "focusHeroes": [ "Lyn (Brave Heroes)", "Ike (Brave Heroes)", "Sigurd", "Nephenee"],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [],
+        "rateRarity3": 34,
+        "rateRarity4": 58,
+        "rateRarity5": 3,
+        "rateRarityFocus": 5,
+        "pityRateRarity5": 0.25,
+        "pityRateRarityFocus": 0.25
+      }
+    ]
+  },
+  {
     "date": "January 2018",
     "banners": [
+      {
+        "name": "Legendary Heroes: Ike, Vanguard Legend",
+        "latestHeroesDate": "",
+        "startDate": "Jan 31, 2018",
+        "focusHeroes": [ "Gunnthrá", "Xander (Nohrian Summer)", "Azura (Performing Arts)", "Fjorm", "Lucina (Brave Heroes)", "Robin (F) (Ylissean Summer)",
+            "Ike (Legendary Heroes)", "Sanaki", "Siegbert", "Frederick (Ylissean Summer)", "Takumi", "Faye"],
+        "excludeFromRarity4": [],
+        "excludeFromRarity5": [ "Myrrh", "Eirika (Sacred Memories)", "L'Arachel" ],
+        "rateRarity3": 34,
+        "rateRarity4": 58,
+        "rateRarity5": 0,
+        "rateRarityFocus": 8,
+        "pityRateRarity5": 0,
+        "pityRateRarityFocus": 0.5
+      },
       {
         "name": "Sacred Memories",
         "latestHeroesDate": "",
@@ -10,7 +44,7 @@ const BANNERS = [
         "excludeFromRarity4": [],
         "excludeFromRarity5": [],
         "rateRarity3": 36,
-        "rateRarity4": 48,
+        "rateRarity4": 58,
         "rateRarity5": 3,
         "rateRarityFocus": 3,
         "pityRateRarity5": 0.25,

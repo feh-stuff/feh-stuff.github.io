@@ -2780,6 +2780,43 @@ const HEROES = [
     "colorType": "Green"
   },
   {
+    "name": "Ike (Legendary Heroes)",
+    "shortName": "Ike",
+    "title": "Vanguard Legend",
+    "colorType": "Red",
+    "weaponType": "Sword",
+    "moveType": "Infantry",
+    "releaseDate": "Jan 31, 2018",
+    "assets": {
+      "portrait": "img/heroes-portrait/75px-Icon_Portrait_Ike (Legendary Heroes).png",
+      "main": "img/heroes-main/Ike (Legendary Heroes).png"
+    },
+    "skills": [
+      { "name": "Iron Sword", "rarity": 5},
+      { "name": "Steel Sword", "rarity": 5},
+      { "name": "Silver Sword", "rarity": 5},
+      { "name": "Ragnell", "rarity": 5},
+      { "name": "Daylight", "rarity": 5},
+      { "name": "Sol", "rarity": 5},
+      { "name": "Radiant Aether", "rarity": 5},
+      { "name": "Warding Stance 1", "rarity": 5},
+      { "name": "Warding Stance 2", "rarity": 5},
+      { "name": "Warding Breath", "rarity": 5},
+      { "name": "Seal Def 1", "rarity": 5},
+      { "name": "Seal Atk/Def 1", "rarity": 5},
+      { "name": "Seal Atk/Def 2", "rarity": 5},
+      { "name": "Def Tactic 1", "rarity": 5},
+      { "name": "Def Tactic 2", "rarity": 5},
+      { "name": "Def Tactic 3", "rarity": 5}
+    ],
+    "stats": {
+      "level1": {"hp": 19,"atk": 10,"spd": 6,"def": 9,"res": 4},
+      "level40": {"hp": [37,41,44],"atk": [33,36,39],"spd": [27,30,33],"def": [32,35,38],"res": [18,21,24]}
+    },
+    "rarity5": true,
+    "limited": true
+  },
+  {
     "name": "Inigo (Performing Arts)",
     "title": "Indigo Dancer",
     "weaponType": "Tome",
