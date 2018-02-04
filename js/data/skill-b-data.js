@@ -1,0 +1,993 @@
+module.exports = [
+  {
+    name: "Axebreaker 1",
+    spCost: 50,
+    icon: "8-10",
+    exclude: [{colorType: "Blue"}],
+    effect: "If unit's HP ≥ 90% in combat against an axe user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Axebreaker 2",
+    spCost: 100,
+    icon: "8-11",
+    prev: ["Axebreaker 1"],
+    exclude: [{colorType: "Blue"}],
+    effect: "If unit's HP ≥ 70% in combat against an axe user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Axebreaker 3",
+    spCost: 200,
+    icon: "8-12",
+    prev: ["Axebreaker 2"],
+    exclude: [{colorType: "Blue"}],
+    effect: "If unit's HP ≥ 50% in combat against an axe user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "B Tomebreaker 1",
+    spCost: 50,
+    icon: "9-9",
+    exclude: [{colorType: "Red"}],
+    effect: "If unit's HP ≥ 90% in combat against a blue tome user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "B Tomebreaker 2",
+    spCost: 100,
+    icon: "9-10",
+    prev: ["B Tomebreaker 1"],
+    exclude: [{colorType: "Red"}],
+    effect: "If unit's HP ≥ 70% in combat against a blue tome user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "B Tomebreaker 3",
+    spCost: 200,
+    icon: "9-11",
+    prev: ["B Tomebreaker 2"],
+    exclude: [{colorType: "Red"}],
+    effect: "If unit's HP ≥ 50% in combat against a blue tome user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Beorc's Blessing",
+    spCost: 300,
+    icon: "26-4",
+    include: [{name: "Ike (Brave Heroes)"}],
+    effect: "If foe is cavalry or flier type, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat. (Skill cannot be inherited.)"
+  },
+  {
+    name: "Blaze Dance 1",
+    spCost: 50,
+    icon: "27-8",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Atk+2."
+  },
+  {
+    name: "Blaze Dance 2",
+    spCost: 100,
+    icon: "27-9",
+    prev: ["Blaze Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Atk+3."
+  },
+  {
+    name: "Blaze Dance 3",
+    spCost: 200,
+    icon: "27-10",
+    prev: ["Blaze Dance 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Atk+4."
+  },
+  {
+    name: "Bold Fighter 1",
+    spCost: 60,
+    icon: "34-0",
+    include: [{moveType: "Armored"}],
+    effect: "If unit's HP = 100% and unit initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)"
+  },
+  {
+    name: "Bold Fighter 2",
+    spCost: 120,
+    icon: "34-1",
+    prev: ["Bold Fighter 1"],
+    include: [{moveType: "Armored"}],
+    effect: "If unit's HP ≥ 50% and unit initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)"
+  },
+  {
+    name: "Bold Fighter 3",
+    spCost: 240,
+    icon: "34-2",
+    prev: ["Bold Fighter 2"],
+    include: [{moveType: "Armored"}],
+    effect: "If unit initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)"
+  },
+  {
+    name: "Bowbreaker 1",
+    spCost: 50,
+    icon:"9-0",
+    exclude: [{moveType:"Flying"}],
+    effect: "If unit's HP ≥ 90% in combat against a bow user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Bowbreaker 2",
+    spCost: 100,
+    icon:"9-1",
+    prev: ["Bowbreaker 1"],
+    exclude: [{moveType:"Flying"}],
+    effect: "If unit's HP ≥ 70% in combat against a bow user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Bowbreaker 3",
+    spCost: 200,
+    icon:"9-2",
+    prev: ["Bowbreaker 2"],
+    exclude: [{moveType:"Flying"}],
+    effect: "If unit's HP ≥ 50% in combat against a bow user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Brash Assault 1",
+    spCost: 50,
+    icon: "6-0",
+    effect: "Unit automatically makes a follow-up when at HP ≤ 30% and attacking a foe that can counter."
+  },
+  {
+    name: "Brash Assault 2",
+    spCost: 100,
+    icon: "6-1",
+    prev: ["Brash Assault 1"],
+    effect: "Unit automatically makes a follow-up when at HP ≤ 40% and attacking a foe that can counter."
+  },
+  {
+    name: "Brash Assault 3",
+    spCost: 200,
+    icon: "6-2",
+    prev: ["Brash Assault 2"],
+    effect: "Unit automatically makes a follow-up when at HP ≤ 50% and attacking a foe that can counter."
+  },
+  {
+    name: "Cancel Affinity 1",
+    spCost: 50,
+    icon: "22-3",
+    exclude: [{weaponType: "Tome"}, {weaponType:"Staff"}],
+    effect: "Any weapon triangle affinity granted by unit's skills is negated. Also negates any weapon triangle affinity granted by foe's skills."
+  },
+  {
+    name: "Cancel Affinity 2",
+    spCost: 100,
+    icon: "22-4",
+    prev: ["Cancel Affinity 1"],
+    exclude: [{weaponType: "Tome"}, {weaponType:"Staff"}],
+    effect: "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is negated."
+  },
+  {
+    name: "Cancel Affinity 3",
+    spCost: 200,
+    icon: "22-5",
+    prev: ["Cancel Affinity 2"],
+    exclude: [{weaponType: "Tome"}, {weaponType:"Staff"}],
+    effect: "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is reversed."
+  },
+  {
+    name: "Chilling Seal",
+    spCost: 300,
+    icon: "35-2",
+    include: [{name:"Gunnthrá"}],
+    effect: "At the start of each turn, if unit's HP ≥ 50%, inflicts Atk/Spd-6 on foe on the enemy team with the lowest Def through its next action. (Skill cannot be inherited.)"
+  },
+  {
+    name: "Crusader's Ward",
+    spCost: 300,
+    icon: "29-7",
+    include: [{name:"Sigurd"}],
+    effect: "If unit receives consecutive attack from a foe 2 spaces away, damage from second attack onward reduced by 80%. (Skill cannot be inherited.)"
+  },
+  {
+    name: "Daggerbreaker 1",
+    spCost: 50,
+    icon: "9-3",
+    effect: "If unit's HP ≥ 90% in combat against a dagger user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Daggerbreaker 2",
+    spCost: 100,
+    icon: "9-4",
+    prev: ["Dagger Breaker 1"],
+    effect: "If unit's HP ≥ 70% in combat against a dagger user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Daggerbreaker 3",
+    spCost: 200,
+    icon: "9-5",
+    prev: ["Dagger Breaker 2"],
+    effect: "If unit's HP ≥ 50% in combat against a dagger user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Dazzling Staff 1",
+    spCost: 60,
+    icon: "18-1",
+    include: [{weaponType: "Staff"}],
+    effect: "If unit has 100% HP at the start of combat, the enemy cannot counterattack."
+  },
+  {
+    name: "Dazzling Staff 2",
+    spCost: 120,
+    icon: "18-2",
+    prev: ["Dazzling Staff 1"],
+    include: [{weaponType: "Staff"}],
+    effect: "If unit has ≥ 50% HP at the start of combat, the enemy cannot counterattack."
+  },
+  {
+    name: "Dazzling Staff 3",
+    spCost: 240,
+    icon: "18-3",
+    prev: ["Dazzling Staff 2"],
+    include: [{weaponType: "Staff"}],
+    effect: "The enemy cannot counterattack."
+  },
+  {
+    name: "Desperation 1",
+    spCost: 50,
+    icon: "5-10",
+    effect: "If unit initiates combat with HP ≤ 25%, follow-up attacks occur immediately after unit's attack."
+  },
+  {
+    name: "Desperation 2",
+    spCost: 100,
+    icon: "5-11",
+    prev: ["Desperation 1"],
+    effect: "If unit initiates combat with HP ≤ 50%, follow-up attacks occur immediately after unit's attack."
+  },
+  {
+    name: "Desperation 3",
+    spCost: 200,
+    icon: "5-12",
+    prev: ["Desperation 2"],
+    effect: "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack."
+  },
+  {
+    name: "Drag Back",
+    spCost: 150,
+    icon: "4-7",
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    effect: "If unit initiates attack, the unit moves 1 space away after combat. Foe moves into unit's previous space."
+  },
+  {
+    name: "Earth Dance 1",
+    spCost: 50,
+    icon: "34-12",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Def+2."
+  },
+  {
+    name: "Earth Dance 2",
+    spCost: 100,
+    icon: "35-0",
+    prev: ["Earth Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Def+3."
+  },
+  {
+    name: "Earth Dance 3",
+    spCost: 200,
+    icon: "35-1",
+    prev: ["Earth Dance 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Def+4."
+  },
+  {
+    name: "Escape Route 1",
+    spCost: 60,
+    icon: "5-4",
+    effect: "Enables unit whose own HP is ≤ 30% to warp adjacent to any ally."
+  },
+  {
+    name: "Escape Route 2",
+    spCost: 120,
+    icon: "5-5",
+    prev: ["Escape Route 1"],
+    effect: "Enables unit whose own HP is ≤ 40% to warp adjacent to any ally."
+  },
+  {
+    name: "Escape Route 3",
+    spCost: 240,
+    icon: "5-6",
+    prev: ["Escape Route 2"],
+    effect: "Enables unit whose own HP is ≤ 50% to warp adjacent to any ally."
+  },
+  {
+    name: "Flier Formation 1",
+    spCost: 60,
+    icon: "27-0",
+    include: [{moveType: "Flying"}],
+    effect: "If unit has 100% HP, unit can move to a space adjacent to a flier ally within 2 spaces."
+  },
+  {
+    name: "Flier Formation 2",
+    spCost: 120,
+    icon: "27-1",
+    prev: ["Flier Formation 1"],
+    include: [{moveType: "Flying"}],
+    effect: "If unit has ≥ 50% HP, unit can move to a space adjacent to a flier ally within 2 spaces."
+  },
+  {
+    name: "Flier Formation 3",
+    spCost: 240,
+    icon: "27-2",
+    prev: ["Flier Formation 2"],
+    include: [{moveType: "Flying"}],
+    effect: "Unit can move to a space adjacent to a flier ally within 2 spaces."
+  },
+  {
+    name: "Follow-Up Ring",
+    spCost: 200,
+    icon: "29-8",
+    include: [{name:"Arden"}],
+    effect: "Unit makes a guaranteed follow-up attack when unit's HP ≥ 50% at start of combat. (Skill cannot be inherited.)"
+  },
+  {
+    name: "G Tomebreaker 1",
+    spCost: 50,
+    icon: "9-12",
+    exclude: [{colorType: "Blue"}],
+    effect: "If unit's HP ≥ 90% in combat against a green tome user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "G Tomebreaker 2",
+    spCost: 100,
+    icon: "10-0",
+    prev: ["G Tomebreaker 1"],
+    exclude: [{colorType: "Blue"}],
+    effect: "If unit's HP ≥ 70% in combat against a green tome user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "G Tomebreaker 3",
+    spCost: 200,
+    icon: "10-1",
+    prev: ["G Tomebreaker 2"],
+    exclude: [{colorType: "Blue"}],
+    effect: "If unit's HP ≥ 50% in combat against a green tome user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Gale Dance 1",
+    spCost: 50,
+    icon: "27-11",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Spd+2."
+  },
+  {
+    name: "Gale Dance 2",
+    spCost: 100,
+    icon: "27-12",
+    prev: ["Gale Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Spd+3."
+  },
+  {
+    name: "Gale Dance 3",
+    spCost: 200,
+    icon: "28-0",
+    prev: ["Gale Dance 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Spd+4."
+  },
+  {
+    name: "Geyser Dance 1",
+    spCost: 120,
+    icon: "28-4",
+    prev: ["Torrent Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Def/Res+3."
+  },
+  {
+    name: "Geyser Dance 2",
+    spCost: 240,
+    icon: "28-5",
+    prev: ["Geyser Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Def/Res+4."
+  },
+  {
+    name: "Guard 1",
+    spCost: 50,
+    icon: "16-4",
+    effect: "If unit's HP is 100% at start of combat, enemy is inflicted with Special cooldown charge-1. (If using similar skill, only highest value applied.)"
+  },
+  {
+    name: "Guard 2",
+    spCost: 100,
+    icon: "16-5",
+    prev: ["Guard 1"],
+    effect: "If unit's HP is ≥ 90% at start of combat, enemy is inflicted with Special cooldown charge-1. (If using similar skill, only highest value applied.)"
+  },
+  {
+    name: "Guard 3",
+    spCost: 200,
+    icon: "16-6",
+    prev: ["Guard 2"],
+    effect: "If unit's HP is ≥ 80% at start of combat, enemy is inflicted with Special cooldown charge-1. (If using similar skill, only highest value applied.)"
+  },
+  {
+    name: "Hit and Run",
+    spCost: 150,
+    icon: "15-4",
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    effect: "If unit initiates attack, unit retreats 1 space after battle."
+  },
+  {
+    name: "Knock Back",
+    spCost: 150,
+    icon: "4-5",
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    effect: "If unit initiates attack, foe is moved 1 space away after combat."
+  },
+  {
+    name: "Lancebreaker 1",
+    spCost: 50,
+    icon: "8-7",
+    exclude: [{colorType: "Red"}],
+    effect: "If unit's HP ≥ 90% in combat against a lance user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Lancebreaker 2",
+    spCost: 100,
+    icon: "8-8",
+    prev: ["Lancebreaker 1"],
+    exclude: [{colorType: "Red"}],
+    effect: "If unit's HP ≥ 70% in combat against a lance user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Lancebreaker 3",
+    spCost: 200,
+    icon: "8-9",
+    prev: ["Lancebreaker 2"],
+    exclude: [{colorType: "Red"}],
+    effect: "If unit's HP ≥ 50% in combat against a lance user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Live for Bounty",
+    spCost: 100,
+    icon: "14-10",
+    effect: "If unit survives, get 1.5x shards/crystals from a Training Tower map. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
+    name: "Live for Honor",
+    spCost: 100,
+    icon: "14-9",
+    effect: "If unit survives, get 1.5x normal badges from a Training Tower map. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
+    name: "Live to Serve 1",
+    spCost: 40,
+    icon: "7-2",
+    include: [{weaponType: "Staff"}],
+    effect: "When healing allies with a staff, unit also recovers 50% of the HP restored."
+  },
+  {
+    name: "Live to Serve 2",
+    spCost: 80,
+    icon: "7-3",
+    prev: ["Live to Serve 1"],
+    include: [{weaponType: "Staff"}],
+    effect: "When healing allies with a staff, unit also recovers 75% of the HP restored."
+  },
+  {
+    name: "Live to Serve 3",
+    spCost: 160,
+    icon: "7-4",
+    prev: ["Live to Serve 2"],
+    include: [{weaponType: "Staff"}],
+    effect: "When healing allies with a staff, unit also recovers the same amount."
+  },
+  {
+    name: "Lunge",
+    spCost: 150,
+    icon: "4-6",
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    effect: "If unit initiates attack, after combat, unit and targeted foe swap places."
+  },
+  {
+    name: "Obstruct 1",
+    spCost: 50,
+    icon: "4-11",
+    effect: "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 90%. (No effect on foes with a Pass skill.)"
+  },
+  {
+    name: "Obstruct 2",
+    spCost: 100,
+    icon: "4-12",
+    prev: ["Obstruct 1"],
+    effect: "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 70%. (No effect on foes with a Pass skill.)"
+  },
+  {
+    name: "Obstruct 3",
+    spCost: 200,
+    icon: "5-0",
+    prev: ["Obstruct 2"],
+    effect: "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 50%. (No effect on foes with a Pass skill.)"
+  },
+  {
+    name: "Pass 1",
+    spCost: 50,
+    icon: "4-8",
+    effect: "Units can pass through foes if its own HP ≥ 75%."
+  },
+  {
+    name: "Pass 2",
+    spCost: 100,
+    icon: "4-9",
+    prev: ["Pass 1"],
+    effect: "Units can pass through foes if its own HP ≥ 50%."
+  },
+  {
+    name: "Pass 3",
+    spCost: 200,
+    icon: "4-10",
+    prev: ["Pass 2"],
+    effect: "Units can pass through foes if its own HP ≥ 25%."
+  },
+  {
+    name: "Poison Strike 1",
+    spCost: 60,
+    icon: "6-9",
+    exclude: [{weaponType: "Staff"}],
+    effect: "Inflicts 4 damage to foe after any combat this unit initiates."
+  },
+  {
+    name: "Poison Strike 2",
+    spCost: 120,
+    icon: "6-10",
+    prev: ["Poison Strike 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "Inflicts 7 damage to foe after any combat this unit initiates."
+  },
+  {
+    name: "Poison Strike 3",
+    spCost: 240,
+    icon: "6-11",
+    prev: ["Poison Strike 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "Inflicts 10 damage to foe after any combat this unit initiates."
+  },
+  {
+    name: "Quick Riposte 1",
+    spCost: 60,
+    icon: "6-3",
+    effect: "Unit automatically makes a follow-up attack if attacked at HP ≥ 90%."
+  },
+  {
+    name: "Quick Riposte 2",
+    spCost: 120,
+    icon: "6-4",
+    prev: ["Quick Riposte 1"],
+    effect: "Unit automatically makes a follow-up attack if attacked at HP ≥ 80%."
+  },
+  {
+    name: "Quick Riposte 3",
+    spCost: 240,
+    icon: "6-5",
+    prev: ["Quick Riposte 2"],
+    effect: "Unit automatically makes a follow-up attack if attacked at HP ≥ 70%."
+  },
+  {
+    name: "R Tomebreaker 1",
+    spCost: 50,
+    icon: "9-6",
+    exclude: [{colorType: "Green"}],
+    effect: "If unit's HP ≥ 90% in combat against a red tome user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "R Tomebreaker 2",
+    spCost: 100,
+    icon: "9-7",
+    prev: ["R Tomebreaker 1"],
+    exclude: [{colorType: "Green"}],
+    effect: "If unit's HP ≥ 70% in combat against a red tome user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "R Tomebreaker 3",
+    spCost: 200,
+    icon: "9-8",
+    prev: ["R Tomebreaker 2"],
+    exclude: [{colorType: "Green"}],
+    effect: "If unit's HP ≥ 50% in combat against a red tome user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Recover Ring",
+    spCost: 200,
+    icon: "29-9",
+    include: [{name: "Arvis"}],
+    effect: "Restores 10 HP at the start of each turn. (Skill cannot be inherited.)"
+  },
+  {
+    name: "Renewal 1",
+    spCost: 60,
+    icon: "6-12",
+    effect: "At the start of every fourth turn, restores 10 HP."
+  },
+  {
+    name: "Renewal 2",
+    spCost: 120,
+    icon: "7-0",
+    prev: ["Renewal 1"],
+    effect: "At the start of every third turn, restores 10 HP."
+  },
+  {
+    name: "Renewal 3",
+    spCost: 240,
+    icon: "7-1",
+    prev: ["Renewal 2"],
+    effect: "At the start of every second turn, restores 10 HP."
+  },
+  {
+    name: "Sacae's Blessing",
+    spCost: 300,
+    icon: "26-5",
+    include: [{name:"Lyn (Brave Heroes)"}],
+    effect: "If foe has sword, lance, or axe, foe cannot counterattack. (Skill cannot be inherited.)"
+  },
+  {
+    name: "Seal Atk 1",
+    spCost: 40,
+    icon: "7-5",
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Atk-3 through its next action."
+  },
+  {
+    name: "Seal Atk 2",
+    spCost: 80,
+    icon: "7-6",
+    prev: ["Seal Atk 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Atk-5 through its next action."
+  },
+  {
+    name: "Seal Atk 3",
+    spCost: 160,
+    icon: "7-7",
+    prev: ["Seal Atk 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Atk-7 through its next action."
+  },
+  {
+    name: "Seal Atk/Def 1",
+    spCost: 100,
+    icon: "25-3",
+    prev: ["Seal Atk 1", "Seal Def 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Atk/Def-3 on foe through its next action."
+  },
+  {
+    name: "Seal Atk/Def 2",
+    spCost: 200,
+    icon: "25-4",
+    prev: ["Seal Atk/Def 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Atk/Def-5 on foe through its next action."
+  },
+  {
+    name: "Seal Atk/Spd 1",
+    spCost: 100,
+    icon: "20-0",
+    prev: ["Seal Atk 1", "Seal Spd 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Atk/Spd-3 on foe through its next action."
+  },
+  {
+    name: "Seal Atk/Spd 2",
+    spCost: 200,
+    icon: "20-1",
+    prev: ["Seal Atk/Spd 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Atk/Spd-5 on foe through its next action."
+  },
+  {
+    name: "Seal Def 1",
+    spCost: 40,
+    icon: "7-11",
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Def-3 through its next action."
+  },
+  {
+    name: "Seal Def 2",
+    spCost: 80,
+    icon: "7-12",
+    prev: ["Seal Def 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Def-5 through its next action."
+  },
+  {
+    name: "Seal Def 3",
+    spCost: 160,
+    icon: "8-0",
+    prev: ["Seal Def 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Def-7 through its next action."
+  },
+  {
+    name: "Seal Res 1",
+    spCost: 40,
+    icon: "8-1",
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Res-3 through its next action."
+  },
+  {
+    name: "Seal Res 2",
+    spCost: 80,
+    icon: "8-2",
+    prev: ["Seal Res 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Res-5 through its next action."
+  },
+  {
+    name: "Seal Res 3",
+    spCost: 160,
+    icon: "8-3",
+    prev: ["Seal Res 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Res-7 through its next action."
+  },
+  {
+    name: "Seal Spd 1",
+    spCost: 40,
+    icon: "7-8",
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Spd-3 through its next action."
+  },
+  {
+    name: "Seal Spd 2",
+    spCost: 80,
+    icon: "7-9",
+    prev: ["Seal Spd 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Spd-5 through its next action."
+  },
+  {
+    name: "Seal Spd 3",
+    spCost: 160,
+    icon: "7-10",
+    prev: ["Seal Spd 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Spd-7 through its next action."
+  },
+  {
+    name: "Shield Pulse 1",
+    spCost: 60,
+    icon: "23-5",
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
+    effect: "If unit's Special triggers based on a foe's attack, Special cooldown count-1 at start of turn 1."
+  },
+  {
+    name: "Shield Pulse 2",
+    spCost: 120,
+    icon: "23-6",
+    prev: ["Shield Pulse 1"],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
+    effect: "If unit's Special triggers based on a foe's attack, Special cooldown count-1 at start of turn 1. Unit takes 5 less damage when Special triggers."
+  },
+  {
+    name: "Shield Pulse 3",
+    spCost: 240,
+    icon: "23-7",
+    prev: ["Shield Pulse 2"],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
+    effect: "If unit's Special triggers based on a foe's attack, Special cooldown count-2 at start of turn 1. Unit takes 5 less damage when Special triggers."
+  },
+  {
+    name: "Swordbreaker 1",
+    spCost: 50,
+    icon: "8-4",
+    exclude: [{colorType: "Green"}],
+    effect: "If unit's HP ≥ 90% in combat against a sword user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Swordbreaker 2",
+    spCost: 100,
+    icon: "8-5",
+    prev: ["Swordbreaker 1"],
+    exclude: [{colorType: "Green"}],
+    effect: "If unit's HP ≥ 70% in combat against a sword user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Swordbreaker 3",
+    spCost: 200,
+    icon: "8-6",
+    prev: ["Swordbreaker 2"],
+    exclude: [{colorType: "Green"}],
+    effect: "If unit's HP ≥ 50% in combat against a sword user, unit makes a follow-up attack and foe cannot."
+  },
+  {
+    name: "Torrent Dance 1",
+    spCost: 50,
+    icon: "28-1",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Res+3."
+  },
+  {
+    name: "Vantage 1",
+    spCost: 50,
+    icon: "5-7",
+    effect: "Unit counterattacks first when attacked at HP ≤ 25%."
+  },
+  {
+    name: "Vantage 2",
+    spCost: 100,
+    icon: "5-8",
+    prev: ["Vantage 1"],
+    effect: "Unit counterattacks first when attacked at HP ≤ 50%."
+  },
+  {
+    name: "Vantage 3",
+    spCost: 200,
+    icon: "5-9",
+    prev: ["Vantage 2"],
+    effect: "Unit counterattacks first when attacked at HP ≤ 75%."
+  },
+  {
+    name: "Vengeful Fighter 1",
+    spCost: 60,
+    icon: "34-3",
+    include: [{moveType: "Armored"}],
+    effect: "If unit's HP ≥ 90% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)"
+  },
+  {
+    name: "Vengeful Fighter 2",
+    spCost: 120,
+    icon: "34-4",
+    prev: ["Vengeful Fighter 1"],
+    include: [{moveType: "Armored"}],
+    effect: "If unit's HP ≥ 70% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)"
+  },
+  {
+    name: "Vengeful Fighter 3",
+    spCost: 240,
+    icon: "34-5",
+    prev: ["Vengeful Fighter 2"],
+    include: [{moveType: "Armored"}],
+    effect: "If unit's HP ≥ 50% and foe initiates combat, unit makes a guaranteed follow-up attack. Grants Special cooldown charge +1 per attack. (Does not stack.)"
+  },
+  {
+    name: "Warp Powder",
+    spCost: 300,
+    icon: "35-5",
+    include: [{name:"Zelgius"}],
+    effect: "If unit's HP ≥ 80%, unit can move adjacent to any ally within 2 spaces. (Skill cannot be inherited.)"
+  },
+  {
+    name: "Wary Fighter 1",
+    spCost: 60,
+    icon: "6-6",
+    include: [{moveType: "Armored"}],
+    effect: "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 90%."
+  },
+  {
+    name: "Wary Fighter 2",
+    spCost: 120,
+    icon: "6-7",
+    prev: ["Wary Fighter 1"],
+    include: [{moveType: "Armored"}],
+    effect: "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 70%."
+  },
+  {
+    name: "Wary Fighter 3",
+    spCost: 240,
+    icon: "6-8",
+    prev: ["Wary Fighter 2"],
+    include: [{moveType: "Armored"}],
+    effect: "Prevents follow-up attacks in combat from unit and foes if unit's HP ≥ 50%."
+  },
+  {
+    name: "Watersweep 1",
+    spCost: 60,
+    icon: "16-1",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack."
+  },
+  {
+    name: "Watersweep 2",
+    spCost: 120,
+    icon: "16-2",
+    prev: ["Watersweep 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack."
+  },
+  {
+    name: "Watersweep 3",
+    spCost: 240,
+    icon: "16-3",
+    prev: ["Watersweep 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If unit initiates attack, no follow-up occurs. Against foe with magic, staff or dragonstone, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack."
+  },
+  {
+    name: "Windsweep 1",
+    spCost: 60,
+    icon: "15-5",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 5, foe can’t counterattack."
+  },
+  {
+    name: "Windsweep 2",
+    spCost: 120,
+    icon: "15-6",
+    prev: ["Windsweep 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 3, foe can’t counterattack."
+  },
+  {
+    name: "Windsweep 3",
+    spCost: 240,
+    icon: "15-7",
+    prev: ["Windsweep 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If unit initiates attack, no follow-up occurs. Against foe with sword, lance, axe, bow, or dagger, if unit’s Spd - foe’s Spd ≥ 1, foe can’t counterattack."
+  },
+  {
+    name: "Wings of Mercy 1",
+    spCost: 60,
+    icon: "5-1",
+    effect: "Enables unit to warp adjacent to any ally with HP ≤ 30%."
+  },
+  {
+    name: "Wings of Mercy 2",
+    spCost: 120,
+    icon: "5-2",
+    prev: ["Wings of Mercy 1"],
+    effect: "Enables unit to warp adjacent to any ally with HP ≤ 40%."
+  },
+  {
+    name: "Wings of Mercy 3",
+    spCost: 240,
+    icon: "5-3",
+    prev: ["Wings of Mercy 2"],
+    effect: "Enables unit to warp adjacent to any ally with HP ≤ 50%."
+  },
+  {
+    name: "Wrath 1",
+    spCost: 60,
+    icon: "27-3",
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
+    effect: "If unit's HP ≤ 25%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special."
+  },
+  {
+    name: "Wrath 2",
+    spCost: 120,
+    icon: "27-4",
+    prev: ["Wrath 1"],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
+    effect: "If unit's HP ≤ 50%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special."
+  },
+  {
+    name: "Wrath 3",
+    spCost: 240,
+    icon: "27-5",
+    prev: ["Wrath 2"],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
+    effect: "If unit's HP ≤ 75%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special."
+  },
+  {
+    name: "Wrathful Staff 1",
+    spCost: 60,
+    icon: "17-3",
+    include: [{weaponType: "Staff"}],
+    effect: "If unit has 100% HP at the start of combat, damage from their staff will be calculated the same as other weapons."
+  },
+  {
+    name: "Wrathful Staff 2",
+    spCost: 120,
+    icon: "17-4",
+    prev: ["Wrathfull Staff 1"],
+    include: [{weaponType: "Staff"}],
+    effect: "If unit has ≥ 50% HP at the start of combat, damage from their staff will be calculated the same as other weapons."
+  },
+  {
+    name: "Wrathful Staff 3",
+    spCost: 240,
+    icon: "17-5",
+    prev: ["Wrathfull Staff 2"],
+    include: [{weaponType: "Staff"}],
+    effect: "Damage from unit's staff will be calculated the same as other weapons."
+  }
+];
