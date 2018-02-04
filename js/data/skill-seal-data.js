@@ -337,6 +337,96 @@ module.exports = [
     effect: "Grants +5 to max HP."
   },
   {
+    name: "Initiate Seal Atk 1",
+    icon: "0-7",
+    stats: {atk: 1},
+    effect: "Grants Atk+1."
+  },
+  {
+    name: "Initiate Seal Atk 2",
+    icon: "0-8",
+    stats: {atk: 2},
+    effect: "Grants Atk+2."
+  },
+  {
+    name: "Initiate Seal Atk 3",
+    icon: "0-9",
+    stats: {atk: 3},
+    effect: "Grants Atk+3."
+  },
+  {
+    name: "Initiate Seal Def 1",
+    icon: "1-0",
+    stats: {def: 1},
+    effect: "Grants Def+1."
+  },
+  {
+    name: "Initiate Seal Def 2",
+    icon: "1-1",
+    stats: {def: 2},
+    effect: "Grants Def+2."
+  },
+  {
+    name: "Initiate Seal Def 3",
+    icon: "1-2",
+    stats: {def: 3},
+    effect: "Grants Def+3."
+  },
+  {
+    name: "Initiate Seal HP 1",
+    icon: "0-4",
+    stats: {"hp": 3},
+    effect: "Grants +3 to max HP."
+  },
+  {
+    name: "Initiate Seal HP 2",
+    icon: "0-5",
+    stats: {"hp": 4},
+    effect: "Grants +4 to max HP."
+  },
+  {
+    name: "Initiate Seal HP 3",
+    icon: "0-6",
+    stats: {"hp": 5},
+    effect: "Grants +5 to max HP."
+  },
+  {
+    name: "Initiate Seal Res 1",
+    icon: "1-3",
+    stats: {res: 1},
+    effect: "Grants Res+1."
+  },
+  {
+    name: "Initiate Seal Res 2",
+    icon: "1-4",
+    stats: {res: 2},
+    effect: "Grants Res+2."
+  },
+  {
+    name: "Initiate Seal Res 3",
+    icon: "1-5",
+    stats: {res: 3},
+    effect: "Grants Res+3."
+  },
+  {
+    name: "Initiate Seal Spd 1",
+    icon: "0-10",
+    stats: {spd: 1},
+    effect: "Grants Spd+1."
+  },
+  {
+    name: "Initiate Seal Spd 2",
+    icon: "0-11",
+    stats: {spd: 2},
+    effect: "Grants Spd+2."
+  },
+  {
+    name: "Initiate Seal Spd 3",
+    icon: "0-12",
+    stats: {spd: 3},
+    effect: "Grants Spd+3."
+  },
+  {
     name: "Iote's Shield",
     icon: "4-4",
     include: [{moveType:"Flying"}],
