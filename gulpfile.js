@@ -16,7 +16,7 @@ gulp.task('summon-sim', () => {
 gulp.task('unit-builder', () => {
   gulp.src('./js/unit-builder/main.js')
       .pipe(browserify())
-      // .pipe(uglify())
+      .pipe(uglify())
       .pipe(rename('app.js'))
       .pipe(gulp.dest('./js/unit-builder'));
 });

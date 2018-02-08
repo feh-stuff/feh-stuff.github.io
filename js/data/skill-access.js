@@ -56,6 +56,8 @@ exports.getSeals = function(hero, nameExclusive = true) {
 
 exports.getRefinery = function(weapon, heroName) {
   if (refine[weapon]) {
+    console.log(heroName);
+    console.log(refine[weapon]);
     return refine[weapon].filter(skill => {
       if (skill.exclusive && skill.exclusive.length) {
         return skill.exclusive.includes(heroName);
