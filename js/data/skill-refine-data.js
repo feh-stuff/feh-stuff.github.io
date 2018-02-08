@@ -2297,7 +2297,7 @@ module.exports = {
       name: "Life and Death",
       icon: "36-4",
       cost: 1,
-      stats: {hp: 3},
+      stats: {hp: 3, atk: 5, spd: 5, def: -5, res: -5},
       effect: "Accelerates Special trigger (cooldown count-1). Grants Atk/Spd+5. Inflicts Def/Res-5."
     },
     {
