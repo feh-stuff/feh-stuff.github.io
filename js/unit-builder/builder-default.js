@@ -143,8 +143,9 @@ function onSkillSelect(event) {
   let skill = $(event.currentTarget).data('val');
 
   if (skillType === 'weapon') {
-    if (skills.getRefinery(skill.name)) {
-      $(elements.SELECT_REFINE).selectable('data', [values.CONST.EMPTY_SKILL].concat(skills.getRefinery(skill.name)));
+    let refinery = skills.getRefinery(skill.name, fehUnit.data.nam);
+    if (refinery) {
+      $(elements.SELECT_REFINE).selectable('data', [values.CONST.EMPTY_SKILL].concat(refinery));
     } else {
       $(elements.SELECT_REFINE).selectable('clear').selectable('disable');
     }

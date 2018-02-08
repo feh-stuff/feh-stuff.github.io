@@ -201,6 +201,29 @@ module.exports = [
     effect: "If unit survives, all bow users on team get 2x EXP. (If similar skill effects also used, only highest multiplier applies.)"
   },
   {
+    name: "Bow Valor 1",
+    spCost: 30,
+    icon: "37-3",
+    include: [{weaponType: "Bow"}],
+    effect: "If unit survives and uses an bow, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
+    name: "Bow Valor 2",
+    spCost: 60,
+    icon: "37-4",
+    prev: ["Bow Valor 1"],
+    include: [{weaponType: "Bow"}],
+    effect: "If unit survives, all bow users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
+    name: "Bow Valor 3",
+    spCost: 120,
+    icon: "37-5",
+    prev: ["Bow Valor 2"],
+    include: [{weaponType: "Bow"}],
+    effect: "If unit survives, all bow users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
     name: "Breath of Life 1",
     spCost: 50,
     icon: "10-2",
@@ -880,7 +903,7 @@ module.exports = [
     name: "Spur Spd/Def 1",
     spCost: 120,
     icon: "27-6",
-    prev: ["Spur Spd 1", "Spur Def 1"],
+    prev: ["Spur Def 1", "Spur Spd 1"],
     effect: "Grants adjacent allies Spd/Def +2 during combat"
   },
   {

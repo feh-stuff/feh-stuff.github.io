@@ -1,7 +1,33 @@
 module.exports = [
   {
-    date: "January 2018",
+    date: "February 2018",
     banners: [
+      {
+        name: "Love Abounds",
+        startDate: "Feb 09, 2018",
+        focusHeroes: [ "Lyn (Love Abounds)", "Hector (Love Abounds)", "Roy (Love Abounds)", "Lilina (Love Abounds)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateRarity3: 36,
+        rateRarity4: 58,
+        rateRarity5: 3,
+        rateRarityFocus: 3,
+        pityRateRarity5: 0.25,
+        pityRateRarityFocus: 0.25
+      },
+      {
+        name: "Movement Skills",
+        startDate: "Feb 07, 2018",
+        focusHeroes: [ "Tana", "Elincia", "Amelia" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [ "Myrrh", "Eirika (Sacred Memories)", "L'Arachel" ],
+        rateRarity3: 36,
+        rateRarity4: 58,
+        rateRarity5: 3,
+        rateRarityFocus: 3,
+        pityRateRarity5: 0.25,
+        pityRateRarityFocus: 0.25
+      },
       {
         name: "Hero Fest 3",
         startDate: "Feb 02, 2018",

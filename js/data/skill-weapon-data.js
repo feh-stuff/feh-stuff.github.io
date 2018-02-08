@@ -88,6 +88,7 @@ module.exports = [
     range: 1,
     weaponType: "Sword",
     colorType: "Red",
+    prev: ["Armorsmasher"],
     effect: "Effective against armored foes."
   },
   {
@@ -155,6 +156,17 @@ module.exports = [
     effect: "Grants Spd+3. If unit's Spd - foe's Spd ≥ 1, gain Special cooldown charge +1 per attack. (If similar skill also used, only highest value applied.)"
   },
   {
+    name: "Basilikos",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    exclusive: ["Raven"],
+    // prev: ["Brave Axe"],
+    effect: "Accelerates Special trigger (cooldown count -1)."
+  },
+  {
     name: "Berkut's Lance",
     spCost: 200,
     damage: 10,
@@ -173,6 +185,17 @@ module.exports = [
     colorType: "Blue",
     prev: ["Berkut's Lance"],
     effect: "Grants Res+4 when the unit is under attack."
+  },
+  {
+    name: "Berserk Armads",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Silver Axe"],
+    exclusive: ["Hector (Love Abounds)"],
+    effect: "Accelerates Special trigger (cooldown count-1). If unit's HP ≤ 75% and Special triggers by attacking, Special cooldown count-1 at start of turn. Deals +10 damage when Special triggers."
   },
   {
     name: "Binding Blade",
@@ -328,6 +351,26 @@ module.exports = [
     colorType: "Blue",
     prev: ["Blue Egg"],
     effect: "If unit initiates attack, unit recovers 4 HP after the battle."
+  },
+  {
+    name: "Blue Gift",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Ellight"],
+    effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
+    name: "Blue Gift+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Blue Gift"],
+    effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
   },
   {
     name: "Bolganone",
@@ -537,6 +580,26 @@ module.exports = [
     colorType: "Blue",
     prev: ["Carrot Lance"],
     effect: "If unit initiates attack, unit recovers 4 HP after the battle."
+  },
+  {
+    name: "Casa Blanca",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Steel Lance"],
+    effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
+    name: "Casa Blanca+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Casa Blanca"],
+    effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
   },
   {
     name: "Clarisse's Bow",
@@ -913,6 +976,17 @@ module.exports = [
     effect: "After combat, inflicts Atk-7 on target and foes within 2 spaces through their next actions."
   },
   {
+    name: "Felicia's Plate",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Dagger",
+    colorType: "Neutral",
+    // prev: ["Silver Dagger"],
+    exclusive: ["Felicia"],
+    effect: "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res."
+  },
+  {
     name: "Fenrir",
     spCost: 200,
     damage: 9,
@@ -1133,6 +1207,26 @@ module.exports = [
     effect: "Enables counterattack regardless of distance if this unit is attacked.",
   },
   {
+    name: "Gratia",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Bow",
+    colorType: "Neutral",
+    prev: ["Steel Bow"],
+    effect: "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
+    name: "Gratia+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Bow",
+    colorType: "Neutral",
+    prev: ["Gratia"],
+    effect: "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
     name: "Gravity",
     spCost: 150,
     damage: 6,
@@ -1180,6 +1274,26 @@ module.exports = [
     colorType: "Green",
     prev: ["Green Egg"],
     effect: "If unit initiates attack, unit recovers 4 HP after the battle."
+  },
+  {
+    name: "Green Gift",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    prev: ["Elwind"],
+    effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
+    name: "Green Gift+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    prev: ["Green Gift"],
+    effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
   },
   {
     name: "Grimoire",
@@ -1421,6 +1535,17 @@ module.exports = [
     colorType: "Green",
     prev: ["Hibiscus Tome"],
     effect: "Grants allies within 2 spaces Atk/Spd+1 during combat."
+  },
+  {
+    name: "Hinoka's Spear",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    exclusive: ["Hinoka"],
+    // prev: ["Brave Lance"],
+    effect: "Grants Atk/Spd +4 during combat if infantry or flying ally is within 2 spaces of unit."
   },
   {
     name: "Iron Axe",
@@ -2728,7 +2853,7 @@ module.exports = [
     range: 1,
     weaponType: "Lance",
     colorType: "Blue",
-    prev: ["Tannenboom"],
+    prev: ["Tannenboom!"],
     effect: "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat."
   },
   {
@@ -2890,6 +3015,17 @@ module.exports = [
     effect: "-"
   },
   {
+    name: "Wing Sword",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    // prev: ["Armorslayer"],
+    exclusive: ["Caeda"],
+    effect: "Effective against armored and cavalry foes.",
+  },
+  {
     name: "Wo Dao",
     spCost: 200,
     damage: 9,
@@ -2937,7 +3073,7 @@ module.exports = [
     range: 1,
     weaponType: "Sword",
     colorType: "Red",
-    prev: ["Zanbato+"],
+    prev: ["Zanbato"],
     effect: "Effective against cavalry units."
   }
 ];

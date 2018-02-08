@@ -24,6 +24,23 @@ module.exports = [
     effect: "Grants Def+6 during combat if unit initiates the attack."
   },
   {
+    name: "Atk/Def 1",
+    spCost: 80,
+    icon: "14-5",
+    stats: {atk: 1, def: 1},
+    prev: ["Defense +1", "Attack +1"],
+    effect: "Grants Atk/Def+1."
+  },
+  {
+    name: "Atk/Def 2",
+    spCost: 160,
+    icon: "14-6",
+    stats: {atk: 2, def: 2},
+    prev: ["Atk/Def 1"],
+    last: true,
+    effect: "Grants Atk/Def+2."
+  },
+  {
     name: "Atk/Def Bond 1",
     spCost: 60,
     icon: "32-10",
@@ -43,6 +60,23 @@ module.exports = [
     prev: ["Atk/Def Bond 2"],
     last: true,
     effect: "Grants Atk/Def+5 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Atk/Res 1",
+    spCost: 80,
+    icon: "17-9",
+    stats: {atk: 1, res: 1},
+    prev: ["Attack +1", "Resistance +1"],
+    effect: "Grants Atk/Res+1."
+  },
+  {
+    name: "Atk/Res 2",
+    spCost: 160,
+    icon: "17-10",
+    stats: {atk: 1, res: 1},
+    prev: ["Atk/Res 1"],
+    last: true,
+    effect: "Grants Atk/Res+2."
   },
   {
     name: "Atk/Res Bond 1",
@@ -70,7 +104,7 @@ module.exports = [
     spCost: 80,
     icon: "26-11",
     stats: {atk: 1, spd: 1},
-    prev: ["Attack +1", "Speed +1"],
+    prev: ["Speed +1", "Attack +1"],
     effect: "Grants Atk/Spd+1."
   },
   {
@@ -81,6 +115,27 @@ module.exports = [
     prev: ["Atk/Spd 1"],
     last: true,
     effect: "Grants Atk/Spd+2."
+  },
+  {
+    name: "Atk/Spd Bond 1",
+    spCost: 60,
+    icon: "37-0",
+    effect: "Grants Atk/Spd+3 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Atk/Spd Bond 2",
+    spCost: 120,
+    icon: "37-1",
+    prev: ["Atk/Spd Bond 1"],
+    effect: "Grants Atk/Spd+4 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Atk/Spd Bond 3",
+    spCost: 240,
+    icon: "37-2",
+    prev: ["Atk/Spd Bond 2"],
+    last: true,
+    effect: "Grants Atk/Spd+5 to this unit during combat if unit is adjacent to an ally."
   },
   {
     name: "Attack +1",
@@ -105,40 +160,6 @@ module.exports = [
     prev: ["Attack +2"],
     last: true,
     effect: "Grants Atk+3."
-  },
-  {
-    name: "Atk/Def 1",
-    spCost: 80,
-    icon: "14-5",
-    stats: {atk: 1, def: 1},
-    prev: ["Attack +1", "Defense +1"],
-    effect: "Grants Atk/Def+1."
-  },
-  {
-    name: "Atk/Def 2",
-    spCost: 160,
-    icon: "14-6",
-    stats: {atk: 2, def: 2},
-    prev: ["Atk/Def 1"],
-    last: true,
-    effect: "Grants Atk/Def+2."
-  },
-  {
-    name: "Atk/Res 1",
-    spCost: 80,
-    icon: "17-9",
-    stats: {atk: 1, res: 1},
-    prev: ["Attack +1", "Resistance +1"],
-    effect: "Grants Atk/Res+1."
-  },
-  {
-    name: "Atk/Res 2",
-    spCost: 160,
-    icon: "17-10",
-    stats: {atk: 1, res: 1},
-    prev: ["Atk/Res 1"],
-    last: true,
-    effect: "Grants Atk/Res+2."
   },
   {
     name: "Bracing Blow 1",
@@ -614,6 +635,23 @@ module.exports = [
     effect: "Grants +5 to max HP."
   },
   {
+    name: "HP/Atk 1",
+    spCost: 100,
+    icon: "36-11",
+    stats: {hp: 3, def: 1},
+    prev: ["Attack +1", "HP +3"],
+    effect: "Grants HP+3, Atk+1."
+  },
+  {
+    name: "HP/Atk 2",
+    spCost: 200,
+    icon: "36-12",
+    stats: {hp: 4, def: 2},
+    prev: ["HP/Atk 1"],
+    last: true,
+    effect: "Grants HP+4, Atk+2."
+  },
+  {
     name: "HP/Def 1",
     spCost: 100,
     icon: "19-8",
@@ -635,7 +673,7 @@ module.exports = [
     spCost: 100,
     icon: "31-1",
     stats: {hp: 3, res: 1},
-    prev: ["HP +3", "Resistance +1"],
+    prev: ["Resistance +1", "HP +3"],
     effect: "Grants HP+3, Res+1."
   },
   {
@@ -998,7 +1036,7 @@ module.exports = [
     last: true,
     effect: "Grants Res+6 during combat if unit initiates attack."
   },
-  { 
+  {
     name: "Warding Breath",
     spCost: 240,
     icon: "36-2",

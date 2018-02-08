@@ -665,7 +665,7 @@ module.exports = [
     name: "Seal Atk/Spd 1",
     spCost: 100,
     icon: "20-0",
-    prev: ["Seal Atk 1", "Seal Spd 1"],
+    prev: ["Seal Spd 1", "Seal Atk 1"],
     exclude: [{weaponType: "Staff"}],
     effect: "After combat, inflicts Atk/Spd-3 on foe through its next action."
   },

@@ -1,5 +1,11 @@
 module.exports = [
   {
+    name: "Armored Boots",
+    icon: "37-6",
+    include: [{moveType: "Armored"}],
+    effect: "If unit's HP = 100% at start of turn, unit can move 1 extra space. (That turn only; does not stack.)"
+  },
+  {
     name: "Atk Ploy 1",
     icon: "18-12",
     effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk-3 until the end of foe's next action."
@@ -725,7 +731,7 @@ module.exports = [
     stats: {atk: 3},
     effect: "Grants Atk+3."
   },
-    {
+  {
     name: "Squad Ace F 1",
     icon: "21-1",
     stats: {"hp": 3},
@@ -744,6 +750,78 @@ module.exports = [
     effect: "Grants HP+5."
   },
   {
+    name: "Squad Ace G 1",
+    icon: "21-4",
+    stats: {def: 1},
+    effect: "Grants Def+1."
+  },
+  {
+    name: "Squad Ace G 2",
+    icon: "21-5",
+    stats: {def: 2},
+    effect: "Grants Def+2."
+  },
+  {
+    name: "Squad Ace G 3",
+    icon: "21-6",
+    stats: {def: 3},
+    effect: "Grants Def+3."
+  },
+  {
+    name: "Squad Ace H 1",
+    icon: "21-7",
+    stats: {res: 1},
+    effect: "Grants Res+1."
+  },
+  {
+    name: "Squad Ace H 2",
+    icon: "21-8",
+    stats: {res: 2},
+    effect: "Grants Res+2."
+  },
+  {
+    name: "Squad Ace H 3",
+    icon: "21-9",
+    stats: {res: 3},
+    effect: "Grants Res+3."
+  },
+  {
+    name: "Squad Ace I 1",
+    icon: "21-10",
+    stats: {spd: 1},
+    effect: "Grants Spd+1."
+  },
+  {
+    name: "Squad Ace I 2",
+    icon: "21-11",
+    stats: {spd: 2},
+    effect: "Grants Spd+2."
+  },
+  {
+    name: "Squad Ace I 3",
+    icon: "21-12",
+    stats: {spd: 3},
+    effect: "Grants Spd+3."
+  },
+  {
+    name: "Squad Ace J 1",
+    icon: "22-0",
+    stats: {atk: 1},
+    effect: "Grants Atk+1."
+  },
+  {
+    name: "Squad Ace J 2",
+    icon: "22-1",
+    stats: {atk: 2},
+    effect: "Grants Atk+2."
+  },
+  {
+    name: "Squad Ace J 3",
+    icon: "22-2",
+    stats: {atk: 3},
+    effect: "Grants Atk+3."
+  },
+  {
     name: "Threaten Spd 1",
     icon: "13-8",
     effect: "Inflicts Spd-3 on foes within 2 spaces through their next actions at the start of each turn."
@@ -757,5 +835,6 @@ module.exports = [
     name: "Threaten Spd 3",
     icon: "13-10",
     effect: "Inflicts Spd-5 on foes within 2 spaces through their next actions at the start of each turn."
-  }
+  },
+
 ];

@@ -805,6 +805,7 @@ module.exports = [
       { name: "Steel Sword", rarity: 4 },
       { name: "Armorslayer", rarity: 4 },
       { name: "Armorslayer+", rarity: 5 },
+      { name: "Wing Sword", rarity: 5 },
       { name: "Rally Speed", rarity: 4 },
       { name: "Darting Blow 1", rarity: 4 },
       { name: "Darting Blow 2", rarity: 4 },
@@ -2027,6 +2028,42 @@ module.exports = [
     }
   },
   {
+    name: "Eliwood (Love Abounds)",
+    shortName: "Eliwood",
+    title: "Devoted Love",
+    releaseDate: "Feb 09, 2018",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Armored",
+    rarity4: ["pool1"],
+    rarity5: ["pool1"],
+    ttReward: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Eliwood (Love Abounds).png",
+      main: "img/heroes-main/Eliwood (Love Abounds).png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "Casa Blanca", rarity: 5 },
+      { name: "Casa Blanca+", rarity: 5 },
+      { name: "Rally Attack", rarity: 5 },
+      { name: "Rally Atk/Def", rarity: 5 },
+      { name: "Fire Boost 1", rarity: 5 },
+      { name: "Fire Boost 2", rarity: 5 },
+      { name: "Fire Boost 3", rarity: 5 },
+      { name: "Spur Atk 1", rarity: 5 },
+      { name: "Spur Atk 2", rarity: 5 },
+      { name: "Goad Armor", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 23, atk: 10, spd: 8, def: 7, res: 7 },
+      level40: { hp: [ 44, 47, 50 ], atk: [ 35, 38, 41 ], spd: [ 29, 32, 35 ], def: [ 26, 29, 31 ], res: [ 26, 29, 31 ] },
+      level1_4: { hp: 22, atk: 10, spd: 8, def: 6, res: 6 },
+      level40_4: { hp: [ 41, 44, 47 ], atk: [ 33, 36, 39 ], spd: [ 27, 30, 33 ], def: [ 23, 26, 29 ], res: [ 23, 26, 29 ] }
+    }
+  },
+  {
     name: "Ephraim",
     title: "Restoration Lord",
     releaseDate: "Feb 15, 2017",
@@ -2172,6 +2209,7 @@ module.exports = [
       { name: "Steel Dagger", rarity: 3 },
       { name: "Silver Dagger", rarity: 4 },
       { name: "Silver Dagger+", rarity: 5 },
+      { name: "Felicia's Plate", rarity: 5 },
       { name: "Chilling Wind", rarity: 4 },
       { name: "Glacies", rarity: 4 },
       { name: "Resistance +1", rarity: 3 },
@@ -2711,6 +2749,37 @@ module.exports = [
     }
   },
   {
+    name: "Hector (Love Abounds)",
+    shortName: "Hector",
+    title: "Just Here to Fight",
+    releaseDate: "Feb 09, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Armored",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Hector (Love Abounds).png",
+      main: "img/heroes-main/Hector (Love Abounds).png"
+    },
+    skills: [
+      { name: "Iron Axe", rarity: 5 },
+      { name: "Steel Axe", rarity: 5 },
+      { name: "Silver Axe", rarity: 5 },
+      { name: "Berserk Armads", rarity: 5 },
+      { name: "Night Sky", rarity: 5 },
+      { name: "Glimmer", rarity: 5 },
+      { name: "Distant Counter", rarity: 5 },
+      { name: "Wary Fighter 1", rarity: 5 },
+      { name: "Wary Fighter 2", rarity: 5 },
+      { name: "Wary Fighter 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 24, atk: 8, spd: 4, def: 12, res: 7 },
+      level40: { hp: [ 47, 50, 53 ], atk: [ 35, 38, 42 ], spd: [ 18, 21, 24 ], def: [ 37, 40, 43 ], res: [ 21, 24, 27 ] },
+    }
+  },
+  {
     name: "Henry",
     title: "Twisted Mind",
     releaseDate: "Feb 02, 2017",
@@ -2826,6 +2895,7 @@ module.exports = [
       { name: "Steel Lance", rarity: 5 },
       { name: "Brave Lance", rarity: 5 },
       { name: "Brave Lance+", rarity: 5 },
+      { name: "Hinoka's Spear", rarity: 5 },
       { name: "Rising Wind", rarity: 5 },
       { name: "Blazing Wind", rarity: 5 },
       { name: "Defiant Def 1", rarity: 5 },
@@ -3633,6 +3703,39 @@ module.exports = [
     }
   },
   {
+    name: "Lilina (Love Abounds)",
+    shortName: "Lilina",
+    title: "Blush of Youth",
+    releaseDate: "Feb 09, 2018",
+    colorType: "Green",
+    weaponType: "Tome",
+    moveType: "Cavalry",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Lilina (Love Abounds).png",
+      main: "img/heroes-main/Lilina (Love Abounds).png"
+    },
+    skills: [
+      { name: "Wind", rarity: 5 },
+      { name: "Elwind", rarity: 5 },
+      { name: "Green Gift", rarity: 5 },
+      { name: "Green Gift+", rarity: 5 },
+      { name: "Rising Flame", rarity: 5 },
+      { name: "Blazing Flame", rarity: 5 },
+      { name: "Attack +1", rarity: 5 },
+      { name: "HP/Atk 1", rarity: 5 },
+      { name: "HP/Atk 2", rarity: 5 },
+      { name: "Atk Tactic 1", rarity: 5 },
+      { name: "Atk Tactic 2", rarity: 5 },
+      { name: "Atk Tactic 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 9, spd: 8, def: 5, res: 4 },
+      level40: { hp: [ 31, 34, 37 ], atk: [ 32, 35, 38 ], spd: [ 26, 30, 33 ], def: [ 17, 20, 23 ], res: [ 22, 26, 29 ] },
+    }
+  },
+  {
     name: "Linde",
     title: "Light Mage",
     releaseDate: "Feb 02, 2017",
@@ -4118,6 +4221,41 @@ module.exports = [
     stats: {
       level1: { hp: 17, atk: 6, spd: 10, def: 6, res: 5 },
       level40: { hp: [ 35, 39, 42 ], atk: [ 24, 28, 31 ], spd: [ 31, 34, 37 ], def: [ 20, 23, 26 ], res: [ 21, 24, 28 ] }
+    }
+  },
+  {
+    name: "Lyn (Love Abounds)",
+    shortName: "Lyn",
+    title: "Wind's Embrace",
+    releaseDate: "Feb 09, 2018",
+    colorType: "Blue",
+    weaponType: "Tome",
+    moveType: "Armored",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Lyn (Love Abounds).png",
+      main: "img/heroes-main/Lyn (Love Abounds).png"
+    },
+    skills: [
+      { name: "Light", rarity: 5 },
+      { name: "Ellight", rarity: 5 },
+      { name: "Blue Gift", rarity: 5 },
+      { name: "Blue Gift+", rarity: 5 },
+      { name: "Ardent Sacrifice", rarity: 5 },
+      { name: "Atk/Spd Bond 1", rarity: 5 },
+      { name: "Atk/Spd Bond 2", rarity: 5 },
+      { name: "Atk/Spd Bond 3", rarity: 5 },
+      { name: "Guard 1", rarity: 5 },
+      { name: "Guard 2", rarity: 5 },
+      { name: "Guard 3", rarity: 5 },
+      { name: "Armor March 1", rarity: 5 },
+      { name: "Armor March 2", rarity: 5 },
+      { name: "Armor March 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 9, spd: 10, def: 5, res: 10 },
+      level40: { hp: [ 34, 37, 41 ], atk: [ 27, 31, 34 ], spd: [ 33, 36, 39 ], def: [ 23, 27, 30 ], res: [ 31, 34, 37 ] },
     }
   },
   {
@@ -5284,6 +5422,7 @@ module.exports = [
       { name: "Steel Axe", rarity: 4 },
       { name: "Brave Axe", rarity: 4 },
       { name: "Brave Axe+", rarity: 5 },
+      { name: "Basilikos", rarity: 5 },
       { name: "Daylight", rarity: 4 },
       { name: "Sol", rarity: 4 },
       { name: "Defiant Spd 1", rarity: 4 },
@@ -5630,6 +5769,38 @@ module.exports = [
     stats: {
       level1: { hp: 16, atk: 8, spd: 8, def: 7, res: 7 },
       level40: { hp: [ 34, 38, 41 ], atk: [ 29, 32, 35 ], spd: [ 31, 34, 37 ], def: [ 23, 26, 30 ], res: [ 21, 24, 27 ] }
+    }
+  },
+  {
+    name: "Roy (Love Abounds)",
+    shortName: "Roy",
+    title: "Youthful Gifts",
+    releaseDate: "Feb 09, 2018",
+    colorType: "Neutral",
+    weaponType: "Bow",
+    moveType: "Cavalry",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Roy (Love Abounds).png",
+      main: "img/heroes-main/Roy (Love Abounds).png"
+    },
+    skills: [
+      { name: "Iron Bow", rarity: 5 },
+      { name: "Steel Bow", rarity: 5 },
+      { name: "Gratia", rarity: 5 },
+      { name: "Gratia+", rarity: 5 },
+      { name: "Reciprocal Aid", rarity: 5 },
+      { name: "Death Blow 1", rarity: 5 },
+      { name: "Death Blow 2", rarity: 5 },
+      { name: "Death Blow 3", rarity: 5 },
+      { name: "Bow Valor 1", rarity: 5 },
+      { name: "Bow Valor 2", rarity: 5 },
+      { name: "Bow Valor 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 9, spd: 6, def: 5, res: 6 },
+      level40: { hp: [ 31, 34, 37 ], atk: [ 32, 35, 38 ], spd: [ 15, 19, 22 ], def: [ 23, 27, 30 ], res: [ 27, 30, 33 ] },
     }
   },
   {
@@ -7177,6 +7348,23 @@ module.exports = [
     effect: "Grants Def+6 during combat if unit initiates the attack."
   },
   {
+    name: "Atk/Def 1",
+    spCost: 80,
+    icon: "14-5",
+    stats: {atk: 1, def: 1},
+    prev: ["Defense +1", "Attack +1"],
+    effect: "Grants Atk/Def+1."
+  },
+  {
+    name: "Atk/Def 2",
+    spCost: 160,
+    icon: "14-6",
+    stats: {atk: 2, def: 2},
+    prev: ["Atk/Def 1"],
+    last: true,
+    effect: "Grants Atk/Def+2."
+  },
+  {
     name: "Atk/Def Bond 1",
     spCost: 60,
     icon: "32-10",
@@ -7196,6 +7384,23 @@ module.exports = [
     prev: ["Atk/Def Bond 2"],
     last: true,
     effect: "Grants Atk/Def+5 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Atk/Res 1",
+    spCost: 80,
+    icon: "17-9",
+    stats: {atk: 1, res: 1},
+    prev: ["Attack +1", "Resistance +1"],
+    effect: "Grants Atk/Res+1."
+  },
+  {
+    name: "Atk/Res 2",
+    spCost: 160,
+    icon: "17-10",
+    stats: {atk: 1, res: 1},
+    prev: ["Atk/Res 1"],
+    last: true,
+    effect: "Grants Atk/Res+2."
   },
   {
     name: "Atk/Res Bond 1",
@@ -7236,6 +7441,27 @@ module.exports = [
     effect: "Grants Atk/Spd+2."
   },
   {
+    name: "Atk/Spd Bond 1",
+    spCost: 60,
+    icon: "37-0",
+    effect: "Grants Atk/Spd+3 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Atk/Spd Bond 2",
+    spCost: 120,
+    icon: "37-1",
+    prev: ["Atk/Spd Bond 1"],
+    effect: "Grants Atk/Spd+4 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Atk/Spd Bond 3",
+    spCost: 240,
+    icon: "37-2",
+    prev: ["Atk/Spd Bond 2"],
+    last: true,
+    effect: "Grants Atk/Spd+5 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
     name: "Attack +1",
     spCost: 30,
     icon: "0-7",
@@ -7258,40 +7484,6 @@ module.exports = [
     prev: ["Attack +2"],
     last: true,
     effect: "Grants Atk+3."
-  },
-  {
-    name: "Atk/Def 1",
-    spCost: 80,
-    icon: "14-5",
-    stats: {atk: 1, def: 1},
-    prev: ["Defense +1", "Attack +1"],
-    effect: "Grants Atk/Def+1."
-  },
-  {
-    name: "Atk/Def 2",
-    spCost: 160,
-    icon: "14-6",
-    stats: {atk: 2, def: 2},
-    prev: ["Atk/Def 1"],
-    last: true,
-    effect: "Grants Atk/Def+2."
-  },
-  {
-    name: "Atk/Res 1",
-    spCost: 80,
-    icon: "17-9",
-    stats: {atk: 1, res: 1},
-    prev: ["Attack +1", "Resistance +1"],
-    effect: "Grants Atk/Res+1."
-  },
-  {
-    name: "Atk/Res 2",
-    spCost: 160,
-    icon: "17-10",
-    stats: {atk: 1, res: 1},
-    prev: ["Atk/Res 1"],
-    last: true,
-    effect: "Grants Atk/Res+2."
   },
   {
     name: "Bracing Blow 1",
@@ -7765,6 +7957,23 @@ module.exports = [
     prev: ["HP +4"],
     last: true,
     effect: "Grants +5 to max HP."
+  },
+  {
+    name: "HP/Atk 1",
+    spCost: 100,
+    icon: "36-11",
+    stats: {hp: 3, def: 1},
+    prev: ["Attack +1", "HP +3"],
+    effect: "Grants HP+3, Atk+1."
+  },
+  {
+    name: "HP/Atk 2",
+    spCost: 200,
+    icon: "36-12",
+    stats: {hp: 4, def: 2},
+    prev: ["HP/Atk 1"],
+    last: true,
+    effect: "Grants HP+4, Atk+2."
   },
   {
     name: "HP/Def 1",
@@ -8283,8 +8492,18 @@ exports.getSeals = function(hero, nameExclusive = true) {
   return getSkills(hero, nameExclusive, skills.seals);
 };
 
-exports.getRefinery = function(weapon) {
-  return refine[weapon];
+exports.getRefinery = function(weapon, heroName) {
+  if (refine[weapon]) {
+    return refine[weapon].filter(skill => {
+      if (skill.exclusive && skill.exclusive.length) {
+        return skill.exclusive.includes(heroName);
+      } else {
+        return true;
+      }
+    });
+  } else {
+    return null;
+  }
 };
 
 exports.getRefineryCost = function(index) {
@@ -9843,6 +10062,29 @@ module.exports = [
     prev: ["Bow Exp. 2"],
     include: [{weaponType:"Bow"}],
     effect: "If unit survives, all bow users on team get 2x EXP. (If similar skill effects also used, only highest multiplier applies.)"
+  },
+  {
+    name: "Bow Valor 1",
+    spCost: 30,
+    icon: "37-3",
+    include: [{weaponType: "Bow"}],
+    effect: "If unit survives and uses an bow, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
+    name: "Bow Valor 2",
+    spCost: 60,
+    icon: "37-4",
+    prev: ["Bow Valor 1"],
+    include: [{weaponType: "Bow"}],
+    effect: "If unit survives, all bow users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
+    name: "Bow Valor 3",
+    spCost: 120,
+    icon: "37-5",
+    prev: ["Bow Valor 2"],
+    include: [{weaponType: "Bow"}],
+    effect: "If unit survives, all bow users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)"
   },
   {
     name: "Breath of Life 1",
@@ -12495,6 +12737,136 @@ module.exports = {
       effect: "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces."
     }
   ],
+  "Hama Ya+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces.	"
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces.	"
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces.	"
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces.	"
+    }
+  ],
+  "Green Gift+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    }
+  ],
+  "Blue Gift+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    }
+  ],
+  "Gratia+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    }
+  ],
+  "Casa Blanca+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 2},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, spd: 3},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, def: 4},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, res: 4},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    }
+  ],
 
   // prf weapons
   "Sol Katti": [
@@ -12790,11 +13162,255 @@ module.exports = {
       stats: {hp: 2, res: 3},
       effect: "-"
     }
+  ],
+  "Hinoka's Spear": [
+    {
+      name: "Infantry/Flier Guidance",
+      icon: "36-6",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces of unit. Infantry and flying allies within 2 spaces can move to a space adjacent to unit."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces of unit."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces of unit."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces of unit."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces of unit."
+    }
+  ],
+  "Wing Sword": [
+    {
+      name: "Flashing Blade",
+      icon: "36-3",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Effective against armored and cavalry foes. If unit's Spd - foe's Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)"
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Effective against armored and cavalry foes."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Effective against armored and cavalry foes."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Effective against armored and cavalry foes."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Effective against armored and cavalry foes."
+    }
+  ],
+  "Basilikos": [
+    {
+      name: "Life and Death",
+      icon: "36-4",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Accelerates Special trigger (cooldown count-1). Grants Atk/Spd+5. Inflicts Def/Res-5."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    }
+  ],
+  "Felicia's Plate": [
+    {
+      name: "Cooldown vs Magic",
+      icon: "36-7",
+      cost: 1,
+      effect: "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res. Grants Special cooldown charge +1 if foe uses magic. (Only highest value applied. Does not stack.)"
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res."
+    }
+  ],
+  "Eckesachs": [
+    {
+      name: "Distant Defense",
+      icon: "36-5",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions. If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions."
+    }
+  ],
+  "Falchion": [
+    {
+      name: "Drive Spectrum",
+      icon: "36-8",
+      cost: 1,
+      stats: {hp: 3},
+      exclusive: ["Marth"],
+      effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn. Grants Atk/Spd/Def/Res+2 to allies within 2 spaces during combat."
+    },
+    {
+      name: "Spectrum Bond",
+      icon: "36-9",
+      cost: 1,
+      stats: {hp: 3},
+      exclusive: ["Chrom", "Lucina", "Marth (Masked)"],
+      effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn. Grants Atk/Spd/Def/Res+4 during combat if unit is adjacent to an ally."
+    },
+    {
+      name: "Double Lion",
+      icon: "36-10",
+      cost: 1,
+      stats: {hp: 3},
+      exclusive: ["Alm"],
+      effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn. If unit's HP = 100% at start of combat and unit initiates combat, unit attacks twice then takes 5 damage after combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn."
+    }
   ]
 };
 
 },{}],10:[function(require,module,exports){
 module.exports = [
+  {
+    name: "Armored Boots",
+    icon: "37-6",
+    include: [{moveType: "Armored"}],
+    effect: "If unit's HP = 100% at start of turn, unit can move 1 extra space. (That turn only; does not stack.)"
+  },
   {
     name: "Atk Ploy 1",
     icon: "18-12",
@@ -13521,7 +14137,7 @@ module.exports = [
     stats: {atk: 3},
     effect: "Grants Atk+3."
   },
-    {
+  {
     name: "Squad Ace F 1",
     icon: "21-1",
     stats: {"hp": 3},
@@ -13540,6 +14156,78 @@ module.exports = [
     effect: "Grants HP+5."
   },
   {
+    name: "Squad Ace G 1",
+    icon: "21-4",
+    stats: {def: 1},
+    effect: "Grants Def+1."
+  },
+  {
+    name: "Squad Ace G 2",
+    icon: "21-5",
+    stats: {def: 2},
+    effect: "Grants Def+2."
+  },
+  {
+    name: "Squad Ace G 3",
+    icon: "21-6",
+    stats: {def: 3},
+    effect: "Grants Def+3."
+  },
+  {
+    name: "Squad Ace H 1",
+    icon: "21-7",
+    stats: {res: 1},
+    effect: "Grants Res+1."
+  },
+  {
+    name: "Squad Ace H 2",
+    icon: "21-8",
+    stats: {res: 2},
+    effect: "Grants Res+2."
+  },
+  {
+    name: "Squad Ace H 3",
+    icon: "21-9",
+    stats: {res: 3},
+    effect: "Grants Res+3."
+  },
+  {
+    name: "Squad Ace I 1",
+    icon: "21-10",
+    stats: {spd: 1},
+    effect: "Grants Spd+1."
+  },
+  {
+    name: "Squad Ace I 2",
+    icon: "21-11",
+    stats: {spd: 2},
+    effect: "Grants Spd+2."
+  },
+  {
+    name: "Squad Ace I 3",
+    icon: "21-12",
+    stats: {spd: 3},
+    effect: "Grants Spd+3."
+  },
+  {
+    name: "Squad Ace J 1",
+    icon: "22-0",
+    stats: {atk: 1},
+    effect: "Grants Atk+1."
+  },
+  {
+    name: "Squad Ace J 2",
+    icon: "22-1",
+    stats: {atk: 2},
+    effect: "Grants Atk+2."
+  },
+  {
+    name: "Squad Ace J 3",
+    icon: "22-2",
+    stats: {atk: 3},
+    effect: "Grants Atk+3."
+  },
+  {
     name: "Threaten Spd 1",
     icon: "13-8",
     effect: "Inflicts Spd-3 on foes within 2 spaces through their next actions at the start of each turn."
@@ -13553,7 +14241,8 @@ module.exports = [
     name: "Threaten Spd 3",
     icon: "13-10",
     effect: "Inflicts Spd-5 on foes within 2 spaces through their next actions at the start of each turn."
-  }
+  },
+
 ];
 
 },{}],11:[function(require,module,exports){
@@ -14122,6 +14811,17 @@ module.exports = [
     effect: "Grants Spd+3. If unit's Spd - foe's Spd ≥ 1, gain Special cooldown charge +1 per attack. (If similar skill also used, only highest value applied.)"
   },
   {
+    name: "Basilikos",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    exclusive: ["Raven"],
+    // prev: ["Brave Axe"],
+    effect: "Accelerates Special trigger (cooldown count -1)."
+  },
+  {
     name: "Berkut's Lance",
     spCost: 200,
     damage: 10,
@@ -14140,6 +14840,17 @@ module.exports = [
     colorType: "Blue",
     prev: ["Berkut's Lance"],
     effect: "Grants Res+4 when the unit is under attack."
+  },
+  {
+    name: "Berserk Armads",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Silver Axe"],
+    exclusive: ["Hector (Love Abounds)"],
+    effect: "Accelerates Special trigger (cooldown count-1). If unit's HP ≤ 75% and Special triggers by attacking, Special cooldown count-1 at start of turn. Deals +10 damage when Special triggers."
   },
   {
     name: "Binding Blade",
@@ -14295,6 +15006,26 @@ module.exports = [
     colorType: "Blue",
     prev: ["Blue Egg"],
     effect: "If unit initiates attack, unit recovers 4 HP after the battle."
+  },
+  {
+    name: "Blue Gift",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Ellight"],
+    effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
+    name: "Blue Gift+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Blue Gift"],
+    effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
   },
   {
     name: "Bolganone",
@@ -14504,6 +15235,26 @@ module.exports = [
     colorType: "Blue",
     prev: ["Carrot Lance"],
     effect: "If unit initiates attack, unit recovers 4 HP after the battle."
+  },
+  {
+    name: "Casa Blanca",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Steel Lance"],
+    effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
+    name: "Casa Blanca+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Casa Blanca"],
+    effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
   },
   {
     name: "Clarisse's Bow",
@@ -14880,6 +15631,17 @@ module.exports = [
     effect: "After combat, inflicts Atk-7 on target and foes within 2 spaces through their next actions."
   },
   {
+    name: "Felicia's Plate",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Dagger",
+    colorType: "Neutral",
+    // prev: ["Silver Dagger"],
+    exclusive: ["Felicia"],
+    effect: "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res."
+  },
+  {
     name: "Fenrir",
     spCost: 200,
     damage: 9,
@@ -15100,6 +15862,26 @@ module.exports = [
     effect: "Enables counterattack regardless of distance if this unit is attacked.",
   },
   {
+    name: "Gratia",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Bow",
+    colorType: "Neutral",
+    prev: ["Steel Bow"],
+    effect: "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
+    name: "Gratia+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Bow",
+    colorType: "Neutral",
+    prev: ["Gratia"],
+    effect: "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
     name: "Gravity",
     spCost: 150,
     damage: 6,
@@ -15147,6 +15929,26 @@ module.exports = [
     colorType: "Green",
     prev: ["Green Egg"],
     effect: "If unit initiates attack, unit recovers 4 HP after the battle."
+  },
+  {
+    name: "Green Gift",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    prev: ["Elwind"],
+    effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
+    name: "Green Gift+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    prev: ["Green Gift"],
+    effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
   },
   {
     name: "Grimoire",
@@ -15388,6 +16190,17 @@ module.exports = [
     colorType: "Green",
     prev: ["Hibiscus Tome"],
     effect: "Grants allies within 2 spaces Atk/Spd+1 during combat."
+  },
+  {
+    name: "Hinoka's Spear",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    exclusive: ["Hinoka"],
+    // prev: ["Brave Lance"],
+    effect: "Grants Atk/Spd +4 during combat if infantry or flying ally is within 2 spaces of unit."
   },
   {
     name: "Iron Axe",
@@ -16695,7 +17508,7 @@ module.exports = [
     range: 1,
     weaponType: "Lance",
     colorType: "Blue",
-    prev: ["Tannenboom"],
+    prev: ["Tannenboom!"],
     effect: "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat."
   },
   {
@@ -16855,6 +17668,17 @@ module.exports = [
     weaponType: "Tome",
     colorType: "Green",
     effect: "-"
+  },
+  {
+    name: "Wing Sword",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    // prev: ["Armorslayer"],
+    exclusive: ["Caeda"],
+    effect: "Effective against armored and cavalry foes.",
   },
   {
     name: "Wo Dao",
@@ -17302,8 +18126,9 @@ function onSkillSelect(event) {
   let skill = $(event.currentTarget).data('val');
 
   if (skillType === 'weapon') {
-    if (skills.getRefinery(skill.name)) {
-      $(elements.SELECT_REFINE).selectable('data', [values.CONST.EMPTY_SKILL].concat(skills.getRefinery(skill.name)));
+    let refinery = skills.getRefinery(skill.name, fehUnit.data.nam);
+    if (refinery) {
+      $(elements.SELECT_REFINE).selectable('data', [values.CONST.EMPTY_SKILL].concat(refinery));
     } else {
       $(elements.SELECT_REFINE).selectable('clear').selectable('disable');
     }
@@ -17922,7 +18747,6 @@ init();
 
 },{"./builder-custom.js":13,"./builder-default.js":14,"./canvas.js":15,"./elements.js":16,"./utils.js":19,"./values.js":20}],18:[function(require,module,exports){
 'use strict';
-// TODO Sorting priority (e.g. Luna - Valter : should be Frederick)
 let skills = require('../data/skill-access.js');
 let heroes = require('../data/hero-access.js');
 const COSTS = [1, 20, 200, 2000, 20000];
@@ -17931,7 +18755,7 @@ function getInheritancePlanPromise(targetSkills, hero, rarity, len = 3) {
   let combiWorker = new Worker('js/unit-builder/inheritance-combinations.js');
   let inheritResults = getTopInheritance(targetSkills, hero, rarity, len);
   inheritResults.len = len;
-  
+
   return new Promise((resolve, reject) => {
     if (window.Worker) {
       combiWorker.onmessage = (e) => {

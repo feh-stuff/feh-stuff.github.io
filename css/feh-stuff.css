@@ -362,6 +362,13 @@ body {
   width: 80px;
 }
 
+.inherit-rarity {
+  width: 75px;
+  /* position: absolute;
+  left: 0;
+  top: 55px; */
+}
+
 /***** Selectable *****/
 .selectable > .dropdown-toggle {
   background-color: #ffffff;

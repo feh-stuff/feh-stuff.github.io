@@ -55,8 +55,10 @@ function getInheritanceList(skillName, optimize = false) {
         result.push({
           name: data[i].name,
           rarity: data[i].skills[j].rarity,
-          rank: (data[i].limited || data[i].ghb || data[i].ttReward) ? 2 :
-              data[i].rarity3 ? 0 : 1
+          rank: data[i].ttReward ? 1.4 :
+              data[i].limited ? 1.3 :
+              data[i].ghb ? 1.2  :
+              data[i].rarity3 ? 1 : 1.1
         });
         break;
       }
@@ -64,12 +66,12 @@ function getInheritanceList(skillName, optimize = false) {
   }
 
   if (optimize) {
-    if (result.length > 3) {
-      let min = result.reduce((acc, res) => Math.min(acc, res.rarity), 5);
-      if (min < 5) {
-        result.filter(res => res.rarity < 5).sort();
-      }
-    }
+    // if (result.length > 3) {
+    //   let min = result.reduce((acc, res) => Math.min(acc, res.rarity), 5);
+    //   if (min < 5) {
+    //     result = result.filter(res => res.rarity < 5).sort();
+    //   }
+    // }
     result.sort((a,b) => {
       if (a.rank === b.rank) {
         return a.rarity - b.rarity;

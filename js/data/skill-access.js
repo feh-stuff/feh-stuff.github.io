@@ -54,8 +54,18 @@ exports.getSeals = function(hero, nameExclusive = true) {
   return getSkills(hero, nameExclusive, skills.seals);
 };
 
-exports.getRefinery = function(weapon) {
-  return refine[weapon];
+exports.getRefinery = function(weapon, heroName) {
+  if (refine[weapon]) {
+    return refine[weapon].filter(skill => {
+      if (skill.exclusive && skill.exclusive.length) {
+        return skill.exclusive.includes(heroName);
+      } else {
+        return true;
+      }
+    });
+  } else {
+    return null;
+  }
 };
 
 exports.getRefineryCost = function(index) {

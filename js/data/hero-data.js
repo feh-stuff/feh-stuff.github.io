@@ -678,6 +678,7 @@ module.exports = [
       { name: "Steel Sword", rarity: 4 },
       { name: "Armorslayer", rarity: 4 },
       { name: "Armorslayer+", rarity: 5 },
+      { name: "Wing Sword", rarity: 5 },
       { name: "Rally Speed", rarity: 4 },
       { name: "Darting Blow 1", rarity: 4 },
       { name: "Darting Blow 2", rarity: 4 },
@@ -1109,8 +1110,8 @@ module.exports = [
       { name: "Carrot Axe+", rarity: 5 },
       { name: "Shove", rarity: 5 },
       { name: "Defense +1", rarity: 5 },
-      { name: "Atk/Def +1", rarity: 5 },
-      { name: "Atk/Def +2", rarity: 5 },
+      { name: "Atk/Def 1", rarity: 5 },
+      { name: "Atk/Def 2", rarity: 5 },
       { name: "Axe Experience 1", rarity: 5 },
       { name: "Axe Experience 2", rarity: 5 },
       { name: "Axe Experience 3", rarity: 5 }
@@ -1900,6 +1901,42 @@ module.exports = [
     }
   },
   {
+    name: "Eliwood (Love Abounds)",
+    shortName: "Eliwood",
+    title: "Devoted Love",
+    releaseDate: "Feb 09, 2018",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Armored",
+    rarity4: ["pool1"],
+    rarity5: ["pool1"],
+    ttReward: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Eliwood (Love Abounds).png",
+      main: "img/heroes-main/Eliwood (Love Abounds).png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "Casa Blanca", rarity: 5 },
+      { name: "Casa Blanca+", rarity: 5 },
+      { name: "Rally Attack", rarity: 5 },
+      { name: "Rally Atk/Def", rarity: 5 },
+      { name: "Fire Boost 1", rarity: 5 },
+      { name: "Fire Boost 2", rarity: 5 },
+      { name: "Fire Boost 3", rarity: 5 },
+      { name: "Spur Atk 1", rarity: 5 },
+      { name: "Spur Atk 2", rarity: 5 },
+      { name: "Goad Armor", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 23, atk: 10, spd: 8, def: 7, res: 7 },
+      level40: { hp: [ 44, 47, 50 ], atk: [ 35, 38, 41 ], spd: [ 29, 32, 35 ], def: [ 26, 29, 31 ], res: [ 26, 29, 31 ] },
+      level1_4: { hp: 22, atk: 10, spd: 8, def: 6, res: 6 },
+      level40_4: { hp: [ 41, 44, 47 ], atk: [ 33, 36, 39 ], spd: [ 27, 30, 33 ], def: [ 23, 26, 29 ], res: [ 23, 26, 29 ] }
+    }
+  },
+  {
     name: "Ephraim",
     title: "Restoration Lord",
     releaseDate: "Feb 15, 2017",
@@ -2045,6 +2082,7 @@ module.exports = [
       { name: "Steel Dagger", rarity: 3 },
       { name: "Silver Dagger", rarity: 4 },
       { name: "Silver Dagger+", rarity: 5 },
+      { name: "Felicia's Plate", rarity: 5 },
       { name: "Chilling Wind", rarity: 4 },
       { name: "Glacies", rarity: 4 },
       { name: "Resistance +1", rarity: 3 },
@@ -2584,6 +2622,37 @@ module.exports = [
     }
   },
   {
+    name: "Hector (Love Abounds)",
+    shortName: "Hector",
+    title: "Just Here to Fight",
+    releaseDate: "Feb 09, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Armored",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Hector (Love Abounds).png",
+      main: "img/heroes-main/Hector (Love Abounds).png"
+    },
+    skills: [
+      { name: "Iron Axe", rarity: 5 },
+      { name: "Steel Axe", rarity: 5 },
+      { name: "Silver Axe", rarity: 5 },
+      { name: "Berserk Armads", rarity: 5 },
+      { name: "Night Sky", rarity: 5 },
+      { name: "Glimmer", rarity: 5 },
+      { name: "Distant Counter", rarity: 5 },
+      { name: "Wary Fighter 1", rarity: 5 },
+      { name: "Wary Fighter 2", rarity: 5 },
+      { name: "Wary Fighter 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 24, atk: 8, spd: 4, def: 12, res: 7 },
+      level40: { hp: [ 47, 50, 53 ], atk: [ 35, 38, 42 ], spd: [ 18, 21, 24 ], def: [ 37, 40, 43 ], res: [ 21, 24, 27 ] },
+    }
+  },
+  {
     name: "Henry",
     title: "Twisted Mind",
     releaseDate: "Feb 02, 2017",
@@ -2699,6 +2768,7 @@ module.exports = [
       { name: "Steel Lance", rarity: 5 },
       { name: "Brave Lance", rarity: 5 },
       { name: "Brave Lance+", rarity: 5 },
+      { name: "Hinoka's Spear", rarity: 5 },
       { name: "Rising Wind", rarity: 5 },
       { name: "Blazing Wind", rarity: 5 },
       { name: "Defiant Def 1", rarity: 5 },
@@ -3506,6 +3576,39 @@ module.exports = [
     }
   },
   {
+    name: "Lilina (Love Abounds)",
+    shortName: "Lilina",
+    title: "Blush of Youth",
+    releaseDate: "Feb 09, 2018",
+    colorType: "Green",
+    weaponType: "Tome",
+    moveType: "Cavalry",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Lilina (Love Abounds).png",
+      main: "img/heroes-main/Lilina (Love Abounds).png"
+    },
+    skills: [
+      { name: "Wind", rarity: 5 },
+      { name: "Elwind", rarity: 5 },
+      { name: "Green Gift", rarity: 5 },
+      { name: "Green Gift+", rarity: 5 },
+      { name: "Rising Flame", rarity: 5 },
+      { name: "Blazing Flame", rarity: 5 },
+      { name: "Attack +1", rarity: 5 },
+      { name: "HP/Atk 1", rarity: 5 },
+      { name: "HP/Atk 2", rarity: 5 },
+      { name: "Atk Tactic 1", rarity: 5 },
+      { name: "Atk Tactic 2", rarity: 5 },
+      { name: "Atk Tactic 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 9, spd: 8, def: 5, res: 4 },
+      level40: { hp: [ 31, 34, 37 ], atk: [ 32, 35, 38 ], spd: [ 26, 30, 33 ], def: [ 17, 20, 23 ], res: [ 22, 26, 29 ] },
+    }
+  },
+  {
     name: "Linde",
     title: "Light Mage",
     releaseDate: "Feb 02, 2017",
@@ -3885,8 +3988,8 @@ module.exports = [
       { name: "Rally Attack", rarity: 5 },
       { name: "Rally Atk/Res", rarity: 5 },
       { name: "Resistance +1", rarity: 5 },
-      { name: "Hp/Res 1", rarity: 5 },
-      { name: "Hp/Res 2", rarity: 5 },
+      { name: "HP/Res 1", rarity: 5 },
+      { name: "HP/Res 2", rarity: 5 },
       { name: "Res Ploy 1", rarity: 5 },
       { name: "Res Ploy 2", rarity: 5 },
       { name: "Res Ploy 3", rarity: 5 }
@@ -3991,6 +4094,41 @@ module.exports = [
     stats: {
       level1: { hp: 17, atk: 6, spd: 10, def: 6, res: 5 },
       level40: { hp: [ 35, 39, 42 ], atk: [ 24, 28, 31 ], spd: [ 31, 34, 37 ], def: [ 20, 23, 26 ], res: [ 21, 24, 28 ] }
+    }
+  },
+  {
+    name: "Lyn (Love Abounds)",
+    shortName: "Lyn",
+    title: "Wind's Embrace",
+    releaseDate: "Feb 09, 2018",
+    colorType: "Blue",
+    weaponType: "Tome",
+    moveType: "Armored",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Lyn (Love Abounds).png",
+      main: "img/heroes-main/Lyn (Love Abounds).png"
+    },
+    skills: [
+      { name: "Light", rarity: 5 },
+      { name: "Ellight", rarity: 5 },
+      { name: "Blue Gift", rarity: 5 },
+      { name: "Blue Gift+", rarity: 5 },
+      { name: "Ardent Sacrifice", rarity: 5 },
+      { name: "Atk/Spd Bond 1", rarity: 5 },
+      { name: "Atk/Spd Bond 2", rarity: 5 },
+      { name: "Atk/Spd Bond 3", rarity: 5 },
+      { name: "Guard 1", rarity: 5 },
+      { name: "Guard 2", rarity: 5 },
+      { name: "Guard 3", rarity: 5 },
+      { name: "Armor March 1", rarity: 5 },
+      { name: "Armor March 2", rarity: 5 },
+      { name: "Armor March 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 9, spd: 10, def: 5, res: 10 },
+      level40: { hp: [ 34, 37, 41 ], atk: [ 27, 31, 34 ], spd: [ 33, 36, 39 ], def: [ 23, 27, 30 ], res: [ 31, 34, 37 ] },
     }
   },
   {
@@ -4115,9 +4253,9 @@ module.exports = [
       { name: "Wo Dao+", rarity: 5 },
       { name: "Night Sky", rarity: 3 },
       { name: "Glimmer", rarity: 4 },
-      { name: "Hp +3", rarity: 4 },
-      { name: "Hp/Def 1", rarity: 4 },
-      { name: "Hp/Def 2", rarity: 4 },
+      { name: "HP +3", rarity: 4 },
+      { name: "HP/Def 1", rarity: 4 },
+      { name: "HP/Def 2", rarity: 4 },
       { name: "Infantry Pulse 1", rarity: 4 },
       { name: "Infantry Pulse 2", rarity: 4 },
       { name: "Infantry Pulse 3", rarity: 5 }
@@ -5157,6 +5295,7 @@ module.exports = [
       { name: "Steel Axe", rarity: 4 },
       { name: "Brave Axe", rarity: 4 },
       { name: "Brave Axe+", rarity: 5 },
+      { name: "Basilikos", rarity: 5 },
       { name: "Daylight", rarity: 4 },
       { name: "Sol", rarity: 4 },
       { name: "Defiant Spd 1", rarity: 4 },
@@ -5328,8 +5467,8 @@ module.exports = [
       { name: "Deft Harpoon+", rarity: 5 },
       { name: "Reposition", rarity: 5 },
       { name: "Defense +1", rarity: 5 },
-      { name: "Hp/Def 1", rarity: 5 },
-      { name: "Hp/Def 2", rarity: 5 },
+      { name: "HP/Def 1", rarity: 5 },
+      { name: "HP/Def 2", rarity: 5 },
       { name: "Lance Valor 1", rarity: 5 },
       { name: "Lance Valor 2", rarity: 5 },
       { name: "Lance Valor 3", rarity: 5 }
@@ -5426,7 +5565,7 @@ module.exports = [
       { name: "Firesweep Lance", rarity: 4 },
       { name: "Firesweep Lance+", rarity: 5 },
       { name: "Rally Defense", rarity: 4 },
-      { name: "Rally Defense Resistance", rarity: 4 },
+      { name: "Rally Def/Res", rarity: 4 },
       { name: "Drag Back", rarity: 4 },
       { name: "Spur Def 1", rarity: 4 },
       { name: "Drive Def 1", rarity: 4 },
@@ -5506,6 +5645,38 @@ module.exports = [
     }
   },
   {
+    name: "Roy (Love Abounds)",
+    shortName: "Roy",
+    title: "Youthful Gifts",
+    releaseDate: "Feb 09, 2018",
+    colorType: "Neutral",
+    weaponType: "Bow",
+    moveType: "Cavalry",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Roy (Love Abounds).png",
+      main: "img/heroes-main/Roy (Love Abounds).png"
+    },
+    skills: [
+      { name: "Iron Bow", rarity: 5 },
+      { name: "Steel Bow", rarity: 5 },
+      { name: "Gratia", rarity: 5 },
+      { name: "Gratia+", rarity: 5 },
+      { name: "Reciprocal Aid", rarity: 5 },
+      { name: "Death Blow 1", rarity: 5 },
+      { name: "Death Blow 2", rarity: 5 },
+      { name: "Death Blow 3", rarity: 5 },
+      { name: "Bow Valor 1", rarity: 5 },
+      { name: "Bow Valor 2", rarity: 5 },
+      { name: "Bow Valor 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 9, spd: 6, def: 5, res: 6 },
+      level40: { hp: [ 31, 34, 37 ], atk: [ 32, 35, 38 ], spd: [ 15, 19, 22 ], def: [ 23, 27, 30 ], res: [ 27, 30, 33 ] },
+    }
+  },
+  {
     name: "Ryoma",
     title: "Peerless Samurai",
     releaseDate: "Feb 02, 2017",
@@ -5556,8 +5727,8 @@ module.exports = [
       { name: "Holy Vestments", rarity: 5 },
       { name: "Aegis", rarity: 5 },
       { name: "HP +3", rarity: 5 },
-      { name: "Hp/Spd 1", rarity: 5 },
-      { name: "Hp/Spd 2", rarity: 5 },
+      { name: "HP/Spd 1", rarity: 5 },
+      { name: "HP/Spd 2", rarity: 5 },
       { name: "Shield Pulse 1", rarity: 5 },
       { name: "Shield Pulse 2", rarity: 5 },
       { name: "Shield Pulse 3", rarity: 5 }

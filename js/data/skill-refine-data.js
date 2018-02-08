@@ -1792,6 +1792,136 @@ module.exports = {
       effect: "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces."
     }
   ],
+  "Hama Ya+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces.	"
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces.	"
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces.	"
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces.	"
+    }
+  ],
+  "Green Gift+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    }
+  ],
+  "Blue Gift+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    }
+  ],
+  "Gratia+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    }
+  ],
+  "Casa Blanca+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 2},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, spd: 3},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, def: 4},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, res: 4},
+      effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    }
+  ],
 
   // prf weapons
   "Sol Katti": [
@@ -2086,6 +2216,244 @@ module.exports = {
       cost: 1,
       stats: {hp: 2, res: 3},
       effect: "-"
+    }
+  ],
+  "Hinoka's Spear": [
+    {
+      name: "Infantry/Flier Guidance",
+      icon: "36-6",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces of unit. Infantry and flying allies within 2 spaces can move to a space adjacent to unit."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces of unit."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces of unit."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces of unit."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Grants Atk/Spd+4 during combat if infantry or flying ally is within 2 spaces of unit."
+    }
+  ],
+  "Wing Sword": [
+    {
+      name: "Flashing Blade",
+      icon: "36-3",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Effective against armored and cavalry foes. If unit's Spd - foe's Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)"
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Effective against armored and cavalry foes."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Effective against armored and cavalry foes."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Effective against armored and cavalry foes."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Effective against armored and cavalry foes."
+    }
+  ],
+  "Basilikos": [
+    {
+      name: "Life and Death",
+      icon: "36-4",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Accelerates Special trigger (cooldown count-1). Grants Atk/Spd+5. Inflicts Def/Res-5."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    }
+  ],
+  "Felicia's Plate": [
+    {
+      name: "Cooldown vs Magic",
+      icon: "36-7",
+      cost: 1,
+      effect: "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res. Grants Special cooldown charge +1 if foe uses magic. (Only highest value applied. Does not stack.)"
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res."
+    }
+  ],
+  "Eckesachs": [
+    {
+      name: "Distant Defense",
+      icon: "36-5",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions. If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Inflicts Def-6 on foes (excluding dragons) within 2 spaces at the start of each turn, through their next actions."
+    }
+  ],
+  "Falchion": [
+    {
+      name: "Drive Spectrum",
+      icon: "36-8",
+      cost: 1,
+      stats: {hp: 3},
+      exclusive: ["Marth"],
+      effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn. Grants Atk/Spd/Def/Res+2 to allies within 2 spaces during combat."
+    },
+    {
+      name: "Spectrum Bond",
+      icon: "36-9",
+      cost: 1,
+      stats: {hp: 3},
+      exclusive: ["Chrom", "Lucina", "Marth (Masked)"],
+      effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn. Grants Atk/Spd/Def/Res+4 during combat if unit is adjacent to an ally."
+    },
+    {
+      name: "Double Lion",
+      icon: "36-10",
+      cost: 1,
+      stats: {hp: 3},
+      exclusive: ["Alm"],
+      effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn. If unit's HP = 100% at start of combat and unit initiates combat, unit attacks twice then takes 5 damage after combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn."
     }
   ]
 };
