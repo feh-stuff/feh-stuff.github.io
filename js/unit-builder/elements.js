@@ -35,5 +35,8 @@ module.exports = {
   CUSTOM_SKILL_SELECT: '.custom-skill-select',
   CUSTOM_SKILL_TOGGLE: '[data-toggle="pill"]',
   CUSTOM_NEW_SKILL_INPUT: '.custom-skill-input',
-  DOWNLOAD: '#download-img'
+  DOWNLOAD: '#download-img',
+  SHOW_INHERITANCE: '#show-inherit',
+  INHERIT_LIST: '#inherit-suggest',
+  INHERIT_MODAL: '#inherit-modal'
 };

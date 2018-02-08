@@ -3,6 +3,7 @@ let elements = require('./elements.js');
 let heroes = require('../data/hero-access.js');
 let skills = require('../data/skill-access.js');
 let utils = require('./utils.js');
+let inheritPlanner = require('./inheritance-planner.js');
 let canvas;
 
 let fehUnit = {
@@ -85,6 +86,8 @@ function bindEvents() {
   $(elements.SELECT_IV_SHOW).on('change', onShowIvChange);
   $(elements.SELECT_SUPPORT).on('change', onSupportChange);
   $(elements.SELECT_TT).on('change', onTempestBuffChange);
+
+  $(elements.INHERIT_MODAL).on('shown.bs.modal', onInheritanceShow);
 }
 
 
@@ -181,7 +184,24 @@ function onTempestBuffChange(event) {
   fehUnit.tempestBuff = $(elements.SELECT_TT_ON).is(':checked');
   drawHero(fehUnit);
 }
+function onInheritanceShow(event) {
+  let previousData = $(elements.SHOW_INHERITANCE).data('skills');
+  let targetSkills = [];
+  for (let skill in fehUnit.skills) {
+    if (skill !== 'seal' && skill !== 'refine' && fehUnit.skills[skill].name !== '-') {
+      targetSkills.push(fehUnit.skills[skill]);
+    }
+  }
 
+  if (isSkillSetChanged(targetSkills, previousData)) {
+    inheritPlanner.getInheritancePlanPromise(targetSkills, fehUnit.data, fehUnit.rarity, 2)
+        .then((e) => {
+          console.log('Promise Returned');
+          console.log(e);
+          $(elements.INHERIT_LIST).html(getInheritanceHtml(e));
+        })
+  }
+}
 
 function drawHero(hero, processHero = true) {
   if (processHero) {
@@ -304,7 +324,7 @@ function getSkillInfoHtml(skillType, skill, inheritance) {
     if (skill.name === '-') {
       html += `<span>SP Cost: 0</span>`;
     } else {
-      let cost = getRefineryCost(skill.cost || 0);
+      let cost = skills.getRefineryCost(skill.cost || 0);
       html += `<span>SP Cost: ${cost.spCost}</span>`;
       if (cost.arenaMedals) {
         html += `<span>Arena Medals: ${cost.arenaMedals}</span>`;
@@ -330,6 +350,41 @@ function getSkillInfoHtml(skillType, skill, inheritance) {
   return (html ? `<p class="skill-cost">${html}</p>` : '') + `<p>${skill.effect}</p>` + inheritHtml;
 };
 
+function isSkillSetChanged(newSkill, oldSkill) {
+  return true;
+}
+function getInheritanceListHtml(skills) {
+  let inheritance = {};
+  for (let skillType in skills) {
+    let unitList = [];
+    if ((skillType !== 'refine' || skillType !== 'seal') &&
+        (skills[skillType].name.length && skills[skillType].name !== '-')) {
+      unitList = heroes.getInheritanceList(skills[skillType].name);
+    }
+    unitList.sort((a, b) => a.rarity - b.rarity);
+
+  }
+}
+function getInheritanceHtml(inheritList) {
+  let html = '';
+  for (let i = 0; i < inheritList.length; i++) {
+    html += `<ul class="list-group col col-sm-6">`;
+    for (let j = 0; j < inheritList[i].length; j++) {
+      html += `<li class="list-group-item p-0 d-flex">
+          <div style="width: 75px;">
+            <img src="img/heroes-portrait/75px-Icon_Portrait_${inheritList[i][j].name}.png">
+            <img class="inherit-rarity" src="img/assets/star-rarity-${inheritList[i][j].rarity}.png">
+          </div>
+          <div class="pl-2">
+            <b>${inheritList[i][j].name}</b>
+            <div>${inheritList[i][j].skills.join('<br>')}</div>
+          </div>
+        </li>`;
+    }
+    html += `</ul>`;
+  }
+  return html;
+}
 
 function ivSelectableDisplay($opt, $this) {
   let data = $opt.data('val');

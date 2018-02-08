@@ -53,8 +53,9 @@
         <div class="card-body tab-content md-text-small" id="customize-hero-container">
           <div class="tab-pane fade show active" id="feh-unit">
             <section class="ml-2">
-              <div class="d-flex mb-3">
+              <div class="d-flex mb-3 justify-content-between">
                 <h5>Unit</h5>
+                <!-- <button type="button" id="show-inherit" class="btn btn-sm btn-info" data-toggle="modal" data-target="#inherit-modal" disabled>Inheritance Planner</button> -->
               </div>
               <div class="row mb-3">
                 <label class="col-2 col-xl-1 col-form-label text-md-right">Hero</label>
@@ -573,6 +574,34 @@
               </div>
             </section>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="inherit-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Inheritance Planner</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <h6>Suggested Inheritance Plan</h6>
+            <div class="spinner">
+              <span>Loading</span>
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+            <div id="inherit-suggest" class="row"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
