@@ -38,7 +38,7 @@ function bindEvents() {
 
 function onTabChange(event) {
   if ($(event.currentTarget).data('val') === 'custom-unit') {
-    customBuilder.drawHero(customBuilder.hero);
+    customBuilder.drawHero();
     activeTab = 'custom';
   } else {
     defaultBuilder.drawHero(defaultBuilder.hero);

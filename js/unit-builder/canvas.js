@@ -217,7 +217,7 @@ function drawCustomHero(customUnit) {
   drawNameAndTitle(customUnit.name, customUnit.title);
   drawMergesAndStats(customUnit.merges, customUnit.processedStats);
   drawWeaponAndMoveType(customUnit.colorType, customUnit.weaponType, customUnit.moveType);
-  drawCustomHeroSkills();
+  drawCustomHeroSkills(customUnit);
 }
 
 function drawCustomHeroSkills(customUnit) {

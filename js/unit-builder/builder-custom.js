@@ -128,7 +128,7 @@ function onCustomSkillChange(event) {
   let skill = $select.data('val');
 
   if (skillType === 'weapon') {
-    if (SKILL_REFINED_WEAPONS[skill.name]) {
+    if (skills.getRefinery[skill.name]) {
       $(elements.CUSTOM_SKILL_SELECT + '[data-skill="refine"]')
           .selectable('data',
               [values.CONST.EMPTY_SKILL].concat(SKILL_REFINED_WEAPONS[skill.name]));
@@ -160,7 +160,7 @@ function onCustomNewSkillChange(event) {
         customUnit.customSkills[skillType].icon = new Image();
         customUnit.customSkills[skillType].crossOrigin = 'anonymous';
         customUnit.customSkills[skillType].icon.src = e.target.result;
-        customUnit.customSkills[skillType].icon.onload = () => drawCustomHero();
+        customUnit.customSkills[skillType].icon.onload = () => drawHero();
       };
       fileReader.readAsDataURL($input[0].files[0]);
     } else {

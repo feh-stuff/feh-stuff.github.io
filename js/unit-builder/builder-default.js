@@ -197,8 +197,6 @@ function onInheritanceShow(event) {
   if (isSkillSetChanged(targetSkills, previousData)) {
     inheritPlanner.getInheritancePlanPromise(targetSkills, fehUnit.data, fehUnit.rarity, 2)
         .then((e) => {
-          console.log('Promise Returned');
-          console.log(e);
           $(elements.INHERIT_LIST).html(getInheritanceHtml(e));
         })
   }
