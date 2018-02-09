@@ -3317,28 +3317,31 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Cavalry",
+    rarity4: ["pool1"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_L'Arachel.png",
       main: "img/heroes-main/L'Arachel.png"
     },
     skills: [
-      { name: "Light", rarity: 5 },
-      { name: "Ellight", rarity: 5 },
-      { name: "Shine", rarity: 5 },
+      { name: "Light", rarity: 4 },
+      { name: "Ellight", rarity: 4 },
+      { name: "Shine", rarity: 4 },
       { name: "Ivaldi", rarity: 5 },
-      { name: "Rising Light", rarity: 5 },
-      { name: "Growing Light", rarity: 5 },
-      { name: "Renewal 1", rarity: 5 },
-      { name: "Renewal 2", rarity: 5 },
-      { name: "Renewal 3", rarity: 5 },
-      { name: "Res Tactic 1", rarity: 5 },
-      { name: "Res Tactic 2", rarity: 5 },
+      { name: "Rising Light", rarity: 4 },
+      { name: "Growing Light", rarity: 4 },
+      { name: "Renewal 1", rarity: 4 },
+      { name: "Renewal 2", rarity: 4 },
+      { name: "Renewal 3", rarity: 4 },
+      { name: "Res Tactic 1", rarity: 4 },
+      { name: "Res Tactic 2", rarity: 4 },
       { name: "Res Tactic 3", rarity: 5 },
     ],
     stats: {
       level1: {hp: 16,atk: 9,spd: 7,def: 4,res: 7},
-      level40: { hp: [30, 33, 36], atk: [30, 33, 36], spd: [28, 31, 34], def: [13, 17, 20], res: [28, 31, 34]}
+      level40: { hp: [30, 33, 36], atk: [30, 33, 36], spd: [28, 31, 34], def: [13, 17, 20], res: [28, 31, 34]},
+      level1_4: {hp: 15,atk: 9,spd: 7,def: 3,res: 6},
+      level40_4: { hp: [28, 31, 34], atk: [28, 31, 34], spd: [26, 29, 32], def: [12, 15, 18], res: [25, 28, 31]}
     }
   },
   {

@@ -75,7 +75,7 @@ function initHeroList() {
   let $focusList = $(elements.FOCUS_LIST).empty();
   let focusHeroes = heroes.getHeroes(banner.focusHeroes);
 
-  summonPool = heroes.getSummoningPool('pool1', '1 Jan, 2018');
+  summonPool = heroes.getSummoningPool('pool1', banner.startDate);
   summonPool.rf = focusHeroes;
   focusHeroes.forEach(hero => {
     $(`<div class="focus-list-hero">
