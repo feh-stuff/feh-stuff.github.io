@@ -3,6 +3,19 @@ module.exports = [
     date: "February 2018",
     banners: [
       {
+        name: "Breath of Destiny Tempest Trials",
+        startDate: "Feb 11, 2018",
+        focusHeroes: [ "Ninian", "Clarine", "Klein" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateRarity3: 36,
+        rateRarity4: 58,
+        rateRarity5: 3,
+        rateRarityFocus: 3,
+        pityRateRarity5: 0.25,
+        pityRateRarityFocus: 0.25
+      },
+      {
         name: "Love Abounds",
         startDate: "Feb 09, 2018",
         focusHeroes: [ "Lyn (Love Abounds)", "Hector (Love Abounds)", "Roy (Love Abounds)", "Lilina (Love Abounds)" ],
