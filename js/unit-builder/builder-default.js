@@ -153,7 +153,9 @@ function onSkillSelect(event) {
     $('.skill-info-icon[data-skill="refine"]').addClass('d-none');
   }
 
-  toggleSkillInfo(skillType, skill);
+  if (skillType !== 'seal') {
+    toggleSkillInfo(skillType, skill);
+  }
   fehUnit.skills[skillType] = skill;
   drawHero(fehUnit);
 };

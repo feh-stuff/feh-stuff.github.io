@@ -244,6 +244,24 @@ module.exports = [
     effect: "Grants adjacent allies Res+4 through their next actions at the start of each turn."
   },
   {
+    name: "Fortress Res 1",
+    icon: "25-0",
+    stats: {atk: -3, res: 3},
+    effect: "Grants Res+3. Inflicts Atk-3."
+  },
+  {
+    name: "Fortress Res 2",
+    icon: "25-1",
+    stats: {atk: -3, res: 4},
+    effect: "Grants Res+4. Inflicts Atk-3."
+  },
+  {
+    name: "Fortress Res 3",
+    icon: "25-2",
+    stats: {atk: -3, res: 5},
+    effect: "Grants Res+5. Inflicts Atk-3."
+  },
+  {
     name: "Guidance 1",
     icon: "25-8",
     include: [{moveType: "Flying"}],
@@ -820,6 +838,21 @@ module.exports = [
     icon: "22-2",
     stats: {atk: 3},
     effect: "Grants Atk+3."
+  },
+  {
+    name: "Threaten Atk 1",
+    icon: "13-5",
+    effect: "Inflicts Atk-3 on foes within 2 spaces through their next actions at the start of each turn."
+  },
+  {
+    name: "Threaten Atk 2",
+    icon: "13-6",
+    effect: "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn."
+  },
+  {
+    name: "Threaten Atk 3",
+    icon: "13-7",
+    effect: "Inflicts Atk-5 on foes within 2 spaces through their next actions at the start of each turn."
   },
   {
     name: "Threaten Spd 1",
