@@ -1117,6 +1117,38 @@ module.exports = [
     }
   },
   {
+    name: "Celica (Fallen Heroes)",
+    shortName: "Celica",
+    title: "Imprisoned Soul",
+    releaseDate: "Feb 22, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Infantry",
+    rarity5: ["pool1"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Celica (Fallen Heroes).png",
+      main: "img/heroes-main/Celica.png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Beloved Zofia", rarity: 5 },
+      { name: "New Moon", rarity: 5 },
+      { name: "Luna", rarity: 5 },
+      { name: "Chill Spd 1", rarity: 5 },
+      { name: "Chill Spd 2", rarity: 5 },
+      { name: "Chill Spd 3", rarity: 5 },
+      { name: "Hone Atk 1", rarity: 5 },
+      { name: "Hone Atk 2", rarity: 5 },
+      { name: "Hone Atk 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+    }
+  },
+  {
     name: "Charlotte (Bridal Blessings)",
     shortName: "Charlotte",
     title: "Money Maiden",
@@ -2683,6 +2715,38 @@ module.exports = [
       level40: { hp: [ 34, 37, 41 ], atk: [ 32, 35, 38 ], spd: [ 33, 36, 39 ], def: [ 20, 23, 26 ], res: [ 22, 26, 29 ] },
       level1_4: { hp: 17, atk: 9, spd: 10, def: 5, res: 3 },
       level40_4: { hp: [ 32, 35, 38 ], atk: [ 30, 33, 36 ], spd: [ 31, 34, 37 ], def: [ 18, 21, 24 ], res: [ 20, 23, 26 ] }
+    }
+  },
+  {
+    name: "Hardin (Fallen Heroes)",
+    shortName: "Hardin",
+    title: "Dark Emperor",
+    releaseDate: "Feb 22, 2018",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Armored",
+    rarity5: ["pool1"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Hardin (Fallen Heroes).png",
+      main: "img/heroes-main/Feh.png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "Silver Lance", rarity: 5 },
+      { name: "Gradivus", rarity: 5 },
+      { name: "Retribution", rarity: 5 },
+      { name: "Vengeance", rarity: 5 },
+      { name: "Brazen Def/Res 1", rarity: 5 },
+      { name: "Brazen Def/Res 2", rarity: 5 },
+      { name: "Brazen Def/Res 3", rarity: 5 },
+      { name: "Bold Fighter 1", rarity: 5 },
+      { name: "Bold Fighter 2", rarity: 5 },
+      { name: "Bold Fighter 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
     }
   },
   {
@@ -5641,6 +5705,39 @@ module.exports = [
       level40: { hp: [ 36, 40, 43 ], atk: [ 25, 29, 32 ], spd: [ 25, 29, 32 ], def: [ 25, 29, 32 ], res: [ 19, 22, 25 ] },
       level1_4: { hp: 17, atk: 7, spd: 7, def: 6, res: 4 },
       level40_4: { hp: [ 34, 37, 40 ], atk: [ 24, 27, 30 ], spd: [ 24, 27, 30 ], def: [ 23, 26, 29 ], res: [ 17, 20, 23 ] }
+    }
+  },
+  {
+    name: "Robin (M) (Fallen Heroes)",
+    shortName: "Robin",
+    title: "Fell Reincarnation",
+    releaseDate: "Feb 22, 2018",
+    colorType: "Green",
+    weaponType: "Breath",
+    moveType: "Armored",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Robin (M) (Fallen Heroes).png",
+      main: "img/heroes-main/Robin (M).png"
+    },
+    skills: [
+      { name: "Fire Breath", rarity: 5 },
+      { name: "Fire Breath+", rarity: 5 },
+      { name: "Lightning Breath", rarity: 5 },
+      { name: "Expiration", rarity: 5},
+      { name: "Glowing Ember", rarity: 5 },
+      { name: "Ignis", rarity: 5 },
+      { name: "Vengeful Fighter 1", rarity: 5 },
+      { name: "Vengeful Fighter 2", rarity: 5 },
+      { name: "Vengeful Fighter 3", rarity: 5 },
+      { name: "Spur Res 1", rarity: 5 },
+      { name: "Spur Res 2", rarity: 5 },
+      { name: "Ward Dragons", rarity: 5 },
+    ],
+    stats: {
+      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 07 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
     }
   },
   {

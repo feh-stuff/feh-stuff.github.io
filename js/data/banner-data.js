@@ -3,6 +3,45 @@ module.exports = [
     date: "February 2018",
     banners: [
       {
+        name: "Fallen Heroes",
+        startDate: "Feb 22, 2018",
+        focusHeroes: [ "Robin (M) (Fallen Heroes)", "Hardin (Fallen Heroes)", "Celica (Fallen Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateRarity3: 36,
+        rateRarity4: 58,
+        rateRarity5: 3,
+        rateRarityFocus: 3,
+        pityRateRarity5: 0.25,
+        pityRateRarityFocus: 0.25
+      },
+      {
+        name: "New Power",
+        startDate: "Feb 20, 2018",
+        focusHeroes: [ "Caeda", "Hinoka", "Raven", "Felicia" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateRarity3: 36,
+        rateRarity4: 58,
+        rateRarity5: 3,
+        rateRarityFocus: 3,
+        pityRateRarity5: 0.25,
+        pityRateRarityFocus: 0.25
+      },
+      {
+        name: "Corrin and Azura's Battle",
+        startDate: "Feb 16, 2018",
+        focusHeroes: [ "Corrin (M)", "Azura", "Kagero" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateRarity3: 36,
+        rateRarity4: 58,
+        rateRarity5: 3,
+        rateRarityFocus: 3,
+        pityRateRarity5: 0.25,
+        pityRateRarityFocus: 0.25
+      },
+      {
         name: "Breath of Destiny Tempest Trials",
         startDate: "Feb 11, 2018",
         focusHeroes: [ "Ninian", "Clarine", "Klein" ],
