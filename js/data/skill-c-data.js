@@ -1056,6 +1056,14 @@ module.exports = [
     effect: "Grants cavalry allies within 2 spaces Def/Res+4 during combat."
   },
   {
+    name: "Ward Dragons",
+    spCost: 200,
+    icon: "38-0",
+    prev: ["Spur Def 2", "Spur Res 2"],
+    include: [{weaponType: "Breath"}],
+    effect: "Grants dragon allies within 2 spaces Def/Res+4 during combat."
+  },
+  {
     name: "Ward Fliers",
     spCost: 200,
     icon: "11-12",

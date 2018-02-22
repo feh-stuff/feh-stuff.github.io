@@ -165,6 +165,24 @@ module.exports = [
     effect: "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is reversed."
   },
   {
+    name: "Chill Spd 1",
+    spCost: 60,
+    icon: "37-10",
+    effect: "At the start of each turn, inflicts Spd-3 on foe on the enemy team with the highest Spd through its next action."
+  },
+  {
+    name: "Chill Spd 2",
+    spCost: 120,
+    icon: "37-11",
+    effect: "At the start of each turn, inflicts Spd-5 on foe on the enemy team with the highest Spd through its next action."
+  },
+  {
+    name: "Chill Spd 3",
+    spCost: 240,
+    icon: "37-12",
+    effect: "At the start of each turn, inflicts Spd-7 on foe on the enemy team with the highest Spd through its next action."
+  },
+  {
     name: "Chilling Seal",
     spCost: 300,
     icon: "35-2",

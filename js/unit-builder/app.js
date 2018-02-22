@@ -1127,7 +1127,7 @@ module.exports = [
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Celica (Fallen Heroes).png",
-      main: "img/heroes-main/Celica.png"
+      main: "img/heroes-main/Celica (Fallen Heroes).png"
     },
     skills: [
       { name: "Iron Sword", rarity: 5 },
@@ -1144,8 +1144,8 @@ module.exports = [
       { name: "Hone Atk 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp:18, atk: 9, spd: 9, def: 5, res: 7 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 32, 35, 38 ], spd: [ 32, 35, 38 ], def: [ 23, 27, 30 ], res: [ 23, 26, 30 ] }
     }
   },
   {
@@ -1406,7 +1406,7 @@ module.exports = [
     ],
     stats: {
       level1: { hp: 18, atk: 7, spd: 8, def: 6, res: 5 },
-      level40: { hp: [ 34, 37, 41 ], atk: [ 28, 31, 34 ], spd: [ 31, 34, 37 ], def: [ 22, 25, 29 ], res: [ 17, 20, 23 ] },
+      level40: { hp: [ 34, 37, 41 ], atk: [ 28, 31, 34 ], spd: [ 31, 34, 37 ], def: [ 22, 25, 28 ], res: [ 17, 20, 23 ] },
       level1_4: { hp: 17, atk: 7, spd: 8, def: 5, res: 4 },
       level40_4: { hp: [ 32, 35, 38 ], atk: [ 26, 29, 32 ], spd: [ 29, 32, 35 ], def: [ 20, 23, 26 ], res: [ 15, 18, 21 ] }
     }
@@ -2728,7 +2728,7 @@ module.exports = [
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Hardin (Fallen Heroes).png",
-      main: "img/heroes-main/Feh.png"
+      main: "img/heroes-main/Hardin (Fallen Heroes).png"
     },
     skills: [
       { name: "Iron Lance", rarity: 5 },
@@ -2745,8 +2745,8 @@ module.exports = [
       { name: "Bold Fighter 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp: 23, atk: 8, spd: 6, def: 10, res: 8 },
+      level40: { hp: [ 41, 45, 48 ], atk: [ 31, 34, 37 ], spd: [ 24, 28, 31 ], def: [ 33, 36, 39 ], res: [ 29, 32, 35 ] }
     }
   },
   {
@@ -5719,25 +5719,25 @@ module.exports = [
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Robin (M) (Fallen Heroes).png",
-      main: "img/heroes-main/Robin (M).png"
+      main: "img/heroes-main/Robin (M) (Fallen Heroes).png"
     },
     skills: [
       { name: "Fire Breath", rarity: 5 },
       { name: "Fire Breath+", rarity: 5 },
-      { name: "Lightning Breath", rarity: 5 },
+      { name: "Flametongue", rarity: 5 },
       { name: "Expiration", rarity: 5},
       { name: "Glowing Ember", rarity: 5 },
       { name: "Ignis", rarity: 5 },
       { name: "Vengeful Fighter 1", rarity: 5 },
       { name: "Vengeful Fighter 2", rarity: 5 },
       { name: "Vengeful Fighter 3", rarity: 5 },
-      { name: "Spur Res 1", rarity: 5 },
-      { name: "Spur Res 2", rarity: 5 },
+      { name: "Spur Def 1", rarity: 5 },
+      { name: "Spur Def 2", rarity: 5 },
       { name: "Ward Dragons", rarity: 5 },
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 07 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp: 24, atk: 10, spd: 7, def: 9, res: 5 },
+      level40: { hp: [ 45, 48, 51 ], atk: [ 37, 40, 44 ], spd: [ 21, 24, 27 ], def: [ 32, 35, 38 ], res: [ 23, 27, 30 ] }
     }
   },
   {
@@ -6818,6 +6818,42 @@ module.exports = [
     }
   },
   {
+    name: "Takumi (Fallen Heroes)",
+    shortName: "Takumi",
+    title: "Empty Vessel",
+    releaseDate: "Feb 23, 2018",
+    colorType: "Neutral",
+    weaponType: "Bow",
+    moveType: "Infantry",
+    rarity3: ["pool1"],
+    rarity4: ["pool1"],
+    ghb: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Takumi (Fallen Heroes).png",
+      main: "img/heroes-main/Takumi (Fallen Heroes).png"
+    },
+    skills: [
+      { name: "Iron Bow", rarity: 3 },
+      { name: "Steel Bow", rarity: 3 },
+      { name: "Silver Bow", rarity: 4 },
+      { name: "Skadi", rarity: 5 },
+      { name: "Retribution", rarity: 3 },
+      { name: "Vengeance", rarity: 4 },
+      { name: "Fury 1", rarity: 3 },
+      { name: "Fury 2", rarity: 3 },
+      { name: "Fury 3", rarity: 4 },
+      { name: "Spd Smoke 1", rarity: 3 },
+      { name: "Spd Smoke 2", rarity: 4 },
+      { name: "Spd Smoke 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 15, atk: 9, spd: 10, def: 6, res: 5 },
+      level40: { hp: [ 34, 37, 41 ], atk: [ 28, 31, 34 ], spd: [ 31, 34, 37 ], def: [ 22, 25, 28 ], res: [ 21, 24, 27 ] },
+      level1_4: { hp: 17, atk: 7, spd: 8, def: 5, res: 4 },
+      level40_4: { hp: [ 31, 34, 37 ], atk: [ 26, 29, 32 ], spd: [ 29, 32, 35 ], def: [ 20, 23, 26 ], res: [ 19, 22, 25 ] }
+    }
+  },
+  {
     name: "Takumi (Happy New Year!)",
     shortName: "Takumi",
     title: "Prince of Soup",
@@ -7643,6 +7679,27 @@ module.exports = [
     prev: ["Brazen Atk/Spd 2"],
     last: true,
     effect: "If unit's HP ≤ 80% at the start of combat, grants Atk/Spd+7 during combat."
+  },
+  {
+    name: "Brazen Def/Res 1",
+    spCost: 60,
+    icon: "37-7",
+    effect: "If unit's HP ≤ 80% at the start of combat, grants Def/Res+3 during combat."
+  },
+  {
+    name: "Brazen Def/Res 2",
+    spCost: 120,
+    icon: "37-8",
+    prev: ["Brazen Def/Res 1"],
+    effect: "If unit's HP ≤ 80% at the start of combat, grants Def/Res+5 during combat."
+  },
+  {
+    name: "Brazen Def/Res 3",
+    spCost: 240,
+    icon: "37-9",
+    prev: ["Brazen Def/Res 2"],
+    last: true,
+    effect: "If unit's HP ≤ 80% at the start of combat, grants Def/Res+7 during combat."
   },
   {
     name: "Close Counter",
@@ -9131,6 +9188,24 @@ module.exports = [
     prev: ["Cancel Affinity 2"],
     exclude: [{weaponType: "Tome"}, {weaponType:"Staff"}],
     effect: "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is reversed."
+  },
+  {
+    name: "Chill Spd 1",
+    spCost: 60,
+    icon: "37-10",
+    effect: "At the start of each turn, inflicts Spd-3 on foe on the enemy team with the highest Spd through its next action."
+  },
+  {
+    name: "Chill Spd 2",
+    spCost: 120,
+    icon: "37-11",
+    effect: "At the start of each turn, inflicts Spd-5 on foe on the enemy team with the highest Spd through its next action."
+  },
+  {
+    name: "Chill Spd 3",
+    spCost: 240,
+    icon: "37-12",
+    effect: "At the start of each turn, inflicts Spd-7 on foe on the enemy team with the highest Spd through its next action."
   },
   {
     name: "Chilling Seal",
@@ -11017,6 +11092,14 @@ module.exports = [
     prev: ["Spur Def 2", "Spur Res 2"],
     include: [{moveType: "Cavalry"}],
     effect: "Grants cavalry allies within 2 spaces Def/Res+4 during combat."
+  },
+  {
+    name: "Ward Dragons",
+    spCost: 200,
+    icon: "38-0",
+    prev: ["Spur Def 2", "Spur Res 2"],
+    include: [{weaponType: "Breath"}],
+    effect: "Grants dragon allies within 2 spaces Def/Res+4 during combat."
   },
   {
     name: "Ward Fliers",
@@ -14955,6 +15038,18 @@ module.exports = [
     effect: "Accelerates Special trigger (cooldown count -1)."
   },
   {
+    name: "Beloved Zofia",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    stats: {def: 3},
+    prev: ["Silver Sword"],
+    exclusive: ["Celica (Fallen Heroes)"],
+    effect: "Grants Def+3. If unit's HP = 100% at start of combat, grants Atk/Spd/Def/Res+4, but if unit attacked, unit takes 4 damage after combat."
+  },
+  {
     name: "Berkut's Lance",
     spCost: 200,
     damage: 10,
@@ -15734,6 +15829,17 @@ module.exports = [
     effect: "Effective against flying units.",
   },
   {
+    name: "Expiration",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Breath",
+    colorType: "Green",
+    prev: ["Flametongue"],
+    exclusive: ["Robin (M) (Fallen Heroes)"],
+    effect: "If attacked, unit can counterattack regardless of foe's range. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.",
+  },
+  {
     name: "Falchion",
     spCost: 400,
     damage: 16,
@@ -15991,7 +16097,7 @@ module.exports = [
     weaponType: "Lance",
     colorType: "Blue",
     prev: ["Silver Lance"],
-    exclusive: ["Camus"],
+    exclusive: ["Camus", "Hardin (Fallen Heroes)"],
     effect: "Enables counterattack regardless of distance if this unit is attacked.",
   },
   {
@@ -17374,6 +17480,18 @@ module.exports = [
     prev: ["Silver Axe"],
     exclusive: ["Surtr"],
     effect: "Grants Def+3. Deals 20 damage to foes within 2 spaces at the start of each turn.",
+  },
+  {
+    name: "Skadi",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Bow",
+    colorType: "Neutral",
+    stats: {spd: 3},
+    prev: ["Silver Bow"],
+    exclusive: ["Takumi (Fallen Heroes)"],
+    effect: "Effective against flying units.  Grants Spd+3. At the start of turn 3, foes within 3 columns centered on unit take 10 damage and bonuses on those foes become penalties through their next actions.",
   },
   {
     name: "Slaying Axe",

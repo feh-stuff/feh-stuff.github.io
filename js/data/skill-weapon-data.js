@@ -167,6 +167,18 @@ module.exports = [
     effect: "Accelerates Special trigger (cooldown count -1)."
   },
   {
+    name: "Beloved Zofia",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    stats: {def: 3},
+    prev: ["Silver Sword"],
+    exclusive: ["Celica (Fallen Heroes)"],
+    effect: "Grants Def+3. If unit's HP = 100% at start of combat, grants Atk/Spd/Def/Res+4, but if unit attacked, unit takes 4 damage after combat."
+  },
+  {
     name: "Berkut's Lance",
     spCost: 200,
     damage: 10,
@@ -946,6 +958,17 @@ module.exports = [
     effect: "Effective against flying units.",
   },
   {
+    name: "Expiration",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Breath",
+    colorType: "Green",
+    prev: ["Flametongue"],
+    exclusive: ["Robin (M) (Fallen Heroes)"],
+    effect: "If attacked, unit can counterattack regardless of foe's range. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.",
+  },
+  {
     name: "Falchion",
     spCost: 400,
     damage: 16,
@@ -1203,7 +1226,7 @@ module.exports = [
     weaponType: "Lance",
     colorType: "Blue",
     prev: ["Silver Lance"],
-    exclusive: ["Camus"],
+    exclusive: ["Camus", "Hardin (Fallen Heroes)"],
     effect: "Enables counterattack regardless of distance if this unit is attacked.",
   },
   {
@@ -2586,6 +2609,18 @@ module.exports = [
     prev: ["Silver Axe"],
     exclusive: ["Surtr"],
     effect: "Grants Def+3. Deals 20 damage to foes within 2 spaces at the start of each turn.",
+  },
+  {
+    name: "Skadi",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Bow",
+    colorType: "Neutral",
+    stats: {spd: 3},
+    prev: ["Silver Bow"],
+    exclusive: ["Takumi (Fallen Heroes)"],
+    effect: "Effective against flying units.  Grants Spd+3. At the start of turn 3, foes within 3 columns centered on unit take 10 damage and bonuses on those foes become penalties through their next actions.",
   },
   {
     name: "Slaying Axe",

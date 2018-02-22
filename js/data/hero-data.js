@@ -1000,7 +1000,7 @@ module.exports = [
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Celica (Fallen Heroes).png",
-      main: "img/heroes-main/Celica.png"
+      main: "img/heroes-main/Celica (Fallen Heroes).png"
     },
     skills: [
       { name: "Iron Sword", rarity: 5 },
@@ -1017,8 +1017,8 @@ module.exports = [
       { name: "Hone Atk 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp:18, atk: 9, spd: 9, def: 5, res: 7 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 32, 35, 38 ], spd: [ 32, 35, 38 ], def: [ 23, 27, 30 ], res: [ 23, 26, 30 ] }
     }
   },
   {
@@ -1279,7 +1279,7 @@ module.exports = [
     ],
     stats: {
       level1: { hp: 18, atk: 7, spd: 8, def: 6, res: 5 },
-      level40: { hp: [ 34, 37, 41 ], atk: [ 28, 31, 34 ], spd: [ 31, 34, 37 ], def: [ 22, 25, 29 ], res: [ 17, 20, 23 ] },
+      level40: { hp: [ 34, 37, 41 ], atk: [ 28, 31, 34 ], spd: [ 31, 34, 37 ], def: [ 22, 25, 28 ], res: [ 17, 20, 23 ] },
       level1_4: { hp: 17, atk: 7, spd: 8, def: 5, res: 4 },
       level40_4: { hp: [ 32, 35, 38 ], atk: [ 26, 29, 32 ], spd: [ 29, 32, 35 ], def: [ 20, 23, 26 ], res: [ 15, 18, 21 ] }
     }
@@ -2601,7 +2601,7 @@ module.exports = [
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Hardin (Fallen Heroes).png",
-      main: "img/heroes-main/Feh.png"
+      main: "img/heroes-main/Hardin (Fallen Heroes).png"
     },
     skills: [
       { name: "Iron Lance", rarity: 5 },
@@ -2618,8 +2618,8 @@ module.exports = [
       { name: "Bold Fighter 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp: 23, atk: 8, spd: 6, def: 10, res: 8 },
+      level40: { hp: [ 41, 45, 48 ], atk: [ 31, 34, 37 ], spd: [ 24, 28, 31 ], def: [ 33, 36, 39 ], res: [ 29, 32, 35 ] }
     }
   },
   {
@@ -5592,25 +5592,25 @@ module.exports = [
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Robin (M) (Fallen Heroes).png",
-      main: "img/heroes-main/Robin (M).png"
+      main: "img/heroes-main/Robin (M) (Fallen Heroes).png"
     },
     skills: [
       { name: "Fire Breath", rarity: 5 },
       { name: "Fire Breath+", rarity: 5 },
-      { name: "Lightning Breath", rarity: 5 },
+      { name: "Flametongue", rarity: 5 },
       { name: "Expiration", rarity: 5},
       { name: "Glowing Ember", rarity: 5 },
       { name: "Ignis", rarity: 5 },
       { name: "Vengeful Fighter 1", rarity: 5 },
       { name: "Vengeful Fighter 2", rarity: 5 },
       { name: "Vengeful Fighter 3", rarity: 5 },
-      { name: "Spur Res 1", rarity: 5 },
-      { name: "Spur Res 2", rarity: 5 },
+      { name: "Spur Def 1", rarity: 5 },
+      { name: "Spur Def 2", rarity: 5 },
       { name: "Ward Dragons", rarity: 5 },
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 07 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp: 24, atk: 10, spd: 7, def: 9, res: 5 },
+      level40: { hp: [ 45, 48, 51 ], atk: [ 37, 40, 44 ], spd: [ 21, 24, 27 ], def: [ 32, 35, 38 ], res: [ 23, 27, 30 ] }
     }
   },
   {
@@ -6688,6 +6688,42 @@ module.exports = [
     stats: {
       level1: { hp: 18, atk: 8, spd: 7, def: 6, res: 5 },
       level40: { hp: [ 36, 40, 43 ], atk: [ 29, 32, 35 ], spd: [ 30, 33, 36 ], def: [ 22, 25, 29 ], res: [ 14, 18, 21 ] }
+    }
+  },
+  {
+    name: "Takumi (Fallen Heroes)",
+    shortName: "Takumi",
+    title: "Empty Vessel",
+    releaseDate: "Feb 23, 2018",
+    colorType: "Neutral",
+    weaponType: "Bow",
+    moveType: "Infantry",
+    rarity3: ["pool1"],
+    rarity4: ["pool1"],
+    ghb: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Takumi (Fallen Heroes).png",
+      main: "img/heroes-main/Takumi (Fallen Heroes).png"
+    },
+    skills: [
+      { name: "Iron Bow", rarity: 3 },
+      { name: "Steel Bow", rarity: 3 },
+      { name: "Silver Bow", rarity: 4 },
+      { name: "Skadi", rarity: 5 },
+      { name: "Retribution", rarity: 3 },
+      { name: "Vengeance", rarity: 4 },
+      { name: "Fury 1", rarity: 3 },
+      { name: "Fury 2", rarity: 3 },
+      { name: "Fury 3", rarity: 4 },
+      { name: "Spd Smoke 1", rarity: 3 },
+      { name: "Spd Smoke 2", rarity: 4 },
+      { name: "Spd Smoke 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 15, atk: 9, spd: 10, def: 6, res: 5 },
+      level40: { hp: [ 34, 37, 41 ], atk: [ 28, 31, 34 ], spd: [ 31, 34, 37 ], def: [ 22, 25, 28 ], res: [ 21, 24, 27 ] },
+      level1_4: { hp: 17, atk: 7, spd: 8, def: 5, res: 4 },
+      level40_4: { hp: [ 31, 34, 37 ], atk: [ 26, 29, 32 ], spd: [ 29, 32, 35 ], def: [ 20, 23, 26 ], res: [ 19, 22, 25 ] }
     }
   },
   {
