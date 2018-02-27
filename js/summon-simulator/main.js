@@ -46,7 +46,7 @@ function init() {
     $(elements.SELECT_BANNER).selectable('text', banner.name);
 
     let rates = getUrlParam('rates').split(';');
-    if (rates.length === 4) {
+    if (rates.length === 5) {
       banner.rateRarityFocus = parseInt(rates[0]);
       banner.rateRarity5 = parseInt(rates[1]);
       banner.rateRarityFocus4 = parseInt(rates[2]);
