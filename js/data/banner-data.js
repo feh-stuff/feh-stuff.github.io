@@ -3,7 +3,7 @@ module.exports = [
     date: "February 2018",
     banners: [
       {
-        name: "Legendary Heroes: Ike, Vanguard Legend",
+        name: "Legendary Heroes: Ephraim, Legendary Lord",
         startDate: "Jan 31, 2018",
         focusHeroes: [ "Gunnthrá", "Leo (Nohrian Summer)", "Olivia (Performing Arts)", "Shiro", "Ike (Brave Heroes)", "Corrin (F) (Nohrian Summer)",
             "Ike (Legendary Heroes)", "Dorcas", "Mia", "Gaius (Ylissean Summer)", "Jaffar", "Ephraim (Legendary Heroes)" ],
