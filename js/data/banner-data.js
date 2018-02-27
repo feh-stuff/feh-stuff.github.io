@@ -3,6 +3,33 @@ module.exports = [
     date: "February 2018",
     banners: [
       {
+        name: "Legendary Heroes: Ike, Vanguard Legend",
+        startDate: "Jan 31, 2018",
+        focusHeroes: [ "Gunnthrá", "Leo (Nohrian Summer)", "Olivia (Performing Arts)", "Shiro", "Ike (Brave Heroes)", "Corrin (F) (Nohrian Summer)",
+            "Ike (Legendary Heroes)", "Dorcas", "Mia", "Gaius (Ylissean Summer)", "Jaffar", "Ephraim (Legendary Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [ "Robin (M) (Fallen Heroes)", "Hardin (Fallen Heroes)", "Celica (Fallen Heroes)" ],
+        rateRarity3: 34,
+        rateRarity4: 58,
+        rateRarity5: 0,
+        rateRarityFocus: 8,
+        pityRateRarity5: 0,
+        pityRateRarityFocus: 0.5
+      },
+      {
+        name: "Shadow in the Mirror",
+        startDate: "Feb 22, 2018",
+        focusHeroes: [ "Robin (M)", "Takumi", "Celica", "Zelgius" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [ "Robin (M) (Fallen Heroes)", "Hardin (Fallen Heroes)", "Celica (Fallen Heroes)" ],
+        rateRarity3: 36,
+        rateRarity4: 58,
+        rateRarity5: 3,
+        rateRarityFocus: 3,
+        pityRateRarity5: 0.25,
+        pityRateRarityFocus: 0.25
+      },
+      {
         name: "Fallen Heroes",
         startDate: "Feb 22, 2018",
         focusHeroes: [ "Robin (M) (Fallen Heroes)", "Hardin (Fallen Heroes)", "Celica (Fallen Heroes)" ],
@@ -102,7 +129,7 @@ module.exports = [
         name: "Legendary Heroes: Ike, Vanguard Legend",
         startDate: "Jan 31, 2018",
         focusHeroes: [ "Gunnthrá", "Xander (Nohrian Summer)", "Azura (Performing Arts)", "Fjorm", "Lucina (Brave Heroes)", "Robin (F) (Ylissean Summer)",
-            "Ike (Legendary Heroe s)", "Sanaki", "Siegbert", "Frederick (Ylissean Summer)", "Takumi", "Faye" ],
+            "Ike (Legendary Heroes)", "Sanaki", "Siegbert", "Frederick (Ylissean Summer)", "Takumi", "Faye" ],
         excludeFromRarity4: [ "L'Arachel" ],
         excludeFromRarity5: [ "Myrrh", "Eirika (Sacred Memories)", "L'Arachel" ],
         rateRarity3: 34,

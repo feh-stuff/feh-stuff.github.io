@@ -791,6 +791,13 @@ module.exports = [
     effect: "If unit's Special triggers based on a foe's attack, Special cooldown count-2 at start of turn 1. Unit takes 5 less damage when Special triggers."
   },
   {
+    name: "Solar Brace",
+    spCost: 200,
+    icon: "0-0",
+    include: [{name:"Ephraim (Legendary Heroes)"}],
+    effect: "Restores 30% of damage dealt when Special triggers during combat. (Stacks with effects of skills like Sol.)"
+  },
+  {
     name: "Swordbreaker 1",
     spCost: 50,
     icon: "8-4",

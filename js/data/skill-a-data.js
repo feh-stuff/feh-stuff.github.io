@@ -968,6 +968,21 @@ module.exports = [
     effect: "Grants Atk/Def+4 during combat if unit initiates combat."
   },
   {
+    name: "Sturdy Stance 1",
+    spCost: 100,
+    icon: "0-0",
+    prev: ["Steady Stance 1"],
+    effect: "Grants Atk/Def+2 during combat when this unit is attacked."
+  },
+  {
+    name: "Sturdy Stance 2",
+    spCost: 200,
+    icon: "0-0",
+    prev: ["Sturdy Stance 1"],
+    last: true,
+    effect: "Grants Atk/Def+4 during combat when this unit is attacked."
+  },
+  {
     name: "Svalinn Shield",
     spCost: 200,
     icon: "4-3",

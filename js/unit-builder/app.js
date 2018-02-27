@@ -2127,6 +2127,39 @@ module.exports = [
     }
   },
   {
+    name: "Ephraim (Legendary Heroes)",
+    shortName: "Ephraim",
+    title: "Legendary Lord",
+    releaseDate: "Feb 28, 2018",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Cavalry",
+    rarity5: ["pool1"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Ephraim (Legendary Heroes).png",
+      main: "img/heroes-main/Ephraim.png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "Heavy Spear", rarity: 5 },
+      { name: "Flame Siegmund", rarity: 5 },
+      { name: "Daylight", rarity: 5},
+      { name: "Sol", rarity: 5},
+      { name: "Steady Stance 1", rarity: 5 },
+      { name: "Sturdy Stance 1", rarity: 5 },
+      { name: "Sturdy Stance 2", rarity: 5 },
+      { name: "Solar Brace", rarity: 5 },
+      { name: "Fortify Def 1", rarity: 5 },
+      { name: "Fortify Def 2", rarity: 5 },
+      { name: "Fortify Def 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 19, atk: 9, spd: 6, def: 8, res: 5 },
+      level40: { hp: [ 42, 45, 48 ], atk: [ 32, 35, 38 ], spd: [ 22, 25, 29 ], def: [ 29, 32, 35 ], res: [ 17, 20, 23 ] }
+    }
+  },
+  {
     name: "Est",
     title: "Junior Whitewing",
     releaseDate: "Feb 02, 2017",
@@ -8428,6 +8461,21 @@ module.exports = [
     effect: "Grants Atk/Def+4 during combat if unit initiates combat."
   },
   {
+    name: "Sturdy Stance 1",
+    spCost: 100,
+    icon: "0-0",
+    prev: ["Steady Stance 1"],
+    effect: "Grants Atk/Def+2 during combat when this unit is attacked."
+  },
+  {
+    name: "Sturdy Stance 2",
+    spCost: 200,
+    icon: "0-0",
+    prev: ["Sturdy Stance 1"],
+    last: true,
+    effect: "Grants Atk/Def+4 during combat when this unit is attacked."
+  },
+  {
     name: "Svalinn Shield",
     spCost: 200,
     icon: "4-3",
@@ -9814,6 +9862,13 @@ module.exports = [
     include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
     exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
     effect: "If unit's Special triggers based on a foe's attack, Special cooldown count-2 at start of turn 1. Unit takes 5 less damage when Special triggers."
+  },
+  {
+    name: "Solar Brace",
+    spCost: 200,
+    icon: "0-0",
+    include: [{name:"Ephraim (Legendary Heroes)"}],
+    effect: "Restores 30% of damage dealt when Special triggers during combat. (Stacks with effects of skills like Sol.)"
   },
   {
     name: "Swordbreaker 1",
@@ -16016,6 +16071,17 @@ module.exports = [
     colorType: "Blue",
     prev: ["First Bite"],
     effect: "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates."
+  },
+  {
+    name: "Flame Siegmund",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Heavy Spear"],
+    exclusive: ["Ephraim (Legendary Heroes)"],
+    effect: "Grants Atk+3. If the number of foes within 2 spaces (excluding target) ≥ the number of allies within 2 spaces (excluding unit), unit makes a guaranteed follow-up attack",
   },
   {
     name: "Flametongue",

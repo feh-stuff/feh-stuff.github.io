@@ -1147,6 +1147,17 @@ module.exports = [
     effect: "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates."
   },
   {
+    name: "Flame Siegmund",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Heavy Spear"],
+    exclusive: ["Ephraim (Legendary Heroes)"],
+    effect: "Grants Atk+3. If the number of foes within 2 spaces (excluding target) ≥ the number of allies within 2 spaces (excluding unit), unit makes a guaranteed follow-up attack",
+  },
+  {
     name: "Flametongue",
     spCost: 200,
     damage: 11,

@@ -2000,6 +2000,39 @@ module.exports = [
     }
   },
   {
+    name: "Ephraim (Legendary Heroes)",
+    shortName: "Ephraim",
+    title: "Legendary Lord",
+    releaseDate: "Feb 28, 2018",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Cavalry",
+    rarity5: ["pool1"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Ephraim (Legendary Heroes).png",
+      main: "img/heroes-main/Ephraim.png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "Heavy Spear", rarity: 5 },
+      { name: "Flame Siegmund", rarity: 5 },
+      { name: "Daylight", rarity: 5},
+      { name: "Sol", rarity: 5},
+      { name: "Steady Stance 1", rarity: 5 },
+      { name: "Sturdy Stance 1", rarity: 5 },
+      { name: "Sturdy Stance 2", rarity: 5 },
+      { name: "Solar Brace", rarity: 5 },
+      { name: "Fortify Def 1", rarity: 5 },
+      { name: "Fortify Def 2", rarity: 5 },
+      { name: "Fortify Def 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 19, atk: 9, spd: 6, def: 8, res: 5 },
+      level40: { hp: [ 42, 45, 48 ], atk: [ 32, 35, 38 ], spd: [ 22, 25, 29 ], def: [ 29, 32, 35 ], res: [ 17, 20, 23 ] }
+    }
+  },
+  {
     name: "Est",
     title: "Junior Whitewing",
     releaseDate: "Feb 02, 2017",
