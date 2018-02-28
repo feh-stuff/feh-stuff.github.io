@@ -970,14 +970,14 @@ module.exports = [
   {
     name: "Sturdy Stance 1",
     spCost: 100,
-    icon: "0-0",
-    prev: ["Steady Stance 1"],
+    icon: "38-1",
+    prev: ["Fierce Stance 1"],
     effect: "Grants Atk/Def+2 during combat when this unit is attacked."
   },
   {
     name: "Sturdy Stance 2",
     spCost: 200,
-    icon: "0-0",
+    icon: "38-2",
     prev: ["Sturdy Stance 1"],
     last: true,
     effect: "Grants Atk/Def+4 during combat when this unit is attacked."

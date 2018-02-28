@@ -793,7 +793,7 @@ module.exports = [
   {
     name: "Solar Brace",
     spCost: 200,
-    icon: "0-0",
+    icon: "38-3",
     include: [{name:"Ephraim (Legendary Heroes)"}],
     effect: "Restores 30% of damage dealt when Special triggers during combat. (Stacks with effects of skills like Sol.)"
   },

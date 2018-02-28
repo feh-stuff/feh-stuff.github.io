@@ -2137,16 +2137,16 @@ module.exports = [
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ephraim (Legendary Heroes).png",
-      main: "img/heroes-main/Ephraim.png"
+      main: "img/heroes-main/Ephraim (Legendary Heroes).png"
     },
     skills: [
       { name: "Iron Lance", rarity: 5 },
       { name: "Steel Lance", rarity: 5 },
-      { name: "Heavy Spear", rarity: 5 },
+      { name: "Silver Lance", rarity: 5 },
       { name: "Flame Siegmund", rarity: 5 },
       { name: "Daylight", rarity: 5},
       { name: "Sol", rarity: 5},
-      { name: "Steady Stance 1", rarity: 5 },
+      { name: "Fierce Stance 1", rarity: 5 },
       { name: "Sturdy Stance 1", rarity: 5 },
       { name: "Sturdy Stance 2", rarity: 5 },
       { name: "Solar Brace", rarity: 5 },
@@ -2155,8 +2155,8 @@ module.exports = [
       { name: "Fortify Def 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 19, atk: 9, spd: 6, def: 8, res: 5 },
-      level40: { hp: [ 42, 45, 48 ], atk: [ 32, 35, 38 ], spd: [ 22, 25, 29 ], def: [ 29, 32, 35 ], res: [ 17, 20, 23 ] }
+      level1: { hp: 19, atk: 10, spd: 5, def: 9, res: 3 },
+      level40: { hp: [ 40, 43, 46 ], atk: [ 33, 36, 39 ], spd: [ 23, 27, 30 ], def: [ 30, 33, 36 ], res: [ 15, 18, 21 ] }
     }
   },
   {
@@ -8463,14 +8463,14 @@ module.exports = [
   {
     name: "Sturdy Stance 1",
     spCost: 100,
-    icon: "0-0",
-    prev: ["Steady Stance 1"],
+    icon: "38-1",
+    prev: ["Fierce Stance 1"],
     effect: "Grants Atk/Def+2 during combat when this unit is attacked."
   },
   {
     name: "Sturdy Stance 2",
     spCost: 200,
-    icon: "0-0",
+    icon: "38-2",
     prev: ["Sturdy Stance 1"],
     last: true,
     effect: "Grants Atk/Def+4 during combat when this unit is attacked."
@@ -9866,7 +9866,7 @@ module.exports = [
   {
     name: "Solar Brace",
     spCost: 200,
-    icon: "0-0",
+    icon: "38-3",
     include: [{name:"Ephraim (Legendary Heroes)"}],
     effect: "Restores 30% of damage dealt when Special triggers during combat. (Stacks with effects of skills like Sol.)"
   },
