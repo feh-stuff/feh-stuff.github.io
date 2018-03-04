@@ -113,19 +113,19 @@ module.exports = {
     {
       name: "+Spd",
       icon: "31-10",
-      stats: {hp: 2, atk: 4, spd: 4},
+      stats: {hp: 2, atk: 4, spd: 2},
       effect: "After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
     },
     {
       name: "+Def",
       icon: "31-11",
-      stats: {hp: 2, atk: 4, def: 4},
+      stats: {hp: 2, atk: 4, def: 3},
       effect: "After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
     },
     {
       name: "+Res",
       icon: "31-12",
-      stats: {hp: 2, atk: 4, res: 4},
+      stats: {hp: 2, atk: 4, res: 3},
       effect: "After combat, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
     }
   ],
