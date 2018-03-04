@@ -75,7 +75,7 @@ function initHeroList() {
   let $focusList = $(elements.FOCUS_LIST).empty();
   let focusHeroes = heroes.getHeroes(banner.focusHeroes);
 
-  summonPool = heroes.getSummoningPool('pool1', banner.startDate);
+  summonPool = heroes.getSummoningPool('pool1', banner);
   summonPool.rf = focusHeroes;
   focusHeroes.forEach(hero => {
     $(`<div class="focus-list-hero">
@@ -105,7 +105,7 @@ function resetSessionData() {
 function initSession() {
   sessionPulls = 0;
   if (resetPityRate) {
-    pityPulls = 0;
+    // pityPulls = 0;
     resetPityRate = false;
     resetRates();
   } else if (pityPulls >= 5) {
@@ -232,11 +232,13 @@ function revealOrb($orb) {
 
   pullStats.pulls++;
   pullStats.orbs += values.ORB_PULL_COST[sessionPulls++];
-  pityPulls++;
   if (orbData.rarity === 'focus' || orbData.rarity === 5) {
     pullStats.r5++;
     pullStats.rf += orbData.rarity === 'focus' ? 1 : 0;
     resetPityRate = true;
+    pityPulls = 0;
+  } else {
+    pityPulls++;
   }
 
   let tableRow = $summonTable.row
@@ -250,7 +252,6 @@ function revealOrb($orb) {
         ])
       .draw().node();
   $(tableRow).addClass('r-' + orbData.rarity);
-
 
   $(elements.NEW_SESSION).removeAttr('disabled');
   updateStatsView();

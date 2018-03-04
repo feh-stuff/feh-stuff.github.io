@@ -20,8 +20,8 @@ function getHeroes(nameList) {
   return data.filter(hero => nameList.includes(hero.name));
 };
 
-function getSummoningPool(pool, date) {
-  let targetDate = new Date(date);
+function getSummoningPool(pool, banner) {
+  let targetDate = new Date(banner.startDate);
   let summonPool = {
     r3: [],
     r4: [],
@@ -34,10 +34,10 @@ function getSummoningPool(pool, date) {
     if (data[i].rarity3 && data[i].rarity3.includes(pool)) {
       summonPool.r3.push(data[i]);
     }
-    if (data[i].rarity4 && data[i].rarity4.includes(pool)) {
+    if (data[i].rarity4 && data[i].rarity4.includes(pool) && !banner.excludeFromRarity4.includes(data[i].name)) {
       summonPool.r4.push(data[i]);
     }
-    if (data[i].rarity5 && data[i].rarity5.includes(pool)) {
+    if (data[i].rarity5 && data[i].rarity5.includes(pool) && !banner.excludeFromRarity5.includes(data[i].name)) {
       summonPool.r5.push(data[i]);
     }
   }
