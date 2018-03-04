@@ -1,7 +1,20 @@
 module.exports = [
   {
-    date: "February 2018",
+    data: "March 2018",
     banners: [
+      {
+        name: "Falchion",
+        startDate: "Mar 05, 2018",
+        focusHeroes: [ "Lucina", "Marth", "Chrom", "Alm" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [ "Robin (M) (Fallen Heroes)", "Hardin (Fallen Heroes)", "Celica (Fallen Heroes)" ],
+        rateRarity3: 36,
+        rateRarity4: 58,
+        rateRarity5: 3,
+        rateRarityFocus: 3,
+        pityRateRarity5: 0.25,
+        pityRateRarityFocus: 0.25
+      },
       {
         name: "4★ & 5★ Heroes (March 2018)",
         startDate: "Mar 03, 2018",
@@ -15,10 +28,15 @@ module.exports = [
         rateRarityFocus4: 29,
         pityRateRarity5: 0.25,
         pityRateRarityFocus: 0.25
-      },
+      }
+    ]
+  },
+  {
+    date: "February 2018",
+    banners: [
       {
         name: "Legendary Heroes: Ephraim, Legendary Lord",
-        startDate: "Jan 31, 2018",
+        startDate: "Feb 28, 2018",
         focusHeroes: [ "Gunnthrá", "Leo (Nohrian Summer)", "Olivia (Performing Arts)", "Shiro", "Ike (Brave Heroes)", "Corrin (F) (Nohrian Summer)",
             "Ike (Legendary Heroes)", "Dorcas", "Mia", "Gaius (Ylissean Summer)", "Jaffar", "Ephraim (Legendary Heroes)" ],
         excludeFromRarity4: [],
