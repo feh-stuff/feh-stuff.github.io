@@ -1153,6 +1153,7 @@ module.exports = [
     range: 1,
     weaponType: "Lance",
     colorType: "Blue",
+    stats: {atk: 3},
     prev: ["Heavy Spear"],
     exclusive: ["Ephraim (Legendary Heroes)"],
     effect: "Grants Atk+3. If the number of foes within 2 spaces (excluding target) ≥ the number of allies within 2 spaces (excluding unit), unit makes a guaranteed follow-up attack",
@@ -1225,6 +1226,7 @@ module.exports = [
     range: 2,
     weaponType: "Tome",
     colorType: "Red",
+    stats: {res: 3},
     prev: ["Fenrir"],
     exclusive: ["Eirika (Sacred Memories)"],
     effect: "Grants Res+3. If foe's HP = 100% at start of combat, grants Atk/Spd+3 during combat."
@@ -1285,6 +1287,7 @@ module.exports = [
     damage: 16,
     range: 1,
     weaponType: "Breath",
+    stats: {atk: 3},
     prev: ["Flametongue"],
     exclusive: ["Myrrh"],
     effect: "Grants Atk+3. If unit's Def - foe's Def ≥ 5, foe can't make a follow-up attack. If foe's Range = 2, damage calculated using the lower of foe's Def or Res."
@@ -1634,6 +1637,7 @@ module.exports = [
     weaponType: "Tome",
     colorType: "Blue",
     prev: ["Shine"],
+    stats: {def: 3},
     exclusive: ["L'Arachel"],
     effect: "Grants Def+3. If foe's HP = 100% at start of combat, grants Atk/Spd+3 during combat."
   },
@@ -2909,6 +2913,7 @@ module.exports = [
     range: 2,
     weaponType: "Tome",
     colorType: "Blue",
+    stats: {res: 3},
     prev: ["Shine"],
     exclusive: ["Micaiah"],
     effect: "Grants Res+3. Effective against armored and cavalry foes. Against armored and cavalry foes using bow, dagger, magic, or staff, damage from first attack received by unit during combat reduced by 30%."

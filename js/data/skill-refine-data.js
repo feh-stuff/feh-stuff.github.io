@@ -1766,32 +1766,6 @@ module.exports = {
       effect: "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions."
     }
   ],
-  "Hagoita+": [
-    {
-      name: "+Atk",
-      icon: "31-9",
-      stats: {hp: 2, atk: 1},
-      effect: "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces."
-    },
-    {
-      name: "+Spd",
-      icon: "31-10",
-      stats: {hp: 2, spd: 2},
-      effect: "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces."
-    },
-    {
-      name: "+Def",
-      icon: "31-11",
-      stats: {hp: 2, def: 3},
-      effect: "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces."
-    },
-    {
-      name: "+Res",
-      icon: "31-12",
-      stats: {hp: 2, res: 4},
-      effect: "Effective against flying foes. Grants Def/Res+2 during combat to allies within 2 spaces."
-    }
-  ],
   "Hama Ya+": [
     {
       name: "+Atk",
