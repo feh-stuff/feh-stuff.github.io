@@ -99,5 +99,17 @@ exports.COORD = {
     skillB: 768,
     skillC: 804,
     seal: 841
-  }
+  },
+  BLESSINGS: {
+    "Water": [420, 0],
+    "Wind": [420, 223],
+    "Earth": [420, 446],
+    "Fire": [420, 669]
+  },
+  LEGENDARY_BLESSINGS: [
+    [210, 0],
+    [210, 223],
+    [210, 446],
+    [210, 669]
+  ]
 };

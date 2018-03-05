@@ -20,6 +20,8 @@ module.exports = {
   SELECT_SKILLB: '#select-skillB',
   SELECT_SKILLC: '#select-skillC',
   SELECT_SEAL: '#select-seal',
+  SELECT_BLESSING_TYPE: '#select-blessing-type',
+  SELECT_BLESSING_HERO: '.blessing-hero',
   SKILL_INFO: '.skill-info',
   SKILL_INFO_ICON: '.skill-info-icon',
   SELECT_TAB: '.build-type',

@@ -1,6 +1,16 @@
 let elements = require('./elements.js');
 let values = require('./values.js');
 let ctx = $(elements.CANVAS)[0].getContext('2d');
+let textCanvas = document.createElement('canvas');
+let textCtx = textCanvas.getContext('2d');
+
+textCanvas.width = 1080;
+textCanvas.height = 1920;
+textCtx.textAlign="start";
+textCtx.font = "34px FehFont";
+textCtx.strokeStyle = '#061d2c';
+textCtx.lineWidth = 8;
+textCtx.lineJoin = 'round';
 
 let images = {
   FRONT: null,
@@ -23,18 +33,34 @@ function drawHero(hero, heroImg) {
   ctx.drawImage(heroImg, 0, 0);
   ctx.drawImage(images.FRONT, 0, 0);
 
-  if (hero.support) {
-    ctx.drawImage(images.UI, 0, 0, 210, 223, 420, 430, 108, 115);
-  }
   if ($(elements.SELECT_IV_SHOW).is(':checked')) {
     drawIv(hero.iv);
   }
 
+  drawSupportAndBlessing(hero);
   drawRarity(hero.rarity);
   drawNameAndTitle(hero.data.shortName || hero.data.name, hero.data.title);
   drawWeaponAndMoveType(hero.data.colorType, hero.data.weaponType, hero.data.moveType);
   drawMergesAndStats(hero.merges, hero.stats, hero.buffs);
   drawSkills(hero.skills);
+}
+
+function drawSupportAndBlessing(hero) {
+  let coord;
+  if (hero.support && hero.blessing !== '-') {
+    coord = hero.legendary ? values.COORD.LEGENDARY_BLESSINGS[hero.blessingIcon] :
+        values.COORD.BLESSINGS[hero.blessing];
+    ctx.drawImage(images.UI, 0, 0, 210, 223, 335, 430, 103, 109);
+    ctx.drawImage(images.UI, coord[0], coord[1], 210, 223, 430, 430, 103, 109);
+  } else if (hero.support) {
+    ctx.drawImage(images.UI, 0, 0, 210, 223, 425, 430, 108, 115);
+  } else if (hero.legendary) {
+    coord = values.COORD.LEGENDARY_BLESSINGS[hero.blessingIcon];
+    ctx.drawImage(images.UI, coord[0], coord[1], 210, 223, 425, 430, 108, 115);
+  } else if (hero.blessing !== '-') {
+    coord = values.COORD.BLESSINGS[hero.blessing];
+    ctx.drawImage(images.UI, coord[0], coord[1], 210, 223, 425, 430, 108, 115);
+  }
 }
 
 function drawNameAndTitle(name, title) {
@@ -66,6 +92,7 @@ function drawWeaponAndMoveType(color, weaponType, moveType) {
     ctx.drawImage(images.UI, moveTypeIcon[0], moveTypeIcon[1], 52, 52, 204, 554, 26, 26);
   }
 }
+
 
 function drawMergesAndStats(merges, stats, buffs = {}) {
   if (merges > 0 && merges < 10) {
@@ -128,6 +155,62 @@ function drawIv(iv) {
   ctx.drawImage(images.UI, values.COORD.FONT_IMAGE.red[0],
       values.COORD.FONT_IMAGE.red[1] + 440, 32, 40, 60, values.COORD.STATS[iv.bane], 15, 19);
 }
+//
+// function drawSkills(skills) {
+//   ctx.drawImage(images.SKILLS, 130, 0, 65, 67, 275, 633, 34, 34);
+//   ctx.drawImage(images.SKILLS, 195, 0, 65, 67, 275, 669, 34, 34);
+//
+//   if (skills.refine.icon) {
+//     drawIcon(skills.refine.icon, values.COORD.SKILLS_ICON.weapon);
+//   } else if (skills.weapon.icon) {
+//     drawIcon(skills.weapon.icon, values.COORD.SKILLS_ICON.weapon);
+//   } else {
+//     drawIcon('0-1', values.COORD.SKILLS_ICON.weapon);
+//   }
+//
+//   for (let skill in skills) {
+//     if (skill === 'refine' || skill === 'weapon' || skill === 'assist' || skill === 'special') {
+//       continue;
+//     }
+//     if (skills[skill].icon) {
+//       drawIcon(skills[skill].icon, values.COORD.SKILLS_ICON[skill]);
+//     } else {
+//       drawIcon('0-0', values.COORD.SKILLS_ICON[skill]);
+//     }
+//   }
+//
+//   ctx.drawImage(images.UI, 0, 476, 34, 38, 295, 723, 19, 21);
+//   ctx.drawImage(images.UI, 34, 476, 34, 38, 295, 759, 19, 21);
+//   ctx.drawImage(images.UI, 68, 476, 34, 38, 295, 795, 19, 21);
+//   ctx.drawImage(images.UI, 102, 476, 34, 38, 295, 832, 19, 21);
+//
+//   ctx.textAlign="start";
+//   ctx.font = "17px FehFont";
+//   ctx.fillStyle = '#ffffff';
+//   ctx.strokeStyle = '#061d2c';
+//   ctx.lineWidth = 4;
+//   ctx.lineJoin = 'round';
+//
+//   ctx.strokeText(skills.weapon.name, 318, 619);
+//   ctx.strokeText(skills.assist.name, 318, 656);
+//   ctx.strokeText(skills.special.name, 318, 694);
+//   ctx.strokeText(skills.skillA.name, 318, 731);
+//   ctx.strokeText(skills.skillB.name, 318, 768);
+//   ctx.strokeText(skills.skillC.name, 318, 804);
+//   ctx.strokeText(skills.seal.name, 318, 841);
+//
+//   ctx.fillText(skills.assist.name, 318, 656);
+//   ctx.fillText(skills.special.name, 318, 694);
+//   ctx.fillText(skills.skillA.name, 318, 731);
+//   ctx.fillText(skills.skillB.name, 318, 768);
+//   ctx.fillText(skills.skillC.name, 318, 804);
+//   ctx.fillText(skills.seal.name, 318, 841);
+//
+//   if (skills.refine.name !== '-' || skills.weapon.icon) {
+//     ctx.fillStyle = '#92ff4f';
+//   }
+//   ctx.fillText(skills.weapon.name, 318, 619);
+// }
 
 function drawSkills(skills) {
   ctx.drawImage(images.SKILLS, 130, 0, 65, 67, 275, 633, 34, 34);
@@ -157,30 +240,29 @@ function drawSkills(skills) {
   ctx.drawImage(images.UI, 68, 476, 34, 38, 295, 795, 19, 21);
   ctx.drawImage(images.UI, 102, 476, 34, 38, 295, 832, 19, 21);
 
-  ctx.textAlign="start";
-  ctx.font = "17px FehFont";
-  ctx.fillStyle = '#ffffff';
-  ctx.lineWidth = 4;
+  textCtx.fillStyle = '#ffffff';
+  textCtx.clearRect(0, 0, textCanvas.width, textCanvas.height);
 
-  ctx.strokeText(skills.weapon.name, 318, 619);
-  ctx.strokeText(skills.assist.name, 318, 656);
-  ctx.strokeText(skills.special.name, 318, 694);
-  ctx.strokeText(skills.skillA.name, 318, 731);
-  ctx.strokeText(skills.skillB.name, 318, 768);
-  ctx.strokeText(skills.skillC.name, 318, 804);
-  ctx.strokeText(skills.seal.name, 318, 841);
+  textCtx.strokeText(skills.weapon.name, 634, 1238);
+  textCtx.strokeText(skills.assist.name, 634, 1312);
+  textCtx.strokeText(skills.special.name, 634, 1388);
+  textCtx.strokeText(skills.skillA.name, 634, 1462);
+  textCtx.strokeText(skills.skillB.name, 634, 1536);
+  textCtx.strokeText(skills.skillC.name, 634, 1608);
+  textCtx.strokeText(skills.seal.name, 634, 1682);
 
-  ctx.fillText(skills.assist.name, 318, 656);
-  ctx.fillText(skills.special.name, 318, 694);
-  ctx.fillText(skills.skillA.name, 318, 731);
-  ctx.fillText(skills.skillB.name, 318, 768);
-  ctx.fillText(skills.skillC.name, 318, 804);
-  ctx.fillText(skills.seal.name, 318, 841);
+  textCtx.fillText(skills.assist.name, 634, 1312);
+  textCtx.fillText(skills.special.name, 634, 1388);
+  textCtx.fillText(skills.skillA.name, 634, 1462);
+  textCtx.fillText(skills.skillB.name, 634, 1536);
+  textCtx.fillText(skills.skillC.name, 634, 1608);
+  textCtx.fillText(skills.seal.name, 634, 1682);
 
   if (skills.refine.name !== '-' || skills.weapon.icon) {
-    ctx.fillStyle = '#92ff4f';
+    textCtx.fillStyle = '#92ff4f';
   }
-  ctx.fillText(skills.weapon.name, 318, 619);
+  textCtx.fillText(skills.weapon.name, 634, 1238);
+  ctx.drawImage(textCanvas, 0, 0, 540, 960);
 }
 
 function drawIcon(icon, posY, posX = 275, sizeY = 34, sizeX = 34) {

@@ -2,6 +2,7 @@ let values = require('./values.js');
 let elements = require('./elements.js');
 let heroes = require('../data/hero-access.js');
 let skills = require('../data/skill-access.js');
+let blessings = require('../data/blessing-access.js');
 let utils = require('./utils.js');
 let inheritPlanner = require('./inheritance-planner.js');
 let canvas;
@@ -31,7 +32,11 @@ let fehUnit = {
   },
   rarity: 5,
   buffs: { atk: 0, spd: 0, def: 0, res: 0 },
-  tempestBuff: false
+  tempestBuff: false,
+  legendary: false,
+  blessing: '-',
+  blessingIcon: -1,
+  allies: []
 };
 
 function init(canvasObj) {
@@ -62,6 +67,17 @@ function init(canvasObj) {
     text: 0,
     value: 0
   });
+  $(elements.SELECT_BLESSING_TYPE).selectable({
+    data: blessings.getBlessingTypes(),
+    optionGenerator: utils.arrOptGenerator,
+    search: false
+  });
+  $(elements.SELECT_BLESSING_HERO).selectable({
+    optionGenerator: utils.arrOptGenerator,
+    disabled: 'disabled',
+    search: false
+  });
+
   $(elements.SELECT_WEAPON).selectable({disabled: 'disabled'});
   $(elements.SELECT_REFINE).selectable({disabled: 'disabled'});
   $(elements.SELECT_ASSIST).selectable({disabled: 'disabled'});
@@ -81,11 +97,13 @@ function bindEvents() {
   $(elements.SELECT_IV).on('select', onIvSelect);
   $(elements.SELECT_MERGES).on('select', onMergeSelect);
   $(elements.SELECT_SKILL).on('select', onSkillSelect);
-  $(elements.SELECT_BUFFS).on('select', onBuffSelect);
 
+  $(elements.SELECT_BUFFS).on('select', onBuffSelect);
   $(elements.SELECT_IV_SHOW).on('change', onShowIvChange);
   $(elements.SELECT_SUPPORT).on('change', onSupportChange);
   $(elements.SELECT_TT).on('change', onTempestBuffChange);
+  $(elements.SELECT_BLESSING_TYPE).on('select', onBlessingTypeChange);
+  $(elements.SELECT_BLESSING_HERO).on('select', onBlessingAllyChange);
 
   $(elements.INHERIT_MODAL).on('shown.bs.modal', onInheritanceShow);
 }
@@ -100,6 +118,24 @@ function onHeroSelect(event) {
     fehUnit.skills[skill] = values.CONST.EMPTY_SKILL;
   }
   fehUnit.rarity = 5;
+
+  fehUnit.legendary = blessings.isLegendaryHero(hero.name);
+  if (fehUnit.legendary) {
+    let blessing = blessings.getBlessing(hero.name);
+    fehUnit.blessing = blessing.type;
+    fehUnit.blessingIcon = blessing.icon;
+    $(elements.SELECT_BLESSING_TYPE)
+        .selectable('reset')
+        .selectable('disable');
+    $(elements.SELECT_BLESSING_HERO)
+        .selectable('reset')
+        .selectable('disable');
+  } else {
+    fehUnit.blessing = '-';
+    $(elements.SELECT_BLESSING_TYPE)
+        .selectable('text', '-')
+        .selectable('enable');
+  }
   drawHero(fehUnit);
 
   $(elements.SELECT_WEAPON)
@@ -203,6 +239,31 @@ function onInheritanceShow(event) {
         })
   }
 }
+function onBlessingTypeChange(event) {
+  let blessing = $(event.currentTarget).data('val');
+  if (fehUnit.blessing !== blessing) {
+    fehUnit.blessing = blessing;
+    fehUnit.allies = [];
+    $(elements.SELECT_BLESSING_HERO)
+        .selectable('reset')
+        .selectable('data', blessings.getBlessingOptions(fehUnit.blessing))
+        .selectable('enable');
+    drawHero(fehUnit);
+  }
+}
+function onBlessingAllyChange(event) {
+  let allies = [];
+  let allySelect = $(elements.SELECT_BLESSING_HERO);
+
+  for (let i = 0; i < allySelect.length; i++) {
+    let ally = $(allySelect[i]).data('val');
+    if (ally && ally !== '-') {
+      allies.push(ally);
+    }
+  }
+  fehUnit.allies = allies;
+  drawHero(fehUnit);
+}
 
 function drawHero(hero, processHero = true) {
   if (processHero) {
@@ -276,6 +337,13 @@ function processHeroStats(hero) {
     stats40.def += 2;
     stats40.res += 2;
   }
+
+  hero.allies.forEach(ally => {
+    let blessing = blessings.getBlessing(ally);
+    for (let stat in blessing.stats) {
+      stats40[stat] += blessing.stats[stat];
+    }
+  });
 
   for (let stat in stats40) {
     stats40[stat] = Math.max(0, stats40[stat]);
