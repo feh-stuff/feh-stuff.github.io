@@ -1896,6 +1896,65 @@ module.exports = {
       effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
     }
   ],
+  "Blárserpent+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff."
+    }
+  ],
+  "Poleaxe+": [
+    {
+      name: "Nullify Cavalry",
+      icon: "32-9",
+      stats: {hp: 3},
+      effect: "Effective against cavalry units. If in combat against a cavalry foe, nullifies foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 2},
+      effect: "Effective against cavalry units."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, spd: 3},
+      effect: "Effective against cavalry units."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, def: 4},
+      effect: "Effective against cavalry units."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, res: 4},
+      effect: "Effective against cavalry units."
+    }
+  ],
+
 
   // prf weapons
   "Sol Katti": [
@@ -2085,7 +2144,7 @@ module.exports = {
   ],
   "Deathly Dagger": [
     {
-      name: "Dazzle Magic",
+      name: "Magicsweep",
       icon: "32-7",
       cost: 1,
       stats: {atk: 3},
@@ -2429,5 +2488,114 @@ module.exports = {
       stats: {hp: 5, res: 4},
       effect: "Effective against dragon foes. Restores 10 HP at the start of every second turn."
     }
-  ]
+  ],
+  "Wind's Brand": [
+    {
+      name: "Owl Tome",
+      icon: "38-4",
+      cost: 1,
+      effect: "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action. During combat, boosts Atk/Spd/Def/Res by number of adjacent allies × 2."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action."
+    }
+  ],
+  "Sieglinde": [
+    {
+      name: "Copy Buffs",
+      icon: "38-5",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "At start of turn, grants adjacent allies Atk+4 for 1 turn. During combat, grants bonus to Atk/Spd/Def/Res = highest bonus on allies within 2 spaces. Each stat bonus calculated independently."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "At start of turn, grants adjacent allies Atk+4 for 1 turn."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "At start of turn, grants adjacent allies Atk+4 for 1 turn."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "At start of turn, grants adjacent allies Atk+4 for 1 turn."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "At start of turn, grants adjacent allies Atk+4 for 1 turn."
+    }
+  ],
+  "Brynhildr": [
+    {
+      name: "Earthsweep",
+      icon: "38-6",
+      cost: 1,
+      effect: "If in combat against magic foe, reduces damage from foe's first attack by 30%. If foe uses bow, dagger, magic, or staff and unit's Def ≥ foe's Def+1, foe cannot make a follow-up attack."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "If in combat against magic foe, reduces damage from foe's first attack by 30%."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "If in combat against magic foe, reduces damage from foe's first attack by 30%."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "If in combat against magic foe, reduces damage from foe's first attack by 30%."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "If in combat against magic foe, reduces damage from foe's first attack by 30%."
+    }
+  ],
 };

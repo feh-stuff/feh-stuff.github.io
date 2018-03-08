@@ -783,6 +783,21 @@ module.exports = [
     effect: "Grants Atk/Spd+5. Inflicts Def/Res-5."
   },
   {
+    name: "Mirror Stance 1",
+    spCost: 100,
+    icon: "38-7",
+    prev: ["Warding Stance 1"],
+    effect: "Grants Atk/Res+2 during combat when this unit is attacked."
+  },
+  {
+    name: "Mirror Stance 2",
+    spCost: 200,
+    icon: "38-8",
+    prev: ["Mirror Stance 1"],
+    last: true,
+    effect: "Grants Atk/Res+4 during combat when this unit is attacked."
+  },
+  {
     name: "Mirror Strike 1",
     spCost: 120,
     icon: "23-0",

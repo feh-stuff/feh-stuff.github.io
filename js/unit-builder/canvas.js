@@ -230,6 +230,9 @@ function drawSkills(skills) {
     }
     if (skills[skill].icon) {
       drawIcon(skills[skill].icon, values.COORD.SKILLS_ICON[skill]);
+    } else if (skill === 'seal') {
+      ctx.drawImage(images.UI, values.COORD.EMPTY_SEAL[0], values.COORD.EMPTY_SEAL[1],
+            65, 67, 275, values.COORD.SKILLS_ICON.seal, 34, 34);
     } else {
       drawIcon('0-0', values.COORD.SKILLS_ICON[skill]);
     }

@@ -33,6 +33,7 @@ exports.CONST = {
     {name: 'Breath (Red)', weaponType: 'Breath', colorType: 'Red'},
     {name: 'Breath (Green)', weaponType: 'Breath', colorType: 'Green'},
     {name: 'Breath (Blue)', weaponType: 'Breath', colorType: 'Blue'},
+    {name: 'Breath (Neutral)', weaponType: 'Breath', colorType: 'Neutral'},
     {name: 'Tome (Red)', weaponType: 'Tome', colorType: 'Red'},
     {name: 'Tome (Green)', weaponType: 'Tome', colorType: 'Green'},
     {name: 'Tome (Blue)', weaponType: 'Tome', colorType: 'Blue'},
@@ -57,10 +58,12 @@ exports.COORD = {
     "Red Breath": [0,372],
     "Blue Breath": [52,372],
     "Green Breath": [104,372],
+    "Neutral Breath": [156,216],
     "Neutral Bow": [156,268],
     "Neutral Dagger": [156,320],
     "Neutral Staff": [156,372]
   },
+  EMPTY_SEAL: [0, 1074],
   FONT_IMAGE: {
     yellow: [0, 514],
     white: [32, 514],

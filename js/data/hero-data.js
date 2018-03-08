@@ -1154,6 +1154,42 @@ module.exports = [
     }
   },
   {
+    name: "Chrom (The Branded King)",
+    shortName: "Chrom",
+    title: "Knight Exalt",
+    releaseDate: "Mar 09, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Cavalry",
+    rarity5: ["pool1"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Chrom (The Branded King).png",
+      main: "img/heroes-main/Chrom (The Branded King).png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Sealed Falchion", rarity: 5 },
+      { name: "Daylight", rarity: 5 },
+      { name: "Sol", rarity: 5 },
+      { name: "Aether", rarity: 5 },
+      { name: "Fury 1", rarity: 5 },
+      { name: "Fury 2", rarity: 5 },
+      { name: "Fury 3", rarity: 5 },
+      { name: "Chill Def 1", rarity: 5 },
+      { name: "Chill Def 2", rarity: 5 },
+      { name: "Chill Def 3", rarity: 5 },
+      { name: "Sword Valor 1", rarity: 5 },
+      { name: "Sword Valor 2", rarity: 5 },
+      { name: "Sword Valor 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 19, atk: 9, spd: 6, def: 8, res: 4 },
+      level40: { hp: [ 37, 41, 44 ], atk: [ 34, 37, 40 ], spd: [ 24, 38, 31 ], def: [ 31, 34, 37 ], res: [ 13, 17, 20 ] }
+    }
+  },
+  {
     name: "Chrom (Winter's Envoy)",
     shortName: "Chrom",
     title: "Gifted Leader",
@@ -2427,6 +2463,33 @@ module.exports = [
     stats: {
       level1: { hp: 17, atk: 9, spd: 6, def: 4, res: 8 },
       level40: { hp: [ 29, 32, 35 ], atk: [ 32, 35, 38 ], spd: [ 22, 25, 29 ], def: [ 18, 21, 24 ], res: [ 31, 34, 37 ] }
+    }
+  },
+  {
+    name: "Gerome",
+    title: "Masked Rider",
+    releaseDate: "Mar 09, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Flying",
+    rarity4: ["pool1"],
+    rarity5: ["pool1"],
+    ttReward: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Gerome.png",
+      main: "img/heroes-main/Gerome.png"
+    },
+    skills: [
+      { name: "Iron Axe", rarity: 3 },
+      { name: "Steel Axe", rarity: 3 },
+      { name: "Poleaxe", rarity: 4 },
+      { name: "Poleaxe+", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 19, atk: 10, spd: 6, def: 8, res: 4 },
+      level40: { hp: [ 42, 45, 48 ], atk: [ 35, 38, 41 ], spd: [ 22, 25, 29 ], def: [ 31, 34, 37 ], res: [ 16, 19, 2 ] },
+      level1_4: { hp: 18, atk: 10, spd: 5, def: 8, res: 3 },
+      level40_4: { hp: [ 39, 42, 45 ], atk: [ 33, 36, 39 ], spd: [ 20, 23, 26 ], def: [ 29, 32, 35 ], res: [ 14, 17, 20 ] }
     }
   },
   {
@@ -4688,6 +4751,73 @@ module.exports = [
     }
   },
   {
+    name: "Morgan (F)",
+    shortName: "Morgan",
+    title: "Lass from Afar",
+    releaseDate: "Mar 09, 2018",
+    colorType: "Blue",
+    weaponType: "Tome",
+    moveType: "Flying",
+    rarity5: ["pool1"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Morgan (F).png",
+      main: "img/heroes-main/Morgan (F).png"
+    },
+    skills: [
+      { name: "Thunder", rarity: 5 },
+      { name: "Elthunder", rarity: 5 },
+      { name: "Blárserpent", rarity: 5 },
+      { name: "Blárserpent+", rarity: 5 },
+      { name: "Chilling Wind", rarity: 5 },
+      { name: "Iceberg", rarity: 5 },
+      { name: "Warding Stance 1", rarity: 5 },
+      { name: "Mirror Stance 1", rarity: 5 },
+      { name: "Mirror Stance 2", rarity: 5 },
+      { name: "Guard 1", rarity: 5 },
+      { name: "Guard 2", rarity: 5 },
+      { name: "Guard 3", rarity: 5 },
+      { name: "Atk Ploy 1", rarity: 5 },
+      { name: "Atk Ploy 2", rarity: 5 },
+      { name: "Atk Ploy 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 8, spd: 6, def: 3, res: 9 },
+      level40: { hp: [ 34, 37, 41 ], atk: [ 31, 34, 37 ], spd: [ 27, 30, 33 ], def: [ 12, 16, 19 ], res: [ 30, 33, 36 ] }
+    }
+  },
+  {
+    name: "Morgan (M)",
+    shortName: "Morgan",
+    title: "Lad from Afar",
+    releaseDate: "Mar 09, 2018",
+    colorType: "Red",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity5: ["pool1"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Morgan (M).png",
+      main: "img/heroes-main/Morgan (M).png"
+    },
+    skills: [
+      { name: "Flux", rarity: 5 },
+      { name: "Ruin", rarity: 5 },
+      { name: "Fenrir", rarity: 5 },
+      { name: "Grima's Truth", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Dragon Fang", rarity: 5 },
+      { name: "Dull Ranged 1", rarity: 5 },
+      { name: "Dull Ranged 2", rarity: 5 },
+      { name: "Dull Ranged 3", rarity: 5 },
+      { name: "Spur Def 1", rarity: 5 },
+      { name: "Spur Def/Res 1", rarity: 5 },
+      { name: "Spur Def/Res 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 7, spd: 8, def: 5, res: 7 },
+      level40: { hp: [ 34, 37, 41 ], atk: [ 30, 33, 36 ], spd: [ 31, 34, 37 ], def: [ 17, 20, 23 ], res: [ 23, 26, 30 ] }
+    }
+  },
+  {
     name: "Myrrh",
     title: "Great Dragon",
     releaseDate: "January 25, 2018",
@@ -6510,6 +6640,7 @@ module.exports = [
       { name: "Elwind", rarity: 4 },
       { name: "Rexcalibur", rarity: 4 },
       { name: "Rexcalibur+", rarity: 5 },
+      { name: "Wind's Brand", rarity: 5 },
       { name: "Rising Wind", rarity: 4 },
       { name: "Growing Wind", rarity: 4 },
       { name: "Watersweep 1", rarity: 4 },

@@ -165,6 +165,26 @@ module.exports = [
     effect: "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is reversed."
   },
   {
+    name: "Chill Def 1",
+    spCost: 60,
+    icon: "38-9",
+    effect: "At the start of each turn, inflicts Def-3 on foe on the enemy team with the highest Def through its next action."
+  },
+  {
+    name: "Chill Def 2",
+    spCost: 120,
+    icon: "38-10",
+    prev: ["Chill Def 1"],
+    effect: "At the start of each turn, inflicts Def-5 on foe on the enemy team with the highest Def through its next action."
+  },
+  {
+    name: "Chill Def 3",
+    spCost: 240,
+    icon: "38-11",
+    prev: ["Chill Def 2"],
+    effect: "At the start of each turn, inflicts Def-7 on foe on the enemy team with the highest Def through its next action."
+  },
+  {
     name: "Chill Spd 1",
     spCost: 60,
     icon: "37-10",
@@ -174,12 +194,14 @@ module.exports = [
     name: "Chill Spd 2",
     spCost: 120,
     icon: "37-11",
+    prev: ["Chill Spd 1"],
     effect: "At the start of each turn, inflicts Spd-5 on foe on the enemy team with the highest Spd through its next action."
   },
   {
     name: "Chill Spd 3",
     spCost: 240,
     icon: "37-12",
+    prev: ["Chill Spd 2"],
     effect: "At the start of each turn, inflicts Spd-7 on foe on the enemy team with the highest Spd through its next action."
   },
   {
@@ -265,6 +287,26 @@ module.exports = [
     icon: "4-7",
     include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
     effect: "If unit initiates attack, the unit moves 1 space away after combat. Foe moves into unit's previous space."
+  },
+  {
+    name: "Dull Ranged 1",
+    spCost: 60,
+    icon: "38-12",
+    effect: "If unit's HP = 100% at start of combat and foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
+    name: "Dull Ranged 2",
+    spCost: 120,
+    icon: "39-0",
+    prev: ["Dull Ranged 1"],
+    effect: "If unit's HP ≥ 50% at start of combat and foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
+    name: "Dull Ranged 3",
+    spCost: 240,
+    icon: "39-1",
+    prev: ["Dull Ranged 2"],
+    effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
   },
   {
     name: "Earth Dance 1",

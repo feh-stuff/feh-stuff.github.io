@@ -75,7 +75,7 @@ module.exports = [
   {
     name: "Armorsmasher",
     spCost: 200,
-    damage: 0,
+    damage: 10,
     range: 1,
     weaponType: "Sword",
     colorType: "Red",
@@ -279,6 +279,26 @@ module.exports = [
     colorType: "Blue",
     prev: ["Blárraven"],
     effect: "Grants weapon advantage vs. colorless foes."
+  },
+  {
+    name: "Blárserpent",
+    spCost: 300,
+    damage: 8,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Elthunder"],
+    effect: "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff."
+  },
+  {
+    name: "Blárserpent+",
+    spCost: 400,
+    damage: 12,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Blárserpent"],
+    effect: "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff."
   },
   {
     name: "Blárwolf",
@@ -977,7 +997,7 @@ module.exports = [
     colorType: "Red",
     prev: ["Silver Sword"],
     exclusive: ["Marth", "Marth (Masked)", "Chrom", "Alm", "Lucina"],
-    effect: "Effective against dragons.  At the start of every third turn, unit recovers 10 HP.",
+    effect: "Effective against dragons. At the start of every third turn, unit recovers 10 HP.",
   },
   {
     name: "Fear",
@@ -1333,6 +1353,18 @@ module.exports = [
     effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
   },
   {
+    name: "Grima's Truth",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Red",
+    prev: ["Fenrir"],
+    stats: {def: 3},
+    exclusive: ["Morgan (M)"],
+    effect: "Grants Def+3. After combat, if unit attacked, inflicts Atk/Spd-5 on target and foes within 2 spaces of target through their next actions, and grants Atk/Spd+5 to unit and allies within 2 spaces for 1 turn.",
+  },
+  {
     name: "Grimoire",
     spCost: 400,
     damage: 14,
@@ -1426,7 +1458,7 @@ module.exports = [
   {
     name: "Guard Bow",
     spCost: 200,
-    damage: 0,
+    damage: 8,
     range: 2,
     weaponType: "Bow",
     colorType: "Neutral",
@@ -2135,6 +2167,25 @@ module.exports = [
     effect: "Effective against infantry units.  Infantry foes suffer Def/Res-6 after combat through their next actions."
   },
   {
+    name: "Poleaxe",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    effect: "Effective against cavalry units."
+  },
+  {
+    name: "Poleaxe+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Poleaxe"],
+    effect: "Effective against cavalry units."
+  },
+  {
     name: "Ragnarok",
     spCost: 400,
     damage: 14,
@@ -2421,6 +2472,17 @@ module.exports = [
     effect: "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
   },
   {
+    name: "Sealed Falchion",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Silver Sword"],
+    exclusive: ["Chrom (The Branded King)"],
+    effect: "Effective against dragons. If unit's HP < 100% at start of combat, grants Atk/Spd/Def/Res+5 during combat.",
+  },
+  {
     name: "Sealife Tome",
     spCost: 200,
     damage: 8,
@@ -2700,7 +2762,7 @@ module.exports = [
   {
     name: "Slaying Hammer",
     spCost: 200,
-    damage: 0,
+    damage: 10,
     range: 1,
     weaponType: "Axe",
     colorType: "Green",
@@ -2739,7 +2801,7 @@ module.exports = [
   {
     name: "Slaying Spear",
     spCost: 200,
-    damage: 0,
+    damage: 10,
     range: 1,
     weaponType: "Lance",
     colorType: "Blue",
@@ -3064,6 +3126,16 @@ module.exports = [
     weaponType: "Tome",
     colorType: "Green",
     effect: "-"
+  },
+  {
+    name: "Wind's Brand",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    exclusive: ["Soren"],
+    effect: "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action."
   },
   {
     name: "Wing Sword",
