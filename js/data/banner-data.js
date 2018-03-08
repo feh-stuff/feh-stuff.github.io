@@ -3,7 +3,7 @@ module.exports = [
     data: "March 2018",
     banners: [
       {
-        name: "The The Branded King",
+        name: "The Branded King",
         startDate: "Mar 09, 2018",
         focusHeroes: [ "Chrom (The Branded King)", "Morgan (M)", "Morgan (F)" ],
         excludeFromRarity4: [],
