@@ -2044,6 +2044,7 @@ module.exports = [
     weaponType: "Lance",
     moveType: "Cavalry",
     rarity5: ["pool1"],
+    limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ephraim (Legendary Heroes).png",
       main: "img/heroes-main/Ephraim (Legendary Heroes).png"
