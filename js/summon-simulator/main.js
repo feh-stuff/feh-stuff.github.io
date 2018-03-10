@@ -223,6 +223,8 @@ function updateOrbs(orbs) {
 }
 function revealOrb($orb) {
   let orbData = $orb.data('hero');
+
+  $(document).trigger('summon', [orbData.hero.name, orbData.hero.rarity]);
   $orb.replaceWith(`<div class="summon-hero">
     <img class="summon-hero-frame" src="img/assets/frame-rarity-${orbData.rarity === 'focus-4' ? 4 : orbData.rarity}.png">
     <img class="summon-hero-portrait" src="${orbData.hero.assets.portrait}">
@@ -290,14 +292,17 @@ function snipe() {
   let targetCheckbox = $('.snipe-target:checked');
   let targets = [];
   let snipeCount = 0;
+  let totalCount = 0;
   let orbs;
   let orbData;
 
+  $(document).trigger('snipe-start');
   for (let i = 0; i < targetCheckbox.length; i++) {
     targets.push($(targetCheckbox[i]).data('hero'));
   }
 
   while (continueSnipe(targets, snipeCount)) {
+    totalCount++;
     orbs = getTargetSnipeOrbs(targets);
     if (orbs.length) {
       orbData = revealOrb($(orbs[0]));
@@ -311,6 +316,7 @@ function snipe() {
       revealOrb($(getArrayRand($(elements.SUMMON_ORB))));
     }
   }
+  $(document).trigger('snipe-end', [totalCount]);
 }
 function continueSnipe(targets, snipeCount) {
   let snipeAll = $('#snipe-all').is(':checked');

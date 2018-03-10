@@ -113,6 +113,7 @@ function onHeroSelect(event) {
   let hero = $(event.currentTarget).data('val');
   let highlightList = hero.skills.map(skill => skill.name);
 
+  $(document).trigger('hero-select', [hero.name, hero.weaponType]);
   fehUnit.data = hero;
   for (let skill in fehUnit.skills) {
     fehUnit.skills[skill] = values.CONST.EMPTY_SKILL;

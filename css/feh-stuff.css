@@ -446,3 +446,25 @@ body {
     transform: scale(1.0);
   }
 }
+
+
+/***** Chrom Helper *****/
+.chrom-helper {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-image: url(../img/misc/chrom-helper.png);
+  background-size: cover;
+  width: 230px;
+  height: 235px;
+}
+.chrom-toggle {
+  height: 20px;
+}
+.chrom-text {
+  height: 215px;
+  padding: 115px 25px 10px 25px;
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none;
+}
