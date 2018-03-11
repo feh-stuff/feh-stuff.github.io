@@ -73,7 +73,7 @@ module.exports = [
     name: "Atk/Res 2",
     spCost: 160,
     icon: "17-10",
-    stats: {atk: 1, res: 1},
+    stats: {atk: 2, res: 2},
     prev: ["Atk/Res 1"],
     last: true,
     effect: "Grants Atk/Res+2."
