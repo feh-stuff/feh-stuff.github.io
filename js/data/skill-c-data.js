@@ -807,7 +807,7 @@ module.exports = [
   {
     name: "Spur Atk 3",
     spCost: 200,
-    icon: "10-19",
+    icon: "10-10",
     prev: ["Spur Atk 2"],
     effect: "Grants adjacent allies Atk+4 during combat."
   },
