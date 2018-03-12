@@ -47,7 +47,7 @@ function onTabChange(event) {
 }
 
 function onDownload(event) {
-  let heroName = this.activeTab === 'main' ? defaultBuilder.hero.data.name : customBuilder.hero.name;
+  let heroName = activeTab === 'main' ? defaultBuilder.hero.data.name : customBuilder.hero.name;
   $(event.currentTarget)
       .attr('href', $(elements.CANVAS)[0].toDataURL())
       .attr('download', 'FEH Unit Builder - ' + heroName + '.png');
