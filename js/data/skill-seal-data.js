@@ -869,5 +869,48 @@ module.exports = [
     icon: "13-10",
     effect: "Inflicts Spd-5 on foes within 2 spaces through their next actions at the start of each turn."
   },
-
+  {
+    name: "Def Tactic 1",
+    icon: "33-3",
+    effect: "At start of turn, grants Def+2 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+  },
+  {
+    name: "Def Tactic 2",
+    icon: "33-4",
+    effect: "At start of turn, grants Def+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+  },
+  {
+    name: "Def Tactic 3",
+    icon: "33-5",
+    effect: "At start of turn, grants Def+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+  },
+  {
+    name: "Res Ploy 1",
+    icon: "23-8",
+    effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-3 until the end of foe's next action."
+  },
+  {
+    name: "Res Ploy 2",
+    icon: "23-9",
+    effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-4 until the end of foe's next action."
+  },
+  {
+    name: "Res Ploy 3",
+    icon: "23-10",
+    effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-5 until the end of foe's next action."
+  },
+    {
+    name: "Obstruct 1",
+    effect: "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 90%. (No effect on foes with a Pass skill.)"
+  },
+  {
+    name: "Obstruct 2",
+    icon: "4-12",
+    effect: "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 70%. (No effect on foes with a Pass skill.)"
+  },
+  {
+    name: "Obstruct 3",
+    icon: "5-0",
+    effect: "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 50%. (No effect on foes with a Pass skill.)"
+  },
 ];
