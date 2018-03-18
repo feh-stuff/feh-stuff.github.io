@@ -13107,25 +13107,25 @@ module.exports = {
     {
       name: "+Atk",
       icon: "31-9",
-      stats: {hp: 2, atk: 2},
+      stats: {hp: 2, atk: 1},
       effect: "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat."
     },
     {
       name: "+Spd",
       icon: "31-10",
-      stats: {hp: 2, atk: 1, spd: 2},
+      stats: {hp: 2, spd: 2},
       effect: "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat."
     },
     {
       name: "+Def",
       icon: "31-11",
-      stats: {hp: 2, atk: 1, def: 3},
+      stats: {hp: 2, def: 3},
       effect: "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat."
     },
     {
       name: "+Res",
       icon: "31-12",
-      stats: {hp: 2, atk: 1, res: 3},
+      stats: {hp: 2, res: 3},
       effect: "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat."
     }
   ],
@@ -14161,6 +14161,21 @@ module.exports = [
     effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-5 until the end of foe's next action."
   },
   {
+    name: "Def Tactic 1",
+    icon: "33-3",
+    effect: "At start of turn, grants Def+2 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+  },
+  {
+    name: "Def Tactic 2",
+    icon: "33-4",
+    effect: "At start of turn, grants Def+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+  },
+  {
+    name: "Def Tactic 3",
+    icon: "33-5",
+    effect: "At start of turn, grants Def+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+  },
+  {
     name: "Defense +1",
     icon: "1-0",
     stats: {def: 1},
@@ -14507,6 +14522,21 @@ module.exports = [
     effect: "Unit receives 0 damage."
   },
   {
+    name: "Obstruct 1",
+    icon: "4-11",
+    effect: "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 90%. (No effect on foes with a Pass skill.)"
+  },
+  {
+    name: "Obstruct 2",
+    icon: "4-12",
+    effect: "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 70%. (No effect on foes with a Pass skill.)"
+  },
+  {
+    name: "Obstruct 3",
+    icon: "5-0",
+    effect: "Prevents foes from moving through adjacent spaces while this unit's HP ≥ 50%. (No effect on foes with a Pass skill.)"
+  },
+  {
     name: "Panic Ploy 1",
     icon: "19-2",
     effect: "At start of turn, bonuses become penalties on all foes in cardinal directions with HP 5 or more lower than unit through foe's next action."
@@ -14575,6 +14605,21 @@ module.exports = [
     effect: "Special cooldown count -1 at start of Turn 1."
   },
   {
+    name: "Res Ploy 1",
+    icon: "23-8",
+    effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-3 until the end of foe's next action."
+  },
+  {
+    name: "Res Ploy 2",
+    icon: "23-9",
+    effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-4 until the end of foe's next action."
+  },
+  {
+    name: "Res Ploy 3",
+    icon: "23-10",
+    effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-5 until the end of foe's next action."
+  },
+  {
     name: "Resistance +1",
     icon: "1-3",
     stats: {res: 1},
@@ -14614,14 +14659,14 @@ module.exports = [
     effect: "After combat, foe suffers Atk-3 through its next action."
   },
   {
-    icon: "7-6",
     name: "Seal Atk 2",
+    icon: "7-6",
     exclude: [{weaponType: "Staff"}],
     effect: "After combat, foe suffers Atk-5 through its next action."
   },
   {
-    icon: "7-7",
     name: "Seal Atk 3",
+    icon: "7-7",
     exclude: [{weaponType: "Staff"}],
     effect: "After combat, foe suffers Atk-7 through its next action."
   },
@@ -14912,8 +14957,7 @@ module.exports = [
     name: "Threaten Spd 3",
     icon: "13-10",
     effect: "Inflicts Spd-5 on foes within 2 spaces through their next actions at the start of each turn."
-  },
-
+  }
 ];
 
 },{}],13:[function(require,module,exports){

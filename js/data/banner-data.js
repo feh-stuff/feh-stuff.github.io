@@ -3,6 +3,45 @@ module.exports = [
     data: "March 2018",
     banners: [
       {
+        name: "Chrom and Lissa's Battle",
+        startDate: "Mar 18, 2018",
+        focusHeroes: [ "Chrom", "Robin (M)", "Lissa" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [ "Chrom (The Branded King)", "Morgan (M)", "Morgan (F)" ],
+        rateRarity3: 36,
+        rateRarity4: 58,
+        rateRarity5: 3,
+        rateRarityFocus: 3,
+        pityRateRarity5: 0.25,
+        pityRateRarityFocus: 0.25
+      },
+      {
+        name: "Countering Skills",
+        startDate: "Mar 14, 2018",
+        focusHeroes: [ "Ike", "Hector", "Takumi" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [ "Chrom (The Branded King)", "Morgan (M)", "Morgan (F)" ],
+        rateRarity3: 36,
+        rateRarity4: 58,
+        rateRarity5: 3,
+        rateRarityFocus: 3,
+        pityRateRarity5: 0.25,
+        pityRateRarityFocus: 0.25
+      },
+      {
+        name: "Invisible Ties Tempest Trials",
+        startDate: "Mar 12, 2018",
+        focusHeroes: [ "Olivia", "Donnel", "Cherche" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [ "Chrom (The Branded King)", "Morgan (M)", "Morgan (F)" ],
+        rateRarity3: 36,
+        rateRarity4: 58,
+        rateRarity5: 3,
+        rateRarityFocus: 3,
+        pityRateRarity5: 0.25,
+        pityRateRarityFocus: 0.25
+      },
+      {
         name: "The Branded King",
         startDate: "Mar 09, 2018",
         focusHeroes: [ "Chrom (The Branded King)", "Morgan (M)", "Morgan (F)" ],
