@@ -205,6 +205,26 @@ module.exports = [
     effect: "At the start of each turn, inflicts Spd-7 on foe on the enemy team with the highest Spd through its next action."
   },
   {
+    name: "Chill Res 1",
+    spCost: 60,
+    icon: "0-0",
+    effect: "At the start of each turn, inflicts Res-3 on foe on the enemy team with the highest Res through its next action."
+  },
+  {
+    name: "Chill Res 2",
+    spCost: 120,
+    icon: "0-0",
+    prev: ["Chill Res 1"],
+    effect: "At the start of each turn, inflicts Res-5 on foe on the enemy team with the highest Res through its next action."
+  },
+  {
+    name: "Chill Res 3",
+    spCost: 240,
+    icon: "0-0",
+    prev: ["Chill Res 2"],
+    effect: "At the start of each turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action."
+  },
+  {
     name: "Chilling Seal",
     spCost: 300,
     icon: "35-2",

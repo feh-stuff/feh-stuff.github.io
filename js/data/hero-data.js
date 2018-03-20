@@ -70,6 +70,39 @@ module.exports = [
     }
   },
   {
+    name: "Alfonse (Hares at the Fair)",
+    shortName: "Alfonse",
+    title: "Spring Prince",
+    releaseDate: "Mar 22, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Cavalry",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Alfonse (Hares at the Fair).png",
+      main: "img/heroes-main/Alfonse.png"
+    },
+    skills: [
+      {  name: "Iron Axe", rarity: 5 },
+      {  name: "Steel Axe", rarity: 5 },
+      {  name: "Giant Spoon", rarity: 5 },
+      {  name: "Giant Spoon+", rarity: 5 },
+      {  name: "Daylight", rarity: 5 },
+      {  name: "Noontime", rarity: 5 },
+      {  name: "Death Blow 1", rarity: 5 },
+      {  name: "Sturdy Blow 1", rarity: 5 },
+      {  name: "Sturdy Blow 2", rarity: 5 },
+      {  name: "Def Smoke 1", rarity: 5 },
+      {  name: "Def Smoke 2", rarity: 5 },
+      {  name: "Def Smoke 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 19, atk: 9, spd: 6, def: 8, res: 5 },
+      level40: { hp: [ 40, 43, 46 ], atk: [ 32, 35, 38 ], spd: [ 22, 25, 29 ], def: [ 29, 32, 35 ], res: [ 19, 22, 25 ] }
+    }
+  },
+  {
     name: "Alm",
     title: "Hero of Prophecy",
     releaseDate: "Apr 14, 2017",
@@ -923,6 +956,38 @@ module.exports = [
       level40: { hp: [ 35, 39, 42 ], atk: [ 28, 31, 34 ], spd: [ 31, 34, 37 ], def: [ 25, 29, 32 ], res: [ 22, 25, 29 ] },
       level1_4: { hp: 16, atk: 7, spd: 10, def: 6, res: 5 },
       level40_4: { hp: [ 33, 36, 39 ], atk: [ 26, 29, 32 ], spd: [ 29, 32, 35 ], def: [ 23, 26, 29 ], res: [ 20, 23, 26 ] }
+    }
+  },
+  {
+    name: "Catria (Hares at the Fair)",
+    shortName: "Catria",
+    title: "Spring Whitewing",
+    releaseDate: "Mar 22, 2018",
+    colorType: "Blue",
+    weaponType: "Tome",
+    moveType: "Cavalry",
+    rarity5: ["pool1"],
+    lmited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Catria (Hares at the Fair).png",
+      main: "img/heroes-main/Catria.png"
+    },
+    skills: [
+      { name: "Thunder", rarity: 5 },
+      { name: "Elthunder", rarity: 5 },
+      { name: "Blue Egg", rarity: 5 },
+      { name: "Huginn's Egg", rarity: 5 },
+      { name: "Draw Back", rarity: 5 },
+      { name: "Chill Res 1", rarity: 5 },
+      { name: "Chill Res 2", rarity: 5 },
+      { name: "Chill Res 3", rarity: 5 },
+      { name: "Spur Spd 1", rarity: 5 },
+      { name: "Drive Spd 1", rarity: 5 },
+      { name: "Drive Spd 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 7, spd: 10, def: 7, res: 6 },
+      level40: { hp: [ 35, 39, 42 ], atk: [ 28, 31, 34 ], spd: [ 31, 34, 37 ], def: [ 25, 29, 32 ], res: [ 22, 25, 29 ] }
     }
   },
   {
@@ -3373,6 +3438,40 @@ module.exports = [
       level40: { hp: [ 28, 31, 34 ], atk: [ 32, 35, 38 ], spd: [ 29, 32, 35 ], def: [ 19, 22, 25 ], res: [ 24, 28, 31 ] },
       level1_4: { hp: 15, atk: 9, spd: 8, def: 4, res: 5 },
       level40_4: { hp: [ 26, 29, 32 ], atk: [ 30, 33, 36 ], spd: [ 27, 30, 33 ], def: [ 17, 20, 23 ], res: [ 22, 25, 28 ] }
+    }
+  },
+  {
+    name: "Kagero (Hares at the Fair)",
+    shortName: "Kagero",
+    title: "Spring Ninja",
+    releaseDate: "Mar 22, 2018",
+    colorType: "Neutral",
+    weaponType: "Dagger",
+    moveType: "Flying",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Kagero (Hares at the Fair).png",
+      main: "img/heroes-main/Kagero.png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 5 },
+      { name: "Steel Dagger", rarity: 5 },
+      { name: "Lethal Carrot", rarity: 5 },
+      { name: "Lethal Carrot+", rarity: 5 },
+      { name: "Night Sky", rarity: 5 },
+      { name: "Glimmer", rarity: 5 },
+      { name: "Spd/Res Bond 1", rarity: 5 },
+      { name: "Spd/Res Bond 2", rarity: 5 },
+      { name: "Spd/Res Bond 3", rarity: 5 },
+      { name: "Live for Honor", rarity: 5 },
+      { name: "Spur Spd 1", rarity: 5 },
+      { name: "Spur Spd 2", rarity: 5 },
+      { name: "Goad Fliers", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 9, spd: 8, def: 5, res: 6 },
+      level40: { hp: [ 28, 31, 34 ], atk: [ 32, 35, 38 ], spd: [ 29, 32, 35 ], def: [ 19, 22, 25 ], res: [ 24, 28, 31 ] }
     }
   },
   {
@@ -6366,6 +6465,40 @@ module.exports = [
       level40: { hp: [ 40, 43, 46 ], atk: [ 29, 32, 35 ], spd: [ 29, 32, 35 ], def: [ 25, 29, 32 ], res: [ 19, 22, 25 ] },
       level1_4: { hp: 18, atk: 8, spd: 8, def: 6, res: 4 },
       level40_4: { hp: [ 37, 40, 43 ], atk: [ 27, 30, 33 ], spd: [ 27, 30, 33 ], def: [ 23, 26, 29 ], res: [ 17, 20, 23 ] }
+    }
+  },
+  {
+    name: "Sharena (Hares at the Fair)",
+    shortName: "Sharena",
+    title: "Spring Princess ",
+    releaseDate: "Mar 22, 2018",
+    colorType: "Green",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Sharena (Hares at the Fair).png",
+      main: "img/heroes-main/Sharena.png"
+    },
+    skills: [
+      { name: "Wind", rarity: 5 },
+      { name: "Elwind", rarity: 5 },
+      { name: "Green Egg", rarity: 5 },
+      { name: "Muninn's Egg+", rarity: 5 },
+      { name: "Rally Attack", rarity: 5 },
+      { name: "Rally Atk/Spd", rarity: 5 },
+      { name: "Warding Stance 1", rarity: 5 },
+      { name: "Swift Stance 1", rarity: 5 },
+      { name: "Swift Stance 2", rarity: 5 },
+      { name: "Live for Bounty", rarity: 5 },
+      { name: "Res Tactic 1", rarity: 5 },
+      { name: "Res Tactic 2", rarity: 5 },
+      { name: "Res Tactic 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 19, atk: 8, spd: 8, def: 7, res: 5 },
+      level40: { hp: [ 40, 43, 46 ], atk: [ 29, 32, 35 ], spd: [ 29, 32, 35 ], def: [ 25, 29, 32 ], res: [ 19, 22, 25 ] }
     }
   },
   {

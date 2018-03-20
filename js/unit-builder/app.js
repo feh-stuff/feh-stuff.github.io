@@ -266,6 +266,39 @@ module.exports = [
     }
   },
   {
+    name: "Alfonse (Hares at the Fair)",
+    shortName: "Alfonse",
+    title: "Spring Prince",
+    releaseDate: "Mar 22, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Cavalry",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Alfonse (Hares at the Fair).png",
+      main: "img/heroes-main/Alfonse.png"
+    },
+    skills: [
+      {  name: "Iron Axe", rarity: 5 },
+      {  name: "Steel Axe", rarity: 5 },
+      {  name: "Giant Spoon", rarity: 5 },
+      {  name: "Giant Spoon+", rarity: 5 },
+      {  name: "Daylight", rarity: 5 },
+      {  name: "Noontime", rarity: 5 },
+      {  name: "Death Blow 1", rarity: 5 },
+      {  name: "Sturdy Blow 1", rarity: 5 },
+      {  name: "Sturdy Blow 2", rarity: 5 },
+      {  name: "Def Smoke 1", rarity: 5 },
+      {  name: "Def Smoke 2", rarity: 5 },
+      {  name: "Def Smoke 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 19, atk: 9, spd: 6, def: 8, res: 5 },
+      level40: { hp: [ 40, 43, 46 ], atk: [ 32, 35, 38 ], spd: [ 22, 25, 29 ], def: [ 29, 32, 35 ], res: [ 19, 22, 25 ] }
+    }
+  },
+  {
     name: "Alm",
     title: "Hero of Prophecy",
     releaseDate: "Apr 14, 2017",
@@ -1119,6 +1152,38 @@ module.exports = [
       level40: { hp: [ 35, 39, 42 ], atk: [ 28, 31, 34 ], spd: [ 31, 34, 37 ], def: [ 25, 29, 32 ], res: [ 22, 25, 29 ] },
       level1_4: { hp: 16, atk: 7, spd: 10, def: 6, res: 5 },
       level40_4: { hp: [ 33, 36, 39 ], atk: [ 26, 29, 32 ], spd: [ 29, 32, 35 ], def: [ 23, 26, 29 ], res: [ 20, 23, 26 ] }
+    }
+  },
+  {
+    name: "Catria (Hares at the Fair)",
+    shortName: "Catria",
+    title: "Spring Whitewing",
+    releaseDate: "Mar 22, 2018",
+    colorType: "Blue",
+    weaponType: "Tome",
+    moveType: "Cavalry",
+    rarity5: ["pool1"],
+    lmited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Catria (Hares at the Fair).png",
+      main: "img/heroes-main/Catria.png"
+    },
+    skills: [
+      { name: "Thunder", rarity: 5 },
+      { name: "Elthunder", rarity: 5 },
+      { name: "Blue Egg", rarity: 5 },
+      { name: "Huginn's Egg", rarity: 5 },
+      { name: "Draw Back", rarity: 5 },
+      { name: "Chill Res 1", rarity: 5 },
+      { name: "Chill Res 2", rarity: 5 },
+      { name: "Chill Res 3", rarity: 5 },
+      { name: "Spur Spd 1", rarity: 5 },
+      { name: "Drive Spd 1", rarity: 5 },
+      { name: "Drive Spd 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 7, spd: 10, def: 7, res: 6 },
+      level40: { hp: [ 35, 39, 42 ], atk: [ 28, 31, 34 ], spd: [ 31, 34, 37 ], def: [ 25, 29, 32 ], res: [ 22, 25, 29 ] }
     }
   },
   {
@@ -3569,6 +3634,40 @@ module.exports = [
       level40: { hp: [ 28, 31, 34 ], atk: [ 32, 35, 38 ], spd: [ 29, 32, 35 ], def: [ 19, 22, 25 ], res: [ 24, 28, 31 ] },
       level1_4: { hp: 15, atk: 9, spd: 8, def: 4, res: 5 },
       level40_4: { hp: [ 26, 29, 32 ], atk: [ 30, 33, 36 ], spd: [ 27, 30, 33 ], def: [ 17, 20, 23 ], res: [ 22, 25, 28 ] }
+    }
+  },
+  {
+    name: "Kagero (Hares at the Fair)",
+    shortName: "Kagero",
+    title: "Spring Ninja",
+    releaseDate: "Mar 22, 2018",
+    colorType: "Neutral",
+    weaponType: "Dagger",
+    moveType: "Flying",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Kagero (Hares at the Fair).png",
+      main: "img/heroes-main/Kagero.png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 5 },
+      { name: "Steel Dagger", rarity: 5 },
+      { name: "Lethal Carrot", rarity: 5 },
+      { name: "Lethal Carrot+", rarity: 5 },
+      { name: "Night Sky", rarity: 5 },
+      { name: "Glimmer", rarity: 5 },
+      { name: "Spd/Res Bond 1", rarity: 5 },
+      { name: "Spd/Res Bond 2", rarity: 5 },
+      { name: "Spd/Res Bond 3", rarity: 5 },
+      { name: "Live for Honor", rarity: 5 },
+      { name: "Spur Spd 1", rarity: 5 },
+      { name: "Spur Spd 2", rarity: 5 },
+      { name: "Goad Fliers", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 9, spd: 8, def: 5, res: 6 },
+      level40: { hp: [ 28, 31, 34 ], atk: [ 32, 35, 38 ], spd: [ 29, 32, 35 ], def: [ 19, 22, 25 ], res: [ 24, 28, 31 ] }
     }
   },
   {
@@ -6565,6 +6664,40 @@ module.exports = [
     }
   },
   {
+    name: "Sharena (Hares at the Fair)",
+    shortName: "Sharena",
+    title: "Spring Princess ",
+    releaseDate: "Mar 22, 2018",
+    colorType: "Green",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Sharena (Hares at the Fair).png",
+      main: "img/heroes-main/Sharena.png"
+    },
+    skills: [
+      { name: "Wind", rarity: 5 },
+      { name: "Elwind", rarity: 5 },
+      { name: "Green Egg", rarity: 5 },
+      { name: "Muninn's Egg+", rarity: 5 },
+      { name: "Rally Attack", rarity: 5 },
+      { name: "Rally Atk/Spd", rarity: 5 },
+      { name: "Warding Stance 1", rarity: 5 },
+      { name: "Swift Stance 1", rarity: 5 },
+      { name: "Swift Stance 2", rarity: 5 },
+      { name: "Live for Bounty", rarity: 5 },
+      { name: "Res Tactic 1", rarity: 5 },
+      { name: "Res Tactic 2", rarity: 5 },
+      { name: "Res Tactic 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 19, atk: 8, spd: 8, def: 7, res: 5 },
+      level40: { hp: [ 40, 43, 46 ], atk: [ 29, 32, 35 ], spd: [ 29, 32, 35 ], def: [ 25, 29, 32 ], res: [ 19, 22, 25 ] }
+    }
+  },
+  {
     name: "Sheena",
     title: "Princess of Gra",
     releaseDate: "Feb 02, 2017",
@@ -8588,6 +8721,27 @@ module.exports = [
     effect: "Grants Spd/Res+2."
   },
   {
+    name: "Spd/Res Bond 1",
+    spCost: 60,
+    icon: "0-0",
+    effect: "Grants Spd/Res+3 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Spd/Res Bond 2",
+    spCost: 120,
+    icon: "0-0",
+    prev: ["Spd/Res Bond 1"],
+    effect: "Grants Spd/Res+4 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Spd/Res Bond 3",
+    spCost: 240,
+    icon: "0-0",
+    prev: ["Spd/Res Bond 2"],
+    last: true,
+    effect: "Grants Spd/Res+5 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
     name: "Speed +1",
     spCost: 30,
     icon: "0-10",
@@ -8715,6 +8869,21 @@ module.exports = [
     exclude: [{weaponType:"Staff"}],
     last: true,
     effect: "If unit initiates combat, unit granted Atk/Spd+4 during battle."
+  },
+  {
+    name: "Swift Stance 1",
+    spCost: 100,
+    icon: "0-0",
+    prev: ["Warding Stance 1"],
+    effect: "Grants Spd/Res+2 during combat when this unit is attacked."
+  },
+  {
+    name: "Swift Stance 2",
+    spCost: 200,
+    icon: "0-0",
+    prev: ["Swift Stance 1"],
+    last: true,
+    effect: "Grants Spd/Res+4 during combat when this unit is attacked."
   },
   {
     name: "Swift Strike 1",
@@ -9492,6 +9661,26 @@ module.exports = [
     icon: "37-12",
     prev: ["Chill Spd 2"],
     effect: "At the start of each turn, inflicts Spd-7 on foe on the enemy team with the highest Spd through its next action."
+  },
+  {
+    name: "Chill Res 1",
+    spCost: 60,
+    icon: "0-0",
+    effect: "At the start of each turn, inflicts Res-3 on foe on the enemy team with the highest Res through its next action."
+  },
+  {
+    name: "Chill Res 2",
+    spCost: 120,
+    icon: "0-0",
+    prev: ["Chill Res 1"],
+    effect: "At the start of each turn, inflicts Res-5 on foe on the enemy team with the highest Res through its next action."
+  },
+  {
+    name: "Chill Res 3",
+    spCost: 240,
+    icon: "0-0",
+    prev: ["Chill Res 2"],
+    effect: "At the start of each turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action."
   },
   {
     name: "Chilling Seal",
@@ -10636,6 +10825,29 @@ module.exports = [
     icon: "20-4",
     prev: ["Def Ploy 2"],
     effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-5 until the end of foe's next action."
+  },
+  {
+    name: "Def Smoke 1",
+    spCost: 60,
+    icon: "0-0",
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Def-3 on foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Def Smoke 2",
+    spCost: 120,
+    icon: "0-0",
+    prev: ["Def Smoke 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Def-5 on foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Def Smoke 3",
+    spCost: 240,
+    icon: "0-0",
+    prev: ["Def Smoke 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Def-7 on foes within 2 spaces of target through their next actions."
   },
   {
     name: "Def Tactic 1",
@@ -16610,6 +16822,26 @@ module.exports = [
     effect: "Grants Def+3. Grants allies with sword, lance, axe, bow, or dagger within 2 spaces Atk/Spd+3 during combat.",
   },
   {
+    name: "Giant Spoon",
+    spCost: 200,
+    damage: 9,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Steel Axe"],
+    effect: "Deals +10 to damage when Special triggers."
+  },
+  {
+    name: "Giant Spoon+",
+    spCost: 300,
+    damage: 13,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Giant Spoon"],
+    effect: "Deals +10 to damage when Special triggers."
+  },
+  {
     name: "Gleipnir",
     spCost: 400,
     damage: 14,
@@ -16987,6 +17219,18 @@ module.exports = [
     effect: "Grants Atk/Spd +4 during combat if infantry or flying ally is within 2 spaces of unit."
   },
   {
+    name: "Huginn's Egg",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    stats: {res: 3},
+    prev: ["Blue Egg"],
+    exclusive: ["Catria (Hares at the Fair)"],
+    effect: "Grants Res+3. At the start of turn, if unit's HP ≥ 50%, inflicts Atk/Def-5 on foe on the enemy team with the lowest Res through its next action."
+  },
+  {
     name: "Iron Axe",
     spCost: 50,
     damage: 6,
@@ -17285,6 +17529,26 @@ module.exports = [
     effect: "Unit can counterattack regardless of foe's range.",
   },
   {
+    name: "Lethal Carrot",
+    spCost: 200,
+    damage: 8,
+    range: 1,
+    weaponType: "Dagger",
+    colorType: "Neutral",
+    prev: ["Steel Dagger"],
+    effect: "Deals +10 damage when special triggers."
+  },
+  {
+    name: "Lethal Carrot+",
+    spCost: 300,
+    damage: 12,
+    range: 1,
+    weaponType: "Dagger",
+    colorType: "Neutral",
+    prev: ["Lethal Carrot"],
+    effect: "Deals +10 damage when special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions."
+  },
+  {
     name: "Light",
     spCost: 50,
     damage: 4,
@@ -17388,6 +17652,18 @@ module.exports = [
     colorType: "Neutral",
     prev: ["Monstrous Bow"],
     effect: "Effective against flying foes.  After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions."
+  },
+  {
+    name: "Muninn's Egg",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    stats: {res: 3},
+    prev: ["Green Egg"],
+    exclusive: ["Sharena (Hares at the Fair)"],
+    effect: "Grants Res+3. At the start of turn, if unit's HP ≥ 50%, inflicts Atk/Res-5 on foe on the enemy team with the lowest Res through its next action."
   },
   {
     name: "Mulagir",

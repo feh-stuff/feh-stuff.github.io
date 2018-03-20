@@ -1240,6 +1240,26 @@ module.exports = [
     effect: "Grants Def+3. Grants allies with sword, lance, axe, bow, or dagger within 2 spaces Atk/Spd+3 during combat.",
   },
   {
+    name: "Giant Spoon",
+    spCost: 200,
+    damage: 9,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Steel Axe"],
+    effect: "Deals +10 to damage when Special triggers."
+  },
+  {
+    name: "Giant Spoon+",
+    spCost: 300,
+    damage: 13,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Giant Spoon"],
+    effect: "Deals +10 to damage when Special triggers."
+  },
+  {
     name: "Gleipnir",
     spCost: 400,
     damage: 14,
@@ -1617,6 +1637,18 @@ module.exports = [
     effect: "Grants Atk/Spd +4 during combat if infantry or flying ally is within 2 spaces of unit."
   },
   {
+    name: "Huginn's Egg",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    stats: {res: 3},
+    prev: ["Blue Egg"],
+    exclusive: ["Catria (Hares at the Fair)"],
+    effect: "Grants Res+3. At the start of turn, if unit's HP ≥ 50%, inflicts Atk/Def-5 on foe on the enemy team with the lowest Res through its next action."
+  },
+  {
     name: "Iron Axe",
     spCost: 50,
     damage: 6,
@@ -1915,6 +1947,26 @@ module.exports = [
     effect: "Unit can counterattack regardless of foe's range.",
   },
   {
+    name: "Lethal Carrot",
+    spCost: 200,
+    damage: 8,
+    range: 1,
+    weaponType: "Dagger",
+    colorType: "Neutral",
+    prev: ["Steel Dagger"],
+    effect: "Deals +10 damage when special triggers."
+  },
+  {
+    name: "Lethal Carrot+",
+    spCost: 300,
+    damage: 12,
+    range: 1,
+    weaponType: "Dagger",
+    colorType: "Neutral",
+    prev: ["Lethal Carrot"],
+    effect: "Deals +10 damage when special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions."
+  },
+  {
     name: "Light",
     spCost: 50,
     damage: 4,
@@ -2018,6 +2070,18 @@ module.exports = [
     colorType: "Neutral",
     prev: ["Monstrous Bow"],
     effect: "Effective against flying foes.  After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions."
+  },
+  {
+    name: "Muninn's Egg",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    stats: {res: 3},
+    prev: ["Green Egg"],
+    exclusive: ["Sharena (Hares at the Fair)"],
+    effect: "Grants Res+3. At the start of turn, if unit's HP ≥ 50%, inflicts Atk/Res-5 on foe on the enemy team with the lowest Res through its next action."
   },
   {
     name: "Mulagir",

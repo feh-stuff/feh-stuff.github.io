@@ -894,6 +894,27 @@ module.exports = [
     effect: "Grants Spd/Res+2."
   },
   {
+    name: "Spd/Res Bond 1",
+    spCost: 60,
+    icon: "0-0",
+    effect: "Grants Spd/Res+3 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Spd/Res Bond 2",
+    spCost: 120,
+    icon: "0-0",
+    prev: ["Spd/Res Bond 1"],
+    effect: "Grants Spd/Res+4 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Spd/Res Bond 3",
+    spCost: 240,
+    icon: "0-0",
+    prev: ["Spd/Res Bond 2"],
+    last: true,
+    effect: "Grants Spd/Res+5 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
     name: "Speed +1",
     spCost: 30,
     icon: "0-10",
@@ -1021,6 +1042,21 @@ module.exports = [
     exclude: [{weaponType:"Staff"}],
     last: true,
     effect: "If unit initiates combat, unit granted Atk/Spd+4 during battle."
+  },
+  {
+    name: "Swift Stance 1",
+    spCost: 100,
+    icon: "0-0",
+    prev: ["Warding Stance 1"],
+    effect: "Grants Spd/Res+2 during combat when this unit is attacked."
+  },
+  {
+    name: "Swift Stance 2",
+    spCost: 200,
+    icon: "0-0",
+    prev: ["Swift Stance 1"],
+    last: true,
+    effect: "Grants Spd/Res+4 during combat when this unit is attacked."
   },
   {
     name: "Swift Strike 1",

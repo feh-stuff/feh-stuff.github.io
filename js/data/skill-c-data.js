@@ -287,6 +287,29 @@ module.exports = [
     effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Def-5 until the end of foe's next action."
   },
   {
+    name: "Def Smoke 1",
+    spCost: 60,
+    icon: "0-0",
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Def-3 on foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Def Smoke 2",
+    spCost: 120,
+    icon: "0-0",
+    prev: ["Def Smoke 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Def-5 on foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Def Smoke 3",
+    spCost: 240,
+    icon: "0-0",
+    prev: ["Def Smoke 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Def-7 on foes within 2 spaces of target through their next actions."
+  },
+  {
     name: "Def Tactic 1",
     spCost: 60,
     icon: "33-3",
