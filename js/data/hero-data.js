@@ -81,7 +81,7 @@ module.exports = [
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Alfonse (Hares at the Fair).png",
-      main: "img/heroes-main/Alfonse.png"
+      main: "img/heroes-main/Alfonse (Hares at the Fair).png"
     },
     skills: [
       {  name: "Iron Axe", rarity: 5 },
@@ -98,8 +98,8 @@ module.exports = [
       {  name: "Def Smoke 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 19, atk: 9, spd: 6, def: 8, res: 5 },
-      level40: { hp: [ 40, 43, 46 ], atk: [ 32, 35, 38 ], spd: [ 22, 25, 29 ], def: [ 29, 32, 35 ], res: [ 19, 22, 25 ] }
+      level1: { hp: 19, atk: 9, spd: 7, def: 6, res: 5 },
+      level40: { hp: [ 37, 41, 44 ], atk: [ 32, 35, 38 ], spd: [ 30, 33, 36 ], def: [ 27, 30, 33 ], res: [ 14, 18, 21 ] }
     }
   },
   {
@@ -970,12 +970,12 @@ module.exports = [
     lmited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Catria (Hares at the Fair).png",
-      main: "img/heroes-main/Catria.png"
+      main: "img/heroes-main/Catria (Hares at the Fair).png"
     },
     skills: [
       { name: "Thunder", rarity: 5 },
       { name: "Elthunder", rarity: 5 },
-      { name: "Blue Egg", rarity: 5 },
+      { name: "Thoron", rarity: 5 },
       { name: "Huginn's Egg", rarity: 5 },
       { name: "Draw Back", rarity: 5 },
       { name: "Chill Res 1", rarity: 5 },
@@ -986,8 +986,8 @@ module.exports = [
       { name: "Drive Spd 2", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 17, atk: 7, spd: 10, def: 7, res: 6 },
-      level40: { hp: [ 35, 39, 42 ], atk: [ 28, 31, 34 ], spd: [ 31, 34, 37 ], def: [ 25, 29, 32 ], res: [ 22, 25, 29 ] }
+      level1: { hp: 17, atk: 6, spd: 9, def: 5, res: 6 },
+      level40: { hp: [ 33, 36, 40 ], atk: [ 29, 32, 35 ],  spd: [ 32, 35, 38 ], def: [ 14, 18, 21 ],  res: [ 20, 23, 26 ] }
     }
   },
   {
@@ -3452,7 +3452,7 @@ module.exports = [
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Kagero (Hares at the Fair).png",
-      main: "img/heroes-main/Kagero.png"
+      main: "img/heroes-main/Kagero (Hares at the Fair).png"
     },
     skills: [
       { name: "Iron Dagger", rarity: 5 },
@@ -3470,8 +3470,8 @@ module.exports = [
       { name: "Goad Fliers", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 16, atk: 9, spd: 8, def: 5, res: 6 },
-      level40: { hp: [ 28, 31, 34 ], atk: [ 32, 35, 38 ], spd: [ 29, 32, 35 ], def: [ 19, 22, 25 ], res: [ 24, 28, 31 ] }
+      level1: { hp: 17, atk: 9, spd: 8, def: 5, res: 5 },
+      level40: { hp: [ 33, 36, 50 ], atk: [ 32, 35, 38 ], spd: [ 31, 34, 37 ], def: [ 14, 18, 21 ],  res: [ 23, 27, 30 ] }
     }
   },
   {
@@ -4893,28 +4893,31 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Infantry",
+    rarity4: ["pool1"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Morgan (M).png",
       main: "img/heroes-main/Morgan (M).png"
     },
     skills: [
-      { name: "Flux", rarity: 5 },
-      { name: "Ruin", rarity: 5 },
-      { name: "Fenrir", rarity: 5 },
+      { name: "Flux", rarity: 4 },
+      { name: "Ruin", rarity: 4 },
+      { name: "Fenrir", rarity: 4 },
       { name: "Grima's Truth", rarity: 5 },
-      { name: "Dragon Gaze", rarity: 5 },
-      { name: "Dragon Fang", rarity: 5 },
-      { name: "Dull Ranged 1", rarity: 5 },
-      { name: "Dull Ranged 2", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 4 },
+      { name: "Dragon Fang", rarity: 4 },
+      { name: "Dull Ranged 1", rarity: 4 },
+      { name: "Dull Ranged 2", rarity: 4 },
       { name: "Dull Ranged 3", rarity: 5 },
-      { name: "Spur Def 1", rarity: 5 },
-      { name: "Spur Def/Res 1", rarity: 5 },
-      { name: "Spur Def/Res 2", rarity: 5 }
+      { name: "Spur Def 1", rarity: 4 },
+      { name: "Spur Def/Res 1", rarity: 4 },
+      { name: "Spur Def/Res 2", rarity: 4 }
     ],
     stats: {
       level1: { hp: 18, atk: 7, spd: 8, def: 5, res: 7 },
-      level40: { hp: [ 34, 37, 41 ], atk: [ 30, 33, 36 ], spd: [ 31, 34, 37 ], def: [ 17, 20, 23 ], res: [ 23, 26, 30 ] }
+      level40: { hp: [ 34, 37, 41 ], atk: [ 30, 33, 36 ], spd: [ 31, 34, 37 ], def: [ 17, 20, 23 ], res: [ 23, 26, 30 ] },
+      level1_4: { hp: 17,	atk: 7,	spd:8,	def: 4,	res: 6 },
+      level1_40: { hp: [ 32, 35, 38 ], atk: [ 28, 31, 34 ], spd: [ 29, 32, 35 ], def: [ 15, 18, 21 ], res: [ 21, 24, 27 ] }
     }
   },
   {
@@ -6479,16 +6482,16 @@ module.exports = [
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sharena (Hares at the Fair).png",
-      main: "img/heroes-main/Sharena.png"
+      main: "img/heroes-main/Sharena (Hares at the Fair).png"
     },
     skills: [
       { name: "Wind", rarity: 5 },
       { name: "Elwind", rarity: 5 },
-      { name: "Green Egg", rarity: 5 },
-      { name: "Muninn's Egg+", rarity: 5 },
+      { name: "Rexcalibur", rarity: 5 },
+      { name: "Muninn's Egg", rarity: 5 },
       { name: "Rally Attack", rarity: 5 },
       { name: "Rally Atk/Spd", rarity: 5 },
-      { name: "Warding Stance 1", rarity: 5 },
+      { name: "Darting Stance 1", rarity: 5 },
       { name: "Swift Stance 1", rarity: 5 },
       { name: "Swift Stance 2", rarity: 5 },
       { name: "Live for Bounty", rarity: 5 },
@@ -6497,8 +6500,8 @@ module.exports = [
       { name: "Res Tactic 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 19, atk: 8, spd: 8, def: 7, res: 5 },
-      level40: { hp: [ 40, 43, 46 ], atk: [ 29, 32, 35 ], spd: [ 29, 32, 35 ], def: [ 25, 29, 32 ], res: [ 19, 22, 25 ] }
+      level1: { hp: 18, atk: 8, spd: 10, def: 3, res: 6 },
+      level40: { hp: [ 34, 37, 41 ], atk: [ 29, 32, 35 ],  spd: [ 33, 36, 39 ], def: [ 12, 16, 19 ],  res: [ 27, 30, 33 ] }
     }
   },
   {

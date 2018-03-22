@@ -277,7 +277,7 @@ module.exports = [
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Alfonse (Hares at the Fair).png",
-      main: "img/heroes-main/Alfonse.png"
+      main: "img/heroes-main/Alfonse (Hares at the Fair).png"
     },
     skills: [
       {  name: "Iron Axe", rarity: 5 },
@@ -294,8 +294,8 @@ module.exports = [
       {  name: "Def Smoke 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 19, atk: 9, spd: 6, def: 8, res: 5 },
-      level40: { hp: [ 40, 43, 46 ], atk: [ 32, 35, 38 ], spd: [ 22, 25, 29 ], def: [ 29, 32, 35 ], res: [ 19, 22, 25 ] }
+      level1: { hp: 19, atk: 9, spd: 7, def: 6, res: 5 },
+      level40: { hp: [ 37, 41, 44 ], atk: [ 32, 35, 38 ], spd: [ 30, 33, 36 ], def: [ 27, 30, 33 ], res: [ 14, 18, 21 ] }
     }
   },
   {
@@ -1166,12 +1166,12 @@ module.exports = [
     lmited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Catria (Hares at the Fair).png",
-      main: "img/heroes-main/Catria.png"
+      main: "img/heroes-main/Catria (Hares at the Fair).png"
     },
     skills: [
       { name: "Thunder", rarity: 5 },
       { name: "Elthunder", rarity: 5 },
-      { name: "Blue Egg", rarity: 5 },
+      { name: "Thoron", rarity: 5 },
       { name: "Huginn's Egg", rarity: 5 },
       { name: "Draw Back", rarity: 5 },
       { name: "Chill Res 1", rarity: 5 },
@@ -1182,8 +1182,8 @@ module.exports = [
       { name: "Drive Spd 2", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 17, atk: 7, spd: 10, def: 7, res: 6 },
-      level40: { hp: [ 35, 39, 42 ], atk: [ 28, 31, 34 ], spd: [ 31, 34, 37 ], def: [ 25, 29, 32 ], res: [ 22, 25, 29 ] }
+      level1: { hp: 17, atk: 6, spd: 9, def: 5, res: 6 },
+      level40: { hp: [ 33, 36, 40 ], atk: [ 29, 32, 35 ],  spd: [ 32, 35, 38 ], def: [ 14, 18, 21 ],  res: [ 20, 23, 26 ] }
     }
   },
   {
@@ -3648,7 +3648,7 @@ module.exports = [
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Kagero (Hares at the Fair).png",
-      main: "img/heroes-main/Kagero.png"
+      main: "img/heroes-main/Kagero (Hares at the Fair).png"
     },
     skills: [
       { name: "Iron Dagger", rarity: 5 },
@@ -3666,8 +3666,8 @@ module.exports = [
       { name: "Goad Fliers", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 16, atk: 9, spd: 8, def: 5, res: 6 },
-      level40: { hp: [ 28, 31, 34 ], atk: [ 32, 35, 38 ], spd: [ 29, 32, 35 ], def: [ 19, 22, 25 ], res: [ 24, 28, 31 ] }
+      level1: { hp: 17, atk: 9, spd: 8, def: 5, res: 5 },
+      level40: { hp: [ 33, 36, 50 ], atk: [ 32, 35, 38 ], spd: [ 31, 34, 37 ], def: [ 14, 18, 21 ],  res: [ 23, 27, 30 ] }
     }
   },
   {
@@ -5089,28 +5089,31 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Infantry",
+    rarity4: ["pool1"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Morgan (M).png",
       main: "img/heroes-main/Morgan (M).png"
     },
     skills: [
-      { name: "Flux", rarity: 5 },
-      { name: "Ruin", rarity: 5 },
-      { name: "Fenrir", rarity: 5 },
+      { name: "Flux", rarity: 4 },
+      { name: "Ruin", rarity: 4 },
+      { name: "Fenrir", rarity: 4 },
       { name: "Grima's Truth", rarity: 5 },
-      { name: "Dragon Gaze", rarity: 5 },
-      { name: "Dragon Fang", rarity: 5 },
-      { name: "Dull Ranged 1", rarity: 5 },
-      { name: "Dull Ranged 2", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 4 },
+      { name: "Dragon Fang", rarity: 4 },
+      { name: "Dull Ranged 1", rarity: 4 },
+      { name: "Dull Ranged 2", rarity: 4 },
       { name: "Dull Ranged 3", rarity: 5 },
-      { name: "Spur Def 1", rarity: 5 },
-      { name: "Spur Def/Res 1", rarity: 5 },
-      { name: "Spur Def/Res 2", rarity: 5 }
+      { name: "Spur Def 1", rarity: 4 },
+      { name: "Spur Def/Res 1", rarity: 4 },
+      { name: "Spur Def/Res 2", rarity: 4 }
     ],
     stats: {
       level1: { hp: 18, atk: 7, spd: 8, def: 5, res: 7 },
-      level40: { hp: [ 34, 37, 41 ], atk: [ 30, 33, 36 ], spd: [ 31, 34, 37 ], def: [ 17, 20, 23 ], res: [ 23, 26, 30 ] }
+      level40: { hp: [ 34, 37, 41 ], atk: [ 30, 33, 36 ], spd: [ 31, 34, 37 ], def: [ 17, 20, 23 ], res: [ 23, 26, 30 ] },
+      level1_4: { hp: 17,	atk: 7,	spd:8,	def: 4,	res: 6 },
+      level1_40: { hp: [ 32, 35, 38 ], atk: [ 28, 31, 34 ], spd: [ 29, 32, 35 ], def: [ 15, 18, 21 ], res: [ 21, 24, 27 ] }
     }
   },
   {
@@ -6675,16 +6678,16 @@ module.exports = [
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sharena (Hares at the Fair).png",
-      main: "img/heroes-main/Sharena.png"
+      main: "img/heroes-main/Sharena (Hares at the Fair).png"
     },
     skills: [
       { name: "Wind", rarity: 5 },
       { name: "Elwind", rarity: 5 },
-      { name: "Green Egg", rarity: 5 },
-      { name: "Muninn's Egg+", rarity: 5 },
+      { name: "Rexcalibur", rarity: 5 },
+      { name: "Muninn's Egg", rarity: 5 },
       { name: "Rally Attack", rarity: 5 },
       { name: "Rally Atk/Spd", rarity: 5 },
-      { name: "Warding Stance 1", rarity: 5 },
+      { name: "Darting Stance 1", rarity: 5 },
       { name: "Swift Stance 1", rarity: 5 },
       { name: "Swift Stance 2", rarity: 5 },
       { name: "Live for Bounty", rarity: 5 },
@@ -6693,8 +6696,8 @@ module.exports = [
       { name: "Res Tactic 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 19, atk: 8, spd: 8, def: 7, res: 5 },
-      level40: { hp: [ 40, 43, 46 ], atk: [ 29, 32, 35 ], spd: [ 29, 32, 35 ], def: [ 25, 29, 32 ], res: [ 19, 22, 25 ] }
+      level1: { hp: 18, atk: 8, spd: 10, def: 3, res: 6 },
+      level40: { hp: [ 34, 37, 41 ], atk: [ 29, 32, 35 ],  spd: [ 33, 36, 39 ], def: [ 12, 16, 19 ],  res: [ 27, 30, 33 ] }
     }
   },
   {
@@ -8122,6 +8125,30 @@ module.exports = [
     effect: "Grants Spd+6 during combat if unit initiates the attack."
   },
   {
+    name: "Darting Stance 1",
+    spCost: 50,
+    icon: "39-2",
+    exclude: [{weaponType:"Staff"}],
+    effect: "Grants Spd+2 during combat when this unit is attacked."
+  },
+  {
+    name: "Darting Stance 2",
+    spCost: 100,
+    icon: "39-3",
+    prev: ["Darting Stance 1"],
+    exclude: [{weaponType:"Staff"}],
+    effect: "Grants Spd+4 during combat when this unit is attacked."
+  },
+  {
+    name: "Darting Stance 3",
+    spCost: 200,
+    icon: "39-4",
+    prev: ["Darting Stance 2"],
+    exclude: [{weaponType:"Staff"}],
+    last: true,
+    effect: "Grants Spd+6 during combat when this unit is attacked."
+  },
+  {
     name: "Death Blow 1",
     spCost: 50,
     icon: "1-12",
@@ -8723,20 +8750,20 @@ module.exports = [
   {
     name: "Spd/Res Bond 1",
     spCost: 60,
-    icon: "0-0",
+    icon: "39-7",
     effect: "Grants Spd/Res+3 to this unit during combat if unit is adjacent to an ally."
   },
   {
     name: "Spd/Res Bond 2",
     spCost: 120,
-    icon: "0-0",
+    icon: "39-8",
     prev: ["Spd/Res Bond 1"],
     effect: "Grants Spd/Res+4 to this unit during combat if unit is adjacent to an ally."
   },
   {
     name: "Spd/Res Bond 3",
     spCost: 240,
-    icon: "0-0",
+    icon: "39-9",
     prev: ["Spd/Res Bond 2"],
     last: true,
     effect: "Grants Spd/Res+5 to this unit during combat if unit is adjacent to an ally."
@@ -8873,14 +8900,14 @@ module.exports = [
   {
     name: "Swift Stance 1",
     spCost: 100,
-    icon: "0-0",
-    prev: ["Warding Stance 1"],
+    icon: "39-5",
+    prev: ["Darting Stance 1"],
     effect: "Grants Spd/Res+2 during combat when this unit is attacked."
   },
   {
     name: "Swift Stance 2",
     spCost: 200,
-    icon: "0-0",
+    icon: "39-6",
     prev: ["Swift Stance 1"],
     last: true,
     effect: "Grants Spd/Res+4 during combat when this unit is attacked."
@@ -9665,20 +9692,20 @@ module.exports = [
   {
     name: "Chill Res 1",
     spCost: 60,
-    icon: "0-0",
+    icon: "39-10",
     effect: "At the start of each turn, inflicts Res-3 on foe on the enemy team with the highest Res through its next action."
   },
   {
     name: "Chill Res 2",
     spCost: 120,
-    icon: "0-0",
+    icon: "39-11",
     prev: ["Chill Res 1"],
     effect: "At the start of each turn, inflicts Res-5 on foe on the enemy team with the highest Res through its next action."
   },
   {
     name: "Chill Res 3",
     spCost: 240,
-    icon: "0-0",
+    icon: "39-12",
     prev: ["Chill Res 2"],
     effect: "At the start of each turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action."
   },
@@ -10829,14 +10856,14 @@ module.exports = [
   {
     name: "Def Smoke 1",
     spCost: 60,
-    icon: "0-0",
+    icon: "40-0",
     exclude: [{weaponType: "Staff"}],
     effect: "After combat, inflicts Def-3 on foes within 2 spaces of target through their next actions."
   },
   {
     name: "Def Smoke 2",
     spCost: 120,
-    icon: "0-0",
+    icon: "40-1",
     prev: ["Def Smoke 1"],
     exclude: [{weaponType: "Staff"}],
     effect: "After combat, inflicts Def-5 on foes within 2 spaces of target through their next actions."
@@ -10844,7 +10871,7 @@ module.exports = [
   {
     name: "Def Smoke 3",
     spCost: 240,
-    icon: "0-0",
+    icon: "40-2",
     prev: ["Def Smoke 2"],
     exclude: [{weaponType: "Staff"}],
     effect: "After combat, inflicts Def-7 on foes within 2 spaces of target through their next actions."
@@ -13607,7 +13634,58 @@ module.exports = {
       effect: "Effective against cavalry units."
     }
   ],
-
+  "Lethal Carrot+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Grants +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Grants +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Grants +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "Grants +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions."
+    }
+  ],
+  "Giant Spoon+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 3},
+      effect: "Grants +10 to damage when Special triggers."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, atk: 1, spd: 3},
+      effect: "Grants +10 to damage when Special triggers."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, atk: 1, def: 4},
+      effect: "Grants +10 to damage when Special triggers."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, atk: 1, res: 4},
+      effect: "Grants +10 to damage when Special triggers."
+    }
+  ],
 
   // prf weapons
   "Sol Katti": [

@@ -207,20 +207,20 @@ module.exports = [
   {
     name: "Chill Res 1",
     spCost: 60,
-    icon: "0-0",
+    icon: "39-10",
     effect: "At the start of each turn, inflicts Res-3 on foe on the enemy team with the highest Res through its next action."
   },
   {
     name: "Chill Res 2",
     spCost: 120,
-    icon: "0-0",
+    icon: "39-11",
     prev: ["Chill Res 1"],
     effect: "At the start of each turn, inflicts Res-5 on foe on the enemy team with the highest Res through its next action."
   },
   {
     name: "Chill Res 3",
     spCost: 240,
-    icon: "0-0",
+    icon: "39-12",
     prev: ["Chill Res 2"],
     effect: "At the start of each turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action."
   },

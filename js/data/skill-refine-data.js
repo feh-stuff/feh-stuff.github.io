@@ -1954,7 +1954,58 @@ module.exports = {
       effect: "Effective against cavalry units."
     }
   ],
-
+  "Lethal Carrot+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Grants +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Grants +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Grants +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "Grants +10 damage when Special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions."
+    }
+  ],
+  "Giant Spoon+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 3},
+      effect: "Grants +10 to damage when Special triggers."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, atk: 1, spd: 3},
+      effect: "Grants +10 to damage when Special triggers."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, atk: 1, def: 4},
+      effect: "Grants +10 to damage when Special triggers."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, atk: 1, res: 4},
+      effect: "Grants +10 to damage when Special triggers."
+    }
+  ],
 
   // prf weapons
   "Sol Katti": [
