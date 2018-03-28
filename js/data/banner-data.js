@@ -5,7 +5,7 @@ module.exports = [
       {
         name: "Legendary Heroes: Robin, Fell Vessel",
         startDate: "Mar 29, 2018",
-        focusHeroes: [ "Gunnthrá", "Tiki (Ylissean Summer)", "Elise (Nohrian Summer)", "Ike (Legendary Heroes)", "Zelgius", "Nowi (Trick or Defeat!)", "Fjorm", "Lucina (Brave Heroes)", "Lute", "Lyn (Brave Heroes)", "Sakura (Trick or Defeat!)", "Robin (F) (Legendary Heroes)" ],
+        focusHeroes: [ "Gunnthrá", "Tiki (Adult) (Ylissean Summer)", "Elise (Nohrian Summer)", "Ike (Legendary Heroes)", "Zelgius", "Nowi (Trick or Defeat!)", "Fjorm", "Lucina (Brave Heroes)", "Lute", "Lyn (Brave Heroes)", "Sakura (Trick or Defeat!)", "Robin (F) (Legendary Heroes)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
         rateRarity3: 34,
