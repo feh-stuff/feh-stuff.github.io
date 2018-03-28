@@ -5780,6 +5780,40 @@ module.exports = [
     }
   },
   {
+    name: "Robin (F) (Legendary Heroes)",
+    shortName: "Robin",
+    title: "Fell Vessel",
+    releaseDate: "Mar 29, 2018",
+    colorType: "Neutral",
+    weaponType: "Breath",
+    moveType: "Flying",
+    rarity5: ["pool1"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Robin (F) (Legendary Heroes).png",
+      main: "img/heroes-main/Robin (F).png"
+    },
+    skills: [
+      { name: "Fire Breath", rarity: 5 },
+      { name: "Fire Breath+", rarity: 5 },
+      { name: "Flametongue", rarity: 5 },
+      { name: "Expiration", rarity: 5},
+      { name: "Glowing Ember", rarity: 5 },
+      { name: "Bonfire", rarity: 5 },
+      { name: "Dragonskin", rarity: 5 },
+      { name: "Cancel Affinity 1", rarity: 5 },
+      { name: "Cancel Affinity 2", rarity: 5 },
+      { name: "Cancel Affinity 3", rarity: 5 },
+      { name: "Res Smoke 1", rarity: 5 },
+      { name: "Res Smoke 2", rarity: 5 },
+      { name: "Res Smoke 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 7, spd: 7, def: 7, res: 5 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 25, 29, 32 ], spd: [ 25, 29, 32 ], def: [ 25, 29, 32 ], res: [ 19, 22, 25 ] }
+    }
+  },
+  {
     name: "Robin (F) (Ylissean Summer)",
     shortName: "Robin",
     title: "Seaside Tactician",

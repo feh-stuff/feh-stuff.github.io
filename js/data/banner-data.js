@@ -3,6 +3,32 @@ module.exports = [
     date: "March 2018",
     banners: [
       {
+        name: "Legendary Heroes: Robin, Fell Vessel",
+        startDate: "Mar 29, 2018",
+        focusHeroes: [ "Gunnthrá", "Tiki (Ylissean Summer)", "Elise (Nohrian Summer)", "Ike (Legendary Heroes)", "Zelgius", "Nowi (Trick or Defeat!)", "Fjorm", "Lucina (Brave Heroes)", "Lute", "Lyn (Brave Heroes)", "Sakura (Trick or Defeat!)", "Robin (F) (Legendary Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateRarity3: 34,
+        rateRarity4: 58,
+        rateRarity5: 0,
+        rateRarityFocus: 8,
+        pityRateRarity5: 0,
+        pityRateRarityFocus: 0.5
+      },
+      {
+        name: "Heroes with Miracle",
+        startDate: "Mar 22, 2018",
+        focusHeroes: [ "Mist", "Delthea", "Sigurd" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateRarity3: 36,
+        rateRarity4: 58,
+        rateRarity5: 3,
+        rateRarityFocus: 3,
+        pityRateRarity5: 0.25,
+        pityRateRarityFocus: 0.25
+      },
+      {
         name: "Hares at the Fair",
         startDate: "Mar 22, 2018",
         focusHeroes: [ "Catria (Hares at the Fair)", "Kagero (Hares at the Fair)", "Sharena (Hares at the Fair)", "Alfonse (Hares at the Fair)" ],
@@ -16,7 +42,7 @@ module.exports = [
         pityRateRarityFocus: 0.25
       },
       {
-        name: "Weapons to Refine",
+        name: "Weapons to Refine, Part 3",
         startDate: "Mar 21, 2018",
         focusHeroes: [ "Leo", "Eirika", "Soren" ],
         excludeFromRarity4: [ "Morgan (M)" ],
