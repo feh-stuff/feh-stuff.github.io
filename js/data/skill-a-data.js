@@ -480,6 +480,14 @@ module.exports = [
     effect: "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat."
   },
   {
+    name: "Dragonskin",
+    spCost: 300,
+    icon: "40-3",
+    include: [{name: "Robin (F) (Legendary Heroes)"}],
+    last: true,
+    effect: "Neutralizes \"effective against flying\" bonuses. Grants Def/Res+4 during combat if foe initiates combat."
+  },
+  {
     name: "Earth Boost 1",
     spCost: 50,
     icon: "17-0",

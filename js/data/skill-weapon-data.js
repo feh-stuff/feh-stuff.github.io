@@ -985,7 +985,7 @@ module.exports = [
     weaponType: "Breath",
     colorType: "Green",
     prev: ["Flametongue"],
-    exclusive: ["Robin (M) (Fallen Heroes)"],
+    exclusive: ["Robin (M) (Fallen Heroes)", "Robin (F) (Legendary Heroes)"],
     effect: "If attacked, unit can counterattack regardless of foe's range. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.",
   },
   {

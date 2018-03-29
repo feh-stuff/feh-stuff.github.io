@@ -123,6 +123,7 @@ function onHeroSelect(event) {
   fehUnit.legendary = blessings.isLegendaryHero(hero.name);
   if (fehUnit.legendary) {
     let blessing = blessings.getBlessing(hero.name);
+    fehUnit.allies = [];
     fehUnit.blessing = blessing.type;
     fehUnit.blessingIcon = blessing.icon;
     $(elements.SELECT_BLESSING_TYPE)

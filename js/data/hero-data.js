@@ -5791,7 +5791,7 @@ module.exports = [
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Robin (F) (Legendary Heroes).png",
-      main: "img/heroes-main/Robin (F).png"
+      main: "img/heroes-main/Robin (F) (Legendary Heroes).png"
     },
     skills: [
       { name: "Fire Breath", rarity: 5 },
@@ -5809,8 +5809,8 @@ module.exports = [
       { name: "Res Smoke 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 18, atk: 7, spd: 7, def: 7, res: 5 },
-      level40: { hp: [ 36, 40, 43 ], atk: [ 25, 29, 32 ], spd: [ 25, 29, 32 ], def: [ 25, 29, 32 ], res: [ 19, 22, 25 ] }
+      level1: { hp: 16, atk: 8, spd: 9, def: 8, res: 6 },
+      level40: { hp: [ 37, 40, 43 ], atk: [ 29, 32, 35 ], spd: [ 32, 35, 38 ], def: [ 26, 30, 33 ], res: [ 22, 25, 29 ] }
     }
   },
   {

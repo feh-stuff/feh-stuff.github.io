@@ -752,6 +752,29 @@ module.exports = [
     effect: "At start of turn, grants Res+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
   },
   {
+    name: "Res Smoke 1",
+    spCost: 60,
+    icon: "40-4",
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Res-3 on foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Res Smoke 2",
+    spCost: 120,
+    icon: "40-5",
+    prev: ["Def Smoke 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Res-5 on foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Res Smoke 3",
+    spCost: 240,
+    icon: "40-6",
+    prev: ["Def Smoke 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Res-7 on foes within 2 spaces of target through their next actions."
+  },
+  {
     name: "Savage Blow 1",
     spCost: 50,
     icon: "10-5",
