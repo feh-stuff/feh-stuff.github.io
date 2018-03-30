@@ -4,21 +4,40 @@ let gulp = require('gulp');
 let browserify = require('gulp-browserify');
 let uglify = require('gulp-uglify-es').default;
 let rename = require('gulp-rename');
+let render = require('gulp-nunjucks-render');
 
 gulp.task('summon-sim', () => {
-  gulp.src('./js/summon-simulator/main.js')
+  return gulp.src('./js/summon-simulator/main.js')
       .pipe(browserify())
       .pipe(uglify())
       .pipe(rename('app.js'))
-      .pipe(gulp.dest('./js/summon-simulator'));
+      .pipe(gulp.dest('./summon-simulator'));
 });
 
 gulp.task('unit-builder', () => {
-  gulp.src('./js/unit-builder/main.js')
+  return gulp.src('./js/unit-builder/main.js')
       .pipe(browserify())
-      .pipe(uglify())
+      // .pipe(uglify())
       .pipe(rename('app.js'))
-      .pipe(gulp.dest('./js/unit-builder'));
+      .pipe(gulp.dest('./unit-builder'));
 });
 
-gulp.task('build', ['summon-sim', 'unit-builder']);
+gulp.task('render-ss', () => {
+  return gulp.src('templates/pages/summon-simulator.html')
+      .pipe(render({
+        path: ['templates/partials/', 'templates/macros/']
+      }))
+      .pipe(rename('index.html'))
+      .pipe(gulp.dest('./summon-simulator'));
+});
+
+gulp.task('render-ub', () => {
+  return gulp.src('templates/pages/unit-builder.html')
+      .pipe(render({
+        path: ['templates/partials/', 'templates/macros/']
+      }))
+      .pipe(rename('index.html'))
+      .pipe(gulp.dest('./unit-builder'));
+});
+
+gulp.task('build', ['summon-sim', 'unit-builder', 'render-ss', 'render-ub']);

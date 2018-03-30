@@ -1,0 +1,27 @@
+{% macro header(page, size='') %}
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container {{size}}">
+    <a class="navbar-brand" href="#">
+      <img src="../img/assets/header.png" height="30">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <div class="navbar-nav">
+
+        <a class="nav-item nav-link {{ "active" if page == "summon-simulator" else "#" }}"
+            href="{{ "#" if page == "summon-simulator" else "../summon-simulator/" }}">
+            Summon Simulator</a>
+
+        <a class="nav-item nav-link {{ "active" if page == "unit-builder" else "#" }}"
+            href="{{ "#" if page == "unit-builder" else "../unit-builder/" }}">
+            Unit Builder</a>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+{% endmacro %}

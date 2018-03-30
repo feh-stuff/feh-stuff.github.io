@@ -18,7 +18,7 @@ function init() {
   utils.loadFiles([values.CONST.IMAGE_SKILLS, values.CONST.IMAGE_FRONT,
       values.CONST.IMAGE_BACK, values.CONST.IMAGE_UI], true).then(files => {
 
-    document.fonts.add(new FontFace('FehFont', 'url(font/feh-font.ttf)'));
+    document.fonts.add(new FontFace('FehFont', 'url(../font/feh-font.ttf)'));
     $(elements.SPINNER).addClass('d-none');
     canvas.setImages({
       SKILLS: files[0],

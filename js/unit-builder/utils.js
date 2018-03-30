@@ -11,7 +11,7 @@ exports.loadFiles = function(urls, loadFont = false) {
     }
   ));
   if (loadFont) {
-    promises.push(new FontFace('FehFont', 'url(font/feh-font.ttf)').load());
+    promises.push(new FontFace('FehFont', 'url(../font/feh-font.ttf)').load());
   }
   return Promise.all(promises);
 };

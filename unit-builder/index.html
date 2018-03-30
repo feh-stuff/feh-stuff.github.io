@@ -1,28 +1,41 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>FEH Unit Builder</title>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/feh-stuff.css">
+  <link rel="stylesheet" href="../css/feh-stuff.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="img/assets/header.png" height="30">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link" href="/">Summon Simulator</a>
-          <a class="nav-item nav-link active" href="#">Unit Builder</a>
-        </div>
+  
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container ">
+    <a class="navbar-brand" href="#">
+      <img src="../img/assets/header.png" height="30">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <div class="navbar-nav">
+
+        <a class="nav-item nav-link #"
+            href="../summon-simulator/">
+            Summon Simulator</a>
+
+        <a class="nav-item nav-link active"
+            href="#">
+            Unit Builder</a>
+
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
+
 
   <div class="container">
     <div class="row mt-2 justify-content-center">
@@ -35,7 +48,7 @@
         </div>
         <canvas id="hero-canvas" width="540" height="960"></canvas>
         <a class="btn btn-danger d-none" id="download-img">
-          <img src="img/assets/download-icon.png">
+          <img src="../img/assets/download-icon.png">
         </a>
       </div>
 
@@ -86,42 +99,42 @@
                   <h5>Skills</h5>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-2 col-form-label text-md-right" title="weapon"><img src="img/assets/icon/weapon.png"></label>
+                  <label class="col-2 col-form-label text-md-right" title="weapon"><img src="../img/assets/icon/weapon.png"></label>
                   <div class="col-9 selectable skill-select" data-skill="weapon" id="select-weapon"></div>
                   <div class="col-1 pl-0"><div class="skill-info-icon d-none" data-skill="weapon"></div></div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-2 col-form-label text-md-right" title="refine"><img src="img/assets/icon/refine.png"></label>
+                  <label class="col-2 col-form-label text-md-right" title="refine"><img src="../img/assets/icon/refine.png"></label>
                   <div class="col-9 selectable skill-select" data-skill="refine" id="select-refine"></div>
                   <div class="col-1 pl-0"><div class="skill-info-icon d-none" data-skill="refine"></div></div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-2 col-form-label text-md-right" title="assist"><img src="img/assets/icon/assist.png"></label>
+                  <label class="col-2 col-form-label text-md-right" title="assist"><img src="../img/assets/icon/assist.png"></label>
                   <div class="col-9 selectable skill-select" data-skill="assist" id="select-assist"></div>
                   <div class="col-1 pl-0"><div class="skill-info-icon d-none" data-skill="assist"></div></div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-2 col-form-label text-md-right" title="special"><img src="img/assets/icon/special.png"></label>
+                  <label class="col-2 col-form-label text-md-right" title="special"><img src="../img/assets/icon/special.png"></label>
                   <div class="col-9 selectable skill-select" data-skill="special" id="select-special"></div>
                   <div class="col-1 pl-0"><div class="skill-info-icon d-none" data-skill="special"></div></div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-2 col-form-label text-md-right" title="skill a"><img src="img/assets/icon/skill-a.png"></label>
+                  <label class="col-2 col-form-label text-md-right" title="skill a"><img src="../img/assets/icon/skill-a.png"></label>
                   <div class="col-9 selectable skill-select" data-skill="skillA" id="select-skillA"></div>
                   <div class="col-1 pl-0"><div class="skill-info-icon d-none" data-skill="skillA"></div></div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-2 col-form-label text-md-right" title="skill b"><img src="img/assets/icon/skill-b.png"></label>
+                  <label class="col-2 col-form-label text-md-right" title="skill b"><img src="../img/assets/icon/skill-b.png"></label>
                   <div class="col-9 selectable skill-select" data-skill="skillB" id="select-skillB"></div>
                   <div class="col-1 pl-0"><div class="skill-info-icon d-none" data-skill="skillB"></div></div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-2 col-form-label text-md-right" title="skill c"><img src="img/assets/icon/skill-c.png"></label>
+                  <label class="col-2 col-form-label text-md-right" title="skill c"><img src="../img/assets/icon/skill-c.png"></label>
                   <div class="col-9 selectable skill-select" data-skill="skillC" id="select-skillC"></div>
                   <div class="col-1 pl-0"><div class="skill-info-icon d-none" data-skill="skillC"></div></div>
                 </div>
                 <div class="row mb-3">
-                  <label class="col-2 col-form-label text-md-right" title="seal"><img src="img/assets/icon/skill-s.png"></label>
+                  <label class="col-2 col-form-label text-md-right" title="seal"><img src="../img/assets/icon/skill-s.png"></label>
                   <div class="col-9 selectable skill-select" data-skill="seal" id="select-seal"></div>
                   <div class="col-1 pl-0"><div class="skill-info-icon d-none" data-skill="seal"></div></div>
                 </div>
@@ -302,10 +315,10 @@
               <div class="tab-content p-0" data-skill-type="weapon">
                 <div class="tab-pane fade show active row" id="default-weapon" role="tabpanel" data-tab-type="default">
                   <div class="row">
-                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="weapon" src="img/assets/icon/weapon.png"></label>
+                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="weapon" src="../img/assets/icon/weapon.png"></label>
                     <div class="col col-xl-4 selectable custom-skill-select" data-skill="weapon" id="custom-weapon-select"></div>
                     <div class="w-100 d-xl-none mb-3"></div>
-                    <label class="col-2 col-xl-1 offset-xl-1 col-form-label text-md-right"><img title="refine" src="img/assets/icon/refine.png"></label>
+                    <label class="col-2 col-xl-1 offset-xl-1 col-form-label text-md-right"><img title="refine" src="../img/assets/icon/refine.png"></label>
                     <div class="col col-xl-4 selectable custom-skill-select" data-skill="refine" id="custom-refine-select"></div>
                   </div>
                 </div>
@@ -363,7 +376,7 @@
               <div class="tab-content p-0" data-skill-type="assist">
                 <div class="tab-pane fade show active row" id="default-assist" role="tabpanel" data-tab-type="default">
                   <div class="row">
-                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="assist" src="img/assets/icon/assist.png"></label>
+                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="assist" src="../img/assets/icon/assist.png"></label>
                     <div class="col col-xl-4 selectable custom-skill-select" data-skill="assist" id="custom-assist-select"></div>
                   </div>
                 </div>
@@ -393,7 +406,7 @@
               <div class="tab-content p-0" data-skill-type="special">
                 <div class="tab-pane fade show active row" id="default-special" role="tabpanel" data-tab-type="default">
                   <div class="row">
-                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="special" src="img/assets/icon/special.png"></label>
+                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="special" src="../img/assets/icon/special.png"></label>
                     <div class="col col-xl-4 selectable custom-skill-select" data-skill="special" id="custom-special-select"></div>
                   </div>
                 </div>
@@ -423,7 +436,7 @@
               <div class="card-body tab-content p-0" data-skill-type="skillA">
                 <div class="tab-pane fade show active row" id="default-skillA" role="tabpanel" data-tab-type="default">
                   <div class="row">
-                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="skill a" src="img/assets/icon/skill-a.png"></label>
+                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="skill a" src="../img/assets/icon/skill-a.png"></label>
                     <div class="col col-xl-4 selectable custom-skill-select" data-skill="skillA" id="custom-skillA-select"></div>
                   </div>
                 </div>
@@ -481,7 +494,7 @@
               <div class="tab-content p-0" data-skill-type="skillB">
                 <div class="tab-pane fade show active row" id="default-skillB" role="tabpanel" data-tab-type="default">
                   <div class="row">
-                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="skill b" src="img/assets/icon/skill-b.png"></label>
+                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="skill b" src="../img/assets/icon/skill-b.png"></label>
                     <div class="col col-xl-4 selectable custom-skill-select" data-skill="skillB" id="custom-skillB-select"></div>
                   </div>
                 </div>
@@ -514,7 +527,7 @@
               <div class="tab-content p-0" data-skill-type="skillC">
                 <div class="tab-pane fade show active row" id="default-skillC" role="tabpanel" data-tab-type="default">
                   <div class="row">
-                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="skill c" src="img/assets/icon/skill-c.png"></label>
+                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="skill c" src="../img/assets/icon/skill-c.png"></label>
                     <div class="col col-xl-4 selectable custom-skill-select" data-skill="skillC" id="custom-skillC-select"></div>
                   </div>
                 </div>
@@ -547,7 +560,7 @@
               <div class="card-body tab-content p-0" data-skill-type="seal">
                 <div class="tab-pane fade show active row" id="default-seal" role="tabpanel" data-tab-type="default">
                   <div class="row">
-                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="seal" src="img/assets/icon/skill-s.png"></label>
+                    <label class="col-2 col-xl-1 col-form-label text-md-right"><img title="seal" src="../img/assets/icon/skill-s.png"></label>
                     <div class="col col-xl-4 selectable custom-skill-select" data-skill="seal" id="custom-seal-select"></div>
                   </div>
                 </div>
@@ -595,39 +608,11 @@
     </div>
   </div>
 
-  <div class="modal fade" id="inherit-modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Inheritance Planner</h5>
-          <button type="button" class="close" data-dismiss="modal">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div>
-            <h6>Suggested Inheritance Plan</h6>
-            <div class="spinner">
-              <span>Loading</span>
-              <div class="bounce1"></div>
-              <div class="bounce2"></div>
-              <div class="bounce3"></div>
-            </div>
-            <div id="inherit-suggest" class="row"></div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  <script src="js/common/selectable.js"></script>
-  <script src="unit-builder/app.js" charset="utf-8"></script>
+  <script src="../js/common/selectable.js"></script>
+  <script src="./app.js" charset="utf-8"></script>
 </body>
 </html>

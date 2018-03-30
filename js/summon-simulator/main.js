@@ -79,9 +79,9 @@ function initHeroList() {
   summonPool.rf = focusHeroes;
   focusHeroes.forEach(hero => {
     $(`<div class="focus-list-hero">
-        <img class="focus-list-hero-frame" src="img/assets/frame-rarity-focus.png">
-        <img class="focus-list-hero-portrait" src="${hero.assets.portrait}">
-        <img class="focus-list-hero-background" src="img/assets/background-rarity-focus.png">
+        <img class="focus-list-hero-frame" src="../img/assets/frame-rarity-focus.png">
+        <img class="focus-list-hero-portrait" src="../${hero.assets.portrait}">
+        <img class="focus-list-hero-background" src="../img/assets/background-rarity-focus.png">
         </div>`)
       .tooltip({
         html: true,
@@ -216,7 +216,7 @@ function getSessionOrbs() {
 }
 function updateOrbs(orbs) {
   orbs.forEach((orbData, i) => {
-    let $orb = $(`<img class="summon-orb" src="${values.IMAGES[orbData.color]}" data-color="${orbData.color}">`)
+    let $orb = $(`<img class="summon-orb" src="../${values.IMAGES[orbData.color]}" data-color="${orbData.color}">`)
         .data('hero', orbData);
     $($(elements.SUMMON_OPTION)[i]).empty().append($orb);
   });
@@ -226,10 +226,10 @@ function revealOrb($orb) {
 
   $(document).trigger('summon', [orbData.hero.name, orbData.hero.rarity]);
   $orb.replaceWith(`<div class="summon-hero">
-    <img class="summon-hero-frame" src="img/assets/frame-rarity-${orbData.rarity === 'focus-4' ? 4 : orbData.rarity}.png">
-    <img class="summon-hero-portrait" src="${orbData.hero.assets.portrait}">
-    <img class="summon-hero-background" src="img/assets/background-rarity-${orbData.rarity === 'focus-4' ? 'focus' : orbData.rarity}.png">
-    <img class="summon-hero-rarity" src="img/assets/star-rarity-${orbData.rarity === 'focus-4' ? 4 : orbData.rarity}.png">
+    <img class="summon-hero-frame" src="../img/assets/frame-rarity-${orbData.rarity === 'focus-4' ? 4 : orbData.rarity}.png">
+    <img class="summon-hero-portrait" src="../${orbData.hero.assets.portrait}">
+    <img class="summon-hero-background" src="../img/assets/background-rarity-${orbData.rarity === 'focus-4' ? 'focus' : orbData.rarity}.png">
+    <img class="summon-hero-rarity" src="../img/assets/star-rarity-${orbData.rarity === 'focus-4' ? 4 : orbData.rarity}.png">
   </div>`);
 
   pullStats.pulls++;
@@ -381,9 +381,9 @@ function toggleCustomBannerHero(event) {
   if (checked) {
     customBanner.focusHeroes.push(hero.name);
     $(elements.CUSTOM_FOCUS).append(`<div class="focus-list-hero" data-name="${hero.name}">
-        <img class="focus-list-hero-frame" src="img/assets/frame-rarity-focus.png">
-        <img class="focus-list-hero-portrait" src="${hero.assets.portrait}">
-        <img class="focus-list-hero-background" src="img/assets/background-rarity-focus.png">
+        <img class="focus-list-hero-frame" src="../img/assets/frame-rarity-focus.png">
+        <img class="focus-list-hero-portrait" src="../${hero.assets.portrait}">
+        <img class="focus-list-hero-background" src="../img/assets/background-rarity-focus.png">
         </div>`);
   } else {
     customBanner.focusHeroes.splice(customBanner.focusHeroes.indexOf(hero.name), 1);

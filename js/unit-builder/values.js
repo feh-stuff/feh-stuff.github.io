@@ -1,8 +1,8 @@
 exports.CONST = {
-  IMAGE_FRONT: 'img/assets/unit-edit-front.png',
-  IMAGE_BACK: 'img/assets/unit-edit-back.jpg',
-  IMAGE_SKILLS: 'img/assets/skills.png',
-  IMAGE_UI: 'img/assets/unit-edit-ui.png',
+  IMAGE_FRONT: '../img/assets/unit-edit-front.png',
+  IMAGE_BACK: '../img/assets/unit-edit-back.jpg',
+  IMAGE_SKILLS: '../img/assets/skills.png',
+  IMAGE_UI: '../img/assets/unit-edit-ui.png',
   IMAGE_FEH: 'img/heroes-main/Feh.png',
   // FONT: new FontFace('FehFont', 'url(font/feh-font.ttf)'),
   EMPTY_SKILL: { name: '-', effect: '', icon: '' },

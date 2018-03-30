@@ -271,7 +271,7 @@ function drawHero(hero, processHero = true) {
   if (processHero) {
     processHeroStats(hero);
   }
-  utils.loadFiles([hero.data.assets.main]).then(imgs => {
+  utils.loadFiles(['../' + hero.data.assets.main]).then(imgs => {
     canvas.drawHero(hero, imgs[0]);
   });
 }
@@ -443,8 +443,8 @@ function getInheritanceHtml(inheritList) {
     for (let j = 0; j < inheritList[i].length; j++) {
       html += `<li class="list-group-item p-0 d-flex">
           <div style="width: 75px;">
-            <img src="img/heroes-portrait/75px-Icon_Portrait_${inheritList[i][j].name}.png">
-            <img class="inherit-rarity" src="img/assets/star-rarity-${inheritList[i][j].rarity}.png">
+            <img src="../img/heroes-portrait/75px-Icon_Portrait_${inheritList[i][j].name}.png">
+            <img class="inherit-rarity" src="../img/assets/star-rarity-${inheritList[i][j].rarity}.png">
           </div>
           <div class="pl-2">
             <b>${inheritList[i][j].name}</b>
