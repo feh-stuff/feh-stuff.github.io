@@ -1,0 +1,27 @@
+<div class="modal fade" id="bookmark-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Bookmarks</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-0">
+        <table id="bookmark-table" class="table table-hover table-sm p-0 hide-focus-4 hide-4 hide-3" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th>Hero</th>
+              <th>Created On</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="bookmark-save" class="btn btn-secondary">Save</button>
+        <button data-dismiss="modal" type="button" id="bookmark-load" class="btn btn-primary" disabled>Load</button>
+      </div>
+    </div>
+  </div>

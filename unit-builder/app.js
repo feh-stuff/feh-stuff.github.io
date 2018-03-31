@@ -9113,10 +9113,30 @@ let skills = {
 let refine = require('./skill-refine-data.js');
 let refineCost = require('./skill-refine-cost-data.js');
 let skillMap = getSkillMap();
+const EMPTY_SKILL = { name: '-', effect: '', icon: '' };
 
 exports.getSkills = function() {
   return skills;
 };
+
+exports.getSkill = function(skillName, type) {
+  if (type) {
+    for (let i = 0; i < skills[type].length; i++) {
+      if (skills[type][i].name === skillName) {
+        return skills[type][i];
+      }
+    }
+  } else {
+    for (let skillType in skills) {
+      for (let i = 0; i < skills[skillType].length; i++) {
+        if (skills[skillType][i].name === skillName) {
+          return skills[skillType][i];
+        }
+      }
+    }
+  }
+  return EMPTY_SKILL;
+}
 
 exports.getWeapons = function(hero, filterExclusives = true) {
   let results = [];
@@ -9178,6 +9198,10 @@ exports.getRefineryCost = function(index) {
 exports.getPrerequisites = function(skillName) {
   return getPrerequisites_(skillName);
 };
+
+exports.getEmptySkill = function() {
+  return EMPTY_SKILL;
+}
 
 function getSkills(hero, nameExclusive, skillsList) {
   let results = [];
@@ -15937,7 +15961,7 @@ module.exports = [
     weaponType: "Axe",
     colorType: "Green",
     prev: ["Silver Axe"],
-    exclusive: ["Hector (Love Abounds)"],
+    exclusive: ["Hector (Love Abounds)", "Hector"],
     effect: "Accelerates Special trigger (cooldown count-1). If unit's HP ≤ 75% and Special triggers by attacking, Special cooldown count-1 at start of turn. Deals +10 damage when Special triggers."
   },
   {
@@ -16906,7 +16930,7 @@ module.exports = [
     colorType: "Blue",
     stats: {atk: 3},
     prev: ["Heavy Spear"],
-    exclusive: ["Ephraim (Legendary Heroes)"],
+    exclusive: ["Ephraim (Legendary Heroes)", "Ephraim"],
     effect: "Grants Atk+3. If the number of foes within 2 spaces (excluding target) ≥ the number of allies within 2 spaces (excluding unit), unit makes a guaranteed follow-up attack",
   },
   {
@@ -18997,6 +19021,153 @@ module.exports = [
 ];
 
 },{}],15:[function(require,module,exports){
+let utils = require('./utils.js');
+let heroes = require('../data/hero-access.js');
+let blessings = require('../data/blessing-access.js');
+let skills = require('../data/skill-access.js');
+
+let bookmarks = [];
+let bookmarkTable;
+const deleteBtn = '<div class="btn btn-sm btn-danger bookmark-delete">&#10060;</div>';
+const storageKey = 'unit-builder-bookmarks';
+
+function init() {
+  bookmarks = JSON.parse(localStorage.getItem(storageKey)) || [];
+  bookmarkTable = $('#bookmark-table').DataTable({
+    paging: false,
+    searching: false,
+    info: false,
+    language: { emptyTable: "No Bookmarks" },
+    ordering: false
+  });
+  bookmarks.forEach(bookmark =>
+      bookmarkTable.row.add([bookmark.name, bookmark.saveDate, deleteBtn])
+        .draw().node());
+
+  bindEvents();
+}
+
+function bindEvents() {
+  $('#bookmark-modal').on('click', '.bookmark-delete', onDeleteBookmark);
+  $('#bookmark-modal').on('click', 'tbody > tr', onSelectBookmark);
+}
+
+function onDeleteBookmark(event) {
+  event.stopPropagation();
+
+  let row = bookmarkTable.row($(event.currentTarget).closest('tr'));
+  bookmarks.splice(row.index(), 1);
+  row.remove().draw();
+  localStorage.setItem(storageKey, JSON.stringify(bookmarks));
+  $('#bookmark-load').prop('disabled', true);
+}
+
+function onSelectBookmark(event) {
+  let $row = $(event.currentTarget);
+  if (!$row.hasClass('selected')) {
+    $('#bookmark-table tr').removeClass('selected');
+    $row.addClass('selected');
+    $('#bookmark-load').prop('disabled', false);
+  }
+}
+
+function save(hero) {
+  if (hero.data.name === 'Feh') {
+    return;
+  }
+
+  let now = utils.getDateString(new Date());
+  let data = convert(hero);
+  data.saveDate = now;
+  bookmarks.push(data);
+  localStorage.setItem(storageKey, JSON.stringify(bookmarks));
+  bookmarkTable.row.add([data.name, now, deleteBtn]).draw().node();
+}
+
+function load() {
+  return convertBack(bookmarks[$('#bookmark-table tbody > tr.selected').index()]);
+}
+
+function convert(hero) {
+  return {
+    name: hero.data.name,
+    iv: {
+      boon: hero.iv.boon,
+      bane: hero.iv.bane
+    },
+    rarity: hero.rarity,
+    merges: hero.merges,
+    support: hero.support,
+    skills: {
+      weapon: hero.skills.weapon.name,
+      refine: hero.skills.refine.name,
+      assist: hero.skills.assist.name,
+      special: hero.skills.special.name,
+      skillA: hero.skills.skillA.name,
+      skillB: hero.skills.skillB.name,
+      skillC: hero.skills.skillC.name,
+      seal: hero.skills.seal.name
+    },
+    buffs: {
+      atk: hero.buffs.atk,
+      spd: hero.buffs.spd,
+      def: hero.buffs.def,
+      res: hero.buffs.res
+    },
+    tempestBuff: hero.tempestBuff,
+    blessing: hero.blessing,
+    allies: hero.allies,
+    saveDate: hero.saveDate
+  };
+}
+
+function convertBack(hero) {
+  let heroBlessing = blessings.getBlessing(hero.name);
+  let refinery = skills.getRefinery(hero.skills.weapon, hero.name);
+  let refine = skills.getEmptySkill();
+
+  if (refinery) {
+    for (let i = 0; i < refinery.length; i++) {
+      if (refinery[i].name === hero.skills.refine) {
+        refine = refinery[i];
+      }
+    }
+  }
+
+  return {
+    data : heroes.getHero(hero.name),
+    iv: hero.iv,
+    merges: hero.merges,
+    support: hero.support,
+    rarity: hero.rarity,
+    stats : { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+    skills: {
+      weapon: skills.getSkill(hero.skills.weapon, 'weapons'),
+      refine: refine,
+      assist: skills.getSkill(hero.skills.assist, 'assists'),
+      special: skills.getSkill(hero.skills.special, 'specials'),
+      skillA: skills.getSkill(hero.skills.skillA, 'skillA'),
+      skillB: skills.getSkill(hero.skills.skillB, 'skillB'),
+      skillC: skills.getSkill(hero.skills.skillC, 'skillC'),
+      seal: skills.getSkill(hero.skills.seal, 'seals'),
+    },
+    buffs: hero.buffs,
+    tempestBuff: hero.tempestBuff,
+    legendary: heroBlessing ? true : false,
+    blessingIcon: heroBlessing ? blessings.icon : -1,
+    blessing: heroBlessing ? blessing.type : hero.blessing,
+    allies: hero.allies,
+    saveDate: hero.saveDate
+  };
+}
+
+module.exports = {
+  init: init,
+  save: save,
+  load: load
+};
+
+},{"../data/blessing-access.js":1,"../data/hero-access.js":3,"../data/skill-access.js":6,"./utils.js":22}],16:[function(require,module,exports){
 let values = require('./values.js');
 let elements = require('./elements.js');
 let skills = require('../data/skill-access.js');
@@ -19243,7 +19414,7 @@ module.exports = {
   hero: customUnit
 };
 
-},{"../data/skill-access.js":6,"./elements.js":18,"./utils.js":21,"./values.js":22}],16:[function(require,module,exports){
+},{"../data/skill-access.js":6,"./elements.js":19,"./utils.js":22,"./values.js":23}],17:[function(require,module,exports){
 let values = require('./values.js');
 let elements = require('./elements.js');
 let heroes = require('../data/hero-access.js');
@@ -19251,6 +19422,7 @@ let skills = require('../data/skill-access.js');
 let blessings = require('../data/blessing-access.js');
 let utils = require('./utils.js');
 let inheritPlanner = require('./inheritance-planner.js');
+let bookmarks = require('./bookmarks.js');
 let canvas;
 
 let fehUnit = {
@@ -19333,6 +19505,7 @@ function init(canvasObj) {
   $(elements.SELECT_SKILLC).selectable({disabled: 'disabled'});
   $(elements.SELECT_SEAL).selectable({disabled: 'disabled'});
 
+  bookmarks.init();
   canvas = canvasObj;
   bindEvents();
 }
@@ -19352,15 +19525,18 @@ function bindEvents() {
   $(elements.SELECT_BLESSING_HERO).on('select', onBlessingAllyChange);
 
   $(elements.INHERIT_MODAL).on('shown.bs.modal', onInheritanceShow);
+  $(elements.BOOKMARK_SAVE).on('click', onSaveBookmark);
+  $(elements.BOOKMARK_LOAD).on('click', onLoadBookmark);
 }
 
 
 function onHeroSelect(event) {
   let hero = $(event.currentTarget).data('val');
-  let highlightList = hero.skills.map(skill => skill.name);
 
-  $(document).trigger('hero-select', [hero.name, hero.weaponType]);
+  // $(document).trigger('hero-select', [hero.name, hero.weaponType]);
   fehUnit.data = hero;
+  initHeroSelect(hero);
+
   for (let skill in fehUnit.skills) {
     fehUnit.skills[skill] = values.CONST.EMPTY_SKILL;
   }
@@ -19383,9 +19559,14 @@ function onHeroSelect(event) {
     $(elements.SELECT_BLESSING_TYPE)
         .selectable('text', '-')
         .selectable('enable');
+    $(elements.SELECT_BLESSING_HERO)
+        .selectable('reset')
+        .selectable('disable');
   }
   drawHero(fehUnit);
-
+}
+function initHeroSelect(hero) {
+  let highlightList = hero.skills.map(skill => skill.name);
   $(elements.SELECT_WEAPON)
       .selectable('highlight', highlightList)
       .selectable('data', [values.CONST.EMPTY_SKILL].concat(skills.getWeapons(hero)));
@@ -19411,8 +19592,7 @@ function onHeroSelect(event) {
   $(elements.SELECT_IV).selectable('enable');
   $(elements.SKILL_INFO).empty();
   $(elements.SKILL_INFO_ICON).addClass('d-none');
-
-  if (hero.rarity4) {
+    if (hero.rarity4) {
     $(elements.SELECT_RARITY)
         .selectable('data', values.CONST.RARITIES)
         .selectable('enable');
@@ -19422,6 +19602,7 @@ function onHeroSelect(event) {
         .selectable('disable');
   }
 }
+
 function onSkillSelect(event) {
   let skillType = $(event.currentTarget).data('skill');
   let skill = $(event.currentTarget).data('val');
@@ -19442,19 +19623,19 @@ function onSkillSelect(event) {
   }
   fehUnit.skills[skillType] = skill;
   drawHero(fehUnit);
-};
+}
 function onIvSelect(event) {
   fehUnit.iv = $(event.currentTarget).data('val');
   drawHero(fehUnit);
-};
+}
 function onMergeSelect(event) {
   fehUnit.merges = $(event.currentTarget).data('val');
   drawHero(fehUnit);
-};
+}
 function onRaritySelect(event) {
   fehUnit.rarity = parseInt($(event.currentTarget).data('val'));
   drawHero(fehUnit);
-};
+}
 function onBuffSelect(event) {
   let $select = $(event.currentTarget);
   fehUnit.buffs[$select.data('stat')] = $select.data('val');
@@ -19499,6 +19680,7 @@ function onBlessingTypeChange(event) {
     drawHero(fehUnit);
   }
 }
+
 function onBlessingAllyChange(event) {
   let allies = [];
   let allySelect = $(elements.SELECT_BLESSING_HERO);
@@ -19513,6 +19695,68 @@ function onBlessingAllyChange(event) {
   drawHero(fehUnit);
 }
 
+function onSaveBookmark(event) {
+  bookmarks.save(fehUnit);
+}
+function onLoadBookmark(event) {
+  fehUnit = bookmarks.load();
+  drawHero(fehUnit);
+
+  initHeroSelect(fehUnit.data);
+  $(elements.SELECT_HERO).selectable('html', fehUnit.data.name);
+  $(elements.SELECT_RARITY).selectable('html', fehUnit.rarity + '★');
+  $(elements.SELECT_MERGES).selectable('html', fehUnit.merges);
+  $(elements.SELECT_IV).selectable('html', `<div>
+      <span class="opt-half">${fehUnit.iv.boon === '-' ? '' : '+'}${fehUnit.iv.boon}</span>
+      <span class="opt-half">${fehUnit.iv.bane === '-' ? '' : '-'}${fehUnit.iv.bane}</span>
+    </div>`);
+
+  
+  let refinery = skills.getRefinery(fehUnit.skills.weapon.name, fehUnit.data.name);
+  if (refinery) {
+    $('.skill-select[data-skill="refine"]')
+        .selectable('enable')
+        .selectable('data', refinery);
+  }
+  for (let skill in fehUnit.skills) {
+    $(`.skill-select[data-skill="${skill}"]`)
+        .selectable('html', fehUnit.skills[skill].name);
+  }
+
+  if (fehUnit.tempestBuff) {
+    $(elements.SELECT_TT_ON).prop('checked', true);
+  } else {
+    $(elements.SELECT_TT_OFF).prop('checked', true);
+  }
+
+  if (fehUnit.support) {
+    $(elements.SELECT_SUPPORT_ON).prop('checked', true);
+  } else {
+    $(elements.SELECT_SUPPORT_OFF).prop('checked', true);
+  }
+
+  for (let stat in fehUnit.buffs) {
+    $(`.buff-stat[data-stat="${stat}"]`).selectable('html', fehUnit.buffs[stat]);
+  }
+
+  if (fehUnit.legendary) {
+    $(elements.SELECT_BLESSING_TYPE).selectable('disable');
+    $(elements.SELECT_BLESSING_HERO).selectable('html', '');
+  } else {
+    $(elements.SELECT_BLESSING_TYPE)
+        .selectable('enable')
+        .selectable('html', fehUnit.blessing);
+
+    let allySelect = $(elements.SELECT_BLESSING_HERO)
+        .selectable('data', blessings.getBlessingOptions(fehUnit.blessing))
+        .selectable('enable');
+    for (let i = 0; i < 3; i++) {
+      $(allySelect[i]).selectable('html', fehUnit.allies[i] || '');
+    }
+  }
+}
+
+
 function drawHero(hero, processHero = true) {
   if (processHero) {
     processHeroStats(hero);
@@ -19521,7 +19765,6 @@ function drawHero(hero, processHero = true) {
     canvas.drawHero(hero, imgs[0]);
   });
 }
-
 
 function processHeroStats(hero) {
   let stats40 = {};
@@ -19731,7 +19974,7 @@ module.exports = {
   hero: fehUnit
 };
 
-},{"../data/blessing-access.js":1,"../data/hero-access.js":3,"../data/skill-access.js":6,"./elements.js":18,"./inheritance-planner.js":20,"./utils.js":21,"./values.js":22}],17:[function(require,module,exports){
+},{"../data/blessing-access.js":1,"../data/hero-access.js":3,"../data/skill-access.js":6,"./bookmarks.js":15,"./elements.js":19,"./inheritance-planner.js":21,"./utils.js":22,"./values.js":23}],18:[function(require,module,exports){
 let elements = require('./elements.js');
 let values = require('./values.js');
 let ctx = $(elements.CANVAS)[0].getContext('2d');
@@ -20060,7 +20303,7 @@ module.exports = {
   drawCustomHero: drawCustomHero
 };
 
-},{"./elements.js":18,"./values.js":22}],18:[function(require,module,exports){
+},{"./elements.js":19,"./values.js":23}],19:[function(require,module,exports){
 module.exports = {
   CANVAS: '#hero-canvas',
   SPINNER: '.hero-canvas-container > .spinner',
@@ -20072,8 +20315,10 @@ module.exports = {
   SELECT_BUFFS: '.buff-stat',
   SELECT_SUPPORT: '[name="support"]',
   SELECT_SUPPORT_ON: '#support-yes',
+  SELECT_SUPPORT_OFF: '#support-no',
   SELECT_TT: '[name="tempest"]',
   SELECT_TT_ON: '#tt-yes',
+  SELECT_TT_OFF: '#tt-no',
   SELECT_SKILL: '.skill-select',
   SELECT_WEAPON: '#select-weapon',
   SELECT_REFINE: '#select-refine',
@@ -20103,10 +20348,13 @@ module.exports = {
   DOWNLOAD: '#download-img',
   SHOW_INHERITANCE: '#show-inherit',
   INHERIT_LIST: '#inherit-suggest',
-  INHERIT_MODAL: '#inherit-modal'
+  INHERIT_MODAL: '#inherit-modal',
+  BOOKMARK_SAVE: '#bookmark-save',
+  BOOKMARK_LOAD: '#bookmark-load',
+  BOOKMARK_ROW: '.bookmark-table tbody > tr.selected'
 };
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 'use strict';
 
 let elements = require('./elements.js');
@@ -20165,7 +20413,7 @@ function onDownload(event) {
 
 init();
 
-},{"./builder-custom.js":15,"./builder-default.js":16,"./canvas.js":17,"./elements.js":18,"./utils.js":21,"./values.js":22}],20:[function(require,module,exports){
+},{"./builder-custom.js":16,"./builder-default.js":17,"./canvas.js":18,"./elements.js":19,"./utils.js":22,"./values.js":23}],21:[function(require,module,exports){
 'use strict';
 let skills = require('../data/skill-access.js');
 let heroes = require('../data/hero-access.js');
@@ -20348,7 +20596,9 @@ module.exports = {
   getInheritancePlanPromise: getInheritancePlanPromise
 }
 
-},{"../data/hero-access.js":3,"../data/skill-access.js":6}],21:[function(require,module,exports){
+},{"../data/hero-access.js":3,"../data/skill-access.js":6}],22:[function(require,module,exports){
+let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 exports.loadFiles = function(urls, loadFont = false) {
   let promises = urls.map(url =>
     new Promise((resolve, reject) => {
@@ -20382,7 +20632,11 @@ exports.arrOptGenerator = function(item, $parent) {
       .appendTo($parent);
 };
 
-},{}],22:[function(require,module,exports){
+exports.getDateString = function(date) {
+  return `${months[date.getMonth()]} ${date.getDate()} ${date.getFullYear()}, ${date.getHours()}:${date.getMinutes()}`;
+};
+
+},{}],23:[function(require,module,exports){
 exports.CONST = {
   IMAGE_FRONT: '../img/assets/unit-edit-front.png',
   IMAGE_BACK: '../img/assets/unit-edit-back.jpg',
@@ -20503,4 +20757,4 @@ exports.COORD = {
   ]
 };
 
-},{}]},{},[19])
+},{}]},{},[20])

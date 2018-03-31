@@ -1,0 +1,66 @@
+{% import "../macros/select.html" as select %}
+
+<div class="tab-pane fade show active" id="feh-unit">
+  <section class="ml-2">
+    <div class="d-flex mb-3 justify-content-between">
+      <h5>Unit</h5>
+      <!-- <button type="button" id="show-inherit" class="btn btn-sm btn-info" data-toggle="modal" data-target="#inherit-modal" disabled>Inheritance Planner</button> -->
+      <button type="button" id="bookmarks" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#bookmark-modal">Bookmarks</button>
+    </div>
+    <div class="row mb-3">
+      <label class="col-2 col-xl-1 col-form-label text-md-right">Hero</label>
+      <div class="col-9 col-xl-5 selectable" id="select-hero"></div>
+    </div>
+    <div class="row mb-3">
+      <label class="col-2 col-xl-1 col-form-label text-md-right">Rarity</label>
+      <div class="col-9 col-xl-3 selectable" id="select-rarity"></div>
+    </div>
+    <div class="row mb-3">
+      <label class="col-2 col-xl-1 col-form-label text-md-right">IV</label>
+      <div class="col-7 col-xl-3 selectable" id="select-iv"></div>
+      <label class="ml-md-3 custom-control custom-checkbox col-form-label">
+        <input type="checkbox" class="custom-control-input" id="show-iv">
+        <span class="custom-control-indicator mt-2"></span>
+        <span class="custom-control-description">Show IVs</span>
+      </label>
+    </div>
+    <div class="row mb-3">
+      <label class="col-2 col-xl-1 col-form-label text-md-right">Merge</label>
+      <div class="col-9 col-xl-3 selectable" id="select-merges"></div>
+    </div>
+  </section>
+  <hr>
+  <section class="row">
+    <div class="col-xl-6 mb-3 mb-lg-0">
+      <div class="d-flex mb-3">
+        <h5>Skills</h5>
+      </div>
+
+      {{ select.skillSelect("weapon", "weapon") }}
+      {{ select.skillSelect("refine", "refine") }}
+      {{ select.skillSelect("assist", "assist") }}
+      {{ select.skillSelect("special", "special") }}
+      {{ select.skillSelect("skillA", "skill-a") }}
+      {{ select.skillSelect("skillB", "skill-b") }}
+      {{ select.skillSelect("skillC", "skill-c") }}
+      {{ select.skillSelect("seal", "skill-s") }}
+    </div>
+
+    <div class="col-xl-6">
+      <div class="d-flex mb-3">
+        <h5>Buffs / Debuffs</h5>
+      </div>
+
+      {{ select.buffSelect("Support", "Summoner Support", "support", "support") }}
+      {{ select.buffSelect("TT Bonus", "Tempest Trials Bonus", "tempest", "tt") }}
+      {{ select.buffInput("Atk", "atk", "buff-stat") }}
+      {{ select.buffInput("Spd", "spd", "buff-stat") }}
+      {{ select.buffInput("Def", "def", "buff-stat") }}
+      {{ select.buffInput("Res", "res", "buff-stat") }}
+      {{ select.buffInput("Blessings", "", "", "select-blessing-type") }}
+      {{ select.buffInput("Ally 1", "", "blessing-hero", "", "col-lg-9") }}
+      {{ select.buffInput("Ally 2", "", "blessing-hero", "", "col-lg-9") }}
+      {{ select.buffInput("Ally 3", "", "blessing-hero", "", "col-lg-9") }}
+    </div>
+  </section>
+</div>

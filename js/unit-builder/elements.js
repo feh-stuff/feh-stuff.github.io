@@ -9,8 +9,10 @@ module.exports = {
   SELECT_BUFFS: '.buff-stat',
   SELECT_SUPPORT: '[name="support"]',
   SELECT_SUPPORT_ON: '#support-yes',
+  SELECT_SUPPORT_OFF: '#support-no',
   SELECT_TT: '[name="tempest"]',
   SELECT_TT_ON: '#tt-yes',
+  SELECT_TT_OFF: '#tt-no',
   SELECT_SKILL: '.skill-select',
   SELECT_WEAPON: '#select-weapon',
   SELECT_REFINE: '#select-refine',
@@ -40,5 +42,8 @@ module.exports = {
   DOWNLOAD: '#download-img',
   SHOW_INHERITANCE: '#show-inherit',
   INHERIT_LIST: '#inherit-suggest',
-  INHERIT_MODAL: '#inherit-modal'
+  INHERIT_MODAL: '#inherit-modal',
+  BOOKMARK_SAVE: '#bookmark-save',
+  BOOKMARK_LOAD: '#bookmark-load',
+  BOOKMARK_ROW: '.bookmark-table tbody > tr.selected'
 };

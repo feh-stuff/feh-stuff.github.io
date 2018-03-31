@@ -103,6 +103,10 @@ $.widget('custom.selectable', {
     }
   },
 
+  html: function(html) {
+    this.$button.html(html);
+  },
+
   text: function(text) {
     this.options.text = text;
     this.$button.html(text);

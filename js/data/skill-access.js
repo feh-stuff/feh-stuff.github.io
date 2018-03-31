@@ -10,10 +10,30 @@ let skills = {
 let refine = require('./skill-refine-data.js');
 let refineCost = require('./skill-refine-cost-data.js');
 let skillMap = getSkillMap();
+const EMPTY_SKILL = { name: '-', effect: '', icon: '' };
 
 exports.getSkills = function() {
   return skills;
 };
+
+exports.getSkill = function(skillName, type) {
+  if (type) {
+    for (let i = 0; i < skills[type].length; i++) {
+      if (skills[type][i].name === skillName) {
+        return skills[type][i];
+      }
+    }
+  } else {
+    for (let skillType in skills) {
+      for (let i = 0; i < skills[skillType].length; i++) {
+        if (skills[skillType][i].name === skillName) {
+          return skills[skillType][i];
+        }
+      }
+    }
+  }
+  return EMPTY_SKILL;
+}
 
 exports.getWeapons = function(hero, filterExclusives = true) {
   let results = [];
@@ -75,6 +95,10 @@ exports.getRefineryCost = function(index) {
 exports.getPrerequisites = function(skillName) {
   return getPrerequisites_(skillName);
 };
+
+exports.getEmptySkill = function() {
+  return EMPTY_SKILL;
+}
 
 function getSkills(hero, nameExclusive, skillsList) {
   let results = [];

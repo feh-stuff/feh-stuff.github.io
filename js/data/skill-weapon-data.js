@@ -206,7 +206,7 @@ module.exports = [
     weaponType: "Axe",
     colorType: "Green",
     prev: ["Silver Axe"],
-    exclusive: ["Hector (Love Abounds)"],
+    exclusive: ["Hector (Love Abounds)", "Hector"],
     effect: "Accelerates Special trigger (cooldown count-1). If unit's HP ≤ 75% and Special triggers by attacking, Special cooldown count-1 at start of turn. Deals +10 damage when Special triggers."
   },
   {
@@ -1175,7 +1175,7 @@ module.exports = [
     colorType: "Blue",
     stats: {atk: 3},
     prev: ["Heavy Spear"],
-    exclusive: ["Ephraim (Legendary Heroes)"],
+    exclusive: ["Ephraim (Legendary Heroes)", "Ephraim"],
     effect: "Grants Atk+3. If the number of foes within 2 spaces (excluding target) ≥ the number of allies within 2 spaces (excluding unit), unit makes a guaranteed follow-up attack",
   },
   {

@@ -369,6 +369,22 @@ body {
   top: 55px; */
 }
 
+#bookmark-table_wrapper {
+  padding: 0;
+}
+#bookmark-table th:nth-child(2) {
+  width: 150px;
+}
+#bookmark-table th:nth-child(3) {
+  width: 30px;
+}
+#bookmark-table tbody > tr {
+  cursor: pointer;
+}
+#bookmark-table tbody > tr.selected {
+  background-color: #bdbdbd;
+}
+
 /***** Selectable *****/
 .selectable > .dropdown-toggle {
   background-color: #ffffff;
