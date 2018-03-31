@@ -13,14 +13,22 @@ gulp.task('summon-sim', () => {
       .pipe(rename('app.js'))
       .pipe(gulp.dest('./summon-simulator'));
 });
-
 gulp.task('unit-builder', () => {
   return gulp.src('./js/unit-builder/main.js')
       .pipe(browserify())
-      // .pipe(uglify())
+      .pipe(uglify())
       .pipe(rename('app.js'))
       .pipe(gulp.dest('./unit-builder'));
 });
+gulp.task('tier-list', () => {
+  return gulp.src('./js/tier-list/main.js')
+      .pipe(browserify())
+      .pipe(uglify())
+      .pipe(rename('app.js'))
+      .pipe(gulp.dest('./tier-list'));
+});
+
+
 
 gulp.task('render-ss', () => {
   return gulp.src('templates/pages/summon-simulator.html')
@@ -30,7 +38,6 @@ gulp.task('render-ss', () => {
       .pipe(rename('index.html'))
       .pipe(gulp.dest('./summon-simulator'));
 });
-
 gulp.task('render-ub', () => {
   return gulp.src('templates/pages/unit-builder.html')
       .pipe(render({
@@ -39,5 +46,20 @@ gulp.task('render-ub', () => {
       .pipe(rename('index.html'))
       .pipe(gulp.dest('./unit-builder'));
 });
+gulp.task('render-tl', () => {
+  return gulp.src('templates/pages/tier-list.html')
+      .pipe(render({
+        path: ['templates/partials/', 'templates/macros/']
+      }))
+      .pipe(rename('index.html'))
+      .pipe(gulp.dest('./tier-list'));
+});
 
-gulp.task('build', ['summon-sim', 'unit-builder', 'render-ss', 'render-ub']);
+gulp.task('build', [
+    'summon-sim', 
+    'unit-builder',
+    'tier-list',
+    'render-ss',
+    'render-ub',
+    'render-tl'
+  ]);

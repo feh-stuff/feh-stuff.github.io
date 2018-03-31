@@ -385,6 +385,21 @@ body {
   background-color: #bdbdbd;
 }
 
+/***** Tier List *****/
+#tier-table th, #tier-table td {
+  text-align: center;
+  padding: 6px;
+  background-color: #ffffff;
+}
+#tier-table th.rating {
+  width: 70px;
+  
+}
+#tier-table-body img {
+  width: 40px;
+}
+
+
 /***** Selectable *****/
 .selectable > .dropdown-toggle {
   background-color: #ffffff;

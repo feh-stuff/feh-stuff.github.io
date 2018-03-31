@@ -5924,7 +5924,7 @@ module.exports = [
     rarity5: ["pool1"],
     limited: true,
     assets: {
-      portrait: "img/heroes-portrait/75px-Icon_Portrait_Robin (Winter's Envoy).png",
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Robin (M) (Winter's Envoy).png",
       main: "img/heroes-main/Robin (M) (Winter's Envoy).png"
     },
     skills: [
