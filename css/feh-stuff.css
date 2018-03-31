@@ -63,6 +63,24 @@ body {
   }
 }
 
+.main-title {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  max-width: 100%;
+}
+.menu-icon {
+  display: inline-block;
+  margin: 24px;
+  color: #ffffff;
+}
+.menu-icon:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+.menu-icon img {
+  border-radius: 10px;
+}
+
 .btn:not(:disabled) {
   cursor: pointer;
 }

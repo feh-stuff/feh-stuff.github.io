@@ -34,5 +34,7 @@ exports.arrOptGenerator = function(item, $parent) {
 };
 
 exports.getDateString = function(date) {
-  return `${months[date.getMonth()]} ${date.getDate()} ${date.getFullYear()}, ${date.getHours()}:${date.getMinutes()}`;
+  let hours = date.getHours() > 9 ? date.getHours() : '0' + date.getHours();
+  let minutes = date.getMinutes() > 9 ? date.getMinutes() : '0' + date.getMinutes();
+  return `${months[date.getMonth()]} ${date.getDate()} ${date.getFullYear()}, ${minutes}:${hours}`;
 };
