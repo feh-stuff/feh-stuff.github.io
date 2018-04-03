@@ -1,7 +1,39 @@
 module.exports = [
   {
+    date: "April 2018",
+    banners: [
+      {
+        name: "4★ & 5★ Heroes (April 2018)",
+        startDate: "Apr 03, 2018",
+        focusHeroes: [ "Hinata", "Soleil", "Cain", "Abel", "Tailtiu", "L'Arachel", "Nino", "Camilla", "Fae", "Klein", "Felicia", "Jeorge" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateRarity3: 36,
+        rateRarity4: 29,
+        rateRarity5: 3,
+        rateRarityFocus: 3,
+        rateRarityFocus4: 29,
+        pityRateRarity5: 0.25,
+        pityRateRarityFocus: 0.25
+      }
+    ]
+  },
+  {
     date: "March 2018",
     banners: [
+      {
+        name: "Spring Festival",
+        startDate: "Mar 31, 2018",
+        focusHeroes: [ "Xander (Spring Festival)", "Lucina (Spring Festival)", "Chrom (Spring Festival)", "Camilla (Spring Festival)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateRarity3: 36,
+        rateRarity4: 58,
+        rateRarity5: 3,
+        rateRarityFocus: 3,
+        pityRateRarity5: 0.25,
+        pityRateRarityFocus: 0.25
+      },
       {
         name: "Legendary Heroes: Robin, Fell Vessel",
         startDate: "Mar 29, 2018",
