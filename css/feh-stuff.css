@@ -290,6 +290,12 @@ body {
   flex-direction: row;
 }
 
+.summon-pool-item-img {
+  width: 25px;
+}
+.summon-pool-item-text {
+  
+}
 
 /***** Unit Builder *****/
 .hero-canvas-container {
@@ -411,7 +417,7 @@ body {
 }
 #tier-table th.rating {
   width: 70px;
-  
+
 }
 #tier-table-body img {
   width: 40px;

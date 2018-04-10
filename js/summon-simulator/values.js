@@ -14,5 +14,7 @@ module.exports = {
     {boon: 'def', bane: 'hp'},{boon: 'def', bane: 'atk'},{boon: 'def', bane: 'spd'},{boon: 'def', bane: 'res'},
     {boon: 'res', bane: 'hp'},{boon: 'res', bane: 'atk'},{boon: 'res', bane: 'spd'},{boon: 'res', bane: 'def'},
     {boon: '-', bane: '-'}
-  ]
+  ],
+  POOL_COLOR_ORDER: ['Red', 'Blue', 'Green', 'Neutral'],
+  POOL_WEAPON_ORDER: ['Sword', 'Lance', 'Axe', 'Tome', 'Breath', 'Tome', 'Bow', 'Dagger', 'Staff']
 };

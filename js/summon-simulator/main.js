@@ -126,6 +126,30 @@ function initHeroList() {
       })
       .appendTo($focusList);
   });
+
+  setPoolList(elements.POOL_LIST_5F, summonPool.rf);
+  setPoolList(elements.POOL_LIST_5, summonPool.r5);
+  setPoolList(elements.POOL_LIST_4, summonPool.r4);
+  setPoolList(elements.POOL_LIST_3, summonPool.r3);
+}
+function setPoolList(element, heroes) {
+  let html = heroes
+      .sort((a, b) => {
+        if (a.colorType === b.colorType) {
+          if (a.weaponType === b.weaponType) {
+            return a.name < b.name;
+          } else {
+            return values.POOL_WEAPON_ORDER.indexOf(a.weaponType) - values.POOL_WEAPON_ORDER.indexOf(b.weaponType);
+          }
+        } else {
+          return values.POOL_COLOR_ORDER.indexOf(a.colorType) - values.POOL_COLOR_ORDER.indexOf(b.colorType);
+        }
+      })
+      .map(hero => `<div class="summon-pool-item ml-2">
+          <img class="summon-pool-item-img" src="../img/assets/icon/${hero.colorType.toLowerCase()}-${hero.weaponType.toLowerCase()}.png">
+          <span class="ml-2">${hero.shortName || hero.name}: ${hero.title}</span></div>`)
+      .join('');
+  $(element).html(html);
 }
 function resetSessionData() {
   for (let stat in pullStats) {

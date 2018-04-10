@@ -3,6 +3,33 @@ module.exports = [
     date: "April 2018",
     banners: [
       {
+        name: "World of Thracia",
+        startDate: "Apr 11, 2018",
+        focusHeroes: [ "Leif", "Nanna", "Reinhardt (World of Thracia)", "Olwen (World of Thracia)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Nowi & Tiki's Battle",
+        startDate: "Apr 10, 2018",
+        focusHeroes: [ "Nowi", "Tiki (Adult)", "Robin (M) (Fallen Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Cooldown Bonuses",
+        startDate: "Apr 07, 2018",
+        focusHeroes: [ "Ike (Brave Heroes)", "Mia", "Nephenee" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool1"
+      },
+      {
         name: "4★ & 5★ Heroes (April 2018)",
         startDate: "Apr 03, 2018",
         focusHeroes: [ "Hinata", "Soleil", "Cain", "Abel", "Tailtiu", "L'Arachel", "Nino", "Camilla", "Fae", "Klein", "Felicia", "Jeorge" ],

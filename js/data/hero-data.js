@@ -6,7 +6,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Cavalry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Abel.png",
@@ -40,9 +41,9 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity2: ["pool1"],
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity2: ["pool1", "pool2"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Alfonse.png",
@@ -77,7 +78,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Alfonse (Hares at the Fair).png",
@@ -109,7 +110,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Alm.png",
       main: "img/heroes-main/Alm.png"
@@ -140,7 +141,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Armored",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Amelia.png",
       main: "img/heroes-main/Amelia.png"
@@ -171,9 +172,9 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Infantry",
-    rarity2: ["pool1"],
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity2: ["pool1", "pool2"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Anna.png",
@@ -207,8 +208,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Armored",
-    rarity4: ["pool1"],
-    rarity5: ["pool1"],
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
     ttReward: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Arden.png",
@@ -240,8 +241,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Arthur.png",
       main: "img/heroes-main/Arthur.png"
@@ -273,8 +274,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Arvis.png",
@@ -306,7 +307,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Athena.png",
@@ -340,7 +342,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ayra.png",
       main: "img/heroes-main/Ayra.png"
@@ -372,8 +374,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Azama.png",
       main: "img/heroes-main/Azama.png"
@@ -405,7 +407,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Azura.png",
       main: "img/heroes-main/Azura.png"
@@ -436,7 +438,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Flying",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Azura (Happy New Year!).png",
@@ -468,7 +470,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Azura (Performing Arts).png",
@@ -499,8 +501,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Barst.png",
       main: "img/heroes-main/Barst.png"
@@ -530,8 +532,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Bartre.png",
       main: "img/heroes-main/Bartre.png"
@@ -563,8 +565,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Cavalry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Berkut.png",
@@ -598,8 +600,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Flying",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Beruka.png",
       main: "img/heroes-main/Beruka.png"
@@ -630,8 +632,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Armored",
-    rarity4: ["pool1"],
-    rarity5: ["pool1"],
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
     ttReward: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Black Knight.png",
@@ -666,7 +668,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Boey.png",
@@ -700,7 +703,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Flying",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Caeda.png",
@@ -735,7 +739,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Caeda (Bridal Blessings).png",
@@ -767,7 +771,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Cavalry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Cain.png",
@@ -801,7 +806,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Flying",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Camilla.png",
@@ -836,7 +842,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Flying",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Camilla (Happy New Year!).png",
@@ -869,7 +875,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Flying",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Camilla (Spring Festival).png",
@@ -898,8 +904,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Cavalry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Camus.png",
@@ -931,7 +937,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Flying",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Catria.png",
@@ -966,7 +973,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     lmited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Catria (Hares at the Fair).png",
@@ -997,8 +1004,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Cavalry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Cecilia.png",
       main: "img/heroes-main/Cecilia.png"
@@ -1030,7 +1037,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Celica.png",
       main: "img/heroes-main/Celica.png"
@@ -1062,7 +1069,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Celica (Fallen Heroes).png",
       main: "img/heroes-main/Celica (Fallen Heroes).png"
@@ -1094,7 +1101,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Charlotte (Bridal Blessings).png",
@@ -1125,8 +1132,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Flying",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Cherche.png",
       main: "img/heroes-main/Cherche.png"
@@ -1158,7 +1165,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Chrom.png",
@@ -1194,7 +1202,7 @@ module.exports = [
     weaponType: "Axe",
     colorType: "Green",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Chrom (Spring Festival).png",
@@ -1226,7 +1234,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Chrom (The Branded King).png",
       main: "img/heroes-main/Chrom (The Branded King).png"
@@ -1262,7 +1270,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Armored",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Chrom (Winter's Envoy).png",
@@ -1293,7 +1301,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Flying",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Clair.png",
@@ -1324,8 +1333,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Cavalry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Clarine.png",
       main: "img/heroes-main/Clarine.png"
@@ -1357,8 +1366,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Clarisse.png",
@@ -1392,8 +1401,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Cavalry",
-    rarity4: ["pool1"],
-    rarity5: ["pool1"],
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
     ttReward: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Clive.png",
@@ -1425,7 +1434,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Flying",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Cordelia.png",
@@ -1461,7 +1471,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Cordelia (Bridal Blessings).png",
@@ -1494,8 +1504,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Breath",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Corrin (F).png",
       main: "img/heroes-main/Corrin (F).png"
@@ -1529,7 +1539,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Flying",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Corrin (F) (Nohrian Summer).png",
@@ -1562,7 +1572,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Corrin (M).png",
@@ -1597,7 +1608,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Corrin (M) (Happy New Year!).png",
@@ -1629,7 +1640,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Deirdre.png",
       main: "img/heroes-main/Deirdre.png"
@@ -1659,7 +1670,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Delthea.png",
       main: "img/heroes-main/Delthea.png"
@@ -1689,8 +1700,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Donnel.png",
       main: "img/heroes-main/Donnel.png"
@@ -1720,7 +1731,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Dorcas.png",
       main: "img/heroes-main/Dorcas.png"
@@ -1754,8 +1765,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Armored",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Draug.png",
       main: "img/heroes-main/Draug.png"
@@ -1786,7 +1797,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Armored",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Effie.png",
@@ -1819,7 +1831,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Eirika.png",
@@ -1851,7 +1864,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Eirika (Sacred Memories).png",
       main: "img/heroes-main/Eirika (Sacred Memories).png"
@@ -1884,7 +1897,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Eldigan.png",
       main: "img/heroes-main/Eldigan.png"
@@ -1913,7 +1926,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Flying",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Elincia.png",
       main: "img/heroes-main/Elincia.png"
@@ -1943,7 +1956,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Elise.png",
       main: "img/heroes-main/Elise.png"
@@ -1974,7 +1987,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Elise (Nohrian Summer).png",
@@ -2006,8 +2019,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Cavalry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Eliwood.png",
       main: "img/heroes-main/Eliwood.png"
@@ -2041,8 +2054,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Armored",
-    rarity4: ["pool1"],
-    rarity5: ["pool1"],
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
     ttReward: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Eliwood (Love Abounds).png",
@@ -2076,7 +2089,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ephraim.png",
       main: "img/heroes-main/Ephraim.png"
@@ -2108,7 +2121,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ephraim (Legendary Heroes).png",
@@ -2141,8 +2154,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Flying",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Est.png",
       main: "img/heroes-main/Est.png"
@@ -2174,7 +2187,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Breath",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Fae.png",
@@ -2207,7 +2221,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Faye.png",
       main: "img/heroes-main/Faye.png"
@@ -2238,8 +2252,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Felicia.png",
       main: "img/heroes-main/Felicia.png"
@@ -2307,8 +2321,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Fir.png",
       main: "img/heroes-main/Fir.png"
@@ -2342,7 +2356,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Fjorm.png",
@@ -2378,8 +2392,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Flying",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Florina.png",
       main: "img/heroes-main/Florina.png"
@@ -2411,8 +2425,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Cavalry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Frederick.png",
       main: "img/heroes-main/Frederick.png"
@@ -2446,7 +2460,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Frederick (Ylissean Summer).png",
@@ -2477,8 +2491,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Gaius.png",
       main: "img/heroes-main/Gaius.png"
@@ -2511,7 +2525,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Gaius (Ylissean Summer).png",
@@ -2543,7 +2557,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Genny.png",
       main: "img/heroes-main/Genny.png"
@@ -2573,8 +2587,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Flying",
-    rarity4: ["pool1"],
-    rarity5: ["pool1"],
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
     ttReward: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Gerome.png",
@@ -2600,8 +2614,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Gordin.png",
       main: "img/heroes-main/Gordin.png"
@@ -2633,7 +2647,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Gray.png",
       main: "img/heroes-main/Gray.png"
@@ -2663,7 +2677,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Gunnthrá.png",
@@ -2696,8 +2710,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Cavalry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Gunter.png",
       main: "img/heroes-main/Gunter.png"
@@ -2729,8 +2743,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Armored",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Gwendolyn.png",
       main: "img/heroes-main/Gwendolyn.png"
@@ -2761,8 +2775,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Hana.png",
       main: "img/heroes-main/Hana.png"
@@ -2795,7 +2809,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Armored",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Hardin (Fallen Heroes).png",
       main: "img/heroes-main/Hardin (Fallen Heroes).png"
@@ -2826,7 +2840,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Hawkeye.png",
@@ -2860,7 +2875,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Armored",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Hector.png",
       main: "img/heroes-main/Hector.png"
@@ -2890,7 +2905,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Armored",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Hector (Love Abounds).png",
@@ -2920,8 +2935,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Henry.png",
       main: "img/heroes-main/Henry.png"
@@ -2955,7 +2970,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Armored",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Henry (Trick or Defeat!).png",
@@ -2985,8 +3000,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Hinata.png",
       main: "img/heroes-main/Hinata.png"
@@ -3019,7 +3034,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Flying",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Hinoka.png",
       main: "img/heroes-main/Hinoka.png"
@@ -3051,7 +3066,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ike.png",
       main: "img/heroes-main/Ike.png"
@@ -3084,7 +3099,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ike (Brave Heroes).png",
       main: "img/heroes-main/Ike (Brave Heroes).png"
@@ -3118,7 +3133,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ike (Legendary Heroes).png",
@@ -3155,7 +3170,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Inigo (Performing Arts).png",
@@ -3186,7 +3201,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Innes.png",
       main: "img/heroes-main/Innes.png"
@@ -3217,7 +3232,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Jaffar.png",
       main: "img/heroes-main/Jaffar.png"
@@ -3248,8 +3263,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Cavalry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Jagen.png",
       main: "img/heroes-main/Jagen.png"
@@ -3282,7 +3297,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Jakob.png",
@@ -3316,7 +3332,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Armored",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Jakob (Trick or Defeat!).png",
@@ -3348,7 +3364,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Jeorge.png",
@@ -3382,8 +3399,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity4: ["pool1"],
-    rarity5: ["pool1"],
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
     ttReward: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Joshua.png",
@@ -3417,7 +3434,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Julia.png",
       main: "img/heroes-main/Julia.png"
@@ -3448,7 +3465,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Kagero.png",
@@ -3483,7 +3501,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Flying",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Kagero (Hares at the Fair).png",
@@ -3516,7 +3534,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Karel.png",
       main: "img/heroes-main/Karel.png"
@@ -3548,7 +3566,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Katarina.png",
       main: "img/heroes-main/Katarina.png"
@@ -3579,7 +3597,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Klein.png",
@@ -3613,8 +3632,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Cavalry",
-    rarity4: ["pool1"],
-    rarity5: ["pool1"],
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_L'Arachel.png",
       main: "img/heroes-main/L'Arachel.png"
@@ -3647,7 +3666,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lachesis.png",
@@ -3680,8 +3700,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Laslow.png",
       main: "img/heroes-main/Laslow.png"
@@ -3714,8 +3734,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Legion.png",
@@ -3781,7 +3801,7 @@ module.exports = [
     weaponType: "Tome",
     moveType: "Cavalry",
     releaseDate: "Feb 02, 2017",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Leo.png",
       main: "img/heroes-main/Leo.png"
@@ -3813,7 +3833,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Leo (Nohrian Summer).png",
@@ -3845,7 +3865,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Leon.png",
@@ -3879,7 +3900,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lilina.png",
@@ -3915,7 +3937,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lilina (Love Abounds).png",
@@ -3947,7 +3969,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Linde.png",
       main: "img/heroes-main/Linde.png"
@@ -3977,8 +3999,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lissa.png",
       main: "img/heroes-main/Lissa.png"
@@ -4011,7 +4033,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Armored",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lissa (Winter's Envoy).png",
@@ -4043,8 +4065,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lloyd.png",
@@ -4078,8 +4100,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lon'qu.png",
       main: "img/heroes-main/Lon'qu.png"
@@ -4112,7 +4134,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lucina.png",
       main: "img/heroes-main/Lucina.png"
@@ -4145,7 +4167,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lucina (Brave Heroes).png",
       main: "img/heroes-main/Lucina (Brave Heroes).png"
@@ -4178,7 +4200,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lucina (Spring Festival).png",
@@ -4209,7 +4231,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lucius.png",
@@ -4242,7 +4265,8 @@ module.exports = [
     weaponType: "Lance",
     moveType: "Infantry",
     releaseDate: "Apr 14, 2017",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lukas.png",
@@ -4276,7 +4300,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Luke.png",
       main: "img/heroes-main/Luke.png"
@@ -4307,7 +4331,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lute.png",
       main: "img/heroes-main/Lute.png"
@@ -4338,7 +4362,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lyn.png",
       main: "img/heroes-main/Lyn.png"
@@ -4371,7 +4395,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lyn (Brave Heroes).png",
       main: "img/heroes-main/Lyn (Brave Heroes).png"
@@ -4404,7 +4428,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lyn (Bridal Blessings).png",
@@ -4436,7 +4460,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Armored",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lyn (Love Abounds).png",
@@ -4470,8 +4494,8 @@ module.exports = [
     weaponType: "Tome",
     moveType: "Infantry",
     releaseDate: "January 26, 2018",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Lyon.png",
@@ -4505,7 +4529,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Mae.png",
@@ -4538,7 +4563,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Maria.png",
@@ -4571,8 +4597,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ttReward: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Marisa.png",
@@ -4606,7 +4632,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Marth.png",
@@ -4640,8 +4667,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity4: ["pool1"],
-    rarity5: ["pool1"],
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
     ttReward: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Marth (Masked).png",
@@ -4667,7 +4694,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Cavalry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Mathilda.png",
@@ -4700,8 +4728,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Matthew.png",
       main: "img/heroes-main/Matthew.png"
@@ -4733,7 +4761,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Merric.png",
@@ -4767,7 +4796,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Mia.png",
       main: "img/heroes-main/Mia.png"
@@ -4798,7 +4827,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Micaiah.png",
       main: "img/heroes-main/Micaiah.png"
@@ -4832,8 +4861,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Flying",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Michalis.png",
@@ -4865,7 +4894,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Flying",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Minerva.png",
       main: "img/heroes-main/Minerva.png"
@@ -4896,7 +4925,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Mist.png",
       main: "img/heroes-main/Mist.png"
@@ -4927,7 +4956,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Flying",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Morgan (F).png",
       main: "img/heroes-main/Morgan (F).png"
@@ -4962,8 +4991,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity4: ["pool1"],
-    rarity5: ["pool1"],
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Morgan (M).png",
       main: "img/heroes-main/Morgan (M).png"
@@ -4996,7 +5025,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Breath",
     moveType: "Flying",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Myrrh.png",
       main: "img/heroes-main/Myrrh.png"
@@ -5058,8 +5087,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Flying",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Narcian.png",
@@ -5093,8 +5122,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Navarre.png",
@@ -5128,7 +5157,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Nephenee.png",
       main: "img/heroes-main/Nephenee.png"
@@ -5159,8 +5188,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Niles.png",
       main: "img/heroes-main/Niles.png"
@@ -5193,7 +5222,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Breath",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ninian.png",
       main: "img/heroes-main/Ninian.png"
@@ -5223,8 +5252,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Nino.png",
       main: "img/heroes-main/Nino.png"
@@ -5256,7 +5285,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Breath",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Nowi.png",
@@ -5290,7 +5320,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Flying",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Nowi (Trick or Defeat!).png",
@@ -5322,8 +5352,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Oboro.png",
       main: "img/heroes-main/Oboro.png"
@@ -5355,8 +5385,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Odin.png",
       main: "img/heroes-main/Odin.png"
@@ -5389,7 +5419,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ogma.png",
@@ -5423,8 +5454,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Oliver.png",
@@ -5456,8 +5487,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Olivia.png",
       main: "img/heroes-main/Olivia.png"
@@ -5488,7 +5519,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Olivia (Performing Arts).png",
@@ -5519,7 +5550,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Olwen.png",
       main: "img/heroes-main/Olwen.png"
@@ -5584,7 +5615,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Cavalry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Oscar.png",
@@ -5618,8 +5650,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Flying",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Palla.png",
       main: "img/heroes-main/Palla.png"
@@ -5652,7 +5684,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Cavalry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Peri.png",
@@ -5686,7 +5719,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Cavalry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Priscilla.png",
@@ -5719,8 +5753,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Raigh.png",
       main: "img/heroes-main/Raigh.png"
@@ -5752,7 +5786,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Raven.png",
@@ -5787,7 +5822,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Rebecca.png",
@@ -5820,7 +5856,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Cavalry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Reinhardt.png",
@@ -5889,7 +5926,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Rhajat.png",
       main: "img/heroes-main/Rhajat.png"
@@ -5921,8 +5958,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Robin (F).png",
@@ -5957,7 +5994,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Breath",
     moveType: "Flying",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Robin (F) (Legendary Heroes).png",
@@ -5991,7 +6028,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Robin (F) (Ylissean Summer).png",
@@ -6023,8 +6060,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Robin (M).png",
       main: "img/heroes-main/Robin (M).png"
@@ -6058,7 +6095,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Breath",
     moveType: "Armored",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Robin (M) (Fallen Heroes).png",
@@ -6091,7 +6128,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Armored",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Robin (M) (Winter's Envoy).png",
@@ -6123,7 +6160,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Cavalry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Roderick.png",
@@ -6155,7 +6193,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Roy.png",
@@ -6189,7 +6228,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Roy (Brave Heroes).png",
       main: "img/heroes-main/Roy (Brave Heroes).png"
@@ -6222,7 +6261,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Roy (Love Abounds).png",
@@ -6253,7 +6292,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ryoma.png",
       main: "img/heroes-main/Ryoma.png"
@@ -6284,7 +6323,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Saber.png",
       main: "img/heroes-main/Saber.png"
@@ -6347,8 +6386,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Saizo.png",
       main: "img/heroes-main/Saizo.png"
@@ -6380,7 +6419,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sakura.png",
@@ -6414,7 +6454,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sakura (Trick or Defeat!).png",
@@ -6449,7 +6489,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sanaki.png",
       main: "img/heroes-main/Sanaki.png"
@@ -6479,8 +6519,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Selena.png",
       main: "img/heroes-main/Selena.png"
@@ -6512,7 +6552,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Seliph.png",
@@ -6545,8 +6586,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Serra.png",
       main: "img/heroes-main/Serra.png"
@@ -6578,7 +6619,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Cavalry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Seth.png",
@@ -6611,8 +6653,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Setsuna.png",
       main: "img/heroes-main/Setsuna.png"
@@ -6644,8 +6686,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Flying",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Shanna.png",
       main: "img/heroes-main/Shanna.png"
@@ -6678,9 +6720,9 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Infantry",
-    rarity2: ["pool1"],
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity2: ["pool1", "pool2"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sharena.png",
@@ -6714,7 +6756,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sharena (Hares at the Fair).png",
@@ -6747,7 +6789,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Armored",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sheena.png",
@@ -6780,7 +6823,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Shigure (Performing Arts).png",
@@ -6811,7 +6854,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Shiro.png",
       main: "img/heroes-main/Shiro.png"
@@ -6841,7 +6884,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Siegbert.png",
       main: "img/heroes-main/Siegbert.png"
@@ -6872,7 +6915,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sigurd.png",
       main: "img/heroes-main/Sigurd.png"
@@ -6903,8 +6946,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity4: ["pool1"],
-    rarity5: ["pool1"],
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Soleil.png",
       main: "img/heroes-main/Soleil.png"
@@ -6937,7 +6980,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sonya.png",
       main: "img/heroes-main/Sonya.png"
@@ -6968,8 +7011,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sophia.png",
       main: "img/heroes-main/Sophia.png"
@@ -7002,7 +7045,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Soren.png",
@@ -7037,8 +7081,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Infantry",
-    rarity4: ["pool1"],
-    rarity5: ["pool1"],
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sothe.png",
       main: "img/heroes-main/Sothe.png"
@@ -7072,8 +7116,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Cavalry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Stahl.png",
       main: "img/heroes-main/Stahl.png"
@@ -7105,8 +7149,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Flying",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Subaki.png",
       main: "img/heroes-main/Subaki.png"
@@ -7138,8 +7182,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Cavalry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sully.png",
       main: "img/heroes-main/Sully.png"
@@ -7171,8 +7215,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity4: ["pool1"],
-    rarity5: ["pool1"],
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Tailtiu.png",
       main: "img/heroes-main/Tailtiu.png"
@@ -7205,7 +7249,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Takumi.png",
       main: "img/heroes-main/Takumi.png"
@@ -7235,8 +7279,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Takumi (Fallen Heroes).png",
@@ -7271,7 +7315,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Takumi (Happy New Year!).png",
@@ -7303,7 +7347,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Flying",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Tana.png",
       main: "img/heroes-main/Tana.png"
@@ -7334,7 +7378,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Infantry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Tharja.png",
@@ -7369,7 +7414,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Tome",
     moveType: "Armored",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Tharja (Winter's Envoy).png",
@@ -7403,8 +7448,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Breath",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Tiki (Adult).png",
       main: "img/heroes-main/Tiki (Adult).png"
@@ -7438,7 +7483,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Tiki (Adult) (Ylissean Summer).png",
@@ -7471,7 +7516,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Breath",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Tiki (Young).png",
       main: "img/heroes-main/Tiki (Young).png"
@@ -7502,7 +7547,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Cavalry",
-    rarity4: ["pool1"],
+    rarity3: ["pool2"],
+    rarity4: ["pool1", "pool2"],
     rarity5: ["pool1"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Titania.png",
@@ -7535,8 +7581,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
-    rarity4: ["pool1"],
-    rarity5: ["pool1"],
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
     ttReward: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Tobin.png",
@@ -7569,8 +7615,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Tome",
     moveType: "Cavalry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ursula.png",
@@ -7604,8 +7650,8 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Flying",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Valter.png",
@@ -7639,8 +7685,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Bow",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Virion.png",
       main: "img/heroes-main/Virion.png"
@@ -7673,8 +7719,8 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Infantry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Wrys.png",
       main: "img/heroes-main/Wrys.png"
@@ -7706,8 +7752,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Cavalry",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Xander.png",
@@ -7742,7 +7788,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Infantry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Xander (Nohrian Summer).png",
@@ -7775,7 +7821,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Cavalry",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Xander (Spring Festival).png",
@@ -7804,7 +7850,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Armored",
-    rarity5: ["pool1"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Zelgius.png",
       main: "img/heroes-main/Zelgius.png"
@@ -7837,8 +7883,8 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Armored",
-    rarity3: ["pool1"],
-    rarity4: ["pool1"],
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
     ghb: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Zephiel.png",

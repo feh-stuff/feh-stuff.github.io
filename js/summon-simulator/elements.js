@@ -27,5 +27,9 @@ module.exports = {
   CUSTOM_FOCUS: '#custom-banner-heroes',
   CUSTOM_SEARCH: '#custom-banner-search',
   CREATE_BANNER: '#create-banner',
-  TABLE_FILTER_ITEM: '#table-filter .dropdown-item'
+  TABLE_FILTER_ITEM: '#table-filter .dropdown-item',
+  POOL_LIST_5F: '#pool-list-5f',
+  POOL_LIST_5: '#pool-list-5',
+  POOL_LIST_4: '#pool-list-4',
+  POOL_LIST_3: '#pool-list-3'
 }

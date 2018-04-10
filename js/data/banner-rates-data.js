@@ -32,8 +32,8 @@ module.exports = {
     pityRateRarity3: -58 / 92 * 0.5,
     pityRateRarity4: -34 / 92 * 0.5,
     pityRateRarityFocus4: 0,
-    pityRateRarity5: 0.25,
-    pityRateRarityFocus: 0.25
+    pityRateRarity5: 3 / 8 * 0.5,
+    pityRateRarityFocus: 5 / 8 * 0.5
   },
   herofestV2: {
     rateRarity3: 34,
@@ -44,8 +44,8 @@ module.exports = {
     pityRateRarity3: -34 / 92 * 0.5,
     pityRateRarity4: -58 / 92 * 0.5,
     pityRateRarityFocus4: 0,
-    pityRateRarity5: 0.25,
-    pityRateRarityFocus: 0.25
+    pityRateRarity5: 3 / 8 * 0.5,
+    pityRateRarityFocus: 5 / 8 * 0.5
   },
   legendaryV1: {
     rateRarity3: 34,

@@ -19,7 +19,10 @@
     </div>
 
     <div class="row mt-2 card">
-      <h6 class="card-header p-2">Focus Heroes</h6>
+      <div class="card-header p-2 d-flex justify-content-between">
+        <h6 class="pt-1 mb-0">Focus Heroes</h6>
+        <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#summon-pool-modal">Summoning Pool</button>
+      </div>
       <div id="focus-list" class="d-flex justify-content-center flex-wrap"></div>
     </div>
 
@@ -31,6 +34,7 @@
   </div>
 
   {% include '../partials/custom-banner-modal.html' %}
+  {% include '../partials/summon-pool-modal.html' %}
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>

@@ -49,7 +49,10 @@
     </div>
 
     <div class="row mt-2 card">
-      <h6 class="card-header p-2">Focus Heroes</h6>
+      <div class="card-header p-2 d-flex justify-content-between">
+        <h6 class="pt-1 mb-0">Focus Heroes</h6>
+        <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#summon-pool-modal">Summoning Pool</button>
+      </div>
       <div id="focus-list" class="d-flex justify-content-center flex-wrap"></div>
     </div>
 
@@ -263,6 +266,41 @@
       </div>
     </div>
   </div>
+</div>
+
+  <div class="modal fade" id="summon-pool-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Summoning Pool</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="pb-2">
+          <button class="btn btn-sm btn-default w-100 text-left" data-toggle="collapse" data-target="#pool-list-5f">5★ Focus</button>
+          <div class="collapse show" id="pool-list-5f"></div>
+        </div>
+        <div class="pb-2">
+          <button class="btn btn-sm btn-default w-100 text-left" data-toggle="collapse" data-target="#pool-list-5">5★</button>
+          <div class="collapse show" id="pool-list-5"></div>
+        </div>
+        <div class="pb-2">
+          <button class="btn btn-sm btn-default w-100 text-left" data-toggle="collapse" data-target="#pool-list-4">4★</button>
+          <div class="collapse show" id="pool-list-4"></div>
+        </div>
+        <div class="pb-2">
+          <button class="btn btn-sm btn-default w-100 text-left" data-toggle="collapse" data-target="#pool-list-3">3★</button>
+          <div class="collapse show" id="pool-list-3"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" type="button" class="btn btn-default">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
