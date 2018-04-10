@@ -230,6 +230,22 @@ module.exports = [
     effect: "Moves adjacent ally to opposite side of unit."
   },
   {
+    name: "Restore",
+    range: 1,
+    spCost: 200,
+    include: [{weaponType: "Staff"}],
+    effect: "Restores 8 HP. Neutralizes ally's penalties (from skills like Panic, Threaten, etc.) and negative status effects (preventing counterattacks, restricting movement, etc.) that last through ally's next action."
+  },
+  {
+    name: "Restore+",
+    range: 1,
+    spCost: 300,
+    prev: ["Restore"],
+    include: [{weaponType: "Staff"}],
+    last: true,
+    effect: "Restores HP = 50% of Atk. (Minimum of 8 HP.) Neutralizes ally's penalties (from skills like Panic, Threaten, etc.) and negative status effects (preventing counterattacks, restricting movement, etc.) that last through ally's next action."
+  },
+  {
     name: "Sacrifice",
     range: 1,
     spCost: 400,

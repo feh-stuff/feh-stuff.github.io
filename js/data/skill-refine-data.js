@@ -2649,4 +2649,152 @@ module.exports = {
       effect: "If in combat against magic foe, reduces damage from foe's first attack by 30%."
     }
   ],
+  "Forblaze": [
+    {
+      name: "Death Blow",
+      icon: "40-7",
+      cost: 1,
+      effect: "At the start of each turn, inflicts Res -7 on foe on the enemy team with the highest Res through its next action. If unit initiates combat, grants Atk+6 during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "At start of turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "At start of turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "At start of turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "At start of turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action."
+    }
+  ],
+  "Nameless Blade": [
+    {
+      name: "+Special Damage",
+      icon: "32-6",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Accelerates Special trigger (cooldown count-1). Deals +10 damage when Special triggers."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    }
+  ],
+  "Regal Blade": [
+    {
+      name: "Infantry Mage Bond",
+      icon: "40-9",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "At start of combat, if foe's HP = 100%, grants Atk/Spd+3 during combat. If unit is within 2 spaces of an infantry magic ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "At start of combat, if foe's HP = 100%, grants Atk/Spd+3 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "At start of combat, if foe's HP = 100%, grants Atk/Spd+3 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "At start of combat, if foe's HP = 100%, grants Atk/Spd+3 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "At start of combat, if foe's HP = 100%, grants Atk/Spd+3 during combat."
+    }
+  ],
+  "Binding Blade": [
+    {
+      name: "Quick Riposte",
+      icon: "40-8",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Effective against dragon foes. If foe initiates combat, grants Def/Res+4 during combat. If unit's HP ≥ 50% and foe initiates combat, unit makes a guaranteed follow-up attack."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Effective against dragon foes. If foe initiates combat, grants Def/Res+4 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Effective against dragon foes. If foe initiates combat, grants Def/Res+4 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Effective against dragon foes. If foe initiates combat, grants Def/Res+4 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Effective against dragon foes. If foe initiates combat, grants Def/Res+4 during combat."
+    }
+  ],
+
 };

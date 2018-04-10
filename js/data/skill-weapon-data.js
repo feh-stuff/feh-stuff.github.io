@@ -97,7 +97,7 @@ module.exports = [
     damage: 7,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Steel Bow"],
     effect: "Effective against flying units.  If target has a dagger, it can't make a follow-up attack and this unit will."
   },
@@ -107,7 +107,7 @@ module.exports = [
     damage: 11,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Assasin's Bow"],
     effect: "Effective against flying units.  If target has a dagger, it can't make a follow-up attack and this unit will."
   },
@@ -452,7 +452,7 @@ module.exports = [
     damage: 4,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     stats: {spd: -5},
     prev: ["Steel Bow"],
     effect: "Spd-5. Effective against flying units.  Attacks twice if unit initiates combat."
@@ -463,7 +463,7 @@ module.exports = [
     damage: 7,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     stats: {spd: -5},
     prev: ["Brave Bow"],
     effect: "Spd-5. Effective against flying units.  Attacks twice if unit initiates combat."
@@ -639,7 +639,7 @@ module.exports = [
     damage: 7,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Steel Bow"],
     effect: "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units."
   },
@@ -649,7 +649,7 @@ module.exports = [
     damage: 11,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Clarisse's Bow"],
     effect: "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units."
   },
@@ -659,7 +659,7 @@ module.exports = [
     damage: 8,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Steel Bow"],
     effect: "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates. Effective against fliers."
   },
@@ -669,7 +669,7 @@ module.exports = [
     damage: 12,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Cupid Arrow"],
     effect: "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates. Effective against fliers."
   },
@@ -1092,7 +1092,7 @@ module.exports = [
     damage: 7,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Steel Bow"],
     effect: "Effective against fliers.  Unit and enemies cannot use counterattacks."
   },
@@ -1102,7 +1102,7 @@ module.exports = [
     damage: 11,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Firesweep Bow"],
     effect: "Effective against fliers.  Unit and enemies cannot use counterattacks."
   },
@@ -1217,12 +1217,23 @@ module.exports = [
     effect: "Grants Atk+5 at start of turn if unit's HP ≤ 50%.",
   },
   {
+    name: "Forblaze",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Red",
+    prev: ["Bolganone"],
+    exclusive: ["Lilina"],
+    effect: "At start of turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action.",
+  },
+  {
     name: "Fujin Yumi",
     spCost: 400,
     damage: 14,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Silver Bow"],
     exclusive: ["Takumi"],
     effect: "Effective against flying units.  Unit can pass though foes if own HP ≥ 50%.",
@@ -1288,7 +1299,7 @@ module.exports = [
     damage: 8,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Steel Bow"],
     effect: "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
   },
@@ -1298,7 +1309,7 @@ module.exports = [
     damage: 12,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Gratia"],
     effect: "Effective against flying foes. If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
   },
@@ -1481,7 +1492,7 @@ module.exports = [
     damage: 8,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     effect: "Effective against flying units."
   },
   {
@@ -1490,7 +1501,7 @@ module.exports = [
     damage: 12,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Guard Bow"],
     effect: "Effective against flying foes.  Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff."
   },
@@ -1520,7 +1531,7 @@ module.exports = [
     damage: 8,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Steel Bow"],
     effect: "Effective against fliers. Grants Def/Res+2 during combat to allies within 2 spaces."
   },
@@ -1530,7 +1541,7 @@ module.exports = [
     damage: 12,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Hama Ya"],
     effect: "Effective against fliers. Grants Def/Res+2 during combat to allies within 2 spaces."
   },
@@ -1663,7 +1674,7 @@ module.exports = [
     damage: 4,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     effect: "Effective against flying units."
   },
   {
@@ -1829,7 +1840,7 @@ module.exports = [
     damage: 5,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Steel Bow"],
     effect: "Effective against flying units.  Accelerates Special trigger (cooldown count-1)."
   },
@@ -1839,7 +1850,7 @@ module.exports = [
     damage: 9,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Killer Bow"],
     effect: "Effective against flying units.  Accelerates Special trigger (cooldown count-1)."
   },
@@ -1976,6 +1987,18 @@ module.exports = [
     effect: "-"
   },
   {
+    name: "Light Brand",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Silver Sword"],
+    exclusive: ["Leif"],
+    stats: {def: 3},
+    effect: "Grants Def+3. If foe's Def ≥ foe's Res+5, deals +7 damage.",
+  },
+  {
     name: "Light Breath",
     spCost: 200,
     damage: 9,
@@ -2032,6 +2055,18 @@ module.exports = [
     effect: "Grants allies within 2 spaces Atk/Spd+1 during combat."
   },
   {
+    name: "Meisterschwert",
+    spCost: 400,
+    damage: 11,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Silver Sword"],
+    exclusive: ["Reinhardt (World of Thracia)"],
+    stats: {spd: -5},
+    effect: "Inflicts Spd-5. Unit attacks twice. (Even if foe initiates combat, unit attacks twice.)",
+  },
+  {
     name: "Melon Crusher",
     spCost: 200,
     damage: 10,
@@ -2057,7 +2092,7 @@ module.exports = [
     damage: 8,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Steel Bow"],
     effect: "Effective against flying foes.  After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions."
   },
@@ -2067,7 +2102,7 @@ module.exports = [
     damage: 12,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Monstrous Bow"],
     effect: "Effective against flying foes.  After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions."
   },
@@ -2089,7 +2124,7 @@ module.exports = [
     damage: 14,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     stats: {spd: 3},
     prev: ["Silver Bow"],
     exclusive: ["Lyn (Brave Heroes)"],
@@ -2129,12 +2164,23 @@ module.exports = [
     effect: "Grants weapon advantage vs. colorless foes.",
   },
   {
+    name: "Nameless Blade",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Wo Dao+"],
+    exclusive: ["Fir", "Karel"],
+    effect: "Accelerates Special trigger (cooldown count-1).",
+  },
+  {
     name: "Nidhogg",
     spCost: 400,
     damage: 14,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Silver Bow"],
     exclusive: ["Innes"],
     effect: "Effective against flying units.  During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
@@ -2194,7 +2240,7 @@ module.exports = [
     damage: 14,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Silver Bow"],
     exclusive: ["Jeorge"],
     effect: "Effective against flying units.  Grants Res+4 during combat if initiating attack.",
@@ -2368,7 +2414,7 @@ module.exports = [
     damage: 8,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Steel Bow"],
     effect: "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers."
   },
@@ -2378,7 +2424,7 @@ module.exports = [
     damage: 12,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Refreshing Bolt"],
     effect: "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat. Effective against fliers."
   },
@@ -2665,7 +2711,7 @@ module.exports = [
     damage: 9,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Steel Bow"],
     effect: "Effective against flying units."
   },
@@ -2675,7 +2721,7 @@ module.exports = [
     damage: 13,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Silver Bow"],
     effect: "Effective against flying units."
   },
@@ -2757,7 +2803,7 @@ module.exports = [
     damage: 14,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     stats: {spd: 3},
     prev: ["Silver Bow"],
     exclusive: ["Takumi (Fallen Heroes)"],
@@ -2789,7 +2835,7 @@ module.exports = [
     damage: 8,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Steel Bow"],
     effect: "Effective against flying units.  Accelerates Special trigger (cooldown count-1)."
   },
@@ -2799,7 +2845,7 @@ module.exports = [
     damage: 12,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Slaying Bow"],
     effect: "Effective against flying units.  Accelerates Special trigger (cooldown count-1)."
   },
@@ -2967,7 +3013,7 @@ module.exports = [
     damage: 6,
     range: 2,
     weaponType: "Bow",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Iron Bow"],
     effect: "Effective against flying units."
   },
@@ -3085,6 +3131,17 @@ module.exports = [
     effect: "-"
   },
   {
+    name: "Thunderhead",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    prev: ["Rexcalibur"],
+    exclusive: ["Olwen (World of Thracia)"],
+    effect: "Adds total bonuses on unit to damage dealt."
+  },
+  {
     name: "Tomato Tome",
     spCost: 200,
     damage: 8,
@@ -3169,6 +3226,17 @@ module.exports = [
     prev: ["Heavy Spear"],
     exclusive: ["Tana"],
     effect: "If unit is attacked by foe using sword, axe or lance, unit receives Def+7 during combat.",
+  },
+  {
+    name: "Wargod's Tome",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Shine"],
+    exclusive: ["Saias"],
+    effect: "At start of turn, inflicts Atk/Res-4 on foes in cardinal directions with Res < unit's Res through their next actions."
   },
   {
     name: "Weirding Tome",

@@ -2267,6 +2267,40 @@ module.exports = [
     }
   },
   {
+    name: "Finn",
+    title: "Lance of Legend",
+    releaseDate: "Apr 21, 2018",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Cavalry",
+    // rarity4: ["pool2"],
+    rarity5: ["pool2"],
+    ttReward: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Finn.png",
+      main: "img/heroes-main/Finn.png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 4 },
+      { name: "Steel Lance", rarity: 4 },
+      { name: "Brave Lance", rarity: 4 },
+      { name: "Brave Lance+", rarity: 5 },
+      { name: "Miracle", rarity: 4 },
+      { name: "Defense +1", rarity: 4 },
+      { name: "Atk/Def 1", rarity: 4 },
+      { name: "Atk/Def 2", rarity: 4 },
+      { name: "Spur Atk 1", rarity: 4 },
+      { name: "Spur Atk 2", rarity: 4 },
+      { name: "Goad Cavalry", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 8, spd: 9, def: 8, res: 3 },
+      level40: { hp: [ 37, 40, 43 ], atk: [ 31, 34, 37 ], spd: [ 30, 33, 36 ], def: [ 29, 32, 35 ], res: [ 15, 18, 21 ] },
+      // level1_4: { hp: 18, atk: 9, spd: 5, def: 8, res: 3 },
+      // level40_4: { hp: [ 39, 42, 45 ], atk: [ 28, 31, 34 ], spd: [ 20, 23, 26 ], def: [ 27, 30, 33 ], res: [ 14, 17, 20 ] }
+    }
+  },
+  {
     name: "Fir",
     title: "Sword Student",
     releaseDate: "Feb 02, 2017",
@@ -2284,6 +2318,7 @@ module.exports = [
       { name: "Steel Sword", rarity: 3 },
       { name: "Killing Edge", rarity: 4 },
       { name: "Killing Edge+", rarity: 5 },
+      { name: "Nameless Blade", rarity: 5 },
       { name: "Chilling Wind", rarity: 4 },
       { name: "Glacies", rarity: 4 },
       { name: "Speed +1", rarity: 3 },
@@ -3491,6 +3526,7 @@ module.exports = [
       { name: "Steel Sword", rarity: 5 },
       { name: "Wo Dao", rarity: 5 },
       { name: "Wo Dao+", rarity: 5 },
+      { name: "Nameless Blade", rarity: 5 },
       { name: "Retribution", rarity: 5 },
       { name: "Reprisal", rarity: 5 },
       { name: "Defiant Atk 1", rarity: 5 },
@@ -3707,6 +3743,38 @@ module.exports = [
     }
   },
   {
+    name: "Leif",
+    title: "Prince of Leonster",
+    releaseDate: "Apr 11, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Leif.png",
+      main: "img/heroes-main/Leif.png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Light Brand", rarity: 5 },
+      { name: "Rising Light", rarity: 5 },
+      { name: "Blazing Light", rarity: 5 },
+      { name: "Darting Blow 1", rarity: 5 },
+      { name: "Steady Blow 1", rarity: 5 },
+      { name: "Steady Blow 2", rarity: 5 },
+      { name: "S Drink", rarity: 5 },
+      { name: "Spur Atk 1", rarity: 5 },
+      { name: "Drive Atk 1", rarity: 5 },
+      { name: "Drive Atk 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 6, spd: 10, def: 8, res: 6 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 29, 32, 35 ], spd: [ 35, 38, 41 ], def: [ 26, 30, 33 ], res: [ 20, 23, 26 ] },
+    }
+  },
+  {
     name: "Leo",
     title: "Sorcerous Prince",
     colorType: "Red",
@@ -3822,6 +3890,7 @@ module.exports = [
       { name: "Elfire", rarity: 4 },
       { name: "Bolganone", rarity: 4 },
       { name: "Bolganone+", rarity: 5 },
+      { name: "Forblaze", rarity: 5 },
       { name: "Rising Flame", rarity: 4 },
       { name: "Growing Flame", rarity: 4 },
       { name: "Attack +1", rarity: 4 },
@@ -4952,6 +5021,37 @@ module.exports = [
     }
   },
   {
+    name: "Nanna",
+    title: "Nordion Princess",
+    releaseDate: "Apr 11, 2018",
+    colorType: "Neutral",
+    weaponType: "Staff",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Nanna.png",
+      main: "img/heroes-main/Nanna.png"
+    },
+    skills: [
+      { name: "Assault", rarity: 5 },
+      { name: "Absorb", rarity: 5 },
+      { name: "Absorb+", rarity: 5 },
+      { name: "Restore", rarity: 5 },
+      { name: "Restore+", rarity: 5 },
+      { name: "Heavenly Light", rarity: 5 },
+      { name: "Resistance +1", rarity: 5 },
+      { name: "Spd/Res 1", rarity: 5 },
+      { name: "Spd/Res 2", rarity: 5 },
+      { name: "Spur Def 1", rarity: 5 },
+      { name: "Drive Def 1", rarity: 5 },
+      { name: "Drive Def 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 5, spd: 8, def: 6, res: 7 },
+      level40: { hp: [ 33, 36, 40 ], atk: [ 23, 27, 30 ], spd: [ 31, 34, 37 ], def: [ 18, 21, 24 ], res: [ 23, 26, 30 ] },
+    }
+  },
+  {
     name: "Narcian",
     title: "Wyvern General",
     releaseDate: "Feb 10, 2017",
@@ -5443,6 +5543,41 @@ module.exports = [
     }
   },
   {
+    name: "Olwen (World of Thracia)",
+    shortName: "Olwen",
+    title: "Righteous Knight",
+    releaseDate: "Apr 11, 2018",
+    colorType: "Green",
+    weaponType: "Tome",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Olwen (World of Thracia).png",
+      main: "img/heroes-main/Olwen (World of Thracia).png"
+    },
+    skills: [
+      { name: "Wind", rarity: 5 },
+      { name: "Elwind", rarity: 5 },
+      { name: "Rexcalibur", rarity: 5 },
+      { name: "Thunderhead", rarity: 5 },
+      { name: "Rising Wind", rarity: 5 },
+      { name: "Blazing Wind", rarity: 5 },
+      { name: "Darting Blow 1", rarity: 5 },
+      { name: "Swift Sparrow 1", rarity: 5 },
+      { name: "Swift Sparrow 2", rarity: 5 },
+      { name: "Renewal 1", rarity: 5 },
+      { name: "Renewal 2", rarity: 5 },
+      { name: "Renewal 3", rarity: 5 },
+      { name: "G Tome Exp. 1", rarity: 5 },
+      { name: "G Tome Exp. 2", rarity: 5 },
+      { name: "G Tome Exp. 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 8, spd: 9, def: 4, res: 5 },
+      level40: { hp: [ 31, 34, 37 ], atk: [ 26, 30, 33 ], spd: [ 32, 35, 38 ], def: [ 16, 19, 22 ], res: [ 23, 27, 30 ] }
+    }
+  },
+  {
     name: "Oscar",
     title: "Agile Horseman",
     releaseDate: "Sep 15, 2017",
@@ -5710,6 +5845,41 @@ module.exports = [
       level40: { hp: [ 34, 38, 41 ], atk: [ 29, 32, 35 ], spd: [ 20, 23, 26 ], def: [ 23, 27, 30 ], res: [ 22, 25, 28 ] },
       level1_4: { hp: 15, atk: 8, spd: 5, def: 4, res: 8 },
       level40_4: { hp: [ 32, 35, 38 ], atk: [ 27, 30, 33 ], spd: [ 18, 21, 24 ], def: [ 21, 24, 27 ], res: [ 21, 24, 27 ] }
+    }
+  },
+  {
+    name: "Reinhardt (World of Thracia)",
+    shortName: "Reinhardt",
+    title: "Thunder's Sword",
+    releaseDate: "Apr 11, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Reinhardt (World of Thracia).png",
+      main: "img/heroes-main/Reinhardt (World of Thracia).png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Meisterschwert", rarity: 5 },
+      { name: "Buckler", rarity: 5 },
+      { name: "Pavise", rarity: 5 },
+      { name: "Death Blow 1", rarity: 5 },
+      { name: "Death Blow 2", rarity: 5 },
+      { name: "Death Blow 3", rarity: 5 },
+      { name: "Vantage 1", rarity: 5 },
+      { name: "Vantage 2", rarity: 5 },
+      { name: "Vantage 3", rarity: 5 },
+      { name: "Spur Atk 1", rarity: 5 },
+      { name: "Spur Atk/Def 1", rarity: 5 },
+      { name: "Spur Atk/Def 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 9, spd: 6, def: 7, res: 6 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 32, 35, 38 ], spd: [ 20, 23, 26 ], def: [ 28, 31, 34 ], res: [ 24, 28, 31 ] },
     }
   },
   {
@@ -6136,6 +6306,38 @@ module.exports = [
     stats: {
       level1: { hp: 18, atk: 7, spd: 9, def: 8, res: 5 },
       level40: { hp: [ 36, 40, 43 ], atk: [ 28, 31, 34 ], spd: [ 30, 33, 36 ], def: [ 29, 32, 35 ], res: [ 19, 22, 25 ] }
+    }
+  },
+  {
+    name: "Saias",
+    title: "Bishop of Flame",
+    releaseDate: "Apr 11, 2018",
+    colorType: "Blue",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    ghb: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Saias.png",
+      main: "img/heroes-main/Saias.png"
+    },
+    skills: [
+      { name: "Light", rarity: 3 },
+      { name: "Ellight", rarity: 3 },
+      { name: "Shine", rarity: 3 },
+      { name: "Wargod's Tome", rarity: 5 },
+      { name: "Chilling Wind", rarity: 3 },
+      { name: "Glacies", rarity: 4 },
+      { name: "Escape Route 1", rarity: 3 },
+      { name: "Escape Route 2", rarity: 3 },
+      { name: "Escape Route 3", rarity: 4 },
+      { name: "Spd Ploy 1", rarity: 3 },
+      { name: "Spd Ploy 2", rarity: 4 },
+      { name: "Spd Ploy 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 7, spd: 8, def: 5, res: 8 },
+      level40: { hp: [ 33, 36, 39 ], atk: [ 30, 33, 36 ], spd: [ 27, 30, 33 ], def: [ 15, 18, 21 ], res: [ 31, 34, 37 ] },
     }
   },
   {

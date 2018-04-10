@@ -37,7 +37,10 @@ exports.CONST = {
     {name: 'Tome (Red)', weaponType: 'Tome', colorType: 'Red'},
     {name: 'Tome (Green)', weaponType: 'Tome', colorType: 'Green'},
     {name: 'Tome (Blue)', weaponType: 'Tome', colorType: 'Blue'},
-    {name: 'Bow', weaponType: 'Bow', colorType: 'Neutral'},
+    {name: 'Bow (Red)', weaponType: 'Bow', colorType: 'Red'},
+    {name: 'Bow (Green)', weaponType: 'Bow', colorType: 'Green'},
+    {name: 'Bow (Blue)', weaponType: 'Bow', colorType: 'Blue'},
+    {name: 'Bow (Neutral)', weaponType: 'Bow', colorType: 'Neutral'},
     {name: 'Dagger', weaponType: 'Dagger', colorType: 'Neutral'},
     {name: 'Staff', weaponType: 'Staff', colorType: 'Neutral'}
   ]
@@ -58,7 +61,10 @@ exports.COORD = {
     "Red Breath": [0,372],
     "Blue Breath": [52,372],
     "Green Breath": [104,372],
-    "Neutral Breath": [156,216],
+    "Neutral Breath": [156,1140],
+    "Red Bow": [0,1140],
+    "Blue Bow": [52,1140],
+    "Green Bow": [104,1140],
     "Neutral Bow": [156,268],
     "Neutral Dagger": [156,320],
     "Neutral Staff": [156,372]

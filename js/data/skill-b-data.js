@@ -696,6 +696,13 @@ module.exports = [
     effect: "At the start of every second turn, restores 10 HP."
   },
   {
+    name: "S Drink",
+    spCost: 300,
+    icon: "40-10",
+    include: [{name: "Leif"}],
+    effect: "At the start of turn 1, restores 99 HP and grants Special cooldown count-1."
+  },
+  {
     name: "Sacae's Blessing",
     spCost: 300,
     icon: "26-5",

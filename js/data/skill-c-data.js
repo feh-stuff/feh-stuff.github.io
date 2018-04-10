@@ -458,6 +458,29 @@ module.exports = [
     effect: "Grants adjacent allies Res+4 through their next actions at the start of each turn."
   },
   {
+    name: "G Tome Exp. 1",
+    spCost: 30,
+    icon: "41-0",
+    include: [{weaponType: "Tome", colorType: "Green"}],
+    effect: "If using green magic and unit survives combat, unit gets 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
+    name: "G Tome Exp. 2",
+    spCost: 60,
+    icon: "41-1",
+    prev: ["G Tome Exp. 1"],
+    include: [{weaponType: "Tome", colorType: "Green"}],
+    effect: "If unit survives combat, all green magic users on team get 1.5x EXP. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
+    name: "G Tome Exp. 3",
+    spCost: 120,
+    icon: "41-2",
+    prev: ["G Tome Exp. 2"],
+    include: [{weaponType: "Tome", colorType: "Green"}],
+    effect: "If unit survives combat, all green magic users on team get 2x EXP. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
     name: "G Tome Valor 1",
     spCost: 30,
     icon: "24-2",
@@ -856,6 +879,20 @@ module.exports = [
     icon: "10-10",
     prev: ["Spur Atk 2"],
     effect: "Grants adjacent allies Atk+4 during combat."
+  },
+  {
+    name: "Spur Atk/Def 1",
+    spCost: 120,
+    icon: "40-11",
+    prev: ["Spur Atk 1", "Spur Def 1"],
+    effect: "Grants adjacent allies Atk/Def +2 during combat."
+  },
+  {
+    name: "Spur Atk/Def 2",
+    spCost: 240,
+    icon: "40-12",
+    prev: ["Spur Atk/Def 1"],
+    effect: "Grants adjacent allies Atk/Def +3 during combat."
   },
   {
     name: "Spur Atk/Spd 1",
