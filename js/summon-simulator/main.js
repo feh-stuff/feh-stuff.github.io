@@ -40,22 +40,14 @@ function init() {
     searchPlaceholder: 'Search Banner Name or Hero'
   });
 
-  let customFocus = getUrlParam('focus');
+  let customFocus  = getUrlParam('focus');
   if (customFocus.length) {
     banner = getCustomBannerData(customFocus.split(';'));
     $(elements.SELECT_BANNER).selectable('text', banner.name);
 
     let rates = getUrlParam('rates').split(';');
     if (rates.length === 5) {
-      banner.rateRarityFocus = parseInt(rates[0]);
-      banner.rateRarity5 = parseInt(rates[1]);
-      banner.rateRarityFocus4 = parseInt(rates[2]);
-      banner.rateRarity4 = parseInt(rates[3]);
-      banner.rateRarity3 = parseInt(rates[4]);
-      if (banner.rateRarity5 === 0) {
-        banner.pityRateRarity5 = 0
-        banner.pityRateRarityFocus = 0.5;
-      }
+      setCustomBannerRates(banner, rates);
     }
   } else {
     banner = banners.getFirstBanner();
@@ -66,6 +58,50 @@ function init() {
   initCustomBannerList();
   bindEvents();
 }
+function setCustomBannerRates(banner, rates) {
+  rates = rates.map(r => parseInt(r));
+
+  banner.rates = {};
+  banner.rates.rateRarityFocus = Math.max(0, Math.min(100, rates[0]));
+  let total = 100 - banner.rates.rateRarityFocus;
+
+  if (rates[1] >= 0 && rates[0] + rates[1] <= 100) {
+    banner.rates.rateRarity5 = rates[1];
+  } else {
+    banner.rates.rateRarity5 = Math.min(3, total);
+  }
+  total -= banner.rates.rateRarity5;
+
+  if (rates[2] >= 0 && rates[0] + rates[1] + rates[2] <= 100) {
+    banner.rates.rateRarityFocus4 = rates[2];
+  } else {
+    banner.rates.rateRarityFocus4 = 0;
+  }
+  total -= banner.rates.rateRarityFocus4;
+
+  if (rates[3] >= 0 && rates[0] + rates[1] + rates[2] + rates[3] <= 100) {
+    banner.rates.rateRarity4 = rates[3];
+  } else {
+    banner.rates.rateRarity4 = banner.rates.rateRarityFocus4 ||
+        Math.min(58, total);
+  }
+
+  banner.rates.rateRarity3 = total - banner.rates.rateRarity3;
+
+
+  banner.rates.pityRateRarityFocus = banner.rates.rateRarity5 === 0 ? 0.5 : 0.25;
+  banner.rates.pityRateRarity5 = banner.rates.rateRarity5 === 0 ? 0 : 0.25;
+  let commonRates = 100 - banner.rates.rateRarityFocus - banner.rates.rateRarity5;
+  if (commonRates === 0) {
+    banner.rates.pityRateRarityFocus4 = 0;
+    banner.rates.pityRateRarity4 = 0;
+    banner.rates.pityRateRarity3 = 0;
+  } else {
+    banner.rates.pityRateRarityFocus4 = -banner.rates.rateRarityFocus4 / commonRates * 0.5;
+    banner.rates.pityRateRarity4 = -banner.rates.rateRarity4 / commonRates * 0.5;
+    banner.rates.pityRateRarity3 = -banner.rates.rateRarity3 / commonRates * 0.5;
+  }
+}
 function initBanner() {
   initHeroList();
   resetSessionData();
@@ -75,7 +111,7 @@ function initHeroList() {
   let $focusList = $(elements.FOCUS_LIST).empty();
   let focusHeroes = heroes.getHeroes(banner.focusHeroes);
 
-  summonPool = heroes.getSummoningPool('pool1', banner);
+  summonPool = heroes.getSummoningPool(banner.pool, banner);
   summonPool.rf = focusHeroes;
   focusHeroes.forEach(hero => {
     $(`<div class="focus-list-hero">
@@ -110,28 +146,22 @@ function initSession() {
     resetRates();
   } else if (pityPulls >= 5) {
     pityPulls -= 5;
-    let rateDecrease = (banner.pityRateRarityFocus + banner.pityRateRarity5) / 2;
-    $(elements.RATE_INPUT_FOCUS).val(parseFloat($(elements.RATE_INPUT_FOCUS).val()) + banner.pityRateRarityFocus);
-    $(elements.RATE_INPUT_5).val(parseFloat($(elements.RATE_INPUT_5).val()) + banner.pityRateRarity5);
-
-    if (banner.rateRarityFocus4) {
-      $(elements.RATE_INPUT_FOCUS_4).val(parseFloat($(elements.RATE_INPUT_4).val()) - rateDecrease/2);
-      $(elements.RATE_INPUT_4).val(parseFloat($(elements.RATE_INPUT_4).val()) - rateDecrease/2);
-    } else {
-      $(elements.RATE_INPUT_4).val(parseFloat($(elements.RATE_INPUT_4).val()) - rateDecrease);
-    }
-    $(elements.RATE_INPUT_3).val(parseFloat($(elements.RATE_INPUT_3).val()) - rateDecrease);
+    $(elements.RATE_INPUT_FOCUS).val((parseFloat($(elements.RATE_INPUT_FOCUS).val()) + banner.rates.pityRateRarityFocus).toFixed(2));
+    $(elements.RATE_INPUT_5).val((parseFloat($(elements.RATE_INPUT_5).val()) + banner.rates.pityRateRarity5).toFixed(2));
+    $(elements.RATE_INPUT_FOCUS_4).val((parseFloat($(elements.RATE_INPUT_FOCUS_4).val()) + banner.rates.pityRateRarityFocus4).toFixed(2));
+    $(elements.RATE_INPUT_4).val((parseFloat($(elements.RATE_INPUT_4).val()) + banner.rates.pityRateRarity4).toFixed(2));
+    $(elements.RATE_INPUT_3).val((parseFloat($(elements.RATE_INPUT_3).val()) + banner.rates.pityRateRarity3).toFixed(2));
   }
 
   $(elements.NEW_SESSION).attr('disabled', 'disabled');
   updateOrbs(getSessionOrbs());
 }
 function resetRates() {
-  $(elements.RATE_INPUT_FOCUS).val(banner.rateRarityFocus);
-  $(elements.RATE_INPUT_5).val(banner.rateRarity5);
-  $(elements.RATE_INPUT_FOCUS_4).val(banner.rateRarityFocus4 || 0);
-  $(elements.RATE_INPUT_4).val(banner.rateRarity4);
-  $(elements.RATE_INPUT_3).val(banner.rateRarity3);
+  $(elements.RATE_INPUT_FOCUS).val(banner.rates.rateRarityFocus);
+  $(elements.RATE_INPUT_5).val(banner.rates.rateRarity5);
+  $(elements.RATE_INPUT_FOCUS_4).val(banner.rates.rateRarityFocus4);
+  $(elements.RATE_INPUT_4).val(banner.rates.rateRarity4);
+  $(elements.RATE_INPUT_3).val(banner.rates.rateRarity3);
 }
 
 
@@ -186,7 +216,7 @@ function getSessionOrbs() {
   let rateRF4;
   let rateR4;
 
-  if (banner.rateRarityFocus4) {
+  if (banner.rates.rateRarityFocus4) {
     rateRF4 = parseFloat($(elements.RATE_INPUT_FOCUS_4).val()) / 100 + rateR5;
     rateR4 = parseFloat($(elements.RATE_INPUT_4).val()) / 100 + rateRF4;
   } else {
@@ -355,13 +385,20 @@ function getCustomBannerData(focusHeroes = []) {
     focusHeroes: focusHeroes,
     excludeFromRarity4: [],
     excludeFromRarity5: [],
-    rateRarity3: 36,
-    rateRarity4: 58,
-    rateRarity5: 3,
-    rateRarityFocus: 3,
-    rateRarityFocus4: 0,
-    pityRateRarity5: 0.25,
-    pityRateRarityFocus: 0.25
+    pool: "pool2",
+    rateType: "defaultV2",
+    rates: {
+      rateRarity3: 36,
+      rateRarity4: 58,
+      rateRarityFocus4: 0,
+      rateRarity5: 3,
+      rateRarityFocus: 3,
+      pityRateRarity3: -36 / 94 * 0.5,
+      pityRateRarity4: -58 / 94 * 0.5,
+      pityRateRarityFocus4: 0,
+      pityRateRarity5: 0.25,
+      pityRateRarityFocus: 0.25
+    }
   };
 }
 function initCustomBannerList() {
@@ -398,14 +435,14 @@ function searchCustomFocus() {
   }
 }
 function customRateChange() {
-  customBanner.rateRarityFocus = parseInt($(elements.CUSTOM_INPUT_FOCUS).val());
-  customBanner.rateRarity5 = parseInt($(elements.CUSTOM_INPUT_5).val());
-  customBanner.rateRarityFocus4 = parseInt($(elements.CUSTOM_INPUT_FOCUS_4).val());
-  customBanner.rateRarity4 = parseInt($(elements.CUSTOM_INPUT_4).val());
-  customBanner.rateRarity3 = parseInt($(elements.CUSTOM_INPUT_3).val());
-  if (customBanner.rateRarity5 === 0) {
-    customBanner.pityRateRarity5 = 0
-    customBanner.pityRateRarityFocus = 0.5;
+  customBanner.rates.rateRarityFocus = parseInt($(elements.CUSTOM_INPUT_FOCUS).val());
+  customBanner.rates.rateRarity5 = parseInt($(elements.CUSTOM_INPUT_5).val());
+  customBanner.rates.rateRarityFocus4 = parseInt($(elements.CUSTOM_INPUT_FOCUS_4).val());
+  customBanner.rates.rateRarity4 = parseInt($(elements.CUSTOM_INPUT_4).val());
+  customBanner.rates.rateRarity3 = parseInt($(elements.CUSTOM_INPUT_3).val());
+  if (customBanner.rates.rateRarity5 === 0) {
+    customBanner.rates.pityRateRarity5 = 0
+    customBanner.rates.pityRateRarityFocus = 0.5;
   }
 }
 function createBanner(event) {
@@ -421,6 +458,7 @@ function createBanner(event) {
       '&rates=' + encodeURIComponent(rates.join(';')));
   banner = customBanner;
 
+  setCustomBannerRates(banner, rates);
   initBanner();
 
   $(elements.SELECT_BANNER).selectable('text', 'Custom Banner');

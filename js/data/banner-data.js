@@ -8,13 +8,8 @@ module.exports = [
         focusHeroes: [ "Hinata", "Soleil", "Cain", "Abel", "Tailtiu", "L'Arachel", "Nino", "Camilla", "Fae", "Klein", "Felicia", "Jeorge" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 29,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        rateRarityFocus4: 29,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "focus4V1",
+        pool: "pool1"
       }
     ]
   },
@@ -27,12 +22,8 @@ module.exports = [
         focusHeroes: [ "Xander (Spring Festival)", "Lucina (Spring Festival)", "Chrom (Spring Festival)", "Camilla (Spring Festival)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Legendary Heroes: Robin, Fell Vessel",
@@ -40,12 +31,8 @@ module.exports = [
         focusHeroes: [ "Gunnthrá", "Tiki (Adult) (Ylissean Summer)", "Elise (Nohrian Summer)", "Ike (Legendary Heroes)", "Zelgius", "Nowi (Trick or Defeat!)", "Fjorm", "Lucina (Brave Heroes)", "Lute", "Lyn (Brave Heroes)", "Sakura (Trick or Defeat!)", "Robin (F) (Legendary Heroes)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 34,
-        rateRarity4: 58,
-        rateRarity5: 0,
-        rateRarityFocus: 8,
-        pityRateRarity5: 0,
-        pityRateRarityFocus: 0.5
+        rateType: "legendaryV1",
+        pool: "pool1"
       },
       {
         name: "Heroes with Miracle",
@@ -53,12 +40,8 @@ module.exports = [
         focusHeroes: [ "Mist", "Delthea", "Sigurd" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Hares at the Fair",
@@ -66,12 +49,8 @@ module.exports = [
         focusHeroes: [ "Catria (Hares at the Fair)", "Kagero (Hares at the Fair)", "Sharena (Hares at the Fair)", "Alfonse (Hares at the Fair)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Weapons to Refine, Part 3",
@@ -79,12 +58,8 @@ module.exports = [
         focusHeroes: [ "Leo", "Eirika", "Soren" ],
         excludeFromRarity4: [ "Morgan (M)" ],
         excludeFromRarity5: [ "Chrom (The Branded King)", "Morgan (M)", "Morgan (F)" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Chrom and Lissa's Battle",
@@ -92,12 +67,8 @@ module.exports = [
         focusHeroes: [ "Chrom", "Robin (M)", "Lissa" ],
         excludeFromRarity4: [ "Morgan (M)" ],
         excludeFromRarity5: [ "Chrom (The Branded King)", "Morgan (M)", "Morgan (F)" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Countering Skills",
@@ -105,12 +76,8 @@ module.exports = [
         focusHeroes: [ "Ike", "Hector", "Takumi" ],
         excludeFromRarity4: [ "Morgan (M)" ],
         excludeFromRarity5: [ "Chrom (The Branded King)", "Morgan (M)", "Morgan (F)" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Invisible Ties Tempest Trials",
@@ -118,12 +85,8 @@ module.exports = [
         focusHeroes: [ "Olivia", "Donnel", "Cherche" ],
         excludeFromRarity4: [ "Morgan (M)" ],
         excludeFromRarity5: [ "Chrom (The Branded King)", "Morgan (M)", "Morgan (F)" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "The Branded King",
@@ -131,12 +94,8 @@ module.exports = [
         focusHeroes: [ "Chrom (The Branded King)", "Morgan (M)", "Morgan (F)" ],
         excludeFromRarity4: [ "Morgan (M)" ],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Falchion",
@@ -144,12 +103,8 @@ module.exports = [
         focusHeroes: [ "Lucina", "Marth", "Chrom", "Alm" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [ "Robin (M) (Fallen Heroes)", "Hardin (Fallen Heroes)", "Celica (Fallen Heroes)" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "4★ & 5★ Heroes (March 2018)",
@@ -157,13 +112,8 @@ module.exports = [
         focusHeroes: [ "Hinata", "Soleil", "Roy", "Abel", "Tailtiu", "Mathilda", "Barst", "Camilla", "Fae", "Klein", "Setsuna", "Jeorge" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [ "Robin (M) (Fallen Heroes)", "Hardin (Fallen Heroes)", "Celica (Fallen Heroes)" ],
-        rateRarity3: 36,
-        rateRarity4: 29,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        rateRarityFocus4: 29,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "focus4V1",
+        pool: "pool1"
       }
     ]
   },
@@ -177,12 +127,8 @@ module.exports = [
             "Ike (Legendary Heroes)", "Dorcas", "Mia", "Gaius (Ylissean Summer)", "Jaffar", "Ephraim (Legendary Heroes)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [ "Robin (M) (Fallen Heroes)", "Hardin (Fallen Heroes)", "Celica (Fallen Heroes)" ],
-        rateRarity3: 34,
-        rateRarity4: 58,
-        rateRarity5: 0,
-        rateRarityFocus: 8,
-        pityRateRarity5: 0,
-        pityRateRarityFocus: 0.5
+        rateType: "legendaryV1",
+        pool: "pool1"
       },
       {
         name: "Shadow in the Mirror",
@@ -190,12 +136,8 @@ module.exports = [
         focusHeroes: [ "Robin (M)", "Takumi", "Celica", "Zelgius" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [ "Robin (M) (Fallen Heroes)", "Hardin (Fallen Heroes)", "Celica (Fallen Heroes)" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Fallen Heroes",
@@ -203,12 +145,8 @@ module.exports = [
         focusHeroes: [ "Robin (M) (Fallen Heroes)", "Hardin (Fallen Heroes)", "Celica (Fallen Heroes)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "New Power",
@@ -216,12 +154,8 @@ module.exports = [
         focusHeroes: [ "Caeda", "Hinoka", "Raven", "Felicia" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Corrin and Azura's Battle",
@@ -229,12 +163,8 @@ module.exports = [
         focusHeroes: [ "Corrin (M)", "Azura", "Kagero" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Breath of Destiny Tempest Trials",
@@ -242,12 +172,8 @@ module.exports = [
         focusHeroes: [ "Ninian", "Clarine", "Klein" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Love Abounds",
@@ -255,12 +181,8 @@ module.exports = [
         focusHeroes: [ "Lyn (Love Abounds)", "Hector (Love Abounds)", "Roy (Love Abounds)", "Lilina (Love Abounds)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Movement Skills",
@@ -268,12 +190,8 @@ module.exports = [
         focusHeroes: [ "Tana", "Elincia", "Amelia" ],
         excludeFromRarity4: [ "L'Arachel" ],
         excludeFromRarity5: [ "Myrrh", "Eirika (Sacred Memories)", "L'Arachel" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Hero Fest 3",
@@ -281,12 +199,8 @@ module.exports = [
         focusHeroes: [ "Ike (Brave Heroes)", "Lyn (Brave Heroes)", "Sigurd", "Nephenee" ],
         excludeFromRarity4: [ "L'Arachel" ],
         excludeFromRarity5: [ "Myrrh", "Eirika (Sacred Memories)", "L'Arachel" ],
-        rateRarity3: 34,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 5,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "herofestV2",
+        pool: "pool1"
       }
     ]
   },
@@ -300,12 +214,8 @@ module.exports = [
             "Ike (Legendary Heroes)", "Sanaki", "Siegbert", "Frederick (Ylissean Summer)", "Takumi", "Faye" ],
         excludeFromRarity4: [ "L'Arachel" ],
         excludeFromRarity5: [ "Myrrh", "Eirika (Sacred Memories)", "L'Arachel" ],
-        rateRarity3: 34,
-        rateRarity4: 58,
-        rateRarity5: 0,
-        rateRarityFocus: 8,
-        pityRateRarity5: 0,
-        pityRateRarityFocus: 0.5
+        rateType: "legendaryV1",
+        pool: "pool1"
       },
       {
         name: "Sacred Memories",
@@ -313,12 +223,8 @@ module.exports = [
         focusHeroes: [ "Myrrh", "Eirika (Sacred Memories)", "L'Arachel" ],
         excludeFromRarity4: [ "L'Arachel" ],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "4★ & 5★ Heroes (January 2018)",
@@ -326,13 +232,8 @@ module.exports = [
         focusHeroes: [ "Hinata", "Laslow", "Roy", "Abel", "Oscar", "Mathilda", "Barst", "Frederick", "Fae", "Klein", "Setsuna", "Rebecca" ],
         excludeFromRarity4: [ "Sothe" ],
         excludeFromRarity5: [ "Micaiah", "Sothe", "Zelgius" ],
-        rateRarity3: 36,
-        rateRarity4: 29,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        rateRarityFocus4: 29,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "focus4V1",
+        pool: "pool1"
       },
       {
         name: "Stepping into the New Year Tempest Trials",
@@ -340,12 +241,8 @@ module.exports = [
         focusHeroes: [ "Ryoma", "Sakura", "Hinoka" ],
         excludeFromRarity4: [ "Sothe" ],
         excludeFromRarity5: [ "Micaiah", "Sothe", "Zelgius" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "World of Dawn",
@@ -353,12 +250,8 @@ module.exports = [
         focusHeroes: [ "Micaiah", "Sothe", "Zelgius" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Effective Againt Cavalry",
@@ -366,12 +259,8 @@ module.exports = [
         focusHeroes: [ "Rhajat", "Gray", "Mathilda" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       }
     ]
   },
@@ -384,12 +273,8 @@ module.exports = [
         focusHeroes: [ "Azura (Happy New Year!)", "Camilla (Happy New Year!)", "Takumi (Happy New Year!)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Raven & Lucius's Battle",
@@ -397,12 +282,8 @@ module.exports = [
         focusHeroes: [ "Raven", "Lucius", "Priscilla" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Legendary Heroes: Gunnthrá, Voice of Dreams",
@@ -411,12 +292,8 @@ module.exports = [
           "Ryoma", "Sigurd", "Roy (Brave Heroes)", "Elise", "Innes", "Lyn (Bridal Blessings)"],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 34,
-        rateRarity4: 58,
-        rateRarity5: 0,
-        rateRarityFocus: 8,
-        pityRateRarity5: 0,
-        pityRateRarityFocus: 0.5
+        rateType: "legendaryV1",
+        pool: "pool1"
       },
       {
         name: "A Gift of Peace Tempest Trials",
@@ -424,12 +301,8 @@ module.exports = [
         focusHeroes: [ "Nowi", "Frederick", "Lucina" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Weapons to Refine, Part 2",
@@ -437,12 +310,8 @@ module.exports = [
         focusHeroes: [ "Jaffar", "Minerva", "Eldigan" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Winter's Envoy",
@@ -450,12 +319,8 @@ module.exports = [
         focusHeroes: [ "Lissa (Winter's Envoy)", "Chrom (Winter's Envoy)", "Robin (M) (Winter's Envoy)", "Tharja (Winter's Envoy)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Tana and Amelia's Battle",
@@ -463,12 +328,8 @@ module.exports = [
         focusHeroes: [ "Tana", "Amelia", "Eirika" ],
         excludeFromRarity4: [ "Soleil" ],
         excludeFromRarity5: [ "Soleil", "Siegbert", "Shiro" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Weapons to Refine",
@@ -476,12 +337,8 @@ module.exports = [
         focusHeroes: [ "Ephraim", "Lyn", "Takumi" ],
         excludeFromRarity4: [ "Soleil" ],
         excludeFromRarity5: [ "Rhajat", "Soleil", "Siegbert", "Shiro" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Children of Fate",
@@ -489,12 +346,8 @@ module.exports = [
         focusHeroes: [ "Soleil", "Siegbert", "Shiro" ],
         excludeFromRarity4: [ "Soleil" ],
         excludeFromRarity5: [ "Rhajat" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Enduring Love, Block B",
@@ -502,12 +355,8 @@ module.exports = [
         focusHeroes: [ "Dorcas", "Catria", "Sigurd", "Katarina" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [ "Rhajat" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Enduring Love, Block A",
@@ -515,12 +364,8 @@ module.exports = [
         focusHeroes: [ "Rhajat", "Priscilla", "Tharja", "Faye" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [ "Rhajat" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       }
     ]
   },
@@ -533,12 +378,8 @@ module.exports = [
         focusHeroes: [ "Celica", "Ike", "Ayra", "Caeda (Bridal Blessings)", "Xander (Spring Festival)", "Fjorm", "Deirdre", "Hector", "Camilla (Spring Festival)", "Cordelia (Bridal Blessings)", "Lyn (Brave Heroes)", "Genny" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 34,
-        rateRarity4: 58,
-        rateRarity5: 0,
-        rateRarityFocus: 8,
-        pityRateRarity5: 0,
-        pityRateRarityFocus: 0.5
+        rateType: "legendaryV1",
+        pool: "pool1"
       },
       {
         name: "Skills That Boost Special Damage",
@@ -546,12 +387,8 @@ module.exports = [
         focusHeroes: [ "Karel", "Sonya", "Nephenee" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [ "Dorcas", "Lute", "Mia" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Less Than Heroic Tempest Trials",
@@ -559,12 +396,8 @@ module.exports = [
         focusHeroes: [ "Ike (Brave Heroes)", "Lyn (Brave Heroes)", "Roy (Brave Heroes)", "Lucina (Brave Heroes)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [ "Dorcas", "Lute", "Mia" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Takumi and Hinoka's Battle",
@@ -572,12 +405,8 @@ module.exports = [
         focusHeroes: [ "Takumi", "Hinoka", "Sakura" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [ "Dorcas", "Lute", "Mia" ],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Farfetched Heroes",
@@ -585,12 +414,8 @@ module.exports = [
         focusHeroes: [ "Dorcas", "Lute", "Mia" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Heroes with Death Blow",
@@ -598,12 +423,8 @@ module.exports = [
         focusHeroes: [ "Delthea", "Elincia", "Klein" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Long-Haired Gents",
@@ -611,12 +432,8 @@ module.exports = [
         focusHeroes: [ "Takumi", "Karel", "Ryoma", "Soren" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Short-Haired Ladies",
@@ -624,12 +441,8 @@ module.exports = [
         focusHeroes: [ "Amelia", "Hinoka", "Shanna", "Katarina" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
     ]
   },
@@ -642,12 +455,8 @@ module.exports = [
         focusHeroes: [ "Sakura (Trick or Defeat!)", "Jakob (Trick or Defeat!)", "Henry (Trick or Defeat!)", "Nowi (Trick or Defeat!)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Flier Boost Skills",
@@ -655,12 +464,8 @@ module.exports = [
         focusHeroes: [ "Hinoka", "Minerva", "Caeda" ],
         excludeFromRarity4: ["Tailtiu"],
         excludeFromRarity5: ["Ayra", "Deirdre", "Tailtiu", "Sigurd"],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Genealogy of Light Tempest Trials",
@@ -668,12 +473,8 @@ module.exports = [
         focusHeroes: [ "Ayra", "Eldigan", "Lachesis" ],
         excludeFromRarity4: ["Tailtiu"],
         excludeFromRarity5: ["Deirdre", "Tailtiu", "Sigurd"],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "World of Holy War",
@@ -681,12 +482,8 @@ module.exports = [
         focusHeroes: [ "Deirdre", "Tailtiu", "Sigurd" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Minerva and Maria's Battle",
@@ -694,12 +491,8 @@ module.exports = [
         focusHeroes: [ "Minerva", "Maria", "Palla" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "The Blood of Dragons Block B",
@@ -707,12 +500,8 @@ module.exports = [
         focusHeroes: [ "Tiki (Adult)", "Nowi", "Corrin (F)", "Sophia" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "The Blood of Dragons Block A",
@@ -720,12 +509,8 @@ module.exports = [
         focusHeroes: [ "Tiki (Young)", "Fae", "Ninian", "Corrin (M)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Heroes with Threaten Spd",
@@ -733,12 +518,8 @@ module.exports = [
         focusHeroes: [ "Jaffar", "Shanna", "Takumi" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       }
     ]
   },
@@ -751,12 +532,8 @@ module.exports = [
         focusHeroes: [ "Olivia (Performing Arts)", "Inigo (Performing Arts)", "Azura (Performing Arts)", "Shigure (Performing Arts)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Ninian and Hawkeye's Battle",
@@ -764,12 +541,8 @@ module.exports = [
         focusHeroes: [ "Ninian", "Hawkeye", "Eliwood" ],
         excludeFromRarity4: [],
         excludeFromRarity5: ["Nephenee", "Oscar", "Elincia"],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Moment of Fate Tempest Trials",
@@ -777,12 +550,8 @@ module.exports = [
         focusHeroes: [ "Ike", "Mist", "Soren", "Titania" ],
         excludeFromRarity4: [],
         excludeFromRarity5: ["Nephenee", "Oscar", "Elincia"],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Heroes with Death Blow",
@@ -790,12 +559,8 @@ module.exports = [
         focusHeroes: [ "Klein", "Effie", "Hawkeye" ],
         excludeFromRarity4: [],
         excludeFromRarity5: ["Nephenee", "Oscar", "Elincia"],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Dauntless Crimeans",
@@ -803,12 +568,8 @@ module.exports = [
         focusHeroes: [ "Nephenee", "Oscar", "Elincia" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Ephraim and Eirika's Battle",
@@ -816,12 +577,8 @@ module.exports = [
         focusHeroes: [ "Ephraim", "Eirika", "Seth" ],
         excludeFromRarity4: [],
         excludeFromRarity5: ["Lucina (Brave Heroes)", "Roy (Brave Heroes)", "Lyn (Brave Heroes)", "Ike (Brave Heroes)"],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "To Die on the Battlefield Tempest Trials Mini",
@@ -829,12 +586,8 @@ module.exports = [
         focusHeroes: [ "Eliwood", "Lyn", "Ninian", "Hector" ],
         excludeFromRarity4: [],
         excludeFromRarity5: ["Lucina (Brave Heroes)", "Roy (Brave Heroes)", "Lyn (Brave Heroes)", "Ike (Brave Heroes)"],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       },
       {
         name: "Heroes with Threaten Def",
@@ -842,12 +595,8 @@ module.exports = [
         focusHeroes: [ "Ephraim", "Peri", "Raven" ],
         excludeFromRarity4: [],
         excludeFromRarity5: ["Lucina (Brave Heroes)", "Roy (Brave Heroes)", "Lyn (Brave Heroes)", "Ike (Brave Heroes)"],
-        rateRarity3: 36,
-        rateRarity4: 58,
-        rateRarity5: 3,
-        rateRarityFocus: 3,
-        pityRateRarity5: 0.25,
-        pityRateRarityFocus: 0.25
+        rateType: "defaultV2",
+        pool: "pool1"
       }
     ]
   }

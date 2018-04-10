@@ -56,7 +56,7 @@ gulp.task('render-tl', () => {
 });
 
 gulp.task('build', [
-    'summon-sim', 
+    'summon-sim',
     'unit-builder',
     'tier-list',
     'render-ss',
