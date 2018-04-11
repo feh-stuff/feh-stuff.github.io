@@ -974,7 +974,7 @@ module.exports = [
     weaponType: "Tome",
     moveType: "Cavalry",
     rarity5: ["pool1", "pool2"],
-    lmited: true,
+    limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Catria (Hares at the Fair).png",
       main: "img/heroes-main/Catria (Hares at the Fair).png"

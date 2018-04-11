@@ -27,7 +27,7 @@ function getSummoningPool(pool, banner) {
     r5: []
   };
   for (let i = 0; i < data.length; i++) {
-    if (targetDate < new Date(data[i].releaseDate) || data[i].limited || data[i].ghb || data[i].ttReward) {
+    if (targetDate <= new Date(data[i].releaseDate) || data[i].limited || data[i].ghb || data[i].ttReward) {
       continue;
     }
     if (data[i].rarity3 && data[i].rarity3.includes(pool)) {

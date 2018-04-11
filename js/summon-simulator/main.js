@@ -137,7 +137,7 @@ function setPoolList(element, heroes) {
       .sort((a, b) => {
         if (a.colorType === b.colorType) {
           if (a.weaponType === b.weaponType) {
-            return a.name < b.name;
+            return a.name.localeCompare(b.name);
           } else {
             return values.POOL_WEAPON_ORDER.indexOf(a.weaponType) - values.POOL_WEAPON_ORDER.indexOf(b.weaponType);
           }
