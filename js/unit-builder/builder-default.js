@@ -102,6 +102,7 @@ function bindEvents() {
 
   $(elements.SELECT_BUFFS).on('select', onBuffSelect);
   $(elements.SELECT_IV_SHOW).on('change', onShowIvChange);
+  $(elements.SELECT_FULL_UI_SHOW).on('change', onShowUiChange);
   $(elements.SELECT_SUPPORT).on('change', onSupportChange);
   $(elements.SELECT_TT).on('change', onTempestBuffChange);
   $(elements.SELECT_BLESSING_TYPE).on('select', onBlessingTypeChange);
@@ -228,9 +229,14 @@ function onSupportChange(event) {
   fehUnit.support = $(elements.SELECT_SUPPORT_ON).is(':checked');
   drawHero(fehUnit);
 }
+
 function onShowIvChange(event) {
   drawHero(fehUnit, false);
 }
+function onShowUiChange(event) {
+  drawHero(fehUnit, false);
+}
+
 function onTempestBuffChange(event) {
   fehUnit.tempestBuff = $(elements.SELECT_TT_ON).is(':checked');
   drawHero(fehUnit);

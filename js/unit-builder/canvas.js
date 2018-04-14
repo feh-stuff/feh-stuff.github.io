@@ -36,6 +36,10 @@ function drawHero(hero, heroImg) {
   if ($(elements.SELECT_IV_SHOW).is(':checked')) {
     drawIv(hero.iv);
   }
+  if ($(elements.SELECT_FULL_UI_SHOW).is(':checked')) {
+    ctx.drawImage(images.FRONT, 540, 0, 540, 960, 0, 0, 540, 960);
+    drawArtistAndVoice(hero.data.artist, hero.data.voice);
+  }
 
   drawSupportAndBlessing(hero);
   drawRarity(hero.rarity);
@@ -89,7 +93,7 @@ function drawWeaponAndMoveType(color, weaponType, moveType) {
     ctx.drawImage(images.UI, weaponTypeIcon[0], weaponTypeIcon[1], 52, 52, 48, 553, 28, 28);
   }
   if (moveTypeIcon) {
-    ctx.drawImage(images.UI, moveTypeIcon[0], moveTypeIcon[1], 52, 52, 204, 554, 26, 26);
+    ctx.drawImage(images.UI, moveTypeIcon[0], moveTypeIcon[1], 52, 52, 208, 554, 26, 26);
   }
 }
 
@@ -155,62 +159,18 @@ function drawIv(iv) {
   ctx.drawImage(images.UI, values.COORD.FONT_IMAGE.red[0],
       values.COORD.FONT_IMAGE.red[1] + 440, 32, 40, 60, values.COORD.STATS[iv.bane], 15, 19);
 }
-//
-// function drawSkills(skills) {
-//   ctx.drawImage(images.SKILLS, 130, 0, 65, 67, 275, 633, 34, 34);
-//   ctx.drawImage(images.SKILLS, 195, 0, 65, 67, 275, 669, 34, 34);
-//
-//   if (skills.refine.icon) {
-//     drawIcon(skills.refine.icon, values.COORD.SKILLS_ICON.weapon);
-//   } else if (skills.weapon.icon) {
-//     drawIcon(skills.weapon.icon, values.COORD.SKILLS_ICON.weapon);
-//   } else {
-//     drawIcon('0-1', values.COORD.SKILLS_ICON.weapon);
-//   }
-//
-//   for (let skill in skills) {
-//     if (skill === 'refine' || skill === 'weapon' || skill === 'assist' || skill === 'special') {
-//       continue;
-//     }
-//     if (skills[skill].icon) {
-//       drawIcon(skills[skill].icon, values.COORD.SKILLS_ICON[skill]);
-//     } else {
-//       drawIcon('0-0', values.COORD.SKILLS_ICON[skill]);
-//     }
-//   }
-//
-//   ctx.drawImage(images.UI, 0, 476, 34, 38, 295, 723, 19, 21);
-//   ctx.drawImage(images.UI, 34, 476, 34, 38, 295, 759, 19, 21);
-//   ctx.drawImage(images.UI, 68, 476, 34, 38, 295, 795, 19, 21);
-//   ctx.drawImage(images.UI, 102, 476, 34, 38, 295, 832, 19, 21);
-//
-//   ctx.textAlign="start";
-//   ctx.font = "17px FehFont";
-//   ctx.fillStyle = '#ffffff';
-//   ctx.strokeStyle = '#061d2c';
-//   ctx.lineWidth = 4;
-//   ctx.lineJoin = 'round';
-//
-//   ctx.strokeText(skills.weapon.name, 318, 619);
-//   ctx.strokeText(skills.assist.name, 318, 656);
-//   ctx.strokeText(skills.special.name, 318, 694);
-//   ctx.strokeText(skills.skillA.name, 318, 731);
-//   ctx.strokeText(skills.skillB.name, 318, 768);
-//   ctx.strokeText(skills.skillC.name, 318, 804);
-//   ctx.strokeText(skills.seal.name, 318, 841);
-//
-//   ctx.fillText(skills.assist.name, 318, 656);
-//   ctx.fillText(skills.special.name, 318, 694);
-//   ctx.fillText(skills.skillA.name, 318, 731);
-//   ctx.fillText(skills.skillB.name, 318, 768);
-//   ctx.fillText(skills.skillC.name, 318, 804);
-//   ctx.fillText(skills.seal.name, 318, 841);
-//
-//   if (skills.refine.name !== '-' || skills.weapon.icon) {
-//     ctx.fillStyle = '#92ff4f';
-//   }
-//   ctx.fillText(skills.weapon.name, 318, 619);
-// }
+
+function drawArtistAndVoice(artist = "—", voice = "—") {
+  textCtx.fillStyle = '#ffffff';
+  textCtx.font = "32px FehFont";
+  textCtx.clearRect(0, 0, textCanvas.width, textCanvas.height);
+
+  textCtx.strokeText(voice, 70, 1826);
+  textCtx.fillText(voice, 70, 1826);
+  textCtx.strokeText(artist, 70, 1868);
+  textCtx.fillText(artist, 70, 1868);
+  ctx.drawImage(textCanvas, 0, 0, 540, 960);
+}
 
 function drawSkills(skills) {
   ctx.drawImage(images.SKILLS, 130, 0, 65, 67, 275, 633, 34, 34);
@@ -244,6 +204,7 @@ function drawSkills(skills) {
   ctx.drawImage(images.UI, 102, 476, 34, 38, 295, 832, 19, 21);
 
   textCtx.fillStyle = '#ffffff';
+  textCtx.font = "34px FehFont";
   textCtx.clearRect(0, 0, textCanvas.width, textCanvas.height);
 
   textCtx.strokeText(skills.weapon.name, 634, 1238);

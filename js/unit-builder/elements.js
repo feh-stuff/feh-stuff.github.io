@@ -5,6 +5,7 @@ module.exports = {
   SELECT_RARITY: '#select-rarity',
   SELECT_IV: '#select-iv',
   SELECT_IV_SHOW: '#show-iv',
+  SELECT_FULL_UI_SHOW: '#show-full-ui',
   SELECT_MERGES: '#select-merges',
   SELECT_BUFFS: '.buff-stat',
   SELECT_SUPPORT: '[name="support"]',

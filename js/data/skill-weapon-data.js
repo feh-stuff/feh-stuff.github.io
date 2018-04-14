@@ -1117,7 +1117,7 @@ module.exports = [
     effect: "Unit and enemies cannot use counterattacks."
   },
   {
-    name: "Firesweep Lance+",
+    name: "Firesweep L+",
     spCost: 300,
     damage: 15,
     range: 1,
@@ -1127,7 +1127,7 @@ module.exports = [
     effect: "Unit and enemies cannot use counterattacks."
   },
   {
-    name: "Firesweep Sword",
+    name: "Firesweep S",
     spCost: 200,
     damage: 11,
     range: 1,
@@ -1137,13 +1137,13 @@ module.exports = [
     effect: "Unit and foes cannot counterattack."
   },
   {
-    name: "Firesweep Sword+",
+    name: "Firesweep S+",
     spCost: 300,
     damage: 15,
     range: 1,
     weaponType: "Sword",
     colorType: "Red",
-    prev: ["Firesweep Sword"],
+    prev: ["Firesweep S"],
     effect: "Unit and foes cannot counterattack."
   },
   {
