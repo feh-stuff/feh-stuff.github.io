@@ -6,6 +6,7 @@ module.exports = {
   SELECT_IV: '#select-iv',
   SELECT_IV_SHOW: '#show-iv',
   SELECT_FULL_UI_SHOW: '#show-full-ui',
+  INPUT_SP_HM: '.input-sp-hm',
   SELECT_MERGES: '#select-merges',
   SELECT_BUFFS: '.buff-stat',
   SELECT_SUPPORT: '[name="support"]',

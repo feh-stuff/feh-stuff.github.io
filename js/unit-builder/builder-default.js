@@ -37,7 +37,9 @@ let fehUnit = {
   legendary: false,
   blessing: '-',
   blessingIcon: -1,
-  allies: []
+  allies: [],
+  sp: values.CONST.MAX_SP,
+  hm: values.CONST.MAX_HM
 };
 
 function init(canvasObj) {
@@ -100,9 +102,11 @@ function bindEvents() {
   $(elements.SELECT_MERGES).on('select', onMergeSelect);
   $(elements.SELECT_SKILL).on('select', onSkillSelect);
 
+  $(elements.SELECT_IV_SHOW).on('change', onUiChange);
+  $(elements.SELECT_FULL_UI_SHOW).on('change', onUiChange);
+  $(elements.INPUT_SP_HM).on('change', onSpHmChange);
+
   $(elements.SELECT_BUFFS).on('select', onBuffSelect);
-  $(elements.SELECT_IV_SHOW).on('change', onShowIvChange);
-  $(elements.SELECT_FULL_UI_SHOW).on('change', onShowUiChange);
   $(elements.SELECT_SUPPORT).on('change', onSupportChange);
   $(elements.SELECT_TT).on('change', onTempestBuffChange);
   $(elements.SELECT_BLESSING_TYPE).on('select', onBlessingTypeChange);
@@ -230,10 +234,18 @@ function onSupportChange(event) {
   drawHero(fehUnit);
 }
 
-function onShowIvChange(event) {
+function onUiChange(event) {
   drawHero(fehUnit, false);
 }
-function onShowUiChange(event) {
+function onSpHmChange(event) {
+  let type = $(event.currentTarget).data('type');
+  let val = parseInt($(event.currentTarget).val()) || 0;
+
+  if (type === 'sp') {
+    fehUnit.sp = Math.max(0, Math.min(val, values.CONST.MAX_SP));
+  } else {
+    fehUnit.hm = Math.max(0, Math.min(val, values.CONST.MAX_HM));
+  }
   drawHero(fehUnit, false);
 }
 

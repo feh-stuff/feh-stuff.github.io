@@ -45,7 +45,7 @@ function drawHero(hero, heroImg) {
   drawRarity(hero.rarity);
   drawNameAndTitle(hero.data.shortName || hero.data.name, hero.data.title);
   drawWeaponAndMoveType(hero.data.colorType, hero.data.weaponType, hero.data.moveType);
-  drawMergesAndStats(hero.merges, hero.stats, hero.buffs);
+  drawMergesAndStats(hero.merges, hero.stats, hero.sp, hero.hm, hero.buffs);
   drawSkills(hero.skills);
 }
 
@@ -98,7 +98,7 @@ function drawWeaponAndMoveType(color, weaponType, moveType) {
 }
 
 
-function drawMergesAndStats(merges, stats, buffs = {}) {
+function drawMergesAndStats(merges, stats, sp, hm, buffs = {}) {
   if (merges > 0 && merges < 10) {
     ctx.drawImage(images.UI, values.COORD.FONT_IMAGE.white[0],
         values.COORD.FONT_IMAGE.white[1] + 400, 32, 40, 158, 558, 15, 19);
@@ -118,8 +118,11 @@ function drawMergesAndStats(merges, stats, buffs = {}) {
   drawStats(stats.spd, 147, values.COORD.STATS.spd, false, buffs.spd || 0);
   drawStats(stats.def, 147, values.COORD.STATS.def, false, buffs.def || 0);
   drawStats(stats.res, 147, values.COORD.STATS.res, false, buffs.res || 0);
-  drawStats(values.CONST.MAX_SP, 147, values.COORD.STATS.sp, values.COORD.FONT_IMAGE.green);
-  drawStats(values.CONST.MAX_HM, 147, values.COORD.STATS.hm, values.COORD.FONT_IMAGE.green);
+
+  drawStats(sp, 147, values.COORD.STATS.sp, 
+      sp < values.CONST.MAX_SP ? values.COORD.FONT_IMAGE.yellow : values.COORD.FONT_IMAGE.green);
+  drawStats(hm, 147, values.COORD.STATS.hm,
+      hm < values.CONST.MAX_HM ? values.COORD.FONT_IMAGE.yellow : values.COORD.FONT_IMAGE.green);
 }
 
 function drawStats(value, x, y, fixedFont, buff = 0) {
@@ -261,7 +264,7 @@ function drawCustomHero(customUnit) {
 
   drawRarity(5);
   drawNameAndTitle(customUnit.name, customUnit.title);
-  drawMergesAndStats(customUnit.merges, customUnit.processedStats);
+  drawMergesAndStats(customUnit.merges, customUnit.processedStats, values.MAX_SP, values.MAX_HM);
   drawWeaponAndMoveType(customUnit.colorType, customUnit.weaponType, customUnit.moveType);
   drawCustomHeroSkills(customUnit);
 }

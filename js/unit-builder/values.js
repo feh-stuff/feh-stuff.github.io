@@ -18,7 +18,7 @@ exports.CONST = {
   RARITIES: [{ name: "5★", value: 5 }, { name: "4★", value: 4 }],
   BUFFS: [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7],
   BUFFS_TT: { hp: 10, atk: 4, spd: 4, def: 4, res: 4},
-  MAX_HM: 4000,
+  MAX_HM: 5000,
   MAX_SP: 9999,
   MOVE_TYPES: [
     {name: 'Infantry'},
