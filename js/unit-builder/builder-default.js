@@ -131,9 +131,9 @@ function onHeroSelect(event) {
   fehUnit.rarity = 5;
 
   fehUnit.legendary = blessings.isLegendaryHero(hero.name);
+  fehUnit.allies = [];
   if (fehUnit.legendary) {
     let blessing = blessings.getBlessing(hero.name);
-    fehUnit.allies = [];
     fehUnit.blessing = blessing.type;
     fehUnit.blessingIcon = blessing.icon;
     $(elements.SELECT_BLESSING_TYPE)
@@ -150,6 +150,11 @@ function onHeroSelect(event) {
     $(elements.SELECT_BLESSING_HERO)
         .selectable('reset')
         .selectable('disable');
+  }
+
+  if (hero.name === 'Leif' && Math.random() < 0.25) {
+    hero.title = 'A Fucking';
+    hero.name = 'Leaf';
   }
   drawHero(fehUnit);
 }
