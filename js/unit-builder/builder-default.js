@@ -154,7 +154,7 @@ function onHeroSelect(event) {
 
   if (hero.name === 'Leif' && Math.random() < 0.25) {
     hero.title = 'A Fucking';
-    hero.name = 'Leaf';
+    hero.shortName = 'Leaf';
   }
   drawHero(fehUnit);
 }
