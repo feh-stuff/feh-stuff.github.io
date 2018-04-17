@@ -67,7 +67,9 @@ exports.COORD = {
     "Green Bow": [104,1140],
     "Neutral Bow": [156,268],
     "Neutral Dagger": [156,320],
-    "Neutral Staff": [156,372]
+    "Neutral Staff": [156,372],
+    "Red Leaf": [65, 1088],
+    "Skates": [118, 1087]
   },
   EMPTY_SEAL: [0, 1074],
   FONT_IMAGE: {

@@ -94,7 +94,9 @@ function convert(hero) {
     tempestBuff: hero.tempestBuff,
     blessing: hero.blessing,
     allies: hero.allies,
-    saveDate: hero.saveDate
+    saveDate: hero.saveDate,
+    sp: hero.sp,
+    hm: hero.hm
   };
 }
 
@@ -134,7 +136,9 @@ function convertBack(hero) {
     blessingIcon: heroBlessing ? blessings.icon : -1,
     blessing: heroBlessing ? blessing.type : hero.blessing,
     allies: hero.allies,
-    saveDate: hero.saveDate
+    saveDate: hero.saveDate,
+    sp: hero.sp,
+    hm: hero.hm
   };
 }
 

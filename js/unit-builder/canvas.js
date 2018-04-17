@@ -44,7 +44,12 @@ function drawHero(hero, heroImg) {
   drawSupportAndBlessing(hero);
   drawRarity(hero.rarity);
   drawNameAndTitle(hero.data.shortName || hero.data.name, hero.data.title);
-  drawWeaponAndMoveType(hero.data.colorType, hero.data.weaponType, hero.data.moveType);
+
+  if (hero.data.title === 'A Fucking') {
+    drawWeaponAndMoveType(hero.data.colorType, 'Leaf', 'Skates');
+  } else {
+    drawWeaponAndMoveType(hero.data.colorType, hero.data.weaponType, hero.data.moveType);
+  }
   drawMergesAndStats(hero.merges, hero.stats, hero.sp, hero.hm, hero.buffs);
   drawSkills(hero.skills);
 }

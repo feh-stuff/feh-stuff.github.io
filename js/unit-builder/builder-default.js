@@ -152,9 +152,8 @@ function onHeroSelect(event) {
         .selectable('disable');
   }
 
-  if (hero.name === 'Leif' && Math.random() < 0.25) {
+  if (hero.name === 'Leif' && Math.random() < 0.5) {
     hero.title = 'A Fucking';
-    hero.shortName = 'Leaf';
   }
   drawHero(fehUnit);
 }
@@ -308,6 +307,9 @@ function onLoadBookmark(event) {
   fehUnit = bookmarks.load();
   drawHero(fehUnit);
 
+  fehUnit.sp = fehUnit.sp >= 0 ? fehUnit.sp : values.CONST.MAX_SP;
+  fehUnit.hm = fehUnit.hm >= 0 ? fehUnit.hm : values.CONST.MAX_HM;
+
   initHeroSelect(fehUnit.data);
   $(elements.SELECT_HERO).selectable('html', fehUnit.data.name);
   $(elements.SELECT_RARITY).selectable('html', fehUnit.rarity + '★');
@@ -316,7 +318,8 @@ function onLoadBookmark(event) {
       <span class="opt-half">${fehUnit.iv.boon === '-' ? '' : '+'}${fehUnit.iv.boon}</span>
       <span class="opt-half">${fehUnit.iv.bane === '-' ? '' : '-'}${fehUnit.iv.bane}</span>
     </div>`);
-
+  $(elements.INPUT_SP_HM + '[data-type="sp"]').val(fehUnit.sp);
+  $(elements.INPUT_SP_HM + '[data-type="hm"]').val(fehUnit.hm);
   
   let refinery = skills.getRefinery(fehUnit.skills.weapon.name, fehUnit.data.name);
   if (refinery) {
