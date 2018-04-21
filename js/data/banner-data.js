@@ -3,6 +3,15 @@ module.exports = [
     date: "April 2018",
     banners: [
       {
+        name: "Thunder's Fist Tempest Trials",
+        startDate: "Apr 18, 2018",
+        focusHeroes: [ "Seliph", "Reinhardt", "Olwen" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [ "Leif", "Nanna", "Reinhardt (World of Thracia)", "Olwen (World of Thracia)" ],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "World of Thracia",
         startDate: "Apr 11, 2018",
         focusHeroes: [ "Leif", "Nanna", "Reinhardt (World of Thracia)", "Olwen (World of Thracia)" ],

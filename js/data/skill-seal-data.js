@@ -213,6 +213,16 @@ module.exports = [
     effect: "If unit is attacked by foe using bow, daggers, magic, or staff, unit receives Def/Res+6 during combat."
   },
   {
+    name: "Drive Atk 1",
+    icon: "22-6",
+    effect: "Grants allies within 2 spaces Atk+2 during combat."
+  },
+  {
+    name: "Drive Atk 2",
+    icon: "22-7",
+    effect: "Grants allies within 2 spaces Atk+3 during combat."
+  },
+  {
     name: "Drive Def 1",
     icon: "18-10",
     effect: "Grants allies within 2 spaces Def+2 during combat."
@@ -257,6 +267,24 @@ module.exports = [
     name: "Fortify Res 3",
     icon: "12-11",
     effect: "Grants adjacent allies Res+4 through their next actions at the start of each turn."
+  },
+  {
+    name: "Fortress Def 1",
+    icon: "15-1",
+    stats: {atk: -3, def: 3},
+    effect: "Grants Def+3. Inflicts Atk-3."
+  },
+  {
+    name: "Fortress Def 2",
+    icon: "15-2",
+    stats: {atk: -3, def: 4},
+    effect: "Grants Def+4. Inflicts Atk-3."
+  },
+  {
+    name: "Fortress Def 3",
+    icon: "15-3",
+    stats: {atk: -3, def: 5},
+    effect: "Grants Def+5. Inflicts Atk-3."
   },
   {
     name: "Fortress Res 1",
@@ -625,6 +653,24 @@ module.exports = [
     icon: "7-7",
     exclude: [{weaponType: "Staff"}],
     effect: "After combat, foe suffers Atk-7 through its next action."
+  },
+    {
+    name: "Seal Spd 1",
+    icon: "7-8",
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Spd-3 through its next action."
+  },
+  {
+    name: "Seal Spd 2",
+    icon: "7-9",
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Spd-5 through its next action."
+  },
+  {
+    name: "Seal Spd 3",
+    icon: "7-10",
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, foe suffers Spd-7 through its next action."
   },
   {
     name: "Speed +1",
