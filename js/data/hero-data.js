@@ -3260,6 +3260,21 @@ module.exports = [
       main: "img/heroes-main/Feh.png"
     },
     skills: [
+      { name: "Iron Bow", rarity: 5 },
+      { name: "Steel Bow", rarity: 5 },
+      { name: "Silver Bow", rarity: 5 },
+      { name: "Warrior Princess", rarity: 5 },
+      { name: "New Moon", rarity: 5 },
+      { name: "Luna", rarity: 5 },
+      { name: "Atk/Spd Bond 1", rarity: 5 },
+      { name: "Atk/Spd Bond 2", rarity: 5 },
+      { name: "Atk/Spd Bond 3", rarity: 5 },
+      { name: "Flier Formation 1", rarity: 5 },
+      { name: "Flier Formation 2", rarity: 5 },
+      { name: "Flier Formation 3", rarity: 5 },
+      { name: "Flier Guidance 1", rarity: 5 },
+      { name: "Flier Guidance 2", rarity: 5 },
+      { name: "Flier Guidance 3", rarity: 5 }
     ],
     stats: {
       level1: { hp: 19, atk: 7, spd: 8, def: 6, res: 7 },
@@ -3778,6 +3793,16 @@ module.exports = [
       main: "img/heroes-main/Feh.png"
     },
     skills: [
+      { name: "Water Breath", rarity: 5 },
+      { name: "Water Breath+", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Draconic Aura", rarity: 5 },
+      { name: "Fierce Stance 1", rarity: 5 },
+      { name: "Fierce Stance 2", rarity: 5 },
+      { name: "Fierce Stance 3", rarity: 5 },
+      { name: "Spur Spd 1", rarity: 5 },
+      { name: "Spur Spd 2", rarity: 5 },
+      { name: "Goad Dragons", rarity: 5 }
     ],
     stats: {
       level1: { hp: 16, atk: 5, spd: 4, def: 6, res: 8 },
@@ -7286,6 +7311,19 @@ module.exports = [
       main: "img/heroes-main/Feh.png"
     },
     skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "Harmonic Lance", rarity: 5 },
+      { name: "Harmonic Lance+", rarity: 5 },
+      { name: "Daylight", rarity: 5 },
+      { name: "Noontime", rarity: 5 },
+      { name: "Darting Stance 1", rarity: 5 },
+      { name: "Darting Stance 2", rarity: 5 },
+      { name: "Darting Stance 3", rarity: 5 },
+      { name: "Spur Def 1", rarity: 5 },
+      { name: "Spur Def 2", rarity: 5 },
+      { name: "Ward Fliers", rarity: 5 }
+
     ],
     stats: {
       level1: { hp: 15, atk: 7, spd: 5, def: 4, res: 5 },

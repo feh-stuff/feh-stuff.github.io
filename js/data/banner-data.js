@@ -3,7 +3,7 @@ module.exports = [
     date: "April 2018",
     banners: [
       {
-        name: "Heroes with Combat Boosts",
+        name: "Wings of Fate",
         startDate: "Apr 24, 2018",
         focusHeroes: [ "Kana (F)", "Shigure", "Hinoka (Wings of Fate)" ],
         excludeFromRarity4: [],
