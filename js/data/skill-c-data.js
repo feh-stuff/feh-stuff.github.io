@@ -386,6 +386,29 @@ module.exports = [
     effect: "Grants allies within 2 spaces Spd+3 during combat."
   },
   {
+    name: "Flier Guidance 1",
+    spCost: 60,
+    icon: "0-0",
+    include: [{moveType: "Flying"}],
+    effect: "If unit has 100% HP, flying allies within 2 spaces can move to a space adjacent to unit."
+  },
+  {
+    name: "Flier Guidance 2",
+    spCost: 120,
+    icon: "0-0",
+    prev: ["Flier Guidance 1"],
+    include: [{moveType: "Flying"}],
+    effect: "If unit has ≥ 50% HP, flying allies within 2 spaces can move to a space adjacent to unit."
+  },
+  {
+    name: "Flier Guidance 3",
+    spCost: 240,
+    icon: "0-0",
+    prev: ["Flier Guidance 2"],
+    include: [{moveType: "Flying"}],
+    effect: "Flying allies within 2 spaces can move to a space adjacent to unit."
+  },
+  {
     name: "Fortify Armor",
     spCost: 200,
     icon: "13-0",
@@ -518,6 +541,14 @@ module.exports = [
     prev: ["Spur Atk 2", "Spur Spd 2"],
     include: [{moveType: "Cavalry"}],
     effect: "Grants cavalry allies within 2 spaces Spd/Atk+4 during combat."
+  },
+  {
+    name: "Goad Dragons",
+    spCost: 200,
+    icon: "0-0",
+    prev: ["Spur Atk 2", "Spur Spd 2"],
+    include: [{weaponType: "Breath"}],
+    effect: "Grants dragon allies within 2 spaces Spd/Atk+4 during combat."
   },
   {
     name: "Goad Fliers",

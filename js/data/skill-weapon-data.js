@@ -1586,6 +1586,26 @@ module.exports = [
     effect: "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat."
   },
   {
+    name: "Harmonic Lance",
+    spCost: 200,
+    damage: 9,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Steel Lance"],
+    effect: "Grants +10 to damage when Special triggers."
+  },
+  {
+    name: "Harmonic Lance+",
+    spCost: 300,
+    damage: 13,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Harmonic Lance"],
+    effect: "Grants +10 to damage when Special triggers."
+  },
+  {
     name: "Hauteclere",
     spCost: 400,
     damage: 16,
@@ -3237,6 +3257,36 @@ module.exports = [
     prev: ["Shine"],
     exclusive: ["Saias"],
     effect: "At start of turn, inflicts Atk/Res-4 on foes in cardinal directions with Res < unit's Res through their next actions."
+  },
+  {
+    name: "Warrior Princess",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Bow",
+    // colorType: "Neutral",
+    stats: {spd: 3},
+    prev: ["Silver Bow"],
+    exclusive: ["Lyn (Brave Heroes)"],
+    effect: "Effective against flying and armored foes. Grants Spd+3. Grants Atk+3 to allies withing 2 spaces during combat."
+  },
+  {
+    name: "Water Breath",
+    spCost: 200,
+    damage: 9,
+    range: 1,
+    weaponType: "Breath",
+    prev: [""],
+    effect: "If foe initiates combat, grants Def/Res+4 during combat. If foe's range = 2, calculates damage using the lower of foe's Def or Res."
+  },
+  {
+    name: "Water Breath+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Breath",
+    prev: [""],
+    effect: "If foe initiates combat, grants Def/Res+4 during combat. If foe's range = 2, calculates damage using the lower of foe's Def or Res."
   },
   {
     name: "Weirding Tome",

@@ -3,6 +3,24 @@ module.exports = [
     date: "April 2018",
     banners: [
       {
+        name: "Heroes with Combat Boosts",
+        startDate: "Apr 24, 2018",
+        focusHeroes: [ "Kana (F)", "Shigure", "Hinoka (Wings of Fate)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Heroes with Combat Boosts",
+        startDate: "Apr 22, 2018",
+        focusHeroes: [ "Ayra", "Sonya", "Lyn (Brave Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [ "Leif", "Nanna", "Reinhardt (World of Thracia)", "Olwen (World of Thracia)" ],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "Thunder's Fist Tempest Trials",
         startDate: "Apr 18, 2018",
         focusHeroes: [ "Seliph", "Reinhardt", "Olwen" ],

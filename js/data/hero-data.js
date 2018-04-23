@@ -3246,6 +3246,27 @@ module.exports = [
     }
   },
   {
+    name: "Hinoka (Wings of Fate)",
+    title: "Blue Sky Warrior",
+    artist: "Chiko (チ一コ)",
+    voice: "Cindy Robinson",
+    releaseDate: "Apr 24, 2018",
+    colorType: "Neutral",
+    weaponType: "Bow",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Hinoka (Wings of Fate).png",
+      main: "img/heroes-main/Feh.png"
+    },
+    skills: [
+    ],
+    stats: {
+      level1: { hp: 19, atk: 7, spd: 8, def: 6, res: 7 },
+      level40: { hp: [ 37, 41, 44 ], atk: [ 32, 35, 38 ], spd: [ 29, 32, 35 ], def: [ 22, 25, 29 ], res: [ 21, 24, 27 ] }
+    }
+  },
+  {
     name: "Ike",
     title: "Young Mercenary",
     artist: "Meka (めか)",
@@ -3739,6 +3760,28 @@ module.exports = [
     stats: {
       level1: { hp: 17, atk: 9, spd: 8, def: 5, res: 5 },
       level40: { hp: [ 33, 36, 40 ], atk: [ 32, 35, 38 ], spd: [ 31, 34, 37 ], def: [ 14, 18, 21 ],  res: [ 23, 27, 30 ] }
+    }
+  },
+  {
+    name: "Kana (F)",
+    shortName: "Kana",
+    title: "Dragon Princess",
+    artist: "Miwabe Sakura (みわべさくら)",
+    voice: "Claudia Lenz",
+    releaseDate: "Apr 24, 2018",
+    colorType: "Green",
+    weaponType: "Breath",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Kana (F).png",
+      main: "img/heroes-main/Feh.png"
+    },
+    skills: [
+    ],
+    stats: {
+      level1: { hp: 16, atk: 5, spd: 4, def: 6, res: 8 },
+      level40: { hp: [ 43, 46, 50 ], atk: [ 30, 33, 36 ], spd: [ 25, 28, 31 ], def: [ 22, 25, 29 ], res: [ 26, 30, 33 ] },
     }
   },
   {
@@ -7225,6 +7268,28 @@ module.exports = [
       level40: { hp: [ 42, 45, 48 ], atk: [ 26, 30, 33 ], spd: [ 22, 25, 29 ], def: [ 33, 36, 39 ], res: [ 30, 33, 36 ] },
       level1_4: { hp: 20, atk: 8, spd: 5, def: 12, res: 6 },
       level40_4: { hp: [ 39, 42, 45 ], atk: [ 25, 28, 31 ], spd: [ 20, 23, 26 ], def: [ 31, 34, 37 ], res: [ 27, 30, 33 ] },
+    }
+  },
+  {
+    name: "Shigure",
+    shortName: "Shigure",
+    title: "Uplifting Artist",
+    artist: "Yura (由良)",
+    voice: "Matt Mercer",
+    releaseDate: "Apr 24, 2018",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Shigure.png",
+      main: "img/heroes-main/Feh.png"
+    },
+    skills: [
+    ],
+    stats: {
+      level1: { hp: 15, atk: 7, spd: 5, def: 4, res: 5 },
+      level40: { hp: [ 31, 34, 38 ], atk: [ 28, 31, 34 ], spd: [ 26, 29, 32 ], def: [ 18, 21, 24 ], res: [ 21, 24, 28 ] }
     }
   },
   {
