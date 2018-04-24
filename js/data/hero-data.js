@@ -3819,7 +3819,7 @@ module.exports = [
     artist: "kawasumi (かわすみ)",
     voice: "Sandy Fox",
     releaseDate: "May 03, 2018",
-    colorType: "Green",
+    colorType: "Blue",
     weaponType: "Breath",
     moveType: "Infantry",
     rarity5: ["pool2"],
