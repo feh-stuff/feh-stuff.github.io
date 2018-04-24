@@ -2006,6 +2006,85 @@ module.exports = {
       effect: "Grants +10 to damage when Special triggers."
     }
   ],
+  "Harmonic Lance+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 3},
+      effect: "Grants +10 to damage when Special triggers."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, atk: 1, spd: 3},
+      effect: "Grants +10 to damage when Special triggers."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, atk: 1, def: 4},
+      effect: "Grants +10 to damage when Special triggers."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, atk: 1, res: 4},
+      effect: "Grants +10 to damage when Special triggers."
+    }
+  ],
+  "Water Breath+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 2},
+      effect: "If foe initiates combat, grants Def/Res+4 during combat. If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, spd: 3},
+      effect: "If foe initiates combat, grants Def/Res+4 during combat. If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, def: 4},
+      effect: "If foe initiates combat, grants Def/Res+4 during combat. If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, res: 4},
+      effect: "If foe initiates combat, grants Def/Res+4 during combat. If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+    }
+  ],
+  "Barb Shuriken+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+    }
+  ],
+
 
   // prf weapons
   "Sol Katti": [

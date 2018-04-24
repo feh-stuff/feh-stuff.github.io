@@ -156,6 +156,26 @@ module.exports = [
     effect: "Grants Spd+3. If unit's Spd - foe's Spd ≥ 1, gain Special cooldown charge +1 per attack. (If similar skill also used, only highest value applied.)"
   },
   {
+    name: "Barb Shuriken",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Dagger",
+    colorType: "Neutral",
+    prev: ["Steel Dagger"],
+    effect: "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Barb Shuriken+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Dagger",
+    colorType: "Neutral",
+    prev: ["Barb Shuriken"],
+    effect: "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+  },
+  {
     name: "Basilikos",
     spCost: 400,
     damage: 16,
@@ -3267,7 +3287,7 @@ module.exports = [
     // colorType: "Neutral",
     stats: {spd: 3},
     prev: ["Silver Bow"],
-    exclusive: ["Lyn (Brave Heroes)"],
+    exclusive: ["Hinoka (Wings of Fate)"],
     effect: "Effective against flying and armored foes. Grants Spd+3. Grants Atk+3 to allies withing 2 spaces during combat."
   },
   {

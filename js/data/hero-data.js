@@ -3247,6 +3247,7 @@ module.exports = [
   },
   {
     name: "Hinoka (Wings of Fate)",
+    shortName: "Hinoka",
     title: "Blue Sky Warrior",
     artist: "Chiko (チ一コ)",
     voice: "Cindy Robinson",
@@ -3257,7 +3258,7 @@ module.exports = [
     rarity5: ["pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Hinoka (Wings of Fate).png",
-      main: "img/heroes-main/Feh.png"
+      main: "img/heroes-main/Hinoka (Wings of Fate).png"
     },
     skills: [
       { name: "Iron Bow", rarity: 5 },
@@ -3277,8 +3278,8 @@ module.exports = [
       { name: "Flier Guidance 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 19, atk: 7, spd: 8, def: 6, res: 7 },
-      level40: { hp: [ 37, 41, 44 ], atk: [ 32, 35, 38 ], spd: [ 29, 32, 35 ], def: [ 22, 25, 29 ], res: [ 21, 24, 27 ] }
+      level1: { hp: 18, atk: 6, spd: 9, def: 4, res: 7 },
+      level40: { hp: [ 34, 37, 41 ], atk: [ 29, 32, 35 ], spd: [ 32, 35, 38 ], def: [ 13, 17, 20 ], res: [ 25, 29, 32 ] }
     }
   },
   {
@@ -3790,9 +3791,11 @@ module.exports = [
     rarity5: ["pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Kana (F).png",
-      main: "img/heroes-main/Feh.png"
+      main: "img/heroes-main/Kana (F).png"
     },
     skills: [
+      { name: "Fire Breath", rarity: 5 },
+      { name: "Fire Breath+", rarity: 5 },
       { name: "Water Breath", rarity: 5 },
       { name: "Water Breath+", rarity: 5 },
       { name: "Dragon Gaze", rarity: 5 },
@@ -3800,13 +3803,49 @@ module.exports = [
       { name: "Fierce Stance 1", rarity: 5 },
       { name: "Fierce Stance 2", rarity: 5 },
       { name: "Fierce Stance 3", rarity: 5 },
-      { name: "Spur Spd 1", rarity: 5 },
-      { name: "Spur Spd 2", rarity: 5 },
+      { name: "Spur Atk 1", rarity: 5 },
+      { name: "Spur Atk 2", rarity: 5 },
       { name: "Goad Dragons", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 16, atk: 5, spd: 4, def: 6, res: 8 },
-      level40: { hp: [ 43, 46, 50 ], atk: [ 30, 33, 36 ], spd: [ 25, 28, 31 ], def: [ 22, 25, 29 ], res: [ 26, 30, 33 ] },
+      level1: { hp: 18, atk: 8, spd: 8, def: 7, res: 7 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 26, 30, 33 ], spd: [ 31, 34, 37 ], def: [ 30, 33, 36 ], res: [ 23, 26, 30 ] },
+    }
+  },
+  {
+    name: "Kana (M)",
+    shortName: "Kana",
+    title: "Dragon Spawn",
+    artist: "kawasumi (かわすみ)",
+    voice: "Sandy Fox",
+    releaseDate: "May 03, 2018",
+    colorType: "Green",
+    weaponType: "Breath",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Kana (M).png",
+      main: "img/heroes-main/Kana (M).png"
+    },
+    skills: [
+      { name: "Fire Breath", rarity: 3 },
+      { name: "Fire Breath+", rarity: 3 },
+      { name: "Water Breath", rarity: 3 },
+      { name: "Water Breath+", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 3 },
+      { name: "Dragon Fang", rarity: 4 },
+      { name: "Brazen Def/Res 1", rarity: 3 },
+      { name: "Brazen Def/Res 2", rarity: 3 },
+      { name: "Brazen Def/Res 3", rarity: 4 },
+      { name: "Fortify Def 1", rarity: 3 },
+      { name: "Fortify Def 2", rarity: 4 },
+      { name: "Fortify Dragons", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 9, spd: 7, def: 7, res: 7 },
+      level40: { hp: [ 37, 40, 43 ], atk: [ 28, 31, 34 ], spd: [ 30, 33, 36 ], def: [ 28, 31, 34 ], res: [ 26, 29, 32 ] },
+      level1_4: { hp: 17, atk: 9, spd: 7, def: 6, res: 6 },
+      level40_4: { hp: [ 34, 37, 40 ], atk: [ 26, 29, 32 ], spd: [ 28, 31, 34 ], def: [ 25, 28, 31 ], res: [ 23, 26, 29 ] }
     }
   },
   {
@@ -3874,6 +3913,39 @@ module.exports = [
     stats: {
       level1: { hp: 17, atk: 6, spd: 8, def: 5, res: 8 },
       level40: { hp: [ 31, 34, 37 ], atk: [ 29, 32, 35 ], spd: [ 31, 34, 37 ], def: [ 12, 15, 19 ], res: [ 29, 32, 35 ] }
+    }
+  },
+  {
+    name: "Kaze",
+    title: "Easygoing Ninja",
+    artist: "lack",
+    voice: "Xander Mobus",
+    releaseDate: "Apr 30, 2018",
+    colorType: "Neutral",
+    weaponType: "Dagger",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Kaze.png",
+      main: "img/heroes-main/Kaze.png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 4 },
+      { name: "Steel Dagger", rarity: 4 },
+      { name: "Barb Shuriken", rarity: 4 },
+      { name: "Barb Shuriken+", rarity: 5 },
+      { name: "Chilling Wind", rarity: 4 },
+      { name: "Iceberg", rarity: 4 },
+      { name: "Poison Strike 1", rarity: 4 },
+      { name: "Poison Strike 2", rarity: 4 },
+      { name: "Poison Strike 3", rarity: 5 },
+      { name: "Atk Smoke 1", rarity: 4 },
+      { name: "Atk Smoke 2", rarity: 4 },
+      { name: "Atk Smoke 3", rarity: 4 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 6, spd: 10, def: 4, res: 8 },
+      level40: { hp: [ 31, 34, 37 ], atk: [ 27, 30, 33 ], spd: [ 33, 36, 39 ], def: [ 13, 17, 20 ], res: [ 31, 34, 37 ] },
     }
   },
   {
@@ -7308,7 +7380,7 @@ module.exports = [
     rarity5: ["pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Shigure.png",
-      main: "img/heroes-main/Feh.png"
+      main: "img/heroes-main/Shigure.png"
     },
     skills: [
       { name: "Iron Lance", rarity: 5 },
@@ -7320,14 +7392,13 @@ module.exports = [
       { name: "Darting Stance 1", rarity: 5 },
       { name: "Darting Stance 2", rarity: 5 },
       { name: "Darting Stance 3", rarity: 5 },
-      { name: "Spur Def 1", rarity: 5 },
-      { name: "Spur Def 2", rarity: 5 },
+      { name: "Spur Res 1", rarity: 5 },
+      { name: "Spur Res 2", rarity: 5 },
       { name: "Ward Fliers", rarity: 5 }
-
     ],
     stats: {
-      level1: { hp: 15, atk: 7, spd: 5, def: 4, res: 5 },
-      level40: { hp: [ 31, 34, 38 ], atk: [ 28, 31, 34 ], spd: [ 26, 29, 32 ], def: [ 18, 21, 24 ], res: [ 21, 24, 28 ] }
+      level1: { hp: 18, atk: 7, spd: 9, def: 5, res: 8 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 30, 33, 36 ], spd: [ 34, 37, 40 ], def: [ 23, 27, 30 ], res: [ 22, 25, 28 ] }
     }
   },
   {

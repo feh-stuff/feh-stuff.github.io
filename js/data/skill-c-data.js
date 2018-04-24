@@ -388,14 +388,14 @@ module.exports = [
   {
     name: "Flier Guidance 1",
     spCost: 60,
-    icon: "0-0",
+    icon: "41-4",
     include: [{moveType: "Flying"}],
     effect: "If unit has 100% HP, flying allies within 2 spaces can move to a space adjacent to unit."
   },
   {
     name: "Flier Guidance 2",
     spCost: 120,
-    icon: "0-0",
+    icon: "41-5",
     prev: ["Flier Guidance 1"],
     include: [{moveType: "Flying"}],
     effect: "If unit has ≥ 50% HP, flying allies within 2 spaces can move to a space adjacent to unit."
@@ -403,7 +403,7 @@ module.exports = [
   {
     name: "Flier Guidance 3",
     spCost: 240,
-    icon: "0-0",
+    icon: "41-6",
     prev: ["Flier Guidance 2"],
     include: [{moveType: "Flying"}],
     effect: "Flying allies within 2 spaces can move to a space adjacent to unit."
@@ -545,7 +545,7 @@ module.exports = [
   {
     name: "Goad Dragons",
     spCost: 200,
-    icon: "0-0",
+    icon: "41-3",
     prev: ["Spur Atk 2", "Spur Spd 2"],
     include: [{weaponType: "Breath"}],
     effect: "Grants dragon allies within 2 spaces Spd/Atk+4 during combat."
