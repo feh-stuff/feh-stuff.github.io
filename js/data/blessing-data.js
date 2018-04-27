@@ -26,7 +26,13 @@ module.exports = [
   {
     hero: "Robin (F) (Legendary Heroes)",
     type: "Earth",
-    stats: { hp: 3, spd: 3},
+    stats: { hp: 3, spd: 3 },
     icon: 4
+  },
+  {
+    hero: "Lyn (Legendary Heroes)",
+    type: "Wind",
+    stats: { hp: 3, atk: 2 },
+    icon: 5
   }
 ];

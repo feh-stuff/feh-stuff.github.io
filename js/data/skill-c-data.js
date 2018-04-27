@@ -892,6 +892,26 @@ module.exports = [
     effect: "After combat, inflicts Spd-7 on foes within 2 spaces of target through their next actions."
   },
   {
+    name: "Spd Tactic 1",
+    spCost: 60,
+    icon: "41-8",
+    effect: "At start of turn, grants Spd+2 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+  },
+  {
+    name: "Spd Tactic 2",
+    spCost: 120,
+    icon: "41-9",
+    prev: ["Spd Tactic 1"],
+    effect: "At start of turn, grants Spd+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+  },
+  {
+    name: "Spd Tactic 3",
+    spCost: 240,
+    icon: "41-10",
+    prev: ["Spd Tactic 2"],
+    effect: "At start of turn, grants Spd+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+  },
+  {
     name: "Spur Atk 1",
     spCost: 50,
     icon: "10-8",

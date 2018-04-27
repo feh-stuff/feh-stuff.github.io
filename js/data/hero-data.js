@@ -3920,11 +3920,12 @@ module.exports = [
     title: "Easygoing Ninja",
     artist: "lack",
     voice: "Xander Mobus",
-    releaseDate: "Apr 30, 2018",
+    releaseDate: "May 1, 2018",
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Infantry",
     rarity5: ["pool2"],
+    limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Kaze.png",
       main: "img/heroes-main/Kaze.png"
@@ -4863,6 +4864,40 @@ module.exports = [
     }
   },
   {
+    name: "Lyn (Legendary Heroes)",
+    shortName: "Lyn",
+    title: "Lady of the Wind",
+    artist: "Wada Sachiko (ワダサチコ)",
+    voice: "Wendee Lee",
+    releaseDate: "May 1, 2018",
+    colorType: "Green",
+    weaponType: "Bow",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Lyn (Legendary Heroes).png",
+      main: "img/heroes-main/Lyn (Legendary Heroes).png"
+    },
+    skills: [
+      { name: "Iron Bow", rarity: 5 },
+      { name: "Steel Bow", rarity: 5 },
+      { name: "Silver Bow", rarity: 5 },
+      { name: "Swift Mulagir", rarity: 5 },
+      { name: "Laws of Sacae", rarity: 5 },
+      { name: "Desperation 1", rarity: 5 },
+      { name: "Desperation 2", rarity: 5 },
+      { name: "Desperation 3", rarity: 5 },
+      { name: "Spd Tactic 1", rarity: 5 },
+      { name: "Spd Tactic 2", rarity: 5 },
+      { name: "Spd Tactic 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 9, spd: 10, def: 4, res: 5 },
+      level40: { hp: [ 33, 36, 40 ], atk: [ 27, 31, 34 ], spd: [ 33, 36, 39 ], def: [ 18, 21, 24 ], res: [ 23, 27, 30 ] }
+    }
+  },
+  {
     name: "Lyn (Love Abounds)",
     shortName: "Lyn",
     title: "Wind's Embrace",
@@ -5504,6 +5539,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Staff",
     moveType: "Cavalry",
+    rarity4: ["pool2"],
     rarity5: ["pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Nanna.png",
@@ -5526,6 +5562,8 @@ module.exports = [
     stats: {
       level1: { hp: 17, atk: 5, spd: 8, def: 6, res: 7 },
       level40: { hp: [ 33, 36, 40 ], atk: [ 23, 27, 30 ], spd: [ 31, 34, 37 ], def: [ 18, 21, 24 ], res: [ 23, 26, 30 ] },
+      level1_4: { hp: 16, atk: 4, spd: 8, def: 5, res: 7 },
+      level40_4: { hp: [ 31, 34, 37 ], atk: [ 21, 24, 27 ], spd: [ 29, 32, 35 ], def: [ 16, 19, 22 ], res: [ 22, 25, 28 ] },
     }
   },
   {

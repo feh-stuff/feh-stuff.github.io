@@ -3099,6 +3099,18 @@ module.exports = [
     effect: "Enables counterattack regardless of distance if this unit is attacked.",
   },
   {
+    name: "Swift Mulagir",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Bow",
+    // colorType: "Neutral",
+    stats: {res: 3},
+    prev: ["Silver Bow"],
+    exclusive: ["Lyn (Legendary Heroes)"],
+    effect: "Effective against flying foes. Grants Res+3. If the number of allies within 2 spaces (excluding unit) > the number of foes within 2 spaces (excluding target), grants Atk/Spd+5 during combat."
+  },
+  {
     name: "Tannenboom!",
     spCost: 200,
     damage: 10,

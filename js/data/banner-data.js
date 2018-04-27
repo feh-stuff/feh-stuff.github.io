@@ -3,6 +3,15 @@ module.exports = [
     date: "April 2018",
     banners: [
       {
+        name: "Legendary Heroes: Lyn, Lady of the Wind",
+        startDate: "May 1, 2018",
+        focusHeroes: [ "Lyn (Legendary Heroes)", "Henry (Trick or Defeat!)", "Inigo (Performing Arts)", "Celica (Fallen Heroes)", "Eirika (Sacred Memories)", "Ike (Legendary Heroes)", "Ephraim (Legendary Heroes)", "Micaiah", "Shigure (Performing Arts)", "Genny", "Jakob (Trick or Defeat!)", "Robin (F) (Legendary Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [ "Kana (F)", "Shigure", "Hinoka (Wings of Fate)" ],
+        rateType: "legendaryV1",
+        pool: "pool2"
+      },
+      {
         name: "Wings of Fate",
         startDate: "Apr 24, 2018",
         focusHeroes: [ "Kana (F)", "Shigure", "Hinoka (Wings of Fate)" ],
@@ -15,7 +24,7 @@ module.exports = [
         name: "Heroes with Combat Boosts",
         startDate: "Apr 22, 2018",
         focusHeroes: [ "Ayra", "Sonya", "Lyn (Brave Heroes)" ],
-        excludeFromRarity4: [],
+        excludeFromRarity4: [ "Nanna" ],
         excludeFromRarity5: [ "Leif", "Nanna", "Reinhardt (World of Thracia)", "Olwen (World of Thracia)" ],
         rateType: "defaultV2",
         pool: "pool2"
@@ -24,7 +33,7 @@ module.exports = [
         name: "Thunder's Fist Tempest Trials",
         startDate: "Apr 18, 2018",
         focusHeroes: [ "Seliph", "Reinhardt", "Olwen" ],
-        excludeFromRarity4: [],
+        excludeFromRarity4: [ "Nanna" ],
         excludeFromRarity5: [ "Leif", "Nanna", "Reinhardt (World of Thracia)", "Olwen (World of Thracia)" ],
         rateType: "defaultV2",
         pool: "pool2"

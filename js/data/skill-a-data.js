@@ -788,6 +788,13 @@ module.exports = [
     effect: "Neutralizes \"effective against\" bonuses.",
   },
   {
+    name: "Laws of Sacae",
+    spCost: 300,
+    icon: "41-7",
+    include: [{name: "Lyn (Legendary Heroes)"}],
+    effect: "If foe initiates combat and the number of allies within 2 spaces ≥ 2, grants Atk/Spd/Def/Res+4 during combat."
+  },
+  {
     name: "Life and Death 1",
     spCost: 50,
     icon: "1-9",
