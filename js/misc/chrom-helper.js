@@ -43,9 +43,9 @@ $(document).ready(function() {
     ["Horses are nice.", "I like horses."]
   ];
 
-  let $container = $(`<div class="chrom-helper"></div>`);
-  let $text = $(`<div class="chrom-text">Hello, I'm Chrom of Ylisse. If you need help, just click on me!</div>`);
-  let $toggle = $(`<div class="chrom-toggle"></div>`);
+  let $container = $(`<div class="hero-helper chrom-helper"></div>`);
+  let $text = $(`<div class="hero-helper-text">Hello, I'm Chrom of Ylisse. If you need help, just click on me!</div>`);
+  let $toggle = $(`<div class="hero-helper-toggle"></div>`);
   let currentText = -1;
   let currentSubText = 0;
   let snipe = false;

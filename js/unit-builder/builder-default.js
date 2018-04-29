@@ -121,7 +121,7 @@ function bindEvents() {
 function onHeroSelect(event) {
   let hero = $(event.currentTarget).data('val');
 
-  // $(document).trigger('hero-select', [hero.name, hero.weaponType]);
+  $(document).trigger('hero-select', [hero.name, hero.weaponType]);
   fehUnit.data = hero;
   initHeroSelect(hero);
 
@@ -284,6 +284,7 @@ function onBlessingTypeChange(event) {
         .selectable('enable');
     drawHero(fehUnit);
   }
+  $(document).trigger('blessing-select', [blessing]);
 }
 
 function onBlessingAllyChange(event) {
@@ -320,7 +321,7 @@ function onLoadBookmark(event) {
     </div>`);
   $(elements.INPUT_SP_HM + '[data-type="sp"]').val(fehUnit.sp);
   $(elements.INPUT_SP_HM + '[data-type="hm"]').val(fehUnit.hm);
-  
+
   let refinery = skills.getRefinery(fehUnit.skills.weapon.name, fehUnit.data.name);
   if (refinery) {
     $('.skill-select[data-skill="refine"]')

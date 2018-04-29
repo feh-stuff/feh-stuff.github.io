@@ -294,7 +294,7 @@ body {
   width: 25px;
 }
 .summon-pool-item-text {
-  
+
 }
 
 /***** Unit Builder *****/
@@ -504,22 +504,27 @@ body {
 
 
 /***** Chrom Helper *****/
-.chrom-helper {
+.hero-helper {
   position: fixed;
   bottom: 0;
   right: 0;
-  background-image: url(../img/misc/chrom-helper.png);
   background-size: cover;
   width: 230px;
   height: 235px;
 }
-.chrom-toggle {
+.hero-helper-toggle {
   height: 20px;
 }
-.chrom-text {
+.hero-helper-text {
   height: 215px;
   padding: 115px 25px 10px 25px;
   color: #ffffff;
   cursor: pointer;
   user-select: none;
+}
+.chrom-helper {
+  background-image: url(../img/misc/chrom-helper.png);
+}
+.lyn-helper {
+  background-image: url(../img/misc/lyn-helper.png); 
 }
