@@ -9,7 +9,7 @@ $(document).ready(function() {
       "I'm just Lyn. I'm nowhere near that grand.",
     ],
     [
-      "Hm? You're saying that the face of series should be the Legendary Hero?",
+      "Hm? You're saying that the face of the series should be the Legendary Hero?",
       "Well, I've heard Ike was already summoned a few weeks ago.",
       "Marth? Oh, you mean Lucina.",
       "I'm sure she'll gain the title of Legendary Hero some day.",
