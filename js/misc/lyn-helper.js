@@ -35,7 +35,7 @@ $(document).ready(function() {
       "But me... All I can do is stay by your side."
     ],
     [
-      "You've alreay made me wear a wedding gown last year.",
+      "You've already made me wear a wedding gown last year.",
       "And that thick dress for the Festival of Devotion too.",
       "I feel more at home in this outfit. I can feel the wind caressing my skin.",
       "H-Huh? Y-You want me to wear that revealing swimsuit for summer?"
