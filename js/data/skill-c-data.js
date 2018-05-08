@@ -700,6 +700,24 @@ module.exports = [
     effect: "If unit survives, all lance users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)"
   },
   {
+    name: "Odd Atk Wave 1",
+    spCost: 60,
+    icon: "0-0",
+    effect: "At start of odd-numbered turns, grants Atk+2 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Odd Atk Wave 2",
+    spCost: 120,
+    icon: "0-0",
+    effect: "At start of odd-numbered turns, grants Atk+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Odd Atk Wave 3",
+    spCost: 240,
+    icon: "0-0",
+    effect: "At start of odd-numbered turns, grants Atk+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
     name: "Panic Ploy 1",
     spCost: 60,
     icon: "19-2",
