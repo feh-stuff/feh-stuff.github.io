@@ -3,7 +3,7 @@ module.exports = [
     date: "April 2018",
     banners: [
       {
-        name: "Wings of Fate",
+        name: "Genealogy",
         startDate: "May 10, 2018",
         focusHeroes: [ "Ares", "Lene", "Ishtar" ],
         excludeFromRarity4: [],
