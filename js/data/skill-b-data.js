@@ -372,6 +372,22 @@ module.exports = [
     effect: "Enables unit whose own HP is ≤ 50% to warp adjacent to any ally."
   },
   {
+    name: "Firestorm Dance 1",
+    spCost: 120,
+    icon: "0-0",
+    prev: ["Blaze Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Atk/Spd+2."
+  },
+  {
+    name: "Firestorm Dance 2",
+    spCost: 240,
+    icon: "0-0",
+    prev: ["Firestorm Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Atk/Spd+3."
+  },
+  {
     name: "Flier Formation 1",
     spCost: 60,
     icon: "27-0",
@@ -786,6 +802,22 @@ module.exports = [
     prev: ["Seal Def 2"],
     exclude: [{weaponType: "Staff"}],
     effect: "After combat, foe suffers Def-7 through its next action."
+  },
+  {
+    name: "Seal Def/Res 1",
+    spCost: 100,
+    icon: "0-0",
+    prev: ["Seal Def 1", "Seal Res 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Def/Res-3 on foe through its next action."
+  },
+  {
+    name: "Seal Def/Res 2",
+    spCost: 200,
+    icon: "0-0",
+    prev: ["Seal Atk/Def 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Def/Res-5 on foe through its next action."
   },
   {
     name: "Seal Res 1",

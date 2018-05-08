@@ -249,6 +249,39 @@ module.exports = [
     }
   },
   {
+    name: "Ares",
+    title: "Black Knight",
+    artist: "PenekoR (п猫R)",
+    voice: "Robbie Daymond",
+    releaseDate: "May 10, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Ares.png",
+      main: "img/heroes-main/Ares.png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Killing Edge", rarity: 5 },
+      { name: "Dark Mystletainn", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 4 },
+      { name: "Draconic Aura", rarity: 4 },
+      { name: "Brazen Atk/Def 1", rarity: 5 },
+      { name: "Brazen Atk/Def 2", rarity: 5 },
+      { name: "Brazen Atk/Def 3", rarity: 5 },
+      { name: "Seal Def 1", rarity: 5 },
+      { name: "Seal Def/Res 1", rarity: 5 },
+      { name: "Seal Def/Res 2", rarity: 5 },
+    ],
+    stats: {
+      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+    }
+  },
+  {
     name: "Arthur",
     title: "Hapless Hero",
     artist: "Mendako (メンダコ)  / INTELLIGENT SYSTEMS",
@@ -3459,6 +3492,40 @@ module.exports = [
     }
   },
   {
+    name: "Ishtar",
+    title: "Thunder Goddess",
+    artist: "Suekane Kumiko (スエカネクミコ)",
+    voice: "Ratana",
+    releaseDate: "May 10, 2018",
+    colorType: "Blue",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Ishtar.png",
+      main: "img/heroes-main/Ishtar.png"
+    },
+    skills: [
+      { name: "Thunder", rarity: 5 },
+      { name: "Elthunder", rarity: 5 },
+      { name: "Thoron", rarity: 5 },
+      { name: "Mjölnir", rarity: 5 },
+      { name: "Death Blow 1", rarity: 5 },
+      { name: "Swift Sparrow 1", rarity: 5 },
+      { name: "Swift Sparrow 2", rarity: 5 },
+      { name: "Vantage 1", rarity: 5 },
+      { name: "Vantage 2", rarity: 5 },
+      { name: "Vantage 3", rarity: 5 },
+      { name: "Odd Atk Wave 1", rarity: 5 },
+      { name: "Odd Atk Wave 2", rarity: 5 },
+      { name: "Odd Atk Wave 3", rarity: 5 },
+    ],
+    stats: {
+      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+    }
+  },
+  {
     name: "Jaffar",
     title: "Angel of Death",
     artist: "Kusugi Toku (久杉トク)",
@@ -4163,6 +4230,38 @@ module.exports = [
     stats: {
       level1: { hp: 18, atk: 6, spd: 10, def: 8, res: 6 },
       level40: { hp: [ 36, 40, 43 ], atk: [ 29, 32, 35 ], spd: [ 35, 38, 41 ], def: [ 26, 30, 33 ], res: [ 20, 23, 26 ] },
+    }
+  },
+  {
+    name: "Lene",
+    title: "Yearning Dancer",
+    artist: "Yoshiku (四々九)",
+    voice: "Faye Mata",
+    releaseDate: "May 10, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Lene.png",
+      main: "img/heroes-main/Lene.png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Safeguard", rarity: 5 },
+      { name: "Safeguard+", rarity: 5 },
+      { name: "Dance", rarity: 5 },
+      { name: "Blaze Dance 1", rarity: 5 },
+      { name: "Firestorm Dance 1", rarity: 5 },
+      { name: "Firestorm Dance 2", rarity: 5 },
+      { name: "Sword Valor 1", rarity: 5 },
+      { name: "Sword Valor 2", rarity: 5 },
+      { name: "Sword Valor 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
     }
   },
   {

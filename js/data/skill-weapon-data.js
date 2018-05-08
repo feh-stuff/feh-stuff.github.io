@@ -555,6 +555,17 @@ module.exports = [
     effect: "If unit initiates attack, restricts foe's next-turn movement to 1 space or less.",
   },
   {
+    name: "Camilla's Axe",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Brave Axe"],
+    exclusive: ["Camilla"],
+    effect: ""
+  },
+  {
     name: "Candelabra",
     spCost: 200,
     damage: 8,
@@ -826,6 +837,17 @@ module.exports = [
     prev: ["Silver Sword"],
     exclusive: ["Siegbert"],
     effect: "Grants Atk/Spd+4 during combat if unit initiates combat.",
+  },
+  {
+    name: "Dark Mystletainn",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Silver Sword"],
+    exclusive: ["Ares"],
+    effect: "Accelerates Special trigger (cooldown count-1). If Special triggers before or during combat, grants Special cooldown count-2 after combat.",
   },
   {
     name: "Deathly Dagger",
@@ -2127,6 +2149,17 @@ module.exports = [
     effect: "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat."
   },
   {
+    name: "Mjölnir",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Thoron"],
+    exclusive: ["Ishtar"],
+    effect: "Accelerates Special trigger (cooldown count-1). If unit initiates combat, grants Spd+6 during combat.",
+  },
+  {
     name: "Monstrous Bow",
     spCost: 200,
     damage: 8,
@@ -2512,6 +2545,17 @@ module.exports = [
     effect: "-"
   },
   {
+    name: "Rhomphaia",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Silver Lance"],
+    exclusive: ["Clair"],
+    effect: ""
+  },
+  {
     name: "Ridersbane",
     spCost: 200,
     damage: 10,
@@ -2600,6 +2644,26 @@ module.exports = [
     colorType: "Green",
     prev: ["Sack o' Gifts"],
     effect: "Grants Atk/Spd/Def/Res+2 during combat if foe initiates combat."
+  },
+  {
+    name: "Safeguard",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Steel Sword"],
+    effect: "If foe initiates combat, grants Def+7 during combat."
+  },
+  {
+    name: "Safeguard+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Safeguard"],
+    effect: "If foe initiates combat, grants Def+7 during combat."
   },
   {
     name: "Sapphire Lance",
