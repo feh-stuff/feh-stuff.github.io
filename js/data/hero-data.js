@@ -3892,6 +3892,7 @@ module.exports = [
     weaponType: "Breath",
     moveType: "Infantry",
     rarity5: ["pool2"],
+    limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Kana (M).png",
       main: "img/heroes-main/Kana (M).png"
