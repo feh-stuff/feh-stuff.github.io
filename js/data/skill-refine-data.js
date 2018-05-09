@@ -2084,7 +2084,32 @@ module.exports = {
       effect: "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
     }
   ],
-
+  "Safeguard+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 2},
+      effect: "If foe initiates combat, grants Def+7 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, spd: 3},
+      effect: "If foe initiates combat, grants Def+7 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, def: 4},
+      effect: "If foe initiates combat, grants Def+7 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, res: 4},
+      effect: "If foe initiates combat, grants Def+7 during combat."
+    }
+  ],
 
   // prf weapons
   "Sol Katti": [
@@ -2877,92 +2902,113 @@ module.exports = {
   ],
   "Camilla's Axe": [
     {
+      name: "Goad Cavalry/Fliers",
+      icon: "41-11",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "If unit is within 2 spaces of a cavalry or flying ally, grants Atk/Spd +4 during combat. Grants Atk/Spd+3 to cavalry and flying allies within 2 spaces during combat."
+    },
+    {
       name: "+Atk",
       icon: "31-9",
       cost: 1,
       stats: {hp: 5, atk: 2},
-      effect: ""
+      effect: "If unit is within 2 spaces of a cavalry or flying ally, grants Atk/Spd +4 during combat."
     },
     {
       name: "+Spd",
       icon: "31-10",
       cost: 1,
       stats: {hp: 5, spd: 3},
-      effect: ""
+      effect: "If unit is within 2 spaces of a cavalry or flying ally, grants Atk/Spd +4 during combat."
     },
     {
       name: "+Def",
       icon: "31-11",
       cost: 1,
       stats: {hp: 5, def: 4},
-      effect: ""
+      effect: "If unit is within 2 spaces of a cavalry or flying ally, grants Atk/Spd +4 during combat."
     },
     {
       name: "+Res",
       icon: "31-12",
       cost: 1,
       stats: {hp: 5, res: 4},
-      effect: ""
+      effect: "If unit is within 2 spaces of a cavalry or flying ally, grants Atk/Spd +4 during combat."
     }
   ],
   "Rhomphaia": [
     {
+      name: "Flashing Blade",
+      icon: "36-3",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Effective against armored and cavalry foes. If unit's Spd - foe's Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)"
+    },
+    {
       name: "+Atk",
       icon: "31-9",
       cost: 1,
       stats: {hp: 5, atk: 2},
-      effect: ""
+      effect: "Effective against armored and cavalry foes."
     },
     {
       name: "+Spd",
       icon: "31-10",
       cost: 1,
       stats: {hp: 5, spd: 3},
-      effect: ""
+      effect: "Effective against armored and cavalry foes."
     },
     {
       name: "+Def",
       icon: "31-11",
       cost: 1,
       stats: {hp: 5, def: 4},
-      effect: ""
+      effect: "Effective against armored and cavalry foes."
     },
     {
       name: "+Res",
       icon: "31-12",
       cost: 1,
       stats: {hp: 5, res: 4},
-      effect: ""
+      effect: "Effective against armored and cavalry foes."
     }
   ],
   "Yato": [
     {
+      name: "Ally Support+",
+      icon: "41-12",
+      cost: 1,
+      stats: {hp: 3, atk: 2, spd: 2, def: 2, res: 2},
+      effect: "If unit is within 2 spaces of support partner, grants Atk/Spd/Def/Res+4 to that ally during combat."
+    },
+    {
       name: "+Atk",
       icon: "31-9",
       cost: 1,
-      stats: {hp: 5, atk: 2},
-      effect: ""
+      stats: {hp: 5, atk: 4, spd: 2, def: 2, res: 2},
+      effect: "Grants Atk/Spd/Def/Res+2."
     },
     {
       name: "+Spd",
       icon: "31-10",
       cost: 1,
-      stats: {hp: 5, spd: 3},
-      effect: ""
+      stats: {hp: 5, atk: 2, spd: 5, def: 2, res: 2},
+      effect: "Grants Atk/Spd/Def/Res+2."
     },
     {
       name: "+Def",
       icon: "31-11",
       cost: 1,
-      stats: {hp: 5, def: 4},
-      effect: ""
+      stats: {hp: 5, atk: 2, spd: 2, def: 6, res: 2},
+      effect: "Grants Atk/Spd/Def/Res+2."
     },
     {
       name: "+Res",
       icon: "31-12",
       cost: 1,
-      stats: {hp: 5, res: 4},
-      effect: ""
+      stats: {hp: 5, atk: 2, spd: 2, def: 2, res: 6},
+      effect: "Grants Atk/Spd/Def/Res+2."
     }
   ],
 
