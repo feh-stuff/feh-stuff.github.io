@@ -265,7 +265,7 @@ module.exports = [
     skills: [
       { name: "Iron Sword", rarity: 5 },
       { name: "Steel Sword", rarity: 5 },
-      { name: "Killing Edge", rarity: 5 },
+      { name: "Slaying Edge", rarity: 5 },
       { name: "Dark Mystletainn", rarity: 5 },
       { name: "Dragon Gaze", rarity: 4 },
       { name: "Draconic Aura", rarity: 4 },
@@ -277,8 +277,8 @@ module.exports = [
       { name: "Seal Def/Res 2", rarity: 5 },
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp: 18, atk: 8, spd: 8, def: 7, res: 5 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 33, 36, 39 ], spd: [ 26, 30, 33 ], def: [ 30, 33, 36 ], res: [ 14, 18, 21 ] }
     }
   },
   {
@@ -1283,6 +1283,7 @@ module.exports = [
       { name: "Steel Sword", rarity: 4 },
       { name: "Silver Sword", rarity: 4 },
       { name: "Falchion", rarity: 5 },
+      { name: "Sealed Falchion", rarity: 5 },
       { name: "Daylight", rarity: 4 },
       { name: "Sol", rarity: 4 },
       { name: "Aether", rarity: 5 },
@@ -3512,7 +3513,9 @@ module.exports = [
       { name: "Elthunder", rarity: 5 },
       { name: "Thoron", rarity: 5 },
       { name: "Mjölnir", rarity: 5 },
-      { name: "Death Blow 1", rarity: 5 },
+      { name: "New Moon", rarity: 5 },
+      { name: "Moonbow", rarity: 5 },
+      { name: "Darting Blow 1", rarity: 5 },
       { name: "Swift Sparrow 1", rarity: 5 },
       { name: "Swift Sparrow 2", rarity: 5 },
       { name: "Vantage 1", rarity: 5 },
@@ -3523,8 +3526,8 @@ module.exports = [
       { name: "Odd Atk Wave 3", rarity: 5 },
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp: 16, atk: 8, spd: 10, def: 4, res: 7 },
+      level40: { hp: [ 34, 38, 41 ], atk: [ 31, 34, 37 ], spd: [ 33, 36, 39 ], def: [ 13, 17, 20 ], res: [ 23, 26, 30 ] }
     }
   },
   {
@@ -3772,6 +3775,43 @@ module.exports = [
     stats: {
       level1: { hp: 16, atk: 9, spd: 7, def: 4, res: 8 },
       level40: { hp: [ 34, 38, 41 ], atk: [ 32, 35, 38 ], spd: [ 23, 26, 30 ], def: [ 13, 17, 20 ], res: [ 29, 32, 35 ] }
+    }
+  },
+  {
+    name: "Julius",
+    title: "Scion of Darkness",
+    artist: "sachie (茶ちえ)",
+    voice: "Griffin Burns",
+    releaseDate: "May 14, 2018",
+    colorType: "Red",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity3: ["pool2"],
+    rarity4: ["pool2"],
+    ghb: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Julius.png",
+      main: "img/heroes-main/Julius.png"
+    },
+    skills: [
+      { name: "Flux", rarity: 3 },
+      { name: "Ruin", rarity: 3 },
+      { name: "Fenrir", rarity: 4 },
+      { name: "Loptous", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 3 },
+      { name: "Draconic Aura", rarity: 4 },
+      { name: "Guard 1", rarity: 3 },
+      { name: "Guard 2", rarity: 4 },
+      { name: "Guard 3", rarity: 5 },
+      { name: "Atk Ploy 1", rarity: 3 },
+      { name: "Atk Ploy 2", rarity: 3 },
+      { name: "Atk Ploy 3", rarity: 4 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 9, spd: 8, def: 3, res: 9 },
+      level40: { hp: [ 35, 38, 41 ], atk: [ 32, 35, 38 ], spd: [ 24, 27, 30 ], def: [ 13, 16, 19 ], res: [ 32, 35, 38 ] },
+      level1_4: { hp: 15, atk: 9, spd: 7, def: 2, res: 9 },
+      level40_4: { hp: [ 32, 35, 38 ], atk: [ 30, 33, 36 ], spd: [ 22, 25, 28 ], def: [ 11, 14, 17 ], res: [ 30, 33, 36 ] }
     }
   },
   {
@@ -4255,7 +4295,7 @@ module.exports = [
       { name: "Safeguard", rarity: 5 },
       { name: "Safeguard+", rarity: 5 },
       { name: "Dance", rarity: 5 },
-      { name: "Blaze Dance 1", rarity: 5 },
+      { name: "Gale Dance 1", rarity: 5 },
       { name: "Firestorm Dance 1", rarity: 5 },
       { name: "Firestorm Dance 2", rarity: 5 },
       { name: "Sword Valor 1", rarity: 5 },
@@ -4263,8 +4303,8 @@ module.exports = [
       { name: "Sword Valor 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp: 16, atk: 6, spd: 7, def: 4, res: 6 },
+      level40: { hp: [ 32, 35, 39 ], atk: [ 24, 28, 31 ], spd: [ 32, 35, 38 ], def: [ 20, 23, 27 ], res: [ 24, 28, 31 ] }
     }
   },
   {
@@ -4639,6 +4679,7 @@ module.exports = [
       { name: "Steel Sword", rarity: 5 },
       { name: "Silver Sword", rarity: 5 },
       { name: "Falchion", rarity: 5 },
+      { name: "Sealed Falchion", rarity: 5 },
       { name: "New Moon", rarity: 5 },
       { name: "Luna", rarity: 5 },
       { name: "Aether", rarity: 5 },
@@ -5239,7 +5280,8 @@ module.exports = [
       { name: "Iron Sword", rarity: 4 },
       { name: "Steel Sword", rarity: 4 },
       { name: "Silver Sword", rarity: 4 },
-      { name: "Falchion", rarity: 5 }
+      { name: "Falchion", rarity: 5 },
+      { name: "Sealed Falchion", rarity: 5 }
     ],
     stats: {
       level1: { hp: 19, atk: 8, spd: 10, def: 6, res: 4 },

@@ -374,7 +374,7 @@ module.exports = [
   {
     name: "Firestorm Dance 1",
     spCost: 120,
-    icon: "0-0",
+    icon: "42-2",
     prev: ["Blaze Dance 1"],
     exclude: [{weaponType: "Staff"}],
     effect: "If Sing or Dance is used, target also granted Atk/Spd+2."
@@ -382,7 +382,7 @@ module.exports = [
   {
     name: "Firestorm Dance 2",
     spCost: 240,
-    icon: "0-0",
+    icon: "42-3",
     prev: ["Firestorm Dance 1"],
     exclude: [{weaponType: "Staff"}],
     effect: "If Sing or Dance is used, target also granted Atk/Spd+3."
@@ -806,7 +806,7 @@ module.exports = [
   {
     name: "Seal Def/Res 1",
     spCost: 100,
-    icon: "0-0",
+    icon: "42-0",
     prev: ["Seal Def 1", "Seal Res 1"],
     exclude: [{weaponType: "Staff"}],
     effect: "After combat, inflicts Def/Res-3 on foe through its next action."
@@ -814,7 +814,7 @@ module.exports = [
   {
     name: "Seal Def/Res 2",
     spCost: 200,
-    icon: "0-0",
+    icon: "42-1",
     prev: ["Seal Atk/Def 1"],
     exclude: [{weaponType: "Staff"}],
     effect: "After combat, inflicts Def/Res-5 on foe through its next action."

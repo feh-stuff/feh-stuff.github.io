@@ -563,7 +563,7 @@ module.exports = [
     colorType: "Green",
     prev: ["Brave Axe"],
     exclusive: ["Camilla"],
-    effect: ""
+    effect: "If unit is within 2 spaces of a cavalry or flying ally, grants Atk/Spd +4 during combat."
   },
   {
     name: "Candelabra",
@@ -2117,6 +2117,17 @@ module.exports = [
     effect: "Grants allies within 2 spaces Atk/Spd+1 during combat."
   },
   {
+    name: "Loptous",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Red",
+    prev: ["Fenrir"],
+    exclusive: ["Julius"],
+    effect: "Grants Res+3. Skills with \"effective against dragons\" are effective against unit. If foe has no skills with \"effective against dragons\", inflicts Atk-6 on foe during combat.",
+  },
+  {
     name: "Meisterschwert",
     spCost: 400,
     damage: 11,
@@ -2553,7 +2564,7 @@ module.exports = [
     colorType: "Blue",
     prev: ["Silver Lance"],
     exclusive: ["Clair"],
-    effect: ""
+    effect: "Effective against armored and cavalry foes."
   },
   {
     name: "Ridersbane",
@@ -2693,7 +2704,7 @@ module.exports = [
     weaponType: "Sword",
     colorType: "Red",
     prev: ["Silver Sword"],
-    exclusive: ["Chrom (The Branded King)"],
+    exclusive: ["Chrom (The Branded King)", "Chrom", "Lucina", "Marth (Masked)"],
     effect: "Effective against dragons. If unit's HP < 100% at start of combat, grants Atk/Spd/Def/Res+5 during combat.",
   },
   {
