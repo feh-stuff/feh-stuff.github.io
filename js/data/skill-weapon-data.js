@@ -2123,6 +2123,7 @@ module.exports = [
     range: 2,
     weaponType: "Tome",
     colorType: "Red",
+    stats: {res: 3},
     prev: ["Fenrir"],
     exclusive: ["Julius"],
     effect: "Grants Res+3. Skills with \"effective against dragons\" are effective against unit. If foe has no skills with \"effective against dragons\", inflicts Atk-6 on foe during combat.",
