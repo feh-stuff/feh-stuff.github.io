@@ -11,7 +11,7 @@ module.exports = [
     name: "Dance",
     range: 1,
     spCost: 150,
-    include: [{name: "Olivia"},{name: "Ninian"},{name: "Olivia (Performing Arts)"},{name: "Inigo (Performing Arts)"},{name: "Lene"}],
+    include: [{name: "Olivia"},{name: "Ninian"},{name: "Olivia (Performing Arts)"},{name: "Inigo (Performing Arts)"},{name: "Lene"},{name: "Ninian (Bridal Bloom)"}],
     last: true,
     effect: "Enables target to take another action. Cannot be used on units with Sing or Dance."
   },

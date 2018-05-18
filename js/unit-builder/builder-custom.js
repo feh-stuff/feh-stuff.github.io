@@ -35,7 +35,9 @@ let customUnit = {
     skillB: utils.getEmptySkill(),
     skillC: utils.getEmptySkill(),
     seal: utils.getEmptySkill()
-  }
+  },
+  sp: values.CONST.MAX_SP,
+  hm: values.CONST.MAX_HM
 };
 
 function init(canvasObj) {

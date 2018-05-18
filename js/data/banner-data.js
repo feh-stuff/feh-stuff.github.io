@@ -1,5 +1,55 @@
 module.exports = [
   {
+    date: "May 2018",
+    banners: [
+      {
+        name: "Bridal Bloom",
+        startDate: "May 21, 2018",
+        focusHeroes: [ "Ninian (Bridal Bloom)", "Tharja (Bridal Bloom)", "Sanaki (Bridal Bloom)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "New Power (May 2018)",
+        startDate: "May 16, 2018",
+        focusHeroes: [ "Camilla", "Corrin (M)", "Clair" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Genealogy",
+        startDate: "May 10, 2018",
+        focusHeroes: [ "Ares", "Lene", "Ishtar" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Countering Weapon Skills",
+        startDate: "May 4, 2018",
+        focusHeroes: [ "Ryoma", "Nowi", "Dorcas" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [ "Kana (F)", "Shigure", "Hinoka (Wings of Fate)" ],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Legendary Heroes: Lyn, Lady of the Wind",
+        startDate: "May 1, 2018",
+        focusHeroes: [ "Lyn (Legendary Heroes)", "Henry (Trick or Defeat!)", "Inigo (Performing Arts)", "Celica (Fallen Heroes)", "Eirika (Sacred Memories)", "Ike (Legendary Heroes)", "Ephraim (Legendary Heroes)", "Micaiah", "Shigure (Performing Arts)", "Genny", "Jakob (Trick or Defeat!)", "Robin (F) (Legendary Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [ "Kana (F)", "Shigure", "Hinoka (Wings of Fate)" ],
+        rateType: "legendaryV1",
+        pool: "pool2"
+      }
+    ]
+  },
+  {
     date: "April 2018",
     banners: [
       {
