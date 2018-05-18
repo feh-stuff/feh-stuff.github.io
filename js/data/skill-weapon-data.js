@@ -1270,6 +1270,26 @@ module.exports = [
     effect: "At start of turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action.",
   },
   {
+    name: "Fresh Bouquet",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Elthunder"],
+    effect: "At start of turn, if unit is adjacent to an ally, grants Spd+4 to unit and adjacent allies for 1 turn."
+  },
+  {
+    name: "Fresh Bouquet+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Fresh Bouquet"],
+    effect: "At start of turn, if unit is adjacent to an ally, grants Spd+4 to unit and adjacent allies for 1 turn."
+  },
+  {
     name: "Fujin Yumi",
     spCost: 400,
     damage: 14,
@@ -2216,6 +2236,18 @@ module.exports = [
     effect: "Effective against flying units.  Grants Spd+3. If foe is magic user, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat."
   },
   {
+    name: "Múspell Fireposy",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Red",
+    stats: {spd: 3},
+    prev: ["Fenrir"],
+    exclusive: ["Tharja (Bridal Bloom)"],
+    effect: "Grants Spd+3. During combat, boosts unit's Atk/Spd by number of allies within 2 spaces x 2. (Maximum bonus of +6 to each stat.)",
+  },
+  {
     name: "Mystletainn",
     spCost: 400,
     damage: 16,
@@ -2269,6 +2301,18 @@ module.exports = [
     prev: ["Silver Bow"],
     exclusive: ["Innes"],
     effect: "Effective against flying units.  During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
+  },
+  {
+    name: "Nifl Frostflowers",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    stats: {atk: 3},
+    prev: ["Rexcalibur"],
+    exclusive: ["Sanaki (Bridal Bloom)"],
+    effect: "Grants Atk+3. During combat, boosts unit's Atk/Spd by number of allies within 2 spaces x 2. (Maximum bonus of +6 to each stat.)"
   },
   {
     name: "Nóatún",

@@ -165,6 +165,26 @@ module.exports = [
     effect: "Any weapon triangle affinity granted by unit's skills is negated. If affinity disadvantage exists, weapon triangle affinity granted by foe's skills is reversed."
   },
   {
+    name: "Chill Atk 1",
+    spCost: 60,
+    icon: "0-0",
+    effect: "At the start of each turn, inflicts Atk-3 on foe on the enemy team with the highest Def through its next action."
+  },
+  {
+    name: "Chill Atk 2",
+    spCost: 120,
+    icon: "0-0",
+    prev: ["Chill Atk 1"],
+    effect: "At the start of each turn, inflicts Atk-5 on foe on the enemy team with the highest Def through its next action."
+  },
+  {
+    name: "Chill Atk 3",
+    spCost: 240,
+    icon: "0-0",
+    prev: ["Chill Atk 2"],
+    effect: "At the start of each turn, inflicts Atk-7 on foe on the enemy team with the highest Def through its next action."
+  },
+  {
     name: "Chill Def 1",
     spCost: 60,
     icon: "38-9",
@@ -280,6 +300,26 @@ module.exports = [
     prev: ["Dazzling Staff 2"],
     include: [{weaponType: "Staff"}],
     effect: "The enemy cannot counterattack."
+  },
+  {
+    name: "Def/Res Link 1",
+    spCost: 60,
+    icon: "0-0",
+    effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Def/Res+2 to unit and target ally or unit and targeting ally for 1 turn."
+  },
+  {
+    name: "Def/Res Link 2",
+    spCost: 120,
+    icon: "0-0",
+    prev: ["Def/Res Link 1"],
+    effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Def/Res+4 to unit and target ally or unit and targeting ally for 1 turn."
+  },
+  {
+    name: "Def/Res Link 3",
+    spCost: 240,
+    icon: "0-0",
+    prev: ["Def/Res Link 2"],
+    effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Def/Res+6 to unit and target ally or unit and targeting ally for 1 turn."
   },
   {
     name: "Desperation 1",
@@ -897,6 +937,26 @@ module.exports = [
     icon: "38-3",
     include: [{name:"Ephraim (Legendary Heroes)"}],
     effect: "Restores 30% of damage dealt when Special triggers during combat. (Stacks with effects of skills like Sol.)"
+  },
+  {
+    name: "Spd Feint 1",
+    spCost: 60,
+    icon: "0-0",
+    effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Spd-3 on foes in cardinal directions of unit through their next action."
+  },
+  {
+    name: "Spd Feint 2",
+    spCost: 120,
+    icon: "0-0",
+    prev: ["Spd Feint 1"],
+    effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Spd-5 on foes in cardinal directions of unit through their next action."
+  },
+  {
+    name: "Spd Feint 3",
+    spCost: 240,
+    icon: "0-0",
+    prev: ["Spd Feint 2"],
+    effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Spd-7 on foes in cardinal directions of unit through their next action."
   },
   {
     name: "Swordbreaker 1",

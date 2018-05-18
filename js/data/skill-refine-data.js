@@ -2110,6 +2110,32 @@ module.exports = {
       effect: "If foe initiates combat, grants Def+7 during combat."
     }
   ],
+  "Fresh Bouquet+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "At start of turn, if unit is adjacent to an ally, grants Spd+4 to unit and adjacent allies for 1 turn."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "At start of turn, if unit is adjacent to an ally, grants Spd+4 to unit and adjacent allies for 1 turn."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "At start of turn, if unit is adjacent to an ally, grants Spd+4 to unit and adjacent allies for 1 turn."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "At start of turn, if unit is adjacent to an ally, grants Spd+4 to unit and adjacent allies for 1 turn."
+    }
+  ],
 
   // prf weapons
   "Sol Katti": [

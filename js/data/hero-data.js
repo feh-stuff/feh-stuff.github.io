@@ -5886,6 +5886,40 @@ module.exports = [
     }
   },
   {
+    name: "Ninian (Bridal Bloom)",
+    shortName: "Ninian",
+    title: "Bright-Eyed Bride",
+    artist: "Enkyo Yuichiro (円居雄一郎)",
+    voice: "Brianna Knickerbocker",
+    releaseDate: "May 21, 2018",
+    colorType: "Blue",
+    weaponType: "Tome",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Ninian (Bridal Bloom).png",
+      main: "img/heroes-main/Ninian (Bridal Bloom).png"
+    },
+    skills: [
+      { name: "Thunder", rarity: 5 },
+      { name: "Elthunder", rarity: 5 },
+      { name: "Fresh Bouquet", rarity: 5 },
+      { name: "Fresh Bouquet+", rarity: 5 },
+      { name: "Dance", rarity: 5 },
+      { name: "Chill Atk 1", rarity: 5 },
+      { name: "Chill Atk 2", rarity: 5 },
+      { name: "Chill Atk 3", rarity: 5 },
+      { name: "Spur Spd 1", rarity: 5 },
+      { name: "Drive Spd 1", rarity: 5 },
+      { name: "Drive Spd 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+    }
+  },
+  {
     name: "Nino",
     title: "Pious Mage",
     artist: "Amagaitaro (アマガイタロー)",
@@ -7229,6 +7263,40 @@ module.exports = [
     }
   },
   {
+    name: "Sanaki (Bridal Bloom)",
+    shortName: "Sanaki",
+    artist: "Tomioka Jiro (富岡二郎)",
+    voice: "Sara Beth",
+    title: "Apostle in White",
+    releaseDate: "May 21, 2018",
+    colorType: "Green",
+    weaponType: "Tome",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Sanaki (Bridal Bloom).png",
+      main: "img/heroes-main/Sanaki (Bridal Bloom).png"
+    },
+    skills: [
+      { name: "Wind", rarity: 5 },
+      { name: "Elwind", rarity: 5 },
+      { name: "Rexcalibur", rarity: 5 },
+      { name: "Nifl Frostflowers", rarity: 5 },
+      { name: "Draw Back", rarity: 5 },
+      { name: "Atk/Res Bond 1", rarity: 5 },
+      { name: "Atk/Res Bond 2", rarity: 5 },
+      { name: "Atk/Res Bond 3", rarity: 5 },
+      { name: "Def/Res Link 1", rarity: 5 },
+      { name: "Def/Res Link 2", rarity: 5 },
+      { name: "Def/Res Link 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+    }
+  },
+  {
     name: "Selena",
     title: "Cutting Wit",
     artist: "Zaza (ザザ)",
@@ -8208,6 +8276,41 @@ module.exports = [
       level40: { hp: [ 35, 39, 42 ], atk: [ 29, 32, 35 ], spd: [ 31, 34, 37 ], def: [ 20, 23, 26 ], res: [ 17, 20, 23 ] },
       level1_4: { hp: 16, atk: 8, spd: 8, def: 5, res: 4 },
       level40_4: { hp: [ 33, 36, 39 ], atk: [ 27, 30, 33 ], spd: [ 29, 32, 35 ], def: [ 18, 21, 24 ], res: [ 15, 18, 21 ] }
+    }
+  },
+  {
+    name: "Tharja (Bridal Bloom)",
+    shortName: "Tharja",
+    title: "Obsessive Bride",
+    artist: "Sencha (煎茶)",
+    voice: "Stephanie Sheh",
+    releaseDate: "May 21, 2018",
+    colorType: "Red",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Tharja (Bridal Bloom).png",
+      main: "img/heroes-main/Tharja (Bridal Bloom).png"
+    },
+    skills: [
+      { name: "Flux", rarity: 5 },
+      { name: "Ruin", rarity: 5 },
+      { name: "Fenrir", rarity: 5 },
+      { name: "Múspell Fireposy", rarity: 5 },
+      { name: "Rally Attack", rarity: 5 },
+      { name: "Rally Atk/Spd", rarity: 5 },
+      { name: "Atk/Spd Bond 1", rarity: 5 },
+      { name: "Atk/Spd Bond 2", rarity: 5 },
+      { name: "Atk/Spd Bond 3", rarity: 5 },
+      { name: "Spd Feint 1", rarity: 5 },
+      { name: "Spd Feint 2", rarity: 5 },
+      { name: "Spd Feint 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
     }
   },
   {
