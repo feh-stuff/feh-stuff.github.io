@@ -2136,6 +2136,32 @@ module.exports = {
       effect: "At start of turn, if unit is adjacent to an ally, grants Spd+4 to unit and adjacent allies for 1 turn."
     }
   ],
+  "Ardent Service+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 2},
+      effect: "At start of turn, if unit is adjacent to an ally, grants Atk+4 to unit and adjacent allies for 1 turn."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, spd: 3},
+      effect: "At start of turn, if unit is adjacent to an ally, grants Atk+4 to unit and adjacent allies for 1 turn."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, def: 4},
+      effect: "At start of turn, if unit is adjacent to an ally, grants Atk+4 to unit and adjacent allies for 1 turn."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, res: 4},
+      effect: "At start of turn, if unit is adjacent to an ally, grants Atk+4 to unit and adjacent allies for 1 turn."
+    }
+  ],
 
   // prf weapons
   "Sol Katti": [

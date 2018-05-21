@@ -42,6 +42,26 @@ module.exports = [
     effect: "Spd-2. Attack twice when initiating combat."
   },
   {
+    name: "Ardent Service",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Steel Axe"],
+    effect: "At start of turn, if unit is adjacent to an ally, grants Atk+4 to unit and adjacent allies for 1 turn."
+  },
+  {
+    name: "Ardent Service+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Ardent Service"],
+    effect: "At start of turn, if unit is adjacent to an ally, grants Atk+4 to unit and adjacent allies for 1 turn."
+  },
+  {
     name: "Armads",
     spCost: 400,
     damage: 16,

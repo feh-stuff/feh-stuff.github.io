@@ -257,28 +257,31 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Cavalry",
+    rarity4: ["pool2"],
     rarity5: ["pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ares.png",
       main: "img/heroes-main/Ares.png"
     },
     skills: [
-      { name: "Iron Sword", rarity: 5 },
-      { name: "Steel Sword", rarity: 5 },
-      { name: "Slaying Edge", rarity: 5 },
+      { name: "Iron Sword", rarity: 4 },
+      { name: "Steel Sword", rarity: 4 },
+      { name: "Slaying Edge", rarity: 4 },
       { name: "Dark Mystletainn", rarity: 5 },
       { name: "Dragon Gaze", rarity: 4 },
       { name: "Draconic Aura", rarity: 4 },
-      { name: "Brazen Atk/Def 1", rarity: 5 },
-      { name: "Brazen Atk/Def 2", rarity: 5 },
-      { name: "Brazen Atk/Def 3", rarity: 5 },
-      { name: "Seal Def 1", rarity: 5 },
-      { name: "Seal Def/Res 1", rarity: 5 },
+      { name: "Brazen Atk/Def 1", rarity: 4 },
+      { name: "Brazen Atk/Def 2", rarity: 4 },
+      { name: "Brazen Atk/Def 3", rarity: 4 },
+      { name: "Seal Def 1", rarity: 4 },
+      { name: "Seal Def/Res 1", rarity: 4 },
       { name: "Seal Def/Res 2", rarity: 5 },
     ],
     stats: {
       level1: { hp: 18, atk: 8, spd: 8, def: 7, res: 5 },
-      level40: { hp: [ 36, 40, 43 ], atk: [ 33, 36, 39 ], spd: [ 26, 30, 33 ], def: [ 30, 33, 36 ], res: [ 14, 18, 21 ] }
+      level40: { hp: [ 36, 40, 43 ], atk: [ 33, 36, 39 ], spd: [ 26, 30, 33 ], def: [ 30, 33, 36 ], res: [ 14, 18, 21 ] },
+      level1_4: { hp: 17, atk: 8, spd: 8, def: 6, res: 4 },
+      level40_4: { hp: [ 34, 37, 40 ], atk: [ 31, 34, 37 ], spd: [ 25, 28, 31 ], def: [ 27, 30, 33 ], res: [ 13, 16, 19 ] }
     }
   },
   {
@@ -5260,6 +5263,44 @@ module.exports = [
     }
   },
   {
+    name: "Marth (Bridal Bloom)",
+    shortName: "Marth",
+    title: "Altean Groom",
+    artist: "Mayo (まよ)",
+    voice: "Yuri Lowenthal",
+    releaseDate: "May 25, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Cavalry",
+    rarity4: ["pool2"],
+    rarity5: ["pool2"],
+    ttReward: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Marth (Bridal Bloom).png",
+      main: "img/heroes-main/Marth (Bridal Bloom).png"
+    },
+    skills: [
+      {  name: "Iron Axe", rarity: 4 },
+      {  name: "Steel Axe", rarity: 4 },
+      {  name: "Ardent Service", rarity: 4 },
+      {  name: "Ardent Service+", rarity: 5 },
+      {  name: "Rally Speed", rarity: 4 },
+      {  name: "Rally Spd/Def", rarity: 4 },
+      {  name: "Wings of Mercy 1", rarity: 4 },
+      {  name: "Wings of Mercy 2", rarity: 4 },
+      {  name: "Wings of Mercy 3", rarity: 5 },
+      {  name: "Spur Atk 1", rarity: 4 },
+      {  name: "Drive Atk 1", rarity: 4 },
+      {  name: "Drive Atk 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 7, spd: 10, def: 6, res: 5 },
+      level40: { hp: [ 37, 40, 43 ], atk: [ 28, 31, 34 ], spd: [ 33, 36, 39 ], def: [ 27, 30, 33 ], res: [ 17, 20, 23 ] },
+      level1_4: { hp: 17, atk: 7, spd: 10, def: 5, res: 4 },
+      level40_4: { hp: [ 34, 37, 40 ], atk: [ 26, 29, 32 ], spd: [ 31, 34, 37 ], def: [ 24, 27, 30 ], res: [ 15, 18, 21 ] }
+    }
+  },
+  {
     name: "Marth (Masked)",
     shortName: "Marth",
     title: "Enigmatic Blade",
@@ -5902,8 +5943,8 @@ module.exports = [
       main: "img/heroes-main/Ninian (Bridal Bloom).png"
     },
     skills: [
-      { name: "Thunder", rarity: 5 },
-      { name: "Elthunder", rarity: 5 },
+      { name: "Light", rarity: 5 },
+      { name: "Ellight", rarity: 5 },
       { name: "Fresh Bouquet", rarity: 5 },
       { name: "Fresh Bouquet+", rarity: 5 },
       { name: "Dance", rarity: 5 },
@@ -5915,8 +5956,8 @@ module.exports = [
       { name: "Drive Spd 2", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp: 15, atk: 6, spd: 7, def: 3, res: 5 },
+      level40: { hp: [ 31, 34, 38 ], atk: [ 24, 28, 31 ], spd: [ 30, 33, 36 ], def: [ 15, 18, 21 ], res: [ 23, 27, 30 ] }
     }
   },
   {
@@ -7292,8 +7333,8 @@ module.exports = [
       { name: "Def/Res Link 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp: 16, atk: 10, spd: 8, def: 3, res: 7 },
+      level40: { hp: [ 32, 35, 39 ], atk: [ 33, 36, 39 ], spd: [ 26, 30, 33 ], def: [ 12, 16, 19 ], res: [ 30, 33, 36 ] }
     }
   },
   {
@@ -8299,7 +8340,7 @@ module.exports = [
       { name: "Ruin", rarity: 5 },
       { name: "Fenrir", rarity: 5 },
       { name: "Múspell Fireposy", rarity: 5 },
-      { name: "Rally Attack", rarity: 5 },
+      { name: "Rally Speed", rarity: 5 },
       { name: "Rally Atk/Spd", rarity: 5 },
       { name: "Atk/Spd Bond 1", rarity: 5 },
       { name: "Atk/Spd Bond 2", rarity: 5 },
@@ -8309,8 +8350,8 @@ module.exports = [
       { name: "Spd Feint 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp: 17, atk: 9, spd: 9, def: 6, res: 4 },
+      level40: { hp: [ 35, 39, 42 ], atk: [ 32, 35, 38 ], spd: [ 32, 35, 38 ], def: [ 18, 21, 24 ], res: [ 18, 21, 24 ] }
     }
   },
   {

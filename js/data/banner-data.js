@@ -15,7 +15,7 @@ module.exports = [
         name: "New Power (May 2018)",
         startDate: "May 16, 2018",
         focusHeroes: [ "Camilla", "Corrin (M)", "Clair" ],
-        excludeFromRarity4: [],
+        excludeFromRarity4: [ "Ares" ],
         excludeFromRarity5: [],
         rateType: "defaultV2",
         pool: "pool2"
@@ -24,7 +24,7 @@ module.exports = [
         name: "Genealogy",
         startDate: "May 10, 2018",
         focusHeroes: [ "Ares", "Lene", "Ishtar" ],
-        excludeFromRarity4: [],
+        excludeFromRarity4: [ "Ares" ],
         excludeFromRarity5: [],
         rateType: "defaultV2",
         pool: "pool2"
