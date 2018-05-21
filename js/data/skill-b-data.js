@@ -167,20 +167,20 @@ module.exports = [
   {
     name: "Chill Atk 1",
     spCost: 60,
-    icon: "0-0",
+    icon: "42-7",
     effect: "At the start of each turn, inflicts Atk-3 on foe on the enemy team with the highest Def through its next action."
   },
   {
     name: "Chill Atk 2",
     spCost: 120,
-    icon: "0-0",
+    icon: "42-8",
     prev: ["Chill Atk 1"],
     effect: "At the start of each turn, inflicts Atk-5 on foe on the enemy team with the highest Def through its next action."
   },
   {
     name: "Chill Atk 3",
     spCost: 240,
-    icon: "0-0",
+    icon: "42-9",
     prev: ["Chill Atk 2"],
     effect: "At the start of each turn, inflicts Atk-7 on foe on the enemy team with the highest Def through its next action."
   },
@@ -304,20 +304,20 @@ module.exports = [
   {
     name: "Def/Res Link 1",
     spCost: 60,
-    icon: "0-0",
+    icon: "42-10",
     effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Def/Res+2 to unit and target ally or unit and targeting ally for 1 turn."
   },
   {
     name: "Def/Res Link 2",
     spCost: 120,
-    icon: "0-0",
+    icon: "42-11",
     prev: ["Def/Res Link 1"],
     effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Def/Res+4 to unit and target ally or unit and targeting ally for 1 turn."
   },
   {
     name: "Def/Res Link 3",
     spCost: 240,
-    icon: "0-0",
+    icon: "42-12",
     prev: ["Def/Res Link 2"],
     effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Def/Res+6 to unit and target ally or unit and targeting ally for 1 turn."
   },
@@ -941,20 +941,20 @@ module.exports = [
   {
     name: "Spd Feint 1",
     spCost: 60,
-    icon: "0-0",
+    icon: "43-0",
     effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Spd-3 on foes in cardinal directions of unit through their next action."
   },
   {
     name: "Spd Feint 2",
     spCost: 120,
-    icon: "0-0",
+    icon: "43-1",
     prev: ["Spd Feint 1"],
     effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Spd-5 on foes in cardinal directions of unit through their next action."
   },
   {
     name: "Spd Feint 3",
     spCost: 240,
-    icon: "0-0",
+    icon: "43-2",
     prev: ["Spd Feint 2"],
     effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Spd-7 on foes in cardinal directions of unit through their next action."
   },
