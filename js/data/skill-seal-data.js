@@ -39,6 +39,18 @@ module.exports = [
     effect: "Grants Atk+3."
   },
   {
+    name: "Atk/Def 1",
+    icon: "14-5",
+    stats: {atk: 1, def: 1},
+    effect: "Grants Atk/Def+1."
+  },
+  {
+    name: "Atk/Def 2",
+    icon: "14-6",
+    stats: {atk: 2, def: 2},
+    effect: "Grants Atk/Def+2."
+  },
+  {
     name: "Atk Smoke 1",
     icon: "26-8",
     exclude: [{weaponType: "Staff"}],
@@ -303,6 +315,24 @@ module.exports = [
     icon: "25-2",
     stats: {atk: -3, res: 5},
     effect: "Grants Res+5. Inflicts Atk-3."
+  },
+  {
+    name: "Flier Formation 1",
+    icon: "27-0",
+    include: [{moveType: "Flying"}],
+    effect: "If unit has 100% HP, unit can move to a space adjacent to a flier ally within 2 spaces."
+  },
+  {
+    name: "Flier Formation 2",
+    icon: "27-1",
+    include: [{moveType: "Flying"}],
+    effect: "If unit has ≥ 50% HP, unit can move to a space adjacent to a flier ally within 2 spaces."
+  },
+  {
+    name: "Flier Formation 3",
+    icon: "27-2",
+    include: [{moveType: "Flying"}],
+    effect: "Unit can move to a space adjacent to a flier ally within 2 spaces."
   },
   {
     name: "Guidance 1",
@@ -671,6 +701,24 @@ module.exports = [
     icon: "7-10",
     exclude: [{weaponType: "Staff"}],
     effect: "After combat, foe suffers Spd-7 through its next action."
+  },
+  {
+    name: "Spd Smoke 1",
+    icon: "29-10",
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Spd-3 on foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Spd Smoke 2",
+    icon: "29-11",
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Spd-5 on foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Spd Smoke 3",
+    icon: "29-12",
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Spd-7 on foes within 2 spaces of target through their next actions."
   },
   {
     name: "Speed +1",
