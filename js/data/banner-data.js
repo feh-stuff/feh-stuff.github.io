@@ -3,6 +3,33 @@ module.exports = [
     date: "May 2018",
     banners: [
       {
+        name: "Legendary Heroes: Ryoma, Supreme Samurai",
+        startDate: "May 31, 2018",
+        focusHeroes: [ "Chrom (Winter's Envoy)", "Azura (Happy New Year!)", "Gunnthrá", "Sigurd", "Tiki (Young)", "Ryoma (Legendary Heroes)", "Fjorm", "Robin (M) (Winter's Envoy)", "Hardin (Fallen Heroes)","Innes", "Takumi (Happy New Year!)", "Robin (F) (Legendary Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "legendaryV1",
+        pool: "pool2"
+      },
+      {
+        name: "Bridal Blessings (2018)",
+        startDate: "May 26, 2018",
+        focusHeroes: [ "Caeda (Bridal Blessings)", "Charlotte (Bridal Blessings)", "Cordelia (Bridal Blessings)", "Lyn (Bridal Blessings)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Loki's Flames Tempest Trials",
+        startDate: "May 22, 2018",
+        focusHeroes: [ "Marth", "Tharja", "Ninian", "Sanaki" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "Bridal Bloom",
         startDate: "May 21, 2018",
         focusHeroes: [ "Ninian (Bridal Bloom)", "Tharja (Bridal Bloom)", "Sanaki (Bridal Bloom)" ],

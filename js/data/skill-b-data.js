@@ -142,6 +142,13 @@ module.exports = [
     effect: "Unit automatically makes a follow-up when at HP ≤ 50% and attacking a foe that can counter."
   },
   {
+    name: "Bushido",
+    spCost: 300,
+    icon: "0-0",
+    include: [{name:"Ryoma (Legendary Heroes)"}],
+    effect: "Deals +10 damage when Special triggers."
+  },
+  {
     name: "Cancel Affinity 1",
     spCost: 50,
     icon: "22-3",
