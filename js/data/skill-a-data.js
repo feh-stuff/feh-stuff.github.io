@@ -788,6 +788,21 @@ module.exports = [
     effect: "Neutralizes \"effective against\" bonuses.",
   },
   {
+    name: "Kestrel Stance 1",
+    spCost: 100,
+    icon: "0-0",
+    prev: ["Kestrel Stance 1"],
+    effect: "Grants Atk/Spd+2 during combat when this unit is attacked."
+  },
+  {
+    name: "Kestrel Stance 2",
+    spCost: 200,
+    icon: "0-0",
+    prev: ["Kestrel Stance 1"],
+    last: true,
+    effect: "Grants Atk/Spd+4 during combat when this unit is attacked."
+  },
+  {
     name: "Laws of Sacae",
     spCost: 300,
     icon: "41-7",

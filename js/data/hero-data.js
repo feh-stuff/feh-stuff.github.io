@@ -7096,6 +7096,40 @@ module.exports = [
     }
   },
   {
+    name: "Ryoma (Legendary Heroes)",
+    title: "Supreme Samurai",
+    artist: "Kita Senri (北千里)",
+    voice: "Matt Mercer",
+    releaseDate: "May 31, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Ryoma (Legendary Heroes).png",
+      main: "img/heroes-main/Ryoma.png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Raijinto", rarity: 5 },
+      { name: "Night Sky", rarity: 5 },
+      { name: "Glimmer", rarity: 5 },
+      { name: "Fierce Stance 1", rarity: 5 },
+      { name: "Kestrel Stance 1", rarity: 5 },
+      { name: "Kestrel Stance 2", rarity: 5 },
+      { name: "Bushido", rarity: 5 },
+      { name: "Guidance 1", rarity: 5 },
+      { name: "Guidance 2", rarity: 5 },
+      { name: "Guidance 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 19, atk: 8, spd: 11, def: 5, res: 4 },
+      level40: { hp: [ 37, 41, 44 ], atk: [ 31, 34, 37 ], spd: [ 32, 35, 38 ], def: [ 23, 27, 30 ], res: [ 18, 21, 24 ] }
+    }
+  },
+  {
     name: "Saber",
     title: "Driven Mercenary",
     artist: "PenekoR (п猫R)",
@@ -7974,10 +8008,6 @@ module.exports = [
     voice: "Nicolas Roye",
     releaseDate: "Jan 12, 2018",
     colorType: "Neutral",
-    weaponType: "Dagger",
-    moveType: "Infantry",
-    rarity4: ["pool1", "pool2"],
-    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sothe.png",
       main: "img/heroes-main/Sothe.png"
