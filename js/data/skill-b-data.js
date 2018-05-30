@@ -144,7 +144,7 @@ module.exports = [
   {
     name: "Bushido",
     spCost: 300,
-    icon: "0-0",
+    icon: "43-5",
     include: [{name:"Ryoma (Legendary Heroes)"}],
     effect: "Deals +10 damage when Special triggers."
   },

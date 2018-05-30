@@ -790,14 +790,14 @@ module.exports = [
   {
     name: "Kestrel Stance 1",
     spCost: 100,
-    icon: "0-0",
-    prev: ["Kestrel Stance 1"],
+    icon: "43-3",
+    prev: ["Fierce Stance 1"],
     effect: "Grants Atk/Spd+2 during combat when this unit is attacked."
   },
   {
     name: "Kestrel Stance 2",
     spCost: 200,
-    icon: "0-0",
+    icon: "43-4",
     prev: ["Kestrel Stance 1"],
     last: true,
     effect: "Grants Atk/Spd+4 during combat when this unit is attacked."

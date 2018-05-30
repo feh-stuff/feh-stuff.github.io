@@ -34,5 +34,11 @@ module.exports = [
     type: "Wind",
     stats: { hp: 3, atk: 2 },
     icon: 5
+  },
+  {
+    hero: "Ryoma (Legendary Heroes)",
+    type: "Water",
+    stats: { hp: 3, def: 4 },
+    icon: 6
   }
 ];
