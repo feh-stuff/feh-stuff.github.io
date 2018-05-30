@@ -2474,7 +2474,7 @@ module.exports = [
     weaponType: "Sword",
     colorType: "Red",
     prev: ["Silver Sword"],
-    exclusive: ["Ryoma"],
+    exclusive: ["Ryoma", "Ryoma (Legendary Heroes)"],
     effect: "Enables counterattack regardless of distance if this unit is attacked.",
   },
   {

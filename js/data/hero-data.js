@@ -7097,6 +7097,7 @@ module.exports = [
   },
   {
     name: "Ryoma (Legendary Heroes)",
+    shortName: "Ryoma",
     title: "Supreme Samurai",
     artist: "Kita Senri (北千里)",
     voice: "Matt Mercer",
@@ -7105,9 +7106,10 @@ module.exports = [
     weaponType: "Sword",
     moveType: "Flying",
     rarity5: ["pool2"],
+    limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ryoma (Legendary Heroes).png",
-      main: "img/heroes-main/Ryoma.png"
+      main: "img/heroes-main/Ryoma (Legendary Heroes).png"
     },
     skills: [
       { name: "Iron Sword", rarity: 5 },
@@ -7125,8 +7127,8 @@ module.exports = [
       { name: "Guidance 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 19, atk: 8, spd: 11, def: 5, res: 4 },
-      level40: { hp: [ 37, 41, 44 ], atk: [ 31, 34, 37 ], spd: [ 32, 35, 38 ], def: [ 23, 27, 30 ], res: [ 18, 21, 24 ] }
+      level1: { hp: 17, atk: 8, spd: 11, def: 6, res: 5 },
+      level40: { hp: [ 38, 41, 44 ], atk: [ 31, 34, 37 ], spd: [ 36, 39, 42 ], def: [ 24, 28, 31 ], res: [ 17, 20, 23 ] }
     }
   },
   {
