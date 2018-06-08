@@ -202,7 +202,7 @@ module.exports = [
     range: 1,
     weaponType: "Axe",
     colorType: "Green",
-    exclusive: ["Raven"],
+    exclusive: ["Raven", "Linus"],
     // prev: ["Brave Axe"],
     effect: "Accelerates Special trigger (cooldown count -1)."
   },
@@ -551,6 +551,15 @@ module.exports = [
     stats: {spd: -5},
     prev: ["Brave Sword"],
     effect: "Spd-5. Attack twice when initiating combat."
+  },
+  {
+    name: "Breath of Fog",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Breath",
+    exclusive: ["Tiki (Adult)", "Tiki (Young)"],
+    effect: "Effective against dragon foes. At the start of every second turn, restores 10 HP. If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
   },
   {
     name: "Bright Naginata",
@@ -1351,6 +1360,18 @@ module.exports = [
     colorType: "Green",
     prev: ["Giant Spoon"],
     effect: "Deals +10 to damage when Special triggers."
+  },
+  {
+    name: "Giga Excalibur",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    prev: ["Rexcalibur"],
+    stats: {spd: 3},
+    exclusive: ["Nino (Scattered Fangs)"],
+    effect: "Grants Spd+3. If unit's Spd > foe's Spd, boosts damage dealt by 70% of difference between stats. (Maximum bonus of +7 damage. Combos with Phantom Spd.)",
   },
   {
     name: "Gleipnir",
@@ -3283,6 +3304,26 @@ module.exports = [
     effect: "Grants Res+3. Effective against armored and cavalry foes. Against armored and cavalry foes using bow, dagger, magic, or staff, damage from first attack received by unit during combat reduced by 30%."
   },
   {
+    name: "The Cleaner",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Dagger",
+    colorType: "Neutral",
+    prev: ["Steel Dagger"],
+    effect: "Adds total bonuses on foe to damage dealt during combat. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "The Cleaner+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Dagger",
+    colorType: "Neutral",
+    prev: ["The Cleaner"],
+    effect: "Adds total bonuses on foe to damage dealt during combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+  },
+  {
     name: "Thökk",
     spCost: 400,
     damage: 14,
@@ -3407,6 +3448,17 @@ module.exports = [
     prev: ["Bolganone"],
     exclusive: ["Arvis"],
     effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk/Res-4 until the end of foe's next action.",
+  },
+  {
+    name: "Vassal's Blade",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    exclusive: ["Karla"],
+    prev: ["Silver Sword"],
+    effect: "Accelerates Special trigger (cooldown count-1). If unit's Spd > foe's Spd, boosts damage dealt by 70% of difference between stats. (Maximum bonus of +7 damage. Combos with Phantom Spd.)"
   },
   {
     name: "Vidofnir",

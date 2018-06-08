@@ -245,6 +245,24 @@ module.exports = [
     effect: "Grants allies within 2 spaces Def+3 during combat."
   },
   {
+    name: "Earth Dance 1",
+    icon: "34-12",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Def+2."
+  },
+  {
+    name: "Earth Dance 2",
+    icon: "35-0",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Def+3."
+  },
+  {
+    name: "Earth Dance 3",
+    icon: "35-1",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Def+4."
+  },
+  {
     name: "Embla's Ward",
     icon: "16-9",
     include: [{name: "Veronica"}],
@@ -530,6 +548,24 @@ module.exports = [
     effect: "Neutralizes \"effective against\" bonuses."
   },
   {
+    name: "Live to Serve 1",
+    icon: "7-2",
+    include: [{weaponType: "Staff"}],
+    effect: "When healing allies with a staff, unit also recovers 50% of the HP restored."
+  },
+  {
+    name: "Live to Serve 2",
+    icon: "7-3",
+    include: [{weaponType: "Staff"}],
+    effect: "When healing allies with a staff, unit also recovers 75% of the HP restored."
+  },
+  {
+    name: "Live to Serve 3",
+    icon: "7-4",
+    include: [{weaponType: "Staff"}],
+    effect: "When healing allies with a staff, unit also recovers the same amount."
+  },
+  {
     name: "Múspellflame",
     icon: "33-6",
     include: [{"name": "Surtr"}],
@@ -632,6 +668,21 @@ module.exports = [
     name: "Res Ploy 3",
     icon: "23-10",
     effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Res-5 until the end of foe's next action."
+  },
+  {
+    name: "Res Tactic 1",
+    icon: "35-9",
+    effect: "At start of turn, grants Res+2 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+  },
+  {
+    name: "Res Tactic 2",
+    icon: "35-10",
+    effect: "At start of turn, grants Res+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+  },
+  {
+    name: "Res Tactic 3",
+    icon: "35-11",
+    effect: "At start of turn, grants Res+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
   },
   {
     name: "Resistance +1",
@@ -977,6 +1028,24 @@ module.exports = [
     icon: "22-2",
     stats: {atk: 3},
     effect: "Grants Atk+3."
+  },
+  {
+    name: "Squad Ace K 1",
+    icon: "21-1",
+    stats: {"hp": 3},
+    effect: "Grants HP+3."
+  },
+  {
+    name: "Squad Ace K 2",
+    icon: "21-2",
+    stats: {"hp": 4},
+    effect: "Grants HP+4."
+  },
+  {
+    name: "Squad Ace K 3",
+    icon: "21-3",
+    stats: {"hp": 5},
+    effect: "Grants HP+5."
   },
   {
     name: "Threaten Atk 1",

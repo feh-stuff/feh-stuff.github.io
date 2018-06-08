@@ -691,7 +691,7 @@ module.exports = [
     name: "HP/Atk 1",
     spCost: 100,
     icon: "36-11",
-    stats: {hp: 3, def: 1},
+    stats: {hp: 3, atk: 1},
     prev: ["Attack +1", "HP +3"],
     effect: "Grants HP+3, Atk+1."
   },
@@ -699,7 +699,7 @@ module.exports = [
     name: "HP/Atk 2",
     spCost: 200,
     icon: "36-12",
-    stats: {hp: 4, def: 2},
+    stats: {hp: 4, atk: 2},
     prev: ["HP/Atk 1"],
     last: true,
     effect: "Grants HP+4, Atk+2."

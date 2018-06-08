@@ -1,5 +1,28 @@
 module.exports = [
   {
+    name: "Aerobatics 1",
+    spCost: 60,
+    icon: "43-8",
+    include: [{moveType: "Flying"}],
+    effect: "If unit has 100% HP, unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces."
+  },
+  {
+    name: "Aerobatics 2",
+    spCost: 120,
+    icon: "43-9",
+    prev: ["Aerobatics 1"],
+    include: [{moveType: "Flying"}],
+    effect: "If unit has ≥ 50% HP, unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces."
+  },
+  {
+    name: "Aerobatics 3",
+    spCost: 240,
+    icon: "43-10",
+    prev: ["Aerobatics 2"],
+    include: [{moveType: "Flying"}],
+    effect: "Unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces."
+  },
+  {
     name: "Axebreaker 1",
     spCost: 50,
     icon: "8-10",

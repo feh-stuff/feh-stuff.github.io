@@ -386,6 +386,26 @@ module.exports = [
     effect: "Grants allies within 2 spaces Spd+3 during combat."
   },
   {
+    name: "Even Spd Wave 1",
+    spCost: 60,
+    icon: "43-11",
+    effect: "At start of even-numbered turns, grants Spd+2 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Even Spd Wave 2",
+    spCost: 120,
+    icon: "43-12",
+    prev: ["Even Spd Wave 1"],
+    effect: "At start of even-numbered turns, grants Spd+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Even Spd Wave 3",
+    spCost: 240,
+    icon: "44-0",
+    prev: ["Even Spd Wave 2"],
+    effect: "At start of even-numbered turns, grants Spd+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
     name: "Flier Guidance 1",
     spCost: 60,
     icon: "41-4",

@@ -3,12 +3,39 @@ module.exports = [
     date: "May 2018",
     banners: [
       {
+        name: "Scattered Fangs",
+        startDate: "Jun 8, 2018",
+        focusHeroes: [ "Karla", "Legault", "Nino (Scattered Fangs)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Seliph and Julia's Battle",
+        startDate: "Jun 5, 2018",
+        focusHeroes: [ "Seliph", "Julia", "Deirdre" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "Legendary Heroes: Ryoma, Supreme Samurai",
         startDate: "May 31, 2018",
         focusHeroes: [ "Chrom (Winter's Envoy)", "Azura (Happy New Year!)", "Gunnthrá", "Sigurd", "Tiki (Young)", "Ryoma (Legendary Heroes)", "Fjorm", "Robin (M) (Winter's Envoy)", "Hardin (Fallen Heroes)","Innes", "Takumi (Happy New Year!)", "Robin (F) (Legendary Heroes)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
         rateType: "legendaryV1",
+        pool: "pool2"
+      },
+      {
+        name: "Heroes with Stance Skills",
+        startDate: "May 27, 2018",
+        focusHeroes: [ "Shiro", "Morgan (F)", "Zelgius" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
         pool: "pool2"
       },
       {
