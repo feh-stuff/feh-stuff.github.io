@@ -1024,6 +1024,42 @@ module.exports = [
     }
   },
   {
+    name: "Canas",
+    title: "Seeker of Wisdom",
+    artist: "Tobi",
+    voice: "Joe Zieja",
+    releaseDate: "Jun 8, 2018",
+    colorType: "Red",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity4: ["pool2"],
+    rarity5: ["pool2"],
+    ttReward: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Canas.png",
+      main: "img/heroes-main/Canas.png"
+    },
+    skills: [
+      { name: "Flux", rarity: 4 },
+      { name: "Ruin", rarity: 4 },
+      { name: "Rauðrowl", rarity: 4 },
+      { name: "Rauðrowl+", rarity: 5 },
+      { name: "Reciprocal Aid", rarity: 4 },
+      { name: "Resistance +1", rarity: 4 },
+      { name: "Hp/Res 1", rarity: 4 },
+      { name: "Hp/Res 2", rarity: 4 },
+      { name: "Res Tactic 1", rarity: 4 },
+      { name: "Res Tactic 2", rarity: 4 },
+      { name: "Res Tactic 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 10, spd: 5, def: 4, res: 9 },
+      level40: { hp: [ 33, 36, 39 ], atk: [ 29, 32, 35 ], spd: [ 25, 29, 32 ], def: [ 18, 21, 24 ], res: [ 30, 33, 36 ] },
+      level1_4: { hp: 16, atk: 10, spd: 4, def: 3, res: 9 },
+      level40_4: { hp: [ 31, 34, 37 ], atk: [ 27, 30, 33 ], spd: [ 23, 26, 29 ], def: [ 16, 19, 22 ], res: [ 28, 31, 34 ] }
+    }
+  },
+  {
     name: "Catria",
     title: "Middle Whitewing",
     artist: "Amagaitaro (アマガイタロー)",
@@ -3996,6 +4032,39 @@ module.exports = [
     }
   },
   {
+    name: "Karla",
+    title: "Sword Vassal",
+    artist: "Kita Senri (北千里)",
+    voice: "Allegra Clarke",
+    releaseDate: "Jun 8, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Karla.png",
+      main: "img/heroes-main/Karla.png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Killing Edge", rarity: 5 },
+      { name: "Vassal's Blade", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Draconic Aura", rarity: 5 },
+      { name: "Wrath 1", rarity: 5 },
+      { name: "Wrath 2", rarity: 5 },
+      { name: "Wrath 3", rarity: 5 },
+      { name: "Even Spd Wave 1", rarity: 5 },
+      { name: "Even Spd Wave 2", rarity: 5 },
+      { name: "Even Spd Wave 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 7, spd: 10, def: 6, res: 7 },
+      level40: { hp: [ 39, 42, 45 ], atk: [ 32, 35, 38 ], spd: [ 37, 40, 44 ], def: [ 20, 23, 26 ], res: [ 19, 22, 25 ] }
+    }
+  },
+  {
     name: "Katarina",
     title: "Wayward One",
     artist: "kaya8",
@@ -4201,10 +4270,41 @@ module.exports = [
       { name: "Hone Spd 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 20, atk: 9, spd: 7, def: 6, res: 5 },
+      level1: { hp: 17, atk: 7, spd: 10, def: 7, res: 4 },
       level40: { hp: [ 41, 44, 47 ], atk: [ 32, 35, 38 ], spd: [ 23, 26, 30 ], def: [ 27, 30, 33 ], res: [ 19, 22, 25 ] },
-      level1_4: { hp: 19, atk: 9, spd: 7, def: 5, res: 4 },
-      level40_4: { hp: [ 38, 41, 44 ], atk: [ 30, 33, 36 ], spd: [ 22, 25, 28 ], def: [ 24, 27, 30 ], res: [ 17, 20, 23 ] }
+    }
+  },
+  {
+    name: "Legault",
+    title: "The Hurricane",
+    artist: "PenekoR (п猫R)",
+    voice: "Christopher Bevins",
+    releaseDate: "Jun 8, 2018",
+    weaponType: "Dagger",
+    colorType: "Neutral",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Legault.png",
+      main: "img/heroes-main/Legault.png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 5 },
+      { name: "Steel Dagger", rarity: 5 },
+      { name: "The Cleaner", rarity: 5 },
+      { name: "The Cleaner+", rarity: 5 },
+      { name: "Night Sky", rarity: 5 },
+      { name: "Glimmer", rarity: 5 },
+      { name: "Darting Blow 1", rarity: 5 },
+      { name: "Swift Strike 1", rarity: 5 },
+      { name: "Swift Strike 2", rarity: 5 },
+      { name: "Atk Tactic 1", rarity: 5 },
+      { name: "Atk Tactic 2", rarity: 5 },
+      { name: "Atk Tactic 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 7, spd: 10, def: 7, res: 4 },
+      level40: { hp: [ 36, 39, 42 ], atk: [ 28, 31, 34 ], spd: [ 35, 38, 41 ], def: [ 21, 24, 27 ], res: [ 16, 19, 22 ] }
     }
   },
   {
@@ -4518,6 +4618,43 @@ module.exports = [
     stats: {
       level1: { hp: 16, atk: 9, spd: 10, def: 4, res: 5 },
       level40: { hp: [ 32, 35, 39 ], atk: [ 32, 35, 38 ], spd: [ 33, 36, 39 ], def: [ 11, 14, 18 ], res: [ 23, 27, 30 ] }
+    }
+  },
+  {
+    name: "Linus",
+    title: "Mad Dog",
+    artist: "Meka (めか)",
+    voice: "Joe Brogie",
+    releaseDate: "Jun 12, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Infantry",
+    rarity3: ["pool2"],
+    rarity4: ["pool2"],
+    ghb: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Linus.png",
+      main: "img/heroes-main/Linus.png"
+    },
+    skills: [
+      { name: "Iron Axe", rarity: 3 },
+      { name: "Steel Axe", rarity: 3 },
+      { name: "Silver Axe", rarity: 4 },
+      { name: "Basilikos", rarity: 5 },
+      { name: "New Moon", rarity: 3 },
+      { name: "Luna", rarity: 4 },
+      { name: "Brazen Atk/Spd 1", rarity: 3 },
+      { name: "Brazen Atk/Spd 2", rarity: 4 },
+      { name: "Brazen Atk/Spd 3", rarity: 5 },
+      { name: "Spur Def 1", rarity: 3 },
+      { name: "Drive Def 1", rarity: 4 },
+      { name: "Drive Def 2", rarity: 4 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 9, spd: 9, def: 8, res: 4 },
+      level40: { hp: [ 39, 42, 45 ], atk: [ 34, 37, 40 ], spd: [ 30, 33, 36 ], def: [ 29, 32, 35 ], res: [ 16, 19, 22 ] },
+      level1_4: { hp: 17, atk: 9, spd: 9, def: 7, res: 3 },
+      level40_4: { hp: [ 36, 39, 42 ], atk: [ 32, 35, 38 ], spd: [ 28, 31, 34 ], def: [ 26, 29, 31 ], res: [ 14, 17, 20 ] }
     }
   },
   {
@@ -5993,6 +6130,43 @@ module.exports = [
       level40: { hp: [ 30, 33, 36 ], atk: [ 30, 33, 36 ], spd: [ 33, 36, 39 ], def: [ 16, 19, 22 ], res: [ 23, 26, 30 ] },
       level1_4: { hp: 15, atk: 7, spd: 10, def: 3, res: 6 },
       level40_4: { hp: [ 28, 31, 34 ], atk: [ 28, 31, 34 ], spd: [ 31, 34, 37 ], def: [ 14, 17, 20 ], res: [ 21, 24, 27 ] }
+    }
+  },
+  {
+    name: "Nino (Scattered Fangs)",
+    shortName: "Nino",
+    title: "Pale Flower",
+    artist: "Amagaitaro (アマガイタロー)",
+    voice: "Sarah Blandy",
+    releaseDate: "Jun 08, 2018",
+    colorType: "Green",
+    weaponType: "Tome",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Nino (Scattered Fangs).png",
+      main: "img/heroes-main/Nino (Scattered Fangs).png"
+    },
+    skills: [
+      { name: "Wind", rarity: 5 },
+      { name: "Elwind", rarity: 5 },
+      { name: "Rexcalibur", rarity: 5 },
+      { name: "Giga Excalibur", rarity: 5 },
+      { name: "New Moon", rarity: 5 },
+      { name: "Moonbow", rarity: 5 },
+      { name: "Death Blow 1", rarity: 5 },
+      { name: "Swift Sparrow 1", rarity: 5 },
+      { name: "Swift Sparrow 2", rarity: 5 },
+      { name: "Aerobatics 1", rarity: 5 },
+      { name: "Aerobatics 2", rarity: 5 },
+      { name: "Aerobatics 3", rarity: 5 },
+      { name: "Spd Smoke 1", rarity: 5 },
+      { name: "Spd Smoke 2", rarity: 5 },
+      { name: "Spd Smoke 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 7, spd: 10, def: 4, res: 6 },
+      level40: { hp: [ 33, 36, 40 ], atk: [ 30, 33, 36 ], spd: [ 35, 38, 41 ], def: [ 13, 17, 20 ], res: [ 22, 25, 29 ] }
     }
   },
   {
@@ -8009,7 +8183,11 @@ module.exports = [
     artist: "Kusugi Toku (久杉トク)",
     voice: "Nicolas Roye",
     releaseDate: "Jan 12, 2018",
+    weaponType: "Dagger",
     colorType: "Neutral",
+    moveType: "Infantry",
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sothe.png",
       main: "img/heroes-main/Sothe.png"
@@ -8032,8 +8210,7 @@ module.exports = [
       level1: { hp: 17, atk: 10, spd: 9, def: 5, res: 4 },
       level40: { hp: [ 35, 39, 42 ], atk: [ 33, 36, 39 ], spd: [ 30, 33, 36 ], def: [ 19, 22, 25 ], res: [ 18, 21, 24 ] },
       level1_4: { hp: 16, atk: 10, spd: 9, def: 4, res: 3 },
-      level40_40: { hp: [ 33, 36, 39 ], atk: [ 31, 34, 37 ], spd: [ 28, 31, 34 ], def: [ 17, 20, 23 ], res: [ 16, 19, 22 ] },
-
+      level40_40: { hp: [ 33, 36, 39 ], atk: [ 31, 34, 37 ], spd: [ 28, 31, 34 ], def: [ 17, 20, 23 ], res: [ 16, 19, 22 ] }
     }
   },
   {
@@ -8443,6 +8620,7 @@ module.exports = [
       { name: "Fire Breath+", rarity: 3 },
       { name: "Lightning Breath", rarity: 4 },
       { name: "Lightning Breath+", rarity: 5 },
+      { name: "Breath of Fog", rarity: 5 },
       { name: "Glowing Ember", rarity: 4 },
       { name: "Bonfire", rarity: 4 },
       { name: "Defiant Atk 1", rarity: 3 },
@@ -8514,6 +8692,7 @@ module.exports = [
       { name: "Fire Breath+", rarity: 5 },
       { name: "Flametongue", rarity: 5 },
       { name: "Flametongue+", rarity: 5 },
+      { name: "Breath of Fog", rarity: 5 },
       { name: "Rising Flame", rarity: 5 },
       { name: "Growing Flame", rarity: 5 },
       { name: "Armored Blow 1", rarity: 5 },
