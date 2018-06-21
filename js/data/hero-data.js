@@ -1662,6 +1662,40 @@ module.exports = [
     }
   },
   {
+    name: "Cordelia (Summer's Arrival)",
+    shortName: "Cordelia",
+    title: "Knight Paradise",
+    artist: "Mayo (まよ)",
+    voice: "Julie Ann Taylor",
+    releaseDate: "Jun 21, 2018",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Cordelia (Summer's Arrival).png",
+      main: "img/heroes-main/Cordelia (Summer's Arrival).png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "Shell Lance", rarity: 5 },
+      { name: "Shell Lance+", rarity: 5 },
+      { name: "Harsh Command", rarity: 5 },
+      { name: "Armored Blow 1", rarity: 5 },
+      { name: "Sturdy Blow 1", rarity: 5 },
+      { name: "Sturdy Blow 2", rarity: 5 },
+      { name: "Dull Close 1", rarity: 5 },
+      { name: "Dull Close 2", rarity: 5 },
+      { name: "Dull Close 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 8, spd: 10, def: 6, res: 5 },
+      level40: { hp: [ 38, 41, 44 ], atk: [ 29, 32, 35 ], spd: [ 35, 38, 41 ], def: [ 24, 28, 31 ], res: [ 14, 18, 21 ] }
+    }
+  },
+  {
     name: "Corrin (F)",
     shortName: "Corrin",
     title: "Fateful Princess",
@@ -3533,6 +3567,41 @@ module.exports = [
       level40: { hp: [ 32, 35, 39 ], atk: [ 30, 33, 36 ], spd: [ 31, 34, 37 ], def: [ 11, 14, 18 ], res: [ 28, 31, 34 ] }
     }
   },
+    {
+    name: "Innes (Summer's Arrival)",
+    shortName: "Innes",
+    title: "Flawless Form",
+    artist: "Asatani Tomoyo (麻谷知世)",
+    voice: "Xander Mobus",
+    releaseDate: "Jun 21, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Innes (Summer's Arrival).png",
+      main: "img/heroes-main/Innes (Summer's Arrival).png"
+    },
+    skills: [
+      { name: "Iron Axe", rarity: 5 },
+      { name: "Steel Axe", rarity: 5 },
+      { name: "Beach Banner", rarity: 5 },
+      { name: "Beach Banner+", rarity: 5 },
+      { name: "Rally Defense", rarity: 5 },
+      { name: "Rally Atk/Def", rarity: 5 },
+      { name: "Def Feint 1", rarity: 5 },
+      { name: "Def Feint 2", rarity: 5 },
+      { name: "Def Feint 3", rarity: 5 },
+      { name: "Spur Def 1", rarity: 5 },
+      { name: "Spur Def 2", rarity: 5 },
+      { name: "Goad Fliers", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 9, spd: 9, def: 6, res: 5 },
+      level40: { hp: [ 39, 42, 45 ], atk: [ 30, 33, 36 ], spd: [ 34, 37, 40 ], def: [ 27, 30, 33 ], res: [ 17, 20, 23 ] }
+    }
+  },
   {
     name: "Ishtar",
     title: "Thunder Goddess",
@@ -4284,6 +4353,7 @@ module.exports = [
     colorType: "Neutral",
     moveType: "Infantry",
     rarity5: ["pool2"],
+    rarity4: ["pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Legault.png",
       main: "img/heroes-main/Legault.png"
@@ -6167,6 +6237,40 @@ module.exports = [
     stats: {
       level1: { hp: 17, atk: 7, spd: 10, def: 4, res: 6 },
       level40: { hp: [ 33, 36, 40 ], atk: [ 30, 33, 36 ], spd: [ 35, 38, 41 ], def: [ 13, 17, 20 ], res: [ 22, 25, 29 ] }
+    }
+  },
+  {
+    name: "Noire (Summer's Arrival)",
+    shortName: "Noire",
+    title: "Shade Seeker",
+    artist: "Kusakihara Toshiyuki (草木原俊行)",
+    voice: "Michelle Ruff",
+    releaseDate: "Jun 21, 2018",
+    colorType: "Neutral",
+    weaponType: "Bow",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Noire (Summer's Arrival).png",
+      main: "img/heroes-main/Noire (Summer's Arrival).png"
+    },
+    skills: [
+      { name: "Iron Bow", rarity: 5 },
+      { name: "Steel Bow", rarity: 5 },
+      { name: "Cocobow", rarity: 5 },
+      { name: "Cocobow+", rarity: 5 },
+      { name: "Ardent Sacrifice", rarity: 5 },
+      { name: "Speed +1", rarity: 5 },
+      { name: "Atk/Spd 1", rarity: 5 },
+      { name: "Atk/Spd 2", rarity: 5 },
+      { name: "Infantry Rush 1", rarity: 5 },
+      { name: "Infantry Rush 2", rarity: 5 },
+      { name: "Infantry Rush 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 8, spd: 10, def: 5, res: 5 },
+      level40: { hp: [ 33, 36, 40 ], atk: [ 29, 32, 35 ], spd: [ 33, 36, 39 ], def: [ 23, 27, 30 ], res: [ 17, 20, 23 ] }
     }
   },
   {
@@ -8489,6 +8593,44 @@ module.exports = [
     stats: {
       level1: { hp: 17, atk: 8, spd: 10, def: 6, res: 6 },
       level40: { hp: [ 33, 36, 40 ], atk: [ 31, 34, 37 ], spd: [ 33, 36, 39 ], def: [ 22, 25, 29 ], res: [ 22, 25, 29 ] }
+    }
+  },
+    {
+    name: "Tana (Summer's Arrival)",
+    shortName: "Tana",
+    title: "Noble and Nimble",
+    artist: "cuboon",
+    voice: "Joie Marlowe",
+    releaseDate: "Jun 21, 2018",
+    colorType: "Red",
+    weaponType: "Tome",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Tana (Summer's Arrival).png",
+      main: "img/heroes-main/Tana (Summer's Arrival).png"
+    },
+    skills: [
+      { name: "Fire", rarity: 5 },
+      { name: "Elfire", rarity: 5 },
+      { name: "Bolganone", rarity: 5 },
+      { name: "Fruit of Iðunn", rarity: 5 },
+      { name: "Rally Speed", rarity: 5 },
+      { name: "Rally Spd/Res", rarity: 5 },
+      { name: "Atk/Spd Push 1", rarity: 5 },
+      { name: "Atk/Spd Push 2", rarity: 5 },
+      { name: "Atk/Spd Push 3", rarity: 5 },
+      { name: "Renewal 1", rarity: 5 },
+      { name: "Renewal 2", rarity: 5 },
+      { name: "Renewal 3", rarity: 5 },
+      { name: "Spur Def 1", rarity: 5 },
+      { name: "Spur Atk/Def 1", rarity: 5 },
+      { name: "Spur Atk/Def 2", rarity: 5 },
+    ],
+    stats: {
+      level1: { hp: 16, atk: 7, spd: 10, def: 5, res: 6 },
+      level40: { hp: [ 32, 35, 39 ], atk: [ 30, 33, 36 ], spd: [ 33, 36, 39 ], def: [ 17, 20, 23 ], res: [ 22, 25, 29 ] }
     }
   },
   {

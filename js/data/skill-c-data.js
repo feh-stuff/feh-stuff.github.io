@@ -696,6 +696,29 @@ module.exports = [
     include: [{moveType: "Infantry"}],
     effect: "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 1 fewer HP than unit. (Effects will stack with similar skills.)"
   },
+    {
+    name: "Infantry Rush 1",
+    spCost: 60,
+    icon: "44-10",
+    include: [{moveType: "Infantry"}],
+    effect: "Infantry allies within 2 spaces gain: \"If unit's Atk ≥ foe's Atk+5, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)\""
+  },
+  {
+    name: "Infantry Rush 2",
+    spCost: 120,
+    icon: "44-11",
+    prev: ["Infantry Pulse 1"],
+    include: [{moveType: "Infantry"}],
+    effect: "Infantry allies within 2 spaces gain: \"If unit's Atk ≥ foe's Atk+3, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)\""
+  },
+  {
+    name: "Infantry Rush 3",
+    spCost: 240,
+    icon: "44-12",
+    prev: ["Infantry Pulse 2"],
+    include: [{moveType: "Infantry"}],
+    effect: "Infantry allies within 2 spaces gain: \"If unit's Atk ≥ foe's Atk+1, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)\""
+  },
   {
     name: "Lance Valor 1",
     spCost: 30,

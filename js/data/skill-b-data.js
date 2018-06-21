@@ -332,6 +332,26 @@ module.exports = [
     effect: "The enemy cannot counterattack."
   },
   {
+    name: "Def Feint 1",
+    spCost: 60,
+    icon: "44-7",
+    effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Def-3 on foes in cardinal directions of unit through their next action."
+  },
+  {
+    name: "Def Feint 2",
+    spCost: 120,
+    icon: "44-8",
+    prev: ["Def Feint 1"],
+    effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Def-5 on foes in cardinal directions of unit through their next action."
+  },
+  {
+    name: "Def Feint 3",
+    spCost: 240,
+    icon: "44-9",
+    prev: ["Def Feint 2"],
+    effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Def-7 on foes in cardinal directions of unit through their next action."
+  },
+  {
     name: "Def/Res Link 1",
     spCost: 60,
     icon: "42-10",
@@ -377,6 +397,26 @@ module.exports = [
     icon: "4-7",
     include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
     effect: "If unit initiates attack, the unit moves 1 space away after combat. Foe moves into unit's previous space."
+  },
+  {
+    name: "Dull Close 1",
+    spCost: 60,
+    icon: "44-4",
+    effect: "At start of combat, if unit's HP ≥ 100% and foe uses sword, lance, axe, or dragonstone, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
+    name: "Dull Close 2",
+    spCost: 120,
+    icon: "44-5",
+    prev: ["Dull Close 1"],
+    effect: "At start of combat, if unit's HP ≥ 50% and foe uses sword, lance, axe, or dragonstone, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
+    name: "Dull Close 3",
+    spCost: 240,
+    icon: "44-6",
+    prev: ["Dull Close 2"],
+    effect: "If foe uses sword, lance, axe, or dragonstone, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
   },
   {
     name: "Dull Ranged 1",

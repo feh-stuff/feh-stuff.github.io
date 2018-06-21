@@ -207,6 +207,26 @@ module.exports = [
     effect: "Accelerates Special trigger (cooldown count -1)."
   },
   {
+    name: "Beach Banner",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Steel Axe"],
+    effect: "If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat."
+  },
+  {
+    name: "Beach Banner+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Beach Banner"],
+    effect: "If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat."
+  },
+  {
     name: "Beloved Zofia",
     spCost: 400,
     damage: 16,
@@ -712,6 +732,26 @@ module.exports = [
     // colorType: "Neutral",
     prev: ["Clarisse's Bow"],
     effect: "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units."
+  },
+  {
+    name: "Cocobow",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Bow",
+    // colorType: "Neutral",
+    prev: ["Steel Bow"],
+    effect: "Effective against flying foes. If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat."
+  },
+  {
+    name: "Cocobow+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Bow",
+    // colorType: "Neutral",
+    prev: ["Cupid Arrow"],
+    effect: "Effective against flying foes. If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat."
   },
   {
     name: "Cupid Arrow",
@@ -1317,6 +1357,18 @@ module.exports = [
     colorType: "Blue",
     prev: ["Fresh Bouquet"],
     effect: "At start of turn, if unit is adjacent to an ally, grants Spd+4 to unit and adjacent allies for 1 turn."
+  },
+  {
+    name: "Fruit of Iðunn",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Red",
+    prev: ["Bolganone"],
+    stats: { spd: 3 },
+    exclusive: ["Tana (Summer's Arrival)"],
+    effect: "If unit has 100% HP at the start of combat, unit receives Atk/Spd +5. If attacking, unit will receive 5 damage after combat.",
   },
   {
     name: "Fujin Yumi",
@@ -2832,6 +2884,26 @@ module.exports = [
     colorType: "Neutral",
     prev: ["Seashell"],
     effect: "Foe takes Def/Res-7 until end of foe's next action. If unit has 100% HP at start of combat, Atk/Spd/Def/Res+2. If attacking, unit gets 2 damage after."
+  },
+  {
+    name: "Shell Lance",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Steel Lance"],
+    effect: "If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat."
+  },
+  {
+    name: "Shell Lance+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Shell Lance"],
+    effect: "If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat."
   },
   {
     name: "Shine",
