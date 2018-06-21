@@ -138,6 +138,27 @@ module.exports = [
     effect: "Grants Atk/Spd+5 to this unit during combat if unit is adjacent to an ally."
   },
   {
+    name: "Atk/Spd Push 1",
+    spCost: 60,
+    icon: "44-1",
+    effect: "At start of combat, if unit's HP = 100%, grants Atk/Spd+3, but if unit attacked, deals 1 damage to unit after combat."
+  },
+  {
+    name: "Atk/Spd Push 2",
+    spCost: 120,
+    icon: "44-2",
+    prev: ["Atk/Spd Push 1"],
+    effect: "At start of combat, if unit's HP = 100%, grants Atk/Spd+4, but if unit attacked, deals 1 damage to unit after combat."
+  },
+  {
+    name: "Atk/Spd Push 3",
+    spCost: 240,
+    icon: "44-3",
+    prev: ["Atk/Spd Push 2"],
+    last: true,
+    effect: "At start of combat, if unit's HP = 100%, grants Atk/Spd+5, but if unit attacked, deals 1 damage to unit after combat."
+  },
+  {
     name: "Attack +1",
     spCost: 30,
     icon: "0-7",

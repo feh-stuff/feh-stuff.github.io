@@ -1,5 +1,55 @@
 module.exports = [
   {
+    date: "June 2018",
+    banners: [
+      {
+        name: "Summer's Arrival",
+        startDate: "Jun 21, 2018",
+        focusHeroes: [ "Innes (Summer's Arrival)", "Tana (Summer's Arrival)", "Cordelia (Summer's Arrival)", "Noire (Summer's Arrival)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Feud of the Fangs Tempest Trials",
+        startDate: "Jun 13, 2018",
+        focusHeroes: [ "Nino", "Karel", "Jaffar" ],
+        excludeFromRarity4: ["Legault"],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "New Power (June 2018)",
+        startDate: "Jun 8, 2018",
+        focusHeroes: [ "Tiki (Young)", "Tiki (Adult)", "Linde", "Merric" ],
+        excludeFromRarity4: ["Legault"],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Scattered Fangs",
+        startDate: "Jun 8, 2018",
+        focusHeroes: [ "Karla", "Legault", "Nino (Scattered Fangs)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Seliph and Julia's Battle",
+        startDate: "Jun 5, 2018",
+        focusHeroes: [ "Seliph", "Julia", "Deirdre" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+    ]
+  },
+  {
     date: "May 2018",
     banners: [
       {
