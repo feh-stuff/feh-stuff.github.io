@@ -3,6 +3,42 @@ module.exports = [
     date: "June 2018",
     banners: [
       {
+        name: "Legendary Heroes: Hector, Marquess of Ostia",
+        startDate: "Jun 21, 2018",
+        focusHeroes: [ "Hector (Legendary Heroes)", "Myrrh", "Ike (Brave Heroes)", "Tharja (Winter's Envoy)", "Leif", "Ike (Legendary Heroes)", "Robin (F) (Legendary Heroes)", "Elise", "Roy (Love Abounds)", "Lyn (Love Abounds)", "Morgan (F)", "Ephraim (Legendary Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "legendaryV1",
+        pool: "pool2"
+      },
+      {
+        name: "Nohrian Summer (June 2018)",
+        startDate: "Jun 25, 2018",
+        focusHeroes: [ "Elise (Nohrian Summer)", "Leo (Nohrian Summer)", "Xander (Nohrian Summer)", "Corrin (F) (Nohrian Summer)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Ylissean Summer (2018)",
+        startDate: "Jun 25, 2018",
+        focusHeroes: [ "Robin (F) (Ylissean Summer)", "Frederick (Ylissean Summer)", "Gaius (Ylissean Summer)", "Tiki (Adult) (Ylissean Summer)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Heroes with Death Blow (June 2018)",
+        startDate: "Jun 21, 2018",
+        focusHeroes: [ "Siegbert", "Reinhardt (World of Thracia)", "Delthea" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "Summer's Arrival",
         startDate: "Jun 21, 2018",
         focusHeroes: [ "Innes (Summer's Arrival)", "Tana (Summer's Arrival)", "Cordelia (Summer's Arrival)", "Noire (Summer's Arrival)" ],
@@ -52,24 +88,6 @@ module.exports = [
   {
     date: "May 2018",
     banners: [
-      {
-        name: "Scattered Fangs",
-        startDate: "Jun 8, 2018",
-        focusHeroes: [ "Karla", "Legault", "Nino (Scattered Fangs)" ],
-        excludeFromRarity4: [],
-        excludeFromRarity5: [],
-        rateType: "defaultV2",
-        pool: "pool2"
-      },
-      {
-        name: "Seliph and Julia's Battle",
-        startDate: "Jun 5, 2018",
-        focusHeroes: [ "Seliph", "Julia", "Deirdre" ],
-        excludeFromRarity4: [],
-        excludeFromRarity5: [],
-        rateType: "defaultV2",
-        pool: "pool2"
-      },
       {
         name: "Legendary Heroes: Ryoma, Supreme Samurai",
         startDate: "May 31, 2018",

@@ -3436,6 +3436,18 @@ module.exports = [
     effect: "-"
   },
   {
+    name: "Thunder Armads",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Silver Axe"],
+    stats: {def: 3},
+    exclusive: ["Hector (Legendary Heroes)"],
+    effect: "Grants Def+3. If the number of allies within 2 spaces (excluding unit) > the number of foes within 2 spaces (excluding target), foe cannot make a follow-up attack."
+  },
+  {
     name: "Thunderhead",
     spCost: 400,
     damage: 14,

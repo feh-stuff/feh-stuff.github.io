@@ -761,6 +761,13 @@ module.exports = [
     effect: "At start of odd-numbered turns, grants Atk+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
   },
   {
+    name: "Ostia's Pulse",
+    spCost: 300,
+    icon: "45-0",
+    include: [{name:"Hector (Legendary Heroes)"}],
+    effect: "At the start of turn 1, grants Special cooldown count-1 to all allies. Granted only if number of those allies' movement types on current team ≤ 2."
+  },
+  {
     name: "Panic Ploy 1",
     spCost: 60,
     icon: "19-2",

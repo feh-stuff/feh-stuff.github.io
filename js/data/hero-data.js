@@ -3216,6 +3216,40 @@ module.exports = [
     }
   },
   {
+    name: "Hector (Legendary Heroes)",
+    shortName: "Hector",
+    title: "Marquess of Ostia",
+    artist: "Wada Sachiko (ワダサチコ)",
+    voice: "Patrick Seitz",
+    releaseDate: "Jun 29, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Armored",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Hector (Legendary Heroes).png",
+      main: "img/heroes-main/Hector (Legendary Heroes).png"
+    },
+    skills: [
+      { name: "Iron Axe", rarity: 5 },
+      { name: "Steel Axe", rarity: 5 },
+      { name: "Silver Axe", rarity: 5 },
+      { name: "Thunder Armads", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Draconic Aura", rarity: 5 },
+      { name: "Distant Counter", rarity: 5 },
+      { name: "Vengeful Fighter 1", rarity: 5 },
+      { name: "Vengeful Fighter 2", rarity: 5 },
+      { name: "Vengeful Fighter 3", rarity: 5 },
+      { name: "Ostia's Pulse", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 23, atk: 10, spd: 6, def: 12, res: 4 },
+      level40: { hp: [ 44, 47, 50 ], atk: [ 37, 40, 44 ], spd: [ 20, 23, 26 ], def: [ 35, 38, 41 ], res: [ 22, 26, 29 ] },
+    }
+  },
+  {
     name: "Henry",
     title: "Twisted Mind",
     artist: "Kusugi Toku (久杉トク)",
