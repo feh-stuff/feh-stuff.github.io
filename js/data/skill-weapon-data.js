@@ -915,8 +915,18 @@ module.exports = [
     weaponType: "Sword",
     colorType: "Red",
     prev: ["Silver Sword"],
-    exclusive: ["Ares"],
+    exclusive: ["Ares", "Eldigan"],
     effect: "Accelerates Special trigger (cooldown count-1). If Special triggers before or during combat, grants Special cooldown count-2 after combat.",
+  },
+  {
+    name: "Dauntless Lance",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    exclusive: ["Nephenee"],
+    effect: "Accelerates Special trigger (cooldown count-1). Effective against armored foes."
   },
   {
     name: "Deathly Dagger",
@@ -983,6 +993,16 @@ module.exports = [
     prev: ["Silver Sword"],
     exclusive: ["Sigurd","Seliph"],
     effect: "Grants Res+3. If in combat against foe using magic, unit receives 50% less damage from the first attack.",
+  },
+  {
+    name: "Draconic Poleax",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    exclusive: ["Titania"],
+    effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
   },
   {
     name: "Durandal",
@@ -1276,6 +1296,26 @@ module.exports = [
     colorType: "Blue",
     prev: ["First Bite"],
     effect: "Grants allies within 2 spaces Def/Res+2 through their next actions after any combat this unit initiates."
+  },
+  {
+    name: "Fishie Bow",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Bow",
+    // colorType: "Neutral",
+    prev: ["Steel Bow"],
+    effect: "Effective against flying foes. If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack."
+  },
+  {
+    name: "Fishie Bow+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Bow",
+    // colorType: "Neutral",
+    prev: ["Fishie Bow"],
+    effect: "Effective against flying foes. If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack."
   },
   {
     name: "Flame Siegmund",
@@ -1890,6 +1930,26 @@ module.exports = [
     stats: {def: 3},
     exclusive: ["L'Arachel"],
     effect: "Grants Def+3. If foe's HP = 100% at start of combat, grants Atk/Spd+3 during combat."
+  },
+  {
+    name: "Juicy Wave",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Elthunder"],
+    effect: "If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack."
+  },
+  {
+    name: "Juicy Wave+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Juicy Wave"],
+    effect: "If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack."
   },
   {
     name: "Kadomatsu",
@@ -2631,6 +2691,16 @@ module.exports = [
     effect: "Effective against cavalry units."
   },
   {
+    name: "Reese's Tome",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Red",
+    exclusive: ["Katarina"],
+    effect: "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2.",
+  },
+  {
     name: "Refreshing Bolt",
     spCost: 200,
     damage: 8,
@@ -3271,6 +3341,26 @@ module.exports = [
     effect: "After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions."
   },
   {
+    name: "Starfish",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Dagger",
+    colorType: "Neutral",
+    prev: ["Steel Dagger"],
+    effect: "If unit’s HP < 75% and unit initiates combat,unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-5 on foe through its next action."
+  },
+  {
+    name: "Starfish+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Dagger",
+    colorType: "Neutral",
+    prev: ["Starfish"],
+    effect: "If unit’s HP < 75% and unit initiates combat,unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action."
+  },
+  {
     name: "Steel Axe",
     spCost: 100,
     damage: 8,
@@ -3330,6 +3420,17 @@ module.exports = [
     prev: ["Silver Axe"],
     exclusive: ["Dorcas"],
     effect: "Enables counterattack regardless of distance if this unit is attacked.",
+  },
+  {
+    name: "Summer's Breath",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Breath",
+    stats: {atk: 3},
+    prev: ["Flametongue"],
+    exclusive: ["Tiki (Young) (A Sketchy Summer)"],
+    effect: "Effective against dragon foes. Grants Def+3. If foe initiates combat, grants Special cooldown charge +1 per attack during combat. (Only highest value applied. Does not stack.) If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
   },
   {
     name: "Swift Mulagir",

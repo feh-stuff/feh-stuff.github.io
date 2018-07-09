@@ -335,6 +335,27 @@ module.exports = [
     effect: "Grants Res+5. Inflicts Atk-3."
   },
   {
+    name: "Flashing Blade 1",
+    icon: "31-6",
+    include: [{moveType:"Infantry"}, {moveType:"Armored"}],
+    exclude: [{weaponType:"Staff"}],
+    effect: "If unit's Spd - foe's Spd ≥ 5, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)"
+  },
+  {
+    name: "Flashing Blade 2",
+    icon: "31-7",
+    include: [{moveType:"Infantry"}, {moveType:"Armored"}],
+    exclude: [{weaponType:"Staff"}],
+    effect: "If unit's Spd - foe's Spd ≥ 3, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)"
+  },
+  {
+    name: "Flashing Blade 3",
+    icon: "31-8",
+    include: [{moveType:"Infantry"}, {moveType:"Armored"}],
+    exclude: [{weaponType:"Staff"}],
+    effect: "If unit's Spd - foe's Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)"
+  },
+  {
     name: "Flier Formation 1",
     icon: "27-0",
     include: [{moveType: "Flying"}],
@@ -450,6 +471,18 @@ module.exports = [
     icon: "0-6",
     stats: {"hp": 5},
     effect: "Grants +5 to max HP."
+  },
+  {
+    name: "HP/Res 1",
+    icon: "31-1",
+    stats: {hp: 3, res: 1},
+    effect: "Grants HP+3, Res+1."
+  },
+  {
+    name: "HP/Res 2",
+    icon: "31-2",
+    stats: {hp: 4, res: 2},
+    effect: "Grants HP+4, Res+2."
   },
   {
     name: "Initiate Seal Atk 1",
@@ -752,6 +785,21 @@ module.exports = [
     icon: "7-10",
     exclude: [{weaponType: "Staff"}],
     effect: "After combat, foe suffers Spd-7 through its next action."
+  },
+  {
+    name: "Spd Ploy 1",
+    icon: "30-0",
+    effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Spd-3 until the end of foe's next action."
+  },
+  {
+    name: "Spd Ploy 2",
+    icon: "30-1",
+    effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Spd-4 until the end of foe's next action."
+  },
+  {
+    name: "Spd Ploy 3",
+    icon: "30-2",
+    effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Spd-5 until the end of foe's next action."
   },
   {
     name: "Spd Smoke 1",
