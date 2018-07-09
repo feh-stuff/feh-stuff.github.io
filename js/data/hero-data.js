@@ -989,6 +989,44 @@ module.exports = [
     }
   },
   {
+    name: "Camilla (A Sketchy Summer)",
+    shortName: "Camilla",
+    artist: "Mikuro (みく郎)",
+    voice: "Misty Lee",
+    title: "Tropical Beauty",
+    releaseDate: "Jul 10, 2018",
+    colorType: "Blue",
+    weaponType: "Tome",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Camilla (A Sketchy Summer).png",
+      main: "img/heroes-main/Camilla (A Sketchy Summer).png"
+    },
+    skills: [
+      { name: "Thunder", rarity: 5 },
+      { name: "Elthunder", rarity: 5 },
+      { name: "Juicy Wave", rarity: 5 },
+      { name: "Juicy Wave+", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Draconic Aura", rarity: 5 },
+      { name: "Death Blow 1", rarity: 5 },
+      { name: "Death Blow 2", rarity: 5 },
+      { name: "Death Blow 3", rarity: 5 },
+      { name: "Flier Formation 1", rarity: 5 },
+      { name: "Flier Formation 2", rarity: 5 },
+      { name: "Flier Formation 3", rarity: 5 },
+      { name: "Hone Atk 1", rarity: 5 },
+      { name: "Hone Atk 2", rarity: 5 },
+      { name: "Hone Fliers", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 7, spd: 10, def: 6, res: 4 },
+      level40: { hp: [ 35, 39, 42 ], atk: [ 30, 33, 36 ], spd: [ 33, 36, 39 ], def: [ 20, 23, 26 ], res: [ 16, 19, 22 ] }
+    }
+  },
+  {
     name: "Camus",
     title: "Sable Knight",
     artist: "Suekane Kumiko (スエカネクミコ)",
@@ -2132,6 +2170,7 @@ module.exports = [
       { name: "Steel Sword", rarity: 5 },
       { name: "Killing Edge", rarity: 5 },
       { name: "Mystletainn", rarity: 5 },
+      { name: "Dark Mystletainn", rarity: 5 },
       { name: "Rising Light", rarity: 5 },
       { name: "Growing Light", rarity: 5 },
       { name: "Fury 1", rarity: 5 },
@@ -4186,6 +4225,7 @@ module.exports = [
       { name: "Elfire", rarity: 5 },
       { name: "Rauðrowl", rarity: 5 },
       { name: "Rauðrowl+", rarity: 5 },
+      { name: "Reese's Tome", rarity: 5 },
       { name: "Chilling Wind", rarity: 5 },
       { name: "Glacies", rarity: 5 },
       { name: "Death Blow 1", rarity: 5 },
@@ -4722,6 +4762,40 @@ module.exports = [
     stats: {
       level1: { hp: 16, atk: 9, spd: 10, def: 4, res: 5 },
       level40: { hp: [ 32, 35, 39 ], atk: [ 32, 35, 38 ], spd: [ 33, 36, 39 ], def: [ 11, 14, 18 ], res: [ 23, 27, 30 ] }
+    }
+  },
+  {
+    name: "Linde (A Sketchy Summer)",
+    shortName: "Linde",
+    title: "Light Mage",
+    artist: "Kippu",
+    voice: "Julie Ann Taylor",
+    releaseDate: "Jul 08, 2018",
+    colorType: "Neutral",
+    weaponType: "Dagger",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Linde (A Sketchy Summer).png",
+      main: "img/heroes-main/Linde (A Sketchy Summer).png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 5 },
+      { name: "Steel Dagger", rarity: 5 },
+      { name: "Starfish", rarity: 5 },
+      { name: "Starfish+", rarity: 5 },
+      { name: "Ardent Sacrifice", rarity: 5 },
+      { name: "Brazen Atk/Res 1", rarity: 5 },
+      { name: "Brazen Atk/Res 2", rarity: 5 },
+      { name: "Brazen Atk/Res 3", rarity: 5 },
+      { name: "Cancel Affinity 1", rarity: 5 },
+      { name: "Cancel Affinity 2", rarity: 5 },
+      { name: "Cancel Affinity 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 8, spd: 9, def: 3, res: 7 },
+      level40: { hp: [ 30, 33, 36 ], atk: [ 31, 34, 37 ], spd: [ 32, 35, 38 ], def: [ 12, 16, 19 ], res: [ 23, 26, 30 ] }
     }
   },
   {
@@ -6085,6 +6159,7 @@ module.exports = [
       { name: "Steel Lance", rarity: 5 },
       { name: "Slaying Lance", rarity: 5 },
       { name: "Slaying Lance+", rarity: 5 },
+      { name: "Dauntless Lance", rarity: 5 },
       { name: "New Moon", rarity: 5 },
       { name: "Moonbow", rarity: 5 },
       { name: "Speed +1", rarity: 5 },
@@ -8597,6 +8672,41 @@ module.exports = [
     }
   },
   {
+    name: "Takumi (A Sketchy Summer)",
+    shortName: "Takumi",
+    title: "Prince at Play",
+    artist: "Tobi",
+    voice: "Michael Sinterniklaas",
+    releaseDate: "Jul 10, 2018",
+    colorType: "Neutral",
+    weaponType: "Bow",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Takumi (A Sketchy Summer).png",
+      main: "img/heroes-main/Takumi (A Sketchy Summer).png"
+    },
+    skills: [
+      { name: "Iron Bow", rarity: 5 },
+      { name: "Steel Bow", rarity: 5 },
+      { name: "Fishie Bow", rarity: 5 },
+      { name: "Fishie Bow+", rarity: 5 },
+      { name: "Night Sky", rarity: 5 },
+      { name: "Glimmer", rarity: 5 },
+      { name: "Fury 1", rarity: 5 },
+      { name: "Fury 2", rarity: 5 },
+      { name: "Fury 3", rarity: 5 },
+      { name: "Odd Res Wave 1", rarity: 5 },
+      { name: "Odd Res Wave 2", rarity: 5 },
+      { name: "Odd Res Wave 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 9, spd: 7, def: 6, res: 4 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 32, 35, 38 ], spd: [ 32, 35, 38 ], def: [ 18, 21, 24 ], res: [ 16, 19, 22 ] }
+    }
+  },
+  {
     name: "Tana",
     title: "Winged Princess",
     artist: "cuboon",
@@ -8884,6 +8994,42 @@ module.exports = [
     }
   },
   {
+    name: "Tiki (Young) (A Sketchy Summer)",
+    shortName: "Tiki",
+    title: "Beachside Scion",
+    artist: "Gaou (がおう)",
+    voice: "Mela Lee",
+    releaseDate: "Jul 10, 2018",
+    colorType: "Red",
+    weaponType: "Breath",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Tiki (Young) (A Sketchy Summer).png",
+      main: "img/heroes-main/Tiki (Young) (A Sketchy Summer).png"
+    },
+    skills: [
+      { name: "Fire Breath", rarity: 5 },
+      { name: "Fire Breath+", rarity: 5 },
+      { name: "Flametongue", rarity: 5 },
+      { name: "Summer's Breath", rarity: 5 },
+      { name: "New Moon", rarity: 5 },
+      { name: "Moonbow", rarity: 5 },
+      { name: "Atk/Def Bond 1", rarity: 5 },
+      { name: "Atk/Def Bond 2", rarity: 5 },
+      { name: "Atk/Def Bond 3", rarity: 5 },
+      { name: "Hit and Run", rarity: 5 },
+      { name: "Dragon Valor 1", rarity: 5 },
+      { name: "Dragon Valor 2", rarity: 5 },
+      { name: "Dragon Valor 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 7, spd: 4, def: 8, res: 4 },
+      level40: { hp: [ 37, 40, 43 ], atk: [ 30, 33, 36 ], spd: [ 33, 37, 40 ], def: [ 29, 32, 35 ], res: [ 22, 26, 29 ] }
+    }
+  },
+  {
     name: "Titania",
     title: "Mighty Mercenary",
     artist: "Wada Sachiko (ワダサチコ)",
@@ -8904,6 +9050,7 @@ module.exports = [
       { name: "Steel Axe", rarity: 4 },
       { name: "Emerald Axe", rarity: 4 },
       { name: "Emerald Axe+", rarity: 5 },
+      { name: "Draconic Poleax", rarity: 5 },
       { name: "Reciprocal Aid", rarity: 4 },
       { name: "Armored Blow 1", rarity: 4 },
       { name: "Armored Blow 2", rarity: 4 },

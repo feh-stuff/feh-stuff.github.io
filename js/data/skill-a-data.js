@@ -242,6 +242,27 @@ module.exports = [
     effect: "If unit's HP ≤ 80% at the start of combat, grants Atk/Spd+7 during combat."
   },
   {
+    name: "Brazen Atk/Res 1",
+    spCost: 60,
+    icon: "45-4",
+    effect: "If unit's HP ≤ 80% at the start of combat, grants Atk/Res+3 during combat."
+  },
+  {
+    name: "Brazen Atk/Res 2",
+    spCost: 120,
+    icon: "45-5",
+    prev: ["Brazen Atk/Res 1"],
+    effect: "If unit's HP ≤ 80% at the start of combat, grants Atk/Res+5 during combat."
+  },
+  {
+    name: "Brazen Atk/Res 3",
+    spCost: 240,
+    icon: "45-6",
+    prev: ["Brazen Atk/Res 2"],
+    last: true,
+    effect: "If unit's HP ≤ 80% at the start of combat, grants Atk/Res+7 during combat."
+  },
+  {
     name: "Brazen Def/Res 1",
     spCost: 60,
     icon: "37-7",

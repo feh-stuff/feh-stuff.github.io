@@ -330,6 +330,29 @@ module.exports = [
     effect: "At start of turn, grants Def+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
   },
   {
+    name: "Dragon Valor 1",
+    spCost: 30,
+    icon: "45-10",
+    include: [{weaponType: "Breath"}],
+    effect: "If unit survives, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
+    name: "Dragon Valor 2",
+    spCost: 60,
+    icon: "45-11",
+    prev: ["Dragon Valor 1"],
+    include: [{weaponType: "Breath"}],
+    effect: "If unit survives, all dragonstone allies get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
+    name: "Dragon Valor 3",
+    spCost: 120,
+    icon: "45-12",
+    prev: ["Dragon Valor 2"],
+    include: [{weaponType: "Breath"}],
+    effect: "If unit survives, all dragonstone allies get 2x SP. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
     name: "Drive Atk 1",
     spCost: 120,
     icon: "22-6",
@@ -759,6 +782,24 @@ module.exports = [
     spCost: 240,
     icon: "42-6",
     effect: "At start of odd-numbered turns, grants Atk+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Odd Res Wave 1",
+    spCost: 60,
+    icon: "45-7",
+    effect: "At start of odd-numbered turns, grants Res+2 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Odd Res Wave 2",
+    spCost: 120,
+    icon: "45-8",
+    effect: "At start of odd-numbered turns, grants Res+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Odd Res Wave 3",
+    spCost: 240,
+    icon: "45-9",
+    effect: "At start of odd-numbered turns, grants Res+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
   },
   {
     name: "Ostia's Pulse",

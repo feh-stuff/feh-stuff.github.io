@@ -1,10 +1,51 @@
 module.exports = [
   {
+    date: "July 2018",
+    banners: [
+      {
+        name: "A Sketchy Summer",
+        startDate: "Jul 6, 2018",
+        focusHeroes: [ "Camilla (A Sketchy Summer)", "Takumi (A Sketchy Summer)", "Linde (A Sketchy Summer)", "Tiki (Young) (A Sketchy Summer)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2" 
+      },
+      {
+        name: "Heroes with Luna (July 2018)",
+        startDate: "Jul 6, 2018",
+        focusHeroes: [ "Mia", "Celica (Fallen Heroes)", "Hinoka (Wings of Fate)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2" 
+      },
+      {
+        name: "Hector & Matthew's Battle",
+        startDate: "Jul 5, 2018",
+        focusHeroes: [ "Hector", "Matthew", "Serra" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2" 
+      }
+    ]
+  },
+  {
     date: "June 2018",
     banners: [
       {
+        name: "Fated Battles",
+        startDate: "Jul 6, 2018",
+        focusHeroes: [ "Zelgius", "Marth", "Hardin", "Sigurd" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2" 
+      },
+      {
         name: "Legendary Heroes: Hector, Marquess of Ostia",
-        startDate: "Jun 21, 2018",
+        startDate: "Jun 28, 2018",
         focusHeroes: [ "Hector (Legendary Heroes)", "Myrrh", "Ike (Brave Heroes)", "Tharja (Winter's Envoy)", "Leif", "Ike (Legendary Heroes)", "Robin (F) (Legendary Heroes)", "Elise", "Roy (Love Abounds)", "Lyn (Love Abounds)", "Morgan (F)", "Ephraim (Legendary Heroes)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],

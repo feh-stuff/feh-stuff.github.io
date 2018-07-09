@@ -2266,7 +2266,84 @@ module.exports = {
       effect: "If unit initiates combat, grants Atk/Spd/Def/Res+2 during combat."
     }
   ],
-
+  "Juicy Wave+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack."
+    }
+  ],
+  "Starfish+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "If unit’s HP < 75% and unit initiates combat,unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "If unit’s HP < 75% and unit initiates combat,unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "If unit’s HP < 75% and unit initiates combat,unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "If unit’s HP < 75% and unit initiates combat,unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action."
+    }
+  ],
+  "Fishie Bow+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Effective against flying foes. If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Effective against flying foes. If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Effective against flying foes. If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "Effective against flying foes. If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack."
+    }
+  ],
 
 
   // prf weapons
@@ -3276,6 +3353,116 @@ module.exports = {
       cost: 1,
       stats: {hp: 5, res: 4},
       effect: "Effective against dragon foes. At the start of every second turn, restores 10 HP. If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+    }
+  ],
+  "Reese's Tome": [
+    {
+      name: "Spd/Res Ploy",
+      icon: "45-3",
+      cost: 1,
+      effect: "During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2. At start of turn, inflicts Spd/Res-4 on foes in cardinal directions with Res < unit's Res through their next actions."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: " During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: " During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: " During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: " During combat, unit's Atk/Spd/Def/Res boosted by number of adjacent allies x 2."
+    }
+  ],
+  "Dauntless Lance": [
+    {
+      name: "Spd/Def Stance",
+      icon: "45-1",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "HP+3. Accelerates Special trigger (cooldown count-1). Effective against armored foes. If foe initiates combat, grants Spd/Def+4 during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Accelerates Special trigger (cooldown count-1). Effective against armored foes."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Accelerates Special trigger (cooldown count-1). Effective against armored foes."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Accelerates Special trigger (cooldown count-1). Effective against armored foes."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Accelerates Special trigger (cooldown count-1). Effective against armored foes."
+    }
+  ],
+  "Draconic Poleax": [
+    {
+      name: "Res Tactic",
+      icon: "45-2",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "HP+3. If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%. At start of turn, grants Res+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
     }
   ],
 };
