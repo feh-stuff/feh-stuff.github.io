@@ -3427,7 +3427,7 @@ module.exports = [
     damage: 16,
     range: 1,
     weaponType: "Breath",
-    stats: {atk: 3},
+    stats: {def: 3},
     prev: ["Flametongue"],
     exclusive: ["Tiki (Young) (A Sketchy Summer)"],
     effect: "Effective against dragon foes. Grants Def+3. If foe initiates combat, grants Special cooldown charge +1 per attack during combat. (Only highest value applied. Does not stack.) If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
