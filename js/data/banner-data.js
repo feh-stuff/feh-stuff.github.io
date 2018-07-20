@@ -3,13 +3,31 @@ module.exports = [
     date: "July 2018",
     banners: [
       {
+        name: "Ylissean Travellers",
+        startDate: "Jul 20, 2018",
+        focusHeroes: [ "Olivia (Ylissean Travellers)", "Sumia", "Libra", "Maribelle" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "New Power (July 2018)",
+        startDate: "Jul 17, 2018",
+        focusHeroes: [ "Nephenee", "Katarina", "Titania" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "A Sketchy Summer",
         startDate: "Jul 6, 2018",
         focusHeroes: [ "Camilla (A Sketchy Summer)", "Takumi (A Sketchy Summer)", "Linde (A Sketchy Summer)", "Tiki (Young) (A Sketchy Summer)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
         rateType: "defaultV2",
-        pool: "pool2" 
+        pool: "pool2"
       },
       {
         name: "Heroes with Luna (July 2018)",
@@ -18,7 +36,7 @@ module.exports = [
         excludeFromRarity4: [],
         excludeFromRarity5: [],
         rateType: "defaultV2",
-        pool: "pool2" 
+        pool: "pool2"
       },
       {
         name: "Hector & Matthew's Battle",
@@ -27,7 +45,7 @@ module.exports = [
         excludeFromRarity4: [],
         excludeFromRarity5: [],
         rateType: "defaultV2",
-        pool: "pool2" 
+        pool: "pool2"
       }
     ]
   },
@@ -41,7 +59,7 @@ module.exports = [
         excludeFromRarity4: [],
         excludeFromRarity5: [],
         rateType: "defaultV2",
-        pool: "pool2" 
+        pool: "pool2"
       },
       {
         name: "Legendary Heroes: Hector, Marquess of Ostia",

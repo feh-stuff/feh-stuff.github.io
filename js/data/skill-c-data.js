@@ -1055,6 +1055,20 @@ module.exports = [
     effect: "Grants adjacent allies Atk/Def +3 during combat."
   },
   {
+    name: "Spur Atk/Res 1",
+    spCost: 120,
+    icon: "46-5",
+    prev: ["Spur Atk 1", "Spur Res 1"],
+    effect: "Grants adjacent allies Atk/Res +2 during combat."
+  },
+  {
+    name: "Spur Atk/Res 2",
+    spCost: 240,
+    icon: "46-6",
+    prev: ["Spur Atk/Res 1"],
+    effect: "Grants adjacent allies Atk/Res +3 during combat."
+  },
+  {
     name: "Spur Atk/Spd 1",
     spCost: 120,
     icon: "35-6",
@@ -1155,6 +1169,29 @@ module.exports = [
     icon: "27-7",
     prev: ["Spur Spd/Def 1"],
     effect: "Grants adjacent allies Spd/Def +3 during combat."
+  },
+  {
+    name: "Staff Valor 1",
+    spCost: 30,
+    icon: "46-7",
+    include: [{weaponType: "Staff"}],
+    effect: "If unit survives and uses a staff, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
+    name: "Staff Valor 2",
+    spCost: 60,
+    icon: "46-8",
+    prev: ["Staff Valor 1"],
+    include: [{weaponType: "Staff"}],
+    effect: "If unit survives, all staff users on team get 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
+    name: "Staff Valor 3",
+    spCost: 120,
+    icon: "46-9",
+    prev: ["Staff Valor 2"],
+    include: [{weaponType: "Staff"}],
+    effect: "If unit survives, all staff users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)"
   },
   {
     name: "Sword Exp. 1",

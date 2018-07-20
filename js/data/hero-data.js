@@ -4413,8 +4413,10 @@ module.exports = [
       { name: "Hone Spd 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 17, atk: 7, spd: 10, def: 7, res: 4 },
+      level1: { hp: 20, atk: 9, spd: 7, def: 6, res: 5 },
       level40: { hp: [ 41, 44, 47 ], atk: [ 32, 35, 38 ], spd: [ 23, 26, 30 ], def: [ 27, 30, 33 ], res: [ 19, 22, 25 ] },
+      level1_4: { hp: 19, atk: 9, spd: 7, def: 5, res: 4 },
+      level40_4: { hp: [ 38, 41, 44 ], atk: [ 30, 33, 36 ], spd: [ 22, 25, 28 ],def: [ 24, 27, 30 ], res: [ 17, 20, 23 ] }
     }
   },
   {
@@ -4657,6 +4659,39 @@ module.exports = [
       level40: { hp: [ 35, 39, 42 ], atk: [ 31, 34, 37 ], spd: [ 27, 30, 33 ], def: [ 26, 30, 33 ], res: [ 12, 15, 19 ] },
       level1_4: { hp: 16, atk: 8, spd: 5, def: 8, res: 4 },
       level40_4: { hp: [ 33, 36, 39 ], atk: [ 29, 32, 35 ], spd: [ 24, 27, 30 ], def: [ 25, 28, 31 ], res: [ 11, 14, 17 ] }
+    }
+  },
+  {
+    name: "Libra",
+    title: "Fetching Friar",
+    artist: "Miyajima Haru (ミヤジマハル)",
+    voice: "Cindy Robinson",
+    releaseDate: "Jul 20, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Libra.png",
+      main: "img/heroes-main/Libra.png"
+    },
+    skills: [
+      { name: "Iron Axe", rarity: 4 },
+      { name: "Steel Axe", rarity: 4 },
+      { name: "Wo Gùn", rarity: 4 },
+      { name: "Wo Gùn+", rarity: 5 },
+      { name: "Daylight", rarity: 4 },
+      { name: "Sol", rarity: 4 },
+      { name: "Renewal 1", rarity: 4 },
+      { name: "Renewal 2", rarity: 4 },
+      { name: "Renewal 3", rarity: 4 },
+      { name: "Spur Res 1", rarity: 4 },
+      { name: "Spur Atk/Res 1", rarity: 4 },
+      { name: "Spur Atk/Res 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 9, spd: 8, def: 6, res: 7 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 32, 35, 38 ], spd: [ 29, 32, 35 ], def: [ 24, 28, 31 ], res: [ 25, 29, 32 ] }
     }
   },
   {
@@ -5502,6 +5537,42 @@ module.exports = [
       level40: { hp: [ 33, 36, 40 ], atk: [ 23, 27, 30 ], spd: [ 31, 34, 37 ], def: [ 16, 19, 22 ], res: [ 28, 32, 35 ] },
       level1_4: { hp: 16, atk: 4, spd: 8, def: 3, res: 10 },
       level40_4: { hp: [ 31, 34, 37 ], atk: [ 21, 24, 27 ], spd: [ 29, 32, 35 ], def: [ 14, 17, 20 ], res: [ 27, 30, 33 ] }
+    }
+  },
+  {
+    name: "Maribelle",
+    title: "Dire Damsel",
+    artist: "Kousei Horiguchi (恒星ホリグチ)",
+    voice: "Melissa Fahn",
+    releaseDate: "Jul 20, 2018",
+    colorType: "Neutral",
+    weaponType: "Staff",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Maribelle.png",
+      main: "img/heroes-main/Maribelle.png"
+    },
+    skills: [
+      { name: "Assault", rarity: 5 },
+      { name: "Trilemma", rarity: 5 },
+      { name: "Trilemma+", rarity: 5 },
+      { name: "Heal", rarity: 5 },
+      { name: "Mend", rarity: 5 },
+      { name: "Martyr", rarity: 5 },
+      { name: "Martyr+", rarity: 5 },
+      { name: "Imbue", rarity: 5 },
+      { name: "Miracle", rarity: 5 },
+      { name: "Dazzling Staff 1", rarity: 5 },
+      { name: "Dazzling Staff 2", rarity: 5 },
+      { name: "Dazzling Staff 3", rarity: 5 },
+      { name: "Staff Valor 1", rarity: 5 },
+      { name: "Staff Valor 2", rarity: 5 },
+      { name: "Staff Valor 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 9, spd: 9, def: 3, res: 5 },
+      level40: { hp: [ 31, 34, 37 ], atk: [ 32, 35, 38 ], spd: [ 30, 33, 36 ], def: [ 12, 16, 19 ], res: [ 23, 37, 30 ] }
     }
   },
   {
@@ -6661,6 +6732,42 @@ module.exports = [
     stats: {
       level1: { hp: 15, atk: 6, spd: 8, def: 3, res: 4 },
       level40: { hp: [ 31, 34, 38 ], atk: [ 24, 28, 31 ], spd: [ 31, 34, 37 ], def: [ 12, 16, 19 ], res: [ 25, 28, 31 ] }
+    }
+  },
+  {
+    name: "Olivia (Ylissean Travellers)",
+    shortName: "Olivia",
+    title: "Sky-High Dancer",
+    artist: "AKIRA",
+    voice: "Karen Strassman",
+    releaseDate: "Jul 20, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Olivia (Ylissean Travellers).png",
+      main: "img/heroes-main/Olivia (Ylissean Travellers).png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Skuld", rarity: 5 },
+      { name: "Dance", rarity: 5 },
+      { name: "Steady Stance 1", rarity: 5 },
+      { name: "Bracing Stance 1", rarity: 5 },
+      { name: "Bracing Stance 2", rarity: 5 },
+      { name: "Chill Spd 1", rarity: 5 },
+      { name: "Chill Spd 2", rarity: 5 },
+      { name: "Chill Spd 3", rarity: 5 },
+      { name: "Guidance 1", rarity: 5 },
+      { name: "Guidance 2", rarity: 5 },
+      { name: "Guidance 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 6, spd: 8, def: 4, res: 4 },
+      level40: { hp: [ 33, 36, 40 ], atk: [ 27, 30, 33 ], spd: [ 31, 34, 37 ], def: [ 22, 26, 29 ], res: [ 20, 23, 27 ] }
     }
   },
   {
@@ -8091,6 +8198,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Flying",
+    rarity4: ["pool2"],
     rarity5: ["pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Shigure.png",
@@ -8112,7 +8220,9 @@ module.exports = [
     ],
     stats: {
       level1: { hp: 18, atk: 7, spd: 9, def: 5, res: 8 },
-      level40: { hp: [ 36, 40, 43 ], atk: [ 30, 33, 36 ], spd: [ 34, 37, 40 ], def: [ 23, 27, 30 ], res: [ 22, 25, 28 ] }
+      level40: { hp: [ 36, 40, 43 ], atk: [ 30, 33, 36 ], spd: [ 34, 37, 40 ], def: [ 23, 27, 30 ], res: [ 22, 25, 28 ] },
+      level1_4: { hp: 17, atk: 6, spd: 9, def: 4, res: 8 },
+      level40_4: { hp: [34, 37, 40], atk: [27, 30, 33], spd: [32, 35, 38], def: [21, 24, 27], res: [21, 24, 27] }
     }
   },
   {
@@ -8532,6 +8642,38 @@ module.exports = [
     }
   },
   {
+    name: "Sumia",
+    title: "Maid of Flowers",
+    artist: "pikomaro",
+    voice: "—",
+    releaseDate: "Jul 20, 2018",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Sumia.png",
+      main: "img/heroes-main/Sumia.png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "Reprisal Lance", rarity: 5 },
+      { name: "Reprisal Lance+", rarity: 5 },
+      { name: "Reposition", rarity: 5 },
+      { name: "Close Def 1", rarity: 5 },
+      { name: "Close Def 2", rarity: 5 },
+      { name: "Close Def 3", rarity: 5 },
+      { name: "Atk/Def Link 1", rarity: 5 },
+      { name: "Atk/Def Link 2", rarity: 5 },
+      { name: "Atk/Def Link 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 6, spd: 11, def: 7, res: 6 },
+      level40: { hp: [ 35, 39, 42 ], atk: [ 27, 30, 33 ], spd: [ 36, 39, 42 ], def: [ 25, 29, 32 ], res: [ 22, 25, 29 ] }
+    }
+  },
+  {
     name: "Tailtiu",
     title: "Thunder Noble",
     artist: "Shioemon (しおえもん)  / INTELLIGENT SYSTEMS",
@@ -8739,7 +8881,7 @@ module.exports = [
       level40: { hp: [ 33, 36, 40 ], atk: [ 31, 34, 37 ], spd: [ 33, 36, 39 ], def: [ 22, 25, 29 ], res: [ 22, 25, 29 ] }
     }
   },
-    {
+  {
     name: "Tana (Summer's Arrival)",
     shortName: "Tana",
     title: "Noble and Nimble",
@@ -9210,6 +9352,40 @@ module.exports = [
       level40: { hp: [ 43, 46, 49 ], atk: [ 28, 31, 34 ], spd: [ 28, 31, 34 ], def: [ 23, 26, 30 ], res: [ 10, 13, 17 ] },
       level1_4: { hp: 19, atk: 7, spd: 7, def: 6, res: 2 },
       level40_4: { hp: [ 40, 43, 46 ], atk: [ 26, 29, 32 ], spd: [ 26, 29, 32 ], def: [ 21, 24, 27 ], res: [ 9, 12, 15 ] }
+    }
+  },
+  {
+    name: "Walhart",
+    title: "The Conqueror",
+    artist: "Soeda Ippei (添田一平)",
+    voice: "Richard Epcar",
+    releaseDate: "Jul 29, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    ghb: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Walhart.png",
+      main: "img/heroes-main/Walhart.png"
+    },
+    skills: [
+      { name: "Iron Axe", rarity: 3 },
+      { name: "Steel Axe", rarity: 3 },
+      { name: "Silver Axe", rarity: 4 },
+      { name: "Wolf Berg", rarity: 5 },
+      { name: "Night Sky", rarity: 4 },
+      { name: "Luna", rarity: 4 },
+      { name: "Grani's Shield", rarity: 3 },
+      { name: "Chill Def 1", rarity: 3 },
+      { name: "Chill Def 2", rarity: 4 },
+      { name: "Chill Def 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 19, atk: 11, spd: 5, def: 8, res: 3 },
+      level40: { hp: [ 38, 41, 44 ], atk: [ 34, 37, 40 ], spd: [ 24, 27, 30 ], def: [ 31, 34, 37 ], res: [ 13, 16, 19 ] },
+      level1_4: { hp: 18, atk: 11, spd: 4, def: 8, res: 2 },
+      level40_4: { hp: [ 35, 38, 41 ], atk: [ 34, 37, 40 ], spd: [ 24, 27, 30 ], def: [ 31, 34, 37 ], res: [ 11, 14, 17 ] }
     }
   },
   {

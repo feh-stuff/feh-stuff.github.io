@@ -23,6 +23,26 @@ module.exports = [
     effect: "Unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces."
   },
   {
+    name: "Atk/Def Link 1",
+    spCost: 60,
+    icon: "46-2",
+    effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Def+2 to unit and target ally or unit and targeting ally for 1 turn."
+  },
+  {
+    name: "Atk/Def Link 2",
+    spCost: 120,
+    icon: "46-3",
+    prev: ["Def/Res Link 1"],
+    effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Def+4 to unit and target ally or unit and targeting ally for 1 turn."
+  },
+  {
+    name: "Atk/Def Link 3",
+    spCost: 240,
+    icon: "46-4",
+    prev: ["Def/Res Link 2"],
+    effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Def+6 to unit and target ally or unit and targeting ally for 1 turn."
+  },
+  {
     name: "Axebreaker 1",
     spCost: 50,
     icon: "8-10",
