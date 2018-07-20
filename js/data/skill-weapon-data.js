@@ -2732,6 +2732,26 @@ module.exports = [
     effect: "If foe's HP is 100% when combat starts, unit receives Atk/Spd+2 during combat.",
   },
   {
+    name: "Reprisal Lance",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Steel Lance"],
+    effect: "If foe initiates combat, grants Atk+6 during combat."
+  },
+  {
+    name: "Reprisal Lance+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Reprisal Lance"],
+    effect: "If foe initiates combat, grants Atk+6 during combat."
+  },
+  {
     name: "Resolute Blade",
     spCost: 400,
     damage: 16,
@@ -3151,6 +3171,17 @@ module.exports = [
     prev: ["Silver Bow"],
     exclusive: ["Takumi (Fallen Heroes)"],
     effect: "Effective against flying units.  Grants Spd+3. At the start of turn 3, foes within 3 columns centered on unit take 10 damage and bonuses on those foes become penalties through their next actions.",
+  },
+  {
+    name: "Skuld",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Silver Sword"],
+    exclusive: ["Olivia (Ylissean Travellers)"],
+    effect: "If Sing or Dance is used, grants Atk/Spd/Def/Res+3 to target.",
   },
   {
     name: "Slaying Axe",
@@ -3580,6 +3611,25 @@ module.exports = [
     effect: "Grants allies within 2 spaces Atk/Spd+1 during combat."
   },
   {
+    name: "Trilemma",
+    spCost: 150,
+    damage: 0,
+    range: 2,
+    weaponType: "Staff",
+    colorType: "Neutral",
+    effect: "After combat, if unit attacked, inflicts the following status on foe through its next action: \"If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.\""
+  },
+  {
+    name: "Trilemma+",
+    spCost: 300,
+    damage: 10,
+    range: 2,
+    weaponType: "Staff",
+    colorType: "Neutral",
+    prev: ["Trilemma"],
+    effect: "After combat, if unit attacked, inflicts the following status on foe through its next action: \"If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.\""
+  },
+  {
     name: "Tyrfing",
     spCost: 400,
     damage: 16,
@@ -3758,6 +3808,37 @@ module.exports = [
     colorType: "Red",
     prev: ["Wo Dao"],
     effect: "Grants +10 to damage when Special triggers."
+  },
+  {
+    name: "Wo Gùn",
+    spCost: 200,
+    damage: 9,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Steel Axe"],
+    effect: "Deals +10 damage when Special triggers."
+  },
+  {
+    name: "Wo Gùn+",
+    spCost: 300,
+    damage: 13,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Wo Gùn"],
+    effect: "Deals +10 damage when Special triggers."
+  },
+  {
+    name: "Wolf Berg",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    exclusive: ["Walhart"],
+    prev: ["Silver Axe"],
+    effect: "Grants Def+3. If the number of foes within 2 spaces (excluding target) ≥ the number of allies within 2 spaces (excluding unit), grants Atk/Spd/Def/Res+4 during combat."
   },
   {
     name: "Yato",

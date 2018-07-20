@@ -726,6 +726,18 @@ module.exports = {
       effect: "After combat, foe and foes within 2 spaces of target inflicted with status preventing counterattack through their next actions. The enemy cannot counterattack."
     }
   ],
+  "Trillema+": [
+    {
+      name: "Wrathful Staff",
+      icon: "32-1",
+      effect: "After combat, if unit attacked, inflicts the following status on target and foes within 2 spaces of target through their next actions: \"If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.\". Damage from unit's staff will be calculated the same as other weapons."
+    },
+    {
+      name: "Dazzling Staff",
+      icon: "32-2",
+      effect: "After combat, if unit attacked, inflicts the following status on target and foes within 2 spaces of target through their next actions: \"If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%.\". The enemy cannot counterattack."
+    }
+  ],
   "Carrot Lance+": [
     {
       name: "+Atk",
@@ -2344,7 +2356,58 @@ module.exports = {
       effect: "Effective against flying foes. If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack."
     }
   ],
-
+  "Wo Gùn+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 3},
+      effect: "Deals +10 damage when Special triggers."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, atk: 1, spd: 3},
+      effect: "Deals +10 damage when Special triggers."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, atk: 1, def: 4},
+      effect: "Deals +10 damage when Special triggers."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, atk: 1, res: 4},
+      effect: "Deals +10 damage when Special triggers."
+    }
+  ],
+  "Reprisal Lance+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 3},
+      effect: "If foe initiates combat, grants Atk+6 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, atk: 1, spd: 3},
+      effect: "If foe initiates combat, grants Atk+6 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, atk: 1, def: 4},
+      effect: "If foe initiates combat, grants Atk+6 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, atk: 1, res: 4},
+      effect: "If foe initiates combat, grants Atk+6 during combat."
+    }
+  ],
 
   // prf weapons
   "Sol Katti": [
@@ -3463,6 +3526,117 @@ module.exports = {
       cost: 1,
       stats: {hp: 5, res: 4},
       effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+    }
+  ],
+  "Fólkvangr": [
+    {
+      name: "Triangle Adept",
+      icon: "46-11",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "At start of combat, if unit's HP ≤ 80%, grants Atk/Def+7 during combat. If unit has weapon-triangle advantage, boosts Atk by 20%. Uf unit has weapon-triangle disadvantage, reduces Atk by 20%."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "At start of combat, if unit's HP ≤ 80%, grants Atk/Def+7 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "At start of combat, if unit's HP ≤ 80%, grants Atk/Def+7 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "At start of combat, if unit's HP ≤ 80%, grants Atk/Def+7 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "At start of combat, if unit's HP ≤ 80%, grants Atk/Def+7 during combat."
+    }
+  ],
+  "Fensalir": [
+    {
+      name: "Spd/Def Bond",
+      icon: "46-10",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat. If unit is adjacent to an ally, grants Spd/Def+5 during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+    }
+  ],
+  "Nóatún": [
+    {
+      name: "Formation",
+      icon: "32-5",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "If unit's HP ≤ 50%, unit can move to a space adjacent to any ally. If unit's HP ≥ 50%, unit can move to a space adjacent to any ally within 2 spaces."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "If unit's HP ≤ 50%, unit can move to a space adjacent to any ally."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "If unit's HP ≤ 50%, unit can move to a space adjacent to any ally."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "If unit's HP ≤ 50%, unit can move to a space adjacent to any ally."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "If unit's HP ≤ 50%, unit can move to a space adjacent to any ally."
     }
   ],
 };

@@ -200,6 +200,21 @@ module.exports = [
     effect: "Grants Def/Res+4 during combat if unit initiates combat."
   },
   {
+    name: "Bracing Stance 1",
+    spCost: 100,
+    icon: "46-0",
+    prev: ["Steady Stance 1"],
+    effect: "Grants Def/Res+2 during combat when this unit is attacked."
+  },
+  {
+    name: "Bracing Stance 2",
+    spCost: 200,
+    icon: "46-1",
+    prev: ["Bracing Stance 1"],
+    last: true,
+    effect: "Grants Def/Res+4 during combat when this unit is attacked."
+  },
+  {
     name: "Brazen Atk/Def 1",
     spCost: 60,
     icon: "33-10",
