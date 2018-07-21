@@ -2386,25 +2386,25 @@ module.exports = {
     {
       name: "+Atk",
       icon: "31-9",
-      stats: {hp: 5, atk: 3},
+      stats: {hp: 5, atk: 2},
       effect: "If foe initiates combat, grants Atk+6 during combat."
     },
     {
       name: "+Spd",
       icon: "31-10",
-      stats: {hp: 5, atk: 1, spd: 3},
+      stats: {hp: 5, spd: 3},
       effect: "If foe initiates combat, grants Atk+6 during combat."
     },
     {
       name: "+Def",
       icon: "31-11",
-      stats: {hp: 5, atk: 1, def: 4},
+      stats: {hp: 5, def: 4},
       effect: "If foe initiates combat, grants Atk+6 during combat."
     },
     {
       name: "+Res",
       icon: "31-12",
-      stats: {hp: 5, atk: 1, res: 4},
+      stats: {hp: 5, res: 4},
       effect: "If foe initiates combat, grants Atk+6 during combat."
     }
   ],
