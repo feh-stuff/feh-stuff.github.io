@@ -3,6 +3,24 @@ module.exports = [
     date: "July 2018",
     banners: [
       {
+        name: "Legendary Heroes: Lucina, Glorious Archer",
+        startDate: "Jul 31, 2018",
+        focusHeroes: [ "Lyn (Legendary Heroes)", "Lissa (Winter's Envoy)", "Lilina (Love Abounds)", "Chrom (The Branded King)", "Ryoma (Legendary Heroes)", "Camilla (Happy New Year!)", "Lucina (Legendary Heroes)", "Azura", "Ishtar","Hinoka (Wings of Fate)","Lyn (Brave Heroes)", "Robin (F) (Legendary Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "legendaryV1",
+        pool: "pool2"
+      },
+      {
+        name: "Heroes with Distant Def",
+        startDate: "Jul 27, 2018",
+        focusHeroes: [ "Celica", "Micaiah", "Rhajat" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "Ylissean Travellers",
         startDate: "Jul 20, 2018",
         focusHeroes: [ "Olivia (Ylissean Travellers)", "Sumia", "Libra", "Maribelle" ],

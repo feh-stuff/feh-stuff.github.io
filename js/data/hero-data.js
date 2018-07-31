@@ -5084,6 +5084,44 @@ module.exports = [
     }
   },
   {
+    name: "Lucina (Legendary Heroes)",
+    shortName: "Lucina",
+    title: "Glorious Archer",
+    artist: "Yamada Kotaro (山田孝太郎)",
+    voice: "Alexis Tipton",
+    releaseDate: "Jul 31, 2018",
+    colorType: "Blue",
+    weaponType: "Bow",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Lucina (Legendary Heroes).png",
+      main: "img/heroes-main/Lucina (Legendary Heroes).png"
+    },
+    skills: [
+      { name: "Iron Bow", rarity: 5 },
+      { name: "Steel Bow", rarity: 5 },
+      { name: "Silver Bow", rarity: 5 },
+      { name: "Thögn", rarity: 5 },
+      { name: "Swap", rarity: 5 },
+      { name: "Future Vision", rarity: 5 },
+      { name: "Death Blow 1", rarity: 5 },
+      { name: "Swift Sparrow 1", rarity: 5 },
+      { name: "Swift Sparrow 2", rarity: 5 },
+      { name: "Wings of Mercy 1", rarity: 5 },
+      { name: "Wings of Mercy 2", rarity: 5 },
+      { name: "Wings of Mercy 3", rarity: 5 },
+      { name: "Distant Guard 1", rarity: 5 },
+      { name: "Distant Guard 2", rarity: 5 },
+      { name: "Distant Guard 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 8, spd: 9, def: 6, res: 5 },
+      level40: { hp: [ 33, 36, 40 ], atk: [ 31, 34, 37 ], spd: [ 32, 35, 38 ], def: [ 22, 25, 29 ], res: [ 17, 20, 23 ] }
+    }
+  },
+  {
     name: "Lucina (Spring Festival)",
     shortName: "Lucina",
     title: "Spring Exalt",
