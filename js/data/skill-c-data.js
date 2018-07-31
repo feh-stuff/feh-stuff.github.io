@@ -330,6 +330,26 @@ module.exports = [
     effect: "At start of turn, grants Def+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
   },
   {
+    name: "Distant Guard 1",
+    spCost: 60,
+    icon: "46-12",
+    effect: "Allies within 2 spaces gain: \"If foe uses bow, dagger, magic, or staff, grants Def/Res+2 during combat.\""
+  },
+  {
+    name: "Distant Guard 2",
+    spCost: 120,
+    icon: "47-0",
+    prev: ["Distant Guard 1"],
+    effect: "Allies within 2 spaces gain: \"If foe uses bow, dagger, magic, or staff, grants Def/Res+3 during combat.\""
+  },
+  {
+    name: "Distant Guard 3",
+    spCost: 240,
+    icon: "47-1",
+    prev: ["Distant Guard 2"],
+    effect: "Allies within 2 spaces gain: \"If foe uses bow, dagger, magic, or staff, grants Def/Res+4 during combat.\""
+  },
+  {
     name: "Dragon Valor 1",
     spCost: 30,
     icon: "45-10",

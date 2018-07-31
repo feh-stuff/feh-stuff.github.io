@@ -46,5 +46,11 @@ module.exports = [
     type: "Fire",
     stats: { hp: 3, atk: 2 },
     icon: 7
+  },
+  {
+    hero: "Lucina (Legendary Heroes)",
+    type: "Wind",
+    stats: { hp: 3, spd: 3 },
+    icon: 8
   }
 ];

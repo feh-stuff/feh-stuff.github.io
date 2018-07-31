@@ -3539,6 +3539,18 @@ module.exports = [
     effect: "Damage from staff calculated like other weapons. At start of turn, foes with bow, daggers, magic, or staff in cardinal directions with HP 3 or more lower than unit's can move only 1 space through their next actions.",
   },
   {
+    name: "Thögn",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Bow",
+    colorType: "Blue",
+    prev: ["Silver Bow"],
+    exclusive: ["Lucina (Legendary Heroes)"],
+    stats: {spd: 3},
+    effect: "Grants Spd+3. If unit initiates combat and foe uses sword, lance, axe, or dragonstone, grants Atk/Spd/Def/Res+4 during combat.)",
+  },
+  {
     name: "Thoron",
     spCost: 200,
     damage: 9,

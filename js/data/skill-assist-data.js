@@ -24,6 +24,15 @@ module.exports = [
     effect: "Unit moves 1 space away from target ally, who moves to unit's former position."
   },
   {
+    name: "Future Vision",
+    range: 1,
+    spCost: 400,
+    prev: ["Swap"],
+    include: [{name: "Lucina (Legendary Heroes)"}],
+    last: true,
+    effect: "Unit and target ally swap spaces. Grants another action to unit. (Additional action granted once per turn only.)"
+  },
+  {
     name: "Harsh Command",
     range: 1,
     spCost: 150,
