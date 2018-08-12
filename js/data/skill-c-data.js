@@ -804,6 +804,24 @@ module.exports = [
     effect: "At start of odd-numbered turns, grants Atk+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
   },
   {
+    name: "Odd Def Wave 1",
+    spCost: 60,
+    icon: "47-8",
+    effect: "At start of odd-numbered turns, grants Def+2 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Odd Def Wave 2",
+    spCost: 120,
+    icon: "47-9",
+    effect: "At start of odd-numbered turns, grants Def+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Odd Def Wave 3",
+    spCost: 240,
+    icon: "47-10",
+    effect: "At start of odd-numbered turns, grants Def+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
     name: "Odd Res Wave 1",
     spCost: 60,
     icon: "45-7",
@@ -1189,6 +1207,20 @@ module.exports = [
     icon: "27-7",
     prev: ["Spur Spd/Def 1"],
     effect: "Grants adjacent allies Spd/Def +3 during combat."
+  },
+  {
+    name: "Spur Spd/Res 1",
+    spCost: 120,
+    icon: "47-6",
+    prev: ["Spur Res 1", "Spur Spd 1"],
+    effect: "Grants adjacent allies Spd/Res +2 during combat"
+  },
+  {
+    name: "Spur Spd/Res 2",
+    spCost: 240,
+    icon: "47-7",
+    prev: ["Spur Spd/Res 1"],
+    effect: "Grants adjacent allies Spd/Res +3 during combat."
   },
   {
     name: "Staff Valor 1",

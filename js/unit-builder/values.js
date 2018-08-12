@@ -41,7 +41,10 @@ exports.CONST = {
     {name: 'Bow (Green)', weaponType: 'Bow', colorType: 'Green'},
     {name: 'Bow (Blue)', weaponType: 'Bow', colorType: 'Blue'},
     {name: 'Bow (Neutral)', weaponType: 'Bow', colorType: 'Neutral'},
-    {name: 'Dagger', weaponType: 'Dagger', colorType: 'Neutral'},
+    {name: 'Dagger (Neutral)', weaponType: 'Dagger', colorType: 'Neutral'},
+    {name: 'Dagger (Red)', weaponType: 'Dagger', colorType: 'Red'},
+    {name: 'Dagger (Blue)', weaponType: 'Dagger', colorType: 'Blue'},
+    {name: 'Dagger (Green)', weaponType: 'Dagger', colorType: 'Green'},
     {name: 'Staff', weaponType: 'Staff', colorType: 'Neutral'}
   ]
 };
@@ -68,6 +71,9 @@ exports.COORD = {
     "Neutral Bow": [156,268],
     "Neutral Dagger": [156,320],
     "Neutral Staff": [156,372],
+    "Red Dagger": [210,1140],
+    "Blue Dagger": [262,1140],
+    "Green Dagger": [314,1140],
     "Red Leaf": [65, 1088],
     "Skates": [118, 1087]
   },
