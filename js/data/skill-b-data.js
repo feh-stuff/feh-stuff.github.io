@@ -502,6 +502,22 @@ module.exports = [
     effect: "Enables unit whose own HP is ≤ 50% to warp adjacent to any ally."
   },
   {
+    name: "Fireflood Dance 1",
+    spCost: 120,
+    icon: "47-2",
+    prev: ["Torrent Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, grants Atk+2 and Res+3 to target."
+  },
+  {
+    name: "Fireflood Dance 2",
+    spCost: 240,
+    icon: "47-3",
+    prev: ["Rockslide Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, grants Atk+3 and Res+4 to target."
+  },
+  {
     name: "Firestorm Dance 1",
     spCost: 120,
     icon: "42-2",
@@ -840,6 +856,22 @@ module.exports = [
     icon: "7-1",
     prev: ["Renewal 2"],
     effect: "At the start of every second turn, restores 10 HP."
+  },
+  {
+    name: "Rockslide Dance 1",
+    spCost: 120,
+    icon: "47-4",
+    prev: ["Gale Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, grants Spd+2 and Def+3 to target."
+  },
+  {
+    name: "Rockslide Dance 2",
+    spCost: 240,
+    icon: "47-5",
+    prev: ["Rockslide Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, grants Spd+3 and Def+4 to target."
   },
   {
     name: "S Drink",

@@ -181,7 +181,6 @@ module.exports = [
     damage: 8,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Steel Dagger"],
     effect: "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions."
   },
@@ -191,7 +190,6 @@ module.exports = [
     damage: 12,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Barb Shuriken"],
     effect: "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
   },
@@ -724,6 +722,24 @@ module.exports = [
     effect: "After this unit attacks, foes within 2 spaces of target suffer Atk/Spd-5 through their next actions. Effective against flying units."
   },
   {
+    name: "Cloud Maiougi",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Steel Dagger"],
+    effect: "Effective against dragon foes. Disables unit's and foe's skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Cloud Maiougi+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Cloud Maiougi"],
+    effect: "Effective against dragon foes. Disables unit's and foe's skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+  },
+  {
     name: "Clarisse's Bow+",
     spCost: 300,
     damage: 11,
@@ -802,7 +818,7 @@ module.exports = [
     damage: 7,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Steel Dagger"],
     effect: "If unit initiates attack, adjacent allies recover 7 HP after combat. Also, enemy suffers Def/Res-5 after combat until the end of foe's next action."
   },
@@ -812,7 +828,7 @@ module.exports = [
     damage: 10,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
+    // colorType: "Neutral",
     prev: ["Dancer's Fan"],
     effect: "If unit initiates attack, adjacent allies recover 7 HP after combat. Also, enemy suffers Def/Res-7 after combat until the end of foe's next action."
   },
@@ -929,12 +945,23 @@ module.exports = [
     effect: "Accelerates Special trigger (cooldown count-1). Effective against armored foes."
   },
   {
+    name: "Dawn Suzu",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Red",
+    prev: ["Bolganone"],
+    stats: {atk: 3},
+    exclusive: ["Micaiah (Festival in Hoshido)"],
+    effect: "Effective against armored and cavalry foes. Grants Atk+3. Disables unit's and foe's skills that change attack priority."
+  },
+  {
     name: "Deathly Dagger",
     spCost: 400,
     damage: 11,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Silver Dagger"],
     exclusive: ["Jaffar"],
     effect: "After combat, inflicts Def/Res-7 on foe through its next action. If unit initiated combat, 7 damage to foe after battle.",
@@ -1014,6 +1041,24 @@ module.exports = [
     prev: ["Silver Sword"],
     exclusive: ["Eliwood"],
     effect: "Grants Atk+4 during combat if unit initiates attack.",
+  },
+  {
+    name: "Dusk Uchiwa",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Steel Dagger"],
+    effect: "Effective against cavalry foes. Disables unit's and foe's skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Dusk Uchiwa+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Dusk Uchiwa"],
+    effect: "Effective against cavalry foes. Disables unit's and foe's skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
   },
   {
     name: "Eckesachs",
@@ -1155,7 +1200,6 @@ module.exports = [
     damage: 14,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     // prev: ["Silver Dagger"],
     exclusive: ["Felicia"],
     effect: "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res."
@@ -1898,7 +1942,6 @@ module.exports = [
     damage: 3,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     effect: "After combat, inflicts Def/Res-3 on foe through its next action."
   },
   {
@@ -1977,7 +2020,6 @@ module.exports = [
     damage: 8,
     range: 1,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Steel Dagger"],
     effect: "Grants Def/Res+2 during combat to allies within 2 spaces."
   },
@@ -1987,7 +2029,6 @@ module.exports = [
     damage: 12,
     range: 1,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Kagami Mochi"],
     effect: "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions."
   },
@@ -2135,7 +2176,6 @@ module.exports = [
     damage: 5,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Steel Dagger"],
     effect: "Effective against foe using magic.  After combat, if foe uses magic, foe suffers Def/Res-5 through foe's next action."
   },
@@ -2145,7 +2185,6 @@ module.exports = [
     damage: 8,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Kitty Paddle"],
     effect: "Effective against foe using magic.  After combat, if foe uses magic, foe suffers Def/Res-7 through foe's next action."
   },
@@ -2198,7 +2237,6 @@ module.exports = [
     damage: 8,
     range: 1,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Steel Dagger"],
     effect: "Deals +10 damage when special triggers."
   },
@@ -2208,7 +2246,6 @@ module.exports = [
     damage: 12,
     range: 1,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Lethal Carrot"],
     effect: "Deals +10 damage when special triggers. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces through their next actions."
   },
@@ -2533,7 +2570,6 @@ module.exports = [
     damage: 14,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Silver Dagger"],
     exclusive: ["Sothe"],
     effect: "After combat, if unit attacked, inflicts Atk/Spd/Def/Res-4 on target and foes within 2 spaces of target through their next actions, and grants Atk/Spd/Def/Res+4 to unit and allies within 2 spaces for 1 turn."
@@ -2544,7 +2580,6 @@ module.exports = [
     damage: 2,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Steel Dagger"],
     effect: "Effective against infantry units.  Infantry foes suffer Def/Res-4 after combat through their next actions."
   },
@@ -2554,7 +2589,6 @@ module.exports = [
     damage: 5,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Poison Dagger"],
     effect: "Effective against infantry units.  Infantry foes suffer Def/Res-6 after combat through their next actions."
   },
@@ -2820,7 +2854,6 @@ module.exports = [
     damage: 4,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Steel Dagger"],
     effect: "After combat, inflicts Def/Res-3 on foe through its next action. Grants unit Def/Res+3 for 1 turn."
   },
@@ -2830,7 +2863,6 @@ module.exports = [
     damage: 7,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Rogue Dagger"],
     effect: "After combat, inflicts Def/Res-5 on foe through its next action. Grants unit Def/Res+5 for 1 turn."
   },
@@ -2961,7 +2993,6 @@ module.exports = [
     damage: 7,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Steel Dagger"],
     effect: "Foe takes Def/Res-5 until end of foe's next action. If unit has 100% HP at start of combat, Atk/Spd/Def/Res+2. If attacking, unit gets 2 damage after."
   },
@@ -2971,7 +3002,6 @@ module.exports = [
     damage: 10,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Seashell"],
     effect: "Foe takes Def/Res-7 until end of foe's next action. If unit has 100% HP at start of combat, Atk/Spd/Def/Res+2. If attacking, unit gets 2 damage after."
   },
@@ -3094,7 +3124,6 @@ module.exports = [
     damage: 7,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Steel Dagger"],
     effect: "After combat, inflicts Def/Res-5 on foe through its next action."
   },
@@ -3104,7 +3133,6 @@ module.exports = [
     damage: 10,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Silver Dagger"],
     effect: "After combat, inflicts Def/Res-7 on foe through its next action."
   },
@@ -3171,6 +3199,24 @@ module.exports = [
     prev: ["Silver Bow"],
     exclusive: ["Takumi (Fallen Heroes)"],
     effect: "Effective against flying units.  Grants Spd+3. At the start of turn 3, foes within 3 columns centered on unit take 10 damage and bonuses on those foes become penalties through their next actions.",
+  },
+  {
+    name: "Sky Maiougi",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Steel Dagger"],
+    effect: "Effective against armored foes. Disables unit's and foe's skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Sky Maiougi+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Sky Maiougi"],
+    effect: "Effective against armored foes. Disables unit's and foe's skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
   },
   {
     name: "Skuld",
@@ -3326,7 +3372,6 @@ module.exports = [
     damage: 6,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Steel Dagger"],
     effect: "After combat, inflicts Def/Res-4 on foes within 2 spaces of target through their next actions."
   },
@@ -3336,7 +3381,6 @@ module.exports = [
     damage: 9,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Smoke Dagger"],
     effect: "After combat, inflicts Def/Res-6 on foes within 2 spaces of target through their next actions."
   },
@@ -3377,7 +3421,6 @@ module.exports = [
     damage: 8,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Steel Dagger"],
     effect: "If unit’s HP < 75% and unit initiates combat,unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-5 on foe through its next action."
   },
@@ -3387,7 +3430,6 @@ module.exports = [
     damage: 12,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Starfish"],
     effect: "If unit’s HP < 75% and unit initiates combat,unit can make a follow-up attack before foe can counterattack. After combat, if unit attacked, inflicts Def/Res-7 on foe through its next action."
   },
@@ -3417,7 +3459,6 @@ module.exports = [
     damage: 5,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Iron Dagger"],
     effect: "After combat, inflicts Def/Res-3 on foe through its next action."
   },
@@ -3513,7 +3554,6 @@ module.exports = [
     damage: 8,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["Steel Dagger"],
     effect: "Adds total bonuses on foe to damage dealt during combat. After combat, if unit attacked, inflicts Def/Res-5 on target and foes within 2 spaces of target through their next actions."
   },
@@ -3523,7 +3563,6 @@ module.exports = [
     damage: 12,
     range: 2,
     weaponType: "Dagger",
-    colorType: "Neutral",
     prev: ["The Cleaner"],
     effect: "Adds total bonuses on foe to damage dealt during combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
   },

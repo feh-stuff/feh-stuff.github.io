@@ -1,4 +1,27 @@
 module.exports = [
+ {
+    date: "July 2018",
+    banners: [
+      {
+        name: "Festival in Hoshido",
+        startDate: "Aug 10, 2018",
+        focusHeroes: [ "Xander (Festival in Hoshido)", "Ryoma (Festival in Hoshido)", "Elincia (Festival in Hoshido)", "Micaiah (Festival in Hoshido)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Heroes with Fighter Skills",
+        startDate: "Aug 07, 2018",
+        focusHeroes: [ "Hardin", "Effie", "Robin (M) (Fallen Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      }
+    ]
+  },
   {
     date: "July 2018",
     banners: [

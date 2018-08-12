@@ -2216,6 +2216,43 @@ module.exports = [
     }
   },
   {
+    name: "Elincia (Festival in Hoshido)",
+    shortName: "Elincia",
+    title: "Estival Princess",
+    artist: "Asatani Tomoyo (麻谷知世)",
+    voice: "Amanda Miller",
+    releaseDate: "Aug 10, 2018",
+    colorType: "Green",
+    weaponType: "Dagger",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Elincia (Festival in Hoshido).png",
+      main: "img/heroes-main/Elincia (Festival in Hoshido).png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 5 },
+      { name: "Steel Dagger", rarity: 5 },
+      { name: "Cloud Maiougi", rarity: 5 },
+      { name: "Cloud Maiougi+", rarity: 5 },
+      { name: "Dance", rarity: 5 },
+      { name: "Atk/Spd Push 1", rarity: 5 },
+      { name: "Atk/Spd Push 2", rarity: 5 },
+      { name: "Atk/Spd Push 3", rarity: 5 },
+      { name: "Gale Dance 1", rarity: 5 },
+      { name: "Rockslide Dance 1", rarity: 5 },
+      { name: "Rockslide Dance 2", rarity: 5 },
+      { name: "Spur Res 1", rarity: 5 },
+      { name: "Drive Res 1", rarity: 5 },
+      { name: "Drive Res 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 15, atk: 5, spd: 7, def: 5, res: 4 },
+      level40: { hp: [ 31, 34, 38 ], atk: [ 26, 29, 32 ], spd: [ 32, 35, 38 ], def: [ 17, 20, 23 ], res: [ 18, 21, 24 ] }
+    }
+  },
+  {
     name: "Elise",
     title: "Budding Flower",
     artist: "HAKO (羽公)",
@@ -5932,6 +5969,43 @@ module.exports = [
       level40: { hp: [ 32, 35, 39 ], atk: [ 32, 35, 38 ], spd: [ 24, 28, 31 ], def: [ 14, 18, 21 ], res: [ 32, 35, 38 ] },
     }
   },
+    {
+    name: "Micaiah (Festival in Hoshido)",
+    shortName: "Micaiah",
+    title: "Summer's Dawn",
+    artist: "Chiko (チーコ)",
+    voice: "Veronica Taylor",
+    releaseDate: "Aug 10, 2018",
+    colorType: "Red",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Micaiah (Festival in Hoshido).png",
+      main: "img/heroes-main/Micaiah (Festival in Hoshido).png"
+    },
+    skills: [
+      { name: "Fire", rarity: 5 },
+      { name: "Elfire", rarity: 5 },
+      { name: "Bolganone", rarity: 5 },
+      { name: "Dawn Suzu", rarity: 5 },
+      { name: "Dance", rarity: 5 },
+      { name: "Atk/Res Bond 1", rarity: 5 },
+      { name: "Atk/Res Bond 2", rarity: 5 },
+      { name: "Atk/Res Bond 3", rarity: 5 },
+      { name: "Torrent Dance 1", rarity: 5 },
+      { name: "Fireflood Dance 1", rarity: 5 },
+      { name: "Fireflood Dance 2", rarity: 5 },
+      { name: "Res Ploy 1", rarity: 5 },
+      { name: "Res Ploy 2", rarity: 5 },
+      { name: "Res Ploy 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 14, atk: 8, spd: 5, def: 3, res: 6 },
+      level40: { hp: [ 30, 33, 37 ], atk: [ 31, 34, 37 ], spd: [ 17, 20, 23 ], def: [ 15, 18, 21 ], res: [ 31, 34, 37 ] }
+    }
+  },
   {
     name: "Michalis",
     title: "Ambitious King",
@@ -7625,6 +7699,43 @@ module.exports = [
     stats: {
       level1: { hp: 19, atk: 8, spd: 11, def: 5, res: 4 },
       level40: { hp: [ 37, 41, 44 ], atk: [ 31, 34, 37 ], spd: [ 32, 35, 38 ], def: [ 23, 27, 30 ], res: [ 18, 21, 24 ] }
+    }
+  },
+  {
+    name: "Ryoma (Festival in Hoshido)",
+    shortName: "Ryoma",
+    title: "Dancing Samurai",
+    artist: "Kita Senri (北千里)",
+    voice: "Matt Mercer",
+    releaseDate: "Aug 10, 2018",
+    colorType: "Blue",
+    weaponType: "Dagger",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Ryoma (Festival in Hoshido).png",
+      main: "img/heroes-main/Ryoma (Festival in Hoshido).png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 5 },
+      { name: "Steel Dagger", rarity: 5 },
+      { name: "Sky Maiougi", rarity: 5 },
+      { name: "Sky Maiougi+", rarity: 5 },
+      { name: "Dance", rarity: 5 },
+      { name: "Triangle Adept 1", rarity: 5 },
+      { name: "Triangle Adept 2", rarity: 5 },
+      { name: "Triangle Adept 3", rarity: 5 },
+      { name: "Chill Def 1", rarity: 5 },
+      { name: "Chill Def 2", rarity: 5 },
+      { name: "Chill Def 3", rarity: 5 },
+      { name: "Spur Spd 1", rarity: 5 },
+      { name: "Spur Spd/Res 1", rarity: 5 },
+      { name: "Spur Spd/Res 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 14, atk: 6, spd: 8, def: 4, res: 4 },
+      level40: { hp: [ 32, 36, 39 ], atk: [ 29, 32, 35 ], spd: [ 31, 34, 37 ], def: [ 18, 21, 24 ], res: [ 13, 17, 20 ] }
     }
   },
   {
@@ -9496,6 +9607,41 @@ module.exports = [
       level40: { hp: [ 41, 44, 47 ], atk: [ 29, 32, 35 ], spd: [ 21, 24, 28 ], def: [ 34, 37, 40 ], res: [ 13, 17, 20 ] },
       level1_4: { hp: 19, atk: 8, spd: 4, def: 9, res: 3 },
       level40_4: { hp: [ 38, 41, 44 ], atk: [ 27, 30, 33 ], spd: [ 19, 22, 25 ], def: [ 32, 35, 38 ], res: [ 12, 15, 18 ] }
+    }
+  },
+  {
+    name: "Xander (Festival in Hoshido)",
+    shortName: "Xander",
+    title: "Dancing Knight",
+    artist: "PenekoR (п猫R)",
+    voice: "George Spelvin",
+    releaseDate: "Aug 10, 2018",
+    colorType: "Neutral",
+    weaponType: "Dagger",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Xander (Festival in Hoshido).png",
+      main: "img/heroes-main/Xander (Festival in Hoshido).png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 5 },
+      { name: "Steel Dagger", rarity: 5 },
+      { name: "Dusk Uchiwa", rarity: 5 },
+      { name: "Dusk Uchiwa+", rarity: 5 },
+      { name: "Dance", rarity: 5 },
+      { name: "Close Counter", rarity: 5 },
+      { name: "Quick Riposte 1", rarity: 5 },
+      { name: "Quick Riposte 2", rarity: 5 },
+      { name: "Quick Riposte 3", rarity: 5 },
+      { name: "Odd Def Wave 1", rarity: 5 },
+      { name: "Odd Def Wave 2", rarity: 5 },
+      { name: "Odd Def Wave 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 7, spd: 4, def: 6, res: 3 },
+      level40: { hp: [ 34, 38, 41 ], atk: [ 32, 35, 38 ], spd: [ 13, 17, 20 ], def: [ 31, 34, 37 ], res: [ 12, 16, 19 ] }
     }
   },
   {
