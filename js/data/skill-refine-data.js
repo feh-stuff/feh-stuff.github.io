@@ -726,7 +726,7 @@ module.exports = {
       effect: "After combat, foe and foes within 2 spaces of target inflicted with status preventing counterattack through their next actions. The enemy cannot counterattack."
     }
   ],
-  "Trillema+": [
+  "Trilemma+": [
     {
       name: "Wrathful Staff",
       icon: "32-1",
