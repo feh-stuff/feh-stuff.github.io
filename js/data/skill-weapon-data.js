@@ -3664,7 +3664,7 @@ module.exports = [
   {
     name: "Trilemma",
     spCost: 150,
-    damage: 0,
+    damage: 8,
     range: 2,
     weaponType: "Staff",
     colorType: "Neutral",
@@ -3673,7 +3673,7 @@ module.exports = [
   {
     name: "Trilemma+",
     spCost: 300,
-    damage: 10,
+    damage: 12,
     range: 2,
     weaponType: "Staff",
     colorType: "Neutral",
