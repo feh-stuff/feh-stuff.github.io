@@ -244,6 +244,26 @@ module.exports = [
     effect: "If unit initiates attack, adjacent allies recover 7 HP after combat."
   },
   {
+    name: "Close Guard 1",
+    spCost: 60,
+    icon: "48-9",
+    effect: "Allies within 2 spaces gain: \"If foe uses sword, lance, axe, or dragonstone, grants Def/Res+2 during combat.\""
+  },
+  {
+    name: "Close Guard 2",
+    spCost: 120,
+    icon: "48-10",
+    prev: ["Close Guard 1"],
+    effect: "Allies within 2 spaces gain: \"If foe uses sword, lance, axe, or dragonstone, grants Def/Res+3 during combat.\""
+  },
+  {
+    name: "Close Guard 3",
+    spCost: 240,
+    icon: "48-11",
+    prev: ["Close Guard 2"],
+    effect: "Allies within 2 spaces gain: \"If foe uses sword, lance, axe, or dragonstone, grants Def/Res+4 during combat.\""
+  },
+  {
     name: "Dagger Valor 1",
     spCost: 30,
     icon: "30-11",
@@ -427,6 +447,24 @@ module.exports = [
     icon: "26-7",
     prev: ["Drive Spd 1"],
     effect: "Grants allies within 2 spaces Spd+3 during combat."
+  },
+  {
+    name: "Even Res Wave 1",
+    spCost: 60,
+    icon: "48-6",
+    effect: "At start of even-numbered turns, grants Res+2 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Even Res Wave 2",
+    spCost: 120,
+    icon: "48-7",
+    effect: "At start of even-numbered turns, grants Res+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Even Res Wave 3",
+    spCost: 240,
+    icon: "48-8",
+    effect: "At start of even-numbered turns, grants Res+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
   },
   {
     name: "Even Spd Wave 1",

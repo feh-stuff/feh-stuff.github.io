@@ -1,7 +1,34 @@
 module.exports = [
  {
-    date: "July 2018",
+    date: "August 2018",
     banners: [
+      {
+        name: "Arrival of the Brave",
+        startDate: "Aug 21, 2018",
+        focusHeroes: [ "Hector (Arrival of the Brave)", "Ephraim (Arrival of the Brave)", "Celica (Arrival of the Brave)", "Veronica (Arrival of the Brave)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Micaiah and Sothe's Battle",
+        startDate: "Aug 20, 2018",
+        focusHeroes: [ "Micaiah", "Sothe", "Sanaki" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Heroes with Draconic Aura",
+        startDate: "Aug 16, 2018",
+        focusHeroes: [ "Karla", "Ares", "Kana (F)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
       {
         name: "Festival in Hoshido",
         startDate: "Aug 10, 2018",

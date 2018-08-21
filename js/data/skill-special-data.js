@@ -401,5 +401,19 @@ module.exports = [
     prev: ["Retribution"],
     exclude: [{weaponType: "Staff"}],
     effect: "Grants bonus to damage dealt equal to 50% of damage suffered."
+  },
+  {
+    name: "Windfire Balm",
+    cooldown: 1,
+    spCost: 200,
+    include: [{weaponType: "Staff"}],
+    effect: "When healing an ally with a staff, grants Atk/Spd+4 to all allies for 1 turn."
+  },
+  {
+    name: "Windfire Balm+",
+    cooldown: 1,
+    spCost: 300,
+    include: [{weaponType: "Staff"}],
+    effect: "When healing an ally with a staff, grants Atk/Spd+6 to all allies for 1 turn."
   }
 ];

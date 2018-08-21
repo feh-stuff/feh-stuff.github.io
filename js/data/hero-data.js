@@ -1236,6 +1236,43 @@ module.exports = [
       level40: { hp: [ 35, 39, 42 ], atk: [ 29, 32, 35 ], spd: [ 30, 33, 36 ], def: [ 19, 22, 25 ], res: [ 19, 22, 25 ] }
     }
   },
+    {
+    name: "Celica (Arrival of the Brave)",
+    shortName: "Celica",
+    title: "Warrior Priestess",
+    artist: "Hidari (左)",
+    voice: "Erica Lindbeck",
+    releaseDate: "Aug 21, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Celica (Arrival of the Brave).png",
+      main: "img/heroes-main/Celica (Arrival of the Brave).png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Royal Sword", rarity: 5 },
+      { name: "Night Sky", rarity: 5 },
+      { name: "Astra", rarity: 5 },
+      { name: "Galeforce", rarity: 5 },
+      { name: "Death Blow 1", rarity: 5 },
+      { name: "Death Blow 2", rarity: 5 },
+      { name: "Death Blow 3", rarity: 5 },
+      { name: "Death Blow 4", rarity: 5 },
+      { name: "Double Lion", rarity: 5 },
+      { name: "Atk Tactic 1", rarity: 5 },
+      { name: "Atk Tactic 2", rarity: 5 },
+      { name: "Atk Tactic 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp:16, atk: 7, spd: 11, def: 7, res: 7 },
+      level40: { hp: [ 34, 38, 41 ], atk: [ 30, 33, 36 ], spd: [ 36, 39, 42 ], def: [ 25, 29, 32 ], res: [ 21, 24, 27 ] }
+    }
+  },
   {
     name: "Celica (Fallen Heroes)",
     shortName: "Celica",
@@ -2427,6 +2464,43 @@ module.exports = [
     }
   },
   {
+    name: "Ephraim (Arrival of the Brave)",
+    shortName: "Ephraim",
+    title: "Sacred Twin Lord",
+    artist: "Wada Sachiko (ワダサチコ)",
+    voice: "Greg Chun",
+    releaseDate: "Aug 21, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Armored",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Ephraim (Arrival of the Brave).png",
+      main: "img/heroes-main/Ephraim (Arrival of the Brave).png"
+    },
+    skills: [
+      { name: "Iron Axe", rarity: 5 },
+      { name: "Steel Axe", rarity: 5 },
+      { name: "Silver Axe", rarity: 5 },
+      { name: "Garm", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Draconic Aura", rarity: 5 },
+      { name: "Close Def 1", rarity: 5 },
+      { name: "Close Def 2", rarity: 5 },
+      { name: "Close Def 3", rarity: 5 },
+      { name: "Special Fighter 1", rarity: 5 },
+      { name: "Special Fighter 2", rarity: 5 },
+      { name: "Special Fighter 3", rarity: 5 },
+      { name: "Armor March 1", rarity: 5 },
+      { name: "Armor March 2", rarity: 5 },
+      { name: "Armor March 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 22, atk: 10, spd: 5, def: 11, res: 7 },
+      level40: { hp: [ 43, 46, 49 ], atk: [ 35, 38, 41 ], spd: [ 23, 27, 30 ], def: [ 34, 37, 40 ], res: [ 23, 26, 30 ] }
+    }
+  },
+  {
     name: "Ephraim (Legendary Heroes)",
     shortName: "Ephraim",
     artist: "Asatani Tomoyo (麻谷知世)",
@@ -3256,6 +3330,41 @@ module.exports = [
     stats: {
       level1: { hp: 24, atk: 10, spd: 5, def: 11, res: 4 },
       level40: { hp: [ 49, 52, 55 ], atk: [ 33, 36, 39 ], spd: [ 21, 24, 28 ], def: [ 34, 37, 40 ], res: [ 16, 19, 22 ] }
+    }
+  },
+  {
+    name: "Hector (Arrival of the Brave)",
+    shortName: "Hector",
+    title: "Brave Warrior",
+    artist: "Kita Senri (北千里)",
+    voice: "Patrick Seitz",
+    releaseDate: "Aug 21, 2018",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Armored",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Hector (Arrival of the Brave).png",
+      main: "img/heroes-main/Hector (Arrival of the Brave).png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "Silver Lance", rarity: 5 },
+      { name: "Maltet", rarity: 5 },
+      { name: "Growing Ember", rarity: 5 },
+      { name: "Ignis", rarity: 5 },
+      { name: "Ostian Counter", rarity: 5 },
+      { name: "Bold Fighter 1", rarity: 5 },
+      { name: "Bold Fighter 2", rarity: 5 },
+      { name: "Bold Fighter 3", rarity: 5 },
+      { name: "Even Res Wave 1", rarity: 5 },
+      { name: "Even Res Wave 2", rarity: 5 },
+      { name: "Even Res Wave 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 24, atk: 11, spd: 5, def: 9, res: 6 },
+      level40: { hp: [ 45, 48, 51 ], atk: [ 34, 37, 40 ], spd: [ 19, 22, 25 ], def: [ 36, 39, 43 ], res: [ 24, 28, 31 ] }
     }
   },
   {
@@ -9465,6 +9574,43 @@ module.exports = [
       level40: { hp: [ 39, 42, 45 ], atk: [ 29, 32, 35 ], spd: [ 27, 31, 34 ], def: [ 31, 34, 37 ], res: [ 16, 19, 22 ] },
       level1_4: { hp: 17, atk: 8, spd: 9, def: 7, res: 3 },
       level40_4: { hp: [ 36, 39, 42 ], atk: [ 27, 30, 33 ], spd: [ 26, 29, 32 ], def: [ 28, 31, 34 ], res: [ 14, 17, 20 ] }
+    }
+  },
+  {
+    name: "Veronica (Arrival of the Brave)",
+    shortName: "Veronica",
+    title: "Brave Princess",
+    artist: "Kozaki Yusuke (コザキユースケ)",
+    voice: "Wendee Lee",
+    releaseDate: "Aug 21, 2018",
+    colorType: "Neutral",
+    weaponType: "Staff",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Veronica (Arrival of the Brave).png",
+      main: "img/heroes-main/Veronica (Arrival of the Brave).png"
+    },
+    skills: [
+      { name: "Assault", rarity: 5 },
+      { name: "Hliðskjálf", rarity: 5 },
+      { name: "Heal", rarity: 5 },
+      { name: "Mend", rarity: 5 },
+      { name: "Recover", rarity: 5 },
+      { name: "Recover+", rarity: 5 },
+      { name: "Kindled-Fire Balm", rarity: 5 },
+      { name: "Windfire Balm", rarity: 5 },
+      { name: "Windfire Balm+", rarity: 5 },
+      { name: "Wrathful Staff 1", rarity: 5 },
+      { name: "Wrathful Staff 2", rarity: 5 },
+      { name: "Wrathful Staff 3", rarity: 5 },
+      { name: "Close Guard 1", rarity: 5 },
+      { name: "Close Guard 2", rarity: 5 },
+      { name: "Close Guard 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 8, spd: 10, def: 4, res: 4 },
+      level40: { hp: [ 33, 36, 40 ], atk: [ 29, 32, 35 ], spd: [ 33, 36, 39 ], def: [ 18, 21, 24 ], res: [ 16, 19, 22 ] }
     }
   },
   {

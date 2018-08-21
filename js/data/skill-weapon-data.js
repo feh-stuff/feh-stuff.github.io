@@ -1466,6 +1466,17 @@ module.exports = [
     effect: "Effective against flying units.  Unit can pass though foes if own HP ≥ 50%.",
   },
   {
+    name: "Garm",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    stats: {atk:3},
+    exclusive: ["Ephraim (Arrival of the Brave)"],
+    effect: "Grants Atk+3. If a bonus granted by a skill like Rally or Hone and/or extra movement granted by a skill like Armor March or Armored Boots is active, unit makes a guaranteed follow-up attack."
+  },
+  {
     name: "Geirskögul",
     spCost: 400,
     damage: 16,
@@ -1907,6 +1918,16 @@ module.exports = [
     effect: "Grants Atk/Spd +4 during combat if infantry or flying ally is within 2 spaces of unit."
   },
   {
+    name: "Hliðskjálf",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Staff",
+    colorType: "Neutral",
+    exclusive: ["Veronica (Arrival of the Brave)"],
+    effect: "Foe cannot counterattack. After combat, if unit attacked, inflicts Atk/Spd/Def/Res-4 on target and foes within 2 spaces of target through their next actions, and grants Atk/Spd/Def/Res+4 to unit and allies within 2 spaces for 1 turn."
+  },
+  {
     name: "Huginn's Egg",
     spCost: 400,
     damage: 14,
@@ -2337,6 +2358,16 @@ module.exports = [
     prev: ["Fenrir"],
     exclusive: ["Julius"],
     effect: "Grants Res+3. Skills with \"effective against dragons\" are effective against unit. If foe has no skills with \"effective against dragons\", inflicts Atk-6 on foe during combat.",
+  },
+  {
+    name: "Maltet",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    exclusive: ["Hector (Arrival of the Brave)"],
+    effect: "Accelerates Special trigger (cooldown count-1). If unit's HP ≥ 50% and foe initiates combat, unit makes a guaranteed follow-up attack."
   },
   {
     name: "Meisterschwert",
@@ -2865,6 +2896,18 @@ module.exports = [
     weaponType: "Dagger",
     prev: ["Rogue Dagger"],
     effect: "After combat, inflicts Def/Res-5 on foe through its next action. Grants unit Def/Res+5 for 1 turn."
+  },
+  {
+    name: "Royal Sword",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    stats: {spd: 3},
+    prev: ["Silver Sword"],
+    exclusive: ["Celica (Arrival of the Brave)"],
+    effect: "Grants Spd+3. If unit is within 2 spaces of an ally, grants unit Special cooldown charge +1 per unit's attack (Only highest value applied. Does not stack.)"
   },
   {
     name: "Ruby Sword",

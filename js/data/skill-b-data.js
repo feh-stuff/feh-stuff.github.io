@@ -412,6 +412,13 @@ module.exports = [
     effect: "If unit initiates combat with HP ≤ 75%, follow-up attacks occur immediately after unit's attack."
   },
   {
+    name: "Double Lion",
+    spCost: 300,
+    icon: "48-2",
+    include: [{name:"Celica (Arrival of the Brave)"}],
+    effect: "If unit's HP = 100% at start of combat and unit initiates combat, unit attacks twice, but deals 1 damage to unit after combat. (Does not stack.)"
+  },
+  {
     name: "Drag Back",
     spCost: 150,
     icon: "4-7",
@@ -1079,6 +1086,29 @@ module.exports = [
     icon: "43-2",
     prev: ["Spd Feint 2"],
     effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Spd-7 on foes in cardinal directions of unit through their next action."
+  },
+  {
+    name: "Special Fighter 1",
+    spCost: 60,
+    icon: "48-3",
+    include: [{moveType: "Armored"}],
+    effect: "At start of combat, if unit's HP ≥ 90%, grants Special cooldown charge +1 to unit and inflicts Special cooldown charge -1 on foe per attack. (Only highest value applied. Does not stack.)"
+  },
+  {
+    name: "Special Fighter 2",
+    spCost: 120,
+    icon: "48-4",
+    prev: ["Special Fighter 1"],
+    include: [{moveType: "Armored"}],
+    effect: "At start of combat, if unit's HP ≥ 70%, grants Special cooldown charge +1 to unit and inflicts Special cooldown charge -1 on foe per attack. (Only highest value applied. Does not stack.)"
+  },
+  {
+    name: "Special Fighter 3",
+    spCost: 240,
+    icon: "48-5",
+    prev: ["Special Fighter 2"],
+    include: [{moveType: "Armored"}],
+    effect: "At start of combat, if unit's HP ≥ 50%, grants Special cooldown charge +1 to unit and inflicts Special cooldown charge -1 on foe per attack. (Only highest value applied. Does not stack.)"
   },
   {
     name: "Swordbreaker 1",

@@ -396,8 +396,16 @@ module.exports = [
     icon: "2-1",
     prev: ["Death Blow 2"],
     exclude: [{weaponType:"Staff"}],
-    last: true,
     effect: "Grants Atk+6 during combat if unit initiates the attack."
+  },
+  {
+    name: "Death Blow 4",
+    spCost: 300,
+    icon: "48-1",
+    prev: ["Death Blow 3"],
+    exclude: [{weaponType:"Staff"}],
+    last: true,
+    effect: "Grants Atk+8 during combat if unit initiates the attack."
   },
   {
     name: "Defense +1",
@@ -924,6 +932,13 @@ module.exports = [
     exclude: [{weaponType:"Staff"}],
     last: true,
     effect: "Grants Atk/Res+4 during combat if unit initiates combat."
+  },
+  {
+    name: "Ostian Counter",
+    spCost: 350,
+    icon: "48-0",
+    include: [{name:"Hector (Arrival of the Brave)"}],
+    effect: "Unit can counterattack regardless of foe's range. If foe initiates combat, grants Atk/Def+4 during combat."
   },
   {
     name: "Resistance +1",
