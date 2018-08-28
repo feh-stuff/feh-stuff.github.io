@@ -3,6 +3,24 @@ module.exports = [
     date: "August 2018",
     banners: [
       {
+        name: "Legendary Heroes: Marth, Hero-King",
+        startDate: "Aug 28, 2018",
+        focusHeroes: [ "Marth (Legendary Heroes)", "Lene", "Reinhardt (World of Thracia)", "Nephenee","Lucina (Brave Heroes)", "Fjorm", "Gunnthrá", "Hector (Love Abounds)", "Alfonse (Hares at the Fair)","Kagero (Hares at the Fair)","Faye","Robin (F) (Legendary Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "legendaryV1",
+        pool: "pool2"
+      },
+      {
+        name: "Healing Skills",
+        startDate: "Aug 26, 2018",
+        focusHeroes: [ "Olwen (World of Thracia)", "Leif", "L'Arachel" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "Arrival of the Brave",
         startDate: "Aug 21, 2018",
         focusHeroes: [ "Hector (Arrival of the Brave)", "Ephraim (Arrival of the Brave)", "Celica (Arrival of the Brave)", "Veronica (Arrival of the Brave)" ],

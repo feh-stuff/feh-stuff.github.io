@@ -133,6 +133,13 @@ module.exports = [
     effect: "Reduces damage inflicted by attacks from adjacent foes by 30%."
   },
   {
+    name: "Fire Emblem",
+    cooldown: 2,
+    spCost: 500,
+    include: [{name: "Marth (Legendary Heroes)"}],
+    effect: "Boosts damage dealt by 30% of unit's Spd. Grants Atk/Spd/Def/Res+4 to unit and all allies for 1 turn after combat. (Bonus granted to allies even if unit's HP reaches 0.)"
+  },
+  {
     name: "Galeforce",
     cooldown: 5,
     spCost: 500,

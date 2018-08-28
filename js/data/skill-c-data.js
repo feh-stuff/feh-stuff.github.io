@@ -777,7 +777,30 @@ module.exports = [
     include: [{moveType: "Infantry"}],
     effect: "Special cooldown count-1 at start of turn 1 for any Infantry allies with at least 1 fewer HP than unit. (Effects will stack with similar skills.)"
   },
-    {
+  {
+    name: "Infantry Flash 1",
+    spCost: 60,
+    icon: "49-0",
+    include: [{moveType: "Infantry"}],
+    effect: "Infantry allies within 2 spaces gain: \"If unit's Spd ≥ foe's Spd+5, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)\""
+  },
+  {
+    name: "Infantry Flash 2",
+    spCost: 120,
+    icon: "49-1",
+    prev: ["Infantry Flash 1"],
+    include: [{moveType: "Infantry"}],
+    effect: "Infantry allies within 2 spaces gain: \"If unit's Spd ≥ foe's Spd+3, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)\""
+  },
+  {
+    name: "Infantry Flash 3",
+    spCost: 240,
+    icon: "49-2",
+    prev: ["Infantry Flash 2"],
+    include: [{moveType: "Infantry"}],
+    effect: "Infantry allies within 2 spaces gain: \"If unit's Spd ≥ foe's Spd+1, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)\""
+  },
+  {
     name: "Infantry Rush 1",
     spCost: 60,
     icon: "44-10",
@@ -788,7 +811,7 @@ module.exports = [
     name: "Infantry Rush 2",
     spCost: 120,
     icon: "44-11",
-    prev: ["Infantry Pulse 1"],
+    prev: ["Infantry Rush 1"],
     include: [{moveType: "Infantry"}],
     effect: "Infantry allies within 2 spaces gain: \"If unit's Atk ≥ foe's Atk+3, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)\""
   },
@@ -796,7 +819,7 @@ module.exports = [
     name: "Infantry Rush 3",
     spCost: 240,
     icon: "44-12",
-    prev: ["Infantry Pulse 2"],
+    prev: ["Infantry Rush 2"],
     include: [{moveType: "Infantry"}],
     effect: "Infantry allies within 2 spaces gain: \"If unit's Atk ≥ foe's Atk+1, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)\""
   },

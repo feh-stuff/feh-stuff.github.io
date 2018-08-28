@@ -1143,6 +1143,18 @@ module.exports = [
     effect: "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
   },
   {
+    name: "Exalted Falchion",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    stats: {spd: 3},
+    prev: ["Silver Sword"],
+    exclusive: ["Marth (Legendary Heroes)"],
+    effect: "Effective against dragon foes. Grants Spd+3. Grants bonus to Atk/Spd/Def/Res during combat = current bonus on each of unit's stats. Calculates each stat bonus independently.",
+  },
+  {
     name: "Excalibur",
     spCost: 400,
     damage: 14,

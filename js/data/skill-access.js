@@ -42,8 +42,15 @@ exports.getWeapons = function(hero, filterExclusives = true) {
       continue;
     }
     if (hero.weaponType === skills.weapons[i].weaponType) {
-      // if (hero.weaponType === 'Breath' || hero.colorType === skills.weapons[i].colorType || hero.weaponType === 'Bow') {
+      if (hero.weaponType === 'Tome') {
+        if (hero.colorType === skills.weapons[i].colorType) {
+          results.push(skills.weapons[i]);
+        }
+      } else {
         results.push(skills.weapons[i]);
+      }
+      // if (hero.weaponType === 'Breath' || hero.colorType === skills.weapons[i].colorType || hero.weaponType === 'Bow') {
+      //  results.push(skills.weapons[i]);
       // }
     }
   }

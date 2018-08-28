@@ -3998,6 +3998,43 @@ module.exports = [
     }
   },
   {
+    name: "Jamke",
+    title: "Prince of Verdane",
+    artist: "Suekane Kumiko (スエカネクミコ)",
+    voice: "Joe Ziega",
+    releaseDate: "Sep 04, 2018",
+    colorType: "Neutral",
+    weaponType: "Bow",
+    moveType: "Infantry",
+    rarity3: ["pool2"],
+    rarity4: ["pool2"],
+    ghb: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Jamke.png",
+      main: "img/heroes-main/Jamke.png"
+    },
+    skills: [
+      { name: "Iron Bow", rarity: 3 },
+      { name: "Steel Bow", rarity: 3 },
+      { name: "Slaying Bow", rarity: 4 },
+      { name: "Slaying Bow+", rarity: 5 },
+      { name: "Night Sky", rarity: 4 },
+      { name: "Astra", rarity: 4 },
+      { name: "Heavy Blade 1", rarity: 3 },
+      { name: "Heavy Blade 2", rarity: 3 },
+      { name: "Heavy Blade 3", rarity: 5 },
+      { name: "Cancel Affinity 1", rarity: 3 },
+      { name: "Cancel Affinity 2", rarity: 4 },
+      { name: "Cancel Affinity 3", rarity: 4 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 8, spd: 10, def: 7, res: 4 },
+      level40: { hp: [ 34, 38, 41 ], atk: [ 33, 36, 39 ], spd: [ 28, 32, 35 ], def: [ 25, 29, 32 ], res: [ 13, 17, 20 ] },
+      level1_4: { hp: 15, atk: 8, spd: 10, def: 6, res: 3 },
+      level40_4: { hp: [ 31, 35, 38 ], atk: [ 31, 34, 37 ], spd: [ 26, 30, 33 ], def: [ 22, 26, 29 ], res: [ 11, 15, 18 ] }
+    }
+  },
+  {
     name: "Jeorge",
     title: "Perfect Shot",
     artist: "Mayo (まよ)",
@@ -5830,6 +5867,43 @@ module.exports = [
       level40: { hp: [ 37, 41, 44 ], atk: [ 28, 31, 34 ], spd: [ 31, 34, 37 ], def: [ 25, 29, 32 ], res: [ 20, 23, 26 ] },
       level1_4: { hp: 18, atk: 7, spd: 8, def: 6, res: 5 },
       level40_4: { hp: [ 35, 38, 41 ], atk: [ 26, 29, 32 ], spd: [ 29, 32, 35 ], def: [ 23, 26, 29 ], res: [ 18, 21, 24 ] }
+    }
+  },
+  {
+    name: "Marth (Legendary Heroes)",
+    shortName: "Marth",
+    title: "Hero-King",
+    artist: "Daisuke Izuka",
+    voice: "Yuri Lowenthal",
+    releaseDate: "Aug 28, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Marth (Legendary Heroes).png",
+      main: "img/heroes-main/Marth (Legendary Heroes).png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Exalted Falchion", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Draconic Aura", rarity: 5 },
+      { name: "Fire Emblem", rarity: 4 },
+      { name: "Atk/Spd Bond 1", rarity: 5 },
+      { name: "Atk/Spd Bond 2", rarity: 5 },
+      { name: "Atk/Spd Bond 3", rarity: 5 },
+      { name: "Binding Shield", rarity: 5 },
+      { name: "Infantry Flash 1", rarity: 5 },
+      { name: "Infantry Flash 2", rarity: 5 },
+      { name: "Infantry Flash 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 8, spd: 10, def: 8, res: 4 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 31, 34, 37 ], spd: [ 33, 36, 39 ], def: [ 29, 32, 35 ], res: [ 18, 21, 24 ] }
     }
   },
   {

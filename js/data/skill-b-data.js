@@ -96,6 +96,13 @@ module.exports = [
     effect: "If foe is cavalry or flier type, foe's bonuses (from skills like Fortify, Rally, etc.) are nullified during combat. (Skill cannot be inherited.)"
   },
   {
+    name: "Binding Shield",
+    spCost: 300,
+    icon: "48-12",
+    include: [{name:"Marth (Legendary Heroes)"}],
+    effect: "In combat against a dragon foe, unit makes a guaranteed follow-up attack and foe cannot counterattack or make a follow-up attack."
+  },
+  {
     name: "Blaze Dance 1",
     spCost: 50,
     icon: "27-8",

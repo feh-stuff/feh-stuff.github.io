@@ -52,5 +52,11 @@ module.exports = [
     type: "Wind",
     stats: { hp: 3, spd: 3 },
     icon: 8
+  },
+  {
+    hero: "Marth (Legendary Heroes)",
+    type: "Fire",
+    stats: { hp: 3, Res: 4 },
+    icon: 9
   }
 ];
