@@ -11,7 +11,7 @@ module.exports = [
     name: "Dance",
     range: 1,
     spCost: 150,
-    include: [{name: "Olivia"},{name: "Ninian"},{name: "Olivia (Performing Arts)"},{name: "Inigo (Performing Arts)"},{name: "Lene"},{name: "Ninian (Bridal Bloom)"},{name: "Olivia (Ylissean Travellers)"},{name: "Xander (Festival in Hoshido)"},{name: "Elincia (Festival in Hoshido)"},{name: "Micaiah (Festival in Hoshido)"},{name: "Ryoma (Festival in Hoshido)"}],
+    include: [{name: "Olivia"},{name: "Ninian"},{name: "Olivia (Performing Arts)"},{name: "Inigo (Performing Arts)"},{name: "Lene"},{name: "Ninian (Bridal Bloom)"},{name: "Olivia (Ylissean Travellers)"},{name: "Xander (Festival in Hoshido)"},{name: "Elincia (Festival in Hoshido)"},{name: "Micaiah (Festival in Hoshido)"},{name: "Ryoma (Festival in Hoshido)"},{name: "Silvia"}],
     last: true,
     effect: "Enables target to take another action. Cannot be used on units with Sing or Dance."
   },
@@ -170,8 +170,16 @@ module.exports = [
     spCost: 300,
     prev: ["Rally Speed", "Rally Defense"],
     exclude: [{weaponType: "Staff"}],
-    last: true,
     effect: "Grants Spd/Def+3 to an adjacent ally until the end of the turn."
+  },
+  {
+    name: "Rally Spd/Def+",
+    range: 1,
+    spCost: 400,
+    prev: ["Rally Spd/Def"],
+    exclude: [{weaponType: "Staff"}],
+    last: true,
+    effect: "Grants Spd/Def+6 to target ally for 1 turn."
   },
   {
     name: "Rally Spd/Res",

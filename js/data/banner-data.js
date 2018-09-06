@@ -1,5 +1,37 @@
 module.exports = [
  {
+    date: "September 2018",
+    banners: [
+      {       
+        name: "Doorway to Destiny",
+        startDate: "Sep 7, 2018",
+        focusHeroes: [ "Quan", "Silvia", "Lewyn" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {       
+        name: "Heroes with Fury",
+        startDate: "Sep 6, 2018",
+        focusHeroes: [ "Myrrh", "Eldigan", "Chrom (The Branded King)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "The Chosen Ones",
+        startDate: "Sep 01, 2018",
+        focusHeroes: [ "Ike (Brave Heroes)", "Lucina (Brave Heroes)", "Roy (Brave Heroes)", "Lyn (Brave Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+    ]
+ },
+ {
     date: "August 2018",
     banners: [
       {

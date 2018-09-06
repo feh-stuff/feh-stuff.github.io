@@ -69,6 +69,24 @@ module.exports = [
     effect: "After combat, inflicts Atk-7 on foes within 2 spaces of target through their next actions."
   },
   {
+    name: "Blaze Dance 1",
+    icon: "27-8",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Atk+2."
+  },
+  {
+    name: "Blaze Dance 2",
+    icon: "27-9",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Atk+3."
+  },
+  {
+    name: "Blaze Dance 3",
+    icon: "27-10",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Atk+4."
+  },
+  {
     name: "Brash Assault 1",
     icon: "6-0",
     effect: "Unit automatically makes a follow-up when at HP ≤ 30% and attacking a foe that can counter."
@@ -243,6 +261,16 @@ module.exports = [
     name: "Drive Def 2",
     icon: "18-11",
     effect: "Grants allies within 2 spaces Def+3 during combat."
+  },
+  {
+    name: "Drive Spd 1",
+    icon: "26-6",
+    effect: "Grants allies within 2 spaces Spd+2 during combat."
+  },
+  {
+    name: "Drive Spd 2",
+    icon: "26-7",
+    effect: "Grants allies within 2 spaces Spd+3 during combat."
   },
   {
     name: "Earth Dance 1",
@@ -1109,6 +1137,23 @@ module.exports = [
     name: "Threaten Atk 3",
     icon: "13-7",
     effect: "Inflicts Atk-5 on foes within 2 spaces through their next actions at the start of each turn."
+  },
+  {
+    name: "Threaten Def 1",
+    icon: "13-11",
+    effect: "Inflicts Def-3 on foes within 2 spaces through their next actions at the start of each turn."
+  },
+  {
+    name: "Threaten Def 2",
+    icon: "13-12",
+    prev: ["Threaten Def 1"],
+    effect: "Inflicts Def-4 on foes within 2 spaces through their next actions at the start of each turn."
+  },
+  {
+    name: "Threaten Def 3",
+    icon: "14-0",
+    prev: ["Threaten Def 2"],
+    effect: "Inflicts Def-5 on foes within 2 spaces through their next actions at the start of each turn."
   },
   {
     name: "Threaten Spd 1",

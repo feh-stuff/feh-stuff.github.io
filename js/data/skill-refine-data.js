@@ -2486,6 +2486,32 @@ module.exports = {
       effect: "Effective against cavalry foes. Disables unit's and foe's skills that change attack priority. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
     }
   ],
+  "Barrier Blade+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 2},
+      effect: "If foe initiates combat, grants Res+7 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, spd: 3},
+      effect: "If foe initiates combat, grants Res+7 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, def: 4},
+      effect: "If foe initiates combat, grants Res+7 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, res: 4},
+      effect: "If foe initiates combat, grants Res+7 during combat."
+    }
+  ],
 
   // prf weapons
   "Sol Katti": [
@@ -3717,4 +3743,112 @@ module.exports = {
       effect: "If unit's HP ≤ 50%, unit can move to a space adjacent to any ally."
     }
   ],
+  "Odin's Grimoire": [
+    {
+      name: "Atk/Spd Link",
+      icon: "49-5",
+      cost: 1,
+      effect: "Adds total bonuses on unit to damage dealt. If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Spd+6 to unit and target ally or unit and targeting ally for 1 turn."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "Adds total bonuses on unit to damage dealt."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "Adds total bonuses on unit to damage dealt."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "Adds total bonuses on unit to damage dealt."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "Adds total bonuses on unit to damage dealt."
+    }
+  ],
+  "Ragnarok": [
+    {
+      name: "Brazen Atk/Spd",
+      icon: "49-4",
+      cost: 1,
+      effect: "Grants Atk/Spd+5 during combat. After combat, if unit attacked, deals 5 damage to unit. If unit's HP ≤ 80% at the start of combat, grants Atk/Spd+3 during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "Grants Atk/Spd+5 during combat. After combat, if unit attacked, deals 5 damage to unit."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "Grants Atk/Spd+5 during combat. After combat, if unit attacked, deals 5 damage to unit."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "Grants Atk/Spd+5 during combat. After combat, if unit attacked, deals 5 damage to unit."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "Grants Atk/Spd+5 during combat. After combat, if unit attacked, deals 5 damage to unit."
+    }
+  ],
+  "Cherche's Axe": [
+    {
+      name: "Panic Ploy",
+      icon: "49-3",
+      cost: 1,
+      effect: "Inflicts Spd-5. If unit initiates combat, unit attacks twice. At start of turn, bonuses become penalties on all foes in cardinal directions with HP 1 or more lower than unit through foe's next action."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 1},
+      effect: "Inflicts Spd-5. If unit initiates combat, unit attacks twice."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Inflicts Spd-5. If unit initiates combat, unit attacks twice."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Inflicts Spd-5. If unit initiates combat, unit attacks twice."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Inflicts Spd-5. If unit initiates combat, unit attacks twice."
+    }
+  ]
 };

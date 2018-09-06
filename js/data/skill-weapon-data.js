@@ -194,6 +194,26 @@ module.exports = [
     effect: "Accelerates Special trigger (cooldown count-1). After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
   },
   {
+    name: "Barrier Blade",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Steel Sword"],
+    effect: "If foe initiates combat, grants Res+7 during combat."
+  },
+  {
+    name: "Barrier Blade+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Safeguard"],
+    effect: "If foe initiates combat, grants Res+7 during combat."
+  },
+  {
     name: "Basilikos",
     spCost: 400,
     damage: 16,
@@ -710,6 +730,16 @@ module.exports = [
     colorType: "Blue",
     prev: ["Casa Blanca"],
     effect: "If foe uses bow, dagger, magic, or staff, neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat."
+  },
+  {
+    name: "Cherche's Axe",
+    damage: 11,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    stats: {spd: -5},
+    exclusive: ["Cherche"],
+    effect: "Inflicts Spd-5. If unit initiates combat, unit attacks twice."
   },
   {
     name: "Clarisse's Bow",
@@ -1435,6 +1465,18 @@ module.exports = [
     effect: "At start of turn, inflicts Res-7 on foe on the enemy team with the highest Res through its next action.",
   },
   {
+    name: "Forseti",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    prev: ["Rexcalibur"],
+    exclusive: ["Lewyn"],
+    stats: {spd: 3},
+    effect: "Grants Spd+3. If unit's HP ≥ 50% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.",
+  },
+  {
     name: "Fresh Bouquet",
     spCost: 200,
     damage: 8,
@@ -1476,6 +1518,17 @@ module.exports = [
     prev: ["Silver Bow"],
     exclusive: ["Takumi"],
     effect: "Effective against flying units.  Unit can pass though foes if own HP ≥ 50%.",
+  },
+  {
+    name: "Gáe Bolg",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Silver Lance"],
+    exclusive: ["Quan"],
+    effect: "In combat against an infantry, armored, or cavalry foe, grants Atk/Def+5 during combat."
   },
   {
     name: "Garm",
@@ -2557,6 +2610,16 @@ module.exports = [
     prev: ["Silver Axe"],
     exclusive: ["Anna"],
     effect: "Unit may move adjacent to any ally when HP ≤ 40%.",
+  },
+  {
+    name: "Odin's Grimoire",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    exclusive: ["Odin"],
+    effect: "Adds total bonuses on unit to damage dealt."
   },
   {
     name: "Pain",

@@ -2537,38 +2537,78 @@ module.exports = [
     }
   },
   {
-    name: "Est",
-    title: "Junior Whitewing",
-    artist: "Miwabe Sakura (みわべさくら)",
-    voice: "Brianna Knickerbocker",
-    releaseDate: "Feb 02, 2017",
-    colorType: "Blue",
-    weaponType: "Lance",
-    moveType: "Flying",
-    rarity3: ["pool1", "pool2"],
-    rarity4: ["pool1", "pool2"],
+    name: "Ethlyn",
+    title: "Spirited Princess",
+    artist: "kaya8",
+    voice: "Allegra Clark",
+    releaseDate: "Sep 11, 2018",
+    colorType: "Neutral",
+    weaponType: "Staff",
+    moveType: "Cavalry",
+    rarity3: ["pool2"],
+    rarity4: ["pool2"],
     assets: {
-      portrait: "img/heroes-portrait/75px-Icon_Portrait_Est.png",
-      main: "img/heroes-main/Est.png"
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Ethlyn.png",
+      main: "img/heroes-main/Ethlyn.png"
     },
     skills: [
-      { name: "Iron Lance", rarity: 3 },
-      { name: "Steel Lance", rarity: 3 },
-      { name: "Heavy Spear", rarity: 4 },
-      { name: "Heavy Spear+", rarity: 5 },
-      { name: "Shove", rarity: 4 },
-      { name: "Defiant Res 1", rarity: 3 },
-      { name: "Defiant Res 2", rarity: 3 },
-      { name: "Defiant Res 3", rarity: 4 },
-      { name: "Seal Spd 1", rarity: 3 },
+      { name: "Assault", rarity: 1 },
+      { name: "Fear", rarity: 3 },
+      { name: "Fear+", rarity: 5 },
+      { name: "Heal", rarity: 1 },
+      { name: "Mend", rarity: 2 },
+      { name: "Physic", rarity: 3 },
+      { name: "Physic+", rarity: 5 },
+      { name: "Imbue", rarity: 2 },
+      { name: "Heavenly Light", rarity: 3 },
+      { name: "Spd/Def Bond 1", rarity: 3 },
+      { name: "Spd/Def Bond 2", rarity: 4 },
+      { name: "Spd/Def Bond 3", rarity: 5 },
+      { name: "Live to Serve 1", rarity: 1 },
+      { name: "Live to Serve 2", rarity: 2 },
+      { name: "Live to Serve 3", rarity: 4 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 6, spd: 10, def: 4, res: 7 },
+      level40: { hp: [ 35, 38, 41 ], atk: [ 25, 28, 31 ], spd: [ 31, 34, 37 ], def: [ 23, 26, 29 ], res: [ 17, 20, 23 ] },
+      level1_4: { hp: 15, atk: 5, spd: 10, def: 3, res: 7 },
+      level40_4: { hp: [ 32, 35, 38 ], atk: [ 22, 25, 28 ], spd: [ 29, 32, 35 ], def: [ 20, 23, 26 ], res: [ 16, 19, 22 ] }
+    }
+  },
+    {
+    name: "Tobin",
+    title: "The Clueless One",
+    artist: "kaya8",
+    voice: "Robbie Daymond",
+    releaseDate: "Jul 07, 2017",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Infantry",
+    rarity4: ["pool1", "pool2"],
+    rarity5: ["pool1", "pool2"],
+    ttReward: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Tobin.png",
+      main: "img/heroes-main/Tobin.png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 4 },
+      { name: "Steel Sword", rarity: 4 },
+      { name: "Armorslayer", rarity: 4 },
+      { name: "Armorslayer+", rarity: 5 },
+      { name: "Pivot", rarity: 4 },
+      { name: "Attack +1", rarity: 4 },
+      { name: "Attack +2", rarity: 4 },
+      { name: "Attack +3", rarity: 4 },
+      { name: "Seal Spd 1", rarity: 4 },
       { name: "Seal Spd 2", rarity: 4 },
       { name: "Seal Spd 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 17, atk: 9, spd: 8, def: 5, res: 8 },
-      level40: { hp: [ 33, 36, 40 ], atk: [ 32, 35, 38 ], spd: [ 26, 30, 33 ], def: [ 21, 24, 28 ], res: [ 29, 32, 35 ] },
-      level1_4: { hp: 16, atk: 9, spd: 8, def: 4, res: 7 },
-      level40_4: { hp: [ 31, 34, 37 ], atk: [ 30, 33, 36 ], spd: [ 25, 28, 31 ], def: [ 19, 22, 25 ], res: [ 26, 29, 32 ] }
+      level1: { hp: 18, atk: 7, spd: 5, def: 5, res: 4 },
+      level40: { hp: [ 43, 46, 49 ], atk: [ 28, 31, 34 ], spd: [ 23, 27, 30 ], def: [ 30, 33, 36 ], res: [ 22, 26, 29 ] },
+      level1_4: { hp: 17, atk: 7, spd: 5, def: 4, res: 3 },
+      level40_4: { hp: [ 40, 43, 46 ], atk: [ 26, 29, 32 ], spd: [ 22, 25, 28 ], def: [ 27, 30, 33 ], res: [ 20, 23, 26 ] }
     }
   },
   {
@@ -4842,6 +4882,42 @@ module.exports = [
       level40: { hp: [ 35, 39, 42 ], atk: [ 31, 34, 37 ], spd: [ 27, 30, 33 ], def: [ 26, 30, 33 ], res: [ 12, 15, 19 ] },
       level1_4: { hp: 16, atk: 8, spd: 5, def: 8, res: 4 },
       level40_4: { hp: [ 33, 36, 39 ], atk: [ 29, 32, 35 ], spd: [ 24, 27, 30 ], def: [ 25, 28, 31 ], res: [ 11, 14, 17 ] }
+    }
+  },
+  {
+    name: "Lewyn",
+    title: "Guiding Breeze",
+    artist: "Suda Ayaka (須田彩加)",
+    voice: "Steve Staley",
+    releaseDate: "Sep 7, 2018",
+    colorType: "Green",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Lewyn.png",
+      main: "img/heroes-main/Lewyn.png"
+    },
+    skills: [
+      { name: "Wind", rarity: 5 },
+      { name: "Elwind", rarity: 5 },
+      { name: "Rexcalibur", rarity: 5 },
+      { name: "Forseti", rarity: 5 },
+      { name: "Night Sky", rarity: 5 },
+      { name: "Glimmer", rarity: 5 },
+      { name: "Death Blow 1", rarity: 5 },
+      { name: "Swift Sparrow 1", rarity: 5 },
+      { name: "Swift Sparrow 2", rarity: 5 },
+      { name: "Special Spiral 1", rarity: 5 },
+      { name: "Special Spiral 2", rarity: 5 },
+      { name: "Special Spiral 3", rarity: 5 },
+      { name: "Odd Atk Wave 1", rarity: 5 },
+      { name: "Odd Atk Wave 2", rarity: 5 },
+      { name: "Odd Atk Wave 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 8, spd: 11, def: 4, res: 6 },
+      level40: { hp: [ 34, 38, 41 ], atk: [ 31, 34, 37 ], spd: [ 34, 37, 40 ], def: [ 13, 17, 20 ], res: [ 22, 25, 29 ] }
     }
   },
   {
@@ -7281,6 +7357,42 @@ module.exports = [
     }
   },
   {
+    name: "Quan",
+    title: "Luminous Lancer",
+    artist: "Aoji (あおじ)",
+    voice: "Chris Hackney",
+    releaseDate: "Sep 7, 2018",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Quan.png",
+      main: "img/heroes-main/Quan.png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "Silver Lance", rarity: 5 },
+      { name: "Gáe Bolg", rarity: 5 },
+      { name: "Rally Defense", rarity: 5 },
+      { name: "Rally Spd/Def", rarity: 5 },
+      { name: "Rally Spd/Def+", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Draconic Aura", rarity: 5 },
+      { name: "Darting Stance 1", rarity: 5 },
+      { name: "Steady Posture 1", rarity: 5 },
+      { name: "Steady Posture 2", rarity: 5 },
+      { name: "Spur Atk 1", rarity: 5 },
+      { name: "Drive 1", rarity: 5 },
+      { name: "Drive 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 20, atk: 11, spd: 5, def: 7, res: 3 },
+      level40: { hp: [ 41, 44, 47 ], atk: [ 34, 37, 40 ], spd: [ 26, 29, 32 ], def: [ 28, 31, 34 ], res: [ 12, 16, 19 ] }
+    }
+  },
+  {
     name: "Raigh",
     title: "Dark Child",
     artist: "Himukai Yuji (日向悠二)",
@@ -8687,6 +8799,38 @@ module.exports = [
     stats: {
       level1: { hp: 19, atk: 9, spd: 8, def: 6, res: 4 },
       level40: { hp: [ 37, 41, 44 ], atk: [ 32, 35, 38 ], spd: [ 29, 32, 35 ], def: [ 31, 34, 37 ], res: [ 13, 17, 20 ] }
+    }
+  },
+  {
+    name: "Silvia",
+    title: "Traveling Dancer",
+    artist: "Chiko (チーコ)",
+    voice: "Laura Post",
+    releaseDate: "Sep 7, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Silvia.png",
+      main: "img/heroes-main/Silvia.png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Barrier Blade", rarity: 5 },
+      { name: "Barrier Blade+", rarity: 5 },
+      { name: "Dance", rarity: 5 },
+      { name: "Warding Stance 1", rarity: 5 },
+      { name: "Mirror Stance 1", rarity: 5 },
+      { name: "Mirror Stance 2", rarity: 5 },
+      { name: "Torrent Dance 1", rarity: 5 },
+      { name: "Deluge Dance 1", rarity: 5 },
+      { name: "Deluge Dance 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 5, spd: 8, def: 4, res: 6 },
+      level40: { hp: [ 37, 40, 43 ], atk: [ 23, 27, 30 ], spd: [ 33, 36, 39 ], def: [ 13, 17, 20 ], res: [ 27, 30, 33 ] }
     }
   },
   {

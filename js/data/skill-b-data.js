@@ -399,6 +399,22 @@ module.exports = [
     effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Def/Res+6 to unit and target ally or unit and targeting ally for 1 turn."
   },
   {
+    name: "Deluge Dance 1",
+    spCost: 120,
+    icon: "49-11",
+    prev: ["Torrent Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, grants Spd+2 and Res+3 to target."
+  },
+  {
+    name: "Deluge Dance 2",
+    spCost: 240,
+    icon: "49-12",
+    prev: ["Deluge Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, grants Spd+3 and Res+4 to target."
+  },
+  {
     name: "Desperation 1",
     spCost: 50,
     icon: "5-10",
@@ -527,7 +543,7 @@ module.exports = [
     name: "Fireflood Dance 2",
     spCost: 240,
     icon: "47-3",
-    prev: ["Rockslide Dance 1"],
+    prev: ["Fireflood Dance 1"],
     exclude: [{weaponType: "Staff"}],
     effect: "If Sing or Dance is used, grants Atk+3 and Res+4 to target."
   },
@@ -1116,6 +1132,29 @@ module.exports = [
     prev: ["Special Fighter 2"],
     include: [{moveType: "Armored"}],
     effect: "At start of combat, if unit's HP ≥ 50%, grants Special cooldown charge +1 to unit and inflicts Special cooldown charge -1 on foe per attack. (Only highest value applied. Does not stack.)"
+  },
+  {
+    name: "Special Spiral 1",
+    spCost: 60,
+    icon: "49-8",
+    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}, {weaponType:"Staff"}],
+    effect: "If unit initiates combat and unit's Special triggers before or during combat, grants Special cooldown count-1 after combat."
+  },
+  {
+    name: "Special Spiral 2",
+    spCost: 120,
+    icon: "49-9",
+    prev: ["Special Spiral 1"],
+    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}, {weaponType:"Staff"}],
+    effect: "If Special triggers before or during combat, grants Special cooldown count-1 after combat."
+  },
+  {
+    name: "Special Spiral 3",
+    spCost: 240,
+    icon: "49-10",
+    prev: ["Special Spiral 2"],
+    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}, {weaponType:"Staff"}],
+    effect: "If Special triggers before or during combat, grants Special cooldown count-1 after combat."
   },
   {
     name: "Swordbreaker 1",

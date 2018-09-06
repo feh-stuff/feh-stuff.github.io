@@ -1092,6 +1092,21 @@ module.exports = [
     effect: "If attacked, unit granted Def+4 during combat; also gains Special cooldown charge +1. (If using other similar skill, only highest value applied.)"
   },
   {
+    name: "Steady Posture 1",
+    spCost: 100,
+    icon: "49-6",
+    prev: ["Steady Stance 1"],
+    effect: "Grants Spd/Def+2 during combat when this unit is attacked."
+  },
+  {
+    name: "Steady Posture 2",
+    spCost: 200,
+    icon: "49-7",
+    prev: ["Sturdy Posture 1"],
+    last: true,
+    effect: "Grants Spd/Def+4 during combat when this unit is attacked."
+  },
+  {
     name: "Steady Stance 1",
     spCost: 50,
     icon: "25-11",
