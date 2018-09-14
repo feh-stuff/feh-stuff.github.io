@@ -101,7 +101,6 @@ module.exports = [
     range: 1,
     spCost: 150,
     exclude: [{weaponType: "Staff"}],
-    last: true,
     effect: "Grants Atk+4 to an adjacent ally until the end of the turn."
   },
   {
@@ -189,6 +188,22 @@ module.exports = [
     exclude: [{weaponType: "Staff"}],
     last: true,
     effect: "Grants Spd/Res+3 to an adjacent ally until the end of the turn."
+  },
+  {
+    name: "Rally Up Atk",
+    range: 1,
+    spCost: 300,
+    exclude: [{weaponType: "Staff"}],
+    last: true,
+    effect: "Grants Atk+3 to target ally and allies withing 2 spaces of target (excluding unit) for 1 turn."
+  },
+  {
+    name: "Rally Up Atk+",
+    range: 1,
+    spCost: 400,
+    exclude: [{weaponType: "Staff"}],
+    last: true,
+    effect: "Grants Atk+6 to target ally and allies withing 2 spaces of target (excluding unit) for 1 turn."
   },
   {
     name: "Reciprocal Aid",

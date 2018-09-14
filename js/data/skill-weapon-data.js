@@ -591,6 +591,15 @@ module.exports = [
     effect: "Spd-5. Attack twice when initiating combat."
   },
   {
+    name: "Breath of Blight",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Breath",
+    exclusive: ["Garon"],
+    effect: "Neutralizes \"effective against dragons\" bonuses. At the start of turn 4, deals 10 damage to foes within 3 spaces, and restores HP to unit = number of foes within 3 spaces × 5. If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+  },
+  {
     name: "Breath of Fog",
     spCost: 400,
     damage: 16,
@@ -620,6 +629,17 @@ module.exports = [
     prev: ["Fenrir"],
     exclusive: ["Leo"],
     effect: "If unit initiates attack, restricts foe's next-turn movement to 1 space or less.",
+  },
+  {
+    name: "Býleistr",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Silver Axe"],
+    exclusive: ["Helbindi"],
+    effect: "At start of odd-numbered turns, grants Atk/Spd/Def/Res+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
   },
   {
     name: "Camilla's Axe",
@@ -1506,7 +1526,7 @@ module.exports = [
     prev: ["Bolganone"],
     stats: { spd: 3 },
     exclusive: ["Tana (Summer's Arrival)"],
-    effect: "If unit has 100% HP at the start of combat, unit receives Atk/Spd +5. If attacking, unit will receive 5 damage after combat.",
+    effect: "Grants Spd+3. If unit's HP ≥ 50%, allies within 2 spaces can move to a space adjacent to unit.",
   },
   {
     name: "Fujin Yumi",
@@ -1993,6 +2013,16 @@ module.exports = [
     effect: "Foe cannot counterattack. After combat, if unit attacked, inflicts Atk/Spd/Def/Res-4 on target and foes within 2 spaces of target through their next actions, and grants Atk/Spd/Def/Res+4 to unit and allies within 2 spaces for 1 turn."
   },
   {
+    name: "Hoarfrost Knife",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Silver Dagger"],
+    exclusive: ["Flora"],
+    effect: "Accelerates Special trigger (cooldown count-1). If unit initiates combat and foe uses sword, lance, axe, or dragonstone, grants Def+20 during combat, and if foe can counter, unit makes a guaranteed follow-up attack. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+  },
+  {
     name: "Huginn's Egg",
     spCost: 400,
     damage: 14,
@@ -2467,6 +2497,17 @@ module.exports = [
     effect: "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat."
   },
   {
+    name: "Missiletainn",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Thoron"],
+    exclusive: ["Ophelia"],
+    effect: "Accelerates Special trigger (cooldown count-1). At the start of turn 1, grants Special cooldown count-1 for each magic ally in your team (including unit)."
+  },
+  {
     name: "Mjölnir",
     spCost: 400,
     damage: 14,
@@ -2599,6 +2640,18 @@ module.exports = [
     prev: ["Rexcalibur"],
     exclusive: ["Sanaki (Bridal Bloom)"],
     effect: "Grants Atk+3. During combat, boosts unit's Atk/Spd by number of allies within 2 spaces x 2. (Maximum bonus of +6 to each stat.)"
+  },
+  {
+    name: "Níu",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Silver Sword"],
+    exclusive: ["Laegjarn"],
+    stats: {spd: 3},
+    effect: "Grants Spd+3. Adds 50% of total bonuses on foe to unit's Atk/Spd/Def/Res during combat.",
   },
   {
     name: "Nóatún",
@@ -3162,6 +3215,24 @@ module.exports = [
     colorType: "Blue",
     prev: ["Shine"],
     effect: ""
+  },
+  {
+    name: "Shining Bow",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Bow",
+    prev: ["Steel Bow"],
+    effect: "Effective against flying units. If foe's Def ≥ foe's Res+5, deal +7 damage."
+  },
+  {
+    name: "Shining Bow+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Bow",
+    prev: ["Slaying Bow"],
+    effect: "Effective against flying units. If foe's Def ≥ foe's Res+5, deal +7 damage."
   },
   {
     name: "Siegfried",
@@ -4007,6 +4078,7 @@ module.exports = [
     colorType: "Green",
     exclusive: ["Walhart"],
     prev: ["Silver Axe"],
+    stats: {def: 3},
     effect: "Grants Def+3. If the number of foes within 2 spaces (excluding target) ≥ the number of allies within 2 spaces (excluding unit), grants Atk/Spd/Def/Res+4 during combat."
   },
   {

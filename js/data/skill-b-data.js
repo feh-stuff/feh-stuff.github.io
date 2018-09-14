@@ -1110,6 +1110,26 @@ module.exports = [
     prev: ["Spd Feint 2"],
     effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Spd-7 on foes in cardinal directions of unit through their next action."
   },
+    {
+    name: "Spd/Res Link 1",
+    spCost: 60,
+    icon: "50-3",
+    effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Spd/Res+2 to unit and target ally or unit and targeting ally for 1 turn."
+  },
+  {
+    name: "Spd/Res Link 2",
+    spCost: 120,
+    icon: "50-4",
+    prev: ["Spd/Res Link 1"],
+    effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Spd/Res+4 to unit and target ally or unit and targeting ally for 1 turn."
+  },
+  {
+    name: "Spd/Res Link 3",
+    spCost: 240,
+    icon: "50-5",
+    prev: ["Spd/Res Link 2"],
+    effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Spd/Res+6 to unit and target ally or unit and targeting ally for 1 turn."
+  },
   {
     name: "Special Fighter 1",
     spCost: 60,

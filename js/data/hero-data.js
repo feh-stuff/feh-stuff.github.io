@@ -2537,6 +2537,41 @@ module.exports = [
     }
   },
   {
+    name: "Est",
+    title: "Junior Whitewing",
+    artist: "Miwabe Sakura (みわべさくら)",
+    voice: "Brianna Knickerbocker",
+    releaseDate: "Feb 02, 2017",
+    weaponType: "Lance",
+    colorType: "Blue",
+    moveType: "Flying",
+    rarity3: ["pool1", "pool2"],
+    rarity4: ["pool1", "pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Est.png",
+      main: "img/heroes-main/Est.png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 3 },
+      { name: "Steel Lance", rarity: 3 },
+      { name: "Heavy Spear", rarity: 3 },
+      { name: "Heavy Spear+", rarity: 5 },
+      { name: "Shove", rarity: 3 },
+      { name: "Defiant Res 1", rarity: 3 },
+      { name: "Defiant Res 2", rarity: 3 },
+      { name: "Defiant Res 3", rarity: 4 },
+      { name: "Seal Spd 1", rarity: 3 },
+      { name: "Seal Spd 2", rarity: 4 },
+      { name: "Seal Spd 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 9, spd: 8, def: 5, res: 8 },
+      level40: { hp: [ 33, 36, 40 ], atk: [ 32, 35, 38 ], spd: [ 26, 30, 33 ], def: [ 21, 24, 28 ], res: [ 29, 32, 35 ] },
+      level1_4: { hp: 16, atk: 9, spd: 8, def: 4, res: 7 },
+      level40_4: { hp: [ 31, 34, 37 ], atk: [ 30, 33, 36 ], spd: [ 25, 28, 31 ], def: [ 19, 22, 25 ], res: [ 26, 29, 32 ] }
+    }
+  },
+  {
     name: "Ethlyn",
     title: "Spirited Princess",
     artist: "kaya8",
@@ -2829,6 +2864,42 @@ module.exports = [
     }
   },
   {
+    name: "Flora",
+    title: "Cold as Ice",
+    artist: "HAKO (羽公)",
+    voice: "Julie Ann Taylor",
+    releaseDate: "Sep 14, 2018",
+    colorType: "Red",
+    weaponType: "Dagger",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Flora.png",
+      main: "img/heroes-main/Flora.png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 5 },
+      { name: "Steel Dagger", rarity: 5 },
+      { name: "Silver Dagger", rarity: 5 },
+      { name: "Hoarfrost Knife", rarity: 5 },
+      { name: "Chilling Wind", rarity: 5 },
+      { name: "Iceberg", rarity: 5 },
+      { name: "Atk/Res Solo 1", rarity: 5 },
+      { name: "Atk/Res Solo 2", rarity: 5 },
+      { name: "Atk/Res Solo 3", rarity: 5 },
+      { name: "Quick Riposte 1", rarity: 5 },
+      { name: "Quick Riposte 2", rarity: 5 },
+      { name: "Quick Riposte 3", rarity: 5 },
+      { name: "Def Ploy 1", rarity: 5 },
+      { name: "Def Ploy 2", rarity: 5 },
+      { name: "Def Ploy 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 8, spd: 6, def: 5, res: 10 },
+      level40: { hp: [ 34, 38, 41 ], atk: [ 31, 34, 37 ], spd: [ 20, 23, 26 ], def: [ 14, 18, 21 ], res: [ 31, 34, 37 ] }
+    }
+  },
+  {
     name: "Florina",
     title: "Lovely Flier",
     artist: "Zaza (ザザ)",
@@ -3001,6 +3072,42 @@ module.exports = [
     stats: {
       level1: { hp: 17, atk: 8, spd: 9, def: 4, res: 6 },
       level40: { hp: [ 31, 34, 37 ], atk: [ 26, 30, 33 ], spd: [ 34, 37, 40 ], def: [ 16, 19, 22 ], res: [ 24, 28, 31 ] }
+    }
+  },
+  {
+    name: "Garon",
+    title: "King of Nohr",
+    artist: "Soeda Ippei (添田一平)",
+    voice: "Patrick Seitz",
+    releaseDate: "Sep 14, 2018",
+    colorType: "Red",
+    weaponType: "Breath",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Garon.png",
+      main: "img/heroes-main/Garon.png"
+    },
+    skills: [
+      { name: "Fire Breath", rarity: 3 },
+      { name: "Fire Breath+", rarity: 3 },
+      { name: "Flametongue", rarity: 3 },
+      { name: "Breath of Blight", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 3 },
+      { name: "Dragon Fang", rarity: 4 },
+      { name: "Distant Def 1", rarity: 3 },
+      { name: "Distant Def 2", rarity: 4 },
+      { name: "Distant Def 3", rarity: 5 },
+      { name: "Panic Ploy 1", rarity: 3 },
+      { name: "Panic Ploy 2", rarity: 3 },
+      { name: "Panic Ploy 3", rarity: 4 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 9, spd: 5, def: 9, res: 8 },
+      level40: { hp: [ 40, 43, 46 ], atk: [ 30, 33, 36 ], spd: [ 19, 22, 25 ], def: [ 30, 33, 36 ], res: [ 29, 32, 35 ] },
+      level1_4: { hp: 16, atk: 9, spd: 4, def: 9, res: 7 },
+      level40_4: { hp: [ 37, 40, 43 ], atk: [ 28, 31, 34 ], spd: [ 17, 20, 23 ], def: [ 28, 31, 34 ], res: [ 26, 29, 32 ] }
     }
   },
   {
@@ -3472,6 +3579,45 @@ module.exports = [
     stats: {
       level1: { hp: 23, atk: 10, spd: 6, def: 12, res: 4 },
       level40: { hp: [ 44, 47, 50 ], atk: [ 37, 40, 44 ], spd: [ 20, 23, 26 ], def: [ 35, 38, 41 ], res: [ 22, 26, 29 ] },
+    }
+  },
+  {
+    name: "Helbindi",
+    title: "Savage Scourge",
+    artist: "Maeshima Shigeki (前嶋重機)",
+    voice: "Raymond K. Essel",
+    releaseDate: "Sep 21, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Helbindi.png",
+      main: "img/heroes-main/Helbindi.png"
+    },
+    skills: [
+      { name: "Iron Axe", rarity: 5 },
+      { name: "Steel Axe", rarity: 5 },
+      { name: "Silver Axe", rarity: 5 },
+      { name: "Býleistr", rarity: 5 },
+      { name: "Retribution", rarity: 5 },
+      { name: "Vengeance", rarity: 5 },
+      { name: "G Duel Infantry 1", rarity: 5 },
+      { name: "G Duel Infantry 2", rarity: 5 },
+      { name: "G Duel Infantry 3", rarity: 5 },
+      { name: "Guard 1", rarity: 5 },
+      { name: "Guard 2", rarity: 5 },
+      { name: "Guard 3", rarity: 5 },
+      { name: "Infantry Pulse 1", rarity: 5 },
+      { name: "Infantry Pulse 2", rarity: 5 },
+      { name: "Infantry Pulse 3", rarity: 5 },
+    ],
+    stats: {
+      level1: { hp: 18, atk: 9, spd: 5, def: 9, res: 7 },
+      level40: { 
+        hp: [ 41, 44, 47 ], atk: [ 32, 35, 38 ], 
+        spd: [ 14, 18, 21 ], def: [ 32, 35, 38 ], 
+        res: [ 28, 31, 34 ] },
     }
   },
   {
@@ -4606,6 +4752,77 @@ module.exports = [
       level40_4: { hp: [ 33, 36, 39 ], atk: [ 26, 29, 32 ], spd: [ 21, 24, 27 ], def: [ 17, 20, 23 ], res: [ 25, 28, 31 ] }
     }
   },
+    {
+    name: "Laegjarn",
+    title: "Sheathed Steel",
+    artist: "Maeshima Shigeki (前嶋重機)",
+    voice: "Alicia Stratten",
+    releaseDate: "Sep 21, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Laegjarn.png",
+      main: "img/heroes-main/Laegjarn.png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Níu", rarity: 5 },
+      { name: "Glowing Ember", rarity: 5 },
+      { name: "Bonfire", rarity: 5 },
+      { name: "R Duel Flying 1", rarity: 5 },
+      { name: "R Duel Flying 2", rarity: 5 },
+      { name: "R Duel Flying 3", rarity: 5 },
+      { name: "Chill Atk 1", rarity: 5 },
+      { name: "Chill Atk 2", rarity: 5 },
+      { name: "Chill Atk 3", rarity: 5 },
+      { name: "Distant Guard 1", rarity: 5 },
+      { name: "Distant Guard 2", rarity: 5 },
+      { name: "Distant Guard 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 8, spd: 10, def: 8, res: 4 },
+      level40: { hp: [ 38, 41, 44 ], atk: [ 29, 32, 35 ], spd: [ 33, 36, 39 ], def: [ 33, 36, 39 ], res: [ 13, 17, 20 ] },
+    }
+  },
+  {
+    name: "Laevatein",
+    title: "Searing Steel",
+    artist: "Maeshima Shigeki (前嶋重機)",
+    voice: "Alicia Stratten",
+    releaseDate: "Sep 21, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Laevatein.png",
+      main: "img/heroes-main/Laevatein.png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Laevatein", rarity: 5 },
+      { name: "Fury 1", rarity: 5 },
+      { name: "Fury 2", rarity: 5 },
+      { name: "Fury 3", rarity: 5 },
+      { name: "Atk/Def Link 1", rarity: 5 },
+      { name: "Atk/Def Link 2", rarity: 5 },
+      { name: "Atk/Def Link 3", rarity: 5 },
+      { name: "Odd Spd Wave 1", rarity: 5 },
+      { name: "Odd Spd Wave 2", rarity: 5 },
+      { name: "Odd Spd Wave 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 11, spd: 7, def: 8, res: 5 },
+      level40: { hp: [ 35, 39, 42 ], atk: [ 34, 37, 40 ], spd: [ 28, 31, 34 ], def: [ 31, 34, 37 ], res: [ 19, 22, 25 ] },
+    }
+  },
   {
     name: "Laslow",
     title: "Dancing Duelist",
@@ -4658,18 +4875,18 @@ module.exports = [
       main: "img/heroes-main/Legault.png"
     },
     skills: [
-      { name: "Iron Dagger", rarity: 5 },
-      { name: "Steel Dagger", rarity: 5 },
-      { name: "The Cleaner", rarity: 5 },
+      { name: "Iron Dagger", rarity: 4 },
+      { name: "Steel Dagger", rarity: 4 },
+      { name: "The Cleaner", rarity: 4 },
       { name: "The Cleaner+", rarity: 5 },
-      { name: "Night Sky", rarity: 5 },
-      { name: "Glimmer", rarity: 5 },
-      { name: "Darting Blow 1", rarity: 5 },
-      { name: "Swift Strike 1", rarity: 5 },
+      { name: "Night Sky", rarity: 4 },
+      { name: "Glimmer", rarity: 4 },
+      { name: "Darting Blow 1", rarity: 4 },
+      { name: "Swift Strike 1", rarity: 4 },
       { name: "Swift Strike 2", rarity: 5 },
-      { name: "Atk Tactic 1", rarity: 5 },
-      { name: "Atk Tactic 2", rarity: 5 },
-      { name: "Atk Tactic 3", rarity: 5 }
+      { name: "Atk Tactic 1", rarity: 4 },
+      { name: "Atk Tactic 2", rarity: 4 },
+      { name: "Atk Tactic 3", rarity: 4 }
     ],
     stats: {
       level1: { hp: 17, atk: 7, spd: 10, def: 7, res: 4 },
@@ -6653,6 +6870,39 @@ module.exports = [
     }
   },
   {
+    name: "Nina",
+    title: "Eye Spy",
+    artist: "Mikuro (みく郎)",
+    voice: "Liv Strander",
+    releaseDate: "Sep 14, 2018",
+    colorType: "Neutral",
+    weaponType: "Bow",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Nina.png",
+      main: "img/heroes-main/Nina.png"
+    },
+    skills: [
+      { name: "Iron Bow", rarity: 5 },
+      { name: "Steel Bow", rarity: 5 },
+      { name: "Shining Bow", rarity: 5 },
+      { name: "Shining Bow+", rarity: 5 },
+      { name: "New Moon", rarity: 5 },
+      { name: "Moonbow", rarity: 5 },
+      { name: "Spd/Res Link 1", rarity: 5 },
+      { name: "Spd/Res Link 2", rarity: 5 },
+      { name: "Spd/Res Link 3", rarity: 5 },
+      { name: "Bow Valor 1", rarity: 5 },
+      { name: "Bow Valor 2", rarity: 5 },
+      { name: "Bow Valor 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 8, spd: 11, def: 3, res: 7 },
+      level40: { hp: [ 32, 35, 39 ], atk: [ 29, 32, 35 ], spd: [ 34, 37, 40 ], def: [ 12, 16, 19 ], res: [ 28, 31, 34 ] }
+    }
+  },
+  {
     name: "Ninian",
     title: "Oracle of Destiny",
     artist: "Kippu",
@@ -7208,6 +7458,42 @@ module.exports = [
     stats: {
       level1: { hp: 17, atk: 8, spd: 9, def: 4, res: 5 },
       level40: { hp: [ 31, 34, 37 ], atk: [ 26, 30, 33 ], spd: [ 32, 35, 38 ], def: [ 16, 19, 22 ], res: [ 23, 27, 30 ] }
+    }
+  },
+  {
+    name: "Ophelia",
+    title: "Dramatic Heroine",
+    artist: "Umiu Geso (海鵜げそ)",
+    voice: "Angela Marie Volpe",
+    releaseDate: "Sep 14, 2018",
+    colorType: "Blue",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Ophelia.png",
+      main: "img/heroes-main/Ophelia.png"
+    },
+    skills: [
+      { name: "Thunder", rarity: 5 },
+      { name: "Elthunder", rarity: 5 },
+      { name: "Thoron", rarity: 5 },
+      { name: "Missiletainn", rarity: 5 },
+      { name: "Rally Atk", rarity: 5 },
+      { name: "Rally Up Atk", rarity: 5 },
+      { name: "Rally Up Atk+", rarity: 5 },
+      { name: "Rising Light", rarity: 3 },
+      { name: "Blazing Light", rarity: 4 },
+      { name: "Death Blow 1", rarity: 5 },
+      { name: "Sturdy Blow 1", rarity: 5 },
+      { name: "Sturdy Blow 2", rarity: 5 },
+      { name: "Chill Res 1", rarity: 5 },
+      { name: "Chill Res 2", rarity: 5 },
+      { name: "Chill Res 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 7, spd: 9, def: 5, res: 8 },
+      level40: { hp: [ 34, 38, 41 ], atk: [ 34, 37, 41 ], spd: [ 30, 33, 36 ], def: [ 17, 20, 23 ], res: [ 20, 23, 26 ] }
     }
   },
   {
@@ -8799,6 +9085,38 @@ module.exports = [
     stats: {
       level1: { hp: 19, atk: 9, spd: 8, def: 6, res: 4 },
       level40: { hp: [ 37, 41, 44 ], atk: [ 32, 35, 38 ], spd: [ 29, 32, 35 ], def: [ 31, 34, 37 ], res: [ 13, 17, 20 ] }
+    }
+  },
+  {
+    name: "Silas",
+    title: "Loyal Knight",
+    artist: "Meka (めか)",
+    voice: "—",
+    releaseDate: "Sep 14, 2018",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Silas.png",
+      main: "img/heroes-main/Silas.png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "Slaying Spear", rarity: 5 },
+      { name: "Slaying Spear+", rarity: 5 },
+      { name: "Reposition", rarity: 5 },
+      { name: "Steady Stance 1", rarity: 5 },
+      { name: "Steady Stance 2", rarity: 5 },
+      { name: "Steady Stance 3", rarity: 5 },
+      { name: "Even Def Wave 1", rarity: 5 },
+      { name: "Even Def Wave 2", rarity: 5 },
+      { name: "Even Def Wave 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 9, spd: 5, def: 10, res: 4 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 32, 35, 38 ], spd: [ 21, 24, 28 ], def: [ 33, 36, 39 ], res: [ 18, 21, 24 ] }
     }
   },
   {

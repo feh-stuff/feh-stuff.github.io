@@ -100,6 +100,27 @@ module.exports = [
     effect: "Grants Atk/Res+5 to this unit during combat if unit is adjacent to an ally."
   },
   {
+    name: "Atk/Res Solo 1",
+    spCost: 60,
+    icon: "50-0",
+    effect: "If unit is not adjacent to an ally, grants Atk/Res+2 during combat."
+  },
+  {
+    name: "Atk/Res Solo 2",
+    spCost: 120,
+    icon: "50-1",
+    prev: ["Atk/Res Solo 1"],
+    effect: "If unit is not adjacent to an ally, grants Atk/Res+4 during combat."
+  },
+  {
+    name: "Atk/Res Solo 3",
+    spCost: 240,
+    icon: "50-2",
+    prev: ["Atk/Res Solo 2"],
+    last: true,
+    effect: "If unit is not adjacent to an ally, grants Atk/Res+6 during combat."
+  },
+  {
     name: "Atk/Spd 1",
     spCost: 80,
     icon: "26-11",
@@ -721,6 +742,30 @@ module.exports = [
     effect: "Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat."
   },
   {
+    name: "G Duel Infantry 1",
+    spCost: 70,
+    icon: "50-12",
+    stats: {hp: 3},
+    include: [{colorType: "Green", moveType: "Infantry"}],
+    effect: "Grants HP+3. If unit is 5★ and level 40 and unit's stats total less than 160, treats unit's stats as 160 in modes like Arena. (Higher-scoring opponents will appear. Stat total calculation excludes any values added by merges and skills.)"
+  },
+  {
+    name: "G Duel Infantry 2",
+    spCost: 140,
+    icon: "51-0",
+    stats: {hp: 4},
+    include: [{colorType: "Green", moveType: "Infantry"}],
+    effect: "Grants HP+4. If unit is 5★ and level 40 and unit's stats total less than 160, treats unit's stats as 165 in modes like Arena. (Higher-scoring opponents will appear. Stat total calculation excludes any values added by merges and skills.)"
+  },
+  {
+    name: "G Duel Infantry 3",
+    spCost: 300,
+    icon: "51-1",
+    stats: {hp: 5},
+    include: [{colorType: "Green", moveType: "Infantry"}],
+    effect: "Grants HP+5. If unit is 5★ and level 40 and unit's stats total less than 160, treats unit's stats as 170 in modes like Arena. (Higher-scoring opponents will appear. Stat total calculation excludes any values added by merges and skills.)"
+  },
+  {
     name: "Grani's Shield",
     spCost: 200,
     icon: "4-2",
@@ -939,6 +984,30 @@ module.exports = [
     icon: "48-0",
     include: [{name:"Hector (Arrival of the Brave)"}],
     effect: "Unit can counterattack regardless of foe's range. If foe initiates combat, grants Atk/Def+4 during combat."
+  },
+  {
+    name: "R Duel Flying 1",
+    spCost: 70,
+    icon: "50-9",
+    stats: {hp: 3},
+    include: [{colorType: "Red", moveType: "Flying"}],
+    effect: "Grants HP+3. If unit is 5★ and level 40 and unit's stats total less than 160, treats unit's stats as 160 in modes like Arena. (Higher-scoring opponents will appear. Stat total calculation excludes any values added by merges and skills.)"
+  },
+  {
+    name: "R Duel Flying 2",
+    spCost: 140,
+    icon: "50-10",
+    stats: {hp: 4},
+    include: [{colorType: "Red", moveType: "Flying"}],
+    effect: "Grants HP+4. If unit is 5★ and level 40 and unit's stats total less than 160, treats unit's stats as 165 in modes like Arena. (Higher-scoring opponents will appear. Stat total calculation excludes any values added by merges and skills.)"
+  },
+  {
+    name: "R Duel Flying 3",
+    spCost: 300,
+    icon: "50-11",
+    stats: {hp: 5},
+    include: [{colorType: "Red", moveType: "Flying"}],
+    effect: "Grants HP+5. If unit is 5★ and level 40 and unit's stats total less than 160, treats unit's stats as 170 in modes like Arena. (Higher-scoring opponents will appear. Stat total calculation excludes any values added by merges and skills.)"
   },
   {
     name: "Resistance +1",

@@ -3,6 +3,24 @@ module.exports = [
     date: "September 2018",
     banners: [
       {       
+        name: "Nohrian Dusk",
+        startDate: "Sep 14, 2018",
+        focusHeroes: [ "Silas", "Ophelia", "Nina", "Flora" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {       
+        name: "Doorway to Destiny Tempest Trials",
+        startDate: "Sep 8, 2018",
+        focusHeroes: [ "Eldigan", "Deirdre", "Sigurd" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {       
         name: "Doorway to Destiny",
         startDate: "Sep 7, 2018",
         focusHeroes: [ "Quan", "Silvia", "Lewyn" ],

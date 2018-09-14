@@ -449,6 +449,24 @@ module.exports = [
     effect: "Grants allies within 2 spaces Spd+3 during combat."
   },
   {
+    name: "Even Def Wave 1",
+    spCost: 60,
+    icon: "50-6",
+    effect: "At start of even-numbered turns, grants Def+2 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Even Def Wave 2",
+    spCost: 120,
+    icon: "50-7",
+    effect: "At start of even-numbered turns, grants Def+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Even Def Wave 3",
+    spCost: 240,
+    icon: "50-8",
+    effect: "At start of even-numbered turns, grants Def+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
     name: "Even Res Wave 1",
     spCost: 60,
     icon: "48-6",
@@ -899,6 +917,26 @@ module.exports = [
     spCost: 240,
     icon: "45-9",
     effect: "At start of odd-numbered turns, grants Res+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Odd Spd Wave 1",
+    spCost: 60,
+    icon: "51-2",
+    effect: "At start of odd-numbered turns, grants Spd+2 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Odd Spd Wave 2",
+    spCost: 120,
+    icon: "51-3",
+    prev: ["Odd Spd Wave 1"],
+    effect: "At start of odd-numbered turns, grants Spd+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Odd Spd Wave 3",
+    spCost: 240,
+    icon: "51-4",
+    prev: ["Odd Spd Wave 2"],
+    effect: "At start of odd-numbered turns, grants Spd+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
   },
   {
     name: "Ostia's Pulse",
