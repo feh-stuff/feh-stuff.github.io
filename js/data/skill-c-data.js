@@ -1501,5 +1501,12 @@ module.exports = [
     prev: ["Spur Def 2", "Spur Res 2"],
     include: [{moveType: "Flying"}],
     effect: "Grants flying allies within 2 spaces Def/Res+4 during combat."
-  }
+  },
+  {
+    name: "With Everyone!",
+    spCost: 300,
+    icon: "51-6",
+    include: [{name:"Tiki (Young) (Legendary Heroes)"}],
+    effect: "At start of turn, if unit is adjacent to an ally, grants Def/Res+5 to unit and adjacent allies for 1 turn."
+  },
 ];

@@ -2,6 +2,42 @@ module.exports = [
  {
     date: "September 2018",
     banners: [
+      {
+        name: "Legendary Heroes: Tiki, Legendary Dragon",
+        startDate: "Sep 28, 2018",
+        focusHeroes: [ "Tiki (Young) (Legendary Heroes)", "Catria (Hares at the Fair)", "Micaiah", "Hector (Legendary Heroes)","Sharena (Hares at the Fair)", "Ike (Brave Heroes)","Maribelle", "Jaffar","Ike (Legendary Heroes)","Tharja (Bridal Bloom)","Karla","Robin (F) (Legendary Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "legendaryV1",
+        pool: "pool2"
+      },
+      {       
+        name: "Heroes with Swift Sparrow",
+        startDate: "Sep 25 2018",
+        focusHeroes: [ "Eirika (Sacred Memories)", "Nino (Scattered Fangs)", "Katarina" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {       
+        name: "Generals of Múspell",
+        startDate: "Sep 21, 2018",
+        focusHeroes: [ "Laegjarn", "Laevatein", "Helbindi" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Performing Arts",
+        startDate: "Sep 19, 2018",
+        focusHeroes: [ "Olivia (Performing Arts)", "Inigo (Performing Arts)", "Azura (Performing Arts)", "Shigure (Performing Arts)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
       {       
         name: "Nohrian Dusk",
         startDate: "Sep 14, 2018",
@@ -15,7 +51,7 @@ module.exports = [
         name: "Doorway to Destiny Tempest Trials",
         startDate: "Sep 8, 2018",
         focusHeroes: [ "Eldigan", "Deirdre", "Sigurd" ],
-        excludeFromRarity4: [],
+        excludeFromRarity4: ["Silvia"],
         excludeFromRarity5: [],
         rateType: "defaultV2",
         pool: "pool2"

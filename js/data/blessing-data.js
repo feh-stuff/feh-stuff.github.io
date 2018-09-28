@@ -56,7 +56,13 @@ module.exports = [
   {
     hero: "Marth (Legendary Heroes)",
     type: "Fire",
-    stats: { hp: 3, Res: 4 },
+    stats: { hp: 3, res: 4 },
     icon: 9
+  },
+  {
+    hero: "Tiki (Young) (Legendary Heroes)",
+    type: "Earth",
+    stats: { hp: 3, def: 4 },
+    icon: 10
   }
 ];

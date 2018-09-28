@@ -9128,6 +9128,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Sword",
     moveType: "Infantry",
+    rarity4: ["pool2"],
     rarity5: ["pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Silvia.png",
@@ -9963,6 +9964,42 @@ module.exports = [
     stats: {
       level1: { hp: 16, atk: 7, spd: 4, def: 8, res: 4 },
       level40: { hp: [ 37, 40, 43 ], atk: [ 30, 33, 36 ], spd: [ 33, 37, 40 ], def: [ 29, 32, 35 ], res: [ 22, 26, 29 ] }
+    }
+  },
+  {
+    name: "Tiki (Young) (Legendary Heroes)",
+    shortName: "Tiki",
+    artist: "Enkyo Yuichiro (円居雄一郎)",
+    voice: "Mela Lee",
+    title: "Legendary Dragon",
+    releaseDate: "Sep 28, 2018",
+    colorType: "Blue",
+    weaponType: "Breath",
+    moveType: "Armored",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Tiki (Young) (Legendary Heroes).png",
+      main: "img/heroes-main/Tiki (Young) (Legendary Heroes).png"
+    },
+    skills: [
+      { name: "Fire Breath", rarity: 5 },
+      { name: "Fire Breath+", rarity: 5 },
+      { name: "Flametongue", rarity: 5 },
+      { name: "Divine Mist", rarity: 5},
+      { name: "New Moon", rarity: 5 },
+      { name: "Moonbow", rarity: 5 },
+      { name: "Fierce Stance 1", rarity: 5 },
+      { name: "Fierce Stance 2", rarity: 5 },
+      { name: "Fierce Breath", rarity: 5 },
+      { name: "Bold Fighter 1", rarity: 5 },
+      { name: "Bold Fighter 2", rarity: 5 },
+      { name: "Bold Fighter 3", rarity: 5 },
+      { name: "With Everyone!", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 10, spd: 11, def: 4, res: 5 },
+      level40: { hp: [ 42, 45, 48 ], atk: [ 31, 34, 37 ], spd: [ 32, 35, 38 ], def: [ 33, 37, 40 ], res: [ 26, 29, 32 ] }
     }
   },
   {

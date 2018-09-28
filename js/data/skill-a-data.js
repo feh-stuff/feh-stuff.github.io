@@ -595,6 +595,16 @@ module.exports = [
     effect: "If unit has at least 3 more HP than enemy at the start of combat, unit receives Def+6 during combat."
   },
   {
+    name: "Fierce Breath",
+    spCost: 240,
+    icon: "51-5",
+    prev: ["Fierce Stance 2"],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
+    last: true,
+    effect: "If foe initiates combat, grants Atk+4 during combat and Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)"
+  },
+  {
     name: "Fierce Stance 1",
     spCost: 50,
     icon: "31-3",

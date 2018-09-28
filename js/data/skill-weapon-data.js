@@ -1049,6 +1049,15 @@ module.exports = [
     effect: "Spd-5. Attack twice when initiating combat.",
   },
   {
+    name: "Divine Mist",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Breath",
+    exclusive: ["Tiki (Young) (Legendary Heroes)"],
+    effect: "Effective against dragon foes. Unit can counterattack regardless of foe's range. If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+  },
+  {
     name: "Divine Naga",
     spCost: 400,
     damage: 14,
