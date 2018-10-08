@@ -1,5 +1,37 @@
 module.exports = [
  {
+    date: "October 2018",
+    banners: [
+      {
+        name: "The Land's Bounty",
+        startDate: "Oct 10, 2018",
+        focusHeroes: [ "Mia (The Land's Bounty)", "Myrrh (The Land's Bounty)", "Kagero (The Land's Bounty)", "Niles (The Land's Bounty)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {       
+        name: "Heroes with Ploy Skills",
+        startDate: "Oct 06 2018",
+        focusHeroes: [ "Sonya", "Deirdre", "Lute" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Ishtar and Reinhardt's Battle",
+        startDate: "Oct 04, 2018",
+        focusHeroes: [ "Ishtar", "Reinhardt", "Reinhardt (World of Thracia)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      }
+    ]
+ },
+ {
     date: "September 2018",
     banners: [
       {

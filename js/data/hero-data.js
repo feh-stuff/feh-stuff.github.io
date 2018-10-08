@@ -4438,6 +4438,44 @@ module.exports = [
     }
   },
   {
+    name: "Kagero (The Land's Bounty)",
+    shortName: "Kagero",
+    title: "Beverage Ninja",
+    artist: "cuboon",
+    voice: "Sarah Blandy",
+    releaseDate: "Oct 10, 2018",
+    colorType: "Green",
+    weaponType: "Dagger",
+    moveType: "Armored",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Kagero (The Land's Bounty).png",
+      main: "img/heroes-main/Kagero (The Land's Bounty).png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 5 },
+      { name: "Steel Dagger", rarity: 5 },
+      { name: "Bottled Juice", rarity: 5 },
+      { name: "Bottled Juice+", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Draconic Aura", rarity: 5 },
+      { name: "Death Blow 1", rarity: 5 },
+      { name: "Mirror Strike 1", rarity: 5 },
+      { name: "Mirror Strike 2", rarity: 5 },
+      { name: "Bold Fighter 1", rarity: 5 },
+      { name: "Bold Fighter 2", rarity: 5 },
+      { name: "Bold Fighter 3", rarity: 5 },
+      { name: "Even Atk Wave 1", rarity: 5 },
+      { name: "Even Atk Wave 2", rarity: 5 },
+      { name: "Even Atk Wave 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+    }
+  },
+  {
     name: "Kana (F)",
     shortName: "Kana",
     title: "Dragon Princess",
@@ -6410,6 +6448,41 @@ module.exports = [
     }
   },
   {
+    name: "Mia (The Land's Bounty)",
+    shortName: "Mia",
+    title: "Moonlit Witch",
+    artist: "Yoneyama Mai (米山舞)",
+    voice: "Lani Minella",
+    releaseDate: "Oct 10, 2018",
+    colorType: "Neutral",
+    weaponType: "Staff",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Mia (The Land's Bounty).png",
+      main: "img/heroes-main/Mia (The Land's Bounty).png"
+    },
+    skills: [
+      { name: "Witchy Wand", rarity: 5 },
+      { name: "Witchy Wand+", rarity: 5 },
+      { name: "Recover", rarity: 5 },
+      { name: "Recover+", rarity: 5 },
+      { name: "Death Blow 1", rarity: 5 },
+      { name: "Heavenly Light", rarity: 5 },
+      { name: "Spd/Res Bond 1", rarity: 5 },
+      { name: "Spd/Res Bond 2", rarity: 5 },
+      { name: "Spd/Res Bond 3", rarity: 5 },
+      { name: "Hone Atk 1", rarity: 5 },
+      { name: "Hone Atk 2", rarity: 5 },
+      { name: "Hone Fliers", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+    }
+  },
+  {
     name: "Micaiah",
     title: "Priestess of Dawn",
     artist: "Chiko (チ一コ)",
@@ -6690,6 +6763,44 @@ module.exports = [
     }
   },
   {
+    name: "Myrrh (The Land's Bounty)",
+    shortName: "Myrrh",
+    artist: "Amagaitaro (アマガイタロー)",
+    voice: "Erica Lindbeck",
+    title: "Spooky Monster",
+    releaseDate: "Oct 10, 2018",
+    colorType: "Red",
+    weaponType: "Breath",
+    moveType: "Armored",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Myrrh (The Land's Bounty).png",
+      main: "img/heroes-main/Myrrh (The Land's Bounty).png"
+    },
+    skills: [
+      { name: "Fire Breath", rarity: 5 },
+      { name: "Fire Breath+", rarity: 5 },
+      { name: "Flametongue", rarity: 5 },
+      { name: "Spirit Breath", rarity: 5},
+      { name: "Glowing Ember", rarity: 5 },
+      { name: "Bonfire", rarity: 5 },
+      { name: "Defense +1", rarity: 5 },
+      { name: "Def/Res 1", rarity: 5 },
+      { name: "Def/Res 2", rarity: 5 },
+      { name: "Vengeful Fighter 1", rarity: 5 },
+      { name: "Vengeful Fighter 2", rarity: 5 },
+      { name: "Vengeful Fighter 3", rarity: 5 },
+      { name: "Armor March 1", rarity: 5 },
+      { name: "Armor March 2", rarity: 5 },
+      { name: "Armor March 3", rarity: 5 },
+    ],
+    stats: {
+      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+    }
+  },
+  {
     name: "Nanna",
     title: "Nordion Princess",
     artist: "Konfuzi Kokon (紺藤ココン)",
@@ -6867,6 +6978,43 @@ module.exports = [
       level40: { hp: [ 34, 37, 41 ], atk: [ 22, 25, 29 ], spd: [ 31, 34, 37 ], def: [ 13, 17, 20 ], res: [ 31, 34, 37 ] },
       level1_4: { hp: 17, atk: 5, spd: 8, def: 3, res: 8 },
       level40_4: { hp: [ 32, 35, 38 ], atk: [ 20, 23, 26 ], spd: [ 29, 32, 35 ], def: [ 12, 15, 18 ], res: [ 29, 32, 35 ] }
+    }
+  },
+  {
+    name: "Niles (The Land's Bounty)",
+    shortName: "Niles",
+    title: "Forbidden Tease",
+    artist: "Yura (由良)",
+    voice: "Michael Sinterniklaas",
+    releaseDate: "Oct 10, 2018",
+    colorType: "Blue",
+    weaponType: "Bow",
+    moveType: "Armored",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Niles (The Land's Bounty).png",
+      main: "img/heroes-main/Niles (The Land's Bounty).png"
+    },
+    skills: [
+      { name: "Iron Bow", rarity: 5 },
+      { name: "Steel Bow", rarity: 5 },
+      { name: "Devilish Bow", rarity: 5 },
+      { name: "Devilish Bow+", rarity: 5 },
+      { name: "Smite", rarity: 5 },
+      { name: "Darting Blow 1", rarity: 5 },
+      { name: "Swift Sparrow 1", rarity: 5 },
+      { name: "Swift Sparrow 2", rarity: 5 },
+      { name: "Atk/Spd Link 1", rarity: 5 },
+      { name: "Atk/Spd Link 2", rarity: 5 },
+      { name: "Atk/Spd Link 3", rarity: 5 },
+      { name: "Fortify Armor 1", rarity: 5 },
+      { name: "Fortify Armor 2", rarity: 5 },
+      { name: "Fortify Armor 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
+      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
     }
   },
   {
