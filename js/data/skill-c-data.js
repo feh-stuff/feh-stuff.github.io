@@ -449,6 +449,24 @@ module.exports = [
     effect: "Grants allies within 2 spaces Spd+3 during combat."
   },
   {
+    name: "Even Atk Wave 1",
+    spCost: 60,
+    icon: "52-1",
+    effect: "At start of even-numbered turns, grants Atk+2 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Even Atk Wave 2",
+    spCost: 120,
+    icon: "52-2",
+    effect: "At start of even-numbered turns, grants Atk+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Even Atk Wave 3",
+    spCost: 240,
+    icon: "52-3",
+    effect: "At start of even-numbered turns, grants Atk+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
     name: "Even Def Wave 1",
     spCost: 60,
     icon: "50-6",

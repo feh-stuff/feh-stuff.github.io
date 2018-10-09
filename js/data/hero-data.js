@@ -2049,6 +2049,43 @@ module.exports = [
     }
   },
   {
+    name: "Dorcas (The Land's Bounty)",
+    shortName: "Dorcas",
+    title: "Pumpkin Smasher",
+    artist: "Soeda Ippei (添田一平)",
+    voice: "Kirk Thornton",
+    releaseDate: "Oct 10, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Armored",
+    rarity4: ["pool2"],
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Dorcas (The Land's Bounty).png",
+      main: "img/heroes-main/Dorcas (The Land's Bounty).png"
+    },
+    skills: [
+      { name: "Iron Axe", rarity: 5 },
+      { name: "Steel Axe", rarity: 5 },
+      { name: "Hack-o'-Lantern", rarity: 5 },
+      { name: "Hack-o'-Lantern+", rarity: 5 },
+      { name: "Swap", rarity: 5 },
+      { name: "Fierce Stance 1", rarity: 5 },
+      { name: "Sturdy Stance 1", rarity: 5 },
+      { name: "Sturdy Stance 2", rarity: 5 },
+      { name: "Wary Fighter Riposte 1", rarity: 5 },
+      { name: "Wary Fighter Riposte 2", rarity: 5 },
+      { name: "Wary Fighter Riposte 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 23, atk: 11, spd: 6, def: 9, res: 6 },
+      level40: { hp: [ 46, 49, 52 ], atk: [ 38, 41, 44 ], spd: [ 22, 25, 28 ], def: [ 34, 37, 40 ], res: [ 18, 21, 24 ] },
+      level1_4: { hp: 22, atk: 11, spd: 5, def: 9, res: 5 },
+      level40_4: { hp: [ 43, 46, 49 ], atk: [ 36, 39, 42 ], spd: [ 20, 23, 26 ], def: [ 32, 35, 38 ], res: [ 16, 19, 22 ] }
+    }
+  },
+  {
     name: "Draug",
     title: "Gentle Giant",
     artist: "Itagaki Hako (板垣ハコ)",
@@ -4460,7 +4497,7 @@ module.exports = [
       { name: "Bottled Juice+", rarity: 5 },
       { name: "Dragon Gaze", rarity: 5 },
       { name: "Draconic Aura", rarity: 5 },
-      { name: "Death Blow 1", rarity: 5 },
+      { name: "Warding Blow 1", rarity: 5 },
       { name: "Mirror Strike 1", rarity: 5 },
       { name: "Mirror Strike 2", rarity: 5 },
       { name: "Bold Fighter 1", rarity: 5 },
@@ -4470,9 +4507,9 @@ module.exports = [
       { name: "Even Atk Wave 2", rarity: 5 },
       { name: "Even Atk Wave 3", rarity: 5 }
     ],
-    stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+    stats: { 
+      level1: { hp: 19, atk: 12, spd: 4, def: 8, res: 9 },
+      level40: { hp: [ 37, 41, 44 ], atk: [ 35, 38, 41 ], spd: [ 18, 21, 24 ], def: [ 29, 32, 35 ], res: [ 30, 33, 36 ] }
     }
   },
   {
@@ -5511,6 +5548,7 @@ module.exports = [
       { name: "Steel Sword", rarity: 3 },
       { name: "Killing Edge", rarity: 4 },
       { name: "Killing Edge+", rarity: 5 },
+      { name: "Solitary Blade", rarity: 5 },
       { name: "Night Sky", rarity: 4 },
       { name: "Glimmer", rarity: 4 },
       { name: "Speed +1", rarity: 3 },
@@ -6464,22 +6502,25 @@ module.exports = [
       main: "img/heroes-main/Mia (The Land's Bounty).png"
     },
     skills: [
+      { name: "Assault", rarity: 5 },
       { name: "Witchy Wand", rarity: 5 },
       { name: "Witchy Wand+", rarity: 5 },
+      { name: "Heal", rarity: 5 },
+      { name: "Mend", rarity: 5 },
       { name: "Recover", rarity: 5 },
       { name: "Recover+", rarity: 5 },
-      { name: "Death Blow 1", rarity: 5 },
+      { name: "Imbue", rarity: 5 },
       { name: "Heavenly Light", rarity: 5 },
       { name: "Spd/Res Bond 1", rarity: 5 },
       { name: "Spd/Res Bond 2", rarity: 5 },
       { name: "Spd/Res Bond 3", rarity: 5 },
-      { name: "Hone Atk 1", rarity: 5 },
-      { name: "Hone Atk 2", rarity: 5 },
+      { name: "Hone Spd 1", rarity: 5 },
+      { name: "Hone Spd 2", rarity: 5 },
       { name: "Hone Fliers", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp: 17, atk: 6, spd: 10, def: 5, res: 6 },
+      level40: { hp: [ 33, 36, 40 ], atk: [ 27, 30, 33 ], spd: [ 31, 34, 37 ],def: [ 19, 22, 25 ], res: [ 24, 28, 31 ] }
     }
   },
   {
@@ -6796,8 +6837,8 @@ module.exports = [
       { name: "Armor March 3", rarity: 5 },
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp: 20, atk: 8, spd: 4, def: 7, res: 8 },     
+      level40: { hp: [ 43, 46, 49 ],atk: [ 35, 38, 42 ],spd: [ 20, 23, 27 ],def: [ 36, 40, 43 ],res: [ 29, 32, 35 ] }
     }
   },
   {
@@ -7013,8 +7054,8 @@ module.exports = [
       { name: "Fortify Armor 3", rarity: 5 }
     ],
     stats: {
-      level1: { hp: 0, atk: 0, spd: 0, def: 0, res: 0 },
-      level40: { hp: [ 0, 0, 0 ], atk: [ 0, 0, 0 ], spd: [ 0, 0, 0 ], def: [ 0, 0, 0 ], res: [ 0, 0, 0 ] }
+      level1: { hp: 18, atk: 10, spd: 11, def: 6, res: 7 },       
+      level40: { hp: [ 34, 37, 41 ], atk: [ 31, 34, 37 ], spd: [ 36, 39, 42 ], def: [ 22, 25, 29 ], res: [ 25, 29, 32 ] }
     }
   },
   {

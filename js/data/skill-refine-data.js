@@ -2538,6 +2538,96 @@ module.exports = {
       effect: "Effective against flying units. If foe's Def ≥ foe's Res+5, deal +7 damage."
     }
   ],
+  "Bottled Juice+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+    }
+  ],
+  "Hack-o'-Lantern+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 3},
+      effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, atk: 1, spd: 3},
+      effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, atk: 1, def: 4},
+      effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, atk: 1, res: 4},
+      effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
+    }
+  ],
+  "Devilish Bow+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Effective against flying foes. Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Effective against flying foes. Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Effective against flying foes. Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 4},
+      effect: "Effective against flying foes. Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
+    }
+  ],
+  "Witchy Wand+": [
+    {
+      name: "Wrathful Staff",
+      icon: "32-1",
+      effect: "After combat, if unit attacked, resets Special cooldown of target and foes within 2 spaces of target, and inflicts the following status on target and foes within 2 spaces of target through their next actions: \"Inflicts Special cooldown charge -1 per attack during combat. (Only highest value applied. Does not stack.)\" (Neutralizes Special cooldown count reductions after combat, but skills that Accelerate and Slow Special are still effective.). Damage from unit's staff will be calculated the same as other weapons."
+    },
+    {
+      name: "Dazzling Staff",
+      icon: "32-2",
+      effect: "After combat, if unit attacked, resets Special cooldown of target and foes within 2 spaces of target, and inflicts the following status on target and foes within 2 spaces of target through their next actions: \"Inflicts Special cooldown charge -1 per attack during combat. (Only highest value applied. Does not stack.)\" (Neutralizes Special cooldown count reductions after combat, but skills that Accelerate and Slow Special are still effective.). The enemy cannot counterattack."
+    }
+  ],
 
   // prf weapons
   "Sol Katti": [
@@ -3877,5 +3967,115 @@ module.exports = {
       stats: {hp: 5, res: 4},
       effect: "Inflicts Spd-5. If unit initiates combat, unit attacks twice."
     }
-  ]
+  ],
+  "Solitary Blade": [
+    {
+      name: "Life and Death",
+      icon: "36-4",
+      cost: 1,
+      stats: {hp: 3, atk: 5, spd: 5, def: -5, res: -5},
+      effect: "Accelerates Special trigger (cooldown count-1). Grants Atk/Spd+5. Inflicts Def/Res-5."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    }
+  ],
+  "Vidofnir": [
+    {
+      name: "Infantry/Armor Bond",
+      icon: "51-7",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "If foe initiates combat and uses sword, lance, axe, or dragonstone, grants Def/Res+7 during combat. If unit is within 2 spaces of an infantry or armored ally, grants Atk/Spd+4 during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "If foe initiates combat and uses sword, lance, axe, or dragonstone, grants Def/Res+7 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "If foe initiates combat and uses sword, lance, axe, or dragonstone, grants Def/Res+7 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "If foe initiates combat and uses sword, lance, axe, or dragonstone, grants Def/Res+7 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "If foe initiates combat and uses sword, lance, axe, or dragonstone, grants Def/Res+7 during combat."
+    }
+  ],
+  "Nidhogg": [
+    {
+      name: "Magic/Dragon Sweep",
+      icon: "51-8",
+      cost: 1,
+      effect: "Effective against flying foes. During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2. Magic and dragon foes cannot counterattack."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "Effective against flying foes. During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "Effective against flying foes. During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "Effective against flying foes. During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "Effective against flying foes. During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2."
+    }
+  ],
 };

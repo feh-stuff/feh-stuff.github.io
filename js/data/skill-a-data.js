@@ -429,6 +429,23 @@ module.exports = [
     effect: "Grants Atk+8 during combat if unit initiates the attack."
   },
   {
+    name: "Def/Res 1",
+    spCost: 80,
+    icon: "51-9",
+    stats: {res: 1, def: 1},
+    prev: ["Resistance +1", "Defense +1"],
+    effect: "Grants Def/Res+1."
+  },
+  {
+    name: "Def/Res 2",
+    spCost: 160,
+    icon: "51-10",
+    stats: {res: 2, def: 2},
+    prev: ["Def/Res 1"],
+    last: true,
+    effect: "Grants Def/Res+2."
+  },
+  {
     name: "Defense +1",
     spCost: 30,
     icon: "1-0",

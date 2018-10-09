@@ -102,6 +102,21 @@ module.exports = [
     effect: "Unit automatically makes a follow-up when at HP ≤ 50% and attacking a foe that can counter."
   },
   {
+    name: "Brazen Atk/Res 1",
+    icon: "45-4",
+    effect: "If unit's HP ≤ 80% at the start of combat, grants Atk/Res+3 during combat."
+  },
+  {
+    name: "Brazen Atk/Res 2",
+    icon: "45-5",
+    effect: "If unit's HP ≤ 80% at the start of combat, grants Atk/Res+5 during combat."
+  },
+  {
+    name: "Brazen Atk/Res 3",
+    icon: "45-6",
+    effect: "If unit's HP ≤ 80% at the start of combat, grants Atk/Res+7 during combat."
+  },
+  {
     name: "Breath of Life 1",
     icon: "10-2",
     effect: "If unit initiates attack, adjacent allies recover 3 HP after combat."
@@ -130,6 +145,24 @@ module.exports = [
     name: "Close Def 3",
     icon: "19-12",
     effect: "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+6 during combat."
+  },
+  {
+    name: "Darting Stance 1",
+    icon: "39-2",
+    exclude: [{weaponType:"Staff"}],
+    effect: "Grants Spd+2 during combat when this unit is attacked."
+  },
+  {
+    name: "Darting Stance 2",
+    icon: "39-3",
+    exclude: [{weaponType:"Staff"}],
+    effect: "Grants Spd+4 during combat when this unit is attacked."
+  },
+  {
+    name: "Darting Stance 3",
+    icon: "39-4",
+    exclude: [{weaponType:"Staff"}],
+    effect: "Grants Spd+6 during combat when this unit is attacked."
   },
   {
     name: "Def Ploy 1",
@@ -813,6 +846,18 @@ module.exports = [
     icon: "7-10",
     exclude: [{weaponType: "Staff"}],
     effect: "After combat, foe suffers Spd-7 through its next action."
+  },
+  {
+    name: "Spd/Def 1",
+    icon: "24-11",
+    stats: {spd: 1, def: 1},
+    effect: "Grants Spd/Def+1."
+  },
+  {
+    name: "Spd/Def 2",
+    icon: "24-12",
+    stats: {spd: 2, def: 2},
+    effect: "Grants Spd/Def+2."
   },
   {
     name: "Spd Ploy 1",

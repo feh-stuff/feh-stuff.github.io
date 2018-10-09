@@ -503,6 +503,24 @@ module.exports = [
     effect: "-"
   },
   {
+    name: "Bottled Juice",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Steel Dagger"],
+    effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Bottled Juice+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Bottled Juice"],
+    effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+  },
+  {
     name: "Brave Axe",
     spCost: 200,
     damage: 5,
@@ -1035,6 +1053,24 @@ module.exports = [
     colorType: "Blue",
     prev: ["Deft Harpoon"],
     effect: "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat."
+  },
+  {
+    name: "Devilish Bow",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Bow",
+    prev: ["Steel Bow"],
+    effect: "Effective against flying foes. Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
+  },
+  {
+    name: "Devilish Bow+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Bow",
+    prev: ["Devilish Bow"],
+    effect: "Effective against flying foes. Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
   },
   {
     name: "Dire Thunder",
@@ -1848,6 +1884,26 @@ module.exports = [
     // colorType: "Neutral",
     prev: ["Guard Bow"],
     effect: "Effective against flying foes.  Grants Def/Res+6 during combat if unit is attacked by foe using bow, daggers, magic, or staff."
+  },
+  {
+    name: "Hack-o'-Lantern",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Steel Axe"],
+    effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
+  },
+  {
+    name: "Hack-o'-Lantern+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Hack-o'-Lantern"],
+    effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
   },
   {
     name: "Hagoita",
@@ -3594,6 +3650,16 @@ module.exports = [
     effect: "If wielder initiates attack at HP ≤ 50%, any follow-up occurs immediately."
   },
   {
+    name: "Solitary Blade",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    exclusive: ["Lon'qu"],
+    effect: "Accelerates Special trigger (cooldown count-1).",
+  },
+  {
     name: "Spectral Tome",
     spCost: 200,
     damage: 8,
@@ -3612,6 +3678,17 @@ module.exports = [
     colorType: "Green",
     prev: ["Spectral Tome"],
     effect: "After combat, bonuses become penalties on all foes within 2 spaces of target through foes' next actions."
+  },
+  {
+    name: "Spirit Breath",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Breath",
+    stats: {def: 3},
+    prev: ["Flametongue"],
+    exclusive: ["Myrrh (The Land's Bounty)"],
+    effect: "Grants Def+3. If initiates combat and unit’s Def ≥ foe’s Def+5, unit makes a guaranteed follow-up attack. If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
   },
   {
     name: "Starfish",
@@ -4037,6 +4114,25 @@ module.exports = [
     // prev: ["Armorslayer"],
     exclusive: ["Caeda"],
     effect: "Effective against armored and cavalry foes.",
+  },
+  {
+    name: "Witchy Wand",
+    spCost: 150,
+    damage: 5,
+    range: 2,
+    weaponType: "Staff",
+    colorType: "Neutral",
+    effect: "After combat, if unit attacked, resets Special cooldown of target and foes within 2 spaces of target, and inflicts the following status on target and foes within 2 spaces of target through their next actions: \"Inflicts Special cooldown charge -1 per attack during combat. (Only highest value applied. Does not stack.)\" (Neutralizes Special cooldown count reductions after combat, but skills that Accelerate and Slow Special are still effective.)"
+  },
+  {
+    name: "Witchy Wand+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Staff",
+    colorType: "Neutral",
+    prev: ["Witchy Wand"],
+    effect: "After combat, if unit attacked, resets Special cooldown of target and foes within 2 spaces of target, and inflicts the following status on target and foes within 2 spaces of target through their next actions: \"Inflicts Special cooldown charge -1 per attack during combat. (Only highest value applied. Does not stack.)\" (Neutralizes Special cooldown count reductions after combat, but skills that Accelerate and Slow Special are still effective.)"
   },
   {
     name: "Wo Dao",
