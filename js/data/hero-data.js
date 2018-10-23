@@ -392,6 +392,42 @@ module.exports = [
     }
   },
   {
+    name: "Aversa",
+    title: "Dark One",
+    artist: "PenekoR (п猫R)",
+    voice: "Cindy Robinson",
+    releaseDate: "Oct 25, 2018",
+    colorType: "Red",
+    weaponType: "Tome",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Aversa.png",
+      main: "img/heroes-main/Aversa.png"
+    },
+    skills: [
+      { name: "Flux", rarity: 3 },
+      { name: "Ruin", rarity: 3 },
+      { name: "Fenrir", rarity: 3 },
+      { name: "Aversa's Night", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 3 },
+      { name: "Dragon Fang", rarity: 4 },
+      { name: "Speed +1", rarity: 3 },
+      { name: "Hp/Spd 1", rarity: 4 },
+      { name: "Hp/Spd 2", rarity: 5 },
+      { name: "Odd Res Wave 1", rarity: 3 },
+      { name: "Odd Res Wave 2", rarity: 3 },
+      { name: "Odd Res Wave 3", rarity: 4 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 7, spd: 8, def: 4, res: 7 },
+      level40: { hp: [ 39, 42, 45 ], atk: [ 30, 33, 36 ], spd: [ 31, 34, 37 ], def: [ 14, 17, 20 ], res: [ 21, 24, 27 ] },
+      level1_4: { hp: 17, atk: 7, spd: 8, def: 3, res: 6 },
+      level40_4: {hp: [ 36, 39, 42 ], atk: [ 28, 31, 34 ], spd: [ 29, 32, 35 ], def: [ 12, 15, 18 ], res: [ 19, 22, 25 ] }
+    }
+  },
+  {
     name: "Ayra",
     title: "Astra's Wielder",
     artist: "Asatani Tomoyo (麻谷知世)",
@@ -4756,6 +4792,43 @@ module.exports = [
     }
   },
   {
+    name: "Kliff",
+    title: "Curious Spirit",
+    artist: "Tobi",
+    voice: "Cristopher Patton",
+    releaseDate: "Oct 23, 2018",
+    colorType: "Blue",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Kliff.png",
+      main: "img/heroes-main/Kliff.png"
+    },
+    skills: [
+      { name: "Light", rarity: 5 },
+      { name: "Ellight", rarity: 5 },
+      { name: "Shine", rarity: 5 },
+      { name: "Sagittae", rarity: 5 },
+      { name: "Rising Light", rarity: 5 },
+      { name: "Growing Light", rarity: 5 },
+      { name: "Fortress Defense 1", rarity: 5 },
+      { name: "Fort. Def/Res 1", rarity: 5 },
+      { name: "Fort. Def/Res 2", rarity: 5 },
+      { name: "Fort. Def/Res 3", rarity: 5 },
+      { name: "Chill Spd 1", rarity: 5 },
+      { name: "Chill Spd 2", rarity: 5 },
+      { name: "Chill Spd 3", rarity: 5 },
+      { name: "Fortify Res 1", rarity: 5 },
+      { name: "Fortify Res 2", rarity: 5 },
+      { name: "Fortify Res 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 15, atk: 6, spd: 4, def: 3, res: 9 },
+      level40: { hp: [ 33, 37, 40 ], atk: [ 27, 30, 33 ], spd: [ 33, 37, 40 ], def: [ 21, 25, 28 ], res: [ 25, 28, 32], }
+    }
+  },
+  {
     name: "L'Arachel",
     title: "Princess of Light",
     artist: "Konfuzi Kokon (紺藤ココン)",
@@ -5526,6 +5599,44 @@ module.exports = [
       level40: { hp: [ 38, 41, 44 ], atk: [ 29, 32, 35 ], spd: [ 32, 35, 38 ], def: [ 17, 20, 23 ], res: [ 26, 30, 33 ] },
       level1_4: { hp: 16, atk: 8, spd: 9, def: 4, res: 7 },
       level40_4: { hp: [ 35, 38, 41 ], atk: [ 27, 30, 33 ], spd: [ 30, 33, 36 ], def: [ 15, 18, 21 ], res: [ 24, 27, 30 ] }
+    }
+  },
+  {
+    name: "Loki",
+    title: "The Trickster",
+    artist: "Maeshima Shigeki (前嶋重機)",
+    voice: "Erika Ishii",
+    releaseDate: "Oct 23, 2018",
+    colorType: "Neutral",
+    weaponType: "Staff",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Loki.png",
+      main: "img/heroes-main/Loki.png"
+    },
+    skills: [
+      { name: "Assault", rarity: 5 },
+      { name: "Thökk", rarity: 5 },
+      { name: "Heal", rarity: 5 },
+      { name: "Reconcile", rarity: 5 },
+      { name: "Restore", rarity: 5 },
+      { name: "Restore+", rarity: 5 },
+      { name: "Imbue", rarity: 5 },
+      { name: "Still-Water Balm", rarity: 5 },
+      { name: "Earthwater Balm", rarity: 5 },
+      { name: "Earthwater Balm+", rarity: 5 },
+      { name: "C Duel Infantry 1", rarity: 5 },
+      { name: "C Duel Infantry 2", rarity: 5 },
+      { name: "C Duel Infantry 3", rarity: 5 },
+      { name: "Odd Atk Wave 1", rarity: 5 },
+      { name: "Odd Atk Wave 2", rarity: 5 },
+      { name: "Odd Atk Wave 3", rarity: 5 }
+
+    ],
+    stats: {
+      level1: { hp: 18, atk: 9, spd: 9, def: 3, res: 6 },   
+      level40: { hp: [ 39, 42, 45 ], atk: [ 30, 33, 36 ], spd: [ 32, 35, 38 ], def: [ 12, 16, 19 ], res: [ 22, 25, 29 ], }
     }
   },
   {
@@ -7720,6 +7831,43 @@ module.exports = [
       level40: { hp: [ 36, 40, 43 ], atk: [ 30, 33, 36 ], spd: [ 31, 34, 37 ], def: [ 23, 26, 30 ], res: [ 18, 21, 24 ] },
       level1_4: { hp: 17, atk: 7, spd: 8, def: 6, res: 5 },
       level40_4: { hp: [ 34, 37, 40 ], atk: [ 28, 31, 34 ], spd: [ 29, 32, 35 ], def: [ 21, 24, 27 ], res: [ 16, 19, 22 ] }
+    }
+  },
+  {
+    name: "Owain",
+    title: "Chosen One",
+    artist: "Suekane Kumiko (スエカネクミコ)",
+    voice: "Kaiji Tang",
+    releaseDate: "Oct 23, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Owain.png",
+      main: "img/heroes-main/Owain.png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Missiletainn", rarity: 5 },
+      { name: "Glowing Ember", rarity: 5 },
+      { name: "Bonfire", rarity: 5 },
+      { name: "Blue Flame", rarity: 5 },
+      { name: "Atk/Def Bond 1", rarity: 5 },
+      { name: "Atk/Def Bond 2", rarity: 5 },
+      { name: "Atk/Def Bond 3", rarity: 5 },
+      { name: "Wrath 1", rarity: 5 },
+      { name: "Wrath 2", rarity: 5 },
+      { name: "Wrath 3", rarity: 5 },
+      { name: "Spur Spd 1", rarity: 5 },
+      { name: "Spur Spd/Def 1", rarity: 5 },
+      { name: "Spur Spd/Def 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 8, spd: 9, def: 7, res: 7 },
+      level40: { hp: [ 38, 41, 44 ], atk: [ 29, 32, 35 ], spd: [ 34, 37, 40 ], def: [ 28, 31, 34 ], res: [ 19, 22, 25 ], }
     }
   },
   {

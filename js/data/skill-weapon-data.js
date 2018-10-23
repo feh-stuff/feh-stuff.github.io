@@ -164,6 +164,18 @@ module.exports = [
     effect: "Restores 5 HP to adjacent allies after any combat this unit initiates."
   },
   {
+    name: "Aversa's Night",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Red",
+    prev: ["Fenrir"],
+    exclusive: ["Aversa"],
+    stats: {res: 3},
+    effect: "Grants Res+3. At start of turn, if any foe's HP ≤ unit’s HP-3 and that foe is adjacent to another foe, inflicts Atk/Spd/Def/Res-3 on that foe and bonuses on that foe become penalties through its next action.",
+  },
+  {
     name: "Ayra's Blade",
     spCost: 400,
     damage: 16,
@@ -2573,6 +2585,17 @@ module.exports = [
     effect: "Accelerates Special trigger (cooldown count-1). At the start of turn 1, grants Special cooldown count-1 for each magic ally in your team (including unit)."
   },
   {
+    name: "Missiletainn",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Silver Sword"],
+    exclusive: ["Owain"],
+    effect: "Accelerates Special trigger (cooldown count-1). Grants Special cooldown charge +1 per foe's attack during combat. (Only highest value applied. Does not stack. Special cooldown charge granted even if foe's attack deals 0 damage.)"
+  },
+  {
     name: "Mjölnir",
     spCost: 400,
     damage: 14,
@@ -3171,6 +3194,18 @@ module.exports = [
     colorType: "Red",
     prev: ["Safeguard"],
     effect: "If foe initiates combat, grants Def+7 during combat."
+  },
+  {
+    name: "Sagittae",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Thoron"],
+    exclusive: ["Kliff"],
+    stats: {def: 3},
+    effect: "Grants Def+3. At start of combat, if foe's Atk ≥ unit's Atk+5, grants Atk/Spd/Def/Res+5 during combat.",
   },
   {
     name: "Sapphire Lance",

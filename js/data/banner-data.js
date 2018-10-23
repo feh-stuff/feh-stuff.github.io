@@ -3,6 +3,51 @@ module.exports = [
     date: "October 2018",
     banners: [
       {
+        name: "Brave Redux",
+        startDate: "Oct 23, 2018",
+        focusHeroes: [ "Loki", "Owain", "Kliff" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Ephraim and Myrrh's Battle",
+        startDate: "Oct 18, 2018",
+        focusHeroes: [ "Ephraim", "Myrrh", "Eirika (Sacred Memories)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "New Power (October 2018)",
+        startDate: "Oct 17, 2018",
+        focusHeroes: [ "Lon'qu", "Innes", "Tana" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Trick or Defeat (2018)",
+        startDate: "Oct 15, 2018",
+        focusHeroes: [ "Sakura (Trick or Defeat!)", "Jakob (Trick or Defeat!)", "Henry (Trick or Defeat!)", "Nowi (Trick or Defeat!)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Familiar Faces Tempest Trials",
+        startDate: "Oct 11, 2018",
+        focusHeroes: [ "Mia", "Myrrh", "Dorcas" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "The Land's Bounty",
         startDate: "Oct 10, 2018",
         focusHeroes: [ "Mia (The Land's Bounty)", "Myrrh (The Land's Bounty)", "Kagero (The Land's Bounty)", "Niles (The Land's Bounty)" ],

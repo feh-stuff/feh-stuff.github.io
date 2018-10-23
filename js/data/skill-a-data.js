@@ -320,6 +320,30 @@ module.exports = [
     effect: "If unit's HP ≤ 80% at the start of combat, grants Def/Res+7 during combat."
   },
   {
+    name: "C Duel Infantry 1",
+    spCost: 70,
+    icon: "52-7",
+    stats: {hp: 3},
+    include: [{colorType: "Neutral", moveType: "Infantry"}],
+    effect: "Grants HP+3. If unit is 5★ and level 40 and unit's stats total less than 160, treats unit's stats as 160 in modes like Arena. (Higher-scoring opponents will appear. Stat total calculation excludes any values added by merges and skills.)"
+  },
+  {
+    name: "C Duel Infantry 2",
+    spCost: 140,
+    icon: "52-8",
+    stats: {hp: 4},
+    include: [{colorType: "Neutral", moveType: "Infantry"}],
+    effect: "Grants HP+4. If unit is 5★ and level 40 and unit's stats total less than 160, treats unit's stats as 165 in modes like Arena. (Higher-scoring opponents will appear. Stat total calculation excludes any values added by merges and skills.)"
+  },
+  {
+    name: "C Duel Infantry 3",
+    spCost: 300,
+    icon: "52-9",
+    stats: {hp: 5},
+    include: [{colorType: "Neutral", moveType: "Infantry"}],
+    effect: "Grants HP+5. If unit is 5★ and level 40 and unit's stats total less than 160, treats unit's stats as 170 in modes like Arena. (Higher-scoring opponents will appear. Stat total calculation excludes any values added by merges and skills.)"
+  },
+  {
     name: "Close Counter",
     spCost: 300,
     icon: "4-0",
@@ -692,6 +716,31 @@ module.exports = [
     exclude: [{weaponType:"Staff"}],
     last: true,
     effect: "If unit's Spd - foe's Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)"
+  },
+  {
+    name: "Fort. Def/Res 1",
+    spCost: 100,
+    icon: "52-4",
+    stats: {atk: -3, def: 3, res: 3},
+    prev: ["Fortress Defense 1", "Fortress Resistance 1"],
+    effect: "Grants Def/Res+3. Inflicts Atk-2."
+  },
+  {
+    name: "Fort. Def/Res 2",
+    spCost: 200,
+    icon: "52-5",
+    stats: {atk: -3, def: 4, res: 4},
+    prev: ["Fort. Def/Res 1"],
+    effect: "Grants Def/Res+4. Inflicts Atk-3."
+  },
+  {
+    name: "Fort. Def/Res 3",
+    spCost: 300,
+    icon: "52-6",
+    stats: {atk: -2, def: 6, res: 6},
+    prev: ["Fort. Def/Res 2"],
+    last: true,
+    effect: "Grants Def/Res+6. Inflicts Atk-2."
   },
   {
     name: "Fortress Def 1",

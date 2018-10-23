@@ -72,6 +72,12 @@ module.exports = [
     effect: "Before combat this unit initiates, foes in an area near target take damage equal to 1.5 x (unit's Atk minus foe's Def or Res)."
   },
   {
+    name: "Blue Flame",
+    cooldown: 3,
+    spCost: 500,
+    effect: "Boosts damage dealt by 10. If unit is adjacent to ally, boosts damage by 25 instead."
+  },
+  {
     name: "Bonfire",
     cooldown: 3,
     spCost: 200,
@@ -123,6 +129,20 @@ module.exports = [
     spCost: 100,
     exclude: [{weaponType: "Staff"}],
     effect: "Grants +30% to Atk."
+  },
+  {
+    name: "Earthwater Balm",
+    cooldown: 1,
+    spCost: 200,
+    include: [{weaponType: "Staff"}],
+    effect: "When healing an ally with a staff, grants Def/Res+4 to all allies for 1 turn."
+  },
+  {
+    name: "Earthwater Balm+",
+    cooldown: 1,
+    spCost: 300,
+    include: [{weaponType: "Staff"}],
+    effect: "When healing an ally with a staff, grants Def/Res+6 to all allies for 1 turn."
   },
   {
     name: "Escutcheon",
