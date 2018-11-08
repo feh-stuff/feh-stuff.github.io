@@ -131,6 +131,15 @@ module.exports = [
     effect: "Grants Atk/Spd+3 to an adjacent ally until the end of the turn."
   },
   {
+    name: "Rally Atk/Spd+",
+    range: 1,
+    spCost: 400,
+    prev: ["Rally Atk/Spd"],
+    exclude: [{weaponType: "Staff"}],
+    last: true,
+    effect: "Grants Atk/Spd+6 to target ally for 1 turn."
+  },
+  {
     name: "Rally Defense",
     range: 1,
     spCost: 150,
@@ -298,7 +307,7 @@ module.exports = [
     name: "Sing",
     range: 1,
     spCost: 150,
-    include: [{name: "Azura"},{name: "Azura (Performing Arts)"},{name: "Shigure (Performing Arts)"}, {name: "Azura (Happy New Year!)"}],
+    include: [{name: "Azura"},{name: "Azura (Performing Arts)"},{name: "Shigure (Performing Arts)"}, {name: "Azura (Happy New Year!)"}, {name: "Azura (Adrift)"}],
     last: true,
     effect: "Enables target to take another action. Cannot be used on units with Sing or Dance."
   },

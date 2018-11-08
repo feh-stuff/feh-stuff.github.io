@@ -121,6 +121,27 @@ module.exports = [
     effect: "If unit is not adjacent to an ally, grants Atk/Res+6 during combat."
   },
   {
+    name: "Atk/Spd Solo 1",
+    spCost: 60,
+    icon: "52-10",
+    effect: "If unit is not adjacent to an ally, grants Atk/Spd+2 during combat."
+  },
+  {
+    name: "Atk/Spd Solo 2",
+    spCost: 120,
+    icon: "52-11",
+    prev: ["Atk/Spd Solo 1"],
+    effect: "If unit is not adjacent to an ally, grants Atk/Spd+4 during combat."
+  },
+  {
+    name: "Atk/Spd Solo 3",
+    spCost: 240,
+    icon: "52-12",
+    prev: ["Atk/Spd Solo 2"],
+    last: true,
+    effect: "If unit is not adjacent to an ally, grants Atk/Spd+6 during combat."
+  },
+  {
     name: "Atk/Spd 1",
     spCost: 80,
     icon: "26-11",

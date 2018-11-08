@@ -43,6 +43,26 @@ module.exports = [
     effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Def+6 to unit and target ally or unit and targeting ally for 1 turn."
   },
   {
+    name: "Atk/Res Link 1",
+    spCost: 60,
+    icon: "53-3",
+    effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Res+2 to unit and target ally or unit and targeting ally for 1 turn."
+  },
+  {
+    name: "Atk/Res Link 2",
+    spCost: 120,
+    icon: "53-4",
+    prev: ["Atk/Res Link 1"],
+    effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Res+4 to unit and target ally or unit and targeting ally for 1 turn."
+  },
+  {
+    name: "Atk/Res Link 3",
+    spCost: 240,
+    icon: "53-5",
+    prev: ["Atk/Res Link 2"],
+    effect: "If a movement Assist skill (like Reposition, Shove, Pivot, etc.) is used by unit or targets unit, grants Atk/Res+6 to unit and target ally or unit and targeting ally for 1 turn."
+  },
+  {
     name: "Atk/Spd Link 1",
     spCost: 60,
     icon: "51-11",
@@ -768,11 +788,39 @@ module.exports = [
     effect: "When healing allies with a staff, unit also recovers the same amount."
   },
   {
+    name: "Lunar Brace",
+    spCost: 300,
+    icon: "53-0",
+    include: [{name:"Eirika (Legendary Heroes)"}],
+    effect: "Slows Special trigger (cooldown count+1). Deals damage = 50% of foe's Def when Special triggers."
+  },
+  {
     name: "Lunge",
     spCost: 150,
     icon: "4-6",
     include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
     effect: "If unit initiates attack, after combat, unit and targeted foe swap places."
+  },
+  {
+    name: "Null Follow-Up 1",
+    spCost: 60,
+    icon: "53-6",
+    include: [{moveType: "Infantry"}],
+    effect: "At start of combat, if unit's HP = 100%,, disables foe's skills that guarantee foe's follow-up attack and foe's skills that prevent unit's follow-up attack."
+  },
+  {
+    name: "Null Follow-Up 2",
+    spCost: 120,
+    icon: "53-7",
+    include: [{moveType: "Infantry"}],
+    effect: "At start of combat, if unit's HP ≥ 50%, disables foe's skills that guarantee foe's follow-up attack and foe's skills that prevent unit's follow-up attack."
+  },
+  {
+    name: "Null Follow-Up 3",
+    spCost: 240,
+    icon: "53-8",
+    include: [{moveType: "Infantry"}],
+    effect: "Disables foe's skills that guarantee foe's follow-up attack and foe's skills that prevent unit's follow-up attack."
   },
   {
     name: "Obstruct 1",
@@ -1130,7 +1178,7 @@ module.exports = [
     prev: ["Spd Feint 2"],
     effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Spd-7 on foes in cardinal directions of unit through their next action."
   },
-    {
+  {
     name: "Spd/Res Link 1",
     spCost: 60,
     icon: "50-3",

@@ -51,6 +51,21 @@ module.exports = [
     effect: "Grants Atk/Def+2."
   },
   {
+    name: "Atk/Def Bond 1",
+    icon: "32-10",
+    effect: "Grants Atk/Def+3 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Atk/Def Bond 2",
+    icon: "32-11",
+    effect: "Grants Atk/Def+4 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Atk/Def Bond 3",
+    icon: "32-12",
+    effect: "Grants Atk/Def+5 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
     name: "Atk Smoke 1",
     icon: "26-8",
     exclude: [{weaponType: "Staff"}],
@@ -433,6 +448,24 @@ module.exports = [
     icon: "27-2",
     include: [{moveType: "Flying"}],
     effect: "Unit can move to a space adjacent to a flier ally within 2 spaces."
+  },
+    {
+    name: "Gale Dance 1",
+    icon: "27-11",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Spd+2."
+  },
+  {
+    name: "Gale Dance 2",
+    icon: "27-12",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Spd+3."
+  },
+  {
+    name: "Gale Dance 3",
+    icon: "28-0",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Spd+4."
   },
   {
     name: "Guidance 1",
@@ -1214,5 +1247,20 @@ module.exports = [
     name: "Threaten Spd 3",
     icon: "13-10",
     effect: "Inflicts Spd-5 on foes within 2 spaces through their next actions at the start of each turn."
-  }
+  },
+  {
+    name: "Water Boost 1",
+    icon: "23-2",
+    effect: "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+2 during combat."
+  },
+  {
+    name: "Water Boost 2",
+    icon: "23-3",
+    effect: "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+4 during combat."
+  },
+  {
+    name: "Water Boost 3",
+    icon: "23-4",
+    effect: "If unit has at least 3 more HP than enemy at the start of combat, unit receives Res+6 during combat."
+  },
 ];

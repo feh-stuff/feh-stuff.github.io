@@ -2628,6 +2628,18 @@ module.exports = {
       effect: "After combat, if unit attacked, resets Special cooldown of target and foes within 2 spaces of target, and inflicts the following status on target and foes within 2 spaces of target through their next actions: \"Inflicts Special cooldown charge -1 per attack during combat. (Only highest value applied. Does not stack.)\" (Neutralizes Special cooldown count reductions after combat, but skills that Accelerate and Slow Special are still effective.). The enemy cannot counterattack."
     }
   ],
+  "Flash+": [
+    {
+      name: "Wrathful Staff",
+      icon: "32-1",
+      effect: "After combat, if unit attacked, inflicts status on target and foes within 2 spaces of target preventing counterattacks through their next actions. Damage from unit's staff will be calculated the same as other weapons."
+    },
+    {
+      name: "Dazzling Staff",
+      icon: "32-2",
+      effect: "After combat, if unit attacked, inflicts status on target and foes within 2 spaces of target preventing counterattacks through their next actions. The enemy cannot counterattack."
+    }
+  ],
 
   // prf weapons
   "Sol Katti": [
@@ -4076,6 +4088,154 @@ module.exports = {
       cost: 1,
       stats: {hp: 2, res: 3},
       effect: "Effective against flying foes. During combat, boosts unit's Atk/Spd/Def/Res by number of adjacent allies × 2."
+    }
+  ],
+  "Axe of Virility": [
+    {
+      name: "Fury",
+      icon: "32-0",
+      cost: 1,
+      stats: {hp: 3, atk: 3, spd: 3, def: 3, res: 3},
+      effect: "Effective against armored foes. Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Effective against armored foes."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Effective against armored foes."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Effective against armored foes."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Effective against armored foes."
+    }
+  ],
+  "Golden Dagger": [
+    {
+      name: "Special Counter",
+      icon: "53-1",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Accelerates Special trigger (cooldown count-1). At start of combat, if Special is ready, grants Atk/Spd/Def/Res+3 during combat and unit can counterattack regardless of foe's range."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    }
+  ],
+  "Shanna's Lance": [
+    {
+      name: "+Special Damage",
+      icon: "32-6",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Accelerates Special trigger (cooldown count-1). Deals +10 damage when Special triggers."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    }
+  ],
+  "Florina's Lance": [
+    {
+      name: "Close Stance",
+      icon: "53-2",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Effective against armored foes. If foe initiates combat and uses sword, lance, axe, or dragonstone, grants Atk/Spd/Def/Res+4 during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Effective against armored foes."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Effective against armored foes."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Effective against armored foes."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Effective against armored foes."
     }
   ],
 };

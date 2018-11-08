@@ -529,6 +529,43 @@ module.exports = [
     }
   },
   {
+    name: "Azura (Adrift)",
+    shortName: "Azura",
+    title: "Lady of the Lake",
+    artist: "kaya8",
+    voice: "Rena Strober",
+    releaseDate: "Nov 12, 2018",
+    colorType: "Green",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity4: ["pool1"],
+    rarity5: ["pool2"],
+    ttReward: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Azura (Adrift).png",
+      main: "img/heroes-main/Azura (Adrift).png"
+    },
+    skills: [
+      { name: "Wind", rarity: 4 },
+      { name: "Elwind", rarity: 4 },
+      { name: "Rexcalibur", rarity: 4 },
+      { name: "Book of Shadows", rarity: 5 },
+      { name: "Sing", rarity: 5 },
+      { name: "Spd/Res Bond 1", rarity: 5 },
+      { name: "Spd/Res Bond 2", rarity: 5 },
+      { name: "Spd/Res Bond 3", rarity: 5 },
+      { name: "Torrent Dance 1", rarity: 5 },
+      { name: "Torrent Dance 2", rarity: 5 },
+      { name: "Torrent Dance 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 14, atk: 7, spd: 5, def: 4, res: 6 },
+      level40: { hp: [ 33, 36, 39 ], atk: [ 30, 33, 36 ], spd: [ 26, 29, 32 ], def: [ 14, 17, 20 ], res: [ 22, 25, 28 ] },
+      level1_4: { hp: 13, atk: 7, spd: 4, def: 3, res: 6 },
+      level40_4: { hp: [ 30, 33, 36 ], atk: [ 28, 31, 34 ], spd: [ 23, 26, 29 ], def: [ 12, 15, 18 ], res: [ 21, 24, 27 ] }
+    }
+  },
+  {
     name: "Azura (Happy New Year!)",
     shortName: "Azura",
     title: "Celebratory Spirit",
@@ -649,6 +686,7 @@ module.exports = [
       { name: "Steel Axe", rarity: 3 },
       { name: "Hammer", rarity: 4 },
       { name: "Hammer+", rarity: 5 },
+      { name: "Axe of Virility", rarity: 5 },
       { name: "Smite", rarity: 4 },
       { name: "Fury 1", rarity: 3 },
       { name: "Fury 2", rarity: 4 },
@@ -955,6 +993,42 @@ module.exports = [
       level40: { hp: [ 34, 37, 41 ], atk: [ 26, 30, 33 ], spd: [ 29, 32, 35 ], def: [ 24, 28, 31 ], res: [ 28, 31, 34 ] },
       level1_4: { hp: 17, atk: 8, spd: 8, def: 5, res: 6 },
       level40_4: { hp: [ 32, 35, 38 ], atk: [ 25, 28, 31 ], spd: [ 27, 30, 33 ], def: [ 22, 25, 28 ], res: [ 25, 28, 31 ] }
+    }
+  },
+  {
+    name: "Camilla (Adrift)",
+    shortName: "Camilla",
+    title: "Flower of Fantasy",
+    artist: "Mikuro (みく郎)",
+    voice: "Misty Lee",
+    releaseDate: "Nov 9, 2018",
+    colorType: "Red",
+    weaponType: "Tome",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Camilla (Adrift).png",
+      main: "img/heroes-main/Camilla (Adrift).png"
+    },
+    skills: [
+      { name: "Flux", rarity: 5 },
+      { name: "Ruin", rarity: 5 },
+      { name: "Fenrir", rarity: 5 },
+      { name: "Book of Dreams", rarity: 5 },
+      { name: "Draw Back", rarity: 5 },
+      { name: "Atk/Res Bond 1", rarity: 5 },
+      { name: "Atk/Res Bond 2", rarity: 5 },
+      { name: "Atk/Res Bond 3", rarity: 5 },
+      { name: "Atk/Res Link 1", rarity: 5 },
+      { name: "Atk/Res Link 2", rarity: 5 },
+      { name: "Atk/Res Link 3", rarity: 5 },
+      { name: "Spur Atk 1", rarity: 5 },
+      { name: "Spur Atk 2", rarity: 5 },
+      { name: "Goad Fliers", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 9, spd: 8, def: 4, res: 6 },
+      level40: { hp: [ 33, 36, 40 ], atk: [ 34, 37, 40 ], spd: [ 26, 30, 33 ], def: [ 13, 17, 20 ], res: [ 27, 30, 33 ] }
     }
   },
   {
@@ -1844,6 +1918,43 @@ module.exports = [
     }
   },
   {
+    name: "Corrin (F) (Adrift)",
+    shortName: "Corrin",
+    title: "Dream Princess",
+    artist: "Sencha (煎茶)",
+    voice: "Marcella Lentz-Pope",
+    releaseDate: "Nov 9, 2018",
+    colorType: "Green",
+    weaponType: "Breath",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Corrin (F) (Adrift).png",
+      main: "img/heroes-main/Corrin (F) (Adrift).png"
+    },
+    skills: [
+      { name: "Fire Breath", rarity: 5 },
+      { name: "Fire Breath+", rarity: 5 },
+      { name: "Water Breath", rarity: 5 },
+      { name: "Draconic Rage", rarity: 5 },
+      { name: "Rally Speed", rarity: 5 },
+      { name: "Rally Atk/Spd", rarity: 5 },
+      { name: "Rally Atk/Spd+", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Dragon Aura", rarity: 5 },
+      { name: "Atk/Spd Bond 1", rarity: 5 },
+      { name: "Atk/Spd Bond 2", rarity: 5 },
+      { name: "Atk/Spd Bond 3", rarity: 5 },
+      { name: "Fortify Def 1", rarity: 5 },
+      { name: "Fortify Def 2", rarity: 5 },
+      { name: "Fortify Dragons", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 15, atk: 7, spd: 7, def: 6, res: 5 },
+      level40: { hp: [ 38, 41, 44 ], atk: [ 28, 31, 34 ], spd: [ 34, 37, 41 ], def: [ 29, 32, 35 ], res: [ 23, 27, 30 ] }
+    }
+  },
+  {
     name: "Corrin (F) (Nohrian Summer)",
     shortName: "Corrin",
     title: "Novice Vacationer",
@@ -1914,6 +2025,43 @@ module.exports = [
       level40: { hp: [ 38, 42, 45 ], atk: [ 29, 32, 35 ], spd: [ 29, 32, 35 ], def: [ 24, 28, 31 ], res: [ 21, 24, 28 ] },
       level1_4: { hp: 19, atk: 8, spd: 8, def: 5, res: 4 },
       level40_4: { hp: [ 36, 39, 42 ], atk: [ 27, 30, 33 ], spd: [ 27, 30, 33 ], def: [ 22, 25, 28 ], res: [ 19, 22, 25 ] }
+    }
+  },
+  {
+    name: "Corrin (M) (Adrift)",
+    shortName: "Corrin",
+    title: "Dream Prince",
+    artist: "Maiponpon (まいぽんぽん)",
+    voice: "Cam Clarke",
+    releaseDate: "Nov 9, 2018",
+    colorType: "Blue",
+    weaponType: "Breath",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Corrin (M) (Adrift).png",
+      main: "img/heroes-main/Corrin (M) (Adrift).png"
+    },
+    skills: [
+      { name: "Fire Breath", rarity: 5 },
+      { name: "Fire Breath+", rarity: 5 },
+      { name: "Water Breath", rarity: 5 },
+      { name: "Draconic Rage", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Dragon Fang", rarity: 5 },
+      { name: "Atk/Def Bond 1", rarity: 5 },
+      { name: "Atk/Def Bond 2", rarity: 5 },
+      { name: "Atk/Def Bond 3", rarity: 5 },
+      { name: "Null Follow-Up 1", rarity: 5 },
+      { name: "Null Follow-Up 2", rarity: 5 },
+      { name: "Null Follow-Up 3", rarity: 5 },
+      { name: "Hone Spd 1", rarity: 5 },
+      { name: "Hone Spd 2", rarity: 5 },
+      { name: "Hone Dragons", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 7, spd: 7, def: 5, res: 5 },
+      level40: { hp: [ 39, 42, 45 ], atk: [ 32, 35, 38 ], spd: [ 32, 35, 38 ], def: [ 28, 31, 34 ], res: [ 21, 24, 28 ] }
     }
   },
   {
@@ -2223,6 +2371,42 @@ module.exports = [
       level40: { hp: [ 39, 42, 45 ], atk: [ 23, 26, 30 ], spd: [ 32, 35, 38 ], def: [ 23, 26, 30 ], res: [ 24, 28, 31 ] },
       level1_4: { hp: 17, atk: 7, spd: 9, def: 6, res: 5 },
       level40_4: { hp: [ 36, 39, 42 ], atk: [ 22, 25, 28 ], spd: [ 30, 33, 36 ], def: [ 21, 24, 27 ], res: [ 22, 25, 28 ] }
+    }
+  },
+  {
+    name: "Eirika (Legendary Heroes)",
+    shortName: "Eirika",
+    artist: "Asatani Tomoyo (麻谷知世)",
+    voice: "Kira Buckland",
+    title: "Graceful Resolve",
+    releaseDate: "Nov 9, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Eirika (Legendary Heroes).png",
+      main: "img/heroes-main/Eirika (Legendary Heroes).png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Storm Sieglinde", rarity: 5 },
+      { name: "New Moon", rarity: 5 },
+      { name: "Moonbow", rarity: 5 },
+      { name: "Atk/Spd Solo 1", rarity: 5 },
+      { name: "Atk/Spd Solo 2", rarity: 5 },
+      { name: "Atk/Spd Solo 3", rarity: 5 },
+      { name: "Lunar Brace", rarity: 5 },
+      { name: "Odd Def Wave 1", rarity: 5 },
+      { name: "Odd Def Wave 2", rarity: 5 },
+      { name: "Odd Def Wave 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 5, spd: 11, def: 8, res: 6 },       
+      level40: { hp: [34, 38, 41], atk: [28, 31, 34], spd: [36, 39, 42], def: [24, 27, 31], res: [18, 21, 24]}
     }
   },
   {
@@ -2992,6 +3176,7 @@ module.exports = [
       { name: "Steel Lance", rarity: 3 },
       { name: "Heavy Spear", rarity: 4 },
       { name: "Heavy Spear+", rarity: 5 },
+      { name: "Florina's Lance", rarity: 5 },
       { name: "Ardent Sacrifice", rarity: 4 },
       { name: "Darting Blow 1", rarity: 3 },
       { name: "Darting Blow 2", rarity: 3 },
@@ -6743,6 +6928,43 @@ module.exports = [
     }
   },
   {
+    name: "Mikoto (Adrift)",
+    shortName: "Mikoto",
+    title: "Caring Mother",
+    artist: "Ito Misei (伊藤未生)",
+    voice: "Marisha Ray",
+    releaseDate: "Nov 9, 2019",
+    colorType: "Neutral",
+    weaponType: "Staff",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Mikoto (Adrift).png",
+      main: "img/heroes-main/Mikoto (Adrift).png"
+    },
+    skills: [
+      { name: "Assault", rarity: 5 },
+      { name: "Flash", rarity: 5 },
+      { name: "Flash+", rarity: 5 },
+      { name: "Heal", rarity: 5 },
+      { name: "Reconcile", rarity: 5 },
+      { name: "Martyr", rarity: 5 },
+      { name: "Martyr+", rarity: 5 },
+      { name: "Imbue", rarity: 5 },
+      { name: "Miracle", rarity: 5 },
+      { name: "Brazen Atk/Res 1", rarity: 5 },
+      { name: "Brazen Atk/Res 2", rarity: 5 },
+      { name: "Brazen Atk/Res 3", rarity: 5 },
+      { name: "Infantry Rush 1", rarity: 5 },
+      { name: "Infantry Rush 2", rarity: 5 },
+      { name: "Infantry Rush 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 9, spd: 8, def: 5, res: 7 },
+      level40: { hp: [ 34, 38, 41 ], atk: [ 32, 35, 38 ], spd: [ 29, 32, 35 ], def: [ 17, 20, 23 ], res: [ 23, 26, 30 ] },
+    }
+  },
+  {
     name: "Minerva",
     title: "Red Dragoon",
     artist: "Daisuke Izuka",
@@ -8711,6 +8933,7 @@ module.exports = [
       { name: "Steel Sword", rarity: 5 },
       { name: "Slaying Edge", rarity: 5 },
       { name: "Slaying Edge+", rarity: 5 },
+      { name: "Golden Dagger", rarity: 5 },
       { name: "Holy Vestments", rarity: 5 },
       { name: "Aegis", rarity: 5 },
       { name: "HP +3", rarity: 5 },
@@ -9131,6 +9354,7 @@ module.exports = [
       { name: "Steel Lance", rarity: 3 },
       { name: "Killer Lance", rarity: 4 },
       { name: "Killer Lance+", rarity: 5 },
+      { name: "Shanna's Lance", rarity: 5 },
       { name: "Chilling Wind", rarity: 4 },
       { name: "Iceberg", rarity: 4 },
       { name: "Desperation 1", rarity: 3 },

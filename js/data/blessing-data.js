@@ -64,5 +64,11 @@ module.exports = [
     type: "Earth",
     stats: { hp: 3, def: 4 },
     icon: 10
+  },
+  {
+    hero: "Eirika (Legendary Heroes)",
+    type: "Water",
+    stats: { hp: 3, atk: 2 },
+    icon: 11
   }
 ];

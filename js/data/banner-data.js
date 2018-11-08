@@ -1,7 +1,66 @@
 module.exports = [
  {
+    date: "November 2018",
+    banners: [
+      {
+        name: "Adrift",
+        startDate: "Nov 9, 2018",
+        focusHeroes: [ "Corrin (M) (Adrift)", "Corrin (F) (Adrift)", "Mikoto (Adrift)" , "Camilla (Adrift)"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Heroes with Drive Atk",
+        startDate: "Nov 6, 2018",
+        focusHeroes: [ "Leif", "Micaiah", "Quan" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      }
+    ]
+ },
+ {
     date: "October 2018",
     banners: [
+      {
+        name: "Legendary Heroes: Eirika, Graceful Resolve",
+        startDate: "Oct 31, 2018",
+        focusHeroes: [ "Eirika (Legendary Heroes)", "Olivia (Ylissean Travellers)", "Tana (Summer's Arrival)", "Ephraim (Legendary Heroes)","Ninian (Bridal Bloom)", "Sumia", "Sanaki (Bridal Bloom)", "Robin (M) (Fallen Heroes)","Lyn (Legendary Heroes)","Robin (F) (Legendary Heroes)","Genny","Innes" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "legendaryV1",
+        pool: "pool2"
+      },
+      {
+        name: "Heroes with Smoke Skills",
+        startDate: "Oct 29, 2018",
+        focusHeroes: [ "Sigurd", "Kaze", "Nino (Scattered Fangs)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Clashing Thunderers Block B",
+        startDate: "Oct 28, 2018",
+        focusHeroes: [ "Ishtar", "Ophelia", "Olwen", "Linde" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Clashing Thunderers Block A",
+        startDate: "Oct 28, 2018",
+        focusHeroes: [ "Tailtiu", "Odin", "Reinhardt", "Delthea" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
       {
         name: "Brave Redux",
         startDate: "Oct 23, 2018",

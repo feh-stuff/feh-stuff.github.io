@@ -176,6 +176,16 @@ module.exports = [
     effect: "Grants Res+3. At start of turn, if any foe's HP ≤ unit’s HP-3 and that foe is adjacent to another foe, inflicts Atk/Spd/Def/Res-3 on that foe and bonuses on that foe become penalties through its next action.",
   },
   {
+    name: "Axe of Virility",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    exclusive: ["Bartre"],
+    effect: "Effective against armored foes.",
+  },
+  {
     name: "Ayra's Blade",
     spCost: 400,
     damage: 16,
@@ -513,6 +523,28 @@ module.exports = [
     colorType: "Red",
     prev: ["Bolganone"],
     effect: "-"
+  },
+  {
+    name: "Book of Dreams",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Red",
+    stats: { atk: 3 },
+    exclusive: ["Camilla (Adrift)"],
+    effect: "Grants Atk+3. If unit is adjacent to an ally, inflicts Atk/Spd/Def/Res-4 on foe during combat.",
+  },
+  {
+    name: "Book of Shadows",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    stats: { spd: 3 },
+    exclusive: ["Azura (Adrift)"],
+    effect: "Grants Spd+3. If unit is adjacent to an ally, inflicts Atk/Spd/Def/Res-4 on foe during combat.",
   },
   {
     name: "Bottled Juice",
@@ -1139,6 +1171,15 @@ module.exports = [
     effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
   },
   {
+    name: "Draconic Rage",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Breath",
+    exclusive: ["Corrin (M) (Adrift)", "Corrin (F) (Adrift)"],
+    effect: "Accelerates Special trigger (cooldown count-1). If the number of allies within 2 spaces (excluding unit) > the number of foes within 2 spaces (excluding target), grants Atk/Spd+5 during combat. If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+  },
+  {
     name: "Durandal",
     spCost: 400,
     damage: 16,
@@ -1511,6 +1552,35 @@ module.exports = [
     effect: "-"
   },
   {
+    name: "Flash",
+    spCost: 150,
+    damage: 7,
+    range: 2,
+    weaponType: "Staff",
+    colorType: "Neutral",
+    effect: "After combat, if unit attacked, inflicts status on target and foes withing 2 spaces of target preventing counterattacks through their next actions."
+  },
+  {
+    name: "Flash+",
+    spCost: 300,
+    damage: 11,
+    range: 2,
+    weaponType: "Staff",
+    colorType: "Neutral",
+    prev: ["Flash"],
+    effect: "After combat, if unit attacked, inflicts status on target and foes withing 2 spaces of target preventing counterattacks through their next actions."
+  },
+  {
+    name: "Florina's Lance",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    exclusive: ["Florina"],
+    effect: "Effective against armored foes.",
+  },
+  {
     name: "Flux",
     spCost: 50,
     damage: 4,
@@ -1673,6 +1743,16 @@ module.exports = [
     prev: ["Fenrir"],
     exclusive: ["Eirika (Sacred Memories)"],
     effect: "Grants Res+3. If foe's HP = 100% at start of combat, grants Atk/Spd+3 during combat."
+  },
+  {
+    name: "Golden Dagger",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    exclusive: ["Saber"],
+    effect: "Accelerates Special trigger (cooldown count-1).",
   },
   {
     name: "Gradivus",
@@ -3277,6 +3357,16 @@ module.exports = [
     effect: "Foe takes Def/Res-7 until end of foe's next action. If unit has 100% HP at start of combat, Atk/Spd/Def/Res+2. If attacking, unit gets 2 damage after."
   },
   {
+    name: "Shanna's Lance",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    exclusive: ["Shanna"],
+    effect: "Accelerates Special trigger (cooldown count-1).",
+  },
+  {
     name: "Shell Lance",
     spCost: 200,
     damage: 10,
@@ -3791,6 +3881,18 @@ module.exports = [
     colorType: "Red",
     prev: ["Iron Sword"],
     effect: "-"
+  },
+  {
+    name: "Storm Sieglinde",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    stats: {atk: 3},
+    prev: ["Silver Sword"],
+    exclusive: ["Eirika (Legendary Heroes)"],
+    effect: "Grants Atk+3. If the number of foes within 2 spaces (excluding target) ≥ the number of allies within 2 spaces (excluding unit), grants Def/Res+3 and Special cooldown charge +1 per unit's attack during combat. (Only highest value applied. Does not stack.)",
   },
   {
     name: "Stout Tomahawk",
