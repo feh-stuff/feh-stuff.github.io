@@ -531,7 +531,7 @@ module.exports = [
   {
     name: "Azura (Adrift)",
     shortName: "Azura",
-    title: "Lady of the Lake",
+    title: "Young Songstress",
     artist: "kaya8",
     voice: "Rena Strober",
     releaseDate: "Nov 12, 2018",
