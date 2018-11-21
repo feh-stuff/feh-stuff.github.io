@@ -2192,6 +2192,17 @@ module.exports = [
     effect: "Grants Res+3. At the start of turn, if unit's HP ≥ 50%, inflicts Atk/Def-5 on foe on the enemy team with the lowest Res through its next action."
   },
   {
+    name: "Imhullu",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Red",
+    exclusive: ["Gharnef"],
+    stats: {res: 3},
+    effect: "Grants Res+3. At the start of turn 3, deals 5 damage to non-magic foes within 5 columns centered on unit, and inflicts status on those foes preventing counterattacks through their next actions."
+  },
+  {
     name: "Iron Axe",
     spCost: 50,
     damage: 6,
@@ -3927,6 +3938,17 @@ module.exports = [
     prev: ["Silver Bow"],
     exclusive: ["Lyn (Legendary Heroes)"],
     effect: "Effective against flying foes. Grants Res+3. If the number of allies within 2 spaces (excluding unit) > the number of foes within 2 spaces (excluding target), grants Atk/Spd+5 during combat."
+  },
+  {
+    name: "Sylgr",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Dagger",
+    colorType: "Blue",
+    stats: {spd: 3},
+    exclusive: ["Ylgr"],
+    effect: "Grants Spd+3. At start of combat, if unit's Spd > foe's Spd, grants Atk/Spd+4 during combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
   },
   {
     name: "Tannenboom!",

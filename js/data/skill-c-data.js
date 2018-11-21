@@ -1363,6 +1363,13 @@ module.exports = [
     effect: "If unit survives, all staff users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)"
   },
   {
+    name: "Surtr's Menace",
+    spCost: 300,
+    icon: "54-0",
+    include: [{name:"Surtr"}],
+    effect: "At start of turn, if unit is within 2 spaces of a foe, grants Atk/Spd/Def/Res+4 for 1 turn and inflicts Atk/Spd/Def/Res+4 on foes within 2 spaces through their next actions."
+  },
+  {
     name: "Sword Exp. 1",
     spCost: 30,
     icon: "19-5",

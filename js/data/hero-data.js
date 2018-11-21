@@ -3430,6 +3430,43 @@ module.exports = [
     }
   },
   {
+    name: "Gharnef",
+    title: "Dark Pontifex",
+    artist: "HACCAN",
+    voice: "DC Douglas",
+    releaseDate: "Nov 23, 2018",
+    colorType: "Red",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity3: ["pool2"],
+    rarity4: ["pool2"],
+    ghb: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Gharnef.png",
+      main: "img/heroes-main/Gharnef.png"
+    },
+    skills: [
+      { name: "Flux", rarity: 3 },
+      { name: "Ruin", rarity: 3 },
+      { name: "Fenrir", rarity: 4 },
+      { name: "Imhullu", rarity: 5 },
+      { name: "Glowing Ember", rarity: 4 },
+      { name: "Ignis", rarity: 4 },
+      { name: "Warding Stance 1", rarity: 3 },
+      { name: "Mirror Stance 1", rarity: 3 },
+      { name: "Mirror Stance 2", rarity: 4 },
+      { name: "Chill Atk 1", rarity: 3 },
+      { name: "Chill Atk 2", rarity: 4 },
+      { name: "Chill Atk 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 8, spd: 10, def: 5, res: 6 },
+      level40: { hp: [ 35, 38, 41 ], atk: [ 27, 30, 33 ], spd: [ 31, 34, 37 ], def: [ 24, 27, 30 ], res: [ 20, 23, 26 ] }, 
+      level1_4: { hp: 15, atk: 8, spd: 10, def: 4, res: 5 },
+      level40_4: { hp: [ 32, 35, 38 ], atk: [ 25, 28, 31 ], spd: [ 29, 32, 35 ], def: [ 21, 24, 27 ], res: [ 24, 21, 27 ] }
+    }
+  },
+  {
     name: "Gordin",
     title: "Altean Archer",
     artist: "Itagaki Hako (板垣ハコ)",
@@ -10030,6 +10067,41 @@ module.exports = [
     }
   },
   {
+    name: "Surtr",
+    title: "Ruler of Flame",
+    artist: "Maeshima Shigeki (前嶋重機)",
+    voice: "—",
+    releaseDate: "Nov 21, 2018",
+    colorType: "Green",
+    weaponType: "Axe",
+    moveType: "Armored",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Surtr.png",
+      main: "img/heroes-main/Surtr.png"
+    },
+    skills: [
+      { name: "Iron Axe", rarity: 5 },
+      { name: "Steel Axe", rarity: 5 },
+      { name: "Silver Axe", rarity: 5 },
+      { name: "Sinmara", rarity: 5 },
+      { name: "Glowing Ember", rarity: 5 },
+      { name: "Bonfire", rarity: 5 },
+      { name: "Steady Stance 1", rarity: 5 },
+      { name: "Steady Stance 2", rarity: 5 },
+      { name: "Steady Stance 3", rarity: 5 },
+      { name: "Steady Stance 4", rarity: 5 },
+      { name: "Wary Fighter 1", rarity: 5 },
+      { name: "Wary Fighter 2", rarity: 5 },
+      { name: "Wary Fighter 3", rarity: 5 },
+      { name: "Surtr's Menace", rarity: 5 },
+    ],
+    stats: {
+      level1: { hp: 17, atk: 9, spd: 4, def: 10, res: 7 },
+      level40: { hp: [ 46, 50, 53 ], atk: [ 36, 39, 43 ],spd: [ 13, 17, 20 ], def: [ 37, 40, 44 ],res: [ 30, 33, 36 ] }
+    }
+  },
+  {
     name: "Tailtiu",
     title: "Thunder Noble",
     artist: "Shioemon (しおえもん)  / INTELLIGENT SYSTEMS",
@@ -10989,6 +11061,42 @@ module.exports = [
     stats: {
       level1: { hp: 18, atk: 6, spd: 6, def: 9, res: 7 },
       level40: { hp: [ 36, 40, 43 ], atk: [ 22, 25, 29 ], spd: [ 24, 28, 31 ], def: [ 32, 35, 38 ], res: [ 23, 26, 30 ] }
+    }
+  },
+  {
+    name: "Ylgr",
+    title: "Fresh Snowfall",
+    artist: "Maeshima Shigeki (前嶋重機)",
+    voice: "Megan Lee",
+    releaseDate: "Nov 21, 2018",
+    colorType: "Blue",
+    weaponType: "Dagger",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Ylgr.png",
+      main: "img/heroes-main/Ylgr.png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 5 },
+      { name: "Steel Dagger", rarity: 5 },
+      { name: "Silver Dagger", rarity: 5 },
+      { name: "Sylgr", rarity: 5 },
+      { name: "Night Sky", rarity: 5 },
+      { name: "Glimmer", rarity: 5 },
+      { name: "Sorcery Blade 1", rarity: 5 },
+      { name: "Sorcery Blade 2", rarity: 5 },
+      { name: "Sorcery Blade 3", rarity: 5 },
+      { name: "Chill Spd 1", rarity: 5 },
+      { name: "Chill Spd 2", rarity: 5 },
+      { name: "Chill Spd 3", rarity: 5 },
+      { name: "Spd Tactic 1", rarity: 5 },
+      { name: "Spd Tactic 2", rarity: 5 },
+      { name: "Spd Tactic 3", rarity: 5 },
+    ],
+    stats: {
+      level1: { hp: 16, atk: 7, spd: 10, def: 7, res: 5 },
+      level40: { hp: [ 34, 38, 41 ], atk: [ 30, 33, 36 ], spd: [ 35, 38, 41 ], def: [ 19, 22, 25 ], res: [ 17, 20, 23 ] }
     }
   },
   {

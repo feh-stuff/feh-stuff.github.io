@@ -3,6 +3,42 @@ module.exports = [
     date: "November 2018",
     banners: [
       {
+        name: "New Power (October 2018)",
+        startDate: "Nov 21, 2018",
+        focusHeroes: [ "Surtr", "Ylgr" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Corrin and Kana's Battle",
+        startDate: "Nov 16, 2018",
+        focusHeroes: [ "Corrin (M)", "Kana (F)", "Silas" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "New Power (October 2018)",
+        startDate: "Nov 14, 2018",
+        focusHeroes: [ "Bartre", "Shanna", "Florina", "Saber" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Before We Met Tempest Trials",
+        startDate: "Nov 10, 2018",
+        focusHeroes: [ "Ryoma", "Leo", "Hinoka (Wings of Fate)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "Adrift",
         startDate: "Nov 9, 2018",
         focusHeroes: [ "Corrin (M) (Adrift)", "Corrin (F) (Adrift)", "Mikoto (Adrift)" , "Camilla (Adrift)"],

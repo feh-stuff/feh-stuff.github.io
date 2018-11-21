@@ -1131,6 +1131,33 @@ module.exports = [
     effect: "Grants Res+3."
   },
   {
+    name: "Sorcery Blade 1",
+    spCost: 60,
+    icon: "53-10",
+    include: [{moveType:"Infantry"}],
+    exclude: [{weaponType: "Tome"},{weaponType:"Breath"}],
+    effect: "At start of combat, if unit's HP = 100% and unit is adjacent to a magic ally, calculates damage using the lower of foe's Def or Res."
+  },
+  {
+    name: "Sorcery Blade 2",
+    spCost: 120,
+    icon: "53-11",
+    prev: ["Sorcery Blade 1"],
+    include: [{moveType:"Infantry"}],
+    exclude: [{weaponType: "Tome"},{weaponType:"Breath"}],
+    effect: "At start of combat, if unit's HP ≥ 50% and unit is adjacent to a magic ally, calculates damage using the lower of foe's Def or Res."
+  },
+   {
+    name: "Sorcery Blade 3",
+    spCost: 240,
+    icon: "53-12",
+    prev: ["Sorcery Blade 2"],
+    last: true,
+    include: [{moveType:"Infantry"}],
+    exclude: [{weaponType: "Tome"},{weaponType:"Breath"}],
+    effect: "At start of combat, if unit is adjacent to a magic ally, calculates damage using the lower of foe's Def or Res."
+  },
+  {
     name: "Spd/Def 1",
     spCost: 80,
     icon: "24-11",
@@ -1292,6 +1319,14 @@ module.exports = [
     prev: ["Steady Stance 2"],
     last: true,
     effect: "Grants Def+6 during combat when this unit is attacked."
+  },
+  {
+    name: "Steady Stance 4",
+    spCost: 300,
+    icon: "53-9",
+    prev: ["Steady Stance 3"],
+    last: true,
+    effect: "If foe initiates combat, grants Def+8 during combat and inflicts Special cooldown charge -1 on foe per attack. (Only highest value applied. Does not stack.)"
   },
   {
     name: "Sturdy Blow 1",
