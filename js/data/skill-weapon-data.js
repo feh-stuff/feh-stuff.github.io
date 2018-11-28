@@ -1733,6 +1733,16 @@ module.exports = [
     effect: "Grants Spd+3. If unit's Spd > foe's Spd, boosts damage dealt by 70% of difference between stats. (Maximum bonus of +7 damage. Combos with Phantom Spd.)",
   },
   {
+    name: "Gjöll",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Sword",
+    stats: {atk: 3},
+    exclusive: ["Hríd"],
+    effect: "Grants Atk+3. If a penalty inflicted by a skill like Panic or Threaten and/or a negative status effect (preventing counterattacks or restricting movement) is active on foe, unit makes a guaranteed follow-up attack and foe cannot.",
+  },
+  {
     name: "Gleipnir",
     spCost: 400,
     damage: 14,

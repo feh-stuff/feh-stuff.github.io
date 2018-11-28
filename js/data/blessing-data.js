@@ -70,5 +70,11 @@ module.exports = [
     type: "Water",
     stats: { hp: 3, atk: 2 },
     icon: 11
+  },
+  {
+    hero: "Hríd",
+    type: "Wind",
+    stats: { hp: 3, def: 4 },
+    icon: 12
   }
 ];

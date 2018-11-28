@@ -627,6 +627,13 @@ module.exports = [
     effect: "Unit can move to a space adjacent to a flier ally within 2 spaces."
   },
   {
+    name: "Freezing Seal",
+    spCost: 300,
+    icon: "54-1",
+    include: [{name:"Hríd"}],
+    effect: "At start of turn, if unit's HP ≥ 50%, inflicts Atk/Spd-6 on foe on the enemy team with the lowest Res through its next action. (Skill cannot be inherited.)"
+  },
+  {
     name: "Follow-Up Ring",
     spCost: 200,
     icon: "29-8",

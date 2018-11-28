@@ -4092,6 +4092,39 @@ module.exports = [
     }
   },
   {
+    name: "Hríd",
+    artist: "Maeshima Shigeki (前嶋重機)",
+    voice: "Mark P. Whitten",
+    title: "Icy Blade",
+    releaseDate: "Nov 28, 2018",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Hríd.png",
+      main: "img/heroes-main/Hríd.png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Gjöll", rarity: 5 },
+      { name: "New Moon", rarity: 5 },
+      { name: "Moonbow", rarity: 5 },
+      { name: "Distant Counter", rarity: 5 },
+      { name: "Freezing Seal", rarity: 5 },
+      { name: "Atk Smoke 1", rarity: 5 },
+      { name: "Atk Smoke 2", rarity: 5 },
+      { name: "Atk Smoke 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 19, atk: 7, spd: 4, def: 12, res: 4 },
+      level40: { hp: [37, 41, 44], atk: [34, 37, 41], spd: [13, 17, 20], def: [33, 36, 39], res: [22, 26, 29]}
+    }
+  },
+  {
     name: "Ike",
     title: "Young Mercenary",
     artist: "Meka (めか)",

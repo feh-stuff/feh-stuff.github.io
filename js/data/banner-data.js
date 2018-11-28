@@ -3,7 +3,25 @@ module.exports = [
     date: "November 2018",
     banners: [
       {
-        name: "New Power (October 2018)",
+        name: "Legendary Heroes: Hríd, Icy Blade",
+        startDate: "Nov 28, 2017",
+        focusHeroes: [ "Hríd", "Ryoma (Legendary Heroes)", "Laevatein", "Lucina (Legendary Heroes)", "Hector (Arrival of the Brave)", "Cordelia (Summer's Arrival)", "Gunnthrá", "Innes (Summer's Arrival)", "Kana (F)", "Robin (Legendary Heroes)", "Noire (Summer's Arrival)", "Nina" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "legendaryV1",
+        pool: "pool1"
+      },
+      {
+        name: "Heroes with Vantage",
+        startDate: "Nov 24, 2018",
+        focusHeroes: [ "Mia", "Ishtar", "Reinhardt (World of Thracia)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Fire and Ice",
         startDate: "Nov 21, 2018",
         focusHeroes: [ "Surtr", "Ylgr" ],
         excludeFromRarity4: [],
