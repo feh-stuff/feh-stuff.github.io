@@ -1,10 +1,42 @@
 module.exports = [
  {
+    date: "December 2018",
+    banners: [
+      {
+        name: "Hero Fest 4",
+        startDate: "Dec 11, 2018",
+        focusHeroes: [ "Lewyn", "Ophelia", "Owain", "Eir" ],
+        excludeFromRarity4: [ "L'Arachel" ],
+        excludeFromRarity5: [ "Myrrh", "Eirika (Sacred Memories)", "L'Arachel" ],
+        rateType: "herofestV2",
+        pool: "pool1"
+      },
+      {
+        name: "Heroes with Ward Skills",
+        startDate: "Dec 02, 2018",
+        focusHeroes: ["Lyn (Brave Heroes)", "Ike (Brave Heroes)", "Sigurd"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+    ]
+ },
+ {
     date: "November 2018",
     banners: [
       {
+        name: "Nifl vs. Múspell",
+        startDate: "Nov 30, 2018",
+        focusHeroes: ["Helbindi", "Laegjarn"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "Legendary Heroes: Hríd, Icy Blade",
-        startDate: "Nov 28, 2017",
+        startDate: "Nov 28, 2018",
         focusHeroes: [ "Hríd", "Ryoma (Legendary Heroes)", "Laevatein", "Lucina (Legendary Heroes)", "Hector (Arrival of the Brave)", "Cordelia (Summer's Arrival)", "Gunnthrá", "Innes (Summer's Arrival)", "Kana (F)", "Robin (Legendary Heroes)", "Noire (Summer's Arrival)", "Nina" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],

@@ -4238,4 +4238,261 @@ module.exports = {
       effect: "Effective against armored foes."
     }
   ],
+  "Gladiator's Blade": [
+    {
+      name: "Infantry/Flier Bond",
+      icon: "54-2",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "If unit’s Atk > foe’s Atk, grants Special cooldown charge +1 per unit's attack. (Only highest value applied. Does not stack.) If unit is within 2 spaces of a flying or infantry ally, grants Atk/Spd+4 during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "If unit’s Atk > foe’s Atk, grants Special cooldown charge +1 per unit's attack. (Only highest value applied. Does not stack.)"
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "If unit’s Atk > foe’s Atk, grants Special cooldown charge +1 per unit's attack. (Only highest value applied. Does not stack.)"
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "If unit’s Atk > foe’s Atk, grants Special cooldown charge +1 per unit's attack. (Only highest value applied. Does not stack.)"
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "If unit’s Atk > foe’s Atk, grants Special cooldown charge +1 per unit's attack. (Only highest value applied. Does not stack.)"
+    }
+  ],
+  "Scarlet Sword": [
+    {
+      name: "Quickened Pulse",
+      icon: "54-3",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Accelerates Special trigger (cooldown count-1). At the start of turn 1, grants Special cooldown count -2."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    }
+  ],
+  "Whitewing Blade": [
+    {
+      name: "Triangle Attack",
+      icon: "54-4",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%. If the number of flying allies within 2 spaces ≥ 2, grants Atk/Spd/Def/Res+3 during combat. If unit initiates combat, unit attacks twice."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+    }
+  ],
+  "Whitewing Lance": [
+    {
+      name: "Triangle Attack",
+      icon: "54-4",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Accelerates Special trigger (cooldown count-1). If the number of flying allies within 2 spaces ≥ 2, grants Atk/Spd/Def/Res+3 during combat. If unit initiates combat, unit attacks twice."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    }
+  ],
+  "Whitewing Spear": [
+    {
+      name: "Triangle Attack",
+      icon: "54-4",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Effective against armored units. If the number of flying allies within 2 spaces ≥ 2, grants Atk/Spd/Def/Res+3 during combat. If unit initiates combat, unit attacks twice."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Effective against armored units."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Effective against armored units."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Effective against armored units."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Effective against armored units."
+    }
+  ], 
+  "Tactical Bolt": [
+    {
+      name: "Spectrum Tactics",
+      icon: "54-5",
+      cost: 1,
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat. At start of turn, grants Atk/Spd/Def/Res+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+    }
+  ],
+  "Tactical Gale": [
+    {
+      name: "Spectrum Tactics",
+      icon: "54-5",
+      cost: 1,
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat. At start of turn, grants Atk/Spd/Def/Res+4 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+    }
+  ],
 };

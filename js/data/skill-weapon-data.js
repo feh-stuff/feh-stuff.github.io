@@ -1743,6 +1743,17 @@ module.exports = [
     effect: "Grants Atk+3. If a penalty inflicted by a skill like Panic or Threaten and/or a negative status effect (preventing counterattacks or restricting movement) is active on foe, unit makes a guaranteed follow-up attack and foe cannot.",
   },
   {
+    name: "Gladiator's Blade",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    exclusive: ["Ogma"],
+    prev: ["Silver Sword"],
+    effect: "If unit’s Atk > foe’s Atk, grants Special cooldown charge +1 per unit's attack. (Only highest value applied. Does not stack.)"
+  },
+  {
     name: "Gleipnir",
     spCost: 400,
     damage: 14,
@@ -2633,6 +2644,17 @@ module.exports = [
     effect: "Grants Res+3. Skills with \"effective against dragons\" are effective against unit. If foe has no skills with \"effective against dragons\", inflicts Atk-6 on foe during combat.",
   },
   {
+    name: "Lyfjaberg",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Dagger",
+    colorType: "Neutral",
+    stats: {res: 3},
+    exclusive: ["Eir"],
+    effect: "Grants Res+3. At start of combat, if unit's HP ≥ 50%, grants Atk/Spd+4 during combat, and if unit initiates combat, foe cannot make a follow-up attack. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions, and if bonus was granted to unit, deals 4 damage to unit."
+  },
+  {
     name: "Maltet",
     spCost: 400,
     damage: 16,
@@ -3329,6 +3351,17 @@ module.exports = [
     effect: "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
   },
   {
+    name: "Scarlet Sword",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    exclusive: ["Navarre"],
+    prev: ["Silver Sword"],
+    effect: "Accelerates Special trigger (cooldown count-1)."
+  },
+  {
     name: "Sealed Falchion",
     spCost: 400,
     damage: 16,
@@ -3961,6 +3994,26 @@ module.exports = [
     effect: "Grants Spd+3. At start of combat, if unit's Spd > foe's Spd, grants Atk/Spd+4 during combat. After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
   },
   {
+    name: "Tactical Bolt",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    exclusive: ["Robin (M)"],
+    effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+  },
+  {
+    name: "Tactical Gale",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    exclusive: ["Robin (F)"],
+    effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+  },
+  {
     name: "Tannenboom!",
     spCost: 200,
     damage: 10,
@@ -4253,6 +4306,39 @@ module.exports = [
     prev: ["Thoron"],
     exclusive: ["Lute"],
     effect: "Grants Spd+3. At start of turn, all foes in cardinal directions, and with Res 1 or more lower than unit, suffer Spd-5 until the end of foes' next actions.",
+  },
+  {
+    name: "Whitewing Blade",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    exclusive: ["Palla"],
+    prev: ["Silver Sword"],
+    effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+  },
+  {
+    name: "Whitewing Lance",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    exclusive: ["Catria"],
+    prev: ["Silver Lance"],
+    effect: "Accelerates Special trigger (cooldown count-1)."
+  },
+  {
+    name: "Whitewing Spear",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    exclusive: ["Est"],
+    prev: ["Silver Lance"],
+    effect: "Effective against armored units."
   },
   {
     name: "Wind",

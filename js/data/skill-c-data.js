@@ -1113,6 +1113,13 @@ module.exports = [
     effect: "If unit initiates attack, foes within 2 spaces of target take 7 damage after combat."
   },
   {
+    name: "Sparkling Boost",
+    spCost: 300,
+    icon: "56-9",
+    include: [{name:"Eir"}],
+    effect: "At start of turn, restores 10 HP to ally that has been dealt the most damage. (Excludes unit.)"
+  },
+  {
     name: "Spd Ploy 1",
     spCost: 60,
     icon: "30-0",

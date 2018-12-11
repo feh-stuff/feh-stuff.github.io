@@ -4,7 +4,7 @@ let blessings = require('./blessing-data.js');
 
 
 function getBlessingTypes() {
-  return ["-", "Earth", "Fire", "Water", "Wind"];
+  return ["-", "Earth", "Fire", "Water", "Wind", "Light", "Dark", "Astra", "Anima"];
 }
 
 function getBlessingOptions(blessingType) {

@@ -809,6 +809,26 @@ module.exports = [
     effect: "If unit initiates attack, after combat, unit and targeted foe swap places."
   },
   {
+    name: "Mystic Boost 1",
+    spCost: 60,
+    icon: "54-6",
+    effect: "Disables foe's skills that \"calculate damage using the lower of foe's Def or Res\" and \"calculate damage from staff like other weapons.\" Restores 2 HP after combat."
+  },
+  {
+    name: "Mystic Boost 2",
+    spCost: 120,
+    icon: "54-7",
+    prev: ["Mystic Boost 1"],
+    effect: "Disables foe's skills that \"calculate damage using the lower of foe's Def or Res\" and \"calculate damage from staff like other weapons.\" Restores 4 HP after combat."
+  },
+  {
+    name: "Mystic Boost 3",
+    spCost: 240,
+    icon: "54-8",
+    prev: ["Mystic Boost 2"],
+    effect: "Disables foe's skills that \"calculate damage using the lower of foe's Def or Res\" and \"calculate damage from staff like other weapons.\" Restores 6 HP after combat."
+  },
+  {
     name: "Null Follow-Up 1",
     spCost: 60,
     icon: "53-6",
