@@ -5,7 +5,7 @@ module.exports = [
       {
         name: "Gifts of Winter",
         startDate: "Dec 18, 2018",
-        focusHeroes: [ "Fae (Gifts of Winter)", "Eirika (Gifts of Winter)", " Ephraim(Gifts of Winter)" ],
+        focusHeroes: [ "Fae (Gifts of Winter)", "Eirika (Gifts of Winter)", "Ephraim (Gifts of Winter)" ],
         excludeFromRarity4: [],
         excludeFromRarity5: [],
         rateType: "defaultV2",
