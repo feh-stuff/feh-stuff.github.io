@@ -23,6 +23,26 @@ module.exports = [
     effect: "If unit has an adjacent armored ally at the start of turn, unit and any such allies can move 1 extra space. (That turn only; does not stack.)"
   },
   {
+    name: "Atk Opening 1",
+    spCost: 60,
+    icon: "55-3",
+    effect: "At start of turn, grants Atk+2 to ally with the highest Atk for 1 turn. (Excludes unit.)"
+  },
+  {
+    name: "Atk Opening 2",
+    spCost: 120,
+    icon: "55-4",
+    prev: ["Atk Opening 1"],
+    effect: "At start of turn, grants Atk+4 to ally with the highest Atk for 1 turn. (Excludes unit.)"
+  },
+  {
+    name: "Atk Opening 3",
+    spCost: 240,
+    icon: "55-5",
+    prev: ["Atk Opening 2"],
+    effect: "At start of turn, grants Atk+6 to ally with the highest Atk for 1 turn. (Excludes unit.)"
+  },
+  {
     name: "Atk Ploy 1",
     spCost: 60,
     icon: "18-12",

@@ -3,6 +3,51 @@ module.exports = [
     date: "December 2018",
     banners: [
       {
+        name: "Gifts of Winter",
+        startDate: "Dec 18, 2018",
+        focusHeroes: [ "Fae (Gifts of Winter)", "Eirika (Gifts of Winter)", " Ephraim(Gifts of Winter)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      }, 
+      {
+        name: "Winter's Envoy (2018)",
+        startDate: "Dec 18, 2018",
+        focusHeroes: [ "Lissa (Winter's Envoy)", "Chrom (Winter's Envoy)", "Robin (M) (Winter's Envoy)", "Tharja (Winter's Envoy)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "New Power 2 (December 2018)",
+        startDate: "Dec 13, 2018",
+        focusHeroes: ["Robin (M)", "Ogma"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "New Power 1 (December 2018)",
+        startDate: "Dec 13, 2018",
+        focusHeroes: ["Palla", "Catria", "Est"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Ike and Soren's Battle",
+        startDate: "Dec 12, 2018",
+        focusHeroes: ["Soren", "Ike", "Elincia"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "Hero Fest 4",
         startDate: "Dec 11, 2018",
         focusHeroes: [ "Lewyn", "Ophelia", "Owain", "Eir" ],

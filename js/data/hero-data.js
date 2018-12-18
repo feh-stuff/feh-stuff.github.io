@@ -1315,6 +1315,41 @@ module.exports = [
     }
   },
   {
+    name: "Cecilia (Gifts of Winter)",
+    shortName: "Cecilia",
+    title: "Festive Instructor",
+    artist: "Kita Senri (北千里)",
+    voice: "Cherami Leigh",
+    releaseDate: "Dec 18, 2018",
+    colorType: "Neutral",
+    weaponType: "Dagger",
+    moveType: "Armored",
+    rarity5: ["pool2"],
+    ttReward: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Cecilia (Gifts of Winter).png",
+      main: "img/heroes-main/Cecilia (Gifts of Winter).png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 5 },
+      { name: "Steel Dagger", rarity: 5 },
+      { name: "Goodie Boot", rarity: 5 },
+      { name: "Goodie Boot+", rarity: 5 },
+      { name: "Chilling Wind", rarity: 5 },
+      { name: "Iceberg", rarity: 5 },
+      { name: "Atk/Res Bond 1", rarity: 5 },
+      { name: "Atk/Res Bond 2", rarity: 5 },
+      { name: "Atk/Res Bond 3", rarity: 5 },
+      { name: "Def Ploy 1", rarity: 5 },
+      { name: "Def Ploy 2", rarity: 5 },
+      { name: "Def Ploy 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 19, atk: 11, spd: 6, def: 6, res: 10 },
+      level40: { hp: [ 38, 41, 44 ], atk: [ 32, 35, 38 ], spd: [ 23, 26, 29 ], def: [ 27, 30, 33 ], res: [ 31, 34, 37 ] }
+    }
+  },
+  {
     name: "Celica",
     title: "Caring Princess",
     artist: "Fujikawa Akira (藤川祥)",
@@ -2410,6 +2445,41 @@ module.exports = [
     }
   },
   {
+    name: "Eirika (Gifts of Winter)",
+    shortName: "Eirika",
+    title: "Gentle as Snow",
+    artist: "Asatani Tomoyo (麻谷知世)",
+    voice: "Kira Buckland",
+    releaseDate: "Dec 18, 2018",
+    colorType: "Neutral",
+    weaponType: "Staff",
+    moveType: "Armored",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Eirika (Gifts of Winter).png",
+      main: "img/heroes-main/Eirika (Gifts of Winter).png"
+    },
+    skills: [
+      { name: "Assault", rarity: 5 },
+      { name: "Joyous Lantern", rarity: 5 },
+      { name: "Joyous Lantern+", rarity: 5 },
+      { name: "Restore", rarity: 5 },
+      { name: "Restore+", rarity: 5 },
+      { name: "Heavenly Light", rarity: 5 },
+      { name: "Dazzling Staff 1", rarity: 5 },
+      { name: "Dazzling Staff 2", rarity: 5 },
+      { name: "Dazzling Staff 3", rarity: 5 },
+      { name: "Atk Opening 1", rarity: 5 },
+      { name: "Atk Opening 2", rarity: 5 },
+      { name: "Atk Opening 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 10, spd: 6, def: 8, res: 10 },
+      level40: { hp: [ 39, 42, 45 ], atk: [ 33, 36, 39 ], spd: [ 20, 23, 26 ], def: [ 26, 30, 33 ], res: [ 31, 34, 37 ] }
+    }
+  },
+  {
     name: "Eirika (Legendary Heroes)",
     shortName: "Eirika",
     artist: "Asatani Tomoyo (麻谷知世)",
@@ -2794,6 +2864,44 @@ module.exports = [
     }
   },
   {
+    name: "Ephraim (Gifts of Winter)",
+    shortName: "Ephraim",
+    title: "Sparkling Gallantly",
+    artist: "Asatani Tomoyo (麻谷知世)",
+    voice: "Greg Chun",
+    releaseDate: "Dec 18, 2018",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Armored",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Ephraim (Gifts of Winter).png",
+      main: "img/heroes-main/Ephraim (Gifts of Winter).png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "Silver Lance", rarity: 5 },
+      { name: "Festive Siegmund", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Dragon Fang", rarity: 5 },
+      { name: "Atk/Def Solo 1", rarity: 5 },
+      { name: "Atk/Def Solo 2", rarity: 5 },
+      { name: "Atk/Def Solo 3", rarity: 5 },
+      { name: "Bold Fighter 1", rarity: 5 },
+      { name: "Bold Fighter 2", rarity: 5 },
+      { name: "Bold Fighter 3", rarity: 5 },
+      { name: "Close Guard 1", rarity: 5 },
+      { name: "Close Guard 2", rarity: 5 },
+      { name: "Close Guard 3", rarity: 5 },
+    ],
+    stats: {
+      level1: { hp: 21, atk: 11, spd: 6, def: 10, res: 7 },
+      level40: { hp: [ 42, 45, 48 ], atk: [ 38, 41, 45 ], spd: [ 20, 23, 26 ], def: [ 33, 36, 39 ], res: [ 25, 29, 32 ] }
+    }
+  },
+  {
     name: "Ephraim (Legendary Heroes)",
     shortName: "Ephraim",
     artist: "Asatani Tomoyo (麻谷知世)",
@@ -2974,6 +3082,44 @@ module.exports = [
       level40: { hp: [ 43, 46, 50 ], atk: [ 30, 33, 36 ], spd: [ 25, 28, 31 ], def: [ 22, 25, 29 ], res: [ 26, 30, 33 ] },
       level1_4: { hp: 15, atk: 4, spd: 3, def: 6, res: 8 },
       level40_4: { hp: [ 40, 43, 47 ], atk: [ 27, 30, 33 ], spd: [ 22, 25, 28 ], def: [ 21, 24, 27 ], res: [ 25, 28, 31 ] }
+    }
+  },
+  {
+    name: "Fae (Gifts of Winter)",
+    shortName: "Fae",
+    title: "Holiday Dear",
+    artist: "Himukai Yuji (日向悠二)",
+    voice: "Sarah Blandy",
+    releaseDate: "Dec 18, 2018",
+    colorType: "Green",
+    weaponType: "Breath",
+    moveType: "Armored",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Fae (Gifts of Winter).png",
+      main: "img/heroes-main/Fae (Gifts of Winter).png"
+    },
+    skills: [
+      { name: "Fire Breath", rarity: 5 },
+      { name: "Fire Breath+", rarity: 5 },
+      { name: "Glittering Breath", rarity: 5 },
+      { name: "Glittering Breath+", rarity: 5 },
+      { name: "New Moon", rarity: 5 },
+      { name: "Luna", rarity: 5 },
+      { name: "Def/Res Bond 1", rarity: 5 },
+      { name: "Def/Res Bond 2", rarity: 5 },
+      { name: "Def/Res Bond 3", rarity: 5 },
+      { name: "Vengeful Fighter 1", rarity: 5 },
+      { name: "Vengeful Fighter 2", rarity: 5 },
+      { name: "Vengeful Fighter 3", rarity: 5 },
+      { name: "Armor March 1", rarity: 5 },
+      { name: "Armor March 2", rarity: 5 },
+      { name: "Armor March 3", rarity: 5 },
+    ],
+    stats: {
+      level1: { hp: 17, atk: 9, spd: 4, def: 9, res: 8 },
+      level40: { hp: [ 42, 45, 48 ], atk: [ 32, 35, 38 ], spd: [ 22, 26, 29 ], def: [ 30, 33, 36 ], res: [ 37, 41, 44 ] }
     }
   },
   {

@@ -2640,6 +2640,71 @@ module.exports = {
       effect: "After combat, if unit attacked, inflicts status on target and foes within 2 spaces of target preventing counterattacks through their next actions. The enemy cannot counterattack."
     }
   ],
+  "Joyous Lantern+": [
+    {
+      name: "Wrathful Staff",
+      icon: "32-1",
+      effect: "At start of turn, grants Def/Res+5 to ally with the highest Atk for 1 turn. (Excludes unit.). Damage from unit's staff will be calculated the same as other weapons."
+    },
+    {
+      name: "Dazzling Staff",
+      icon: "32-2",
+      effect: "At start of turn, grants Def/Res+5 to ally with the highest Atk for 1 turn. (Excludes unit.). The enemy cannot counterattack."
+    }
+  ],
+  "Goodie Boot+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "During combat, boosts unit's Def/Res by number of allies within 2 spaces × 2. (Maximum bonus of +6 to each stat.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "During combat, boosts unit's Def/Res by number of allies within 2 spaces × 2. (Maximum bonus of +6 to each stat.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "During combat, boosts unit's Def/Res by number of allies within 2 spaces × 2. (Maximum bonus of +6 to each stat.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "During combat, boosts unit's Def/Res by number of allies within 2 spaces × 2. (Maximum bonus of +6 to each stat.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+    }
+  ],
+  "Glittering Breath+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 2},
+      effect: "During combat, boosts unit's Def/Res by number of allies within 2 spaces x 2. (Maximum bonus of +6 to each stat.) If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, spd: 3},
+      effect: "During combat, boosts unit's Def/Res by number of allies within 2 spaces x 2. (Maximum bonus of +6 to each stat.) If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, def: 4},
+      effect: "During combat, boosts unit's Def/Res by number of allies within 2 spaces x 2. (Maximum bonus of +6 to each stat.) If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, res: 4},
+      effect: "During combat, boosts unit's Def/Res by number of allies within 2 spaces x 2. (Maximum bonus of +6 to each stat.) If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+    }
+  ],
+
 
   // prf weapons
   "Sol Katti": [

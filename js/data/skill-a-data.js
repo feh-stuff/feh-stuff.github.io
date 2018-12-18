@@ -62,6 +62,27 @@ module.exports = [
     effect: "Grants Atk/Def+5 to this unit during combat if unit is adjacent to an ally."
   },
   {
+    name: "Atk/Def Solo 1",
+    spCost: 60,
+    icon: "55-0",
+    effect: "If unit is not adjacent to an ally, grants Atk/Def+2 during combat."
+  },
+  {
+    name: "Atk/Def Solo 2",
+    spCost: 120,
+    icon: "55-1",
+    prev: ["Atk/Def Solo 1"],
+    effect: "If unit is not adjacent to an ally, grants Atk/Def+4 during combat."
+  },
+  {
+    name: "Atk/Def Solo 3",
+    spCost: 240,
+    icon: "55-2",
+    prev: ["Atk/Def Solo 2"],
+    last: true,
+    effect: "If unit is not adjacent to an ally, grants Atk/Def+6 during combat."
+  },
+  {
     name: "Atk/Res 1",
     spCost: 80,
     icon: "17-9",
@@ -489,6 +510,27 @@ module.exports = [
     prev: ["Def/Res 1"],
     last: true,
     effect: "Grants Def/Res+2."
+  },
+  {
+    name: "Def/Res Bond 1",
+    spCost: 60,
+    icon: "54-10",
+    effect: "Grants Def/Res+3 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Def/Res Bond 2",
+    spCost: 120,
+    icon: "54-11",
+    prev: ["Def/Res Bond 1"],
+    effect: "Grants Def/Res+4 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Def/Res Bond 3",
+    spCost: 240,
+    icon: "54-12",
+    prev: ["Def/Res Bond 2"],
+    last: true,
+    effect: "Grants Def/Res+5 to this unit during combat if unit is adjacent to an ally."
   },
   {
     name: "Defense +1",

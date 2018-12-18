@@ -1396,6 +1396,17 @@ module.exports = [
     effect: "Inflicts Atk-4 on foes within 2 spaces through their next actions at the start of each turn.",
   },
   {
+    name: "Festive Siegmund",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Silver Lance"],
+    exclusive: ["Ephraim (Gifts of Winter)"],
+    effect: "Accelerates Special trigger (cooldown count-1). If unit is not adjacent to an ally, grants Atk/Spd/Def/Res+4 during combat.",
+  },
+  {
     name: "Fire",
     spCost: 50,
     damage: 4,
@@ -1766,6 +1777,23 @@ module.exports = [
     effect: "Grants Res+3. If foe's HP = 100% at start of combat, grants Atk/Spd+3 during combat."
   },
   {
+    name: "Gliterring Breath",
+    spCost: 200,
+    damage: 9,
+    range: 1,
+    weaponType: "Breath",
+    effect: "During combat, boosts unit's Def/Res by number of allies within 2 spaces x 2. (Maximum bonus of +6 to each stat.) If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+  },
+  {
+    name: "Gliterring Breath+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Breath",
+    prev: ["Glittering Breath"],
+    effect: "During combat, boosts unit's Def/Res by number of allies within 2 spaces x 2. (Maximum bonus of +6 to each stat.) If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+  },
+  {
     name: "Golden Dagger",
     spCost: 400,
     damage: 16,
@@ -1774,6 +1802,24 @@ module.exports = [
     colorType: "Red",
     exclusive: ["Saber"],
     effect: "Accelerates Special trigger (cooldown count-1).",
+  },
+  {
+    name: "Goodie Boot",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Steel Dagger"],
+    effect: "During combat, boosts unit's Def/Res by number of allies within 2 spaces × 2. (Maximum bonus of +6 to each stat.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Goodie Boot+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Goodie Boot+"],
+    effect: "During combat, boosts unit's Def/Res by number of allies within 2 spaces × 2. (Maximum bonus of +6 to each stat.) After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions."
   },
   {
     name: "Gradivus",
@@ -2278,6 +2324,25 @@ module.exports = [
     stats: {def: 3},
     exclusive: ["L'Arachel"],
     effect: "Grants Def+3. If foe's HP = 100% at start of combat, grants Atk/Spd+3 during combat."
+  },
+  {
+    name: "Joyous Lantern",
+    spCost: 150,
+    damage: 8,
+    range: 2,
+    weaponType: "Staff",
+    colorType: "Neutral",
+    effect: "At start of turn, grants Def/Res+5 to ally with the highest Atk for 1 turn. (Excludes unit.)"
+  },
+  {
+    name: "Joyous Lantern+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Staff",
+    colorType: "Neutral",
+    prev: ["Joyous Lantern"],
+    effect: "At start of turn, grants Def/Res+5 to ally with the highest Atk for 1 turn. (Excludes unit.)"
   },
   {
     name: "Juicy Wave",

@@ -66,6 +66,18 @@ module.exports = [
     effect: "Grants Atk/Def+5 to this unit during combat if unit is adjacent to an ally."
   },
   {
+    name: "Atk/Spd 1",
+    icon: "26-11",
+    stats: {atk: 1, spd: 1},
+    effect: "Grants Atk/Spd+1."
+  },
+  {
+    name: "Atk/Spd 2",
+    icon: "26-12",
+    stats: {atk: 2, spd: 2},
+    effect: "Grants Atk/Spd+2."
+  },
+  {
     name: "Atk Smoke 1",
     icon: "26-8",
     exclude: [{weaponType: "Staff"}],
@@ -311,6 +323,16 @@ module.exports = [
     effect: "Grants allies within 2 spaces Def+3 during combat."
   },
   {
+    name: "Drive Res 1",
+    icon: "28-6",
+    effect: "Grants allies within 2 spaces Res+2 during combat."
+  },
+  {
+    name: "Drive Res 2",
+    icon: "28-7",
+    effect: "Grants allies within 2 spaces Res+3 during combat."
+  },
+  {
     name: "Drive Spd 1",
     icon: "26-6",
     effect: "Grants allies within 2 spaces Spd+2 during combat."
@@ -343,6 +365,24 @@ module.exports = [
     icon: "16-9",
     include: [{name: "Veronica"}],
     effect: "Unit receives 0 damage."
+  },
+  {
+    name: "Fierce Stance 1",
+    icon: "31-3",
+    exclude: [{weaponType:"Staff"}],
+    effect: "Grants Atk+2 during combat when this unit is attacked."
+  },
+  {
+    name: "Fierce Stance 2",
+    icon: "31-4",
+    exclude: [{weaponType:"Staff"}],
+    effect: "Grants Atk+4 during combat when this unit is attacked."
+  },
+  {
+    name: "Fierce Stance 3",
+    icon: "31-5",
+    exclude: [{weaponType:"Staff"}],
+    effect: "Grants Atk+6 during combat when this unit is attacked."
   },
   {
     name: "Fortify Def 1",
