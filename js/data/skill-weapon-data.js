@@ -1777,7 +1777,7 @@ module.exports = [
     effect: "Grants Res+3. If foe's HP = 100% at start of combat, grants Atk/Spd+3 during combat."
   },
   {
-    name: "Gliterring Breath",
+    name: "Glittering Breath",
     spCost: 200,
     damage: 9,
     range: 1,
@@ -1785,7 +1785,7 @@ module.exports = [
     effect: "During combat, boosts unit's Def/Res by number of allies within 2 spaces x 2. (Maximum bonus of +6 to each stat.) If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
   },
   {
-    name: "Gliterring Breath+",
+    name: "Glittering Breath+",
     spCost: 300,
     damage: 14,
     range: 1,

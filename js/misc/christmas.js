@@ -1,7 +1,9 @@
 $(document).ready(function() {
-  const code = 'christmas2017';
+  const today = new Date();
+  const code = 'christmas' + today.getFullYear();
+  const isChristmas = today.getDate() === 25 && today.getMonth() === 11;
 
-  if (JSON.parse(localStorage.getItem(code))) {
+  if (JSON.parse(localStorage.getItem(code)) && !isChristmas) {
     return;
   }
 
@@ -16,11 +18,11 @@ $(document).ready(function() {
         </div>
         <div class="modal-body d-flex justify-content-around">
           <div class="text-center">
-            <img src="img/assets/orbs.png">
+            <img src="../img/assets/orbs.png">
             <h2>1</h2>
           </div>
           <div class="text-center">
-            <img src="img/assets/feather.png">
+            <img src="../img/assets/feather.png">
             <h2>100</h2>
           </div>
         </div>
