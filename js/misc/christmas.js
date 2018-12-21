@@ -3,7 +3,7 @@ $(document).ready(function() {
   const code = 'christmas' + today.getFullYear();
   const isChristmas = today.getDate() === 25 && today.getMonth() === 11;
 
-  if (JSON.parse(localStorage.getItem(code)) && !isChristmas) {
+  if (JSON.parse(localStorage.getItem(code)) || !isChristmas) {
     return;
   }
 
