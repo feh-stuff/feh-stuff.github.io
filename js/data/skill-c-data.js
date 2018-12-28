@@ -767,6 +767,13 @@ module.exports = [
     effect: "Grants adjacent allies Atk+4 through their next actions at the start of each turn."
   },
   {
+    name: "Hone Atk 4",
+    spCost: 300,
+    icon: "55-9",
+    prev: ["Hone Atk 3"],
+    effect: "Grants adjacent allies Atk+7 through their next actions at the start of each turn."
+  },
+  {
     name: "Hone Cavalry",
     spCost: 200,
     icon: "13-1",
@@ -878,6 +885,13 @@ module.exports = [
     prev: ["Infantry Rush 2"],
     include: [{moveType: "Infantry"}],
     effect: "Infantry allies within 2 spaces gain: \"If unit's Atk ≥ foe's Atk+1, grants Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)\""
+  },
+  {
+    name: "Joint Hone Spd",
+    spCost: 300,
+    icon: "55-10",
+    prev: ["Hone Spd 3"],
+    effect: "At start of turn, if unit is adjacent to an ally, grants Spd+5 to unit and adjacent allies for 1 turn."
   },
   {
     name: "Lance Valor 1",

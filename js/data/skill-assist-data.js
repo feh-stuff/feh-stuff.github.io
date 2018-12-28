@@ -33,6 +33,14 @@ module.exports = [
     effect: "Unit and target ally swap spaces. Grants another action to unit. (Additional action granted once per turn only.)"
   },
   {
+    name: "Gray Waves",
+    range: 1,
+    spCost: 400,
+    include: [{name: "Azura (Legendary Heroes)"}],
+    last: true,
+    effect: "Grants another action to target ally, and if target is an infantry or flying ally, target can move 1 extra space. (That turn only. Does not stack. Cannot target an ally with Sing or Dance. This skill treated as Sing or Dance.)"
+  },
+  {
     name: "Harsh Command",
     range: 1,
     spCost: 150,
@@ -307,7 +315,7 @@ module.exports = [
     name: "Sing",
     range: 1,
     spCost: 150,
-    include: [{name: "Azura"},{name: "Azura (Performing Arts)"},{name: "Shigure (Performing Arts)"}, {name: "Azura (Happy New Year!)"}, {name: "Azura (Adrift)"}],
+    include: [{name: "Azura"},{name: "Azura (Performing Arts)"},{name: "Azura (Legendary Heroes)"},{name: "Shigure (Performing Arts)"}, {name: "Azura (Happy New Year!)"}, {name: "Azura (Adrift)"}],
     last: true,
     effect: "Enables target to take another action. Cannot be used on units with Sing or Dance."
   },

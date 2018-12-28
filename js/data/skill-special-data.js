@@ -131,6 +131,20 @@ module.exports = [
     effect: "Grants +30% to Atk."
   },
   {
+    name: "Earthfire Balm",
+    cooldown: 1,
+    spCost: 200,
+    include: [{weaponType: "Staff"}],
+    effect: "When healing an ally with a staff, grants Atk/Def+4 to all allies for 1 turn."
+  },
+  {
+    name: "Earthfire Balm+",
+    cooldown: 1,
+    spCost: 300,
+    include: [{weaponType: "Staff"}],
+    effect: "When healing an ally with a staff, grants Atk/Def+6 to all allies for 1 turn."
+  },
+  {
     name: "Earthwater Balm",
     cooldown: 1,
     spCost: 200,

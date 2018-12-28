@@ -1712,6 +1712,26 @@ module.exports = [
     effect: "Grants Def+3. Grants allies with sword, lance, axe, bow, or dagger within 2 spaces Atk/Spd+3 during combat.",
   },
   {
+    name: "Geishun",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Steel Axe"],
+    effect: "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action."
+  },
+  {
+    name: "Geishun+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Geishun"],
+    effect: "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action."
+  },
+  {
     name: "Giant Spoon",
     spCost: 200,
     damage: 9,
@@ -2216,6 +2236,17 @@ module.exports = [
     effect: "Grants allies within 2 spaces Atk/Spd+1 during combat."
   },
   {
+    name: "Hikami",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    stats: {spd: 3},
+    exclusive: ["Gunnthrá (New Year's Wish)"],
+    effect: "Grants Spd+3. At start of turn, inflicts Atk/Spd/Def/Res-4 on nearest foes within 4 spaces through their next actions.",
+  },
+  {
     name: "Hinoka's Spear",
     spCost: 400,
     damage: 16,
@@ -2363,6 +2394,24 @@ module.exports = [
     colorType: "Blue",
     prev: ["Juicy Wave"],
     effect: "If unit’s HP ≤ 75% and unit initiates combat, unit can make a follow-up attack before foe can counterattack."
+  },
+  {
+    name: "Kabura Ya",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Bow",
+    prev: ["Steel Bow"],
+    effect: "Effective against flying foes. At start of turn, inflicts Spd-7 on foe on the enemy team with the highest Spd through its next action."
+  },
+  {
+    name: "Kabura Ya+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Bow",
+    prev: ["Kabura Ya"],
+    effect: "Effective against flying foes. At start of turn, inflicts Spd-7 on foe on the enemy team with the highest Spd through its next action."
   },
   {
     name: "Kadomatsu",
@@ -2557,6 +2606,25 @@ module.exports = [
     weaponType: "Dagger",
     prev: ["Kitty Paddle"],
     effect: "Effective against foe using magic.  After combat, if foe uses magic, foe suffers Def/Res-7 through foe's next action."
+  },
+  {
+    name: "Kumade",
+    spCost: 150,
+    damage: 7,
+    range: 2,
+    weaponType: "Staff",
+    colorType: "Neutral",
+    effect: "At start of turn, inflicts Atk/Spd-3 on foe on the enemy team with the highest Def through its next action."
+  },
+  {
+    name: "Kumade+",
+    spCost: 300,
+    damage: 11,
+    range: 2,
+    weaponType: "Staff",
+    colorType: "Neutral",
+    prev: ["Flash"],
+    effect: "At start of turn, inflicts Atk/Spd-5 on foe on the enemy team with the highest Def through its next action."
   },
   {
     name: "Laevatein",
@@ -3045,6 +3113,17 @@ module.exports = [
     colorType: "Green",
     prev: ["Poleaxe"],
     effect: "Effective against cavalry units."
+  },
+  {
+    name: "Prayer Wheel",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    exclusive: ["Azura (Legendary Heroes)"],
+    stats: {spd: 3},
+    effect: "Grants Spd+3. If Sing or Dance is used, grants bonus to target's Atk/Spd/Def/Res = highest bonus on target ally for 1 turn. (Example: if target already has a +6 bonus to Atk, grants Atk/Spd/Def/Res+6.)",
   },
   {
     name: "Ragnarok",
@@ -4224,6 +4303,16 @@ module.exports = [
     effect: "Grants allies within 2 spaces Atk/Spd+1 during combat."
   },
   {
+    name: "Tome of Thoron",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    exclusive: ["Tailtiu"],
+    effect: "",
+  },
+  {
     name: "Trilemma",
     spCost: 150,
     damage: 8,
@@ -4318,6 +4407,26 @@ module.exports = [
     prev: ["Heavy Spear"],
     exclusive: ["Tana"],
     effect: "If unit is attacked by foe using sword, axe or lance, unit receives Def+7 during combat.",
+  },
+  {
+    name: "Wagasa",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Steel Lance"],
+    effect: "At start of turn, inflicts Def-7 on foe on the enemy team with the highest Def through its next action."
+  },
+  {
+    name: "Wagasa+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Wagasa"],
+    effect: "At start of turn, inflicts Def-7 on foe on the enemy team with the highest Def through its next action."
   },
   {
     name: "Wargod's Tome",

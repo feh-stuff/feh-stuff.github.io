@@ -1,7 +1,39 @@
 module.exports = [
  {
+    date: "January 2019",
+    banners: [
+      {
+        name: "New Year's Wish",
+        startDate: "Jan 01, 2019",
+        focusHeroes: [ "Hríd (New Year's Wish)", "Fjorm (New Year's Wish)", "Gunnthrá (New Year's Wish)", "Laevatein (New Year's Wish)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      }, 
+    ]
+ },
+ {
     date: "December 2018",
     banners: [
+      {
+        name: "Legendary Heroes: Azura, Vallite Songstress",
+        startDate: "Dec 28, 2018",
+        focusHeroes: [ "Azura (Legendary Heroes)", "Hector (Legendary Heroes)", "Fjorm", "Eir", "Camilla (A Sketchy Summer)", "Nino (Scattered Fangs)", "Helbindi", "Takumi (A Sketchy Summer)", "Veronica (Arrival of the Brave)", "Marth (Legendary Heroes)", "Tiki (Young) (A Sketchy Summer)", "Flora" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "legendaryV1",
+        pool: "pool1"
+      },
+      {
+        name: "Heroes with Fortress Skills",
+        startDate: "Dec 23, 2018",
+        focusHeroes: [ "Lukas", "Kliff", "Innes" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      }, 
       {
         name: "Gifts of Winter",
         startDate: "Dec 18, 2018",
@@ -11,7 +43,7 @@ module.exports = [
         rateType: "defaultV2",
         pool: "pool2"
       }, 
-      {
+      { 
         name: "Winter's Envoy (2018)",
         startDate: "Dec 18, 2018",
         focusHeroes: [ "Lissa (Winter's Envoy)", "Chrom (Winter's Envoy)", "Robin (M) (Winter's Envoy)", "Tharja (Winter's Envoy)" ],

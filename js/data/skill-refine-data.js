@@ -2568,25 +2568,25 @@ module.exports = {
     {
       name: "+Atk",
       icon: "31-9",
-      stats: {hp: 5, atk: 3},
+      stats: {hp: 5, atk: 2},
       effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
     },
     {
       name: "+Spd",
       icon: "31-10",
-      stats: {hp: 5, atk: 1, spd: 3},
+      stats: {hp: 5, spd: 3},
       effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
     },
     {
       name: "+Def",
       icon: "31-11",
-      stats: {hp: 5, atk: 1, def: 4},
+      stats: {hp: 5, def: 4},
       effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
     },
     {
       name: "+Res",
       icon: "31-12",
-      stats: {hp: 5, atk: 1, res: 4},
+      stats: {hp: 5, res: 4},
       effect: "Inflicts Special cooldown charge -1 on foe per attack during combat. (Only highest value applied. Does not stack.)"
     }
   ],
@@ -2702,6 +2702,96 @@ module.exports = {
       icon: "31-12",
       stats: {hp: 5, res: 4},
       effect: "During combat, boosts unit's Def/Res by number of allies within 2 spaces x 2. (Maximum bonus of +6 to each stat.) If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+    }
+  ],
+  "Geishun+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 2},
+      effect: "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, spd: 3},
+      effect: "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, def: 4},
+      effect: "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, res: 4},
+      effect: "At start of turn, inflicts Atk-7 on foe on the enemy team with the highest Atk through its next action."
+    }
+  ],
+  "Wagasa+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 2},
+      effect: "At start of turn, inflicts Def-7 on foe on the enemy team with the highest Def through its next action."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, spd: 3},
+      effect: "At start of turn, inflicts Def-7 on foe on the enemy team with the highest Def through its next action."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, def: 4},
+      effect: "At start of turn, inflicts Def-7 on foe on the enemy team with the highest Def through its next action."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, res: 4},
+      effect: "At start of turn, inflicts Def-7 on foe on the enemy team with the highest Def through its next action."
+    }
+  ],
+  "Kabura Ya+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Effective against flying foes. At start of turn, inflicts Spd-7 on foe on the enemy team with the highest Spd through its next action."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Effective against flying foes. At start of turn, inflicts Spd-7 on foe on the enemy team with the highest Spd through its next action."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Effective against flying foes. At start of turn, inflicts Spd-7 on foe on the enemy team with the highest Spd through its next action."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "Effective against flying foes. At start of turn, inflicts Spd-7 on foe on the enemy team with the highest Spd through its next action."
+    }
+  ],
+  "Kumade+": [
+    {
+      name: "Wrathful Staff",
+      icon: "32-1",
+      effect: "At start of turn, inflicts Atk/Spd-5 on foe on the enemy team with the highest Def through its next action. Damage from unit's staff will be calculated the same as other weapons."
+    },
+    {
+      name: "Dazzling Staff",
+      icon: "32-2",
+      effect: "At start of turn, inflicts Atk/Spd-5 on foe on the enemy team with the highest Def through its next action. The enemy cannot counterattack."
     }
   ],
 
@@ -4558,6 +4648,152 @@ module.exports = {
       cost: 1,
       stats: {hp: 2, res: 3},
       effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+    }
+  ],
+
+  "Naga": [
+    {
+      name: "+Special",
+      icon: "0-0",
+      cost: 1,
+      effect: ""
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: ""
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: ""
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: ""
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: ""
+    }
+  ],
+  "Divine Naga": [
+    {
+      name: "+Special",
+      icon: "0-0",
+      cost: 1,
+      effect: ""
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: ""
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: ""
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: ""
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: ""
+    }
+  ],
+  "Tome of Thoron": [
+    {
+      name: "+Special",
+      icon: "0-0",
+      cost: 1,
+      effect: ""
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: ""
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: ""
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: ""
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: ""
+    }
+  ],
+  "Tyrfing": [
+    {
+      name: "+Special",
+      icon: "0-0",
+      cost: 1,
+      stats: {hp: 3},
+      effect: ""
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: ""
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: ""
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: ""
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: ""
     }
   ],
 };

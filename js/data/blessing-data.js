@@ -82,5 +82,11 @@ module.exports = [
     type: "Light",
     stats: { hp: 5, res: 5 },
     icon: 13
+  },
+  {
+    hero: "Azura (Legendary Heroes)",
+    type: "Water",
+    stats: { hp: 3, res: 4 },
+    icon: 14
   }
 ];

@@ -78,6 +78,25 @@ module.exports = [
     effect: "Grants Atk/Spd+2."
   },
   {
+    name: "Atk/Spd Bond 1",
+    icon: "37-0",
+    effect: "Grants Atk/Spd+3 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Atk/Spd Bond 2",
+    icon: "37-1",
+    prev: ["Atk/Spd Bond 1"],
+    effect: "Grants Atk/Spd+4 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
+    name: "Atk/Spd Bond 3",
+    spCost: 240,
+    icon: "37-2",
+    prev: ["Atk/Spd Bond 2"],
+    last: true,
+    effect: "Grants Atk/Spd+5 to this unit during combat if unit is adjacent to an ally."
+  },
+  {
     name: "Atk Smoke 1",
     icon: "26-8",
     exclude: [{weaponType: "Staff"}],
@@ -1014,6 +1033,16 @@ module.exports = [
     effect: "Grants adjacent allies Def+4 during combat."
   },
   {
+    name: "Spur Def/Res 1",
+    icon: "16-7",
+    effect: "Grants adjacent allies Def/Res +2 during combat"
+  },
+  {
+    name: "Spur Def/Res 2",
+    icon: "16-8",
+    effect: "Grants adjacent allies Def/Res +3 during combat."
+  },
+  {
     name: "Spur Res 1",
     icon: "11-4",
     effect: "Grants adjacent allies Res+2 during combat."
@@ -1272,6 +1301,23 @@ module.exports = [
     icon: "14-0",
     prev: ["Threaten Def 2"],
     effect: "Inflicts Def-5 on foes within 2 spaces through their next actions at the start of each turn."
+  },
+  {
+    name: "Threaten Res 1",
+    icon: "14-1",
+    effect: "Inflicts Res-3 on foes within 2 spaces through their next actions at the start of each turn."
+  },
+  {
+    name: "Threaten Res 2",
+    icon: "14-2",
+    prev: ["Threaten Res 1"],
+    effect: "Inflicts Res-4 on foes within 2 spaces through their next actions at the start of each turn."
+  },
+  {
+    name: "Threaten Res 3",
+    icon: "14-3",
+    prev: ["Threaten Res 2"],
+    effect: "Inflicts Res-5 on foes within 2 spaces through their next actions at the start of each turn."
   },
   {
     name: "Threaten Spd 1",

@@ -246,6 +246,30 @@ module.exports = [
     effect: "Grants Atk+3."
   },
   {
+    name: "B Duel Flying 1",
+    spCost: 70,
+    icon: "55-6",
+    stats: {hp: 3},
+    include: [{colorType: "Blue", moveType: "Flying"}],
+    effect: "Grants HP+3. If unit is 5★ and level 40 and unit's stats total less than 160, treats unit's stats as 160 in modes like Arena. (Higher-scoring opponents will appear. Stat total calculation excludes any values added by merges and skills.)"
+  },
+  {
+    name: "B Duel Flying 2",
+    spCost: 140,
+    icon: "55-7",
+    stats: {hp: 4},
+    include: [{colorType: "Blue", moveType: "Flying"}],
+    effect: "Grants HP+4. If unit is 5★ and level 40 and unit's stats total less than 160, treats unit's stats as 165 in modes like Arena. (Higher-scoring opponents will appear. Stat total calculation excludes any values added by merges and skills.)"
+  },
+  {
+    name: "B Duel Flying 3",
+    spCost: 300,
+    icon: "55-8",
+    stats: {hp: 5},
+    include: [{colorType: "Blue", moveType: "Flying"}],
+    effect: "Grants HP+5. If unit is 5★ and level 40 and unit's stats total less than 160, treats unit's stats as 170 in modes like Arena. (Higher-scoring opponents will appear. Stat total calculation excludes any values added by merges and skills.)"
+  },
+  {
     name: "Bracing Blow 1",
     spCost: 120,
     icon: "30-3",

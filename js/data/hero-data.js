@@ -600,6 +600,44 @@ module.exports = [
     }
   },
   {
+    name: "Azura (Legendary Heroes)",
+    shortName: "Azura",
+    title: "Vallite Songstress",
+    artist: "kaya8",
+    voice: "Rena Strober",
+    releaseDate: "Dec 28, 2018",
+    colorType: "Blue",
+    weaponType: "Tome",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Azura (Legendary Heroes).png",
+      main: "img/heroes-main/Azura (Legendary Heroes).png"
+    },
+    skills: [
+      { name: "Light", rarity: 5 },
+      { name: "Ellight", rarity: 5 },
+      { name: "Shine", rarity: 5 },
+      { name: "Prayer Wheel", rarity: 5 },
+      { name: "Sing", rarity: 5 },
+      { name: "Gray Waves", rarity: 5 },
+      { name: "B Duel Flying 1", rarity: 5 },
+      { name: "B Duel Flying 2", rarity: 5 },
+      { name: "B Duel Flying 3", rarity: 5 },
+      { name: "Aerobatics 1", rarity: 5 },
+      { name: "Aerobatics 2", rarity: 5 },
+      { name: "Aerobatics 3", rarity: 5 },
+      { name: "Atk Tactic 1", rarity: 5 },
+      { name: "Atk Tactic 2", rarity: 5 },
+      { name: "Atk Tactic 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 14, atk: 6, spd: 7, def: 4, res: 5 },
+      level40: { hp: [ 30,33, 37 ], atk: [ 27, 30, 33 ], spd: [ 32, 35, 38 ], def: [ 13, 17, 20 ], res: [ 21, 24, 28 ] }
+    }
+  },
+  {
     name: "Azura (Performing Arts)",
     shortName: "Azura",
     title: "Lady of Ballads",
@@ -3304,6 +3342,43 @@ module.exports = [
     }
   },
   {
+    name: "Fjorm (New Year's Wish)",
+    shortName: "Fjorm",
+    title: "New Traditions",
+    artist: "Maeshima Shigeki (前嶋重機)",
+    voice: "Heather Watson",
+    releaseDate: "Jan 01, 2019",
+    colorType: "Green",
+    weaponType: "Bow",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Fjorm (New Year's Wish).png",
+      main: "img/heroes-main/Fjorm (New Year's Wish).png"
+    },
+    skills: [
+      { name: "Iron Bow", rarity: 5 },
+      { name: "Steel Bow", rarity: 5 },
+      { name: "Kabura Ya", rarity: 5 },
+      { name: "Kabura Ya+", rarity: 5 },
+      { name: "Reposition", rarity: 5 },
+      { name: "Atk/Spd Bond 1", rarity: 5 },
+      { name: "Atk/Spd Bond 2", rarity: 5 },
+      { name: "Atk/Spd Bond 3", rarity: 5 },
+      { name: "Atk/Spd Link 1", rarity: 5 },
+      { name: "Atk/Spd Link 2", rarity: 5 },
+      { name: "Atk/Spd Link 3", rarity: 5 },
+      { name: "Even Res Wave 1", rarity: 5 },
+      { name: "Even Res Wave 2", rarity: 5 },
+      { name: "Even Res Wave 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 9, spd: 9, def: 5, res: 4 },
+      level40: { hp: [ 35, 39, 42 ], atk: [ 32, 35, 38 ], spd: [ 32, 35, 38 ], def: [ 17, 20, 23 ], res: [ 18, 21, 24 ] }
+    }
+  },
+  {
     name: "Flora",
     title: "Cold as Ice",
     artist: "HAKO (羽公)",
@@ -3749,6 +3824,45 @@ module.exports = [
     stats: {
       level1: { hp: 15, atk: 7, spd: 9, def: 6, res: 6 },
       level40: { hp: [ 33, 37, 40 ], atk: [ 28, 31, 34 ], spd: [ 30, 33, 36 ], def: [ 15, 19, 22 ], res: [ 22, 25, 29 ] }
+    }
+  },
+  {
+    name: "Gunnthrá (New Year's Wish)",
+    shortName: "Gunnthrá",
+    title: "Year's First Dream",
+    artist: "Yoshiku (四々九)",
+    voice: "Carrie Keranen",
+    releaseDate: "Jan 01, 2019",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Gunnthrá (New Year's Wish).png",
+      main: "img/heroes-main/Gunnthrá (New Year's Wish).png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Hikami", rarity: 5 },
+      { name: "Night Sky", rarity: 5 },
+      { name: "Glimmer", rarity: 5 },
+      { name: "Darting Blow 1", rarity: 5 },
+      { name: "Swift Sparrow 1", rarity: 5 },
+      { name: "Swift Sparrow 2", rarity: 5 },
+      { name: "Desperation 1", rarity: 5 },
+      { name: "Desperation 2", rarity: 5 },
+      { name: "Desperation 3", rarity: 5 },
+      { name: "Hone Spd 1", rarity: 5 },
+      { name: "Hone Spd 2", rarity: 5 },
+      { name: "Hone Spd 3", rarity: 5 },
+      { name: "Joint Hone Spd", rarity: 5 },
+    ],
+    stats: {
+      level1: { hp: 16, atk: 8, spd: 11, def: 8, res: 4 },
+      level40: { hp: [ 34, 38, 41 ], atk: [ 31, 34, 37 ], spd: [ 34, 37, 40 ], def: [ 24, 27, 31 ], res: [ 22, 26, 29 ] }
     }
   },
   {
@@ -4305,6 +4419,44 @@ module.exports = [
     stats: {
       level1: { hp: 19, atk: 7, spd: 4, def: 12, res: 4 },
       level40: { hp: [37, 41, 44], atk: [34, 37, 41], spd: [13, 17, 20], def: [33, 36, 39], res: [22, 26, 29]}
+    }
+  },
+  {
+    name: "Hríd (New Year's Wish)",
+    shortName: "Hríd",
+    artist: "argon / Exys Inc.",
+    voice: "Mark P. Whitten",
+    title: "Resolute Prince",
+    releaseDate: "Jan 01, 2019",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Flying",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Hríd (New Year's Wish).png",
+      main: "img/heroes-main/Hríd (New Year's Wish).png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Geishun", rarity: 5 },
+      { name: "Geishun+", rarity: 5 },
+      { name: "Swap", rarity: 5 },
+      { name: "Atk/Def Bond 1", rarity: 5 },
+      { name: "Atk/Def Bond 2", rarity: 5 },
+      { name: "Atk/Def Bond 3", rarity: 5 },
+      { name: "Quick Riposte 1", rarity: 5 },
+      { name: "Quick Riposte 2", rarity: 5 },
+      { name: "Quick Riposte 3", rarity: 5 },
+      { name: "Hone Atk 1", rarity: 5 },
+      { name: "Hone Atk 2", rarity: 5 },
+      { name: "Hone Atk 3", rarity: 5 },
+      { name: "Hone Atk 4", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 10, spd: 4, def: 10, res: 5 },
+      level40: { hp: [39, 42, 45], atk: [35, 38, 41], spd: [16, 19, 22], def: [33, 36, 39], res: [23, 27, 30]}
     }
   },
   {
@@ -5338,7 +5490,7 @@ module.exports = [
       level40_4: { hp: [ 33, 36, 39 ], atk: [ 26, 29, 32 ], spd: [ 21, 24, 27 ], def: [ 17, 20, 23 ], res: [ 25, 28, 31 ] }
     }
   },
-    {
+  {
     name: "Laegjarn",
     title: "Sheathed Steel",
     artist: "Maeshima Shigeki (前嶋重機)",
@@ -5375,6 +5527,42 @@ module.exports = [
     }
   },
   {
+    name: "Laegjarn (New Year's Wish)",
+    shortName: "Laegjarn",
+    title: "New Experiences",
+    artist: "Daisuke Izuka",
+    voice: "Alicia Stratten",
+    releaseDate: "Jan 1, 2019",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Laegjarn (New Year's Wish).png",
+      main: "img/heroes-main/Laegjarn (New Year's Wish).png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "Wagasa", rarity: 5 },
+      { name: "Wagasa+", rarity: 5 },
+      { name: "Pivot", rarity: 5 },
+      { name: "Chill Res 1", rarity: 5 },
+      { name: "Chill Res 2", rarity: 5 },
+      { name: "Chill Res 3", rarity: 5 },
+      { name: "Def Tactic 1", rarity: 5 },
+      { name: "Def Tactic 2", rarity: 5 },
+      { name: "Def Tactic 3", rarity: 5 }
+    ],
+    stats: {
+      level1_4: { hp: 15, atk: 7, spd: 9, def: 9, res: 3 },
+      level40_4: { hp: [ 32, 35, 38 ], atk: [ 26, 29, 32 ], spd: [ 30, 33, 36 ], def: [ 30, 33, 36 ], res: [ 12, 15, 18 ] },
+      level1: { hp: 16, atk: 8, spd: 9, def: 9, res: 4 },
+      level40: { hp: [ 35, 38, 41 ], atk: [ 29, 32, 35 ], spd: [ 32, 35, 38 ], def: [ 32, 35, 38 ], res: [ 14, 17, 20 ] },
+    }
+  },
+  {
     name: "Laevatein",
     title: "Searing Steel",
     artist: "Maeshima Shigeki (前嶋重機)",
@@ -5384,7 +5572,6 @@ module.exports = [
     weaponType: "Sword",
     moveType: "Infantry",
     rarity5: ["pool2"],
-    limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Laevatein.png",
       main: "img/heroes-main/Laevatein.png"
@@ -5407,6 +5594,46 @@ module.exports = [
     stats: {
       level1: { hp: 17, atk: 11, spd: 7, def: 8, res: 5 },
       level40: { hp: [ 35, 39, 42 ], atk: [ 34, 37, 40 ], spd: [ 28, 31, 34 ], def: [ 31, 34, 37 ], res: [ 19, 22, 25 ] },
+    }
+  },
+  {
+    name: "Laevatein (New Year's Wish)",
+    shortName: "Laevatein",
+    title: "Kumade Warrior",
+    artist: "kawasumi (かわすみ)",
+    voice: "Alicia Stratten",
+    releaseDate: "Jan 01, 2019",
+    colorType: "Neutral",
+    weaponType: "Staff",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Laevatein (New Year's Wish).png",
+      main: "img/heroes-main/Laevatein (New Year's Wish).png"
+    },
+    skills: [
+      { name: "Assault", rarity: 5 },
+      { name: "Kumade", rarity: 5 },
+      { name: "Kumade+", rarity: 5 },
+      { name: "Heal", rarity: 5 },
+      { name: "Reconcile", rarity: 5 },
+      { name: "Rehabilitate", rarity: 5 },
+      { name: "Rehabilitate+", rarity: 5 },
+      { name: "Imbue", rarity: 5 },
+      { name: "Kindle-Fire Balm", rarity: 5 },
+      { name: "Earthfire Balm", rarity: 5 },
+      { name: "Earthfire Balm+", rarity: 5 },
+      { name: "Wrathful Staff 1", rarity: 5 },
+      { name: "Wrathful Staff 2", rarity: 5 },
+      { name: "Wrathful Staff 3", rarity: 5 },
+      { name: "Even Def Wave 1", rarity: 5 },
+      { name: "Even Def Wave 2", rarity: 5 },
+      { name: "Even Def Wave 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 10, spd: 6, def: 8, res: 3 },
+      level40: { hp: [ 30, 33, 36 ], atk: [ 33, 36, 39 ], spd: [ 27, 30, 33 ], def: [ 24, 27, 31 ], res: [ 15, 18, 21 ] },
     }
   },
   {
@@ -10342,6 +10569,7 @@ module.exports = [
       { name: "Elthunder", rarity: 4 },
       { name: "Blárblade", rarity: 4 },
       { name: "Blárblade+", rarity: 5 },
+      { name: "Tome of Thoron", rarity: 5 },
       { name: "Rally Resistance", rarity: 4 },
       { name: "Rally Spd/Res", rarity: 4 },
       { name: "Attack +1", rarity: 4 },
