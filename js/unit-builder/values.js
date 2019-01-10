@@ -45,7 +45,11 @@ exports.CONST = {
     {name: 'Dagger (Red)', weaponType: 'Dagger', colorType: 'Red'},
     {name: 'Dagger (Blue)', weaponType: 'Dagger', colorType: 'Blue'},
     {name: 'Dagger (Green)', weaponType: 'Dagger', colorType: 'Green'},
-    {name: 'Staff', weaponType: 'Staff', colorType: 'Neutral'}
+    {name: 'Staff', weaponType: 'Staff', colorType: 'Neutral'},
+    {name: 'Beast (Red)', weaponType: 'Beast', colorType: 'Red'},
+    {name: 'Beast (Green)', weaponType: 'Beast', colorType: 'Green'},
+    {name: 'Beast (Blue)', weaponType: 'Beast', colorType: 'Blue'},
+    {name: 'Beast (Neutral)', weaponType: 'Beast', colorType: 'Neutral'}
   ]
 };
 
@@ -75,7 +79,11 @@ exports.COORD = {
     "Blue Dagger": [262,1140],
     "Green Dagger": [314,1140],
     "Red Leaf": [65, 1088],
-    "Skates": [118, 1087]
+    "Skates": [118, 1087],
+    "Red Beast": [366,1140],
+    "Blue Beast": [418,1140],
+    "Green Beast": [470,1140],
+    "Neutral Beast": [532,268]
   },
   EMPTY_SEAL: [0, 1074],
   FONT_IMAGE: {

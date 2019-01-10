@@ -485,7 +485,7 @@ module.exports = [
     name: "Drag Back",
     spCost: 150,
     icon: "4-7",
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}, {weaponType: "Beast"}],
     effect: "If unit initiates attack, the unit moves 1 space away after combat. Foe moves into unit's previous space."
   },
   {
@@ -726,14 +726,14 @@ module.exports = [
     name: "Hit and Run",
     spCost: 150,
     icon: "15-4",
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}, {weaponType: "Beast"}],
     effect: "If unit initiates attack, unit retreats 1 space after battle."
   },
   {
     name: "Knock Back",
     spCost: 150,
     icon: "4-5",
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}, {weaponType: "Beast"}],
     effect: "If unit initiates attack, foe is moved 1 space away after combat."
   },
   {
@@ -805,7 +805,7 @@ module.exports = [
     name: "Lunge",
     spCost: 150,
     icon: "4-6",
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}, {weaponType: "Beast"}],
     effect: "If unit initiates attack, after combat, unit and targeted foe swap places."
   },
   {
@@ -827,6 +827,27 @@ module.exports = [
     icon: "54-8",
     prev: ["Mystic Boost 2"],
     effect: "Disables foe's skills that \"calculate damage using the lower of foe's Def or Res\" and \"calculate damage from staff like other weapons.\" Restores 6 HP after combat."
+  },
+  {
+    name: "Null C-Disrupt 1",
+    spCost: 60,
+    icon: "56-3",
+    include: [{moveType: "Infantry"}],
+    effect: "At start of combat, if unit's HP = 100%, neutralizes status effects and disables skills that prevent counterattacks during combat."
+  },
+  {
+    name: "Null C-Disrupt 2",
+    spCost: 120,
+    icon: "56-4",
+    include: [{moveType: "Infantry"}],
+    effect: "At start of combat, if unit's HP ≥ 50%, neutralizes status effects and disables skills that prevent counterattacks during combat."
+  },
+  {
+    name: "Null C-Disrupt 3",
+    spCost: 240,
+    icon: "56-5",
+    include: [{moveType: "Infantry"}],
+    effect: "Neutralizes status effects and disables skills that prevent counterattacks during combat."
   },
   {
     name: "Null Follow-Up 1",
@@ -1156,7 +1177,7 @@ module.exports = [
     name: "Shield Pulse 1",
     spCost: 60,
     icon: "23-5",
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}, {weaponType: "Beast"}],
     exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
     effect: "If unit's Special triggers based on a foe's attack, Special cooldown count-1 at start of turn 1."
   },
@@ -1165,7 +1186,7 @@ module.exports = [
     spCost: 120,
     icon: "23-6",
     prev: ["Shield Pulse 1"],
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}, {weaponType: "Beast"}],
     exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
     effect: "If unit's Special triggers based on a foe's attack, Special cooldown count-1 at start of turn 1. Unit takes 5 less damage when Special triggers."
   },
@@ -1174,7 +1195,7 @@ module.exports = [
     spCost: 240,
     icon: "23-7",
     prev: ["Shield Pulse 2"],
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}, {weaponType: "Beast"}],
     exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
     effect: "If unit's Special triggers based on a foe's attack, Special cooldown count-2 at start of turn 1. Unit takes 5 less damage when Special triggers."
   },
@@ -1444,7 +1465,7 @@ module.exports = [
     name: "Wrath 1",
     spCost: 60,
     icon: "27-3",
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"},{weaponType: "Beast"}],
     exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
     effect: "If unit's HP ≤ 25%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special."
   },
@@ -1453,7 +1474,7 @@ module.exports = [
     spCost: 120,
     icon: "27-4",
     prev: ["Wrath 1"],
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"},{weaponType: "Beast"}],
     exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
     effect: "If unit's HP ≤ 50%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special."
   },
@@ -1462,7 +1483,7 @@ module.exports = [
     spCost: 240,
     icon: "27-5",
     prev: ["Wrath 2"],
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"},{weaponType: "Beast"}],
     exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
     effect: "If unit's HP ≤ 75%, Special cooldown count-1 at start of turn if Special triggers by attacking. If Special triggers, +10 damage from Special."
   },

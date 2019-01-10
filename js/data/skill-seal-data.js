@@ -276,19 +276,19 @@ module.exports = [
   {
     name: "Deflect Melee 1",
     icon: "28-11",
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"},{weaponType: "Beast"}],
     effect: "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 30%."
   },
   {
     name: "Deflect Melee 2",
     icon: "28-12",
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"},{weaponType: "Beast"}],
     effect: "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 50%."
   },
   {
     name: "Deflect Melee 3",
     icon: "29-0",
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"},{weaponType: "Beast"}],
     effect: "If unit receives consecutive attacks from a foe using a sword, lance, or axe, damage from second attack onward reduced by 80%."
   },
   {

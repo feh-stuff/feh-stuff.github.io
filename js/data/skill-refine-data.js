@@ -4653,147 +4653,147 @@ module.exports = {
 
   "Naga": [
     {
-      name: "+Special",
-      icon: "0-0",
+      name: "Delete Dragons",
+      icon: "56-0",
       cost: 1,
-      effect: ""
+      effect: "Effective against dragon foes. If foe initiates combat, grants Def/Res+4 during combat. In combat against a dragon foe, disables foe's skills that \"calculate damage using the lower of foe's Def or Res\", and unit can counterattack regardless of foe's range."
     },
     {
       name: "+Atk",
       icon: "31-9",
       cost: 1,
       stats: {hp: 2, atk: 1},
-      effect: ""
+      effect: "Effective against dragon foes. If foe initiates combat, grants Def/Res+4 during combat."
     },
     {
       name: "+Spd",
       icon: "31-10",
       cost: 1,
       stats: {hp: 2, spd: 2},
-      effect: ""
+      effect: "Effective against dragon foes. If foe initiates combat, grants Def/Res+4 during combat."
     },
     {
       name: "+Def",
       icon: "31-11",
       cost: 1,
       stats: {hp: 2, def: 3},
-      effect: ""
+      effect: "Effective against dragon foes. If foe initiates combat, grants Def/Res+4 during combat."
     },
     {
       name: "+Res",
       icon: "31-12",
       cost: 1,
       stats: {hp: 2, res: 3},
-      effect: ""
+      effect: "Effective against dragon foes. If foe initiates combat, grants Def/Res+4 during combat."
     }
   ],
   "Divine Naga": [
     {
-      name: "+Special",
-      icon: "0-0",
+      name: "Res Victory",
+      icon: "56-1",
       cost: 1,
-      effect: ""
+      effect: "Effective against dragon foes. Neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat, and disables foe's skills that \"calculate damage using the lower of foe's Def or Res.\". At start of combat, if unit's Res ≥ foe's Res+3, grants Atk/Spd/Def/Res+3 during combat."
     },
     {
       name: "+Atk",
       icon: "31-9",
       cost: 1,
       stats: {hp: 2, atk: 1},
-      effect: ""
+      effect: "Effective against dragon foes. Neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat, and disables foe's skills that \"calculate damage using the lower of foe's Def or Res.\""
     },
     {
       name: "+Spd",
       icon: "31-10",
       cost: 1,
       stats: {hp: 2, spd: 2},
-      effect: ""
+      effect: "Effective against dragon foes. Neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat, and disables foe's skills that \"calculate damage using the lower of foe's Def or Res.\""
     },
     {
       name: "+Def",
       icon: "31-11",
       cost: 1,
       stats: {hp: 2, def: 3},
-      effect: ""
+      effect: "Effective against dragon foes. Neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat, and disables foe's skills that \"calculate damage using the lower of foe's Def or Res.\""
     },
     {
       name: "+Res",
       icon: "31-12",
       cost: 1,
       stats: {hp: 2, res: 3},
-      effect: ""
+      effect: "Effective against dragon foes. Neutralizes foe's bonuses (from skills like Fortify, Rally, etc.) during combat, and disables foe's skills that \"calculate damage using the lower of foe's Def or Res.\""
     }
   ],
   "Tome of Thoron": [
     {
-      name: "+Special",
-      icon: "0-0",
+      name: "Darting Blow",
+      icon: "55-11",
       cost: 1,
-      effect: ""
+      effect: "At start of turn, if unit's HP ≤ 75% and unit's attack triggers Special, grants Special cooldown count-1, and deals +10 damage when Special triggers. If unit initiates combat, grants Spd+6 during combat."
     },
     {
       name: "+Atk",
       icon: "31-9",
       cost: 1,
       stats: {hp: 2, atk: 1},
-      effect: ""
+      effect: "At start of turn, if unit's HP ≤ 75% and unit's attack triggers Special, grants Special cooldown count-1, and deals +10 damage when Special triggers."
     },
     {
       name: "+Spd",
       icon: "31-10",
       cost: 1,
       stats: {hp: 2, spd: 2},
-      effect: ""
+      effect: "At start of turn, if unit's HP ≤ 75% and unit's attack triggers Special, grants Special cooldown count-1, and deals +10 damage when Special triggers."
     },
     {
       name: "+Def",
       icon: "31-11",
       cost: 1,
       stats: {hp: 2, def: 3},
-      effect: ""
+      effect: "At start of turn, if unit's HP ≤ 75% and unit's attack triggers Special, grants Special cooldown count-1, and deals +10 damage when Special triggers."
     },
     {
       name: "+Res",
       icon: "31-12",
       cost: 1,
       stats: {hp: 2, res: 3},
-      effect: ""
+      effect: "At start of turn, if unit's HP ≤ 75% and unit's attack triggers Special, grants Special cooldown count-1, and deals +10 damage when Special triggers."
     }
   ],
   "Tyrfing": [
     {
-      name: "+Special",
-      icon: "0-0",
+      name: "Atk/Def Bond",
+      icon: "55-12",
       cost: 1,
       stats: {hp: 3},
-      effect: ""
+      effect: "At start of combat, if unit's HP ≥ 50%, grants: \"If unit's HP > 1 and foe would reduce unit's HP to 0, unit survives with 1 HP. (Once per combat. Does not stack.)\". Grants Atk/Def+5 to this unit during combat if unit is adjacent to an ally."
     },
     {
       name: "+Atk",
       icon: "31-9",
       cost: 1,
       stats: {hp: 5, atk: 2},
-      effect: ""
+      effect: "At start of combat, if unit's HP ≥ 50%, grants: \"If unit's HP > 1 and foe would reduce unit's HP to 0, unit survives with 1 HP. (Once per combat. Does not stack.)\""
     },
     {
       name: "+Spd",
       icon: "31-10",
       cost: 1,
       stats: {hp: 5, spd: 3},
-      effect: ""
+      effect: "At start of combat, if unit's HP ≥ 50%, grants: \"If unit's HP > 1 and foe would reduce unit's HP to 0, unit survives with 1 HP. (Once per combat. Does not stack.)\""
     },
     {
       name: "+Def",
       icon: "31-11",
       cost: 1,
       stats: {hp: 5, def: 4},
-      effect: ""
+      effect: "At start of combat, if unit's HP ≥ 50%, grants: \"If unit's HP > 1 and foe would reduce unit's HP to 0, unit survives with 1 HP. (Once per combat. Does not stack.)\""
     },
     {
       name: "+Res",
       icon: "31-12",
       cost: 1,
       stats: {hp: 5, res: 4},
-      effect: ""
+      effect: "At start of combat, if unit's HP ≥ 50%, grants: \"If unit's HP > 1 and foe would reduce unit's HP to 0, unit survives with 1 HP. (Once per combat. Does not stack.)\""
     }
   ],
 };

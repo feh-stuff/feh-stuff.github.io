@@ -5673,6 +5673,41 @@ module.exports = [
     }
   },
   {
+    name: "Leanne",
+    title: "Forest's Song",
+    artist: "Yura (由良)",
+    voice: "Rachelle Heger",
+    releaseDate: "Jan 11, 2019",
+    colorType: "Colorless",
+    weaponType: "Beast",
+    moveType: "Flying",
+    pool: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Leanne.png",
+      main: "img/heroes-main/Leanne.png"
+    },
+    skills: [
+      // { name: "Hatchling Flier", rarity: 5 },
+      // { name: "Fledgling Flier", rarity: 5 },
+      // { name: "Adult Flier", rarity: 5 },
+      { name: "Heron Wing", rarity: 5 },
+      { name: "Sing", rarity: 5 },
+      { name: "Warding Stance 1", rarity: 5 },
+      { name: "Mirror Stance 1", rarity: 5 },
+      { name: "Mirror Stance 2", rarity: 5 },
+      { name: "Flier Formation 1", rarity: 5 },
+      { name: "Flier Formation 2", rarity: 5 },
+      { name: "Flier Formation 3", rarity: 5 },
+      { name: "Hone Spd 1", rarity: 5 },
+      { name: "Hone Spd 2", rarity: 5 },
+      { name: "Hone Beasts", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 14, atk: 5, spd: 9, def: 3, res: 8 },
+      level40: { hp: [ 32, 36, 39 ], atk: [ 23, 27, 30 ], spd: [ 34, 37, 40 ], def: [ 12, 16, 19 ], res: [ 31, 34, 37 ] }
+    }
+  },
+  {
     name: "Legault",
     title: "The Hurricane",
     artist: "PenekoR (п猫R)",
@@ -7655,6 +7690,74 @@ module.exports = [
     }
   },
   {
+    name: "Naesala",
+    title: "Sky's Shadow",
+    artist: "Suda Ayaka (須田彩加)",
+    voice: "Lucien Dodge",
+    releaseDate: "Jan 11, 2019",
+    colorType: "Blue",
+    weaponType: "Beast",
+    moveType: "Flying",
+    pool: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Naesala.png",
+      main: "img/heroes-main/Naesala.png"
+    },
+    ghb: true,
+    skills: [
+      // { name: "Hatchling Flier", rarity: 3 },
+      // { name: "Fledgling Flier", rarity: 3 },
+      // { name: "Adult Flier", rarity: 3 },
+      { name: "Raven King Beak", rarity: 3 },
+      { name: "Rising Wind", rarity: 3 },
+      { name: "Blazing Wind", rarity: 3 },
+      { name: "Darting Blow 1", rarity: 3 },
+      { name: "Swift Sparrow 1", rarity: 3 },
+      { name: "Swift Sparrow 2", rarity: 3 },
+      { name: "Guard 1", rarity: 3 },
+      { name: "Guard 2", rarity: 3 },
+      { name: "Guard 3", rarity: 3 }
+    ],
+    stats: {
+      level1_4: { hp: 16, atk: 8, spd: 10, def: 4, res: 6 },
+      level1: { hp: 17, atk: 8, spd: 10, def: 5, res: 7 },
+      level40_4: { hp: [ 33, 36, 39 ], atk: [ 27, 30, 33 ], spd: [ 33, 36, 39 ], def: [ 19, 22, 25 ], res: [ 23, 26, 29 ] },
+      level40: { hp: [ 35, 39, 42 ], atk: [ 29, 32, 35 ], spd: [ 35, 38, 41 ], def: [ 21, 24, 28 ], res: [ 25, 29, 32 ] }
+    }
+  },
+  {
+    name: "Nailah",
+    title: "Unflinching Eye",
+    artist: "PenekoR (п猫Ｒ)",
+    voice: "Rachel Robinson",
+    releaseDate: "Jan 11, 2019",
+    colorType: "Blue",
+    weaponType: "Beast",
+    moveType: "Infantry",
+    pool: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Nailah.png",
+      main: "img/heroes-main/Nailah.png"
+    },
+    skills: [
+      // { name: "Whelp Infantry", rarity: 5 },
+      // { name: "Yearling Infantry", rarity: 5 },
+      // { name: "Adult Infantry", rarity: 5 },
+      { name: "Wolf Queen Fang", rarity: 5 },
+      { name: "New Moon", rarity: 5 },
+      { name: "Moonbow", rarity: 5 },
+      { name: "Distant Counter", rarity: 5 },
+      { name: "Null C-Disrupt 1", rarity: 5 },
+      { name: "Null C-Disrupt 2", rarity: 5 },
+      { name: "Null C-Disrupt 3", rarity: 5 },
+      { name: "Glare", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 7, spd: 11, def: 8, res: 4 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 28, 31, 34 ], spd: [ 34, 37, 40 ], def: [ 29, 32, 35 ], res: [ 20, 23, 27 ] }
+    }
+  },
+  {
     name: "Nanna",
     title: "Nordion Princess",
     artist: "Konfuzi Kokon (紺藤ココン)",
@@ -8901,6 +9004,38 @@ module.exports = [
     stats: {
       level1: { hp: 18, atk: 9, spd: 6, def: 7, res: 6 },
       level40: { hp: [ 36, 40, 43 ], atk: [ 32, 35, 38 ], spd: [ 20, 23, 26 ], def: [ 28, 31, 34 ], res: [ 24, 28, 31 ] },
+    }
+  },
+  {
+    name: "Reyson",
+    title: "White Prince",
+    artist: "Yura (由良)",
+    voice: "Frank Todaro",
+    releaseDate: "Jan 11, 2019",
+    colorType: "Green",
+    weaponType: "Beast",
+    moveType: "Flying",
+    pool: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Reyson.png",
+      main: "img/heroes-main/Reyson.png"
+    },
+    skills: [
+      // { name: "Hatchling Flier", rarity: 5 },
+      // { name: "Fledgling Flier", rarity: 5 },
+      // { name: "Adult Flier", rarity: 5 },
+      { name: "Heron Wing", rarity: 5 },
+      { name: "Sing", rarity: 5 },
+      { name: "Darting Stance 1", rarity: 5 },
+      { name: "Steady Posture 1", rarity: 5 },
+      { name: "Steady Posture 2", rarity: 5 },
+      { name: "Fortify Res 1", rarity: 5 },
+      { name: "Fortify Res 2", rarity: 5 },
+      { name: "Fortify Beasts", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 15, atk: 7, spd: 8, def: 5, res: 4 },
+      level40: { hp: [ 33, 37, 40 ], atk: [ 25, 29, 32 ], spd: [ 31, 34, 37 ], def: [ 21, 24, 28 ], res: [ 22, 26, 29 ] }
     }
   },
   {
@@ -10902,6 +11037,43 @@ module.exports = [
     stats: {
       level1: { hp: 19, atk: 10, spd: 5, def: 8, res: 10 },
       level40: { hp: [ 40, 43, 46 ], atk: [ 31, 34, 37 ], spd: [ 14, 18, 21 ], def: [ 31, 34, 37], res: [ 33, 36, 39 ] }
+    }
+  },
+  {
+    name:"Tibarn",
+    title:"Lord of the Air",
+    artist:"Suekane Kumiko (スエカネクミコ)",
+    voice:"Joe J. Thomas",
+    releaseDate:"Jan 11, 2019",
+    colorType:"Red",
+    weaponType:"Beast",
+    moveType:"Flying",
+    pool:["pool2"],
+    assets:{
+      portrait:"img/heroes-portrait/75px-Icon_Portrait_Tibarn.png",
+      main:"img/heroes-main/Tibarn.png"
+    },
+    skills:[
+      // {name:"Hatchling Flier",rarity:5},
+      // {name:"Fledgling Flier",rarity:5},
+      // {name:"Adult Flier",rarity:5},
+      {name:"Hawk King Claw",rarity:5},
+      {name:"Dragon Gaze",rarity:5},
+      {name:"Draconic Aura",rarity:5},
+      {name:"Death Blow 1",rarity:5},
+      {name:"Sturdy Blow 1",rarity:5},
+      {name:"Sturdy Blow 2",rarity:5},
+      {name:"Sturdy Impact",rarity:5},
+      {name:"Chill Atk 1",rarity:5},
+      {name:"Chill Atk 2",rarity:5},
+      {name:"Chill Atk 3",rarity:5},
+      {name:"Even Atk Wave 1",rarity:5},
+      {name:"Even Atk Wave 2",rarity:5},
+      {name:"Even Atk Wave 3",rarity:5}
+    ],
+    stats:{
+      level1:{hp:19,atk:10,spd:7,def:8,res:3},
+      level40:{hp:[37,41,44],atk:[35,38,41],spd:[28,31,34],def:[31,34,37],res:[15,18,21]}
     }
   },
   {

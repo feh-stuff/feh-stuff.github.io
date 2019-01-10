@@ -315,7 +315,7 @@ module.exports = [
     name: "Sing",
     range: 1,
     spCost: 150,
-    include: [{name: "Azura"},{name: "Azura (Performing Arts)"},{name: "Azura (Legendary Heroes)"},{name: "Shigure (Performing Arts)"}, {name: "Azura (Happy New Year!)"}, {name: "Azura (Adrift)"}],
+    include: [{name: "Reyson"},{name: "Leanne"},{name: "Azura"},{name: "Azura (Performing Arts)"},{name: "Azura (Legendary Heroes)"},{name: "Shigure (Performing Arts)"}, {name: "Azura (Happy New Year!)"}, {name: "Azura (Adrift)"}],
     last: true,
     effect: "Enables target to take another action. Cannot be used on units with Sing or Dance."
   },

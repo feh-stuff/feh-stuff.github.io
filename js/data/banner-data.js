@@ -3,6 +3,42 @@ module.exports = [
     date: "January 2019",
     banners: [
       {
+        name: "Rulers of the Laguz",
+        startDate: "Jan 11, 2019",
+        focusHeroes: ["Nailah", "Tibarn", "Reyson", "Leanne"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Heroes with Tactic Skills",
+        startDate: "Jan 06, 2019",
+        focusHeroes: ["L'Arachel", "Siegbert", "Shiro"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Klein and Clarine's Battle",
+        startDate: "Jan 04, 2019",
+        focusHeroes: ["Klein", "Clarine", "Roy"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Happy New Year!",
+        startDate: "Jan 01, 2019",
+        focusHeroes: [ "Azura (Happy New Year!)", "Camilla (Happy New Year!)", "Takumi (Happy New Year!)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "New Year's Wish",
         startDate: "Jan 01, 2019",
         focusHeroes: [ "Hríd (New Year's Wish)", "Fjorm (New Year's Wish)", "Gunnthrá (New Year's Wish)", "Laevatein (New Year's Wish)" ],

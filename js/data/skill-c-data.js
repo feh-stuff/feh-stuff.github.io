@@ -574,6 +574,14 @@ module.exports = [
     effect: "Grants adjacent armor allies Def/Res+6 through their next actions at the start of each turn."
   },
   {
+    name: "Fortify Beasts",
+    spCost: 200,
+    icon: "56-7",
+    prev: ["Fortify Def 2", "Fortify Res 2"],
+    include: [{weaponType: "Beast"}],
+    effect: "At start of turn, grants Def/Res+6 to adjacent beast allies for 1 turn."
+  },
+  {
     name: "Fortify Cavalry",
     spCost: 200,
     icon: "13-2",
@@ -684,6 +692,13 @@ module.exports = [
     effect: "If unit survives, all green tome users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)"
   },
   {
+    name: "Glare",
+    spCost: 300,
+    icon: "56-8",
+    include: [{name:"Nailah"}],
+    effect: "After combat, if unit attacked, inflicts status on target and foes within 1 space of target restricting movement to 1 space through their next actions."
+  },
+  {
     name: "Goad Armor",
     spCost: 200,
     icon: "11-7",
@@ -772,6 +787,14 @@ module.exports = [
     icon: "55-9",
     prev: ["Hone Atk 3"],
     effect: "Grants adjacent allies Atk+7 through their next actions at the start of each turn."
+  },
+  {
+    name: "Hone Beasts",
+    spCost: 200,
+    icon: "56-6",
+    prev: ["Hone Atk 2", "Hone Spd 2"],
+    include: [{weaponType: "Beast"}],
+    effect: "At start of turn, grants Atk/Spd+6 to adjacent beast allies for 1 turn."
   },
   {
     name: "Hone Cavalry",

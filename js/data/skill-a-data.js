@@ -668,7 +668,7 @@ module.exports = [
     name: "Distant Counter",
     spCost: 300,
     icon: "4-1",
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
+    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}, {weaponType:"Beast"}],
     last: true,
     effect: "Enables unit to counterattack regardless of distance to attacker."
   },
@@ -727,8 +727,7 @@ module.exports = [
     spCost: 240,
     icon: "51-5",
     prev: ["Fierce Stance 2"],
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
-    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
+    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}, {weaponType:"Bow"}, {weaponType:"Dagger"}, {weaponType:"Tome"}, {weaponType:"Staff"}],
     last: true,
     effect: "If foe initiates combat, grants Atk+4 during combat and Special cooldown charge +1 per attack. (Only highest value applied. Does not stack.)"
   },
@@ -1345,8 +1344,7 @@ module.exports = [
     spCost: 240,
     icon: "26-1",
     prev: ["Steady Stance 2"],
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
-    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
+    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}, {weaponType:"Bow"}, {weaponType:"Dagger"}, {weaponType:"Tome"}, {weaponType:"Staff"}],
     last: true,
     effect: "If attacked, unit granted Def+4 during combat; also gains Special cooldown charge +1. (If using other similar skill, only highest value applied.)"
   },
@@ -1361,7 +1359,7 @@ module.exports = [
     name: "Steady Posture 2",
     spCost: 200,
     icon: "49-7",
-    prev: ["Sturdy Posture 1"],
+    prev: ["Steady Posture 1"],
     last: true,
     effect: "Grants Spd/Def+4 during combat when this unit is attacked."
   },
@@ -1410,6 +1408,15 @@ module.exports = [
     exclude: [{weaponType:"Staff"}],
     last: true,
     effect: "Grants Atk/Def+4 during combat if unit initiates combat."
+  },
+  {
+    name: "Sturdy Impact",
+    spCost: 300,
+    icon: "56-2",
+    prev: ["Sturdy Blow 2"],
+    exclude: [{weaponType:"Staff"}, {moveType:"Cavalry"}, {moveType:"Armored"}],
+    last: true,
+    effect: "If unit initiates combat, grants Atk+6, Def+10 during combat and foe cannot make a follow-up attack."
   },
   {
     name: "Sturdy Stance 1",
@@ -1536,8 +1543,7 @@ module.exports = [
     spCost: 240,
     icon: "36-2",
     prev: ["Warding Stance 2"],
-    include: [{weaponType:"Sword"}, {weaponType:"Axe"}, {weaponType:"Lance"}, {weaponType:"Breath"}],
-    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}],
+    exclude: [{moveType:"Flying"}, {moveType:"Cavalry"}, {weaponType:"Bow"}, {weaponType:"Dagger"}, {weaponType:"Tome"}, {weaponType:"Staff"}],
     last: true,
     effect: "Grants Res+4 during combat if unit is attacked. Also grants Special cooldown charge +1 per attack. (Does not stack. Only highest value applied.)"
   },

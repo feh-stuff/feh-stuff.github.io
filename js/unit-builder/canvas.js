@@ -240,7 +240,12 @@ function drawSkills(skills) {
 function drawIcon(icon, posY, posX = 275, sizeY = 34, sizeX = 34) {
   if (typeof icon === 'string') {
     let xy = icon.split('-');
-    ctx.drawImage(images.SKILLS, xy[1] * 65, xy[0] * 67, 65, 67, posX, posY, sizeX, sizeY);
+    let y = xy[0] * 67;
+    if (xy[0] > 47) y += 2;
+    if (xy[0] > 49) y += 1;
+    if (xy[0] > 52) y += 2;
+    if (xy[0] > 54) y += 2;
+    ctx.drawImage(images.SKILLS, xy[1] * 65, y, 65, 67, posX, posY, sizeX, sizeY);
   } else {
     ctx.drawImage(icon, 0, 0, icon.width, icon.height, posX, posY, sizeX, sizeY)
   }

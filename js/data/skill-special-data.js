@@ -178,7 +178,7 @@ module.exports = [
     cooldown: 5,
     spCost: 500,
     prev: ["Astra"],
-    include: [{weaponType: "Sword"}, {weaponType: "Lance"}, {weaponType: "Axe"} ],
+    include: [{weaponType: "Sword"}, {weaponType: "Lance"}, {weaponType: "Axe"},{weaponType: "Beast"}],
     effect: "If this unit initiates an attack, it can take another action after combat. (Once per turn only.)"
   },
   {

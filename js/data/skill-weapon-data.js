@@ -18,6 +18,24 @@ module.exports = [
     prev: ["Absorb"],
     effect: "Recovers HP = 50% of damage dealt. After combat, restores 7 HP to allies within 2 spaces of unit."
   },
+  // {
+  //   name: "Adult (Flier)",
+  //   effect: "At start of turn, if unit is adjacent to only beast or dragon allies or if unit is not adjacent to any ally, unit transforms (otherwise, unit reverts). If unit transforms, unit can move 1 extra space. (That turn only. Does not stack.) If unit transforms, grants Atk+2.",
+  //   weaponType: "Beast",
+  //   include: [{moveType: "Flying"}],
+  //   spCost: 200,
+  //   range: 1,
+  //   damage: 9
+  // },
+  // {
+  //   name: "Adult (Infantry)",
+  //   effect: "At start of turn, if unit is adjacent to only beast or dragon allies or if unit is not adjacent to any&amp;#10;ally, unit transforms (otherwise, unit reverts). If unit transforms, grants Atk+2 and deals +10 damage when Special triggers.",
+  //   weaponType: "Beast",
+  //   include: [{moveType: "Infantry"}],
+  //   spCost: 200,
+  //   range: 1,
+  //   damage: 9
+  // },
   {
     name: "Alondite",
     spCost: 400,
@@ -1581,6 +1599,15 @@ module.exports = [
     prev: ["Flash"],
     effect: "After combat, if unit attacked, inflicts status on target and foes withing 2 spaces of target preventing counterattacks through their next actions."
   },
+  // {
+  //   name: "Fledgling (Flier)",
+  //   effect: "At start of turn, if unit is adjacent to only beast or dragon allies or if unit is not adjacent to any ally, unit transforms (otherwise, unit reverts). If unit transforms, unit can move 1 extra space. (That turn only. Does not stack.) If unit transforms, grants Atk+2.",
+  //   weaponType: "Beast",
+  //   include: [{moveType: "Flying"}],
+  //   spCost: 100,
+  //   range: 1,
+  //   damage: 6
+  // },
   {
     name: "Florina's Lance",
     spCost: 400,
@@ -2184,6 +2211,15 @@ module.exports = [
     prev: ["Harmonic Lance"],
     effect: "Grants +10 to damage when Special triggers."
   },
+  // {
+  //   name: "Hatchling (Flier)",
+  //   effect: "At start of turn, if unit is adjacent to only beast or dragon allies or if unit is not adjacent to any ally, unit transforms (otherwise, unit reverts). If unit transforms, unit can move 1 extra space. (That turn only. Does not stack.) If unit transforms, grants Atk+2.",
+  //   weaponType: "Beast",
+  //   include: [{moveType: "Flying"}],
+  //   spCost: 50,
+  //   range: 1,
+  //   damage: 4
+  // },
   {
     name: "Hauteclere",
     spCost: 400,
@@ -2194,6 +2230,16 @@ module.exports = [
     prev: ["Silver Axe"],
     exclusive: ["Michalis", "Minerva"],
     effect: "Accelerates Special trigger (cooldown count-1).",
+  },
+  {
+    name: "Hawk King Claw",
+    effect: "Grants Atk+3. If foe's HP = 100% and if unit initiates combat, unit makes a guaranteed follow-up attack. At start of turn if unit is adjacent to only beast or dragon allies or if unit is not adjacent to any ally, unit transforms (otherwise, unit reverts). If unit transforms, unit can move 1 extra space. (That turn only. Does not stack.) If unit transforms, grants Atk+2.",
+    weaponType: "Beast",
+    spCost: 400,
+    range: 1,
+    damage: 14,
+    stats: {atk: 3},
+    exclusive: ["Tibarn"]
   },
   {
     name: "Heavy Spear",
@@ -2214,6 +2260,16 @@ module.exports = [
     colorType: "Blue",
     prev: ["Heavy Spear"],
     effect: "Effective against armored units."
+  },
+  {
+    name: "Heron Wing",
+    effect: "Grants Spd+3. At start of turn, restores 7 HP to allies within 2 spaces of unit. At start of turn if unit is adjacent to only beast or dragon allies or if unit is not adjacent to any ally, unit transforms (otherwise, unit reverts). If unit transforms, unit can move 1 extra space. (That turn only. Does not stack.) If unit transforms, grants Atk+2.",
+    weaponType: "Beast",
+    spCost: 400,
+    range: 1,
+    damage: 14,
+    stats: {spd: 3},
+    exclusive: ["Leanne", "Reyson"]
   },
   {
     name: "Hibiscus Tome",
@@ -3237,6 +3293,16 @@ module.exports = [
     colorType: "Red",
     prev: ["Rauðrwolf"],
     effect: "Effective against cavalry units."
+  },
+  {
+    name: "Raven King Beak",
+    effect: "Grants Spd+3. If unit's Spd > foe's Spd, deals damage = 70% of difference between stats. (Maximum bonus of +7 damage. Combos with Phantom Spd.) At start of turn, if unit is adjacent to only beast or dragon allies or if unit is not adjacent to any ally, unit transforms (otherwise, unit reverts). If unit transforms, unit can move 1 extra space. (That turn only. Does not stack.) If unit transforms, grants Atk+2.",
+    weaponType: "Beast",
+    spCost: 400,
+    range: 1,
+    damage: 14,
+    stats: {spd: 3},
+    exclusive: ["Naesala"]
   },
   {
     name: "Reese's Tome",
@@ -4310,7 +4376,7 @@ module.exports = [
     weaponType: "Tome",
     colorType: "Blue",
     exclusive: ["Tailtiu"],
-    effect: "",
+    effect: "At start of turn, if unit's HP ≤ 75% and unit's attack triggers Special, grants Special cooldown count-1, and deals +10 damage when Special triggers.",
   },
   {
     name: "Trilemma",
@@ -4481,6 +4547,15 @@ module.exports = [
     exclusive: ["Lute"],
     effect: "Grants Spd+3. At start of turn, all foes in cardinal directions, and with Res 1 or more lower than unit, suffer Spd-5 until the end of foes' next actions.",
   },
+  // {
+  //   name: "Whelp (Infantry)",
+  //   effect: "At start of turn, if unit is adjacent to only beast or dragon allies or if unit is not adjacent to any&amp;#10;ally, unit transforms (otherwise, unit reverts). If unit transforms, grants Atk+2 and deals +10 damage when Special triggers.",
+  //   weaponType: "Beast",
+  //   include: [{moveType: "Infantry"}],
+  //   spCost: 50,
+  //   range: 1,
+  //   damage: 4
+  // },
   {
     name: "Whitewing Blade",
     spCost: 400,
@@ -4614,6 +4689,15 @@ module.exports = [
     prev: ["Silver Axe"],
     stats: {def: 3},
     effect: "Grants Def+3. If the number of foes within 2 spaces (excluding target) ≥ the number of allies within 2 spaces (excluding unit), grants Atk/Spd/Def/Res+4 during combat."
+  },
+  {
+    name: "Wolf Queen Fang",
+    effect: "Accelerates Special trigger (cooldown count-1). During combat, boosts unit's Atk/Spd by number of allies within 2 spaces × 2. (Maximum bonus of +6 to each stat.) At start of turn, if unit is adjacent to only beast or dragon allies or if unit is not adjacent to any ally, unit transforms (otherwise, unit reverts). If unit transforms, grants Atk+2 and deals +10 damage when Special triggers.",
+    weaponType: "Beast",
+    spCost: 400,
+    range: 1,
+    damage: 14,
+    exclusive: ["Nailah"]
   },
   {
     name: "Yato",
