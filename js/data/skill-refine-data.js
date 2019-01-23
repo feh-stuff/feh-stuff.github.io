@@ -2794,7 +2794,122 @@ module.exports = {
       effect: "At start of turn, inflicts Atk/Spd-5 on foe on the enemy team with the highest Def through its next action. The enemy cannot counterattack."
     }
   ],
-
+  "Splashy Bucket+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Effective against dragon foes. Disables foe's skills that \"calculate damage using the lower of foe's Def or Res\" and \"calculate damage from staff like other weapons.\" After combat, if unit attacked, inflicts Def/Res-5 on foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Effective against dragon foes. Disables foe's skills that \"calculate damage using the lower of foe's Def or Res\" and \"calculate damage from staff like other weapons.\" After combat, if unit attacked, inflicts Def/Res-5 on foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Effective against dragon foes. Disables foe's skills that \"calculate damage using the lower of foe's Def or Res\" and \"calculate damage from staff like other weapons.\" After combat, if unit attacked, inflicts Def/Res-5 on foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "Effective against dragon foes. Disables foe's skills that \"calculate damage using the lower of foe's Def or Res\" and \"calculate damage from staff like other weapons.\" After combat, if unit attacked, inflicts Def/Res-5 on foes within 2 spaces of target through their next actions."
+    }
+  ],
+  "Ouch Pouch+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "At the start of turn 1, grants Special cooldown count-2. After combat, if unit attacked, inflicts Def/Res-7 on foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "At the start of turn 1, grants Special cooldown count-2. After combat, if unit attacked, inflicts Def/Res-7 on foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "At the start of turn 1, grants Special cooldown count-2. After combat, if unit attacked, inflicts Def/Res-7 on foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "At the start of turn 1, grants Special cooldown count-2. After combat, if unit attacked, inflicts Def/Res-7 on foes within 2 spaces of target through their next actions."
+    }
+  ],
+  "Red-Hot Ducks+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "If unit's Spd > foe's Spd, deals damage = 70% of difference between stats. (Maximum bonus of +7 damage. Combos with Phantom Spd.) After combat, if unit attacked, inflicts Def/Res-7 on foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "If unit's Spd > foe's Spd, deals damage = 70% of difference between stats. (Maximum bonus of +7 damage. Combos with Phantom Spd.) After combat, if unit attacked, inflicts Def/Res-7 on foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "If unit's Spd > foe's Spd, deals damage = 70% of difference between stats. (Maximum bonus of +7 damage. Combos with Phantom Spd.) After combat, if unit attacked, inflicts Def/Res-7 on foes within 2 spaces of target through their next actions."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "If unit's Spd > foe's Spd, deals damage = 70% of difference between stats. (Maximum bonus of +7 damage. Combos with Phantom Spd.) After combat, if unit attacked, inflicts Def/Res-7 on foes within 2 spaces of target through their next actions."
+    }
+  ],
+  "It's Curtains...+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 2},
+      effect: "At the start of turn 1, grants Special cooldown count-2."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, spd: 3},
+      effect: "At the start of turn 1, grants Special cooldown count-2."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, def: 4},
+      effect: "At the start of turn 1, grants Special cooldown count-2."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, res: 4},
+      effect: "At the start of turn 1, grants Special cooldown count-2."
+    }
+  ],
+  "Grandscratcher+": [
+    {
+      name: "Wrathful Staff",
+      icon: "32-1",
+      effect: "At the start of turn 1, grants Special cooldown count-1 to ally with the highest Atk. (If that ally does not have a special skill, this skill has no effect.). Damage from unit's staff will be calculated the same as other weapons."
+    },
+    {
+      name: "Dazzling Staff",
+      icon: "32-2",
+      effect: "At the start of turn 1, grants Special cooldown count-1 to ally with the highest Atk. (If that ally does not have a special skill, this skill has no effect.). The enemy cannot counterattack."
+    }
+  ],
 
   // prf weapons
   "Sol Katti": [

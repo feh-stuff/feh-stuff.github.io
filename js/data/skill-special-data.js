@@ -174,6 +174,20 @@ module.exports = [
     effect: "Boosts damage dealt by 30% of unit's Spd. Grants Atk/Spd/Def/Res+4 to unit and all allies for 1 turn after combat. (Bonus granted to allies even if unit's HP reaches 0.)"
   },
   {
+    name: "Fireflood Balm",
+    cooldown: 1,
+    spCost: 200,
+    include: [{weaponType: "Staff"}],
+    effect: "When healing an ally with a staff, grants Atk/Res+4 to all allies for 1 turn."
+  },
+  {
+    name: "Fireflood Balm+",
+    cooldown: 1,
+    spCost: 300,
+    include: [{weaponType: "Staff"}],
+    effect: "When healing an ally with a staff, grants Atk/Res+6 to all allies for 1 turn."
+  },
+  {
     name: "Galeforce",
     cooldown: 5,
     spCost: 500,

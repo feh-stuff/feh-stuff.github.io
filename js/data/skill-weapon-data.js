@@ -1880,6 +1880,25 @@ module.exports = [
     effect: "Enables counterattack regardless of distance if this unit is attacked.",
   },
   {
+    name: "Grandscratcher",
+    spCost: 150,
+    damage: 5,
+    range: 2,
+    weaponType: "Staff",
+    colorType: "Neutral",
+    effect: "At the start of turn 1, grants Special cooldown count-1 to ally with the highest Atk. (If that ally does not have a special skill, this skill has no effect.)"
+  },
+  {
+    name: "Grandscratcher+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Staff",
+    colorType: "Neutral",
+    prev: ["Grandscratcher"],
+    effect: "At the start of turn 1, grants Special cooldown count-1 to ally with the highest Atk. (If that ally does not have a special skill, this skill has no effect.)"
+  },
+  {
     name: "Gratia",
     spCost: 200,
     damage: 8,
@@ -2399,6 +2418,26 @@ module.exports = [
     weaponType: "Sword",
     colorType: "Red",
     effect: "-"
+  },
+  {
+    name: "It's Curtains...",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Steel Lance"],
+    effect: "At the start of turn 1, grants Special cooldown count-2."
+  },
+  {
+    name: "It's Curtains...+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["It's Curtains..."],
+    effect: "At the start of turn 1, grants Special cooldown count-2."
   },
   {
     name: "Ivaldi",
@@ -3075,6 +3114,24 @@ module.exports = [
     effect: "Adds total bonuses on unit to damage dealt."
   },
   {
+    name: "Ouch Pouch",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Steel Dagger"],
+    effect: "At the start of turn 1, grants Special cooldown count-2. After combat, if unit attacked, inflicts Def/Res-7 on foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Ouch Pouch+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Ouch Pouch"],
+    effect: "At the start of turn 1, grants Special cooldown count-2. After combat, if unit attacked, inflicts Def/Res-7 on foes within 2 spaces of target through their next actions."
+  },
+  {
     name: "Pain",
     spCost: 150,
     damage: 3,
@@ -3303,6 +3360,24 @@ module.exports = [
     damage: 14,
     stats: {spd: 3},
     exclusive: ["Naesala"]
+  },
+  {
+    name: "Red-Hot Ducks",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Steel Dagger"],
+    effect: "If unit's Spd > foe's Spd, deals damage = 70% of difference between stats. (Maximum bonus of +7 damage. Combos with Phantom Spd.) After combat, if unit attacked, inflicts Def/Res-7 on foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Red-Hot Ducks+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Red-Hot Ducks"],
+    effect: "If unit's Spd > foe's Spd, deals damage = 70% of difference between stats. (Maximum bonus of +7 damage. Combos with Phantom Spd.) After combat, if unit attacked, inflicts Def/Res-7 on foes within 2 spaces of target through their next actions."
   },
   {
     name: "Reese's Tome",
@@ -4078,6 +4153,24 @@ module.exports = [
     prev: ["Flametongue"],
     exclusive: ["Myrrh (The Land's Bounty)"],
     effect: "Grants Def+3. If initiates combat and unit’s Def ≥ foe’s Def+5, unit makes a guaranteed follow-up attack. If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
+  },
+  {
+    name: "Splashy Bucket",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Steel Dagger"],
+    effect: "Effective against dragon foes. Disables foe's skills that \"calculate damage using the lower of foe's Def or Res\" and \"calculate damage from staff like other weapons.\" After combat, if unit attacked, inflicts Def/Res-7 on foes within 2 spaces of target through their next actions."
+  },
+  {
+    name: "Splashy Bucket+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Dagger",
+    prev: ["Splashy Bucket"],
+    effect: "Effective against dragon foes. Disables foe's skills that \"calculate damage using the lower of foe's Def or Res\" and \"calculate damage from staff like other weapons.\" After combat, if unit attacked, inflicts Def/Res-7 on foes within 2 spaces of target through their next actions."
   },
   {
     name: "Starfish",

@@ -1,5 +1,26 @@
 module.exports = [
   {
+    name: "Air Orders 1",
+    icon: "57-2",
+    effect: "At start of turn, if unit's HP = 100%, grants the following status to adjacent flying allies for 1 turn: \"Unit can move to a space adjacent to any ally within 2 spaces.\"",
+    spCost: 60,
+    include: [{moveType: "Flying"}],
+  },
+  {
+    name: "Air Orders 2",
+    icon: "57-3",
+    effect: "At start of turn, if unit's HP ≥ 50%, grants the following status to adjacent flying allies for 1 turn: \"Unit can move to a space adjacent to any ally within 2 spaces.\"",
+    spCost: 120,
+    include: [{moveType: "Flying"}],
+  },
+  {
+    name: "Air Orders 3",
+    icon: "57-4",
+    effect: "At start of turn, grants the following status effect to adjacent flying allies for 1 turn: \"Unit can move to a space adjacent to any ally within 2 spaces.\"",
+    spCost: 240,
+    include: [{moveType: "Flying"}],
+  },
+  {
     name: "Armor March 1",
     spCost: 60,
     icon: "25-5",
@@ -1175,6 +1196,26 @@ module.exports = [
     icon: "56-9",
     include: [{name:"Eir"}],
     effect: "At start of turn, restores 10 HP to ally that has been dealt the most damage. (Excludes unit.)"
+  },
+  {
+    name: "Spd Opening 1",
+    spCost: 60,
+    icon: "56-12",
+    effect: "At start of turn, grants Spd+2 to ally with the highest Spd for 1 turn. (Excludes unit.)"
+  },
+  {
+    name: "Spd Opening 2",
+    spCost: 120,
+    icon: "57-0",
+    prev: ["Spd Opening 1"],
+    effect: "At start of turn, grants Spd+4 to ally with the highest Spd for 1 turn. (Excludes unit.)"
+  },
+  {
+    name: "Spd Opening 3",
+    spCost: 240,
+    icon: "57-1",
+    prev: ["Spd Opening 2"],
+    effect: "At start of turn, grants Spd+6 to ally with the highest Spd for 1 turn. (Excludes unit.)"
   },
   {
     name: "Spd Ploy 1",

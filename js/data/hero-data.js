@@ -1105,6 +1105,43 @@ module.exports = [
     }
   },
   {
+    name: "Camilla (Hostile Springs)",
+    shortName: "Camilla",
+    title: "Steamy Secrets",
+    artist: "lack",
+    voice: "Misty Lee",
+    releaseDate: "Jan 25, 2019",
+    colorType: "Neutral",
+    weaponType: "Dagger",
+    moveType: "Flying",
+    pool: [ "pool2" ],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Camilla (Hostile Springs).png",
+      main: "img/heroes-main/Camilla (Hostile Springs).png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 4 },
+      { name: "Steel Dagger", rarity: 4 },
+      { name: "Ouch Pouch", rarity: 4 },
+      { name: "Ouch Pouch+", rarity: 5 },
+      { name: "Night Sky", rarity: 4 },
+      { name: "Glimmer", rarity: 4 },
+      { name: "Attack +1", rarity: 4 },
+      { name: "Atk/Spd 1", rarity: 4 },
+      { name: "Atk/Spd 2", rarity: 5 },
+      { name: "Hone Atk 1", rarity: 4 },
+      { name: "Hone Atk 2", rarity: 4 },
+      { name: "Hone Fliers", rarity: 4 }
+    ],
+    stats: {
+      level1_4: { hp: 15, atk: 9, spd: 9, def: 3, res: 5 },
+      level1: { hp: 16, atk: 9, spd: 9, def: 4, res: 6 },
+      level40_4: { hp: [ 32, 35, 38 ], atk: [ 28, 31, 34 ], spd: [ 30, 33, 36 ], def: [ 12, 15, 18 ], res: [ 22, 25, 28 ] },
+      level40: { hp: [ 34, 38, 41 ], atk: [ 30, 33, 36 ], spd: [ 32, 35, 38 ], def: [ 13, 17, 20 ], res: [ 24, 28, 31 ] }
+    }
+  },
+  {
     name: "Camilla (Spring Festival)",
     shortName: "Camilla",
     artist: "Maeshima Shigeki (前嶋重機)",
@@ -2720,6 +2757,45 @@ module.exports = [
     stats: {
       level1: { hp: 15, atk: 8, spd: 8, def: 4, res: 8 },
       level40: { hp: [ 27, 30, 33 ], atk: [ 29, 32, 35 ], spd: [ 29, 32, 35 ], def: [ 16, 19, 22 ], res: [ 29, 32, 35 ] }
+    }
+  },
+  {
+    name: "Elise (Hostile Springs)",
+    shortName: "Elise",
+    title: "Bubbling Flower",
+    artist: "Mikuro (みく郎)",
+    voice: "Liv Strander",
+    releaseDate: "Jan 23, 2019",
+    colorType: "Red",
+    weaponType: "Dagger",
+    moveType: "Cavalry",
+    pool: [ "pool2" ],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Elise (Hostile Springs).png",
+      main: "img/heroes-main/Elise (Hostile Springs).png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 5 },
+      { name: "Steel Dagger", rarity: 5 },
+      { name: "Red-Hot Ducks", rarity: 5 },
+      { name: "Red-Hot Ducks+", rarity: 5 },
+      { name: "Rally Attack", rarity: 5 },
+      { name: "Rally Up Atk", rarity: 5 },
+      { name: "Rally Up Atk+", rarity: 5 },
+      { name: "Darting Blow 1", rarity: 5 },
+      { name: "Swift Sparrow 1", rarity: 5 },
+      { name: "Swift Sparrow 2", rarity: 5 },
+      { name: "Atk Feint 1", rarity: 5 },
+      { name: "Atk Feint 2", rarity: 5 },
+      { name: "Atk Feint 3", rarity: 5 },
+      { name: "Dagger Valor 1", rarity: 5 },
+      { name: "Dagger Valor 2", rarity: 5 },
+      { name: "Dagger Valor 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 15, atk: 7, spd: 11, def: 3, res: 7 },
+      level40: { hp: [ 31, 34, 38 ], atk: [ 30, 33, 36 ], spd: [ 34, 37, 40 ], def: [ 15, 18, 21 ], res: [ 19, 22, 25 ] }
     }
   },
   {
@@ -4349,6 +4425,43 @@ module.exports = [
     stats: {
       level1: { hp: 19, atk: 7, spd: 8, def: 6, res: 7 },
       level40: { hp: [ 37, 41, 44 ], atk: [ 32, 35, 38 ], spd: [ 29, 32, 35 ], def: [ 22, 25, 29 ], res: [ 21, 24, 27 ] }
+    }
+  },
+  {
+    name: "Hinoka (Hostile Springs)",
+    shortName: "Hinoka",
+    title: "Relaxed Warrior",
+    artist: "Foo Midori (碧風羽)",
+    voice: "Cindy Robinson",
+    releaseDate: "Jan 23, 2019",
+    colorType: "Green",
+    weaponType: "Dagger",
+    moveType: "Flying",
+    pool: [ "pool2" ],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Hinoka (Hostile Springs).png",
+      main: "img/heroes-main/Hinoka (Hostile Springs).png"
+    },
+    skills: [
+      { name: "Iron Dagger", rarity: 5 },
+      { name: "Steel Dagger", rarity: 5 },
+      { name: "Splashy Bucket", rarity: 5 },
+      { name: "Splashy Bucket+", rarity: 5 },
+      { name: "Draw Back", rarity: 5 },
+      { name: "Atk/Spd Bond 1", rarity: 5 },
+      { name: "Atk/Spd Bond 2", rarity: 5 },
+      { name: "Atk/Spd Bond 3", rarity: 5 },
+      { name: "Atk/Spd Link 1", rarity: 5 },
+      { name: "Atk/Spd Link 2", rarity: 5 },
+      { name: "Atk/Spd Link 3", rarity: 5 },
+      { name: "Air Orders 1", rarity: 5 },
+      { name: "Air Orders 2", rarity: 5 },
+      { name: "Air Orders 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 9, spd: 9, def: 3, res: 7 },
+      level40: { hp: [ 34, 38, 41 ], atk: [ 32, 35, 38 ], spd: [ 32, 35, 38 ], def: [ 12, 16, 19 ], res: [ 23, 26, 30 ] }
     }
   },
   {
@@ -9499,6 +9612,44 @@ module.exports = [
     }
   },
   {
+    name: "Ryoma (Hostile Springs)",
+    shortName: "Ryoma",
+    title: "Samurai at Ease",
+    artist: "PenekoR (п猫Ｒ)",
+    voice: "Matt Mercer",
+    releaseDate: "Jan 23, 2019",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Flying",
+    pool: [ "pool2" ],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Ryoma (Hostile Springs).png",
+      main: "img/heroes-main/Ryoma (Hostile Springs).png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "It's Curtains...", rarity: 5 },
+      { name: "It's Curtains...+", rarity: 5 },
+      { name: "New Moon", rarity: 5 },
+      { name: "Luna", rarity: 5 },
+      { name: "Atk/Def Solo 1", rarity: 5 },
+      { name: "Atk/Def Solo 2", rarity: 5 },
+      { name: "Atk/Def Solo 3", rarity: 5 },
+      { name: "Chill Spd 1", rarity: 5 },
+      { name: "Chill Spd 2", rarity: 5 },
+      { name: "Chill Spd 3", rarity: 5 },
+      { name: "Odd Def Wave 1", rarity: 5 },
+      { name: "Odd Def Wave 2", rarity: 5 },
+      { name: "Odd Def Wave 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 11, spd: 10, def: 4, res: 4 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 32, 35, 38 ], spd: [ 33, 36, 39 ], def: [ 25, 28, 31 ], res: [ 20, 23, 27 ] }
+    }
+  },
+  {
     name: "Ryoma (Legendary Heroes)",
     shortName: "Ryoma",
     title: "Supreme Samurai",
@@ -9671,6 +9822,46 @@ module.exports = [
       level40: { hp: [ 33, 36, 40 ], atk: [ 24, 28, 31 ], spd: [ 26, 30, 33 ], def: [ 21, 24, 28 ], res: [ 26, 30, 33 ] },
       level1_4: { hp: 16, atk: 5, spd: 8, def: 4, res: 8 },
       level40_4: { hp: [ 31, 34, 37 ], atk: [ 22, 25, 28 ], spd: [ 25, 28, 31 ], def: [ 19, 22, 25 ], res: [ 25, 28, 31 ] }
+    }
+  },
+  {
+    name: "Sakura (Hostile Springs)",
+    shortName: "Sakura",
+    title: "Hot-Spring Healer",
+    artist: "Amagaitaro (アマガイタロー)",
+    voice: "Brianna Knickerbocker",
+    releaseDate: "Jan 23, 2019",
+    colorType: "Colorless",
+    weaponType: "Staff",
+    moveType: "Flying",
+    pool: [ "pool2" ],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Sakura (Hostile Springs).png",
+      main: "img/heroes-main/Sakura (Hostile Springs).png"
+    },
+    skills: [
+      { name: "Assault", rarity: 5 },
+      { name: "Mend", rarity: 5 },
+      { name: "Grandscratcher", rarity: 5 },
+      { name: "Grandscratcher+", rarity: 5 },
+      { name: "Heal", rarity: 5 },
+      { name: "Physic", rarity: 5 },
+      { name: "Physic+", rarity: 5 },
+      { name: "Imbue", rarity: 5 },
+      { name: "Still-Water Balm", rarity: 5 },
+      { name: "Fireflood Balm", rarity: 5 },
+      { name: "Fireflood Balm+", rarity: 5 },
+      { name: "Wrathful Staff 1", rarity: 5 },
+      { name: "Wrathful Staff 2", rarity: 5 },
+      { name: "Wrathful Staff 3", rarity: 5 },
+      { name: "Spd Opening 1", rarity: 5 },
+      { name: "Spd Opening 2", rarity: 5 },
+      { name: "Spd Opening 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 9, spd: 8, def: 4, res: 6 },
+      level40: { hp: [ 33, 36, 40 ], atk: [ 32, 35, 38 ], spd: [ 29, 32, 35 ], def: [ 22, 26, 29 ], res: [ 18, 21, 24 ] }
     }
   },
   {

@@ -148,6 +148,21 @@ module.exports = [
     effect: "Unit automatically makes a follow-up when at HP ≤ 50% and attacking a foe that can counter."
   },
   {
+    name: "Brazen Atk/Def 1",
+    icon: "33-10",
+    effect: "If unit's HP ≤ 80% at the start of combat, grants Atk/Def+3 during combat."
+  },
+  {
+    name: "Brazen Atk/Def 2",
+    icon: "33-11",
+    effect: "If unit's HP ≤ 80% at the start of combat, grants Atk/Def+5 during combat."
+  },
+  {
+    name: "Brazen Atk/Def 3",
+    icon: "33-12",
+    effect: "If unit's HP ≤ 80% at the start of combat, grants Atk/Def+7 during combat."
+  },
+  {
     name: "Brazen Atk/Res 1",
     icon: "45-4",
     effect: "If unit's HP ≤ 80% at the start of combat, grants Atk/Res+3 during combat."
@@ -386,6 +401,21 @@ module.exports = [
     effect: "Unit receives 0 damage."
   },
   {
+    name: "Even Def Wave 1",
+    icon: "50-6",
+    effect: "At start of even-numbered turns, grants Def+2 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Even Def Wave 2",
+    icon: "50-7",
+    effect: "At start of even-numbered turns, grants Def+4 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
+    name: "Even Def Wave 3",
+    icon: "50-8",
+    effect: "At start of even-numbered turns, grants Def+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+  },
+  {
     name: "Fierce Stance 1",
     icon: "31-3",
     exclude: [{weaponType:"Staff"}],
@@ -402,6 +432,21 @@ module.exports = [
     icon: "31-5",
     exclude: [{weaponType:"Staff"}],
     effect: "Grants Atk+6 during combat when this unit is attacked."
+  },
+  {
+    name: "Fire Boost 1",
+    icon: "18-7",
+    effect: "If unit has at least 3 more HP than enemy at the start of combat, unit receives Atk+2 during combat."
+  },
+  {
+    name: "Fire Boost 2",
+    icon: "18-8",
+    effect: "If unit has at least 3 more HP than enemy at the start of combat, unit receives Atk+4 during combat."
+  },
+  {
+    name: "Fire Boost 3",
+    icon: "18-9",
+    effect: "If unit has at least 3 more HP than enemy at the start of combat, unit receives Atk+6 during combat."
   },
   {
     name: "Fortify Def 1",

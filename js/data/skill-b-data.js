@@ -23,6 +23,26 @@ module.exports = [
     effect: "Unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces."
   },
   {
+    name: "Atk Feint 1",
+    spCost: 60,
+    icon: "56-9",
+    effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Atk-3 on foes in cardinal directions of unit through their next action."
+  },
+  {
+    name: "Atk Feint 2",
+    spCost: 120,
+    icon: "56-10",
+    prev: ["Atk Feint 1"],
+    effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Atk-5 on foes in cardinal directions of unit through their next action."
+  },
+  {
+    name: "Atk Feint 3",
+    spCost: 240,
+    icon: "56-11",
+    prev: ["Atk Feint 2"],
+    effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Atk-7 on foes in cardinal directions of unit through their next action."
+  },
+  {
     name: "Atk/Def Link 1",
     spCost: 60,
     icon: "46-2",
