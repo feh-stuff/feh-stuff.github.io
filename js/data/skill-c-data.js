@@ -1601,6 +1601,13 @@ module.exports = [
     effect: "Inflicts Spd-5 on foes within 2 spaces through their next actions at the start of each turn."
   },
   {
+    name: "Upheaval",
+    spCost: 300,
+    icon: "57-8",
+    include: [{name:"Duma"}],
+    effect: "At the start of turn 1, deals 7 damage to all foes, and if defending in Aether Raids during anima season, destroys offensive structure within the same column as unit. (Does not affect structures that cannot be destroyed.)"
+  },
+  {
     name: "Ward Armor",
     spCost: 200,
     icon: "11-8",

@@ -88,5 +88,11 @@ module.exports = [
     type: "Water",
     stats: { hp: 3, res: 4 },
     icon: 14
+  },
+  {
+    hero: "Duma",
+    type: "Anima",
+    stats: { hp: 5, res: 3 },
+    icon: 15
   }
 ];

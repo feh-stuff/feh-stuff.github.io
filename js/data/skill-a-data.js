@@ -557,6 +557,27 @@ module.exports = [
     effect: "Grants Def/Res+5 to this unit during combat if unit is adjacent to an ally."
   },
   {
+    name: "Def/Res Solo 1",
+    spCost: 60,
+    icon: "57-5",
+    effect: "If unit is not adjacent to an ally, grants Def/Res+2 during combat."
+  },
+  {
+    name: "Def/Res Solo 2",
+    spCost: 120,
+    icon: "57-6",
+    prev: ["Def/Res Solo 1"],
+    effect: "If unit is not adjacent to an ally, grants Def/Res+4 during combat."
+  },
+  {
+    name: "Def/Res Solo 3",
+    spCost: 240,
+    icon: "57-7",
+    prev: ["Def/Res Solo 2"],
+    last: true,
+    effect: "If unit is not adjacent to an ally, grants Def/Res+6 during combat."
+  },
+  {
     name: "Defense +1",
     spCost: 30,
     icon: "1-0",

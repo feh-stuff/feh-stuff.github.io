@@ -1383,6 +1383,16 @@ module.exports = [
     effect: "After combat, if unit attacked, inflicts Def/Res-7 on target and foes within 2 spaces of target through their next actions. Damage calculated using the lower of foe's Def or Res."
   },
   {
+    name: "Fell Breath",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Breath",
+    stats: {atk: 3},
+    exclusive: ["Duma"],
+    effect: "Grants Atk+3. At the start of combat, if foe’s HP < 100%, grants Atk/Res+6 during combat and foe cannot make a follow-up attack. If foe's Range = 2, calculates damage using the lower of foe's Def or Res.",
+  },
+  {
     name: "Fenrir",
     spCost: 200,
     damage: 9,

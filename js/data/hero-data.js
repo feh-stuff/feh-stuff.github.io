@@ -2415,6 +2415,41 @@ module.exports = [
     }
   },
   {
+    name: "Duma",
+    title: "God of Strength",
+    artist: "Yoneko (米子)",
+    voice: "Josh Petersdorf",
+    releaseDate: "Jan 30, 2019",
+    colorType: "Neutral",
+    weaponType: "Breath",
+    moveType: "Armored",
+    pool: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Duma.png",
+      main: "img/heroes-main/Duma.png"
+    },
+    skills: [
+      { name: "Fire Breath", rarity: 5 },
+      { name: "Fire Breath+", rarity: 5 },
+      { name: "Flametongue", rarity: 5 },
+      { name: "Fell Breath", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Draconic Aura", rarity: 5 },
+      { name: "Def/Res Solo 1", rarity: 5 },
+      { name: "Def/Res Solo 2", rarity: 5 },
+      { name: "Def/Res Solo 3", rarity: 5 },
+      { name: "Bold Fighter 1", rarity: 5 },
+      { name: "Bold Fighter 2", rarity: 5 },
+      { name: "Bold Fighter 3", rarity: 5 },
+      { name: "Upheaval", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 24, atk: 10, spd: 6, def: 8, res: 7 },
+      level40: { hp: [ 45, 48, 51 ], atk: [ 37, 40, 44 ], spd: [ 18, 21, 24 ], def: [ 31, 34, 37 ], res: [ 28, 31, 34 ] }
+    }
+  },
+  {
     name: "Effie",
     title: "Army of One",
     artist: "HACCAN",

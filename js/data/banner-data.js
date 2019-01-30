@@ -3,6 +3,51 @@ module.exports = [
     date: "January 2019",
     banners: [
       {
+        name: "Mythic Heroes: Duma - God of Strength",
+        startDate: "Jan 30, 2019",
+        focusHeroes: [ "Duma", "Ike (Legendary Heroes)", "Lyn (Legendary Heroes)", "Linde (A Sketchy Summer)", "Ryoma (Festival in Hoshido)", "Elincia (Festival in Hoshido)", "Ephraim (Brave Heroes)", "Laegjarn", "Tiki (Young) (Legendary Heroes)", "Loki", "Kliff", "Eirika (Legendary Heroes)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Mothers and Sons Voting Gauntlet (Sons)",
+        startDate: "Jan 28, 2019",
+        focusHeroes: [ "Corrin (M) (Adrift)", "Leif", "Owain" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Mothers and Sons Voting Gauntlet (Mothers)",
+        startDate: "Jan 28, 2019",
+        focusHeroes: [ "Mikoto (Adrift)", "Lissa", "Cherche" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Elincia and Nephenee's Battle",
+        startDate: "Jan 27, 2019",
+        focusHeroes: [ "Elincia", "Ike (Brave Heroes)", "Nephenee" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Heating Things Up Tempest Trials",
+        startDate: "Jan 24, 2019",
+        focusHeroes: [ "Leo", "Takumi" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "Hostile Springs",
         startDate: "Jan 23, 2019",
         focusHeroes: [ "Ryoma (Hostile Springs)", "Hinoka (Hostile Springs)", "Elise (Hostile Springs)", "Sakura (Hostile Springs)" ],
