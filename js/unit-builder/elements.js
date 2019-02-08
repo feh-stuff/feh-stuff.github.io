@@ -24,6 +24,7 @@ module.exports = {
   SELECT_SKILLB: '#select-skillB',
   SELECT_SKILLC: '#select-skillC',
   SELECT_SEAL: '#select-seal',
+  SELECT_FLOWERS: '#select-dragonflowers',
   SELECT_BLESSING_TYPE: '#select-blessing-type',
   SELECT_BLESSING_HERO: '.blessing-hero',
   SKILL_INFO: '.skill-info',

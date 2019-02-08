@@ -1024,6 +1024,26 @@ module.exports = [
     effect: "At the start of every second turn, restores 10 HP."
   },
   {
+    name: "Res Feint 1",
+    spCost: 60,
+    icon: "58-3",
+    effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Res-3 on foes in cardinal directions of unit through their next action."
+  },
+  {
+    name: "Res Feint 2",
+    spCost: 120,
+    icon: "58-4",
+    prev: ["Res Feint 1"],
+    effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Res-5 on foes in cardinal directions of unit through their next action."
+  },
+  {
+    name: "Res Feint 3",
+    spCost: 240,
+    icon: "58-5",
+    prev: ["Res Feint 2"],
+    effect: "If a Rally Assist skill is used by unit or targets unit, inflicts Res-7 on foes in cardinal directions of unit through their next action."
+  },
+  {
     name: "Rockslide Dance 1",
     spCost: 120,
     icon: "47-4",

@@ -358,7 +358,7 @@ module.exports = [
     name: "Radiant Aether",
     cooldown: 4,
     spCost: 500,
-    include: [{name: "Ike (Legendary Heroes)"}],
+    include: [{name: "Ike (Legendary Heroes)"}, {name: "Ike (Greil's Devoted)"}],
     effect: "During combat, treats foe's Def/Res as if reduced by 50%. Restores HP = 50% of damage dealt."
   },
   {

@@ -1,5 +1,23 @@
 module.exports = [
   {
+    name: "Aerobatics 1",
+    icon: "43-8",
+    include: [{moveType: "Flying"}],
+    effect: "If unit has 100% HP, unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces."
+  },
+  {
+    name: "Aerobatics 2",
+    icon: "43-9",
+    include: [{moveType: "Flying"}],
+    effect: "If unit has ≥ 50% HP, unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces."
+  },
+  {
+    name: "Aerobatics 3",
+    icon: "43-10",
+    include: [{moveType: "Flying"}],
+    effect: "Unit can move to a space adjacent to any infantry, armored, or cavalry ally within 2 spaces."
+  },
+  {
     name: "Armored Boots",
     icon: "37-6",
     include: [{moveType: "Armored"}],
@@ -206,6 +224,27 @@ module.exports = [
     name: "Close Def 3",
     icon: "19-12",
     effect: "If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+6 during combat."
+  },
+  {
+    name: "Darting Blow 1",
+    icon: "2-2",
+    exclude: [{weaponType:"Staff"}],
+    effect: "Grants Spd+2 during combat if unit initiates the attack."
+  },
+  {
+    name: "Darting Blow 2",
+    icon: "2-3",
+    exclude: [{weaponType:"Staff"}],
+    prev: ["Darting Blow 1"],
+    effect: "Grants Spd+4 during combat if unit initiates the attack."
+  },
+  {
+    name: "Darting Blow 3",
+    icon: "2-4",
+    exclude: [{weaponType:"Staff"}],
+    prev: ["Darting Blow 2"],
+    last: true,
+    effect: "Grants Spd+6 during combat if unit initiates the attack."
   },
   {
     name: "Darting Stance 1",
@@ -1378,6 +1417,26 @@ module.exports = [
     name: "Threaten Spd 3",
     icon: "13-10",
     effect: "Inflicts Spd-5 on foes within 2 spaces through their next actions at the start of each turn."
+  },
+  {
+    name: "Torrent Dance 1",
+    icon: "28-1",
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Res+3."
+  },
+  {
+    name: "Torrent Dance 2",
+    icon: "28-2",
+    prev: ["Blaze Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Res+4."
+  },
+  {
+    name: "Torrent Dance 3",
+    icon: "28-3",
+    prev: ["Blaze Dance 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Res+5."
   },
   {
     name: "Water Boost 1",

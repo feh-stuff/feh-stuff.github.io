@@ -359,6 +359,25 @@ module.exports = [
     effect: "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt."
   },
   {
+    name: "Blárblooms",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+  },
+  {
+    name: "Blárblooms+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Blue",
+    prev: ["Blárblooms"],
+    effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+  },
+  {
     name: "Blárowl",
     spCost: 200,
     damage: 6,
@@ -1343,6 +1362,26 @@ module.exports = [
     effect: "If attacked, unit can counterattack regardless of foe's range. If foe's Range = 2, damage calculated using the lower of foe's Def or Res.",
   },
   {
+    name: "Faithful Axe",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Steel Axe"],
+    effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+  },
+  {
+    name: "Faithful Axe+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    prev: ["Heart's Blade"],
+    effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+  },
+  {
     name: "Falchion",
     spCost: 400,
     damage: 16,
@@ -1890,6 +1929,16 @@ module.exports = [
     effect: "Enables counterattack regardless of distance if this unit is attacked.",
   },
   {
+    name: "Grado Poleax",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Axe",
+    colorType: "Green",
+    exclusive: ["Amelia"],
+    effect: "Accelerates Special trigger (cooldown count-1)."
+  },
+  {
     name: "Grandscratcher",
     spCost: 150,
     damage: 5,
@@ -2040,6 +2089,25 @@ module.exports = [
     colorType: "Green",
     prev: ["Gronnblade"],
     effect: "Slows Special trigger (cooldown count+1). Adds total bonuses on unit to damage dealt."
+  },
+  {
+    name: "Gronnblooms",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+  },
+  {
+    name: "Gronnblooms+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    prev: ["Gronnblooms"],
+    effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
   },
   {
     name: "Gronnowl",
@@ -2271,6 +2339,26 @@ module.exports = [
     exclusive: ["Tibarn"]
   },
   {
+    name: "Heart's Blade",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Steel Sword"],
+    effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+  },
+  {
+    name: "Heart's Blade+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    prev: ["Heart's Blade"],
+    effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+  },
+  {
     name: "Heavy Spear",
     spCost: 200,
     damage: 8,
@@ -2332,6 +2420,16 @@ module.exports = [
     effect: "Grants Spd+3. At start of turn, inflicts Atk/Spd/Def/Res-4 on nearest foes within 4 spaces through their next actions.",
   },
   {
+    name: "Hinata's Katana",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    exclusive: ["Hinata"],
+    effect: "If foe initiates combat, grants Atk/Def+4 during combat."
+  },
+  {
     name: "Hinoka's Spear",
     spCost: 400,
     damage: 16,
@@ -2384,6 +2482,16 @@ module.exports = [
     exclusive: ["Gharnef"],
     stats: {res: 3},
     effect: "Grants Res+3. At the start of turn 3, deals 5 damage to non-magic foes within 5 columns centered on unit, and inflicts status on those foes preventing counterattacks through their next actions."
+  },
+  {
+    name: "Iris's Tome",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    exclusive: ["Nino"],
+    effect: "Adds total bonuses on unit to damage dealt.",
   },
   {
     name: "Iron Axe",
@@ -2882,6 +2990,25 @@ module.exports = [
     effect: "Grants Res+3. Skills with \"effective against dragons\" are effective against unit. If foe has no skills with \"effective against dragons\", inflicts Atk-6 on foe during combat.",
   },
   {
+    name: "Loyal Wreath",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Red",
+    effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+  },
+  {
+    name: "Loyal Wreath+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Red",
+    prev: ["Loyal Wreath"],
+    effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+  },
+  {
     name: "Lyfjaberg",
     spCost: 400,
     damage: 14,
@@ -3091,6 +3218,16 @@ module.exports = [
     effect: "Grants Atk+3. During combat, boosts unit's Atk/Spd by number of allies within 2 spaces x 2. (Maximum bonus of +6 to each stat.)"
   },
   {
+    name: "Niles's Bow",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Bow",
+    colorType: "Neutral",
+    exclusive: ["Niles"],
+    effect: "Accelerates Special trigger (cooldown count-1). Effective against flying foes. If foe's Def ≥ foe's Res+5, deals +7 damage.",
+  },
+  {
     name: "Níu",
     spCost: 400,
     damage: 16,
@@ -3112,6 +3249,16 @@ module.exports = [
     prev: ["Silver Axe"],
     exclusive: ["Anna"],
     effect: "Unit may move adjacent to any ally when HP ≤ 40%.",
+  },
+  {
+    name: "Oboro's Spear",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    exclusive: ["Oboro"],
+    effect: "Effective against armored foes."
   },
   {
     name: "Odin's Grimoire",
@@ -3905,6 +4052,16 @@ module.exports = [
     effect: "-"
   },
   {
+    name: "Silverbrand",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    exclusive: ["Seth"],
+    effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+  },
+  {
     name: "Sinmara",
     spCost: 400,
     damage: 16,
@@ -4357,6 +4514,16 @@ module.exports = [
     prev: ["Shine"],
     exclusive: ["Micaiah"],
     effect: "Grants Res+3. Effective against armored and cavalry foes. Against armored and cavalry foes using bow, dagger, magic, or staff, damage from first attack received by unit during combat reduced by 30%."
+  },
+  {
+    name: "Tharja's Hex",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Red",
+    exclusive: ["Tharja"],
+    effect: "Adds total bonuses on unit to damage dealt.",
   },
   {
     name: "The Cleaner",

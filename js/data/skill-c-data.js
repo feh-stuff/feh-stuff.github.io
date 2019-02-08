@@ -1108,6 +1108,26 @@ module.exports = [
     effect: "If unit survives, all red tome users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)"
   },
   {
+    name: "Res Opening 1",
+    spCost: 60,
+    icon: "58-6",
+    effect: "At start of turn, grants Res+2 to ally with the highest Res for 1 turn. (Excludes unit.)"
+  },
+  {
+    name: "Res Opening 2",
+    spCost: 120,
+    icon: "58-7",
+    prev: ["Res Opening 1"],
+    effect: "At start of turn, grants Res+4 to ally with the highest Res for 1 turn. (Excludes unit.)"
+  },
+  {
+    name: "Res Opening 3",
+    spCost: 240,
+    icon: "58-8",
+    prev: ["Res Opening 2"],
+    effect: "At start of turn, grants Res+6 to ally with the highest Res for 1 turn. (Excludes unit.)"
+  },
+  {
     name: "Res Ploy 1",
     spCost: 60,
     icon: "23-8",

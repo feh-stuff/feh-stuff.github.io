@@ -39,7 +39,8 @@ let fehUnit = {
   blessingIcon: -1,
   allies: [],
   sp: values.CONST.MAX_SP,
-  hm: values.CONST.MAX_HM
+  hm: values.CONST.MAX_HM,
+  dragonflowers: 0
 };
 
 function init(canvasObj) {
@@ -63,6 +64,12 @@ function init(canvasObj) {
     optionGenerator: utils.arrOptGenerator,
     search: false
   });
+  $(elements.SELECT_FLOWERS).selectable({
+    data: [],
+    optionGenerator: utils.arrOptGenerator,
+    search: false,
+    disabled: 'disabled'
+  });  
   $(elements.SELECT_BUFFS).selectable({
     data: values.CONST.BUFFS,
     optionGenerator: utils.arrOptGenerator,
@@ -107,6 +114,7 @@ function bindEvents() {
   $(elements.INPUT_SP_HM).on('change', onSpHmChange);
 
   $(elements.SELECT_BUFFS).on('select', onBuffSelect);
+  $(elements.SELECT_FLOWERS).on('select', onDragonflowerSelect);
   $(elements.SELECT_SUPPORT).on('change', onSupportChange);
   $(elements.SELECT_TT).on('change', onTempestBuffChange);
   $(elements.SELECT_BLESSING_TYPE).on('select', onBlessingTypeChange);
@@ -150,6 +158,15 @@ function onHeroSelect(event) {
     $(elements.SELECT_BLESSING_HERO)
         .selectable('reset')
         .selectable('disable');
+  }
+
+  let release = new Date(hero.releaseDate);
+  let dflowerDate = new Date('Feb 07 2019');
+  fehUnit.dragonflowers = 0;
+  if (hero.moveType === 'Infantry' && release < dflowerDate) {
+    $(elements.SELECT_FLOWERS).selectable('data', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  } else {
+    $(elements.SELECT_FLOWERS).selectable('data', [0, 1, 2, 3, 4, 5]);
   }
 
   if (hero.name === 'Leif' && Math.random() < 0.5) {
@@ -235,6 +252,10 @@ function onBuffSelect(event) {
 };
 function onSupportChange(event) {
   fehUnit.support = $(elements.SELECT_SUPPORT_ON).is(':checked');
+  drawHero(fehUnit);
+}
+function onDragonflowerSelect(event) {
+  fehUnit.dragonflowers = $(event.currentTarget).data('val');
   drawHero(fehUnit);
 }
 
@@ -404,10 +425,16 @@ function processHeroStats(hero) {
   }
 
   if (hero.merges > 0) {
-    let mergeBoost = getMergeBoost(stats1, hero.merges);
+    let mergeBoost = getMergeBoost(stats1, hero);
+
     for (let st in mergeBoost) {
       stats40[st] += mergeBoost[st];
     }
+  }
+  if (hero.dragonflowers > 0) {
+    let flowerBoost = getFlowerBoost(stats1, hero.dragonflowers);
+    for (let st in flowerBoost) 
+      stats40[st] += flowerBoost[st];
   }
 
   for (let skill in hero.skills) {
@@ -451,7 +478,18 @@ function processHeroStats(hero) {
   }
   hero.stats = stats40;
 }
-function getMergeBoost(baseStats, merges) {
+function getFlowerBoost(baseStats, flowers) {
+  let statIncrease = { hp: 0, atk: 0, spd: 0, def: 0, res: 0 };
+  let stats = ['hp', 'atk', 'spd', 'def', 'res'];
+  stats.sort((s1, s2) => baseStats[s2] - baseStats[s1]);
+
+  for (let i = 0; i < flowers; i++) {
+    statIncrease[stats[i % 5]]++;
+  }
+
+  return statIncrease;
+}
+function getBoost(baseStats, merges) {
   let statIncrease = { hp: 0, atk: 0, spd: 0, def: 0, res: 0 };
   let stats = ['hp', 'atk', 'spd', 'def', 'res'];
   stats.sort((s1, s2) => baseStats[s2] - baseStats[s1]);
@@ -462,7 +500,21 @@ function getMergeBoost(baseStats, merges) {
   }
 
   return statIncrease;
-};
+}
+function getMergeBoost(baseStats, hero) {
+  let increase = getBoost(baseStats, hero.merges);
+  if (hero.iv.boon !== hero.iv.bane) {
+    let baneStats = hero.rarity === 5 ? hero.data.stats.level40[hero.iv.bane] : hero.data.stats.level40_4[hero.iv.bane];
+    increase[hero.iv.bane] += baneStats[1] - baneStats[0];
+  } else {
+    let stats = ['hp', 'atk', 'spd', 'def', 'res'];
+    stats.sort((s1, s2) => baseStats[s2] - baseStats[s1]);
+    increase[stats[0]]++;
+    increase[stats[1]]++;
+    increase[stats[2]]++;
+  }
+  return increase;
+}
 function toggleSkillInfo(skillType, skill) {
   new Promise(() => {
     let inheritance = [];

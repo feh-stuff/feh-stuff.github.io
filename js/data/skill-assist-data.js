@@ -165,6 +165,15 @@ module.exports = [
     effect: "Grants Def/Res+3 to an adjacent ally until the end of the turn."
   },
   {
+    name: "Rally Def/Res+",
+    range: 1,
+    spCost: 400,
+    prev: ["Rally Def/Res"],
+    exclude: [{weaponType: "Staff"}],
+    last: true,
+    effect: "Grants Def/Res+6 to target ally for 1 turn."
+  },
+  {
     name: "Rally Resistance",
     range: 1,
     spCost: 150,

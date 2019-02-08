@@ -2910,6 +2910,137 @@ module.exports = {
       effect: "At the start of turn 1, grants Special cooldown count-1 to ally with the highest Atk. (If that ally does not have a special skill, this skill has no effect.). The enemy cannot counterattack."
     }
   ],
+  "Heart's Blade+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 2},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, spd: 3},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, def: 4},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, res: 4},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    }
+  ],
+  "Faithful Axe+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 2},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, spd: 3},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, def: 4},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, res: 4},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    }
+  ],
+  "Gronnblooms+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    }
+  ],
+  "Blárblooms+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    }
+  ],
+  "Loyal Wreath+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
+    }
+  ],
+
 
   // prf weapons
   "Sol Katti": [
@@ -4909,6 +5040,299 @@ module.exports = {
       cost: 1,
       stats: {hp: 5, res: 4},
       effect: "At start of combat, if unit's HP ≥ 50%, grants: \"If unit's HP > 1 and foe would reduce unit's HP to 0, unit survives with 1 HP. (Once per combat. Does not stack.)\""
+    }
+  ],
+  "Durandal": [
+    {
+      name: "Swift Sparrow",
+      icon: "57-9",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "If unit initiates combat, grants Atk+6 during combat. If unit initiates combat, grants Atk/Spd+4 during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "If unit initiates combat, grants Atk+6 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "If unit initiates combat, grants Atk+6 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "If unit initiates combat, grants Atk+6 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "If unit initiates combat, grants Atk+6 during combat."
+    }
+  ],
+  "Silverbrand": [
+    {
+      name: "Spd Tactic",
+      icon: "57-10",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%. At start of turn, grants Spd+6 to allies within 2 spaces for 1 turn. Granted only if number of that ally's movement type on current team ≤ 2."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "If unit has weapon-triangle advantage, boosts Atk by 20%. If unit has weapon-triangle disadvantage, reduces Atk by 20%."
+    }
+  ],
+  "Oboro's Spear": [
+    {
+      name: "Close Defense",
+      icon: "57-11",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Effective against armored foes. If unit is attacked by foe using sword, axe, lance, or dragonstone, unit receives Def/Res+6 during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Effective against armored foes."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Effective against armored foes."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Effective against armored foes."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Effective against armored foes."
+    }
+  ],
+  "Iris's Tome": [
+    {
+      name: "Even Atk Wave",
+      icon: "57-12",
+      cost: 1,
+      effect: "Adds total bonuses on unit to damage dealt. At start of even-numbered turns, grants Atk+6 to unit and adjacent allies for 1 turn. (Bonus granted to unit even if no allies are adjacent.)"
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "Adds total bonuses on unit to damage dealt."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "Adds total bonuses on unit to damage dealt."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "Adds total bonuses on unit to damage dealt."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "Adds total bonuses on unit to damage dealt."
+    }
+  ],
+  "Grado Poleax": [
+    {
+      name: "Bonus Enhancement",
+      icon: "58-0",
+      cost: 1,
+      stats: {hp: 3},
+      effect: "Accelerates Special trigger (cooldown count-1). If a bonus granted by a skill like Rally or Hone and/or extra movement granted by a skill like Armor March or Armored Boots is active, grants Spd/Def+5 during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "Accelerates Special trigger (cooldown count-1)."
+    }
+  ],
+  "Hinata's Katana": [
+    {
+      name: "Fury",
+      icon: "32-0",
+      cost: 1,
+      stats: {hp: 3, atk: 3, spd: 3, def: 3, res: 3},
+      effect: "If foe initiates combat, grants Atk/Def+4 during combat. Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 5, atk: 2},
+      effect: "If foe initiates combat, grants Atk/Def+4 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 5, spd: 3},
+      effect: "If foe initiates combat, grants Atk/Def+4 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 5, def: 4},
+      effect: "If foe initiates combat, grants Atk/Def+4 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 5, res: 4},
+      effect: "If foe initiates combat, grants Atk/Def+4 during combat."
+    }
+  ],
+  "Tharja's Hex": [
+    {
+      name: "Red Curse",
+      icon: "58-1",
+      cost: 1,
+      effect: "Adds total bonuses on unit to damage dealt. Inflicts Atk/Spd-4 on foes within 2 spaces during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "Adds total bonuses on unit to damage dealt."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "Adds total bonuses on unit to damage dealt."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "Adds total bonuses on unit to damage dealt."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "Adds total bonuses on unit to damage dealt."
+    }
+  ],
+  "Niles's Bow": [
+    {
+      name: "Flashing Blade",
+      icon: "36-3",
+      cost: 1,
+      effect: "Accelerates Special trigger (cooldown count-1). Effective against flying foes. If foe's Def ≥ foe's Res+5, deals +7 damage. If unit's Spd - foe's Spd ≥ 1, unit gains Special cooldown charge +1 per attack. (If using other similar skill, only highest value applied.)"
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "Accelerates Special trigger (cooldown count-1). Effective against flying foes. If foe's Def ≥ foe's Res+5, deals +7 damage."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "Accelerates Special trigger (cooldown count-1). Effective against flying foes. If foe's Def ≥ foe's Res+5, deals +7 damage."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "Accelerates Special trigger (cooldown count-1). Effective against flying foes. If foe's Def ≥ foe's Res+5, deals +7 damage."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "Accelerates Special trigger (cooldown count-1). Effective against flying foes. If foe's Def ≥ foe's Res+5, deals +7 damage."
     }
   ],
 };

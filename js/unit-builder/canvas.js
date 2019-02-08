@@ -25,16 +25,24 @@ function setImages(img) {
 
 function drawHero(hero, heroImg) {
   if (hero.support) {
-    ctx.drawImage(images.BACK, 540, 0, 540, 960, 0, 0, 540, 960);
+    if (hero.rarity === 5) {
+      ctx.drawImage(images.BACK, 540, 960, 540, 960, 0, 0, 540, 960);
+    } else {
+      ctx.drawImage(images.BACK, 540, 0, 540, 960, 0, 0, 540, 960);
+    }
   } else {
-    ctx.drawImage(images.BACK, 0, 0);
+    if (hero.rarity === 5) {
+      ctx.drawImage(images.BACK, 0, 960, 540, 960, 0, 0, 540, 960);
+    } else {
+      ctx.drawImage(images.BACK, 0, 0, 540, 960, 0, 0, 540, 960);
+    }
   }
 
   ctx.drawImage(heroImg, 0, 0);
   ctx.drawImage(images.FRONT, 0, 0);
 
   if ($(elements.SELECT_IV_SHOW).is(':checked')) {
-    drawIv(hero.iv);
+    drawIv(hero.iv, hero.merges);
   }
   if ($(elements.SELECT_FULL_UI_SHOW).is(':checked')) {
     ctx.drawImage(images.FRONT, 540, 0, 540, 960, 0, 0, 540, 960);
@@ -46,9 +54,9 @@ function drawHero(hero, heroImg) {
   drawNameAndTitle(hero.data.shortName || hero.data.name, hero.data.title);
 
   if (hero.data.title === 'A Fucking') {
-    drawWeaponAndMoveType(hero.data.colorType, 'Leaf', 'Skates');
+    drawWeaponAndMoveType(hero.data.colorType, 'Leaf', 'Skates', hero.dragonflowers);
   } else {
-    drawWeaponAndMoveType(hero.data.colorType, hero.data.weaponType, hero.data.moveType);
+    drawWeaponAndMoveType(hero.data.colorType, hero.data.weaponType, hero.data.moveType, hero.dragonflowers);
   }
   drawMergesAndStats(hero.merges, hero.stats, hero.sp, hero.hm, hero.buffs);
   drawSkills(hero.skills);
@@ -91,19 +99,45 @@ function drawRarity(rarity) {
   ctx.drawImage(images.UI, coord[0], coord[1], 153, 40, 46, 380, 153, 40);
 }
 
-function drawWeaponAndMoveType(color, weaponType, moveType) {
+function drawWeaponAndMoveType(color, weaponType, moveType, dragonflowers) {
   let weaponTypeIcon = values.COORD.ICONS[color + ' ' + weaponType];
   let moveTypeIcon = values.COORD.ICONS[moveType];
+  ctx.save();
+  if (dragonflowers) {
+    ctx.drawImage(images.UI, 210, 994, 521, 44, 0, 548, 521, 44);
+  } else {
+    ctx.drawImage(images.UI, 210, 1038, 521, 44, 0, 548, 521, 44);
+  }
+  ctx.translate(-34, 0);
   if (weaponTypeIcon) {
     ctx.drawImage(images.UI, weaponTypeIcon[0], weaponTypeIcon[1], 52, 52, 48, 553, 28, 28);
   }
   if (moveTypeIcon) {
     ctx.drawImage(images.UI, moveTypeIcon[0], moveTypeIcon[1], 52, 52, 208, 554, 26, 26);
   }
+  if (dragonflowers > 0) {
+    let y = 946;
+    let x = moveType === 'Infantry' ? 300 : moveType === 'Cavalry' ? 345 : moveType === 'Armored' ? 255 : 210;
+    ctx.drawImage(images.UI, x, y, 45, 48, 252, 545, 45, 48);
+    ctx.drawImage(images.UI, values.COORD.FONT_IMAGE.white[0],
+        values.COORD.FONT_IMAGE.white[1] + 400, 32, 40, 293, 558, 15, 19);
+    if (dragonflowers == 10) {
+      ctx.drawImage(images.UI, values.COORD.FONT_IMAGE.white[0],
+        values.COORD.FONT_IMAGE.white[1] + 40, 32, 40, 307, 558, 15, 19);
+      ctx.drawImage(images.UI, values.COORD.FONT_IMAGE.white[0],
+        values.COORD.FONT_IMAGE.white[1] + (dragonflowers % 10) * 40, 32, 40, 321, 558, 15, 19);
+    } else {
+      ctx.drawImage(images.UI, values.COORD.FONT_IMAGE.white[0],
+        values.COORD.FONT_IMAGE.white[1] + (dragonflowers % 10) * 40, 32, 40, 307, 558, 15, 19);
+    }
+  }
+  ctx.restore();
 }
 
 
 function drawMergesAndStats(merges, stats, sp, hm, buffs = {}) {
+  ctx.save();
+  ctx.translate(-34, 0);
   if (merges > 0 && merges < 10) {
     ctx.drawImage(images.UI, values.COORD.FONT_IMAGE.white[0],
         values.COORD.FONT_IMAGE.white[1] + 400, 32, 40, 158, 558, 15, 19);
@@ -117,6 +151,7 @@ function drawMergesAndStats(merges, stats, sp, hm, buffs = {}) {
     ctx.drawImage(images.UI, values.COORD.FONT_IMAGE.green[0],
         values.COORD.FONT_IMAGE.green[1], 32, 40, 186, 558, 15, 19);
   }
+  ctx.restore();
 
   drawStats(stats.hp, 147, values.COORD.STATS.hp);
   drawStats(stats.atk, 147, values.COORD.STATS.atk, false, buffs.atk || 0);
@@ -157,15 +192,17 @@ function drawStats(value, x, y, fixedFont, buff = 0) {
   ctx.drawImage(images.UI, font[0], font[1] + digit * 40, 32, 40, x + 42, y, 15, 19);
 }
 
-function drawIv(iv) {
+function drawIv(iv, merges) {
   if (iv.boon === '-') {
     return;
   }
 
   ctx.drawImage(images.UI, values.COORD.FONT_IMAGE.green[0],
       values.COORD.FONT_IMAGE.green[1] + 400, 32, 40, 60, values.COORD.STATS[iv.boon], 15, 19);
-  ctx.drawImage(images.UI, values.COORD.FONT_IMAGE.red[0],
-      values.COORD.FONT_IMAGE.red[1] + 440, 32, 40, 60, values.COORD.STATS[iv.bane], 15, 19);
+  if (merges === 0) {
+    ctx.drawImage(images.UI, values.COORD.FONT_IMAGE.red[0],
+        values.COORD.FONT_IMAGE.red[1] + 440, 32, 40, 60, values.COORD.STATS[iv.bane], 15, 19);
+  }
 }
 
 function drawArtistAndVoice(artist = "—", voice = "—") {
@@ -274,8 +311,8 @@ function drawCustomHero(customUnit) {
 
   drawRarity(5);
   drawNameAndTitle(customUnit.name, customUnit.title);
+  drawWeaponAndMoveType(customUnit.colorType, customUnit.weaponType, customUnit.moveType, 0);
   drawMergesAndStats(customUnit.merges, customUnit.processedStats, values.MAX_SP, values.MAX_HM);
-  drawWeaponAndMoveType(customUnit.colorType, customUnit.weaponType, customUnit.moveType);
   drawCustomHeroSkills(customUnit);
 }
 

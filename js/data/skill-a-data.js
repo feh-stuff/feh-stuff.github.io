@@ -925,6 +925,16 @@ module.exports = [
     effect: "Grants Atk/Spd/Def/Res+3. Unit takes 6 damage after combat."
   },
   {
+    name: "Fury 4",
+    spCost: 300,
+    icon: "58-2",
+    stats: {atk: 4, spd: 4, def: 4, res: 4},
+    prev: ["Fury 3"],
+    exclude: [{weaponType:"Staff"}],
+    last: true,
+    effect: "Grants Atk/Spd/Def/Res+4. Unit takes 8 damage after combat."
+  },
+  {
     name: "G Duel Infantry 1",
     spCost: 70,
     icon: "50-12",
