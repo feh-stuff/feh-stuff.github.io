@@ -2,26 +2,28 @@ $(document).ready(function() {
   if (parseInt($('body > .container').css('margin-right')) < 200) {
     return;
   }
+  if (new Date() > new Date('01 March 2019')) {
+    return;
+  }
 
   let text = [
+    ["I'M BEING HELPFUL!"],
+    ["I am a Legendary Hero.", "However, I am not the Legendary Hero you asked for."],
+    ["Don't you want me in your barracks, Summoner?"],
     [
-      "You're calling me a Legendary Hero?",
-      "I'm just Lyn. I'm nowhere near that grand.",
+      "I won?",
+      "Thank you, Summoner. I know you'll always have my back.",
+      "I'll do my best to live up to your expectations.",
+      "You'll be my master strategist",
+      "and I'll be your peerless warrior!"
     ],
     [
-      "Hm? You're saying that the face of the series should be the Legendary Hero?",
-      "Well, I've heard Ike was already summoned a few weeks ago.",
-      "Marth? Oh, you mean Lucina.",
-      "I'm sure she'll gain the title of Legendary Hero some day.",
-      "She's earned it."
+      "I was having a dream, and in that dream...",
+      "I won Find & Vote Heroes..."
     ],
     [
       "I'm always up early, so don't be surprised if I barge in and shout",
       "<h2>THE ENEMY!</h2>"
-    ],
-    [
-      "Celica told me about her journey last night.",
-      "She went through so much. Can you imagine?"
     ],
     [
       "Tell me, what...sort of things do you...",
@@ -34,16 +36,11 @@ $(document).ready(function() {
       "Hector? He'll probably say something like \"Oho!\"",
       "But me... All I can do is stay by your side."
     ],
-    [
-      "You've already made me wear a wedding gown last year.",
-      "And that thick dress for the Festival of Devotion too.",
-      "I feel more at home in this outfit. I can feel the wind caressing my skin.",
-      "H-Huh? Y-You want me to wear that revealing swimsuit for summer?"
-    ],
     ["Who dipped my arrows in green paint?"],
     ["You REALLY remind me of another tactician I know."],
     ["I'll hit my mark."],
-    ["Fire Emblem? Can't say I've heard of it."]
+    ["Fire Emblem? Can't say I've heard of it."],
+    ["Have you seen my husband Reinhardt?", "We'll be sending our son to the Academy soon."]
   ];
 
   let $container = $(`<div class="hero-helper lyn-helper"></div>`);
