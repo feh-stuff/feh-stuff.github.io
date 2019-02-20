@@ -1711,6 +1711,16 @@ module.exports = [
     effect: "Grants Spd+3. If unit's HP ≥ 50% and unit initiates combat, unit can make a follow-up attack before foe can counterattack.",
   },
   {
+    name: "Foxkit Fang",
+    effect: "Grants Res+3. At start of combat, if unit's Res > foe's Res and if foe uses sword, lance, axe, dragonstone, or beast damage, grants bonus to Atk/Spd/Def/Res = 50% of difference between stats. (Maximum bonus of +8 to each stat.) At start of turn, if unit is adjacent to only beast or dragon allies or if unit is not adjacent to any ally, unit transforms (otherwise, unit reverts). If unit transforms, grants Atk+2, and if unit initiates combat, inflicts Atk/Def-4 on foe during combat and foe cannot make a follow-up attack.",
+    weaponType: "Beast",
+    spCost: 400,
+    range: 1,
+    damage: 14,
+    stats: {res: 3},
+    exclusive: ["Selkie"]
+  },
+  {
     name: "Fresh Bouquet",
     spCost: 200,
     damage: 8,
@@ -2801,6 +2811,16 @@ module.exports = [
     colorType: "Red",
     prev: ["Killing Edge"],
     effect: "Accelerates Special trigger (cooldown count-1)."
+  },
+  {
+    name: "Kitsune Fang",
+    effect: "Grants Def+3. Grants allies within 2 spaces bonus to Atk/Spd/Def/Res during combat = current bonus on each of unit's stats. Calculates each stat bonus independently. At start of turn, if unit is adjacent to only beast or dragon allies or if unit is not adjacent to any ally, unit transforms (otherwise, unit reverts). If unit transforms, grants Atk+2, and if unit initiates combat, inflicts Atk/Def-4 on foe during combat and foe cannot make a follow-up attack.",
+    weaponType: "Beast",
+    spCost: 400,
+    range: 1,
+    damage: 14,
+    stats: {def: 3},
+    exclusive: ["Kaden"]
   },
   {
     name: "Kitty Paddle",
@@ -4484,6 +4504,15 @@ module.exports = [
     effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
   },
   {
+    name: "Taguel Fang",
+    effect: "Effective against cavalry foes. If unit is adjacent to only beast or dragon allies or if unit is not adjacent to any ally, grants Atk/Spd/Def/Res+3 during combat. At start of turn, if unit is adjacent to only beast or dragon allies or if unit is not adjacent to any ally, unit transforms (otherwise, unit reverts). If unit transforms, grants Atk+2, and if unit initiates combat, inflicts Atk/Def-4 on foe during combat and foe cannot make a follow-up attack.",
+    weaponType: "Beast",
+    spCost: 400,
+    range: 1,
+    damage: 14,
+    exclusive: ["Panne"]
+  },
+  {
     name: "Tannenboom!",
     spCost: 200,
     damage: 10,
@@ -4968,6 +4997,26 @@ module.exports = [
     range: 1,
     damage: 14,
     exclusive: ["Nailah"]
+  },
+  {
+    name: "Wolfpup Fang",
+    effect: "Grants Spd+3. At the start of turn 1, grants special cooldown count-2 to unit and unit's support partner (if any). At start of turn, if unit is adjacent to only beast or dragon allies or if unit is not adjacent to any ally, unit transforms (otherwise, unit reverts). If unit transforms, grants Atk+2 and deals +10 damage when Special triggers.",
+    weaponType: "Beast",
+    spCost: 400,
+    range: 1,
+    damage: 14,
+    stats: {spd: 3},
+    exclusive: ["Velouria"]
+  },
+  {
+    name: "Wolfskin Fang",
+    effect: "Inflicts Spd-5. Unit attacks twice. (Even if foe initiates combat, unit attacks twice.) At start of turn, if unit is adjacent to only beast or dragon allies or if unit is not adjacent to any ally, unit transforms (otherwise, unit reverts). If unit transforms, grants Atk+2 and deals +10 damage when Special triggers.",
+    weaponType: "Beast",
+    spCost: 400,
+    range: 1,
+    damage: 14,
+    stats: {spd: -5},
+    exclusive: ["Keaton"]
   },
   {
     name: "Yato",

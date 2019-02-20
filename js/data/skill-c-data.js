@@ -219,6 +219,29 @@ module.exports = [
     effect: "If unit survives, all blue tome users on team get 2x SP. (If similar skill effects also used, only highest multiplier applied.)"
   },
   {
+    name: "Beast Valor 1",
+    spCost: 30,
+    icon: "59-1",
+    include: [{weaponType: "Beast"}],
+    effect: "While unit lives, unit gets 1.5x SP. (If similar skill effects also used, only highest multiplier applied.)"
+  },
+  {
+    name: "Beast Valor 2",
+    spCost: 60,
+    icon: "59-2",
+    prev: ["Beast Valor 1"],
+    include: [{weaponType: "Beast"}],
+    effect: "While unit lives, all beast allies on team get 1.5x SP. (Only highest value applied. Does not stack.)",
+  },
+  {
+    name: "Beast Valor 3",
+    spCost: 120,
+    icon: "59-3",
+    prev: ["Beast Valor 2"],
+    include: [{weaponType: "Beast"}],
+    effect: "While unit lives, all beast allies on team get 2x SP. (Only highest value applied. Does not stack.)"
+  },
+  {
     name: "Bow Exp. 1",
     spCost: 30,
     icon: "15-8",
@@ -726,6 +749,14 @@ module.exports = [
     prev: ["Spur Atk 2", "Spur Spd 2"],
     include: [{moveType: "Armored"}],
     effect: "Grants armored allies within 2 spaces Spd/Atk+4 during combat."
+  },
+  {
+    name: "Goad Beasts",
+    spCost: 200,
+    icon: "58-12",
+    prev: ["Spur Atk 2", "Spur Spd 2"],
+    include: [{weaponType: "Beast"}],
+    effect: "Grants Atk/Spd+4 to beast allies within 2 spaces during combat."
   },
   {
     name: "Goad Cavalry",
@@ -1634,6 +1665,14 @@ module.exports = [
     prev: ["Spur Def 2", "Spur Res 2"],
     include: [{moveType: "Armored"}],
     effect: "Grants armored allies within 2 spaces Def/Res+4 during combat."
+  },
+  {
+    name: "Ward Beasts",
+    spCost: 200,
+    icon: "59-0",
+    prev: ["Spur Def 2", "Spur Res 2"],
+    include: [{weaponType: "Beast"}],
+    effect: "Grants Def/Res+4 to beast allies within 2 spaces during combat."
   },
   {
     name: "Ward Cavalry",

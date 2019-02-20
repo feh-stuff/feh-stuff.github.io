@@ -83,7 +83,7 @@ exports.COORD = {
     "Red Beast": [366,1140],
     "Blue Beast": [418,1140],
     "Green Beast": [470,1140],
-    "Neutral Beast": [532,268]
+    "Neutral Beast": [522,1140]
   },
   EMPTY_SEAL: [0, 1074],
   FONT_IMAGE: {

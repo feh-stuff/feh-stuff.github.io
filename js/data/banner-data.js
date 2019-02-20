@@ -3,6 +3,60 @@ module.exports = [
     date: "February 2019",
     banners: [
       {
+        name: "Kitsune and Wolfskin",
+        startDate: "Feb 20, 2019",
+        focusHeroes: ["Kaden", "Selkie", "Keaton", "Velouria"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "New Power 2 (February 2019)",
+        startDate: "Feb 13, 2019",
+        focusHeroes: ["Tharja", "Amelia", "Seth", "Oboro"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "New Power 1 (February 2019)",
+        startDate: "Feb 13, 2019",
+        focusHeroes: ["Hinata", "Eliwood", "Nino", "Niles"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Cherche and Virion's Battle",
+        startDate: "Feb 12, 2019",
+        focusHeroes: [ "Cherche", "Virion", "Tiki (Adult)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Love Abounds (2019)",
+        startDate: "Feb 11, 2019",
+        focusHeroes: [ "Lyn (Love Abounds)", "Hector (Love Abounds)", "Roy (Love Abounds)", "Lilina (Love Abounds)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Greil's Request Tempest Trials",
+        startDate: "Feb 09, 2019",
+        focusHeroes: [ "Ike", "Oscar", "Mia" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "Greil's Devoted",
         startDate: "Feb 08, 2019",
         focusHeroes: [ "Greil (Greil's Devoted)", "Mist (Greil's Devoted)", "Ike (Greil's Devoted)", "Soren (Greil's Devoted)" ],

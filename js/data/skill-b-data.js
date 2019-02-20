@@ -1067,6 +1067,26 @@ module.exports = [
     effect: "At the start of turn 1, restores 99 HP and grants Special cooldown count-1."
   },
   {
+    name: "Sabotage Atk 1",
+    spCost: 60,
+    icon: "58-9",
+    effect: "At start of turn, if any foe's Res ≤ unit's Res-3 and that foe is adjacent to another foe, inflicts Atk-3 on that foe through its next action."
+  },
+  {
+    name: "Sabotage Atk 2",
+    spCost: 120,
+    icon: "58-10",
+    prev: ["Sabotage Atk 1"],
+    effect: "At start of turn, if any foe's Res ≤ unit's Res-3 and that foe is adjacent to another foe, inflicts Atk-5 on that foe through its next action."
+  },
+  {
+    name: "Sabotage Atk 3",
+    spCost: 240,
+    icon: "58-11",
+    prev: ["Sabotage Atk 2"],
+    effect: "At start of turn, if any foe's Res ≤ unit's Res-3 and that foe is adjacent to another foe, inflicts Atk-7 on that foe through its next action."
+  },
+  {
     name: "Sacae's Blessing",
     spCost: 300,
     icon: "26-5",

@@ -1115,7 +1115,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Dagger",
     moveType: "Flying",
-    pool: [ "pool2" ],
+    rarity5: [ "pool2" ],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Camilla (Hostile Springs).png",
@@ -2424,7 +2424,7 @@ module.exports = [
     colorType: "Neutral",
     weaponType: "Breath",
     moveType: "Armored",
-    pool: ["pool2"],
+    rarity5: ["pool2"],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Duma.png",
@@ -2805,7 +2805,7 @@ module.exports = [
     colorType: "Red",
     weaponType: "Dagger",
     moveType: "Cavalry",
-    pool: [ "pool2" ],
+    rarity5: [ "pool2" ],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Elise (Hostile Springs).png",
@@ -4514,7 +4514,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Dagger",
     moveType: "Flying",
-    pool: [ "pool2" ],
+    rarity5: [ "pool2" ],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Hinoka (Hostile Springs).png",
@@ -5537,6 +5537,35 @@ module.exports = [
     }
   },
   {
+    name: "Kaden",
+    title: "Kitsune Braggart",
+    artist: "Kusugi Toku (久杉トク)",
+    voice: "Max Mittelman",
+    releaseDate: "02 Feb, 2019",
+    colorType: "Green",
+    weaponType: "Beast",
+    moveType: "Cavalry",
+    rarity5: [ "pool2" ],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Kaden.png",
+      main: "img/heroes-main/Kaden.png"
+    },
+    skills: [
+      { name: "Kitsune Fang", rarity: 5 },
+      { name: "Pivot", rarity: 5 },
+      { name: "Spd/Res Link 1", rarity: 5 },
+      { name: "Spd/Res Link 2", rarity: 5 },
+      { name: "Spd/Res Link 3", rarity: 5 },
+      { name: "Spur Atk 1", rarity: 5 },
+      { name: "Spur Atk 2", rarity: 5 },
+      { name: "Goad Beasts", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 8, spd: 10, def: 6, res: 6 },
+      level40: { hp: [ 34, 38, 41 ], atk: [ 29, 32, 35 ], spd: [ 33, 36, 39 ], def: [ 22, 25, 29 ], res: [ 22, 25, 29 ] }
+    }
+  },
+  {
     name: "Kaze",
     title: "Easygoing Ninja",
     artist: "lack",
@@ -5568,6 +5597,36 @@ module.exports = [
     stats: {
       level1: { hp: 17, atk: 6, spd: 10, def: 4, res: 8 },
       level40: { hp: [ 31, 34, 37 ], atk: [ 27, 30, 33 ], spd: [ 33, 36, 39 ], def: [ 13, 17, 20 ], res: [ 31, 34, 37 ] },
+    }
+  },
+  {
+    name: "Keaton",
+    title: "Lupine Collector",
+    artist: "Okuma Yugo (大熊ゆうご)",
+    voice: "Ted Sroka",
+    releaseDate: "20 Feb, 2019",
+    colorType: "Red",
+    weaponType: "Beast",
+    moveType: "Infantry",
+    rarity5: [ "pool2" ],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Keaton.png",
+      main: "img/heroes-main/Keaton.png"
+    },
+    skills: [
+      { name: "Wolfskin Fang", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Draconic Aura", rarity: 5 },
+      { name: "Special Spiral 1", rarity: 5 },
+      { name: "Special Spiral 2", rarity: 5 },
+      { name: "Special Spiral 3", rarity: 5 },
+      { name: "Beast Valor 1", rarity: 5 },
+      { name: "Beast Valor 2", rarity: 5 },
+      { name: "Beast Valor 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 19, atk: 11, spd: 7, def: 8, res: 4 },
+      level40: { hp: [ 42, 45, 48 ], atk: [ 38, 41, 45 ], spd: [ 21, 24, 27 ], def: [ 35, 38, 42 ], res: [ 16, 19, 22 ] }
     }
   },
   {
@@ -5904,10 +5963,10 @@ module.exports = [
     artist: "Yura (由良)",
     voice: "Rachelle Heger",
     releaseDate: "Jan 11, 2019",
-    colorType: "Colorless",
+    colorType: "Neutral",
     weaponType: "Beast",
     moveType: "Flying",
-    pool: ["pool2"],
+    rarity5: ["pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Leanne.png",
       main: "img/heroes-main/Leanne.png"
@@ -7962,7 +8021,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Beast",
     moveType: "Flying",
-    pool: ["pool2"],
+    rarity5: ["pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Naesala.png",
       main: "img/heroes-main/Naesala.png"
@@ -7998,7 +8057,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Beast",
     moveType: "Infantry",
-    pool: ["pool2"],
+    rarity5: ["pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Nailah.png",
       main: "img/heroes-main/Nailah.png"
@@ -8982,6 +9041,38 @@ module.exports = [
     }
   },
   {
+    name: "Panne",
+    title: "Proud Taguel",
+    artist: "Chiko (チ一コ)",
+    voice: "Jessica Gee-George",
+    releaseDate: "Feb 20, 2019",
+    colorType: "Blue",
+    weaponType: "Beast",
+    moveType: "Cavalry",
+    ghb: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Panne.png",
+      main: "img/heroes-main/Panne.png"
+    },
+    skills: [
+      { name: "Taguel Fang", rarity: 5 },
+      { name: "Night Sky", rarity: 3 },
+      { name: "Astra", rarity: 4 },
+      { name: "Chill Spd 1", rarity: 3 },
+      { name: "Chill Spd 2", rarity: 4 },
+      { name: "Chill Spd 3", rarity: 5 },
+      { name: "Def Smoke 1", rarity: 3 },
+      { name: "Def Smoke 2", rarity: 3 },
+      { name: "Def Smoke 3", rarity: 4 }
+    ],
+    stats: {
+      level1: { hp: 17, atk: 7, spd: 10, def: 8, res: 4 },
+      level40: { hp: [ 38, 41, 44 ], atk: [ 26, 29, 32 ], spd: [ 31, 34, 37 ], def: [ 27, 30, 33 ], res: [ 20, 23, 26 ] },
+      level1_4: { hp: 16, atk: 6, spd: 10, def: 8, res: 3 },
+      level40_4: { hp: [ 35, 38, 41 ], atk: [ 23, 26, 29 ], spd: [ 29, 32, 35 ], def: [ 25, 28, 31 ], res: [ 18, 21, 24 ] }
+    }
+  },
+  {
     name: "Peri",
     title: "Playful Slayer",
     artist: "Takagi Masafumi (高木正文)",
@@ -9282,7 +9373,8 @@ module.exports = [
     colorType: "Green",
     weaponType: "Beast",
     moveType: "Flying",
-    pool: ["pool2"],
+    rarity5: ["pool2"],
+    rarity4: ["pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Reyson.png",
       main: "img/heroes-main/Reyson.png"
@@ -9775,7 +9867,7 @@ module.exports = [
     colorType: "Blue",
     weaponType: "Lance",
     moveType: "Flying",
-    pool: [ "pool2" ],
+    rarity5: [ "pool2" ],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ryoma (Hostile Springs).png",
@@ -9988,7 +10080,7 @@ module.exports = [
     colorType: "Colorless",
     weaponType: "Staff",
     moveType: "Flying",
-    pool: [ "pool2" ],
+    rarity5: [ "pool2" ],
     limited: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Sakura (Hostile Springs).png",
@@ -10191,6 +10283,39 @@ module.exports = [
       level40: { hp: [ 44, 47, 50 ], atk: [ 31, 34, 37 ], spd: [ 21, 24, 27 ], def: [ 26, 30, 33 ], res: [ 19, 22, 25 ] },
       level1_4: { hp: 18, atk: 8, spd: 6, def: 8, res: 4 },
       level40_4: { hp: [ 41, 44, 47 ], atk: [ 29, 32, 35 ], spd: [ 19, 22, 25 ], def: [ 25, 28, 31 ], res: [ 17, 20, 23 ] }
+    }
+  },
+  {
+    name: "Selkie",
+    title: "Free Spirit",
+    artist: "Enkyo Yuichiro (円居雄一郎)",
+    voice: "Lexi Klein",
+    releaseDate: "Feb 20, 2019",
+    colorType: "Blue",
+    weaponType: "Beast",
+    moveType: "Cavalry",
+    rarity5: [ "pool2" ],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Selkie.png",
+      main: "img/heroes-main/Selkie.png"
+    },
+    skills: [
+      { name: "Foxkit Fang", rarity: 5 },
+      { name: "Chilling Wind", rarity: 5 },
+      { name: "Iceberg", rarity: 5 },
+      { name: "Atk/Spd Bond 1", rarity: 5 },
+      { name: "Atk/Spd Bond 2", rarity: 5 },
+      { name: "Atk/Spd Bond 3", rarity: 5 },
+      { name: "Sabotage Atk 1", rarity: 5 },
+      { name: "Sabotage Atk 2", rarity: 5 },
+      { name: "Sabotage Atk 3", rarity: 5 },
+      { name: "Even Res Wave 1", rarity: 5 },
+      { name: "Even Res Wave 2", rarity: 5 },
+      { name: "Even Res Wave 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 7, spd: 10, def: 4, res: 9 },
+      level40: { hp: [ 32, 35, 39 ], atk: [ 25, 29, 32 ], spd: [ 35, 38, 41 ], def: [ 16, 19, 22 ], res: [ 32, 35, 38 ] }
     }
   },
   {
@@ -11433,7 +11558,7 @@ module.exports = [
     colorType:"Red",
     weaponType:"Beast",
     moveType:"Flying",
-    pool:["pool2"],
+    rarity5:["pool2"],
     assets:{
       portrait:"img/heroes-portrait/75px-Icon_Portrait_Tibarn.png",
       main:"img/heroes-main/Tibarn.png"
@@ -11821,6 +11946,36 @@ module.exports = [
       level40: { hp: [ 39, 42, 45 ], atk: [ 29, 32, 35 ], spd: [ 27, 31, 34 ], def: [ 31, 34, 37 ], res: [ 16, 19, 22 ] },
       level1_4: { hp: 17, atk: 8, spd: 9, def: 7, res: 3 },
       level40_4: { hp: [ 36, 39, 42 ], atk: [ 27, 30, 33 ], spd: [ 26, 29, 32 ], def: [ 28, 31, 34 ], res: [ 14, 17, 20 ] }
+    }
+  },
+  {
+    name: "Velouria",
+    title: "Wolf Cub",
+    artist: "kawasumi (かわすみ)",
+    voice: "Angela Marie Volpe",
+    releaseDate: "Feb 20, 2019",
+    colorType: "Neutral",
+    weaponType: "Beast",
+    moveType: "Infantry",
+    rarity5: [ "pool2" ],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Velouria.png",
+      main: "img/heroes-main/Velouria.png"
+    },
+    skills: [
+      { name: "Wolfpup Fang", rarity: 5 },
+      { name: "New Moon", rarity: 5 },
+      { name: "Luna", rarity: 5 },
+      { name: "Close Def 1", rarity: 5 },
+      { name: "Close Def 2", rarity: 5 },
+      { name: "Close Def 3", rarity: 5 },
+      { name: "Spur Def 1", rarity: 5 },
+      { name: "Spur Def 2", rarity: 5 },
+      { name: "Ward Beasts", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 9, spd: 9, def: 7, res: 6 },
+      level40: { hp: [ 36, 40, 43 ], atk: [ 32, 35, 38 ], spd: [ 34, 37, 40 ], def: [ 30, 33, 36 ], res: [ 20, 23, 26 ] }
     }
   },
   {
