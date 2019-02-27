@@ -3,6 +3,42 @@ module.exports = [
     date: "February 2019",
     banners: [
       {
+        name: "Legendary Heroes: Roy, Blazing Lion",
+        startDate: "Feb 27, 2019",
+        focusHeroes: [ "Roy (Legendary Heroes)", "Ephraim (Legendary Heroes)", "Hríd", "Micaiah (Festival in Hoshido)", "Corrin (M) (Adrift)", "Niles (The Land's Bounty)", "Gunnthrá", "Surtr", "Corrin (F) (Adrift)", "Robin (F) (Legendary Heroes)", "Mikoto (Adrift)", "Xander (Festival in Hoshido)" ],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "legendaryV1",
+        pool: "pool1"
+      },
+      {
+        name: "War of the Tacticians Block B",
+        startDate: "Feb 25, 2019",
+        focusHeroes: ["Soren", "Cecilia", "Innes", "Jagen"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "2nd Anniversary Heroes",
+        startDate: "Feb 25, 2019",
+        focusHeroes: ["Lyn (Legendary Heroes)", "Azura (Legendary Heroes)", "Duma", "Myrrh (The Land's Bounty)"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Heroes with Blazing Light",
+        startDate: "Feb 20, 2019",
+        focusHeroes: ["Celica", "Ophelia", "Leif"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
         name: "Kitsune and Wolfskin",
         startDate: "Feb 20, 2019",
         focusHeroes: ["Kaden", "Selkie", "Keaton", "Velouria"],

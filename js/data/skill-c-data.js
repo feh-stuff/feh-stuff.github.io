@@ -893,6 +893,13 @@ module.exports = [
     effect: "Grants adjacent allies Spd+4 through their next actions at the start of each turn."
   },
   {
+    name: "Human Virtue",
+    spCost: 300,
+    icon: "59-7",
+    include: [{name:"Roy (Legendary Heroes)"}],
+    effect: "At start of turn, if unit is adjacent to any allies that are not beast or dragon allies, grants Atk/Spd+6 to unit and those allies for 1 turn."
+  },
+  {
     name: "Infantry Pulse 1",
     spCost: 60,
     icon: "24-5",

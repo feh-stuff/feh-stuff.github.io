@@ -92,7 +92,13 @@ module.exports = [
   {
     hero: "Duma",
     type: "Anima",
-    stats: { hp: 5, res: 3 },
+    stats: { hp: 5, atk: 3 },
     icon: 15
+  },
+  {
+    hero: "Roy (Legendary Heroes)",
+    type: "Fire",
+    stats: { hp: 3 },
+    icon: 16
   }
 ];

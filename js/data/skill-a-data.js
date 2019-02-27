@@ -270,6 +270,30 @@ module.exports = [
     effect: "Grants HP+5. If unit is 5★ and level 40 and unit's stats total less than 160, treats unit's stats as 170 in modes like Arena. (Higher-scoring opponents will appear. Stat total calculation excludes any values added by merges and skills.)"
   },
   {
+    name: "Bonus Doubler 1",
+    spCost: 60,
+    icon: "59-4",
+    include: [{moveType: "Infantry"}],
+    effect: "Grants bonus to Atk/Spd/Def/Res during combat = 50% of current bonus on each of unit's stats. Calculates each stat bonus independently."
+  },
+  {
+    name: "Bonus Doubler 2",
+    spCost: 120,
+    icon: "59-5",
+    prev: ["Bonus Doubler 1"],
+    include: [{moveType: "Infantry"}],
+    effect: "Grants bonus to Atk/Spd/Def/Res during combat = 75% of current bonus on each of unit's stats. Calculates each stat bonus independently."
+  },
+  {
+    name: "Bonus Doubler 3",
+    spCost: 240,
+    icon: "59-6",
+    prev: ["Bonus Doubler 2"],
+    include: [{moveType: "Infantry"}],
+    last: true,
+    effect: "Grants bonus to Atk/Spd/Def/Res during combat = current bonus on each of unit's stats. Calculates each stat bonus independently."
+  },
+  {
     name: "Bracing Blow 1",
     spCost: 120,
     icon: "30-3",

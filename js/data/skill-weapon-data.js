@@ -1217,6 +1217,16 @@ module.exports = [
     effect: "Accelerates Special trigger (cooldown count-1). If the number of allies within 2 spaces (excluding unit) > the number of foes within 2 spaces (excluding target), grants Atk/Spd+5 during combat. If foe's Range = 2, calculates damage using the lower of foe's Def or Res."
   },
   {
+    name: "Dragonbind",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Sword",
+    colorType: "Red",
+    exclusive: ["Roy (Legendary Heroes)"],
+    effect: "Effective against dragon foes. Unit can counterattack regardless of foe's range.",
+  },
+  {
     name: "Durandal",
     spCost: 400,
     damage: 16,
@@ -1852,7 +1862,7 @@ module.exports = [
   {
     name: "Gjöll",
     spCost: 400,
-    damage: 14,
+    damage: 16,
     range: 2,
     weaponType: "Sword",
     stats: {atk: 3},
@@ -5014,7 +5024,7 @@ module.exports = [
     weaponType: "Beast",
     spCost: 400,
     range: 1,
-    damage: 14,
+    damage: 9,
     stats: {spd: -5},
     exclusive: ["Keaton"]
   },

@@ -1422,7 +1422,7 @@ module.exports = [
     ],
     stats: {
       level1: { hp: 19, atk: 11, spd: 6, def: 6, res: 10 },
-      level40: { hp: [ 38, 41, 44 ], atk: [ 32, 35, 38 ], spd: [ 23, 26, 29 ], def: [ 27, 30, 33 ], res: [ 31, 34, 37 ] }
+      level40: { hp: [ 38, 41, 44 ], atk: [ 32, 35, 38 ], spd: [ 20, 23, 26 ], def: [ 27, 30, 33 ], res: [ 33, 36, 39 ] }
     }
   },
   {
@@ -9751,6 +9751,42 @@ module.exports = [
     stats: {
       level1: { hp: 16, atk: 8, spd: 8, def: 7, res: 7 },
       level40: { hp: [ 34, 38, 41 ], atk: [ 29, 32, 35 ], spd: [ 31, 34, 37 ], def: [ 23, 26, 30 ], res: [ 21, 24, 27 ] }
+    }
+  },
+  {
+    name: "Roy (Legendary Heroes)",
+    shortName: "Roy",
+    title: "Blazing Lion",
+    artist: "Meka (めか)",
+    voice: "Ray Chase",
+    releaseDate: "Feb 27, 2019",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    limited: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Roy (Legendary Heroes).png",
+      main: "img/heroes-main/Roy (Legendary Heroes).png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 5 },
+      { name: "Steel Sword", rarity: 5 },
+      { name: "Silver Sword", rarity: 5 },
+      { name: "Dragonbind", rarity: 5 },
+      { name: "Dragon Gaze", rarity: 5 },
+      { name: "Dragon Fang", rarity: 5 },
+      { name: "Bonus Doubler 1", rarity: 5 },
+      { name: "Bonus Doubler 2", rarity: 5 },
+      { name: "Bonus Doubler 3", rarity: 5 },
+      { name: "Renewal 1", rarity: 5 },
+      { name: "Renewal 2", rarity: 5 },
+      { name: "Renewal 3", rarity: 5 },
+      { name: "Human Virtue", rarity: 5 },
+    ],
+    stats: {
+      level1: { hp: 17, atk: 10, spd: 10, def: 8, res: 4 },
+      level40: { hp: [ 35, 39, 42 ],atk: [ 31, 34, 37 ],spd: [ 35, 38, 41 ],def: [ 29, 32, 35 ],res: [ 22, 26, 29 ] },
     }
   },
   {
