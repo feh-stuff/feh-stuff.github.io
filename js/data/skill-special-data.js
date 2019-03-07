@@ -75,7 +75,9 @@ module.exports = [
     name: "Blue Flame",
     cooldown: 3,
     spCost: 500,
-    effect: "Boosts damage dealt by 10. If unit is adjacent to ally, boosts damage by 25 instead."
+    effect: "Boosts damage dealt by 10. If unit is adjacent to ally, boosts damage by 25 instead.",
+    exclude: [{weaponType: "Staff"}],
+    last: true,
   },
   {
     name: "Bonfire",

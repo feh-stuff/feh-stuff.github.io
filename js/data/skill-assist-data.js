@@ -232,6 +232,22 @@ module.exports = [
     effect: "Grants Atk+6 to target ally and allies withing 2 spaces of target (excluding unit) for 1 turn."
   },
   {
+    name: "Rally Up Res",
+    range: 1,
+    spCost: 300,
+    exclude: [{weaponType: "Staff"}],
+    last: true,
+    effect: "Grants Res+3 to target ally and allies withing 2 spaces of target (excluding unit) for 1 turn."
+  },
+  {
+    name: "Rally Up Res+",
+    range: 1,
+    spCost: 400,
+    exclude: [{weaponType: "Staff"}],
+    last: true,
+    effect: "Grants Res+6 to target ally and allies withing 2 spaces of target (excluding unit) for 1 turn."
+  },
+  {
     name: "Reciprocal Aid",
     range: 1,
     spCost: 150,

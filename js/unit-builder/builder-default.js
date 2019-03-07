@@ -171,8 +171,6 @@ function onHeroSelect(event) {
 
   if (hero.name === 'Leif' && Math.random() < 0.5) {
     hero.title = 'A Fucking';
-  } else if (hero.name === 'Roy (Legendary Heroes)' && Math.random() < 0.25) {
-    hero.title = 'The Racist';
   }
   drawHero(fehUnit);
 }

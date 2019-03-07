@@ -80,6 +80,17 @@ module.exports = [
     effect: "At start of turn, if unit is adjacent to an ally, grants Atk+4 to unit and adjacent allies for 1 turn."
   },
   {
+    name: "Argent Bow",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Bow",
+    stats: {spd: -2},
+    prev: ["Silver Bow"],
+    exclusive: ["Klein"],
+    effect: "Effective against flying foes. Inflicts Spd-2. If unit initiates combat, unit attacks twice."
+  },
+  {
     name: "Armads",
     spCost: 400,
     damage: 16,
@@ -419,7 +430,7 @@ module.exports = [
   },
   {
     name: "Blárserpent",
-    spCost: 300,
+    spCost: 200,
     damage: 8,
     range: 2,
     weaponType: "Tome",
@@ -429,7 +440,7 @@ module.exports = [
   },
   {
     name: "Blárserpent+",
-    spCost: 400,
+    spCost: 300,
     damage: 12,
     range: 2,
     weaponType: "Tome",
@@ -1136,6 +1147,17 @@ module.exports = [
     effect: "If unit has 100% HP at start of combat, unit gets Atk/Spd/Def/Res+2. If attacking, unit will take 2 damage after combat."
   },
   {
+    name: "Demonic Breath",
+    spCost: 400,
+    damage: 16,
+    range: 1,
+    weaponType: "Breath",
+    stats: {def: 3},
+    prev: ["Flametongue"],
+    exclusive: ["Idunn"],
+    effect: "Grants Def+3. Effective against armored foes. At start of combat, if a negative status effect is active on unit, or if unit's HP < 100%, neutralizes penalties on unit and grants Atk/Spd/Def/Res+4 during combat. If foe's range = 2, calculates damage using the lower of foe's Def and Res."
+  },
+  {
     name: "Devilish Bow",
     spCost: 200,
     damage: 8,
@@ -1336,6 +1358,16 @@ module.exports = [
     colorType: "Green",
     prev: ["Emerald Axe"],
     effect: "Gives Atk+20% if weapon-triangle advantage, Atk-20% if disadvantage."
+  },
+  {
+    name: "Eternal Tome",
+    spCost: 400,
+    damage: 14,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Red",
+    exclusive: ["Sophia"],
+    effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat.",
   },
   {
     name: "Exalted Falchion",
@@ -2168,6 +2200,26 @@ module.exports = [
     colorType: "Green",
     prev: ["Gronnraven"],
     effect: "Grants weapon advantage vs. colorless foes."
+  },
+  {
+    name: "Gronnserpent",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    prev: ["Elthunder"],
+    effect: "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff."
+  },
+  {
+    name: "Gronnserpent+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Tome",
+    colorType: "Green",
+    prev: ["Gronnserpent"],
+    effect: "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff."
   },
   {
     name: "Gronnwolf",
@@ -3951,6 +4003,24 @@ module.exports = [
     effect: "Effective against flying units. If foe's Def ≥ foe's Res+5, deal +7 damage."
   },
   {
+    name: "Short Bow",
+    spCost: 200,
+    damage: 8,
+    range: 2,
+    weaponType: "Bow",
+    prev: ["Steel Bow"],
+    effect: "Effective against flying foes. Deals +10 damage when Special triggers."
+  },
+  {
+    name: "Short Bow+",
+    spCost: 300,
+    damage: 12,
+    range: 2,
+    weaponType: "Bow",
+    prev: ["Short Bow"],
+    effect: "Effective against flying foes. Deals +10 damage when Special triggers."
+  },
+  {
     name: "Siegfried",
     spCost: 400,
     damage: 16,
@@ -4760,6 +4830,26 @@ module.exports = [
     prev: ["Bolganone"],
     exclusive: ["Arvis"],
     effect: "At start of turn, all foes in cardinal directions with Res 1 or more lower than unit suffer Atk/Res-4 until the end of foe's next action.",
+  },
+  {
+    name: "Vanguard",
+    spCost: 200,
+    damage: 10,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Steel Lance"],
+    effect: "If foe initiates combat, grants Def+7 during combat."
+  },
+  {
+    name: "Vanguard+",
+    spCost: 300,
+    damage: 14,
+    range: 1,
+    weaponType: "Lance",
+    colorType: "Blue",
+    prev: ["Vanguard"],
+    effect: "If foe initiates combat, grants Def+7 during combat."
   },
   {
     name: "Vassal's Blade",

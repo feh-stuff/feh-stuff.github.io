@@ -1211,6 +1211,22 @@ module.exports = [
     effect: "After combat, foe suffers Res-7 through its next action."
   },
   {
+    name: "Seal Spd/Def 1",
+    spCost: 100,
+    icon: "59-11",
+    prev: ["Seal Spd 1", "Seal Def 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Spd/Def-3 on foe through its next action."
+  },
+  {
+    name: "Seal Spd/Def 2",
+    spCost: 200,
+    icon: "59-12",
+    prev: ["Seal Spd/Def 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "After combat, inflicts Spd/Def-5 on foe through its next action."
+  },
+  {
     name: "Seal Spd 1",
     spCost: 40,
     icon: "7-8",
@@ -1381,6 +1397,22 @@ module.exports = [
     icon: "28-1",
     exclude: [{weaponType: "Staff"}],
     effect: "If Sing or Dance is used, target also granted Res+3."
+  },
+  {
+    name: "Torrent Dance 2",
+    spCost: 100,
+    icon: "28-2",
+    prev: ["Torrent Dance 1"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Res+3."
+  },
+  {
+    name: "Torrent Dance 3",
+    spCost: 200,
+    icon: "28-3",
+    prev: ["Torrent Dance 2"],
+    exclude: [{weaponType: "Staff"}],
+    effect: "If Sing or Dance is used, target also granted Res+4."
   },
   {
     name: "Vantage 1",

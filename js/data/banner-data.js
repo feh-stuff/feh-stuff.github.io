@@ -1,5 +1,28 @@
 module.exports = [
  {
+    date: "March 2019",
+    banners: [
+      {
+        name: "Beyond Darkness",
+        startDate: "Feb 25, 2019",
+        focusHeroes: ["Idunn", "Lugh", "Sue", "Thea"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+      {
+        name: "Heroes with Sweep Skills",
+        startDate: "Mar 04, 2019",
+        focusHeroes: ["Roderick", "Alm", "Faye"],
+        excludeFromRarity4: [],
+        excludeFromRarity5: [],
+        rateType: "defaultV2",
+        pool: "pool2"
+      },
+    ]
+ },
+ {
     date: "February 2019",
     banners: [
       {

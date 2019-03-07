@@ -3040,6 +3040,84 @@ module.exports = {
       effect: "If unit is adjacent to an ally, grants Atk/Spd/Def/Res+3 during combat."
     }
   ],
+  "Gronnserpent+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "Grants Def/Res+6 during combat if foe initiates combat and uses bow, dagger, magic, or staff."
+    }
+  ],
+  "Short Bow+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 2, atk: 1},
+      effect: "Effective against flying foes. Deals +10 damage when Special triggers."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 2, spd: 2},
+      effect: "Effective against flying foes. Deals +10 damage when Special triggers."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 2, def: 3},
+      effect: "Effective against flying foes. Deals +10 damage when Special triggers."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 2, res: 3},
+      effect: "Effective against flying foes. Deals +10 damage when Special triggers."
+    }
+  ],
+  "Vanguard+": [
+    {
+      name: "+Atk",
+      icon: "31-9",
+      stats: {hp: 5, atk: 2},
+      effect: "If foe initiates combat, grants Def+6 during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      stats: {hp: 5, spd: 3},
+      effect: "If foe initiates combat, grants Def+6 during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      stats: {hp: 5, def: 4},
+      effect: "If foe initiates combat, grants Def+6 during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      stats: {hp: 5, res: 4},
+      effect: "If foe initiates combat, grants Def+6 during combat."
+    }
+  ],
 
 
   // prf weapons
@@ -4678,7 +4756,7 @@ module.exports = {
   ],
   "Scarlet Sword": [
     {
-      name: "Quickened Pulse",
+      name: "Quickened Pulse 2",
       icon: "54-3",
       cost: 1,
       stats: {hp: 3},
@@ -4896,7 +4974,6 @@ module.exports = {
       effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
     }
   ],
-
   "Naga": [
     {
       name: "Delete Dragons",
@@ -5333,6 +5410,150 @@ module.exports = {
       cost: 1,
       stats: {hp: 2, res: 3},
       effect: "Accelerates Special trigger (cooldown count-1). Effective against flying foes. If foe's Def ≥ foe's Res+5, deals +7 damage."
+    }
+  ],
+  "Eternal Tome": [
+    {
+      name: "Bracing Stance",
+      icon: "59-9",
+      cost: 1,
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat. If foe initiates combat, grants Def/Res+4 during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "Grants weapon-triangle advantage against colorless foes, and inflicts weapon-triangle disadvantage on colorless foes during combat."
+    }
+  ],
+  "Argent Bow": [
+    {
+      name: "Chill Def",
+      icon: "59-8",
+      cost: 1,
+      effect: "Effective against flying foes. Inflicts Spd-2. If unit initiates combat, unit attacks twice. At start of turn, inflicts Def-7 on foe on the enemy team with the highest DEF through its next action."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "Effective against flying foes. Inflicts Spd-2. If unit initiates combat, unit attacks twice."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "Effective against flying foes. Inflicts Spd-2. If unit initiates combat, unit attacks twice."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "Effective against flying foes. Inflicts Spd-2. If unit initiates combat, unit attacks twice."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "Effective against flying foes. Inflicts Spd-2. If unit initiates combat, unit attacks twice."
+    }
+  ],
+  "Dark Excalibur": [
+    {
+      name: "Quickened Pulse 2",
+      icon: "54-3",
+      cost: 1,
+      effect: "Grants +10 to damage when Special triggers. At the start of turn 1, grants Special Cooldown count-2."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "Grants +10 to damage when Special triggers."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "Grants +10 to damage when Special triggers."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "Grants +10 to damage when Special triggers."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "Grants +10 to damage when Special triggers."
+    }
+  ],
+  "Dark Aura": [
+    {
+      name: "Melee Atk/Spd Bond",
+      icon: "59-10",
+      cost: 1,
+      effect: "Grants adjacent allies who use sword, axes, lances, dragonstones, or beast damage, Atk +6 through their next actions at the start of each turn. If unit is within 2 spaces of a sword, lance, axe, dragon, or beast ally, grants Atk/Spd+5 to unit during combat."
+    },
+    {
+      name: "+Atk",
+      icon: "31-9",
+      cost: 1,
+      stats: {hp: 2, atk: 1},
+      effect: "Grants adjacent allies who use sword, axes, lances, dragonstones, or beast damage, Atk +6 through their next actions at the start of each turn."
+    },
+    {
+      name: "+Spd",
+      icon: "31-10",
+      cost: 1,
+      stats: {hp: 2, spd: 2},
+      effect: "Grants adjacent allies who use sword, axes, lances, dragonstones, or beast damage, Atk +6 through their next actions at the start of each turn."
+    },
+    {
+      name: "+Def",
+      icon: "31-11",
+      cost: 1,
+      stats: {hp: 2, def: 3},
+      effect: "Grants adjacent allies who use sword, axes, lances, dragonstones, or beast damage, Atk +6 through their next actions at the start of each turn."
+    },
+    {
+      name: "+Res",
+      icon: "31-12",
+      cost: 1,
+      stats: {hp: 2, res: 3},
+      effect: "Grants adjacent allies who use sword, axes, lances, dragonstones, or beast damage, Atk +6 through their next actions at the start of each turn."
     }
   ],
 };

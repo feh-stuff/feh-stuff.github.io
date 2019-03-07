@@ -3134,6 +3134,7 @@ module.exports = [
     moveType: "Cavalry",
     rarity3: ["pool2"],
     rarity4: ["pool2"],
+    ttReward: true,
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Ethlyn.png",
       main: "img/heroes-main/Ethlyn.png"
@@ -4650,6 +4651,43 @@ module.exports = [
     }
   },
   {
+    name: "Idunn",
+    artist: "Yamada Kotaro (山田孝太郎)",
+    voice: "—",
+    title: "Dark Priestess",
+    releaseDate: "Mar 08, 2019",
+    colorType: "Red",
+    weaponType: "Breath",
+    moveType: "Armored",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Idunn.png",
+      main: "img/heroes-main/Idunn.png"
+    },
+    skills: [
+      { name: "Fire Breath", rarity: 5 },
+      { name: "Fire Breath+", rarity: 5 },
+      { name: "Flametongue", rarity: 5 },
+      { name: "Demonic Breath", rarity: 5},
+      { name: "Glowing Ember", rarity: 5 },
+      { name: "Bonfire", rarity: 5 },
+      { name: "Fortress Defense 1", rarity: 5 },
+      { name: "Fort. Def/Res 1", rarity: 5 },
+      { name: "Fort. Def/Res 2", rarity: 5 },
+      { name: "Fort. Def/Res 3", rarity: 5 },
+      { name: "Vengeful Fighter 1", rarity: 5 },
+      { name: "Vengeful Fighter 2", rarity: 5 },
+      { name: "Vengeful Fighter 3", rarity: 5 },
+      { name: "Spur Def 1", rarity: 5 },
+      { name: "Spur Def 2", rarity: 5 },
+      { name: "Ward Dragons", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 19, atk: 11, spd: 4, def: 9, res: 4 },     
+      level40: { hp: [ 42, 45, 48 ],atk: [ 32, 35, 38 ],spd: [ 22, 26, 29 ],def: [ 36, 39, 43 ],res: [ 31, 34, 38 ] }
+    }
+  },
+  {
     name: "Ike",
     title: "Young Mercenary",
     artist: "Meka (めか)",
@@ -5541,7 +5579,7 @@ module.exports = [
     title: "Kitsune Braggart",
     artist: "Kusugi Toku (久杉トク)",
     voice: "Max Mittelman",
-    releaseDate: "02 Feb, 2019",
+    releaseDate: "20 Feb, 2019",
     colorType: "Green",
     weaponType: "Beast",
     moveType: "Cavalry",
@@ -5650,6 +5688,7 @@ module.exports = [
       { name: "Steel Bow", rarity: 4 },
       { name: "Brave Bow", rarity: 4 },
       { name: "Brave Bow+", rarity: 5 },
+      { name: "Argent Bow", rarity: 5 },
       { name: "Chilling Wind", rarity: 4 },
       { name: "Glacies", rarity: 4 },
       { name: "Death Blow 1", rarity: 4 },
@@ -6279,6 +6318,7 @@ module.exports = [
     colorType: "Green",
     weaponType: "Axe",
     moveType: "Infantry",
+    rarity4: ["pool2"],
     rarity5: ["pool2"],
     assets: {
       portrait: "img/heroes-portrait/75px-Icon_Portrait_Libra.png",
@@ -6837,6 +6877,40 @@ module.exports = [
       level40: { hp: [ 34, 37, 41 ], atk: [ 29, 32, 35 ], spd: [ 26, 30, 33 ], def: [ 10, 13, 17 ], res: [ 32, 35, 38 ] },
       level1_4: { hp: 17, atk: 5, spd: 8, def: 2, res: 9 },
       level40_4: { hp: [ 32, 35, 38 ], atk: [ 26, 29, 32 ], spd: [ 25, 28, 31 ], def: [ 9, 12, 15 ], res: [ 30, 33, 36 ] }
+    }
+  },
+  {
+    name: "Lugh",
+    title: "Anima Child",
+    artist: "Himukai Yuji (日向悠二)",
+    voice: "Michael Johnston",
+    releaseDate: "Mar 08, 2019",
+    colorType: "Green",
+    weaponType: "Tome",
+    moveType: "Infantry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Lugh.png",
+      main: "img/heroes-main/Lugh.png"
+    },
+    skills: [
+      { name: "Wind", rarity: 5 },
+      { name: "Elwind", rarity: 5 },
+      { name: "Gronnserpent", rarity: 5 },
+      { name: "Gronnserpent+", rarity: 5 },
+      { name: "Rally Resistance", rarity: 5 },
+      { name: "Rally Up Res", rarity: 5 },
+      { name: "Rally Up Res+", rarity: 5 },
+      { name: "Warding Stance 1", rarity: 5 },
+      { name: "Mirror Stance 1", rarity: 5 },
+      { name: "Mirror Stance 2", rarity: 5 },
+      { name: "Atk Feint 1", rarity: 5 },
+      { name: "Atk Feint 2", rarity: 5 },
+      { name: "Atk Feint 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 5, spd: 12, def: 4, res: 7 },
+      level40: { hp: [ 34, 37, 41 ], atk: [ 32, 35, 39 ], spd: [ 33, 36, 39 ], def: [ 13, 17, 20 ], res: [ 28, 31, 34 ] }
     }
   },
   {
@@ -9824,6 +9898,41 @@ module.exports = [
     }
   },
   {
+    name: "Rutger",
+    title: "Lone Swordsman",
+    artist: "Itagaki Hako (板垣ハコ)",
+    voice: "Brian Kimmett",
+    releaseDate: "Mar 11, 2019",
+    colorType: "Red",
+    weaponType: "Sword",
+    moveType: "Infantry",
+    rarity3: ["pool2"],
+    rarity4: ["pool2"],
+    ghb: true,
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Rutger.png",
+      main: "img/heroes-main/Rutger.png"
+    },
+    skills: [
+      { name: "Iron Sword", rarity: 3 },
+      { name: "Steel Sword", rarity: 3 },
+      { name: "Slaying Edge", rarity: 4 },
+      { name: "Slaying Edge+", rarity: 5 },
+      { name: "Retribution", rarity: 4 },
+      { name: "Vengeance", rarity: 4 },
+      { name: "Atk/Def Bond 1", rarity: 3 },
+      { name: "Atk/Def Bond 2", rarity: 3 },
+      { name: "Atk/Def Bond 3", rarity: 4 },
+      { name: "Vantage 1", rarity: 3 },
+      { name: "Vantage 2", rarity: 4 },
+      { name: "Vantage 3", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 20, atk: 8, spd: 9, def: 7, res: 5 },
+      level40: { hp: [ 41, 44, 47 ], atk: [ 29, 32, 35 ], spd: [ 36, 39, 43 ], def: [ 25, 29, 32 ], res: [ 21, 24, 28 ] },
+    }
+  },
+  {
     name: "Ryoma",
     title: "Peerless Samurai",
     artist: "Kita Senri (北千里)",
@@ -10929,6 +11038,7 @@ module.exports = [
       { name: "Ruin", rarity: 3 },
       { name: "Fenrir", rarity: 4 },
       { name: "Fenrir+", rarity: 5 },
+      { name: "Eternal Tome", rarity: 5 },
       { name: "Dragon Gaze", rarity: 4 },
       { name: "Dragon Fang", rarity: 4 },
       { name: "Warding Blow 1", rarity: 3 },
@@ -11125,6 +11235,43 @@ module.exports = [
       level40: { hp: [ 36, 40, 43 ], atk: [ 22, 25, 29 ], spd: [ 32, 35, 38 ], def: [ 32, 35, 38 ], res: [ 19, 22, 25 ] },
       level1_4: { hp: 17, atk: 5, spd: 9, def: 9, res: 4 },
       level40_4: { hp: [ 34, 37, 40 ], atk: [ 20, 23, 26 ], spd: [ 30, 33, 36 ], def: [ 30, 33, 36 ], res: [ 17, 20, 23 ] }
+    }
+  },
+  {
+    name: "Sue",
+    title: "Doe of the Plains",
+    artist: "Mayo (まよ)",
+    voice: "Megan Harvey",
+    releaseDate: "Mar 08, 2019",
+    colorType: "Green",
+    weaponType: "Bow",
+    moveType: "Cavalry",
+    rarity5: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Sue.png",
+      main: "img/heroes-main/Sue.png"
+    },
+    skills: [
+      { name: "Iron Bow", rarity: 5 },
+      { name: "Steel Bow", rarity: 5 },
+      { name: "Short Bow", rarity: 5 },
+      { name: "Short Bow+", rarity: 5 },
+      { name: "New Moon", rarity: 5 },
+      { name: "Moonbow", rarity: 5 },
+      { name: "Darting Blow", rarity: 5 },
+      { name: "Swift Sparrow 1", rarity: 5 },
+      { name: "Swift Sparrow 2", rarity: 5 },
+      { name: "Chill Def 1", rarity: 5 },
+      { name: "Chill Def 2", rarity: 5 },
+      { name: "Chill Def 3", rarity: 5 },
+      { name: "Hone Spd 1", rarity: 5 },
+      { name: "Hone Spd 2", rarity: 5 },
+      { name: "Hone Spd 3", rarity: 5 },
+      { name: "Hone Spd 4", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 16, atk: 7, spd: 9, def: 5, res: 6 },
+      level40: { hp: [ 33,36,40 ], atk: [ 29,32,35 ], spd: [ 35,38,41 ], def: [ 20,23,27 ], res: [ 17,20,23 ] }
     }
   },
   {
@@ -11583,6 +11730,39 @@ module.exports = [
     stats: {
       level1: { hp: 19, atk: 10, spd: 5, def: 8, res: 10 },
       level40: { hp: [ 40, 43, 46 ], atk: [ 31, 34, 37 ], spd: [ 14, 18, 21 ], def: [ 31, 34, 37], res: [ 33, 36, 39 ] }
+    }
+  },
+  {
+    name: "Thea",
+    title: "Stormy Flier",
+    artist: "Tobi",
+    voice: "Kayli Mills",
+    releaseDate: "Mar 08, 2019",
+    colorType: "Blue",
+    weaponType: "Lance",
+    moveType: "Flying",
+    rarity4: ["pool2"],
+    assets: {
+      portrait: "img/heroes-portrait/75px-Icon_Portrait_Thea.png",
+      main: "img/heroes-main/Thea.png"
+    },
+    skills: [
+      { name: "Iron Lance", rarity: 5 },
+      { name: "Steel Lance", rarity: 5 },
+      { name: "Vanguard", rarity: 5 },
+      { name: "Vanguard+", rarity: 5 },
+      { name: "Glowing Ember", rarity: 5 },
+      { name: "Ignis", rarity: 5 },
+      { name: "Darting Stance 1", rarity: 5 },
+      { name: "Steady Posture 1", rarity: 5 },
+      { name: "Steady Posture 2", rarity: 5 },
+      { name: "Seal Spd 1", rarity: 5 },
+      { name: "Seal Spd/Def 1", rarity: 5 },
+      { name: "Seal Spd/Def 2", rarity: 5 }
+    ],
+    stats: {
+      level1: { hp: 18, atk: 5, spd: 11, def: 7, res: 6 },
+      level40: { hp: [ 34, 37, 41 ], atk: [ 28, 31, 34 ], spd: [ 32, 35, 38 ], def: [ 28, 31, 34 ], res: [ 24, 28, 31 ] },
     }
   },
   {

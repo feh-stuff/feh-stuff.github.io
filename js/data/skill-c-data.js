@@ -893,6 +893,13 @@ module.exports = [
     effect: "Grants adjacent allies Spd+4 through their next actions at the start of each turn."
   },
   {
+    name: "Hone Spd 4",
+    spCost: 300,
+    icon: "60-0",
+    prev: ["Hone Spd 3"],
+    effect: "Grants adjacent allies Spd+7 through their next actions at the start of each turn."
+  },
+  {
     name: "Human Virtue",
     spCost: 300,
     icon: "59-7",
