@@ -82,7 +82,7 @@ module.exports = [
   {
     name: "Argent Bow",
     spCost: 400,
-    damage: 14,
+    damage: 8,
     range: 2,
     weaponType: "Bow",
     stats: {spd: -2},
